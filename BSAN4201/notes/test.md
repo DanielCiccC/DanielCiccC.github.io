@@ -11,6 +11,4 @@ $$ a \times x + b \times x + c = d $$ (1) $$
 
 [link to third document](C:/uni/BSAN4201/test.html)
 
-
-
-C:\github-io\notes
+test
