@@ -1,12 +1,7 @@
-# Something
+# Daniel Ciccotosto-Camp's Page
 
-else here
+Welcome! You'll find some of my notes to courses (starting the second semester of my 4th year) here. Any interesting insights, learnings or work I will add to this page as well.
 
-* something
-* else
-
-$$ a \times x + b \times x + c = d $$ (1) $$
-
-[link to second document](/notes/second_test.html)
-
-test
+* ### [BSAN4201](BSAN4201/docs/main_BSAN4201.html)
+* ### DECO3801
+* ### COMP3506
