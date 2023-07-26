@@ -1,11 +1,8 @@
-# BSAN4201 content
+# DECO3801 content
 
-These are all my notes and corresponding pages to BSAN4201 content. Typically, I will hand scribe over the lecture notes given throughout the semester, and write a new set of notes for revision in my own time - everything here is the latter.
+All my notes from the beginning of lectures; Since these are moreso informational they will be complete. My project and codebase will be referenced elsewhere.
 
-| Lecture | link |
-| ------- | ---- |
-|         |      |
-|         |      |
-
-
-something else 
+| Lecture | link | Content |
+| :-----: | ---- | ------- |
+|    1    |  Link|         |
+|         |      |         |
