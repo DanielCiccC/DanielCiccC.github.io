@@ -1,5 +1,6 @@
 # COMP3506 content
 
+Lecture notes and revision will be added separately
 
 | Lecture | link | Content |
 | ------- | ---- | --------|
