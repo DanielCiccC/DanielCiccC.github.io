@@ -4,5 +4,5 @@ All my notes from the beginning of lectures; Since these are moreso informationa
 
 | Lecture | link | Content |
 | :-----: | ---- | ------- |
-|    1    |  [Link](../docs/;ecture1.html) |         |
+|    1    |  [Link](../docs/lecture1.html) |         |
 |         |      |         |

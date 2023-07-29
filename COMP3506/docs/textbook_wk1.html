@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="chapt-31-experimental-studies">Chapt 3.1. Experimental studies</h1>
+<p dir="auto">We are interested in the desgin of &quot;good&quot; data structures and algorithms
+<strong>Data Strucutre</strong>: a systematic way of organising and accessing data
+<strong>Algorithm</strong>: A step-by-step procedure for performing some task in a finite amount of time.</p>
+<h2 dir="auto" id="experimental-studies">Experimental studies</h2>
+<ul dir="auto">
+<li dir="auto">we can study the running time of an algorithm by recording the time spent between each execution, i.e.:</li>
+</ul>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">for</span> time <span class="hljs-keyword">import</span> time
+start_time = time()
+<span class="hljs-comment"># run the algorithm</span>
+end_time = time()
+elaqpsed = end time - start_time
+</div></code></pre>
+<ul dir="auto">
+<li dir="auto">we can use this approach to gather experimental data on the efficiency of Python's list class</li>
+<li dir="auto">not the best measure of algorithm efficiency; other background process may yield and unfair test. A fairer metric is the number of CPU cycles that are used by the algorithm</li>
+</ul>
+<p dir="auto">We are interested in the general dependence of running time on the size and structure of the input.</p>
+<ul dir="auto">
+<li dir="auto">perform independent experiment on many different test inputs of various sizes, i.e.</li>
+</ul>
+<p dir="auto"><img src="assets/IMG1.PNG" alt="" data-src="assets/IMG1.PNG"></p>
+<h3 dir="auto" id="challenges-of-experiemental-analysis">Challenges of experiemental analysis:</h3>
+<ul dir="auto">
+<li dir="auto">Experimental running times of two differing algorithms are difficult to compare unless experiements are performed on the same hardware and software requirements</li>
+<li dir="auto">Experiments can only be completed on a limited set of inputs</li>
+<li dir="auto">An algorithm must be fully implemented in order to execute it, to study its running time experimentally.</li>
+</ul>
+<h2 dir="auto" id="goal-of-experimental-analysis">Goal of experimental analysis:</h2>
+<ul dir="auto">
+<li dir="auto">Evaluate relative efficiency of algorithms in a way that is independent of the hardware and software envrionment</li>
+<li dir="auto">Is performed at a high-level description of the algorithm without need for implementation</li>
+<li dir="auto">Takes into account all possible inputs.</li>
+</ul>
+<h3 dir="auto" id="counting-prime-operations">Counting prime operations:</h3>
+<p dir="auto">Perform an analysis directly on a high-level description of the algorithm. Define a set of <em>primitive operations</em> such as the following:</p>
+<ul dir="auto">
+<li dir="auto">Assigning an identifier to an object</li>
+<li dir="auto">Determining the object associated with an identifier</li>
+<li dir="auto">Performing an arithmetic operation (e.g. adding two numbers)
+A primitive operation corresponds to a low-level instruction with an execution time that is constant.</li>
+</ul>
+<p dir="auto">Henceforth, to capture the growth of an algorithms's running time, we will associate a function <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> that characterises the number of primitive operations performed, relative to the input size <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>.</p>
+<h2 dir="auto" id="focus-on-worst-case-input">Focus on worst-case input</h2>
+<ul dir="auto">
+<li dir="auto">characterise the running times in terms of the wrost case, as a function of the input size, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>, of the algorithm.
+<ul dir="auto">
+<li dir="auto">easier than avergae case analysis</li>
+</ul>
+</li>
+</ul>
+<h1 dir="auto" id="recursion">Recursion</h1>
+
+</main>
+</body>
+</html>
