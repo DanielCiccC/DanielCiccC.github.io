@@ -24,13 +24,13 @@
 
 </header>
 <main>
-<h1 dir="auto" id="chapt-31-experimental-studies">Chapt 3.1. Experimental studies</h1>
-<p dir="auto">We are interested in the desgin of &quot;good&quot; data structures and algorithms
-<strong>Data Strucutre</strong>: a systematic way of organising and accessing data
-<strong>Algorithm</strong>: A step-by-step procedure for performing some task in a finite amount of time.</p>
-<h2 dir="auto" id="experimental-studies">Experimental studies</h2>
+<h1 dir="auto" id="chapt-31-experimental-studies-1">Chapt 3.1. Experimental studies</h1>
+<p dir="auto">We are interested in the desgin of &quot;good&quot; data structures and algorithms</p>
+<p dir="auto"><strong>Data Structure</strong>: a systematic way of organising and accessing data</p>
+<p dir="auto"><strong>Algorithm</strong>: A step-by-step procedure for performing some task in a finite amount of time.</p>
+<h2 dir="auto" id="experimental-studies-1">Experimental studies</h2>
 <ul dir="auto">
-<li dir="auto">we can study the running time of an algorithm by recording the time spent between each execution, i.e.:</li>
+<li dir="auto">We can study the running time of an algorithm by recording the time spent between each execution</li>
 </ul>
 <pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">for</span> time <span class="hljs-keyword">import</span> time
 start_time = time()
@@ -39,27 +39,27 @@ end_time = time()
 elaqpsed = end time - start_time
 </div></code></pre>
 <ul dir="auto">
-<li dir="auto">we can use this approach to gather experimental data on the efficiency of Python's list class</li>
-<li dir="auto">not the best measure of algorithm efficiency; other background process may yield and unfair test. A fairer metric is the number of CPU cycles that are used by the algorithm</li>
+<li dir="auto">We can use this approach to gather experimental data on the efficiency of Python's list class</li>
+<li dir="auto">Not the best measure of algorithm efficiency; other background process may yield and unfair test. A fairer metric is the number of CPU cycles that are used by the algorithm</li>
 </ul>
 <p dir="auto">We are interested in the general dependence of running time on the size and structure of the input.</p>
 <ul dir="auto">
-<li dir="auto">perform independent experiment on many different test inputs of various sizes, i.e.</li>
+<li dir="auto">Perform independent experiments on many different test inputs of various sizes, i.e.</li>
 </ul>
 <p dir="auto"><img src="assets/IMG1.PNG" alt="" data-src="assets/IMG1.PNG"></p>
-<h3 dir="auto" id="challenges-of-experiemental-analysis">Challenges of experiemental analysis:</h3>
+<h3 dir="auto" id="challenges-of-experimental-analysis-1">Challenges of experimental analysis:</h3>
 <ul dir="auto">
 <li dir="auto">Experimental running times of two differing algorithms are difficult to compare unless experiements are performed on the same hardware and software requirements</li>
 <li dir="auto">Experiments can only be completed on a limited set of inputs</li>
 <li dir="auto">An algorithm must be fully implemented in order to execute it, to study its running time experimentally.</li>
 </ul>
-<h2 dir="auto" id="goal-of-experimental-analysis">Goal of experimental analysis:</h2>
+<h2 dir="auto" id="goal-of-experimental-analysis-1">Goal of experimental analysis:</h2>
 <ul dir="auto">
 <li dir="auto">Evaluate relative efficiency of algorithms in a way that is independent of the hardware and software envrionment</li>
 <li dir="auto">Is performed at a high-level description of the algorithm without need for implementation</li>
 <li dir="auto">Takes into account all possible inputs.</li>
 </ul>
-<h3 dir="auto" id="counting-prime-operations">Counting prime operations:</h3>
+<h3 dir="auto" id="counting-prime-operations-1">Counting prime operations:</h3>
 <p dir="auto">Perform an analysis directly on a high-level description of the algorithm. Define a set of <em>primitive operations</em> such as the following:</p>
 <ul dir="auto">
 <li dir="auto">Assigning an identifier to an object</li>
@@ -68,7 +68,7 @@ elaqpsed = end time - start_time
 A primitive operation corresponds to a low-level instruction with an execution time that is constant.</li>
 </ul>
 <p dir="auto">Henceforth, to capture the growth of an algorithms's running time, we will associate a function <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> that characterises the number of primitive operations performed, relative to the input size <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>.</p>
-<h2 dir="auto" id="focus-on-worst-case-input">Focus on worst-case input</h2>
+<h2 dir="auto" id="focus-on-worst-case-input-1">Focus on worst-case input</h2>
 <ul dir="auto">
 <li dir="auto">characterise the running times in terms of the wrost case, as a function of the input size, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>, of the algorithm.
 <ul dir="auto">
@@ -76,7 +76,74 @@ A primitive operation corresponds to a low-level instruction with an execution t
 </ul>
 </li>
 </ul>
-<h1 dir="auto" id="recursion">Recursion</h1>
+<h1 dir="auto" id="recursion-1">Recursion</h1>
+<p dir="auto">Begin with the following four example of the use of recursion, providing an python implementation for each:</p>
+<ol dir="auto">
+<li dir="auto">The factorial function</li>
+<li dir="auto">An English rules</li>
+<li dir="auto">Binary search</li>
+<li dir="auto">File system for a computer, in which directories can be nested arbitrarily deep within other directories</li>
+</ol>
+<h2 dir="auto" id="the-factorial-function-1">The factorial function</h2>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>n</mi><mo stretchy="false">!</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.36em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if </mtext><mi>x</mi><mo>∈</mo><mi>n</mi><mo>=</mo><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>n</mi><mo>⋅</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>⋅</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>⋅</mo><mo>⋅</mo><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mn>1</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>1</mn></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex"> 
+n! = 
+\begin{cases}
+        1 &amp; \text{if } x \in n = 0\\
+        n \cdot (n-1)\cdot (n-1) \cdot \cdot \cdot 2 \cdot 1 &amp; \text{if } x \ge 1
+\end{cases}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">n</span><span class="mclose">!</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">0</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p dir="auto">There is a natural recursive definition for the factorial function. Observe that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo stretchy="false">!</mo><mo>=</mo><mn>5</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mn>1</mn><mo>=</mo><mn>5</mn><mo>⋅</mo><mn>4</mn><mo stretchy="false">!</mo></mrow><annotation encoding="application/x-tex">5!=5\cdot 4 \cdot 3 \cdot 2 \cdot 1 = 5\cdot 4!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">5</span><span class="mclose">!</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">4</span><span class="mclose">!</span></span></span></span>. Thus, the recrusive defintion can be formalised as</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>n</mi><mo stretchy="false">!</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.36em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if </mtext><mi>x</mi><mo>∈</mo><mi>n</mi><mo>=</mo><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>n</mi><mo>⋅</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">!</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if </mtext><mi>x</mi><mo>≥</mo><mn>1</mn></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex"> 
+n! = 
+\begin{cases}
+        1 &amp; \text{if } x \in n = 0\\
+        n \cdot (n-1)! &amp; \text{if } x \ge 1
+\end{cases}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">n</span><span class="mclose">!</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mclose">)!</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">0</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<h3 dir="auto" id="recursive-implementation-of-the-factorial-function-1">Recursive implementation of the Factorial function</h3>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">def</span> <span class="hljs-title function_">factorial</span>(<span class="hljs-params">n</span>):
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> n * factorial(n-<span class="hljs-number">1</span>)
+</div></code></pre>
+<ul dir="auto">
+<li dir="auto">repetition is provided by the repeated invocations of the function</li>
+</ul>
+<hr dir="auto">
+<h2 dir="auto" id="drawing-the-english-rulers-1">Drawing the English Rulers</h2>
+<ul dir="auto">
+<li dir="auto">for each inch, we place a tick with a numeric label. We denote the length of the tick designating a whole inch as the <em>major tick length</em></li>
+<li dir="auto">between marks for whole inches, the rules contains a series of minor ticks, placed at intervals of 1/2 inch, 1/4 inch, etc.
+<img src="assets/IMG2.PNG" alt="" data-src="assets/IMG2.PNG"></li>
+<li dir="auto">although it is possible to draw such a ruler with iteration, the task is considerably easier with iteration</li>
+</ul>
+<h3 dir="auto" id="python-implementation-1">Python Implementation</h3>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">def</span> <span class="hljs-title function_">draw_line</span>(<span class="hljs-params">tick_length, tick_label=<span class="hljs-string">&#x27;&#x27;</span></span>):
+<span class="hljs-string">&quot;&quot;&quot;Draw one line with given tick length (followed by optional label)&quot;&quot;&quot;</span>
+line = <span class="hljs-string">&#x27;-&#x27;</span> * tick_length
+<span class="hljs-keyword">if</span> tick_label:
+    line += <span class="hljs-string">&#x27; &#x27;</span> + tick_label
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">draw_interval</span>(<span class="hljs-params">center_length</span>):
+    <span class="hljs-string">&quot;&quot;&quot; Draw tick length based upon a central tick length.&quot;&quot;&quot;</span>
+    <span class="hljs-keyword">if</span> center_length &gt; <span class="hljs-number">0</span>:       <span class="hljs-comment"># stop when length drops to 0</span>
+        draw_interval(center_length - <span class="hljs-number">1</span>)    <span class="hljs-comment"># recursively draw top ticks</span>
+        draw_line(center_length)            <span class="hljs-comment"># draw center tick</span>
+        draw_interval(center_length - <span class="hljs-number">1</span>)    <span class="hljs-comment"># recursively draw bottom ticks</span>
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">draw_ruler</span>(<span class="hljs-params">num_inches, major length</span>):
+    <span class="hljs-string">&quot;&quot;&quot;Draw English ruler with given numbr of inches, major tick length&quot;&quot;&quot;</span>
+    draw_line(major_length, <span class="hljs-string">&#x27;0&#x27;</span>)        <span class="hljs-comment"># draw 0 inch line</span>
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>+num_inches):
+        draw_interval(major_length - <span class="hljs-number">1</span>)     <span class="hljs-comment"># draw interior tick for inch</span>
+        draw_line(major_length, <span class="hljs-built_in">str</span>(j))     <span class="hljs-comment"># draw in j line and label</span>
+</div></code></pre>
+<p dir="auto">The execution of the recursive <em>draw_interval</em> function can be visualised using a recursion trace.</p>
+<h2 dir="auto" id="1"><img src="assets/IMG3.PNG" alt="" data-src="assets/IMG3.PNG"></h2>
+<h2 dir="auto" id="binary-search-1">Binary search</h2>
 
 </main>
 </body>
