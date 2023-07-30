@@ -1,13 +1,14 @@
 # Chapt 3.1. Experimental studies
 
 We are interested in the desgin of "good" data structures and algorithms
-**Data Strucutre**: a systematic way of organising and accessing data
+
+**Data Structure**: a systematic way of organising and accessing data
+
 **Algorithm**: A step-by-step procedure for performing some task in a finite amount of time.
 
 
 ## Experimental studies
-- we can study the running time of an algorithm by recording the time spent between each execution, i.e.:
-
+- We can study the running time of an algorithm by recording the time spent between each execution
 
 ```python
 for time import time
@@ -16,15 +17,15 @@ start_time = time()
 end_time = time()
 elaqpsed = end time - start_time
 ```
-- we can use this approach to gather experimental data on the efficiency of Python's list class
-- not the best measure of algorithm efficiency; other background process may yield and unfair test. A fairer metric is the number of CPU cycles that are used by the algorithm
+- We can use this approach to gather experimental data on the efficiency of Python's list class
+- Not the best measure of algorithm efficiency; other background process may yield and unfair test. A fairer metric is the number of CPU cycles that are used by the algorithm
 
 We are interested in the general dependence of running time on the size and structure of the input.
-- perform independent experiment on many different test inputs of various sizes, i.e.
+- Perform independent experiments on many different test inputs of various sizes, i.e.
 
 ![](assets/IMG1.PNG)
 
-### Challenges of experiemental analysis:
+### Challenges of experimental analysis:
 - Experimental running times of two differing algorithms are difficult to compare unless experiements are performed on the same hardware and software requirements
 - Experiments can only be completed on a limited set of inputs
 - An algorithm must be fully implemented in order to execute it, to study its running time experimentally.
@@ -84,10 +85,11 @@ def factorial(n):
 ---
   
 ## Drawing the English Rulers
-- for each inch, we place a tick with a numeric label. We denote the length of the tick designating a whole inch as the *major tick length*
-- between marks for whole inches, the rules contains a series of minor ticks, placed at intervals of 1/2 inch, 1/4 inch, etc.
+- For each inch, we place a tick with a numeric label. We denote the length of the tick designating a whole inch as the *major tick length*
+- Between marks for whole inches, the rules contains a series of minor ticks, placed at intervals of 1/2 inch, 1/4 inch, etc.
 ![](assets/IMG2.PNG)
-- although it is possible to draw such a ruler with iteration, the task is considerably easier with iteration
+
+Although it is possible to draw such a ruler with iteration, the task is considerably easier with iteration
 
 ### Python Implementation
 ```python
@@ -114,5 +116,7 @@ def draw_ruler(num_inches, major length):
 The execution of the recursive *draw_interval* function can be visualised using a recursion trace.
 
 ![](assets/IMG3.PNG)
+
+
 ---
 ## Binary search

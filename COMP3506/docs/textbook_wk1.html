@@ -115,11 +115,11 @@ n! =
 <hr dir="auto">
 <h2 dir="auto" id="drawing-the-english-rulers-1">Drawing the English Rulers</h2>
 <ul dir="auto">
-<li dir="auto">for each inch, we place a tick with a numeric label. We denote the length of the tick designating a whole inch as the <em>major tick length</em></li>
-<li dir="auto">between marks for whole inches, the rules contains a series of minor ticks, placed at intervals of 1/2 inch, 1/4 inch, etc.
+<li dir="auto">For each inch, we place a tick with a numeric label. We denote the length of the tick designating a whole inch as the <em>major tick length</em></li>
+<li dir="auto">Between marks for whole inches, the rules contains a series of minor ticks, placed at intervals of 1/2 inch, 1/4 inch, etc.
 <img src="assets/IMG2.PNG" alt="" data-src="assets/IMG2.PNG"></li>
-<li dir="auto">although it is possible to draw such a ruler with iteration, the task is considerably easier with iteration</li>
 </ul>
+<p dir="auto">Although it is possible to draw such a ruler with iteration, the task is considerably easier with iteration</p>
 <h3 dir="auto" id="python-implementation-1">Python Implementation</h3>
 <pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">def</span> <span class="hljs-title function_">draw_line</span>(<span class="hljs-params">tick_length, tick_label=<span class="hljs-string">&#x27;&#x27;</span></span>):
 <span class="hljs-string">&quot;&quot;&quot;Draw one line with given tick length (followed by optional label)&quot;&quot;&quot;</span>
@@ -142,7 +142,8 @@ line = <span class="hljs-string">&#x27;-&#x27;</span> * tick_length
         draw_line(major_length, <span class="hljs-built_in">str</span>(j))     <span class="hljs-comment"># draw in j line and label</span>
 </div></code></pre>
 <p dir="auto">The execution of the recursive <em>draw_interval</em> function can be visualised using a recursion trace.</p>
-<h2 dir="auto" id="1"><img src="assets/IMG3.PNG" alt="" data-src="assets/IMG3.PNG"></h2>
+<p dir="auto"><img src="assets/IMG3.PNG" alt="" data-src="assets/IMG3.PNG"></p>
+<hr dir="auto">
 <h2 dir="auto" id="binary-search-1">Binary search</h2>
 
 </main>
