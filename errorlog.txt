@@ -10,3 +10,4 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.PNG': No s
 cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.png': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.gif': No such file or directory
 Skipping C:/git/DanielCiccC.github.io/errorlog.txt: 'notes' or 'docs' directory not found.
+Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.
