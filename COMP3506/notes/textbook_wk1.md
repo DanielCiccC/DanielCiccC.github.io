@@ -242,6 +242,7 @@ def linear_sum(S, n)
 
 ### Binary recursion
 Revisit the problem of summing $n$ elements of s sequence $S$, of numbers. With two or more elements, we can recursively compute the sum of the first half, and the sum of the second half, and ad these together as shown in the following:
+
 ```python
 def binary_sum(S, start, stop):
     """ Return the sum of the numbers in implicit slice S[start:stop]. """
