@@ -188,3 +188,99 @@ For each recursive algorithm, we will account for each operation that is perform
     - Initially, the number of candidates is $n$, after the first call in a binary search, it is at most $n/2$; after the second call $n/4$; and so on. In general, after the $j$th call in a binary search, the number of candidate entries remaining is at most $n/2^{j}$.
   
 ## Recursion run Amok
+### An inefficent recursion for Computing Fibonacci Numbers
+Fibonacci:
+$$F_{0} = 0$$
+$$F_{1} = 1$$
+$$F_{n} = F_{n-2} + F_{n-1},        n>1 $$ 
+A direct implementation based on the algorithm would be as follows:
+
+```python
+def bad_fibonacci(n):
+    """Return the nth Fibonacci number"""
+    if n <= 1:
+        return n
+    else:
+        return bad_fibonacci(n-1) + bad_fibonacci(n-2)
+```
+- Computing the fibonacci sequence depends on the two previous values $F_{n-1}$ and $F_{n-2}$, but the call to compute $F_{n-1}$ requires it's own recursive call to compute $F_{n-2}$ -> does not have the knowledge of that value
+  
+Computing the nth Fibonacci number in this way requires an exponential number of calls to the function. The number of calls $c_{n}$ for input size $n$ is $c_{n}>2^{n/2}$, which mean that ``bad_fibonacci(n)`` makes a number of calls that is exponential in $n$.
+
+We can compute $F_{n}$ much more efficiently in which invocation only makes one recursive call. Rather than having the function return a single value, we define a recursive function that returns a pair of consecutive fibonacci numbers.
+
+```python
+def good_fibonacci(n):
+    """ Return pair of Fibonacci numbers, F(n) and F(n-1)"""
+    if n <= 1:
+        return (n, 0)
+    else:
+        (a, b) = good_fibonacci(n-1)
+        return (a+b, a)
+```
+The execution of ``good_fibonacci(n)`` table $O(n)$ time.
+
+## 4.4 Further examples of Recursion
+- If a recursive call starts at most one other, we call this **linear recursion**
+- If a recursive call starts two others, we call this **binary recursion**
+- If a recursive call starts more than two others, we call this **Multiple recursion**
+
+### Linear recursion
+- Implementation of factorial function and ``good_fibonacci`` function are examples of linear recursion
+- Note that linear recursion reflects the structure of the recursion trace, not the asymptotic analysis of the running time
+
+#### Example: Summing the elements of a sequence recursively
+The following computes the sum of a sequence
+```python
+def linear_sum(S, n)
+""" Compute the sum of a sequence of the first n numbers of Sequence S"""
+    if n == 0:
+        return 0
+    else:
+        return linear_sum(S, n-1) + S[n-1]
+```
+
+### Binary recursion
+Revisit the problem of summing $n$ elements of s sequence $S$, of numbers. With two or more elements, we can recursively compute the sum of the first half, and the sum of the second half, and ad these together as shown in the following:
+```python
+def binary_sum(S, start, stop):
+    """ Return the sum of the numbers in implicit slice S[start:stop]. """
+    if start >= stop:
+        return 0
+    elif start == stop - 1:
+        return S[start]
+        else: 
+            mid = (start + stop) // 2
+            return binary_sum(S, start, mid) + binary_sum(S, mid, stop)
+```
+The size of the range is divided in half for each recursive call, and uses $\log n$ amount of additional space, compared to $n$ space used in the ``linear_sum`` function. However, the running time of ``binary_sum`` is $O(n)$, as there are $2n-1$ function calls, each requiring constant time.
+
+### Multiple recursion
+The recursion of analysing the disk space usage of a file system is an example of multiple recursion, because the number of recursive calls made during one invocation was equal to the number of entries within a given directory of a file system.
+
+## Designing Recursive algorithms
+An algorithm that uses recursion typically has the following form:
+- Test for **base cases**. Begin by testing for a set of base cases (there should be at least one)
+- **Recur**. If not a base case, we perform one or more recursive calls. This may involve a step that decides which of several possible recursive calls to make.
+
+## Eliminating tail recursion
+Some forms of recursion can be eliminated without any use of auxillary memory. A notable form is known as **tail recursion**.
+- A recursion is a tail recursion if any recursive call that is made from one context is the very last operation in that context, with the return value of that recursion immediately returned by the enclosing recursion.
+- Of the recursive functions demonstrated in this chapter, the ``binary_search`` and ``reverse`` function are examples of recursion.
+- Any tail recursion can be reimplemented nonrecursively by enclosing the body in a loop for repition, and replacing a recursive call with new parameters by a reassignment of the existing parameters to those values.
+```python
+def binary_search(data, target):
+    """return True if target is found in the given python list"""
+    low = 0
+    high = len(data) - 1
+    while low <= high:
+        mid = low+high // 2
+        if target == data[mid]:
+            return True
+        elif target < data[mid]:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return False
+```
+Where we made a recursive call ``binary_search(data, target, low, mid-1)`` in the original version, we replace ``high = mid - 1`` in our new version and continue our iteration.
