@@ -18,6 +18,7 @@ for course in "$root_directory"/*; do
 done
 
 # echo "All HTML documents have been copied from $sourceDirectory to $destinationDirectory."
+MESSAGE=$(git ls-files -domz | xargs -0 echo The following have been changed: )
 git add .
-git commit -m 'Modified documents'
+git commit -m "$MESSAGE"
 git push
