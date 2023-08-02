@@ -79,7 +79,7 @@ Is the lower bound
 We say that $f(n) \in \Omega (g(n))$ if there exists a constant $c > 0$ and integer $n_{0}$ such that $f(n) \ge c \cdot g(n)$ for all $n_{0} > n$.
 
 
-## Big #\Theta$
+## Big $\Theta$
 Is the tight bound.
 - Big $\Theta$ exists iff Big O == Big $\Omega$
 - Most simple functions (such as polynomials, exponentials, etc.) have big $\Theta$ bounds.
