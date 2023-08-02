@@ -22,3 +22,5 @@ MESSAGE=$(git ls-files -domz | xargs -0 echo The following have been changed: )
 git add .
 git commit -m "$MESSAGE"
 git push
+
+echo "Build Complete"
