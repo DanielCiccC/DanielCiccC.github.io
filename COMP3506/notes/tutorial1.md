@@ -57,7 +57,15 @@ Function $f(n)$ grows *asymptotically* no faster than $g(n)$
 When we usually talk about asyptotic analysis, we use the following rules:
 1. Drop lower order terms and constants
 2. Make your bounds as tight as possible
+   - Can we say "$2n$ is $O(n^{2})$"?
+   - Yes, - remember big-O is **just an upper bound**
+   - but this doesn't give us much information about the function's growth rate
+
+Make the smallest possible class of the functions (the "tightest" possible bound)
+  - say $2n$ is $O(n)$ even if $2n$ is in $O(n^{2})$
+  
 3. Simplify as much as possible
+   - Use the smallest expression of the class
 
 ### Important growth rates you need to know:
 |Name| Notation
