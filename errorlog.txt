@@ -12,3 +12,13 @@ Skipping C:/git/DanielCiccC.github.io/errorlog.txt: 'notes' or 'docs' directory 
 Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
+Traceback (most recent call last):
+  File "C:\git\DanielCiccC.github.io\main\build\renamer.py", line 24, in <module>
+    replace_undefined(filename)
+  File "C:\git\DanielCiccC.github.io\main\build\renamer.py", line 7, in replace_undefined
+    content = file.read()
+              ^^^^^^^^^^^
+  File "C:\Users\campd\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x81 in position 30713: character maps to <undefined>

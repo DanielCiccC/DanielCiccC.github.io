@@ -41,7 +41,21 @@ def merge(S1, S2, S):
         else:
             S[i + j] = S2[j]
             j += 1
-    return S
+
+def merge_sort(S):
+    """Sort the elements of Python list S using the merge-sort algorithm."""
+    n = len(S)
+    if n < 2:
+        return # list is already sorted
+    # divide
+    mid = n // 2
+    S1 = S[0:mid] # copy of ﬁrst half
+    S2 = S[mid:n] # copy of second half
+    # conquer (with recursion)
+    merge_sort(S1) # sort copy of ﬁrst half
+    merge_sort(S2) # sort copy of second half
+    # merge results
+    merge(S1, S2, S) # merge sorted halves back into S
 ```
 A step of the merge process is illustrated in the following figure:
 

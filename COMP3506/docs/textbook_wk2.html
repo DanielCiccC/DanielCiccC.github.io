@@ -74,7 +74,21 @@
         <span class="hljs-keyword">else</span>:
             S[i + j] = S2[j]
             j += <span class="hljs-number">1</span>
-    <span class="hljs-keyword">return</span> S
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">merge_sort</span>(<span class="hljs-params">S</span>):
+    <span class="hljs-string">&quot;&quot;&quot;Sort the elements of Python list S using the merge-sort algorithm.&quot;&quot;&quot;</span>
+    n = <span class="hljs-built_in">len</span>(S)
+    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-comment"># list is already sorted</span>
+    <span class="hljs-comment"># divide</span>
+    mid = n // <span class="hljs-number">2</span>
+    S1 = S[<span class="hljs-number">0</span>:mid] <span class="hljs-comment"># copy of ﬁrst half</span>
+    S2 = S[mid:n] <span class="hljs-comment"># copy of second half</span>
+    <span class="hljs-comment"># conquer (with recursion)</span>
+    merge_sort(S1) <span class="hljs-comment"># sort copy of ﬁrst half</span>
+    merge_sort(S2) <span class="hljs-comment"># sort copy of second half</span>
+    <span class="hljs-comment"># merge results</span>
+    merge(S1, S2, S) <span class="hljs-comment"># merge sorted halves back into S</span>
 </div></code></pre>
 <p dir="auto">A step of the merge process is illustrated in the following figure:</p>
 <p dir="auto"><img src="assets/IMG11.png" alt="Alt text" data-src="assets/IMG11.png"></p>
