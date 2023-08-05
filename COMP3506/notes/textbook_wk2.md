@@ -61,4 +61,6 @@ A step of the merge process is illustrated in the following figure:
 
 ![Alt text](assets/IMG11.png)
 
-something
+### Running time of Merge-Sort
+Let $n_{1}$ and $n_{2}$ be the number of elements of $S_{1}$ and $S_{2}$, respectively. It is clear that the operations performed inside each pass of the while loop (of function ``merge``) take $O(1)$ time.
+  - 
