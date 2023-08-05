@@ -60,5 +60,3 @@ def merge_sort(S):
 A step of the merge process is illustrated in the following figure:
 
 ![Alt text](assets/IMG11.png)
-
-something

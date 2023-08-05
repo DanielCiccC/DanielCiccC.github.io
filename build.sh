@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Redirect debug output and errors to errorlog.txt
-exec > errorlog.txt 2>&1
+#exec > errorlog.txt 2>&1
 
 # Set the root directory of your course subjects
 root_directory="C:/git/DanielCiccC.github.io"
