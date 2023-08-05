@@ -3,14 +3,14 @@ import os
 
 def replace_undefined(filename):
 
-    with open('C:/git/DanielCiccC.github.io/' + filename, 'r') as file:
+    with open('C:/git/DanielCiccC.github.io/' + filename, 'r', encoding='utf-8') as file:
         print('C:/git/DanielCiccC.github.io/' + filename)
         content = file.read()
 
     # Replace the first two instances of 'undefined' with the filename
     new_content = content.replace('undefined', filename.split('/')[-1].split('.')[0], 2)
 
-    with open('C:/git/DanielCiccC.github.io/' + filename, 'w') as file:
+    with open('C:/git/DanielCiccC.github.io/' + filename, 'w', encoding='utf-8') as file:
         file.write(new_content)
 
 if __name__ == "__main__":
