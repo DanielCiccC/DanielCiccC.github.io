@@ -12,3 +12,5 @@ Skipping C:/git/DanielCiccC.github.io/errorlog.txt: 'notes' or 'docs' directory 
 Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
+C:/git/DanielCiccC.github.io/COMP3506/docs/textbook_wk2.html
+Replaced 'undefined' in COMP3506/docs/textbook_wk2.html with its name.
