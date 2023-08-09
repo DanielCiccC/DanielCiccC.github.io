@@ -130,3 +130,57 @@ The main idea is to apply a divide-and-conquer technique, and then combine the s
 3. ***Combine***: Put back the elements into $S$ in order by first inserting the elements of $L$, then those of $E$, and finally those of $G$.
 
 ![Alt text](assets/IMG13.png)
+
+Unlike merge sort however, the height of the quick sort tree is linear in the worst case. This happens if the
+sequence consists of $n$ distinct elements and is already sorted.
+
+### Running time of quick sort
+- The divide step and contanenation of of quick sort can be implemented in linear time
+- We can bound the overall running time of the quick sort as $O(h\cdot n)$, where $h$ is the height of the quicksort tree $T$ for that execution.
+  - The worst case of quick sort runs in $O(n^{2})$ time.
+  - The best case for quick-sort on a sequences occurs when subsequences $L$ and $G$ are roughly the same size. In that case, the tree has height $\log n$ and therefore would run in $O(n \log n)$ time.
+- Introducing randomisation in the choice of a pivot makes quick-sort essentially behave in $\log n$ time on average.
+
+### Randomised quick sort
+- Assume the pivot will always divide the sequences in a reaonsbly balanced manner.
+- In general, we desire some way of getting close the the best-case running time for quick-sort
+
+**Picking pivots at random**
+- Pick as the pivot a *random element* of the input sequence. Instead of picking the pviot as the first or last element of $S$, we pick an element of $S$ at random. This variation of quick-sortis called *randomised quick-sort*.
+- The expected running time of a randomised quick-sort sequence $S$ is $O(n \log n)$
+
+### Additional Optimisations for Quick sort
+An algorithm is *in-place* if it uses only a small amount of memory in addition to that needed for the original input.
+
+Our implementation of quick-sort does not qualify as in-place because we use additional containers $L$, $E$ and $G$ when dividing a sequence $S$ within each recursive call.
+
+Quick-sort of an array-based seuqence can be adapted to be in-place, and such an optimisation is used in most deployed implementations.
+
+```python
+def inplace quick sort(S, a, b):
+"""Sort the list from S[a] to S[b] inclusive using the quick-sort algorithm."""
+  if a >= b: return # range is trivially sorted
+  pivot = S[b] # last element of range is pivot
+  left = a # will scan rightward
+  right = b−1 # will scan leftward
+  while left <= right:
+  # scan until reaching value equal or larger than pivot (or right marker)
+  while left <= right and S[left] < pivot:
+    left += 1
+  # scan until reaching value equal or smaller than pivot (or left marker)
+  while left <= right and pivot < S[right]:
+    right −= 1
+  if left <= right: # scans did not strictly cross
+    S[left], S[right] = S[right], S[left] # swap values
+    left, right = left + 1, right − 1 # shrink range
+
+  # put pivot into its ﬁnal place (currently marked by left index)
+  S[left], S[b] = S[b], S[left]
+  # make recursive calls
+  inplace quick sort(S, a, left − 1)
+  inplace quick sort(S, left + 1, b)
+```
+The in-place quick-sort modifies the input sequence using element swapping and does not explicitly create subsequences. Instead, the subsequence is implicitly represented by a range of positions specified by a leftmost and rightmost index $a$ and $b$, respectively.
+
+Although the implementation described in the section for dividing the sequence into two pieces is in-place, we note that the complete quick-sort algorithm needs space for a stack proportional to the depth of the recursion tree.
+- Stack depth is $O(\log n)$. There is a trick that lets us guarantee the stack size is $O(\log n)$. Design a non-recursive function of in-place quick sort using an explicit stack to iteratively process subproblems. When pushing the new subproblems, we should first push the larger subproblem and then the smaller one. Then, the stack can have depth at most $O(\log n)$.
