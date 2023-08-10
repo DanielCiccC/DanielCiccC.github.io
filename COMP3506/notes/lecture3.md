@@ -132,21 +132,22 @@ Arrays must be consecutive memory cells
   - element
   - Link to next node
 
-![linked list](image-4.png)
+![linked list](assets/IMG19.png)
 
 Simple process to insert between two elements
 
 ### Singly linked list
 
-![Alt text](image-5.png)
+![Alt text](assets/IMG20.png)
 
 ### Doubly linked list
 
-![Alt text](image-6.png)
+![Alt text](assets/IMG21.png)
 
 ### Circularly Linked list
 
-![Alt text](image-7.p## Extensible lists 
+![Alt text](assets/IMG22.ng)
+## Extensible lists 
 - push(o)/add(o)/append(o)
 adds element o at the end 
 of the list
