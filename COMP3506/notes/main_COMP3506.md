@@ -6,7 +6,7 @@ Lecture notes and revision will be added separately
 | :-----: | :----: | --------|
 |   1     | [Chapt 3.1, 4. Experimental Studies and Recursion](textbook_wk1.html) |  [Tutorial 1](tutorial1.html)       |
 |[2](lecture2.html)    | [Chapt 12.1-12.3, Sorting and Selection](textbook_wk2.html) | [Tutorial 2](tutorial2.html)        |
-|    [3]()    | Link |         |
+|    [3](lecture3.html)    | Link |         |
 |    [4]()    | Link |         |
 |    [5]()    | Link |         |
 |    [6]()    | Link |         |
