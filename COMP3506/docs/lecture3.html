@@ -25,6 +25,131 @@
 </header>
 <main>
 <h1 dir="auto" id="lecture-3">Lecture 3</h1>
+<h2 dir="auto" id="recapt-lecture-2">Recapt Lecture 2</h2>
+<h3 dir="auto" id="quick-sort">quick-sort</h3>
+<ul dir="auto">
+<li dir="auto">Randomised divide and conquer sorting algorithm
+<ul dir="auto">
+<li dir="auto">Divide: pick a random element <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> (called a pivot)</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="quick-sort-recursion-tree">Quick sort recursion tree</h3>
+<ul dir="auto">
+<li dir="auto">execution of quick sort is depicted by a recursion tree
+<ul dir="auto">
+<li dir="auto">Each node represents a recursive call of quick sort and stores</li>
+<li dir="auto">Use the first element as a pivot, and divide the cards according to whether they are 'larger than' or 'smaller than'
+Good execution example:</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="image.png" alt="Alt text" data-src="image.png"></p>
+<h4 dir="auto" id="the-worst-case-running-time">The worst case running time</h4>
+<ul dir="auto">
+<li dir="auto">The worst case occurs when picking the minimum or maximum element</li>
+</ul>
+<h4 dir="auto" id="expected-running-time">Expected running time</h4>
+<ul dir="auto">
+<li dir="auto">Good call: The size of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> are each less than <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>s</mi><mi mathvariant="normal">/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">3s/4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mord mathnormal">s</span><span class="mord">/4</span></span></span></span></li>
+<li dir="auto">Bad call: one of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span> or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> is greater than <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mn>3</mn><mi mathvariant="normal">/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">s3/4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">s</span><span class="mord">3/4</span></span></span></span></li>
+</ul>
+<p dir="auto">Probabilistic fact: Expected number of coin tosses required in order to get <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> heads is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>k</mi></mrow><annotation encoding="application/x-tex">2k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></p>
+<p dir="auto">In practise, quick sort is chosen over merge sort:</p>
+<ul dir="auto">
+<li dir="auto">Is in-place: only needs the array of data, no extra memory needed
+<ul dir="auto">
+<li dir="auto">Keep track of pointers, and use them until they cross over</li>
+<li dir="auto">In place partitioning - update textbook notes:</li>
+</ul>
+</li>
+</ul>
+<h2 dir="auto" id="sorting">Sorting:</h2>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">def</span> <span class="hljs-title function_">bogo_sort</span>(<span class="hljs-params">my_list</span>):
+    <span class="hljs-keyword">while</span> is_sorted(my_list) == <span class="hljs-literal">False</span>:
+        random_shuffle(my_list)
+</div></code></pre>
+<p dir="auto">worst case: unbounded</p>
+<p dir="auto">Average case: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>⋅</mo><mi>n</mi><mo stretchy="false">!</mo></mrow><annotation encoding="application/x-tex">n \cdot n!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4445em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">n</span><span class="mclose">!</span></span></span></span></p>
+<p dir="auto">Best case: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></p>
+<h1 dir="auto" id="lecture-3-1">Lecture 3</h1>
+<h3 dir="auto" id="counting-comparisons">Counting Comparisons</h3>
+<ul dir="auto">
+<li dir="auto">Each possible run of the algorithm corresponds to a root-to-leaf path in a decision tree</li>
+<li dir="auto">If you traverse the tree, you can determine every element in relation to every other element's relation in the list</li>
+</ul>
+<h4 dir="auto" id="eg-permutations">E.g. permutations</h4>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>&lt;</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>c</mi><mo>&gt;</mo><mo>=</mo><mi mathvariant="normal">∣</mi><mi>c</mi><mi mathvariant="normal">∣</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex"> &lt;a, b, c&gt; = |c| = 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">c</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span></span></span></span></span></p>
+</math>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>permutation</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>a, b, c,</td>
+</tr>
+<tr dir="auto">
+<td>a, c, b</td>
+</tr>
+<tr dir="auto">
+<td>b, a, c</td>
+</tr>
+<tr dir="auto">
+<td>b, c, a</td>
+</tr>
+<tr dir="auto">
+<td>c, a, b,</td>
+</tr>
+<tr dir="auto">
+<td>c, b, a</td>
+</tr>
+</tbody>
+</table>
+<ul dir="auto">
+<li dir="auto">UPDATE PROOF</li>
+</ul>
+<p dir="auto">Every comparison based sort takes at best <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n \log n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span></span></span></span> time</p>
+<h3 dir="auto" id="bucket-sort">Bucket sort</h3>
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> be a list of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> key, element items with keys in the range of [0, N-1]</li>
+<li dir="auto">Create a bucket for each element</li>
+<li dir="auto">Because the buckets are already sorted in the array, iterate through the buckets and link them together</li>
+</ul>
+<p dir="auto"><img src="image-2.png" alt="Alt text" data-src="image-2.png"></p>
+<h4 dir="auto" id="analysis">Analysis</h4>
+<ul dir="auto">
+<li dir="auto">Initialising the bucket array has to take <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> time</li>
+<li dir="auto">Phase 1 takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
+<li dir="auto">Phase 2 takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n + N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)</span></span></span></span> time (has to iterate through each chain, in the whole bucket)
+<ul dir="auto">
+<li dir="auto">Which ever of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> will dominate depening on the size.</li>
+</ul>
+</li>
+</ul>
+<h4 dir="auto" id="properties-and-extensions">Properties and Extensions</h4>
+<ul dir="auto">
+<li dir="auto">Stable sort property</li>
+<li dir="auto">Relative order of any two items with the  same key is preserved after the execution of the algorithm</li>
+</ul>
+<h3 dir="auto" id="lexicographic-order">Lexicographic order:</h3>
+<ul dir="auto">
+<li dir="auto">d-tuple is a sequence of d keys <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>k</mi><mn>1</mn><mo separator="true">,</mo><mi>k</mi><mn>2</mn><mo separator="true">,</mo><mi>k</mi><mn>3</mn><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><mi>k</mi><mi>d</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(k1, k2, k3, ..., kd)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal">d</span><span class="mclose">)</span></span></span></span> where
+is said to be the i-th dimension of the tuple</li>
+</ul>
+<h3 dir="auto" id="lexicographic-sort-tuple-sort">Lexicographic-sort (Tuple sort)</h3>
+<ul dir="auto">
+<li dir="auto">Comparator that compares two tuples by their ith dimension</li>
+<li dir="auto"><em>LexicographicSort</em> sorts a sequence of d-tuples in
+lexicographic order by executing stableSort, d times
+<ul dir="auto">
+<li dir="auto">Once per dimension</li>
+</ul>
+</li>
+<li dir="auto">Runs in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>d</mi><mo>⋅</mo><mi>T</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(d\cdot T(n))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">))</span></span></span></span> time</li>
+</ul>
 
 </main>
 </body>
