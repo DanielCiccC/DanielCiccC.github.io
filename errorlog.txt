@@ -10,10 +10,8 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.png': No s
 cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.gif': No such file or directory
 Skipping C:/git/DanielCiccC.github.io/errorlog.txt: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/file_tracker.py: 'notes' or 'docs' directory not found.
-Skipping C:/git/DanielCiccC.github.io/GPT_test.py: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
-Skipping C:/git/DanielCiccC.github.io/test.py: 'notes' or 'docs' directory not found.
 C:/git/DanielCiccC.github.io/COMP3506/docs/textbook_wk2.html
 Replaced 'undefined' in COMP3506/docs/textbook_wk2.html with its name.
