@@ -16,4 +16,4 @@ Lecture notes and revision will be added separately
 
 |Assignment | test |
 | --- | ---
-| A1 | [LinkedList test](tests/test_ll.py)
+| A1 | [LinkedList test](../tests/test_ll.py)
