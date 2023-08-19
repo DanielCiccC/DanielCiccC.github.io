@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="chapter-18---iterators">Chapter 1.8 - Iterators</h1>
+<p dir="auto">In python, the mechanism for iteration is based upon the following conventions</p>
+<ul dir="auto">
+<li dir="auto">An iterator is an object that manages an iterations through a series of values. If variable <code>i</code> identifies an iterator object then each call to the built-in function, <code>next(i)</code>, produces a subsequent element from the underlying series</li>
+<li dir="auto">An iterable is an object, obj, that produces an iterator via the syntax iter<code>(obj)</code></li>
+</ul>
+<p dir="auto">An iterator can be produced via the syntax <code>i = iter(data)</code>, and then each subsquent call to <code>next(i)</code> will return an element of that list</p>
+<ul dir="auto">
+<li dir="auto">The iterator does not store its own copy of the list of elements, instead maintains a current <em>index</em> into the original list.</li>
+<li dir="auto">By these defintions, <code>data = [1, 2, 3, 4]</code> is an iterable, but not an iterator</li>
+<li dir="auto">Python also supports functions and classes that produce an implicit iterable series of values, for example, <code>range(10000)</code>
+<ul dir="auto">
+<li dir="auto">Does not return a list of values (returns a range object) that is iterable</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="generators">Generators</h3>
+<p dir="auto">The most convienient technique for creating iterators in Python is through the use of <strong>generators</strong>.</p>
+<ul dir="auto">
+<li dir="auto">Implemented with a syntax that is very similar to a function, buts executes a <em><strong>yield</strong></em> statement to indicate each element of the series</li>
+</ul>
+<p dir="auto">For example, a traditional functions to find factors of <code>n</code> would be as so:</p>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">def</span> <span class="hljs-title function_">factors</span>(<span class="hljs-params">n</span>):                  <span class="hljs-comment"># traditional function that computes factors</span>
+    results = [ ]                <span class="hljs-comment"># store factors in a new list</span>
+    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,n+<span class="hljs-number">1</span>):
+        <span class="hljs-keyword">if</span> n % k == <span class="hljs-number">0</span>:           <span class="hljs-comment"># divides evenly, thus k is a factor</span>
+            results.append(k)    <span class="hljs-comment"># add k to the list of factors</span>
+    <span class="hljs-keyword">return</span> results               <span class="hljs-comment"># return the entire list</span>
+
+</div></code></pre>
+<p dir="auto">In contrast, an implementation with a generator would be as so:</p>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">def</span> <span class="hljs-title function_">factors</span>(<span class="hljs-params">n</span>):             <span class="hljs-comment"># generator that computes factors</span>
+    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,n+<span class="hljs-number">1</span>):
+        <span class="hljs-keyword">if</span> n % k == <span class="hljs-number">0</span>:      <span class="hljs-comment"># divides evenly, thus k is a factor</span>
+            <span class="hljs-keyword">yield</span> k         <span class="hljs-comment"># yield this factor as next result</span>
+</div></code></pre>
+<ul dir="auto">
+<li dir="auto">Keyword <em><strong>yield</strong></em> indicates to Python that we are defined a generator, rather than a traditional function</li>
+<li dir="auto">Python continues running the statement until a yield statement indicates the next value</li>
+<li dir="auto">Allows for <em><strong>lazy evaluation</strong></em>, results are computed only if requested, and the entire memory need not reside in memory at one time
+<ul dir="auto">
+<li dir="auto">generator can effectively produce an infinite series of values</li>
+</ul>
+</li>
+</ul>
+<hr dir="auto">
+<h1 dir="auto" id="chapter-5---array-based-techniques">Chapter 5 - Array Based Techniques</h1>
+<ul dir="auto">
+<li dir="auto">Explore python's built-in sequence classes, namely <code>list</code>, <code>tuple</code> and <code>str</code> classes</li>
+<li dir="auto">Commonality: all supports indiexing to access an individual element of a sequence, using a syntax such as <code>seq[k]</code></li>
+</ul>
+<h3 dir="auto" id="public-behaviours">Public behaviours</h3>
+<ul dir="auto">
+<li dir="auto">There are several important subtleties regarding the behaviours associated with these classes (such as what it means to make a copy of the sequence, or take a slice of a sequence)</li>
+<li dir="auto">Establish an accurate mental model for eachh of these classes</li>
+</ul>
+<h3 dir="auto" id="implementation-details">Implementation Details</h3>
+<ul dir="auto">
+<li dir="auto">The efficiency of a program depends greatly on the efficiency of the components which it relies</li>
+</ul>
+<h3 dir="auto" id="asymptotic-and-experimental-analyses">Asymptotic and Experimental Analyses</h3>
+<ul dir="auto">
+<li dir="auto">We will rely on the formal <em><strong>asymptotic analysis</strong></em> notations established in Chapter 3.</li>
+<li dir="auto">performs experimental analyses on the primary operations to provide empirical evidence that is consistent with the more theoretical asymptotic analyses.</li>
+</ul>
+<h2 dir="auto" id="52-low-level-arrays">5.2 Low level Arrays</h2>
+<p dir="auto">Primary memory:</p>
+<ul dir="auto">
+<li dir="auto">A computer system will have a number of bytes in memory, and to keep track of what information is stored in what byte, the computer uses an abstraction known as a memory address
+<ul dir="auto">
+<li dir="auto">Associated with a unique number that serves as its address</li>
+</ul>
+</li>
+<li dir="auto">Computer hardware is designed so that any byte if the main memory can be efficiently accessed based upon it's memory address
+<ul dir="auto">
+<li dir="auto">Using our notation for asymptotic analysis, we say that any individual byte of memory can be stored and retrieved in O(1) time</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">A group of related variables can be stored one after another in a contiguous portion of a computer's memory</p>
+<ul dir="auto">
+<li dir="auto">Denote such a representation as an array</li>
+<li dir="auto">Example a text string is stored as an ordered sequence of individual charcaters
+<ul dir="auto">
+<li dir="auto">A six character string would be stored in 12 consecutive bytes of memory</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets/IMG24.PNG" alt="Alt text" data-src="assets/IMG24.PNG"></p>
+<p dir="auto">We describe this as an array of six characters</p>
+<ul dir="auto">
+<li dir="auto">We refer to each location within an array as a <em><strong>cell</strong></em></li>
+<li dir="auto">Use an integer index to describe its location</li>
+<li dir="auto">Each cell of an array must use the same number of bytes
+<ul dir="auto">
+<li dir="auto">If one knows the memory address at which an array starts, the number of bytes per element and a desired index within an array, the appropriate memory address can be computed <code> start + cellsize * index</code></li>
+<li dir="auto">Calculating memory addresses can be handled automatically, and a programmer can envision a more typical high-level abstractyion of an array of characters</li>
+</ul>
+</li>
+</ul>
+<h2 dir="auto" id="referential-arrays">Referential Arrays</h2>
+<p dir="auto">Assume we want a medical information system to keep track of the patients currently assigned to beds in a certain hospital</p>
+<ul dir="auto">
+<li dir="auto">Hospital has 200 beds</li>
+<li dir="auto">beds are numbered from 0 to 199</li>
+</ul>
+<p dir="auto">We could consider using an array-based structure to maintain the names of the patients currently assigned to those beds.</p>
+<ul dir="auto">
+<li dir="auto">The elements are strings, and the string naturally have different lengths</li>
+<li dir="auto">Python could attempt to reserve enough space to hold the maximum string length, but that would be wasteful</li>
+</ul>
+<p dir="auto">Instead, Python represents a list or ruple instance using an internal storage mechanism as an array of object <em><strong>references</strong></em>.</p>
+<p dir="auto"><img src="assets/IMG25.PNG" alt="Alt text" data-src="assets/IMG25.PNG"></p>
+<p dir="auto">The fact that lists and tuples are referential structures is signiﬁcant to the semantics of these classes.</p>
+<p dir="auto">A single list instance may include multiple references to the same object as elements of the list, and it is possible for a single object to be an element of two or more lists, as those lists simply store references back to that object.</p>
+<ul dir="auto">
+<li dir="auto">when you compute a slice of a list, the result is a new list instance, but that new list has references to the same elements that are in the original list</li>
+</ul>
+<p dir="auto"><img src="assets/IMG26.PNG" alt="Alt text" data-src="assets/IMG26.PNG"></p>
+<p dir="auto">If, for example,
+the command <code>temp[2] = 15</code> were executed from this conﬁguration, that does not change the existing integer object; it changes the reference in cell 2 of the temp list to reference a different object</p>
+<p dir="auto">The same semantics is demonstrated when making a new list as a copy of an existing one.</p>
+<ul dir="auto">
+<li dir="auto">New list that is a <em><strong>shallow copy</strong></em>, in that it references the same elements as in the first list
+<ul dir="auto">
+<li dir="auto">If the contents of the list were of a mutable type then issues may arise</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Common practise to initialise an array of integers such as <code>counters = [0] * 8</code></p>
+<ul dir="auto">
+<li dir="auto">Produces a length of list 8, all eight cells of the list reference the same object</li>
+</ul>
+<p dir="auto"><img src="assets/IMG27.PNG" alt="Alt text" data-src="assets/IMG27.PNG"></p>
+<h2 dir="auto" id="compact-arrays-in-python">Compact arrays in Python</h2>
+<p dir="auto">In the introduction to this section, we emphasized that strings are represented using an array of characters (not an array of references). We will refer to this more direct representation as a compact array because the array is storing the bits that represent the primary data (characters, e.g.)</p>
+<p dir="auto">Advantages:</p>
+<ul dir="auto">
+<li dir="auto">overall memory usage will be lower</li>
+<li dir="auto">Each unicode caharacter typically requires two byters. If each character was stored independently, there would be signioficantly more bytes used.</li>
+</ul>
+
+</main>
+</body>
+</html>

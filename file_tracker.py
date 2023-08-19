@@ -13,22 +13,27 @@ def get_active_window_path():
     executable_path = win32process.GetModuleFileNameEx(process_handle, 0)
     return executable_path
 
-def main():
-    try:
-        while True:
-            file_path = get_active_window_path()
-            current_tab = pyautogui.getActiveWindow().title
-            click_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+# def main():
+#     try:
+#         while True:
+#             file_path = get_active_window_path()
+#             current_tab = pyautogui.getActiveWindow().title
+#             click_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             
-            print(f"Tab Name: {current_tab}")
-            print(f"Click Time: {click_time}")
-            print(f"File Path: {file_path}")
-            print("-" * 30)
+#             print(f"Tab Name: {current_tab}")
+#             print(f"Click Time: {click_time}")
+#             print(f"File Path: {file_path}")
+#             print("-" * 30)
 
-            time.sleep(1)  # Wait for 1 second
+#             time.sleep(1)  # Wait for 1 second
 
-    except KeyboardInterrupt:
-        print("Script terminated.")
+#     except KeyboardInterrupt:
+#         print("Script terminated.")
+
+def factors(n):             # generator that computes factors
+    for k in range(1,n+1):
+        if n % k == 0:      # divides evenly, thus k is a factor
+            yield k         # yield this factor as next result
 
 if __name__ == "__main__":
-    main()
+    print(factors(60))
