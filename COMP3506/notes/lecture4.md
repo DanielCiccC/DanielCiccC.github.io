@@ -268,3 +268,47 @@ C is 'concrete'. Common update methods
 - Application: print a strcutured document
 
 ![Alt text](assets/IMG36.PNG)
+
+```
+Algorithm preOrder(p)
+    visit(p)
+    for each child c of p
+        preorder(c)
+```
+
+### Postorder traversal
+- A node is visited after its descendants
+
+![Alt text](assets/IMG37.PNG)
+
+```
+Algorithm postOrder(p)    
+    for each child c of p
+        postOrder(c)
+    visit(p)
+```
+
+## Binary Trees
+- Each internal node has at most two children
+  - Exactly two for a properr binary tree
+- Internal node has a left child and right child
+- Full level
+  - level $l$ is full if it contains $2^{l}$ nodes
+- Complete binary tree
+  - for height $h$
+  - Level $0, ...,h-1$ are full
+  - In level $h$, all leaf nodes are as far left as possible
+
+![Alt text](assets/IMG38.PNG)
+
+### Examples
+
+![Alt text](assets/IMG39.PNG)
+
+Proper binary tree
+- Every node, *except for the leaves* has two children
+- Also called a full binary tree
+
+### Examples
+
+![Alt text](assets/IMG40.PNG)

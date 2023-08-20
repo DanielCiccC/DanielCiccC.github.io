@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="chapter-61---stacks">Chapter 6.1 - Stacks</h1>
+<p dir="auto">A stack is a collection of objects that are inserted and removed according to the last-in, ﬁrst-out (LIFO) principle.</p>
+<ul dir="auto">
+<li dir="auto">May only access or remove the most recently inseted object that remains (at the so-called 'top' of the stack)</li>
+</ul>
+<h3 dir="auto" id="stack-data-type">Stack Data Type</h3>
+<p dir="auto">Formally, a stack is an abstract data type (ADT) such that an instance S supports the following two methods:</p>
+<ul dir="auto">
+<li dir="auto"><code>S.push(e)</code> Add an element <code>e</code> to the top of stack <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span></li>
+<li dir="auto"><code>S.pop()</code>: Remove and return the top element from the stack <code>S</code>; an error occurs if the stack is empty</li>
+</ul>
+<p dir="auto">Accessor methods for convenience:</p>
+<ul dir="auto">
+<li dir="auto"><code>S.top()</code>: Return a reference to the top element of stack S, without removing it; an error occurs if the stack is empty.</li>
+<li dir="auto"><code>S.is_empty()</code>: Return True if stack S does not contain any elements.</li>
+<li dir="auto"><code>len(S)</code>: Return the number of elements in stack S; in Python, we implement this with the special method <code>__len__</code>.</li>
+</ul>
+<h3 dir="auto" id="simple-array-based-stack-implementation">Simple Array-based Stack implementation</h3>
+<p dir="auto">Implement a stack quite easily, aligning the top of the stack at the end of the list.</p>
+<p dir="auto"><img src="assets/IMG23.PNG" alt="ALT" data-src="assets/IMG23.PNG"></p>
+<h3 dir="auto" id="adapter-pattern">Adapter Pattern</h3>
+<p dir="auto">The <strong>Adapter</strong> design pattern applied tto any context where we effectively want to modify an existing class so that its methods match those of a related, but different, class or interface.</p>
+<ul dir="auto">
+<li dir="auto">Apply an adapter pattern by defining a class in such a way that it contains an instance of the existing class as a hidden field, and iimplement each method of the new class using methods of this hidden instance variable</li>
+</ul>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><em><strong>Stack Method</strong></em></th>
+<th><em><strong>Realisation with Python list</strong></em></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><code>S.push(e)</code></td>
+<td><code>L.append(e)</code></td>
+</tr>
+<tr dir="auto">
+<td><code>S.pop()</code></td>
+<td><code>L.pop()</code></td>
+</tr>
+<tr dir="auto">
+<td><code>S.top()</code></td>
+<td><code>L[-1]</code></td>
+</tr>
+<tr dir="auto">
+<td><code>S.is_empty()</code></td>
+<td><code>len(L)==0</code></td>
+</tr>
+<tr dir="auto">
+<td><code>len(S)</code></td>
+<td><code>len(L)</code></td>
+</tr>
+</tbody>
+</table>
+<p dir="auto">We use the adapter desing pattern to define an <code>ArrayStack</code> that uses an underlying Python list for storage</p>
+<ul dir="auto">
+<li dir="auto">Use word <code>ArrayStack</code> to emphasize that the underlying storage is inherently Array based</li>
+<li dir="auto">when <code>pop</code> is called on an empty Python list, it formally raises and <code>Indexerror</code>, but this does not seem appropriate for a stack - define a new exception class that is more appropriate</li>
+</ul>
+<h3 dir="auto" id="usage-example">Usage example</h3>
+<pre><code class="code-line language-python" dir="auto"><div>S = ArrayStack( )       <span class="hljs-comment"># contents: [ ]</span>
+S.push(<span class="hljs-number">5</span>)               <span class="hljs-comment"># contents: [5]</span>
+S.push(<span class="hljs-number">3</span>)               <span class="hljs-comment"># contents: [5, 3]</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(S))           <span class="hljs-comment"># contents: [5, 3]; outputs 2</span>
+<span class="hljs-built_in">print</span>(S.pop())          <span class="hljs-comment"># contents: [5]; outputs 3</span>
+<span class="hljs-built_in">print</span>(S.<span class="hljs-keyword">is</span> empty())     <span class="hljs-comment"># contents: [5]; outputs False</span>
+<span class="hljs-built_in">print</span>(S.pop())          <span class="hljs-comment"># contents: [ ]; outputs 5</span>
+<span class="hljs-built_in">print</span>(S.<span class="hljs-keyword">is</span> empty())     <span class="hljs-comment"># contents: [ ]; outputs True</span>
+S.push(<span class="hljs-number">7</span>)               <span class="hljs-comment"># contents: [7]</span>
+S.push(<span class="hljs-number">9</span>)               <span class="hljs-comment"># contents: [7, 9]</span>
+<span class="hljs-built_in">print</span>(S.top())          <span class="hljs-comment"># contents: [7, 9]; outputs 9</span>
+S.push(<span class="hljs-number">4</span>)               <span class="hljs-comment"># contents: [7, 9, 4]</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(S))           <span class="hljs-comment"># contents: [7, 9, 4]; outputs 3</span>
+<span class="hljs-built_in">print</span>(S.pop())          <span class="hljs-comment"># contents: [7, 9]; outputs 4</span>
+S.push(<span class="hljs-number">6</span>)               <span class="hljs-comment"># contents: [7, 9, 6]</span>
+</div></code></pre>
+<h2 dir="auto" id="class-implementation">Class implementation</h2>
+<pre><code class="code-line language-python" dir="auto"><div>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ArrayStack</span>:
+    <span class="hljs-string">&quot;&quot;&quot;LIFO Stack implementation using a Python list as underlying storage.&quot;&quot;&quot;</span>
+   
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">init</span> (self):
+    <span class="hljs-string">&quot;&quot;&quot;Create an empty stack.&quot;&quot;&quot;</span>
+        self. data = [ ] <span class="hljs-comment"># nonpublic list instance</span>
+   
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">len</span> (self):
+    <span class="hljs-string">&quot;&quot;&quot;Return the number of elements in the stack.&quot;&quot;&quot;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(self. data)
+   
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">is</span> empty(self):
+    <span class="hljs-string">&quot;&quot;&quot;Return True if the stack is empty.&quot;&quot;&quot;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(self. data) == <span class="hljs-number">0</span>
+   
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">push</span>(<span class="hljs-params">self, e</span>):
+    <span class="hljs-string">&quot;&quot;&quot;Add element e to the top of the stack.&quot;&quot;&quot;</span>
+        self. data.append(e) <span class="hljs-comment"># new item stored at end of list</span>
+   
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">top</span>(<span class="hljs-params">self</span>):
+    <span class="hljs-string">&quot;&quot;&quot;Return (but do not remove) the element at the top of the stack.
+   
+    Raise Empty exception if the stack is empty.
+    &quot;&quot;&quot;</span>
+        <span class="hljs-keyword">if</span> self.<span class="hljs-keyword">is</span> empty():
+           <span class="hljs-keyword">raise</span> Empty( Stack <span class="hljs-keyword">is</span> empty )
+        <span class="hljs-keyword">return</span> self. data[−<span class="hljs-number">1</span>] <span class="hljs-comment"># the last item in the list</span>
+   
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">pop</span>(<span class="hljs-params">self</span>):
+    <span class="hljs-string">&quot;&quot;&quot;Remove and return the element from the top of the stack (i.e., LIFO).
+   
+    Raise Empty exception if the stack is empty.
+    &quot;&quot;&quot;</span>
+        <span class="hljs-keyword">if</span> self.<span class="hljs-keyword">is</span> empty():
+            <span class="hljs-keyword">raise</span> Empty( Stack <span class="hljs-keyword">is</span> empty )
+
+        <span class="hljs-keyword">return</span> self. data.pop( ) <span class="hljs-comment"># remove last item from list</span>
+</div></code></pre>
+<h3 dir="auto" id="efficiency-for-stack-based-implementation">Efficiency for stack-based implementation</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><em><strong>Operation</strong></em></th>
+<th><em><strong>Running Time</strong></em></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><code>S.push(e)</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><msup><mo stretchy="false">)</mo><mo lspace="0em" rspace="0em">∗</mo></msup></mrow><annotation encoding="application/x-tex">O(1)^{*}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∗</span></span></span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td><code>S.pop()</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><msup><mo stretchy="false">)</mo><mo lspace="0em" rspace="0em">∗</mo></msup></mrow><annotation encoding="application/x-tex">O(1)^{*}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∗</span></span></span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td><code>S.top()</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td><code>S.is_empty()</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td><code>len(S)</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="reversing-data-using-a-stack">Reversing data using a stack</h3>
+<p dir="auto">As a consequence of the LIFO protocol, a stack can be used as a general tool to reverse a data sequence.</p>
+<ul dir="auto">
+<li dir="auto">Example, print lines in reverse order
+<ul dir="auto">
+<li dir="auto">Read each line and push it onto the stack, and then writing the lines in the order they are popped.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">def</span> <span class="hljs-title function_">reverse</span> ﬁle(ﬁlename):
+    <span class="hljs-string">&#x27;&#x27;&#x27;Overwrite given ﬁle with its contents line-by-line reversed.&#x27;&#x27;&#x27;</span>
+    S = ArrayStack()
+    original = <span class="hljs-built_in">open</span>(ﬁlename)
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> original:
+        S.push(line.rstrip( <span class="hljs-string">&#x27;\n&#x27;</span> )) <span class="hljs-comment"># we will re-insert newlines when writing</span>
+    original.close()
+
+    <span class="hljs-comment"># now we overwrite with contents in LIFO order</span>
+    output = <span class="hljs-built_in">open</span>(ﬁlename, w ) <span class="hljs-comment"># reopening ﬁle overwrites original</span>
+
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> S.<span class="hljs-keyword">is</span> empty():
+        output.write(S.pop( ) + <span class="hljs-string">&#x27;\n&#x27;</span> ) <span class="hljs-comment"># re-insert newline characters</span>
+    output.close()
+</div></code></pre>
+<ul dir="auto">
+<li dir="auto">We intentionally strip trailing newlines from lines as they are read, and then re-insert newlines after each line when writing the resulting ﬁle.</li>
+</ul>
+<h3 dir="auto" id="example-algorithm-for-matching-delimiters">Example: Algorithm for matching delimiters</h3>
+<ul dir="auto">
+<li dir="auto">Take arithemtic expressions and their delimeters, i.e. '([{' and '}])' respectively.
+<ul dir="auto">
+<li dir="auto">Example: ()(()){([()])} correct implementation</li>
+<li dir="auto">Example: )(()){([()])} incorrect implementation</li>
+</ul>
+</li>
+<li dir="auto">The following python implementation can determin whether all delimiters properly match</li>
+</ul>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">def</span> <span class="hljs-title function_">is</span> matched(expr):
+<span class="hljs-string">&quot;&quot;&quot;Return True if all delimiters are properly match; False otherwise.  &quot;&quot;&quot;</span>
+    lefty = <span class="hljs-string">&#x27;({[&#x27;</span> <span class="hljs-comment"># opening delimiters</span>
+    righty = <span class="hljs-string">&#x27;)}]&#x27;</span> <span class="hljs-comment"># respective closing delims</span>
+    S = ArrayStack()
+    <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> expr:
+        <span class="hljs-keyword">if</span> c <span class="hljs-keyword">in</span> lefty:
+            S.push(c) <span class="hljs-comment"># push left delimiter on stack</span>
+        <span class="hljs-keyword">elif</span> c <span class="hljs-keyword">in</span> righty:
+            <span class="hljs-keyword">if</span> S.<span class="hljs-keyword">is</span> empty():
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> <span class="hljs-comment"># nothing to match with</span>
+            <span class="hljs-keyword">if</span> righty.index(c) != lefty.index(S.pop()):
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> <span class="hljs-comment"># mismatched</span>
+    <span class="hljs-keyword">return</span> S.<span class="hljs-keyword">is</span> empty( ) <span class="hljs-comment"># were all symbols matched?</span>
+</div></code></pre>
+<h1 dir="auto" id="queues">Queues</h1>
+<ul dir="auto">
+<li dir="auto">Similar to a stack, but follows a FIFO principle
+<ul dir="auto">
+<li dir="auto">Elements can be inserted in at any time, but only the element that has been in the queue the longest can be next removed.</li>
+</ul>
+</li>
+<li dir="auto">A metaphor for this is people waiting in line to get on an amusement ride</li>
+<li dir="auto"></li>
+</ul>
+
+</main>
+</body>
+</html>

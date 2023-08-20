@@ -1,0 +1,459 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-4-1">Lecture 4</h1>
+<h3 dir="auto" id="stacks-1">Stacks</h3>
+<ul dir="auto">
+<li dir="auto">Stores arbitary objects
+<ul dir="auto">
+<li dir="auto">linkedlist, list</li>
+</ul>
+</li>
+<li dir="auto">Insertion and deletions are LIFO</li>
+<li dir="auto">Like a spring loaded plate dispenser
+<ul dir="auto">
+<li dir="auto">Insertions at the top of the stack</li>
+<li dir="auto">Removals from the top of the stack</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="stack-operations-1">Stack operations</h3>
+<ul dir="auto">
+<li dir="auto"><code>push(T)</code></li>
+<li dir="auto"><code>pop()</code></li>
+<li dir="auto"><code>T top()</code></li>
+<li dir="auto"><code>integer size()</code></li>
+<li dir="auto"><code>boolean isEmpty()</code></li>
+</ul>
+<p dir="auto"><img src="assets/IMG29.PNG" alt="Alt text" data-src="assets/IMG29.PNG"></p>
+<h3 dir="auto" id="array-base-stack-1">Array-base stack</h3>
+<ul dir="auto">
+<li dir="auto">Simple stack implementation</li>
+<li dir="auto">Add elements from left to right</li>
+<li dir="auto">Variable keeps track of index of top element
+<ul dir="auto">
+<li dir="auto">index is the top of the stack</li>
+</ul>
+</li>
+</ul>
+<pre><code dir="auto"><code><div>Algorithm size()
+    return t + 1
+
+Algorithm pop()
+    if isEmpty() then
+        throw NoSuchElementException
+    else
+        t &lt;- t - 1
+        return S[t+1]
+</div></code></code></pre>
+<ul dir="auto">
+<li dir="auto">If I am using an array, use <code>t</code> to denote the index I'm up to
+<ul dir="auto">
+<li dir="auto">if I pop from the array, I set the last index to <code>None</code> and reduce the index  <code>t</code></li>
+</ul>
+</li>
+<li dir="auto">Stack should not be allowed to change anything that isn't the top element</li>
+<li dir="auto">Fixed-array can become full
+<ul dir="auto">
+<li dir="auto">Push operations throws <code>IllegalStateException</code>
+<ul dir="auto">
+<li dir="auto">Limitation of array implementation</li>
+<li dir="auto">not intrinsic to the Stack ADT - only because we used an array as part of our ADT</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="performance-1">Performance</h3>
+<ul dir="auto">
+<li dir="auto">If we use a dynamic array, do we use a constant time for push</li>
+<li dir="auto">Space is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
+<li dir="auto">Each operations runs in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>
+<ul dir="auto">
+<li dir="auto">push to the back is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> - we know where the back is, look it up and put the element there</li>
+<li dir="auto">Pop is also <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+</li>
+<li dir="auto">Typically the size (the number of elements on the stack) is maintained inside the structure</li>
+</ul>
+<h3 dir="auto" id="other-implementations-1">Other implementations</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">We could use an extensible list</p>
+<ul dir="auto">
+<li dir="auto">Amortised <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> push - why?</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> pop</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Could also use some sort of linked list</p>
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> push and pop
+<ul dir="auto">
+<li dir="auto">insert to the front in constant time</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 dir="auto" id="queues-1">Queues</h2>
+<ul dir="auto">
+<li dir="auto">Stores arbitary objects</li>
+<li dir="auto">Insertions and deletions are FILO</li>
+<li dir="auto">Think of a waiting line (queue)
+<ul dir="auto">
+<li dir="auto">insertions at the rear of the queue</li>
+<li dir="auto">Removals at the beginning of the queue</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="queue-operations-1">Queue operations</h3>
+<ul dir="auto">
+<li dir="auto"><code>enqueue(T)</code></li>
+<li dir="auto"><code> T dequeue()</code></li>
+<li dir="auto"><code>T first()</code></li>
+<li dir="auto"><code>integer size()</code></li>
+<li dir="auto"><code>boolean isEmpty()</code></li>
+</ul>
+<p dir="auto"><img src="assets/IMG30.PNG" alt="Alt text" data-src="assets/IMG30.PNG"></p>
+<h3 dir="auto" id="array-base-queue-1">Array-Base queue</h3>
+<ul dir="auto">
+<li dir="auto">Use an array of size <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> in a circular fashion</li>
+<li dir="auto">Two variables keep track of the front and size
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> index of the front element</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">sz</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">sz</span></span></span></span> number of stored elements</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="operations-1">Operations</h3>
+<ul dir="auto">
+<li dir="auto">Enqueue throws an exception if an array is full
+<ul dir="auto">
+<li dir="auto">implementation dependent (of having a full sized list)</li>
+</ul>
+</li>
+<li dir="auto">Uses modulo operator <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>o</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">mod</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal">d</span></span></span></span></li>
+</ul>
+<pre><code dir="auto"><code><div>Algorithm enqueue(item)
+    if size() = N then
+        throw IllegalStateException
+    else
+    r &lt;- (f + sz) mod N
+    Q[r] &lt;- item
+    sz &lt;- (sz + 1)
+
+Algorithm deqeue()
+    if isEmpty() then
+        return null
+    else
+        item &lt;- Q[r]
+        f &lt;- (f + 1) mod N
+        sz &lt;- (sz - 1)
+        return item
+</div></code></code></pre>
+<h3 dir="auto" id="programming-call-stacks-1">Programming: Call stacks</h3>
+<p dir="auto">Programming languages use stacks to keep track of the current execution</p>
+<ul dir="auto">
+<li dir="auto">As methods are called, they are pushed to the call stack including information about the memory address of the instruction being  executed (or the method being called) and the local variables required.</li>
+</ul>
+<p dir="auto"><img src="assets/IMG31.PNG" alt="Alt text" data-src="assets/IMG31.PNG"></p>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">def</span> <span class="hljs-title function_">reverse</span>(<span class="hljs-params">inlist</span>):
+    stack = []
+    <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> inlist:
+        stack.append(item)
+    i = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-built_in">len</span>(stack) &gt; <span class="hljs-number">0</span>:
+        inlist[i] = stack.pop()
+        i += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> inlist
+
+reverse([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>])
+[<span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]
+</div></code></pre>
+<ul dir="auto">
+<li dir="auto">Also parentheses matching</li>
+<li dir="auto">HTML Tag Matching</li>
+</ul>
+<h3 dir="auto" id="application-of-queues-round-robin-scheduler-1">Application of Queues: Round Robin Scheduler</h3>
+<ul dir="auto">
+<li dir="auto">Can be implemented using a queue Q repeately performing the following steps:
+<ol dir="auto">
+<li dir="auto">e = Q.dequeue()</li>
+<li dir="auto">Sevice element e</li>
+<li dir="auto">Q.enqueue(e)</li>
+</ol>
+</li>
+</ul>
+<h2 dir="auto" id="iterators-1">Iterators</h2>
+<ul dir="auto">
+<li dir="auto">Structure, and ADT</li>
+<li dir="auto">Facilitate scanning through a sequence of elements</li>
+</ul>
+<h3 dir="auto" id="iterable-interface-1">Iterable interface</h3>
+<ul dir="auto">
+<li dir="auto">Iterable has to following method
+<ul dir="auto">
+<li dir="auto"><code>iterator</code></li>
+</ul>
+</li>
+<li dir="auto">A python list is iterable
+<ul dir="auto">
+<li dir="auto">produces an iterator for its collection as the return value of the <code>iterator()</code> method</li>
+</ul>
+</li>
+</ul>
+<pre><code class="code-line language-python" dir="auto"><div>mylist = [“a”, “b”, “c”, “d”, “e”]
+<span class="hljs-keyword">for</span> element <span class="hljs-keyword">in</span> mylist:
+<span class="hljs-built_in">print</span>(element)
+
+a
+b
+…
+
+x = <span class="hljs-built_in">iter</span>(mylist) <span class="hljs-comment"># &lt;list_iterator object at 0x000…&gt;</span>
+<span class="hljs-built_in">print</span>(x)
+&lt;list_iterator <span class="hljs-built_in">object</span> at <span class="hljs-number">0x000</span>…&gt;
+m = <span class="hljs-built_in">next</span>(x)
+<span class="hljs-built_in">print</span> (m)
+
+a
+
+m = <span class="hljs-built_in">next</span>(x)
+<span class="hljs-built_in">print</span>(m)
+b
+</div></code></pre>
+<h3 dir="auto" id="implementing-iterators-1">Implementing iterators</h3>
+<ul dir="auto">
+<li dir="auto">Implement two methods in your class</li>
+<li dir="auto"><code>__iter__ </code>returns the iterator object</li>
+<li dir="auto"><code>__next__</code> returns the next value and is
+called implicitly after each increment (in a
+“for element in thing” loop for example)</li>
+</ul>
+<pre><code class="code-line language-python" dir="auto"><div>Class Counter:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, low, high</span>):
+        self.current = low - <span class="hljs-number">1</span>
+        self.high = high
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> self
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__next__</span>(<span class="hljs-params">self</span>):
+        self.current += <span class="hljs-number">1</span>
+        <span class="hljs-keyword">if</span> self.current &lt; self.high:
+            <span class="hljs-keyword">return</span> self.current
+        <span class="hljs-keyword">raise</span> StopIteration
+
+<span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> Counter(<span class="hljs-number">3</span>, <span class="hljs-number">9</span>):
+    <span class="hljs-built_in">print</span>(c)
+</div></code></pre>
+<h2 dir="auto" id="tree-basics-1">Tree basics</h2>
+<ul dir="auto">
+<li dir="auto">Abstract model of hierarchical structure</li>
+<li dir="auto">Consists of nodes with a parent-child relation
+<ul dir="auto">
+<li dir="auto">parent is a node above other nodes of a tree</li>
+<li dir="auto">Graphs have no heirarchy or structure</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="arthemtic-expression-tree-1">Arthemtic Expression tree</h3>
+<ul dir="auto">
+<li dir="auto">Leaf nodes are operands (numbers)</li>
+<li dir="auto">parents are operators</li>
+</ul>
+<p dir="auto"><img src="assets/IMG32.PNG" alt="Alt text" data-src="assets/IMG32.PNG"></p>
+<h3 dir="auto" id="tree-terminology-1">Tree terminology</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><em><strong>Terminoplogy</strong></em></th>
+<th><em><strong>Meaning</strong></em></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Root</td>
+<td>has no parents</td>
+</tr>
+<tr dir="auto">
+<td>Internal Node</td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\ge 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> child</td>
+</tr>
+<tr dir="auto">
+<td>External node</td>
+<td>a.k.a. leaf</td>
+</tr>
+<tr dir="auto">
+<td>Edge</td>
+<td>line</td>
+</tr>
+<tr dir="auto">
+<td>Ancestors of a node</td>
+<td>anything connected and 'above'</td>
+</tr>
+<tr dir="auto">
+<td>Descendants of a node</td>
+<td>anything connected and 'below'</td>
+</tr>
+<tr dir="auto">
+<td>Siblings</td>
+<td>share parent</td>
+</tr>
+<tr dir="auto">
+<td>Degree</td>
+<td>number of outlinks, i.e. links going outwards</td>
+</tr>
+<tr dir="auto">
+<td>level</td>
+<td>root is at level 0</td>
+</tr>
+<tr dir="auto">
+<td>Depth of a node/tree</td>
+<td>Count of edges from node to the root, Depth of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">k=3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td>Height of a node/tree</td>
+<td>Number of edges of the <em>longest</em> path to a leaf</td>
+</tr>
+<tr dir="auto">
+<td>Subtree</td>
+<td>A tree that you root at some arbitrary node</td>
+</tr>
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>-ary tree</td>
+<td>At most <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> children for a given node</td>
+</tr>
+<tr dir="auto">
+<td>2-ary Tree</td>
+<td>at most 3 children for a given node</td>
+</tr>
+</tbody>
+</table>
+<p dir="auto"><img src="assets/IMG33.PNG" alt="Alt text" data-src="assets/IMG33.PNG"></p>
+<p dir="auto"><img src="assets/IMG34.PNG" alt="Alt text" data-src="assets/IMG34.PNG"></p>
+<h3 dir="auto" id="tree-properties-1">Tree properties</h3>
+<ul dir="auto">
+<li dir="auto">If every internal node has at least 2 child nodes
+<ul dir="auto">
+<li dir="auto">If <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> is a number of leaf nodes</li>
+<li dir="auto">Number of internal nodes is at <strong>most</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">l-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>4</mn><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><msup><mn>2</mn><mrow><mi>h</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mn>2</mn><mi>h</mi></msup><mo>−</mo><mn>1</mn><mo>=</mo><mi>l</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1+2+4+...+2^{h-1}=2^{h}-1=l-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">...</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">h</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9324em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">h</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="general-tree-structure-1">General Tree Structure</h3>
+<p dir="auto"><img src="assets/IMG35.PNG" alt="Alt text" data-src="assets/IMG35.PNG"></p>
+<ul dir="auto">
+<li dir="auto">Stores a pointer to it's parent</li>
+<li dir="auto">Has a collection (container of 'stuff', list)</li>
+</ul>
+<h3 dir="auto" id="tree-adt-1">Tree ADT</h3>
+<ul dir="auto">
+<li dir="auto"><code>size()</code></li>
+<li dir="auto"><code>isEmpty()</code></li>
+<li dir="auto"><code>iterator()</code></li>
+<li dir="auto"><code>positions()</code></li>
+</ul>
+<p dir="auto">Accessor methods:</p>
+<ul dir="auto">
+<li dir="auto"><code>root()</code></li>
+<li dir="auto"><code>parent(p)</code></li>
+<li dir="auto"><code>children(p)</code></li>
+<li dir="auto"><code>numChildren(p)</code></li>
+</ul>
+<p dir="auto">Query methods</p>
+<ul dir="auto">
+<li dir="auto"><code>isInternal(p)</code></li>
+<li dir="auto"><code>isExternal(p)</code></li>
+<li dir="auto"><code>isRoot(p)</code></li>
+</ul>
+<h3 dir="auto" id="tree-cdt-1">Tree CDT</h3>
+<p dir="auto">C is 'concrete'. Common update methods</p>
+<ul dir="auto">
+<li dir="auto"><code>replace(p,o)</code></li>
+<li dir="auto"><code>addRoot(o)</code></li>
+<li dir="auto"><code>remove(p)</code></li>
+</ul>
+<h3 dir="auto" id="preorder-traversal-1">Preorder Traversal</h3>
+<ul dir="auto">
+<li dir="auto">A node is visited before its descendants
+<ul dir="auto">
+<li dir="auto">Visit performs some task at the node</li>
+</ul>
+</li>
+<li dir="auto">Application: print a strcutured document</li>
+</ul>
+<p dir="auto"><img src="assets/IMG36.PNG" alt="Alt text" data-src="assets/IMG36.PNG"></p>
+<pre><code dir="auto"><code><div>Algorithm preOrder(p)
+    visit(p)
+    for each child c of p
+        preorder(c)
+</div></code></code></pre>
+<h3 dir="auto" id="postorder-traversal-1">Postorder traversal</h3>
+<ul dir="auto">
+<li dir="auto">A node is visited after its descendants</li>
+</ul>
+<p dir="auto"><img src="assets/IMG37.PNG" alt="Alt text" data-src="assets/IMG37.PNG"></p>
+<pre><code dir="auto"><code><div>Algorithm postOrder(p)    
+    for each child c of p
+        postOrder(c)
+    visit(p)
+</div></code></code></pre>
+<h2 dir="auto" id="binary-trees-1">Binary Trees</h2>
+<ul dir="auto">
+<li dir="auto">Each internal node has at most two children
+<ul dir="auto">
+<li dir="auto">Exactly two for a properr binary tree</li>
+</ul>
+</li>
+<li dir="auto">Internal node has a left child and right child</li>
+<li dir="auto">Full level
+<ul dir="auto">
+<li dir="auto">level <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> is full if it contains <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>l</mi></msup></mrow><annotation encoding="application/x-tex">2^{l}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span></span></span></span></span></span></span></span> nodes</li>
+</ul>
+</li>
+<li dir="auto">Complete binary tree
+<ul dir="auto">
+<li dir="auto">for height <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span></li>
+<li dir="auto">Level <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><mi>h</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0, ...,h-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> are full</li>
+<li dir="auto">In level <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span>, all leaf nodes are as far left as possible</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets/IMG38.PNG" alt="Alt text" data-src="assets/IMG38.PNG"></p>
+<h3 dir="auto" id="examples-2">Examples</h3>
+<p dir="auto"><img src="assets/IMG39.PNG" alt="Alt text" data-src="assets/IMG39.PNG"></p>
+<p dir="auto">Proper binary tree</p>
+<ul dir="auto">
+<li dir="auto">Every node, <em>except for the leaves</em> has two children</li>
+<li dir="auto">Also called a full binary tree</li>
+</ul>
+<h3 dir="auto" id="examples-3">Examples</h3>
+<p dir="auto"><img src="assets/IMG40.PNG" alt="Alt text" data-src="assets/IMG40.PNG"></p>
+
+</main>
+</body>
+</html>

@@ -162,8 +162,66 @@ the command <code>temp[2] = 15</code> were executed from this conﬁguration, th
 <p dir="auto">In the introduction to this section, we emphasized that strings are represented using an array of characters (not an array of references). We will refer to this more direct representation as a compact array because the array is storing the bits that represent the primary data (characters, e.g.)</p>
 <p dir="auto">Advantages:</p>
 <ul dir="auto">
-<li dir="auto">overall memory usage will be lower</li>
+<li dir="auto">Overall memory usage will be lower</li>
 <li dir="auto">Each unicode caharacter typically requires two byters. If each character was stored independently, there would be signioficantly more bytes used.</li>
+<li dir="auto">Primary data is stored consecutively in memory</li>
+</ul>
+<h2 dir="auto" id="dynamic-arrays-and-amortisation">Dynamic arrays and amortisation</h2>
+<p dir="auto">When creating a low-level array in a computer system, the precise size of that array must be explicitly declared in order for the system to properly allocate a consecutive piece of memory for its storage.</p>
+<p dir="auto"><img src="assets/IMG28.PNG" alt="Alt text" data-src="assets/IMG28.PNG"></p>
+<p dir="auto">Because the system might dedicate neighboring memory locations to store other data, the capacity of an array cannot trivially be increased by expanding into subsequent cells.</p>
+<p dir="auto">Python’s list class presents a more interesting abstraction. Although a list has a particular length when constructed, the class allows us to add elements to the list, with no apparent limit on the overall capacity of the list.</p>
+<ul dir="auto">
+<li dir="auto">To provide this abstraction, Python relies on an algorithmic sleight of hand known as a <em><strong>dynamic array.</strong></em></li>
+</ul>
+<p dir="auto"><strong>Key principles:</strong></p>
+<ul dir="auto">
+<li dir="auto">A list instance maintains an underlying array that often has greater capacity than the current length of the list.</li>
+<li dir="auto">If a user continues to append elements to a list, any reserved capacity will eventually be exhausted</li>
+</ul>
+<p dir="auto">At that point in time, the old array is no longer needed, so it is reclaimed by the system. Intuitively, this strategy is much like that of the hermit crab, which moves into a larger shell when it outgrows its previous one.</p>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">import</span> sys              <span class="hljs-comment"># provides getsizeof function</span>
+data = [ ]
+<span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):      <span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> must ﬁx choice of n</span>
+    a = <span class="hljs-built_in">len</span>(data)       <span class="hljs-comment"># number of elements</span>
+    b = sys.getsizeof(data) <span class="hljs-comment"># actual size in bytes</span>
+    <span class="hljs-built_in">print</span>( Length: {<span class="hljs-number">0</span>:3d}; Size <span class="hljs-keyword">in</span> <span class="hljs-built_in">bytes</span>: {<span class="hljs-number">1</span>:4d} .<span class="hljs-built_in">format</span>(a, b))
+    data.append(<span class="hljs-literal">None</span>) <span class="hljs-comment">#      increase length by one</span>
+</div></code></pre>
+<p dir="auto">Output is as follows:</p>
+<pre><code dir="auto"><code><div>Length: 0; Size in bytes: 72
+Length: 1; Size in bytes: 104
+Length: 2; Size in bytes: 104
+Length: 3; Size in bytes: 104
+Length: 4; Size in bytes: 104
+Length: 5; Size in bytes: 136
+Length: 6; Size in bytes: 136
+Length: 7; Size in bytes: 136
+Length: 8; Size in bytes: 136
+Length: 9; Size in bytes: 200
+Length: 10; Size in bytes: 200
+Length: 11; Size in bytes: 200
+Length: 12; Size in bytes: 200
+Length: 13; Size in bytes: 200
+Length: 14; Size in bytes: 200
+Length: 15; Size in bytes: 200
+Length: 16; Size in bytes: 200
+Length: 17; Size in bytes: 272
+Length: 18; Size in bytes: 272
+Length: 19; Size in bytes: 272
+Length: 20; Size in bytes: 272
+Length: 21; Size in bytes: 272
+Length: 22; Size in bytes: 272
+Length: 23; Size in bytes: 272
+Length: 24; Size in bytes: 272
+Length: 25; Size in bytes: 272
+Length: 26; Size in bytes: 352
+</div></code></code></pre>
+<p dir="auto"><strong>Observations</strong></p>
+<ul dir="auto">
+<li dir="auto">We see that an empty list instance already requires a certain number of bytes of memory</li>
+<li dir="auto">As soon as the ﬁrst element is inserted into the list, we detect a change in the underlying size of the structure</li>
+<li dir="auto">Because a list is a referential structure, the result of <code>getsizeof</code> for a list instance only includes the size for representing its primary structure; it does not account for memory used by the objects that are elements of the list.</li>
 </ul>
 
 </main>
