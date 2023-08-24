@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="tutorial-5">Tutorial 5</h1>
+<ul dir="auto">
+<li dir="auto">Stacks</li>
+<li dir="auto">Queues</li>
+<li dir="auto">Trees
+<ul dir="auto">
+<li dir="auto">Tree Basics</li>
+<li dir="auto">Tree Traversal</li>
+<li dir="auto">Binary Trees</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="stacks">Stacks</h3>
+<ul dir="auto">
+<li dir="auto">Last in first out (LIFO)</li>
+<li dir="auto"><code>pop()</code> and <code>push()</code> are the main methods</li>
+<li dir="auto">Use Arraylist for implementation</li>
+</ul>
+<h3 dir="auto" id="queues">Queues</h3>
+<ul dir="auto">
+<li dir="auto">Array Implementation</li>
+<li dir="auto">f: Index at the front of the queue
+<ul dir="auto">
+<li dir="auto">increment the from index to remove front index</li>
+</ul>
+</li>
+<li dir="auto">r: Index at the rear of queue
+<ul dir="auto">
+<li dir="auto">increment the rear index to add to end of list</li>
+</ul>
+</li>
+<li dir="auto">Index of an element (f + i) % len</li>
+</ul>
+<h3 dir="auto" id="trees">Trees</h3>
+<ul dir="auto">
+<li dir="auto">Hierarchical Data structure
+<ul dir="auto">
+<li dir="auto">good representation is parent directory</li>
+</ul>
+</li>
+<li dir="auto">Consists of nodes with a parent-child relation</li>
+<li dir="auto">Root: a node without a parent</li>
+<li dir="auto">Internal node: a node with at least one child</li>
+<li dir="auto">External node/leaf: node without children</li>
+<li dir="auto">Ancestors of a node: always goes UP</li>
+<li dir="auto">Descendants: child nodes: always goes DOWN</li>
+</ul>
+<h4 dir="auto" id="level">Level</h4>
+<ul dir="auto">
+<li dir="auto">Root is level 0</li>
+</ul>
+<h4 dir="auto" id="depth-of-nodetree">Depth of Node/Tree</h4>
+<ul dir="auto">
+<li dir="auto">Number of descendants from root</li>
+<li dir="auto">E is depth 2</li>
+</ul>
+<h3 dir="auto" id="height-of-nodetree">Height of Node/Tree</h3>
+<ul dir="auto">
+<li dir="auto">Number of ancestors from <em><strong>leaf</strong></em></li>
+<li dir="auto">E is of height 1</li>
+</ul>
+<p dir="auto"><img src="assets/IMG41.PNG" alt="Alt text" data-src="assets/IMG41.PNG"></p>
+<h4 dir="auto" id="subtree">Subtree</h4>
+<ul dir="auto">
+<li dir="auto">Tree consisting of a node and its descendants</li>
+<li dir="auto">E's subtree is [E: H, I]</li>
+</ul>
+<h3 dir="auto" id="tree-adt-methods">Tree ADT methods</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><code>getElement()</code></td>
+<td>Returns element stored at this position</td>
+</tr>
+<tr dir="auto">
+<td><code>size()</code></td>
+<td>Returns the numer of positions in the tree</td>
+</tr>
+<tr dir="auto">
+<td><code>isEmpty()</code></td>
+<td>Indicates if the tree is empty</td>
+</tr>
+<tr dir="auto">
+<td><code>iterator()</code></td>
+<td>Returns an iterators of all elements</td>
+</tr>
+<tr dir="auto">
+<td><code>positions()</code></td>
+<td>Returns iterable collection of all positions</td>
+</tr>
+<tr dir="auto">
+<td><code>root()</code></td>
+<td>Returns position of the tree's root</td>
+</tr>
+<tr dir="auto">
+<td><code>parent(p)</code></td>
+<td>Returns position of parent</td>
+</tr>
+<tr dir="auto">
+<td><code>children()</code></td>
+<td>Return's iterable collection of p's children</td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="tree-traversal">Tree traversal</h3>
+<ul dir="auto">
+<li dir="auto">In order</li>
+<li dir="auto">Pre Order
+<ul dir="auto">
+<li dir="auto">Root, left-right</li>
+</ul>
+</li>
+<li dir="auto">Post Order</li>
+<li dir="auto">left, right, root</li>
+</ul>
+<p dir="auto"><img src="assets/IMG42.PNG" alt="Alt text" data-src="assets/IMG42.PNG"></p>
+<h3 dir="auto" id="binary-tree-terminology">Binary Tree terminology</h3>
+<ul dir="auto">
+<li dir="auto">Full level
+<ul dir="auto">
+<li dir="auto">Level <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> contains <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow><annotation encoding="application/x-tex">2^{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8247em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8247em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span></span></span></span></span></span></span></span> nodes</li>
+</ul>
+</li>
+<li dir="auto">Complete tree
+<ul dir="auto">
+<li dir="auto">for height h</li>
+<li dir="auto">levels <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">0, 1, 2, ... h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mord mathnormal">h</span></span></span></span> are full</li>
+<li dir="auto">Level <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span>, all nodes are as far left as possible</li>
+</ul>
+</li>
+<li dir="auto">Proper/full Binary tree
+<ul dir="auto">
+<li dir="auto">Each level (besides leaf nodes) have two children</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="binary-tree-performance">Binary tree performance:</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>var</strong></th>
+<th><strong>description</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></td>
+<td>number of nodes</td>
+</tr>
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span></td>
+<td>number of external nodes</td>
+</tr>
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span></td>
+<td>number of internal nodes</td>
+</tr>
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span></td>
+<td>height</td>
+</tr>
+</tbody>
+</table>
+<p dir="auto">Performance:</p>
+<p dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mi>o</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">h= o(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">o</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>
+(when at least two nodes)</p>
+<h3 dir="auto" id="proper-binary-tree-properties">Proper Binary tree properties</h3>
+<p dir="auto"><img src="assets/IMG43.PNG" alt="Alt text" data-src="assets/IMG43.PNG"></p>
+
+</main>
+</body>
+</html>

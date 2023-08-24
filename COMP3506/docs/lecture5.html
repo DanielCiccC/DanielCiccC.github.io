@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-5">Lecture 5</h1>
+<h2 dir="auto" id="priority-queues">Priority queues</h2>
+<h3 dir="auto" id="adt">ADT</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Each entry is a pair (key, value)</p>
+</li>
+<li dir="auto">
+<p dir="auto">Main methods</p>
+<ul dir="auto">
+<li dir="auto"><code>insert(k,v)</code></li>
+<li dir="auto"><code>removeMin()</code></li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Additional methods</p>
+<ul dir="auto">
+<li dir="auto"><code>min()</code></li>
+<li dir="auto"><code>size()</code>, <code>isEmpty()</code></li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Queue</p>
+<ul dir="auto">
+<li dir="auto">FIFO</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Priority Queue</p>
+<ul dir="auto">
+<li dir="auto">Elements are stored as Entries</li>
+<li dir="auto">Entry with the highest priority is stored first</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets/IMG46.PNG" alt="Alt text" data-src="assets/IMG46.PNG"></p>
+<ul dir="auto">
+<li dir="auto">An entry in a key is a key-value pair</li>
+<li dir="auto">Can override the less than <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo></mrow><annotation encoding="application/x-tex">\lt</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span></span></span></span> operator to compare entries</li>
+</ul>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">class</span> <span class="hljs-title class_">entry</span>:
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, k, v</span>):
+    self._key = k
+    self._value = v
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">__lt__</span>(<span class="hljs-params">self, other</span>):
+    <span class="hljs-keyword">return</span> self._key &lt; other._key
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">get_key</span>(<span class="hljs-params">self</span>):
+    <span class="hljs-keyword">return</span> self._key
+</div></code></pre>
+<ul dir="auto">
+<li dir="auto">Imposing a total order on your keys means that trees are representing a kind of <em>ordered map</em>
+<ul dir="auto">
+<li dir="auto">however, true maps require <em>key-uniqueness</em></li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="comparator-adt">Comparator ADT</h3>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-comment"># 2D coordinate class stub</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">point</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, x, y</span>):
+        self._x = x
+        self._y = y
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_x</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> self._x
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_y</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">return</span> self._y
+
+    <span class="hljs-comment"># Less than ‘&lt;‘ operator</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__lt__</span>(<span class="hljs-params">self, other</span>): 
+        xa = self.get_x()
+        ya = self.get_y()
+        xb = other.get_x()
+        yb = other.get_y()
+    <span class="hljs-keyword">if</span> xa == xb:
+        <span class="hljs-keyword">return</span> ya &lt; yb
+    <span class="hljs-keyword">return</span> xa &lt; xb
+
+</div></code></pre>
+<h3 dir="auto" id="sequence-based-priority-queue">Sequence-based priority queue</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Implementation with an unsorted list</p>
+<ul dir="auto">
+<li dir="auto">Insertion takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> time</li>
+<li dir="auto"><code>removemin()</code> and <code>min()</code> take <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Implementation with a sorted list</p>
+<ul dir="auto">
+<li dir="auto"><code>Insert(p)</code> take <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
+<li dir="auto"><code>RemoveMin()</code> and <code>min()</code> take <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> time</li>
+</ul>
+</li>
+</ul>
+<h2 dir="auto" id="heaps">Heaps</h2>
+<ul dir="auto">
+<li dir="auto">Binary tree storing keys</li>
+<li dir="auto"><strong>Heap order</strong>: the key of the node is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo></mrow><annotation encoding="application/x-tex">\ge</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≥</span></span></span></span> the key of its parent</li>
+<li dir="auto">Has to be a <strong>complete binary tree</strong>
+<ul dir="auto">
+<li dir="auto">at height <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span>, the internal nodes are to the left of the external nodes</li>
+</ul>
+</li>
+<li dir="auto"><strong>Last node</strong> of a heap is the rightmost nodes of maximum depth</li>
+</ul>
+<h3 dir="auto" id="insertion-into-a-heap">Insertion into a heap</h3>
+<ul dir="auto">
+<li dir="auto"><strong>Insert</strong> in the PQ ADT corresponds to inserting key <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> into the heap</li>
+<li dir="auto">Insertion algorithm:
+<ol dir="auto">
+<li dir="auto">Find the insertion node <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span></li>
+</ol>
+</li>
+</ul>
+<h3 dir="auto" id="upheap">Upheap</h3>
+<ul dir="auto">
+<li dir="auto">After inserting a new key <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>, the heap-order property (child nodes must have keys &gt;= their parents) may be violated</li>
+<li dir="auto">Since a heap has height <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> upheap runs in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time
+<ul dir="auto">
+<li dir="auto">worst case you swap all the way up the tree, which is length <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\log n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="downheap">Downheap</h3>
+<ul dir="auto">
+<li dir="auto">Because height of tree is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\log n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span></span></span></span>, downheap runs in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
+<li dir="auto"><code>removeMin()</code> corresponds to removing the root (smallest key) from the heap</li>
+<li dir="auto">Algorithm:
+<ul dir="auto">
+<li dir="auto">Swap the last position with the root, and retrieve the node</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="inserting-another-node">INserting another node</h3>
+<ul dir="auto">
+<li dir="auto">Depends on how the binary tree is implemented. With a linkedlist, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>2</mn><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O( 2 \log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">2</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> (traversing up the tree and back down again)</li>
+<li dir="auto">Using an array:
+<ul dir="auto">
+<li dir="auto">For a node at index <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span>:
+<ul dir="auto">
+<li dir="auto">left child is at the index <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>i</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2i+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7429em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></li>
+<li dir="auto">right child is at the index <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>i</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2i + 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7429em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span></li>
+<li dir="auto"><code>removeMin()</code> corresponds to removing/swapping at index <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>, plus more swapping</li>
+<li dir="auto">Upheap and downheap operating correspond to swapping</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="heap-sort">Heap-sort</h3>
+<ul dir="auto">
+<li dir="auto">Take <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> items, insert and <code>removeMin()</code> in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\log n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span></span></span></span> time</li>
+<li dir="auto">Heap-based priority queue can sort a sequence of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> elements in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n \log n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span></span></span></span> time</li>
+</ul>
+<h3 dir="auto" id="heap-construction">Heap construction</h3>
+<ul dir="auto">
+<li dir="auto">Construct a heap containing <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> items</li>
+<li dir="auto">Using <em>Insert</em></li>
+<li dir="auto"><strong>Bottom-up heap construction</strong> : UPDATE THIS</li>
+</ul>
+<h3 dir="auto" id="analysis">Analysis</h3>
+<ul dir="auto">
+<li dir="auto">Worst-case time of a downheap with a proxy path
+<ul dir="auto">
+<li dir="auto">Worst case amount of work for each individual downheap has to participate</li>
+</ul>
+</li>
+<li dir="auto">The total number of nodes of the proxy paths is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
+<li dir="auto">Bottom-up heap construction runs in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
+</ul>
+<h3 dir="auto" id="summary">Summary:</h3>
+<p dir="auto">||
+|---|---
+|<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> | space
+|<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> | build
+|<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> | <code>getMin()</code></p>
+<div  dir="auto" ></div>
+<!-- | $O(\log n)$ |  -->
+<h2 dir="auto" id="adaptable-priority-queues">Adaptable priority queues</h2>
+<ul dir="auto">
+<li dir="auto">Sometimes want to be able to remove any arbitrary element</li>
+</ul>
+<h3 dir="auto" id="adt-adaptable-priority-queue">ADT Adaptable Priority Queue</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Method</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><code>remove(e)</code></td>
+<td>remove an arbitrary element</td>
+</tr>
+<tr dir="auto">
+<td><code>replaceKey(e, k)</code></td>
+<td>Essentially a priority update</td>
+</tr>
+<tr dir="auto">
+<td><code>replaceValue(e, v)</code></td>
+<td>changing the value of the item</td>
+</tr>
+</tbody>
+</table>
+<p dir="auto"><img src="assets/IMG47.PNG" alt="Alt text" data-src="assets/IMG47.PNG"></p>
+<h3 dir="auto" id="locating-entries">Locating entries</h3>
+<ul dir="auto">
+<li dir="auto"><code>remove(), replaceKey(e, v)</code> and <code>replaceValue(e, v)</code> need fast ways of locating an entry <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> in a priority queue</li>
+<li dir="auto">Can search the entire queue
+<ul dir="auto">
+<li dir="auto">Are faster methods</li>
+</ul>
+</li>
+<li dir="auto">Position in the data structure</li>
+</ul>
+<h3 dir="auto" id="location-aware-entries">Location-Aware Entries</h3>
+<ul dir="auto">
+<li dir="auto">Locators can be used to keep track of
+elements as they are moved around
+inside a container</li>
+<li dir="auto">That is, keep “pointers” to keys inside
+the tree that follow each (key, value)
+node as they move around</li>
+</ul>
+<h3 dir="auto" id="list-implementation">List implementation</h3>
+<ul dir="auto">
+<li dir="auto">Location-aware list entry is an object storing
+<ul dir="auto">
+<li dir="auto">key</li>
+<li dir="auto">value</li>
+<li dir="auto">position (or rank) of the item in the list</li>
+</ul>
+</li>
+<li dir="auto">In turn, the position (or array cell) stores the entry</li>
+<li dir="auto">Back pointers (or ranks) are updated during swaps</li>
+</ul>
+
+</main>
+</body>
+</html>

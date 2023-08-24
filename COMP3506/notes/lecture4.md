@@ -299,6 +299,44 @@ Algorithm postOrder(p)
   - Level $0, ...,h-1$ are full
   - In level $h$, all leaf nodes are as far left as possible
 
+### Binary tree ADT 
+Additional methods:
+|name| description
+|---|---
+``left(p)``|
+``right(p)``|
+``sibling(p)`` | Do I have a sibling, if so, give me a reference to it
+
+#### Traversal
+- A node is visited after its left subtree and before its right subtree
+- There is no generic *inOrder* traversal methods for a k-ary tree
+
+### Print arithmetic expressions
+- Print operand or operator when visiting node
+- Print '(' before traversing left subtree
+- print ')' after traversing right subtree
+
+![Alt text](assets/IMG44.PNG)
+
+### Euler Tour Traversal
+- Handle preorder, postorder and inorder traversals
+- Each node (in a binary tree) is visited three times
+  - blend different trvaersals to achieve more complex functionality
+
+### Linked Structure for Binary Trees
+- Node stores
+  - element
+  - parent node
+  - left child node
+  - right child node
+
+
+![Alt text](assets/IMG45.PNG)
+
+### Breadth-first travsersal
+- Visit all the nodes at depth $d$ before visiting nodes at depth $d+1$
+- Visiting level by level
+
 ![Alt text](assets/IMG38.PNG)
 
 ### Examples
