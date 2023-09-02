@@ -122,8 +122,9 @@ class point:
 - Bottom-up heap construction runs in $O(n)$ time
 
 ### Summary:
-||
-|---|---
+
+|Performance
+|---
 |$O(n)$ | space
 |$O(n)$ | build
 |$O(\log n)$ | ``getMin()``
@@ -162,3 +163,129 @@ node as they move around
   - position (or rank) of the item in the list
 - In turn, the position (or array cell) stores the entry
 -  Back pointers (or ranks) are updated during swaps
+
+### Min-heap vs maxheap
+**Min-heap**
+- ``key(i) >= Key(parent(i))``
+- can ``getMin()`` in constant time $O(1)$
+- ``removeMin()`` in $O(\log n)$ time
+
+Can we do ``removeMin()`` in $O(1)$?
+- A: Yes, but mostly out of scope for this course.
+Generally (and a very interesting point)
+- You can *never* have *both* $O(1)$ insert and $O(1)$ removeMin in the same DS.
+  - Could sort in $O(n)$. We have proven this is not possible
+
+## Maps
+- Searchable collection of key-value entries
+- Main operations
+  - searching, inserting and deleting items
+- Keys must be unique
+  - cannot have multiple entries with same key
+- Applications
+    - address book
+    - student-record database
+
+### Map-ADT
+
+**Function** | **Description**
+|---|---|
+| ``get(k)`` |
+| ``put(k, v)`` |
+| ``remove(k)``  |
+| ``size()``|
+| ``isEmpty()`` |
+| ``entrySet()`` | yield a collection of key/value pairs - python ``items()``
+| ``keySet()`` | yield an collection of keys
+| ``values()`` | yield a collection of values
+
+### Use of Null as Sentinel
+- something we store when we don't have something there
+  - get, put and remove return null 
+(None) if a requested entry is not  present
+- None is a sentinel value
+  -  Thus, we cannot store None as a key!
+- Alternative: throw an exception for a key that is not in the map
+
+![Alt text](assets/IMG50.PNG)
+
+``put(2, e)``: this particular implementation returns the old value
+
+### Comparison with Earlier Data Structures
+- Priority queues and maps both store key-value pairs
+  - We call these key-value pairs entries-
+-  Keys
+   - Map keys must be *unique*
+   - Priority queue allows multiple entries to have same key
+     - Two or more elements may share the same priority of course!
+- Total order relation on keys
+  - Required for priority queues
+  - Optional for maps (may or may not be ordered)-
+- Accessing elements
+  - Maps allow access to any entry by key
+  - Priority queues allow access to highest priority element
+
+### Simple List-Based Map
+Implemented using an unsorted list 
+- Store the items of the map in a list $S$ (based on a 
+doubly-linked list), in arbitrary order
+
+![Alt text](assets/IMG51.PNG)
+
+- How are you going to find the key?
+
+``get(k)`` Algorithm. Complexity: $O(n)$
+```
+Algorithm get(k):
+  B = S.positions() {B is an iterator of the positions in S}
+  while  B.hasNext()  do
+    p = B.next() { the next position in B }
+    if  p.element().getKey() = k  then
+      return  p.element().getValue()
+  return  null {there is no entry with key equal to k}
+```
+
+``put(k)`` Algorithm. Complexity: $O(n)$
+```
+Algorithm put(k, v):
+  B = S.positions()
+  while  B.hasNext()  do
+    p = B.next()
+    if  p.element().getKey() = k  then
+      t = p.element().getValue()
+      S.set(p,(k,v))
+      return  t {return the old value}
+  S.addLast((k,v))
+  n = n + 1  {increment variable storing number of entries}
+  return  null {there was no entry with key equal to k}
+```
+## Multimaps
+- Can store multiple entries with the same key
+- 'Remove all the elements with a given key'
+
+## Sets
+- Set – unordered collection of elements, without 
+duplicates
+  -  elements of a set are like keys of a map, but without 
+any auxiliary values
+- Multiset (alias *Bag*) – set-like container that 
+allows duplicates
+  - Likely never need to use that, but could come in handy for prime factorisation. E.g. ``{2, 2, 2, 3, 5} = 120``
+
+### Set ADT:
+
+|**Function name** | **Description**
+|---|---
+|``add(e)`` | Adds the element *e* to S (if not already present)
+|``remove(e)`` | Removes the element *e* from $S$ if present
+|``contains(e)`` | Returns whether *e* is an element of *S*
+|``iterator()`` | Returns an iterators of the elements of *S*
+|``addAll(T)`` | Updates $S$ to include all elements of set $T$, essentially $S \cup T$
+|``retainAll(T)`` | Updates $S$ so that is only keeps elements that are also elements of set $t$, Effectively replacing $S$ by $S \cap T$ 
+|``removeAll(T)`` | Updates by removing any of its elements that also occur in set $T$, essentially $S - T$
+
+## Intuition: Union on sorted lists
+Generalised merge of  two sorted lists A and B
+ - Auxiliary methods
+  - ``remove_first``
+-  Runs in $O(n_{A} + n_{B})$ time assuming the auxiliary methods run in $O(1)$ time

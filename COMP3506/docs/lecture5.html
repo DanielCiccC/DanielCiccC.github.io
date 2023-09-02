@@ -200,11 +200,24 @@
 <li dir="auto">Bottom-up heap construction runs in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
 </ul>
 <h3 dir="auto" id="summary">Summary:</h3>
-<p dir="auto">||
-|---|---
-|<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> | space
-|<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> | build
-|<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> | <code>getMin()</code></p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>Performance</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
 <div  dir="auto" ></div>
 <!-- | $O(\log n)$ |  -->
 <h2 dir="auto" id="adaptable-priority-queues">Adaptable priority queues</h2>
@@ -265,6 +278,232 @@ node as they move around</li>
 </li>
 <li dir="auto">In turn, the position (or array cell) stores the entry</li>
 <li dir="auto">Back pointers (or ranks) are updated during swaps</li>
+</ul>
+<h3 dir="auto" id="min-heap-vs-maxheap">Min-heap vs maxheap</h3>
+<p dir="auto"><strong>Min-heap</strong></p>
+<ul dir="auto">
+<li dir="auto"><code>key(i) &gt;= Key(parent(i))</code></li>
+<li dir="auto">can <code>getMin()</code> in constant time <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></li>
+<li dir="auto"><code>removeMin()</code> in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
+</ul>
+<p dir="auto">Can we do <code>removeMin()</code> in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>?</p>
+<ul dir="auto">
+<li dir="auto">A: Yes, but mostly out of scope for this course.
+Generally (and a very interesting point)</li>
+<li dir="auto">You can <em>never</em> have <em>both</em> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> insert and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> removeMin in the same DS.
+<ul dir="auto">
+<li dir="auto">Could sort in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>. We have proven this is not possible</li>
+</ul>
+</li>
+</ul>
+<h2 dir="auto" id="maps">Maps</h2>
+<ul dir="auto">
+<li dir="auto">Searchable collection of key-value entries</li>
+<li dir="auto">Main operations
+<ul dir="auto">
+<li dir="auto">searching, inserting and deleting items</li>
+</ul>
+</li>
+<li dir="auto">Keys must be unique
+<ul dir="auto">
+<li dir="auto">cannot have multiple entries with same key</li>
+</ul>
+</li>
+<li dir="auto">Applications
+<ul dir="auto">
+<li dir="auto">address book</li>
+<li dir="auto">student-record database</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="map-adt">Map-ADT</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><code>get(k)</code></td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td><code>put(k, v)</code></td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td><code>remove(k)</code></td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td><code>size()</code></td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td><code>isEmpty()</code></td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td><code>entrySet()</code></td>
+<td>yield a collection of key/value pairs - python <code>items()</code></td>
+</tr>
+<tr dir="auto">
+<td><code>keySet()</code></td>
+<td>yield an collection of keys</td>
+</tr>
+<tr dir="auto">
+<td><code>values()</code></td>
+<td>yield a collection of values</td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="use-of-null-as-sentinel">Use of Null as Sentinel</h3>
+<ul dir="auto">
+<li dir="auto">something we store when we don't have something there
+<ul dir="auto">
+<li dir="auto">get, put and remove return null
+(None) if a requested entry is not  present</li>
+</ul>
+</li>
+<li dir="auto">None is a sentinel value
+<ul dir="auto">
+<li dir="auto">Thus, we cannot store None as a key!</li>
+</ul>
+</li>
+<li dir="auto">Alternative: throw an exception for a key that is not in the map</li>
+</ul>
+<p dir="auto"><img src="assets/IMG50.PNG" alt="Alt text" data-src="assets/IMG50.PNG"></p>
+<p dir="auto"><code>put(2, e)</code>: this particular implementation returns the old value</p>
+<h3 dir="auto" id="comparison-with-earlier-data-structures">Comparison with Earlier Data Structures</h3>
+<ul dir="auto">
+<li dir="auto">Priority queues and maps both store key-value pairs
+<ul dir="auto">
+<li dir="auto">We call these key-value pairs entries-</li>
+</ul>
+</li>
+<li dir="auto">Keys
+<ul dir="auto">
+<li dir="auto">Map keys must be <em>unique</em></li>
+<li dir="auto">Priority queue allows multiple entries to have same key
+<ul dir="auto">
+<li dir="auto">Two or more elements may share the same priority of course!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">Total order relation on keys
+<ul dir="auto">
+<li dir="auto">Required for priority queues</li>
+<li dir="auto">Optional for maps (may or may not be ordered)-</li>
+</ul>
+</li>
+<li dir="auto">Accessing elements
+<ul dir="auto">
+<li dir="auto">Maps allow access to any entry by key</li>
+<li dir="auto">Priority queues allow access to highest priority element</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="simple-list-based-map">Simple List-Based Map</h3>
+<p dir="auto">Implemented using an unsorted list</p>
+<ul dir="auto">
+<li dir="auto">Store the items of the map in a list <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> (based on a
+doubly-linked list), in arbitrary order</li>
+</ul>
+<p dir="auto"><img src="assets/IMG51.PNG" alt="Alt text" data-src="assets/IMG51.PNG"></p>
+<ul dir="auto">
+<li dir="auto">How are you going to find the key?</li>
+</ul>
+<p dir="auto"><code>get(k)</code> Algorithm. Complexity: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+<pre><code dir="auto"><code><div>Algorithm get(k):
+  B = S.positions() {B is an iterator of the positions in S}
+  while  B.hasNext()  do
+    p = B.next() { the next position in B }
+    if  p.element().getKey() = k  then
+      return  p.element().getValue()
+  return  null {there is no entry with key equal to k}
+</div></code></code></pre>
+<p dir="auto"><code>put(k)</code> Algorithm. Complexity: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+<pre><code dir="auto"><code><div>Algorithm put(k, v):
+  B = S.positions()
+  while  B.hasNext()  do
+    p = B.next()
+    if  p.element().getKey() = k  then
+      t = p.element().getValue()
+      S.set(p,(k,v))
+      return  t {return the old value}
+  S.addLast((k,v))
+  n = n + 1  {increment variable storing number of entries}
+  return  null {there was no entry with key equal to k}
+</div></code></code></pre>
+<h2 dir="auto" id="multimaps">Multimaps</h2>
+<ul dir="auto">
+<li dir="auto">Can store multiple entries with the same key</li>
+<li dir="auto">'Remove all the elements with a given key'</li>
+</ul>
+<h2 dir="auto" id="sets">Sets</h2>
+<ul dir="auto">
+<li dir="auto">Set – unordered collection of elements, without
+duplicates
+<ul dir="auto">
+<li dir="auto">elements of a set are like keys of a map, but without
+any auxiliary values</li>
+</ul>
+</li>
+<li dir="auto">Multiset (alias <em>Bag</em>) – set-like container that
+allows duplicates
+<ul dir="auto">
+<li dir="auto">Likely never need to use that, but could come in handy for prime factorisation. E.g. <code>{2, 2, 2, 3, 5} = 120</code></li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="set-adt">Set ADT:</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Function name</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><code>add(e)</code></td>
+<td>Adds the element <em>e</em> to S (if not already present)</td>
+</tr>
+<tr dir="auto">
+<td><code>remove(e)</code></td>
+<td>Removes the element <em>e</em> from <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> if present</td>
+</tr>
+<tr dir="auto">
+<td><code>contains(e)</code></td>
+<td>Returns whether <em>e</em> is an element of <em>S</em></td>
+</tr>
+<tr dir="auto">
+<td><code>iterator()</code></td>
+<td>Returns an iterators of the elements of <em>S</em></td>
+</tr>
+<tr dir="auto">
+<td><code>addAll(T)</code></td>
+<td>Updates <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> to include all elements of set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>, essentially <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>∪</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">S \cup T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∪</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td><code>retainAll(T)</code></td>
+<td>Updates <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> so that is only keeps elements that are also elements of set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span>, Effectively replacing <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> by <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>∩</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">S \cap T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∩</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td><code>removeAll(T)</code></td>
+<td>Updates by removing any of its elements that also occur in set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>, essentially <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>−</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">S - T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<h2 dir="auto" id="intuition-union-on-sorted-lists">Intuition: Union on sorted lists</h2>
+<p dir="auto">Generalised merge of  two sorted lists A and B</p>
+<ul dir="auto">
+<li dir="auto">Auxiliary methods</li>
+<li dir="auto"><code>remove_first</code></li>
+<li dir="auto">Runs in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msub><mi>n</mi><mi>A</mi></msub><mo>+</mo><msub><mi>n</mi><mi>B</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n_{A} + n_{B})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> time assuming the auxiliary methods run in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> time</li>
 </ul>
 
 </main>
