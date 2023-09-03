@@ -290,7 +290,7 @@ Idea: Given our set of keys S, we do some “offline work” to find a hash func
 - Knowing about keys ahead of time is very useful for many applications
   -  What if they are integers from 0 to n?
 
-### Cuckoo Hashing?
+### Cuckoo Hashing
 Idea: Store two hash tables with a unique hash function for each
 - Put(k): Try the first table; if occupied, throw the entry with key k’ out and enter k here; Now try to put k’ into the second table… Continue repeatedly until a pre-set number of these repeats occur (or a cycle is found) – if so, rehash both tables with a new set of hash functions!!
 - Get(k): It’s either at h1(k) or h2(k)…
