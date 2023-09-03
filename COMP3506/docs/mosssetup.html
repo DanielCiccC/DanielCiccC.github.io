@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="moss-setup">Moss Setup</h1>
+<p dir="auto">I have been testing a few methods to try and use moss effectively on local. While I have had success in the past using <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">microsoft's remote SSH extension on vscode</a> but UQ's recent addition of 2FA has made the process a little less intuitive, plus now I'm getting flakey connectivity issues.</p>
+<p dir="auto">The best method I'm finding now is to creating a git repository and create clones into both local and moss. Using a windows machine, you can ssh into local through DOS (or PuTTY) and clone the repository in terminal, as follows:</p>
+<h3 dir="auto" id="on-github-or-related">On GitHub (or related)</h3>
+<ol dir="auto">
+<li dir="auto">Create a new repository (make sure to make this private so your peers cannot see it)</li>
+<li dir="auto">In the upper-right corner of any page, click your profile photo, then click <a href="https://github.com/settings/apps">developer settings</a>.</li>
+<li dir="auto">You will need to create a new personal access token to clone onto moss. Git reccomend their fine-grained tokens, but for our purposes classic tokens will be fine. Generate a new token and make sure the expiration easily exceeds the due date of the assignment.</li>
+<li dir="auto">I select all scopes for safety, but <code>repo</code>, <code>write:packages</code>, <code>delete:packages</code> and <code>admin:org</code> are necessities.</li>
+<li dir="auto">Copy the key to the side for safekeeping</li>
+<li dir="auto">Navigate to your repo and copy the HTTPS URL (circled)</li>
+</ol>
+<p dir="auto"><img src="assets/IMG62.PNG" alt="Alt text" data-src="assets/IMG62.PNG"></p>
+<h3 dir="auto" id="on-dos">On DOS</h3>
+<ol dir="auto">
+<li dir="auto">Open a DOS prompt (where <code>sxxxxxxx</code> is you student username)</li>
+</ol>
+<pre><code class="code-line language-DOS" dir="auto"><div>ssh -l sxxxxxxx remote.labs.eait.uq.edu.au
+</div></code></pre>
+<ol start="2" dir="auto">
+<li dir="auto">Type in your Password</li>
+<li dir="auto">Next, go into your Duo app and type the six-digit passcode into the prompt for 2FA. Make sure to refresh for a new passcode.</li>
+</ol>
+<p dir="auto"><img src="assets/372319381_227948666541514_4190491006374378909_n.jpg" alt="Alt text" data-src="assets/372319381_227948666541514_4190491006374378909_n.jpg"></p>
+<ol start="4" dir="auto">
+<li dir="auto">You should be in. Make a new directory to clone your repo.</li>
+<li dir="auto"><code>cd</code> to your new directory and clone your new repository</li>
+</ol>
+<pre><code class="code-line language-dos" dir="auto"><div>git clone https://github.com/{$YOUR_REPO}
+</div></code></pre>
+<ol start="6" dir="auto">
+<li dir="auto">Your password will be the access token you created earlier. Copy this into your DOS prompt.</li>
+<li dir="auto">Your repo should be setup</li>
+</ol>
+<p dir="auto">I created a clone to work on locally, and I will just pull any changes to work on over moss. Having a repo likes this also makes it quite simple for submitting over gradescope - now it just becomes a matter of linking up your GitHub account for access and choosing this new repository and related branch.</p>
+<p dir="auto">Happy coding :)</p>
+
+</main>
+</body>
+</html>

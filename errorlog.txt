@@ -1,6 +1,5 @@
 Skipping C:/git/DanielCiccC.github.io/BSAN4201: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/build.sh: 'notes' or 'docs' directory not found.
-cp: cannot stat 'C:/git/DanielCiccC.github.io/COMP3506/notes/assets/*.jpg': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/COMP3506/notes/assets/*.jpeg': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/COMP3506/notes/assets/*.gif': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.jpg': No such file or directory
