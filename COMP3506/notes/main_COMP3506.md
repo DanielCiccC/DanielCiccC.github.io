@@ -20,4 +20,4 @@ Lecture notes and revision will be added separately
 | A1 | [ExtensibleList tests](../tests/test_el.py)
 | A1 | [refgrid tests](../tests/test_el.py)
 | A1 | [stack tests](../tests/test_el.py)
-| A2 | [My Setup on moss remote](mosssetup[.html])
+| A2 | [My Setup on moss remote](mosssetup.html)
