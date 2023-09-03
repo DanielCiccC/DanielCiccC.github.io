@@ -29,7 +29,7 @@ ssh -l sxxxxxxx remote.labs.eait.uq.edu.au
 
 4. You should be in. Make a new directory to clone your repo.
 5. ``cd`` to your new directory and clone your new repository
-```dos
+```bash
 git clone https://github.com/{$YOUR_REPO}
 ```
 6. Your password will be the access token you created earlier. Copy this into your DOS prompt.
