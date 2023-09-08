@@ -4,7 +4,6 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/COMP3506/notes/assets/*.jpeg': No 
 cp: cannot stat 'C:/git/DanielCiccC.github.io/COMP3506/notes/assets/*.gif': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.jpg': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.jpeg': No such file or directory
-cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.PNG': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.png': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.gif': No such file or directory
 Skipping C:/git/DanielCiccC.github.io/errorlog.txt: 'notes' or 'docs' directory not found.
