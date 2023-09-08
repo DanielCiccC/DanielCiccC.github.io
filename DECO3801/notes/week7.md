@@ -50,6 +50,9 @@ Almost immediately after submitting our Statement of work, I had another convers
 
 [Our most up to date wireframe, outlining poltiical figure websites](WIREFRAMES3.0.pdf)
 
+#### An example image:
+![Alt text](assets/IMG2.PNG)
+
 ## Week 7 journal
 - Sean has developed new wireframes that incorporate political figures, and accounts which maintain a running feed of news regarding their activities. 
 - Working on connecting a database on AWS cloud to using that as a global database for our newscuration project. I also realised that I had not finished previous work creating a bias summary prompt for the frontend developers to begin implementing. I shall have to complete this before I begin building transaction tables and databases for backend.
