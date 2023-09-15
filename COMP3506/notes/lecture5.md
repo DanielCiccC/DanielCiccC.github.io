@@ -96,7 +96,7 @@ class point:
 - Algorithm:
   - Swap the last position with the root, and retrieve the node
 
-### INserting another node
+### Inserting another node
 - Depends on how the binary tree is implemented. With a linkedlist, $O( 2 \log n)$ (traversing up the tree and back down again)
 - Using an array:
   - For a node at index $i$:

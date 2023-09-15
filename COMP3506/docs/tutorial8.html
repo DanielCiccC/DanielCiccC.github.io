@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h2 dir="auto" id="avl-trees">AVL Trees</h2>
+<h3 dir="auto" id="finding-the-imbalanced-node">Finding the imbalanced node</h3>
+<ul dir="auto">
+<li dir="auto">Look at the height of the left and the right subtrees. If the height difference is more than 1 between both subtrees, then the node is imbalanced.</li>
+</ul>
+<h3 dir="auto" id="insert-into-an-avl-tree">Insert into an AVL tree</h3>
+<ul dir="auto">
+<li dir="auto">Regular insert if no imbalance</li>
+<li dir="auto">Tri-node restructuring if there is an imbalance</li>
+</ul>
+<h3 dir="auto" id="tri-node-restructuring">Tri node restructuring</h3>
+<ul dir="auto">
+<li dir="auto">Only four cases of tri-node restructuring:</li>
+</ul>
+<p dir="auto">Right-right rebalance:</p>
+<ul dir="auto">
+<li dir="auto">push the imbalanced node <em>down</em></li>
+</ul>
+<p dir="auto"><img src="assets/IMG91.PNG" alt="Alt text" data-src="assets/IMG91.PNG"></p>
+<p dir="auto">Left-left rebalance:</p>
+<p dir="auto"><img src="assets/IMG92.PNG" alt="Alt text" data-src="assets/IMG92.PNG"></p>
+<p dir="auto">Right-left</p>
+<ul dir="auto">
+<li dir="auto">lift 20 up and drag 20 down to create a right-right imbalance</li>
+</ul>
+<p dir="auto"><img src="assets/IMG93.PNG" alt="Alt text" data-src="assets/IMG93.PNG"></p>
+<h3 dir="auto" id="delete-from-an-avl-tree">Delete from an AVL tree</h3>
+<ol dir="auto">
+<li dir="auto">Remove from tree as if a Binary search tree</li>
+<li dir="auto">From the deleted node, move up to the first unbalanced node.</li>
+<li dir="auto">Tri-node Restructuring to restore height property</li>
+</ol>
+<h3 dir="auto" id="performance">Performance:</h3>
+<ul dir="auto">
+<li dir="auto">Height: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
+<li dir="auto">Space <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+<p dir="auto">Runtime</p>
+<ul dir="auto">
+<li dir="auto">Single restructure: O(1)</li>
+<li dir="auto">Searching: O(log n) (IN BST, O(n))</li>
+<li dir="auto">Insertion: O(log n) (IN BST, O(n))</li>
+<li dir="auto">Removal: O(log n) (IN BST, O(n))</li>
+</ul>
+<h2 dir="auto" id="splay-tree">Splay tree</h2>
+<ul dir="auto">
+<li dir="auto">Nearly balanced binary search tree
+<ul dir="auto">
+<li dir="auto">no rules on height</li>
+</ul>
+</li>
+<li dir="auto">faster access to most recently used keys</li>
+<li dir="auto">all operations require a 'splay'</li>
+</ul>
+<h3 dir="auto" id="finding-node">Finding node</h3>
+<ul dir="auto">
+<li dir="auto">same as a binary search tree</li>
+<li dir="auto">'Splay' the node up to the root</li>
+<li dir="auto">Even if you don't find the node, still splay the whole tree
+<ul dir="auto">
+<li dir="auto">i.e. searched item becomes the new root</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets/IMG94.PNG" alt="Alt text" data-src="assets/IMG94.PNG"></p>
+<p dir="auto">Zig-zag: rotate the tree to the left and swap the root with the right child
+Zag-zig: rotate the tree to the right and swap the root with the left child</p>
+<p dir="auto"><img src="assets/IMG95.PNG" alt="Alt text" data-src="assets/IMG95.PNG"></p>
+<h3 dir="auto" id="insert-into-the-splay-tree">Insert into the splay tree</h3>
+<ol dir="auto">
+<li dir="auto">INsert into the tree.</li>
+<li dir="auto">'splay' the new inserted node to the root</li>
+</ol>
+<h3 dir="auto" id="remove-from-a-splay-tree">Remove from a Splay tree</h3>
+<ol dir="auto">
+<li dir="auto">Remove a node like a Binary Search Tree</li>
+<li dir="auto">“Splay” a up to the root</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">If you don't find the node: Splay the node that ended your search</li>
+<li dir="auto">If you do find the node: Splay the parent of the removed node</li>
+</ul>
+<h2 dir="auto" id="2-4-trees">2-4 trees</h2>
+<ul dir="auto">
+<li dir="auto">Balanced binary search trees</li>
+<li dir="auto">Nodes can have:
+<ul dir="auto">
+<li dir="auto">1 key, 2 children</li>
+<li dir="auto">2 keys, 3 children</li>
+<li dir="auto">3 keys, four children</li>
+</ul>
+</li>
+</ul>
+
+</main>
+</body>
+</html>
