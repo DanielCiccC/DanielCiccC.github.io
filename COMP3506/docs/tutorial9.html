@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="tutorial-9">Tutorial 9</h1>
+<h3 dir="auto" id="graph-basics">Graph basics</h3>
+<ul dir="auto">
+<li dir="auto"><strong>Edges</strong> the paths that connect nodes
+<ul dir="auto">
+<li dir="auto">Undirected: unordered pair of vertices</li>
+</ul>
+</li>
+<li dir="auto"><strong>Vertices</strong> nodes
+<ul dir="auto">
+<li dir="auto">Store information, such as city, place, etc.</li>
+</ul>
+</li>
+<li dir="auto">Undirected graph:: all edges are undirected</li>
+<li dir="auto">Directed graph: all edges are directed</li>
+</ul>
+<h3 dir="auto" id="terminology-vertices">Terminology: vertices</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto"><strong>End vertices</strong> Endpoints of an edge</p>
+<ul dir="auto">
+<li dir="auto">U &amp; V are end vertices of a</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>Edge incident of a vertex</strong></p>
+</li>
+<li dir="auto">
+<p dir="auto">a, d, b, are incident on V</p>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>Degree of a vertex</strong></p>
+<ul dir="auto">
+<li dir="auto">#' of edges coming off a vertex</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>Parallel edges</strong></p>
+<ul dir="auto">
+<li dir="auto">2 edges with the same end vertices</li>
+<li dir="auto">h and i are parallel edges</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>self-loop</strong></p>
+<ul dir="auto">
+<li dir="auto">Edge that connect the vertex to itself</li>
+<li dir="auto">j is a self-loop</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="image-4.png" alt="Alt text" data-src="image-4.png"></p>
+<h3 dir="auto" id="paths">Paths</h3>
+<ul dir="auto">
+<li dir="auto">Alternativ sequence of vertices and edges</li>
+<li dir="auto">Starts and ends with a vertex</li>
+<li dir="auto">Each edge is preceded and followed by its endpoints</li>
+<li dir="auto"><strong>Simple path</strong>
+<ul dir="auto">
+<li dir="auto">All vertices and adges are distinct <code>P1</code></li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="image-5.png" alt="Alt text" data-src="image-5.png"></p>
+<h3 dir="auto" id="cycle">Cycle</h3>
+<ul dir="auto">
+<li dir="auto">Have to start and end at the same vertex</li>
+<li dir="auto"><strong>Simple cycle</strong>
+<ul dir="auto">
+<li dir="auto">Cycle where all vertices are distinct,
+(except the first and last)</li>
+<li dir="auto">All edges are distinct</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="subgraph">Subgraph</h3>
+<ul dir="auto">
+<li dir="auto">subset of vertixes and edges</li>
+</ul>
+<p dir="auto"><strong>Spanning subgraph</strong></p>
+<ul dir="auto">
+<li dir="auto">S has all of G’s vertices</li>
+</ul>
+<h3 dir="auto" id="connected-graph">Connected graph</h3>
+<ul dir="auto">
+<li dir="auto">simple path between every pair of vertices</li>
+<li dir="auto"><strong>Connected component</strong></li>
+</ul>
+<h3 dir="auto" id="trees-and-forests">Trees and forests</h3>
+<p dir="auto"><strong>Free (unrooted) tree</strong></p>
+<ul dir="auto">
+<li dir="auto">Undirected graph the is connected &amp;
+has no simple cycles</li>
+</ul>
+<p dir="auto"><strong>Forest</strong></p>
+<ul dir="auto">
+<li dir="auto">Multiple free unrooted trees</li>
+</ul>
+<p dir="auto"><img src="image-6.png" alt="Alt text" data-src="image-6.png"></p>
+<h3 dir="auto" id="spanning-trees-and-forests">Spanning trees and forests</h3>
+<p dir="auto"><strong>Spanning Tree</strong></p>
+<ul dir="auto">
+<li dir="auto">Spanning subgraph that is a tree</li>
+</ul>
+<p dir="auto"><strong>Spanning Forest</strong></p>
+<ul dir="auto">
+<li dir="auto">Spanning subgraph that is a forest</li>
+</ul>
+<p dir="auto"><img src="image-7.png" alt="Alt text" data-src="image-7.png"></p>
+<h3 dir="auto" id="properties">Properties</h3>
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>v</mi></msub><mi>d</mi><mi>e</mi><mi>g</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mi>m</mi></mrow><annotation encoding="application/x-tex">\sum_{v} deg(v) = 2m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0497em;vertical-align:-0.2997em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.0017em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">m</span></span></span></span> - the total degree of vertices is twicethe number of edges (duh)</li>
+<li dir="auto">In an undirected graph with no self-loops and no multiple edges
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>≤</mo><mi>n</mi><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>÷</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">m \le n(n-1) \div 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="density">Density</h3>
+<ul dir="auto">
+<li dir="auto">Undirected simple graph
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐷</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>2</mn><mi>𝑚</mi></mrow><mrow><mi>𝑛</mi><mo stretchy="false">(</mo><mi>𝑛</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">𝐷 = \dfrac{2𝑚}{𝑛(𝑛−1)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2574em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+</ul>
+</li>
+<li dir="auto">Directed simple graph
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝐷</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mi>m</mi><mrow><mi>𝑛</mi><mo stretchy="false">(</mo><mi>𝑛</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">𝐷 = \dfrac{m}{𝑛(𝑛−1)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0436em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+</ul>
+</li>
+<li dir="auto">Maximum density is 1</li>
+<li dir="auto">Minimum density is 0</li>
+<li dir="auto">Sparse
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>≅</mo><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">m  ≅ O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.589em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+</li>
+<li dir="auto">Dense
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>≅</mo><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">m  ≅ O(n^{2})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.589em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="edge-list">Edge list</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Sequence of edges represented by
+vertex pairs</p>
+</li>
+<li dir="auto">
+<p dir="auto">Can be represented as a matrix</p>
+<ul dir="auto">
+<li dir="auto">Two-column if there are no edge
+weights</li>
+<li dir="auto">Three-column, otherwise</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">List stores each vertex</p>
+<ul dir="auto">
+<li dir="auto">For each vertex, it stores connected edges</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="adjacency-map-structure">Adjacency map structure</h3>
+<p dir="auto">List stores each vertex</p>
+<ul dir="auto">
+<li dir="auto">For each vertex, it stores a hash map</li>
+<li dir="auto">Key: vertex it can reach</li>
+<li dir="auto">Value: Edge to traverse to reach vertex</li>
+</ul>
+<p dir="auto"><img src="image-8.png" alt="Alt text" data-src="image-8.png"></p>
+<h3 dir="auto" id="adjacency-matrix-structure">Adjacency matrix structure</h3>
+<ul dir="auto">
+<li dir="auto">2D array</li>
+<li dir="auto">Rows &amp; columns are vertices</li>
+<li dir="auto">Cells, if the value is stored, is an edge that
+connects the vertices</li>
+</ul>
+<p dir="auto"><img src="image-9.png" alt="Alt text" data-src="image-9.png"></p>
+<h3 dir="auto" id="performance">Performance</h3>
+<p dir="auto"><img src="image-10.png" alt="Alt text" data-src="image-10.png"></p>
+<h3 dir="auto" id="depth-first-search">Depth first search</h3>
+<ul dir="auto">
+<li dir="auto">Run Time: O(n + m)</li>
+<li dir="auto">n is # of edges, m is # of vertices</li>
+</ul>
+<h3 dir="auto" id="depth-first-search-algorithm">Depth first search: Algorithm</h3>
+<p dir="auto">Start at a vertex, add it to the stack and mark it as explored</p>
+<ol dir="auto">
+<li dir="auto">Remove vertex V from the stack</li>
+<li dir="auto">Traverse to vertex W along an unexplored edge that is connected to
+vertex V.</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">If W is explored: Mark as Back edge. Step 2</li>
+<li dir="auto">If W is unexplored: Mark as Discovery Edge. Step 3.</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">Push V to the stack. Go to step 2 using vertex W.</li>
+<li dir="auto">Repeat Steps 2 &amp; 3 until there are no unexplored edges. Go to Step 1.
+Repeat until the stack is empty</li>
+</ol>
+<h3 dir="auto" id="breadth-first-search">Breadth-first search</h3>
+<ul dir="auto">
+<li dir="auto">Run Time: O(n + m)</li>
+<li dir="auto">Keep track of:
+<ul dir="auto">
+<li dir="auto">Unexplored Edge, Discovery Edge &amp; Cross Edge</li>
+<li dir="auto">Unexplored Vertex &amp; Visited Vertex</li>
+</ul>
+</li>
+<li dir="auto">Use a queue</li>
+<li dir="auto">Good for: Compute a spanning forest, find a simple cycle, find the
+shortest path</li>
+</ul>
+<h4 dir="auto" id="process">Process:</h4>
+<ul dir="auto">
+<li dir="auto">Add starting vertex to the queue and mark it as visited</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">Remove vertex V from the queue, visit all vertices connected to V.</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">For all unexplored vertices visited: add them to the queue and mark
+them as visited</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">Mark edge as:</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Discovery Edge if leads to an unexplored vertex</li>
+<li dir="auto">Cross Edge if leads to an explored vertex</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">Repeat steps 1 &amp; 2 until the queue is empty</li>
+</ol>
+<h3 dir="auto" id="digraphs">Digraphs</h3>
+<ul dir="auto">
+<li dir="auto">all edges are directed</li>
+<li dir="auto">Adapted DFS to Directed DFS.</li>
+</ul>
+<h4 dir="auto" id="reachability">Reachability</h4>
+<ul dir="auto">
+<li dir="auto">From vertex V, what other vertices can be reached?</li>
+</ul>
+<h3 dir="auto" id="strong-connectivity">Strong connectivity</h3>
+<p dir="auto">Each vertex can reach all other vertices</p>
+<ul dir="auto">
+<li dir="auto">To determine if Strong Connectivity:
+<ul dir="auto">
+<li dir="auto">Pick a vertex v in G</li>
+<li dir="auto">Perform a DFS from v in G
+<ul dir="auto">
+<li dir="auto">if there’s a w not visited, false</li>
+</ul>
+</li>
+<li dir="auto">Let G’ be G with edges reversed</li>
+<li dir="auto">Perform a DFS from v in G’
+<ul dir="auto">
+<li dir="auto">if there’s a w not visited, false</li>
+<li dir="auto">else, true</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="strongly-connected-component">Strongly connected Component</h3>
+<p dir="auto">Subgraph where each vertex can
+reach all other vertices</p>
+<p dir="auto"><img src="image-11.png" alt="Alt text" data-src="image-11.png"></p>
+<h3 dir="auto" id="transitive-closure">Transitive Closure</h3>
+<ul dir="auto">
+<li dir="auto">Add more edges based on transitive closure</li>
+<li dir="auto">For a Digraph G, we can create G*
+<ul dir="auto">
+<li dir="auto">G* has the same vertices as G</li>
+<li dir="auto">If there is a directed path
+between 2 vertices, we add
+directed edge between these
+vertices</li>
+</ul>
+</li>
+<li dir="auto">Use Floyd-Warshall Algorithm to find
+G*</li>
+</ul>
+<p dir="auto"><img src="image-12.png" alt="Alt text" data-src="image-12.png"></p>
+<h3 dir="auto" id="topological-orger-and-directed-acyclic-graphs">Topological orger and Directed Acyclic Graphs</h3>
+<ul dir="auto">
+<li dir="auto">Ordering of nodes in a directed graph where for each node in a path
+from node A to node B, node A appears before node B.</li>
+<li dir="auto">Order is not unique</li>
+<li dir="auto">Not all graphs have a topological order (graphs with cycles)</li>
+<li dir="auto">Only Directed Acyclic Graphs (DAG) have a topological order</li>
+</ul>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>Graph before</th>
+<th>Graph after</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="image-13.png" alt="Alt text" data-src="image-13.png"></td>
+<td><img src="image-14.png" alt="Alt text" data-src="image-14.png"></td>
+</tr>
+</tbody>
+</table>
+
+</main>
+</body>
+</html>
