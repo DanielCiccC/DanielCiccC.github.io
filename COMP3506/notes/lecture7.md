@@ -194,7 +194,7 @@ child of y with the larger height
 - As this restructuring may upset the balance of another node higher in the 
 tree, must continue checking for balance until the root of T is reached
 
-![Alt text](image-3.png)
+![Alt text](assets\image-3.png)
 
 ### tri-node restructuring
 - Order preserving

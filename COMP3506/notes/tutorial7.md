@@ -103,4 +103,4 @@ Finding, Inserting and Deleting:
 - Worst case: O(n)
 - Average case: O(log n)
 
-![Alt text](image-1.png)
+![Alt text](assets\image-1.png)

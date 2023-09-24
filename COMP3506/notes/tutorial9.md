@@ -23,7 +23,7 @@
   - Edge that connect the vertex to itself
   - j is a self-loop
 
-![Alt text](image-4.png)
+![Alt text](assets\image-4.png)
 
 
 ### Paths
@@ -33,7 +33,7 @@
 - **Simple path**
   - All vertices and adges are distinct ``P1``
 
-![Alt text](image-5.png)
+![Alt text](assets\image-5.png)
 
 ### Cycle
 - Have to start and end at the same vertex
@@ -60,7 +60,7 @@ has no simple cycles
 **Forest**
 - Multiple free unrooted trees
 
-![Alt text](image-6.png)
+![Alt text](assets\image-6.png)
 
 ### Spanning trees and forests
 **Spanning Tree**
@@ -69,7 +69,7 @@ has no simple cycles
 **Spanning Forest**
 - Spanning subgraph that is a forest
 
-![Alt text](image-7.png)
+![Alt text](assets\image-7.png)
 
 ### Properties
 - $\sum_{v} deg(v) = 2m$ - the total degree of vertices is twicethe number of edges (duh)
@@ -105,7 +105,7 @@ List stores each vertex
   - Key: vertex it can reach
   - Value: Edge to traverse to reach vertex
 
-![Alt text](image-8.png)
+![Alt text](assets\image-8.png)
 
 ### Adjacency matrix structure
 - 2D array
@@ -113,11 +113,11 @@ List stores each vertex
 - Cells, if the value is stored, is an edge that 
 connects the vertices
 
-![Alt text](image-9.png)
+![Alt text](assets\image-9.png)
 
 ### Performance
 
-![Alt text](image-10.png)
+![Alt text](assets\image-10.png)
 
 ### Depth first search
 -  Run Time: O(n + m)
@@ -175,7 +175,7 @@ Each vertex can reach all other vertices
 Subgraph where each vertex can 
 reach all other vertices
 
-![Alt text](image-11.png)
+![Alt text](assets\image-11.png)
 
 ### Transitive Closure
 - Add more edges based on transitive closure
@@ -188,7 +188,7 @@ vertices
 - Use Floyd-Warshall Algorithm to find 
 G*
 
-![Alt text](image-12.png)
+![Alt text](assets\image-12.png)
 
 ### Topological orger and Directed Acyclic Graphs
 - Ordering of nodes in a directed graph where for each node in a path 
@@ -199,4 +199,4 @@ from node A to node B, node A appears before node B.
 
 | Graph before | Graph after
 |---|---
-| ![Alt text](image-13.png) | ![Alt text](image-14.png)
+| ![Alt text](assets\image-13.png) | ![Alt text](assets\image-14.png)
