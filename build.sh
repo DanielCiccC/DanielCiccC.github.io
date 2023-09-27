@@ -6,6 +6,8 @@ exec > errorlog.txt 2>&1
 # Set the root directory of your course subjects
 root_directory="C:/git/DanielCiccC.github.io"
 
+python image_renamer.py
+
 # Loop through all the course subjects
 for course in "$root_directory"/*; do
     # Check if the 'notes' and 'docs' directories exist for the current course
@@ -19,7 +21,7 @@ done
 
 # rename the html docs
 # python main/build/renamer.py COMP3506/docs/textbook_wk2.html
-python image_renamer.py
+
 
 # echo "All HTML documents have been copied from $sourceDirectory to $destinationDirectory."
 MESSAGE=$(git ls-files -domz | xargs -0 echo The following have been changed: )

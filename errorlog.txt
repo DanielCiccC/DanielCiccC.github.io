@@ -1,18 +1,3 @@
-Skipping C:/git/DanielCiccC.github.io/assets: 'notes' or 'docs' directory not found.
-Skipping C:/git/DanielCiccC.github.io/BSAN4201: 'notes' or 'docs' directory not found.
-Skipping C:/git/DanielCiccC.github.io/build.sh: 'notes' or 'docs' directory not found.
-cp: cannot stat 'C:/git/DanielCiccC.github.io/COMP3506/notes/assets/*.jpeg': No such file or directory
-cp: cannot stat 'C:/git/DanielCiccC.github.io/COMP3506/notes/assets/*.gif': No such file or directory
-cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.jpg': No such file or directory
-cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.jpeg': No such file or directory
-cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.png': No such file or directory
-cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.gif': No such file or directory
-Skipping C:/git/DanielCiccC.github.io/errorlog.txt: 'notes' or 'docs' directory not found.
-Skipping C:/git/DanielCiccC.github.io/image_renamer.py: 'notes' or 'docs' directory not found.
-Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.
-Skipping C:/git/DanielCiccC.github.io/KWM_law: 'notes' or 'docs' directory not found.
-Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
-Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
 Processed lecture2.md
 Processed lecture3.md
 Processed lecture4.md
@@ -35,3 +20,18 @@ Processed tutorial7.md
 Processed tutorial8.md
 Processed tutorial9.md
 Done.
+Skipping C:/git/DanielCiccC.github.io/assets: 'notes' or 'docs' directory not found.
+Skipping C:/git/DanielCiccC.github.io/BSAN4201: 'notes' or 'docs' directory not found.
+Skipping C:/git/DanielCiccC.github.io/build.sh: 'notes' or 'docs' directory not found.
+cp: cannot stat 'C:/git/DanielCiccC.github.io/COMP3506/notes/assets/*.jpeg': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/COMP3506/notes/assets/*.gif': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.jpg': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.jpeg': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.png': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.gif': No such file or directory
+Skipping C:/git/DanielCiccC.github.io/errorlog.txt: 'notes' or 'docs' directory not found.
+Skipping C:/git/DanielCiccC.github.io/image_renamer.py: 'notes' or 'docs' directory not found.
+Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.
+Skipping C:/git/DanielCiccC.github.io/KWM_law: 'notes' or 'docs' directory not found.
+Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
+Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
