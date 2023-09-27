@@ -428,3 +428,74 @@ outgoing edges in time proportional to their size
 
 ### Digraph Application
 Scheduling: edge (a,b) means task a must be completed before b can be started
+
+![Alt text](assets\IMG126.PNG)
+
+### Directed Graph Traversal
+- Specialise (DFS & BFS) traversal 
+algorithms for digraphs by 
+traversing edges only along
+their direction
+- Directed DFS algorithm has
+four types of edges
+  - discovery edges
+  - back edges
+  - forward edges
+  - cross edges
+- Directed DFS starting at vertex s determines the vertices reachable from s
+
+### Reachability
+DFS tree rooted at vertex v
+- vertices reachable from v via directed paths
+  - e.g. if we take c, we can only go to e, to d, to a, to c as well
+  - given some vertex, which other ones can we get to?
+
+![Alt text](assets\IMG127.PNG)
+
+### String connectivity
+- Reach a vertex from any given vertex
+- If we can run of every node and we can get to every other node, then we are done
+
+### Strong Connectivity Algorithm
+- Pick a vertex ``v`` in ``G``
+- Perform a DFS from ``v`` in ``G``
+  - if there’s a w not visited, false
+- Let ``G’`` be ``G`` with edges 
+reversed
+- Perform a DFS from ``v`` in ``G’``
+  - if there’s a ``w`` not visited, false
+  - else, true
+- Running time: $O(n+m)$
+
+![Alt text](assets\IMG128.PNG)
+
+
+### DAGs and Topological Ordering
+- Directed acyclic graph (DAG)
+  - digraph with no directed cycles
+- Topological ordering of a digraph is a numbering $v_{1}, ..., v_{n}$ of the vertices such that for every edge $(v_{i}, v_{j})$, we have $i < j$
+- Example: in a task scheduling 
+digraph, a topological ordering of 
+a task sequence that satisfies the 
+precedence constraints
+  - Not one topological ordering for a graph
+
+**Theorem**
+
+A digraph has a topological ordering if and only if it is a DAG
+
+![Alt text](assets\IMG129.PNG)
+
+### Algorithim for Topological sorting
+```
+Algorithm TopologicalSort(G):
+  H <- G // Temporary copy of G
+  n <- G.numVertices()
+  while H is not empty do
+    Let v be a vertex with no outgoing edges
+    Label v <- n
+    n <- n - 1
+    Remove v from H
+```
+
+![Alt text](assets\IMG130.PNG)

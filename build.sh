@@ -18,7 +18,8 @@ for course in "$root_directory"/*; do
 done
 
 # rename the html docs
-python main/build/renamer.py COMP3506/docs/textbook_wk2.html
+# python main/build/renamer.py COMP3506/docs/textbook_wk2.html
+python image_renamer.py
 
 # echo "All HTML documents have been copied from $sourceDirectory to $destinationDirectory."
 MESSAGE=$(git ls-files -domz | xargs -0 echo The following have been changed: )

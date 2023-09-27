@@ -12,6 +12,7 @@ Lecture notes and revision will be added separately
 |    [6](lecture6.html)    | Link |         |
 | [7](lecture7.html) | | |
 | [8](lecture8.html) | | [Tutorial 9](tutorial9.html)
+| [9](lecture9.html) | | [Tutorial 10]()
 
 ### Assignments:
 
