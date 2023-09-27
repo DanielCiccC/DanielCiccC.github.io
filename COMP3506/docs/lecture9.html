@@ -1,0 +1,583 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-9">Lecture 9</h1>
+<h3 dir="auto" id="weighted-graphs">Weighted Graphs</h3>
+<ul dir="auto">
+<li dir="auto">Each edge has an associated numerical value, called
+the weight of the edge</li>
+<li dir="auto">Edge weights may represent, distances, costs, etc.
+<ul dir="auto">
+<li dir="auto">e.g. flight route graph: weight of an edge represents the
+distance between the endpoint airports</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="shortest-path">Shortest Path</h3>
+<ul dir="auto">
+<li dir="auto">Given a weighted graph and two vertices u and v, find
+a path of minimum total weight between u and v
+<ul dir="auto">
+<li dir="auto">length of a path is the sum of the weights of its edges</li>
+</ul>
+</li>
+<li dir="auto">Example:
+<ul dir="auto">
+<li dir="auto">shortest path between Brisbane and Geraldton</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">If every weight had the same cost</p>
+<ul dir="auto">
+<li dir="auto">breadth first search would be the optimal algorithm</li>
+</ul>
+<p dir="auto"><img src="image-7.png" alt="Alt text" data-src="image-7.png"></p>
+<h3 dir="auto" id="properties">Properties</h3>
+<p dir="auto">Property 1:</p>
+<ul dir="auto">
+<li dir="auto">Subpath of a shortest path is itself a shortest path
+Property 2:</li>
+<li dir="auto">There is a tree of shortest paths from a start vertex to
+all other vertices
+<ul dir="auto">
+<li dir="auto">tree of shortest paths from Brisbane</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">You could have a single course of shortest path</p>
+<ul dir="auto">
+<li dir="auto">E.g. the shortest path from brisbane, to any other airport</li>
+</ul>
+<h3 dir="auto" id="dijkstras-algorithm">Dijkstra's Algorithm</h3>
+<ul dir="auto">
+<li dir="auto">Distance of a vertex v from a vertex s is the
+length of the shortest path between s and v</li>
+<li dir="auto">Dijkstra’s algorithm computes the distances of
+all the vertices from a given start vertex s</li>
+<li dir="auto">Assumptions
+<ul dir="auto">
+<li dir="auto">graph is connected</li>
+<li dir="auto">edges are undirected</li>
+<li dir="auto">edge weights are not negative</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="edge-relaxation">Edge relaxation</h3>
+<ul dir="auto">
+<li dir="auto">Consider an edge <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>=</mo><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">e =(u, z)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mclose">)</span></span></span></span> where
+<ul dir="auto">
+<li dir="auto">u is the vertex most recently added to the cloud</li>
+<li dir="auto">z is not in the cloud</li>
+</ul>
+</li>
+<li dir="auto">Relaxation of edge e updates distance d(z)
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>←</mo><mi>m</mi><mi>i</mi><mi>n</mi><mtext>  </mtext><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>d</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo><mo>+</mo><mi>w</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d(z) \leftarrow min \; (d(z), d(u) + weight(e))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">←</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">min</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">e</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">e</span><span class="mclose">))</span></span></span></span></li>
+</ul>
+</li>
+<li dir="auto">Updating the label to be the shortest minimum distance
+<img src="image-8.png" alt="Alt text" data-src="image-8.png">
+<ul dir="auto">
+<li dir="auto">iterative algorithm to traverse the vertex with the next shortest minimum weight</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="dijkstras-algoithm">Dijkstra's Algoithm</h3>
+<ul dir="auto">
+<li dir="auto">Priority queue stores the vertices outside the cloud
+<ul dir="auto">
+<li dir="auto">Key: distance</li>
+<li dir="auto">Element: vertex</li>
+</ul>
+</li>
+<li dir="auto">Locator-based methods
+<ul dir="auto">
+<li dir="auto">insert(k, e) returns a locator</li>
+<li dir="auto">replaceKey(l, k) changes the key of an item</li>
+</ul>
+</li>
+<li dir="auto">Store two labels with each vertex
+<ul dir="auto">
+<li dir="auto">Distance (d(v) label)</li>
+<li dir="auto">locator in priority queue</li>
+</ul>
+</li>
+</ul>
+<pre><code dir="auto"><code><div>Algorithm DijkstraDistances(G, s):
+PQ &lt;-new heap-based priority queue
+for all  v &lt;- G.vertices()
+    if v = s
+        setDistance(v, 0)
+    else
+        setDistance(v, (inf))
+    PQ.insert(getDistance(v), v)
+    while !PQ.isEmpty()
+        u &lt;- PQ.removeMin()
+        for all e in G.incidentEdges(u)
+            { relax edge e }
+            z &lt;- G.opposite(u, e)
+            r &lt;- getDistance(u) + weight(e)
+            if r &lt; getDistance(z)
+                setDistance(z, r)
+                PQ.replaceKey(getLocator(z), r)
+</div></code></code></pre>
+<h3 dir="auto" id="analysis-of-dijkstras-algorithm">Analysis of Dijkstra's Algorithm</h3>
+<ul dir="auto">
+<li dir="auto">Graph operations
+<ul dir="auto">
+<li dir="auto">find all the incident edges once for each vertex</li>
+</ul>
+</li>
+<li dir="auto">Label operations
+<ul dir="auto">
+<li dir="auto">set/get the distance and locator labels of vertex z O(deg(z)) times</li>
+<li dir="auto">setting/getting a label takes O(1) time</li>
+</ul>
+</li>
+<li dir="auto">Priority queue operations
+<ul dir="auto">
+<li dir="auto">each vertex is <strong>inserted once</strong> into and <strong>removed once</strong> from the priority
+queue, where each insertion or removal takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
+<li dir="auto">key of a vertex in the priority queue is modified at most deg(w)
+times, where each key change takes O(log n) time</li>
+</ul>
+</li>
+<li dir="auto">Dijkstra’s algorithm runs in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O((n + m) log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">((</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time
+<ul dir="auto">
+<li dir="auto">provided the graph is implemented as an adjacency list/map</li>
+<li dir="auto">recall that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>v</mi></msub><mi>d</mi><mi>e</mi><mi>g</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mi>m</mi></mrow><annotation encoding="application/x-tex">\sum_{v} deg(v) = 2m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0497em;vertical-align:-0.2997em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.0017em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">m</span></span></span></span></li>
+<li dir="auto">can also be expressed as O(m log n) since the graph is connected</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="why-it-doesnt-work-for-negative-weight-edges">Why it Doesn’t Work for Negative-Weight Edges</h3>
+<p dir="auto">Dijkstra’s algorithm is based on the greedy method</p>
+<ul dir="auto">
+<li dir="auto">adds vertices by increasing distance</li>
+<li dir="auto">If a node with a negative
+incident edge were to be added
+late to the cloud, it could mess
+up distances for vertices already
+in the cloud.
+<ul dir="auto">
+<li dir="auto">negative edges are going to 'mees up' distances already inside your cloud</li>
+<li dir="auto">negative cycle - can keep on going around a cycle and costs keep getting lower and lower
+<img src="image-9.png" alt="Alt text" data-src="image-9.png"></li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="greedy-algorithm">Greedy Algorithm</h3>
+<ul dir="auto">
+<li dir="auto">This that will benefit you the most, immediately from current point</li>
+<li dir="auto">best choice you can immediately at one point in time</li>
+</ul>
+<h2 dir="auto" id="dijkstra-example">Dijkstra example</h2>
+<ul dir="auto">
+<li dir="auto">create a table to recount the edges of the shortest path</li>
+</ul>
+<h3 dir="auto" id="dag-based-algorithm">DAG-Based algorithm</h3>
+<ul dir="auto">
+<li dir="auto">Works even with
+negative-weight
+edges</li>
+<li dir="auto">Uses topological order
+<ul dir="auto">
+<li dir="auto">Use topological order to iterate through all vertices, starting with the smallest topological ordering</li>
+</ul>
+</li>
+<li dir="auto">Doesn’t use other
+data structures</li>
+<li dir="auto">Is much faster than
+Dijkstra’s algorithm</li>
+<li dir="auto">Running time
+<ul dir="auto">
+<li dir="auto">O(n+m)</li>
+</ul>
+</li>
+</ul>
+<pre><code dir="auto"><code><div>Algorithm DagDistances(G, s):
+    for all  v &lt;- G.vertices()
+    if v = s
+        setDistance(v, 0)
+    else
+        setDistance(v, )
+    { Perform a topological sort of the vertices }
+    for u &lt;- 1 to n do    {in topological order}
+        for each  e &lt;- G.outEdges(u)
+            { relax edge e }
+            z &lt;- G.opposite(u, e)
+            r &lt;- getDistance(u) + weight(e)
+            if r &lt; getDistance(z)
+                setDistance(z, r)
+</div></code></code></pre>
+<h2 dir="auto" id="downside-of-dag-approach">Downside of DAG Approach?</h2>
+<ul dir="auto">
+<li dir="auto">Not all graphs are DAG's</li>
+</ul>
+<h3 dir="auto" id="minimum-spanning-trees">Minimum Spanning trees</h3>
+<ul dir="auto">
+<li dir="auto">Spanning Subgraph
+<ul dir="auto">
+<li dir="auto">subgraph of a graph G
+containing all vertices of G</li>
+</ul>
+</li>
+<li dir="auto">Spanning Tree
+<ul dir="auto">
+<li dir="auto">spanning subgraph that is
+itself a (free) tree</li>
+</ul>
+</li>
+<li dir="auto">Minimum Spanning Tree
+(MST)
+<ul dir="auto">
+<li dir="auto">spanning tree of a weighted
+graph with minimum total
+edge weight</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="image-12.png" alt="Alt text" data-src="image-12.png"></p>
+<h3 dir="auto" id="arent-msts--shortest-path">Aren't MST's = shortest path?</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">We know that single-sourse shortest path yields a trwee of shortest paths from origin u</p>
+</li>
+<li dir="auto">
+<p dir="auto">Can we just run that?</p>
+<ul dir="auto">
+<li dir="auto">No</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Minimum spanning tress might not exactly the same as the shortest path - if the node we're starting from has high weights</p>
+</li>
+</ul>
+<h3 dir="auto" id="cycle-property">Cycle property</h3>
+<ul dir="auto">
+<li dir="auto">Let T be a MST of a weighted graph G</li>
+<li dir="auto">Let e be an edge of G that is not in T</li>
+<li dir="auto">Let C be the cycle formed by e with T</li>
+<li dir="auto">For every edge f of C, weight(f) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo></mrow><annotation encoding="application/x-tex">\le</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≤</span></span></span></span> weight(e)</li>
+</ul>
+<p dir="auto"><img src="image-10.png" alt="Alt text" data-src="image-10.png"></p>
+<h3 dir="auto" id="partition-property">Partition Property</h3>
+<ul dir="auto">
+<li dir="auto">Consider a partition of the vertices of
+G into subsets U and V</li>
+<li dir="auto">Let e be an edge of minimum weight
+across the partition</li>
+<li dir="auto">There is a minimum spanning tree of
+G containing edge e</li>
+</ul>
+<p dir="auto">Proof</p>
+<ul dir="auto">
+<li dir="auto">Let T be an MST of G</li>
+<li dir="auto">If T does not contain e, consider the
+cycle C formed by e with T and let  f
+be an edge of C across the partition</li>
+<li dir="auto">By the cycle property,
+weight(f) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo></mrow><annotation encoding="application/x-tex">\le</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≤</span></span></span></span> weight(e)</li>
+<li dir="auto">Thus, weight(f) = weight(e)</li>
+<li dir="auto">We obtain another MST by replacing f with e</li>
+</ul>
+<p dir="auto"><img src="image-11.png" alt="Alt text" data-src="image-11.png"></p>
+<h3 dir="auto" id="prim-jarniks-algorithm">Prim-Jarnik’s Algorithm</h3>
+<ul dir="auto">
+<li dir="auto">Similar to Dijkstra’s algorithm</li>
+<li dir="auto">Pick an arbitrary vertex s and grow the MST
+as a cloud of vertices, starting from s</li>
+<li dir="auto">Store with each vertex v, a label d(v)
+<ul dir="auto">
+<li dir="auto">smallest weight of an edge connecting v to a
+vertex in the cloud</li>
+</ul>
+</li>
+<li dir="auto">At each step
+<ul dir="auto">
+<li dir="auto">add to the cloud the vertex u outside the cloud
+with the smallest distance label</li>
+<li dir="auto">update the labels of the vertices adjacent to u</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">KEY DIFFERENCE: Not trying to find the minimum distance, trying to find the minimum spanning tree</p>
+<p dir="auto"><img src="image-13.png" alt="Alt text" data-src="image-13.png"></p>
+<ul dir="auto">
+<li dir="auto">Graph operations
+<ul dir="auto">
+<li dir="auto">cycle through the incident edges once for each vertex</li>
+</ul>
+</li>
+<li dir="auto">Label operations
+<ul dir="auto">
+<li dir="auto">set/get distance, parent and locator labels of vertex z O(deg(z)) times</li>
+<li dir="auto">setting/getting a label takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> time</li>
+</ul>
+</li>
+<li dir="auto">Priority queue operations
+<ul dir="auto">
+<li dir="auto">each vertex is inserted once into and removed once from the priority
+queue, where each insertion or removal takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
+<li dir="auto">key of a vertex w in the priority queue is modified at most deg(w)
+times, where each key change takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
+</ul>
+</li>
+<li dir="auto">Prim-Jarnik’s algorithm runs in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O((n + m) \log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">((</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time
+<ul dir="auto">
+<li dir="auto">provided the graph is represented by an adjacency list structure</li>
+<li dir="auto">recall that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>v</mi></msub><mi>d</mi><mi>e</mi><mi>g</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mi>m</mi></mrow><annotation encoding="application/x-tex">\sum_{v} deg(v) = 2m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0497em;vertical-align:-0.2997em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.0017em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">m</span></span></span></span></li>
+<li dir="auto">can also be expressed as O(m log n) since the graph is connected</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="kruskals-approach">Kruskal's Approach</h3>
+<ul dir="auto">
+<li dir="auto">Maintain a partition of the vertices into clusters
+<ul dir="auto">
+<li dir="auto">initially, single-vertex clusters</li>
+<li dir="auto">keep an MST for each cluster</li>
+<li dir="auto">merge “closest” clusters and their MSTs</li>
+</ul>
+</li>
+<li dir="auto">Priority queue stores the edges outside clusters
+<ul dir="auto">
+<li dir="auto">key: weight</li>
+<li dir="auto">element: edge</li>
+</ul>
+</li>
+<li dir="auto">At the end of the algorithm
+<ul dir="auto">
+<li dir="auto">one cluster and one MST</li>
+</ul>
+</li>
+</ul>
+<pre><code dir="auto"><code><div>Algorithm Kruskal(G)
+    Input: a simple connected weighted graph G with n vertices and m edges
+    Output: a minimum spanning tree T for G
+
+for each vertex v in G do
+    define an elementary cluster C(v) = {v}
+Initialise a priority queue Q to contain all edges in G, using the weights as keys
+T -&gt; null {T will ultimately contain the edges of the MST}
+
+while T has fewer than n-1 edges to
+    (u,v) = value returned by Q.remove_min()
+</div></code></code></pre>
+<p dir="auto"><img src="image-14.png" alt="Alt text" data-src="image-14.png"></p>
+<h3 dir="auto" id="data-structure-for-krukals-approach">Data Structure for Krukal's Approach</h3>
+<ul dir="auto">
+<li dir="auto">Algorithm maintains a forest of trees</li>
+<li dir="auto">Priority queue extracts the edges by increasing weight</li>
+<li dir="auto">An edge is accepted if it connects distinct trees</li>
+<li dir="auto">Need a data structure that maintains a partition, i.e., a collection of disjoint sets, with operations:
+<ul dir="auto">
+<li dir="auto">makeSet(u): create a set consisting of u</li>
+<li dir="auto">find(u): return the set storing u</li>
+<li dir="auto">union(A, B): replace sets A and B with their union</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="list-based-partition">List-based partition</h3>
+<ul dir="auto">
+<li dir="auto">Each set is stored in a sequence</li>
+<li dir="auto">Each element has a reference back to the set
+<ul dir="auto">
+<li dir="auto">find(u) takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> time, and returns the set of which u is a member
+<ul dir="auto">
+<li dir="auto">Ackuman function (grows far worse than exponential)</li>
+<li dir="auto">actually grows the inverse of the Ackuman function <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\alpha (n))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">))</span></span></span></span></li>
+</ul>
+</li>
+<li dir="auto">union(A, B) moves the elements of the smaller set to the sequence of the larger set and updates their references
+<ul dir="auto">
+<li dir="auto">takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mo stretchy="false">(</mo><mi mathvariant="normal">∣</mi><mi>A</mi><mi mathvariant="normal">∣</mi><mo separator="true">,</mo><mi mathvariant="normal">∣</mi><mi>B</mi><mi mathvariant="normal">∣</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">min(|A|, |B|)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">min</span><span class="mopen">(</span><span class="mord">∣</span><span class="mord mathnormal">A</span><span class="mord">∣</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord">∣</span><span class="mclose">)</span></span></span></span> time</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">Whenever an element is processed, it goes into a set of size at least double, hence each element is processed at most log n times</li>
+</ul>
+<h3 dir="auto" id="partition-base-implementation">Partition-base implementation</h3>
+<ul dir="auto">
+<li dir="auto">Partition-based version of Kruskal’s
+Algorithm
+<ul dir="auto">
+<li dir="auto">cluster merges as unions</li>
+<li dir="auto">cluster locations as finds</li>
+</ul>
+</li>
+<li dir="auto">Running time O((n + m) log n)
+<ul dir="auto">
+<li dir="auto">priority queue operations: O(m log n)</li>
+<li dir="auto">union-find operations: O(n log n)</li>
+</ul>
+</li>
+</ul>
+<h2 dir="auto" id="solving-graph-problems">Solving Graph problems</h2>
+<ul dir="auto">
+<li dir="auto">Single Pair Reachability:
+<ul dir="auto">
+<li dir="auto">Is there a path from <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span> to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>?</li>
+</ul>
+</li>
+<li dir="auto">Single Pair Shortest Path:
+<ul dir="auto">
+<li dir="auto">What is the shortest path (and its cost) frin <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span> to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>?</li>
+</ul>
+</li>
+<li dir="auto">Single Source Shortest Path:
+<ul dir="auto">
+<li dir="auto">What is the shortest path (and associated costs) from v to all other u in G?</li>
+</ul>
+</li>
+<li dir="auto">All-Pairs Shortest Paths:
+<ul dir="auto">
+<li dir="auto">What is the shortest path (and associated
+costs) between all pairs of vertices in G?</li>
+</ul>
+</li>
+<li dir="auto">Each problem is at least as hard as the
+previous one…
+<ul dir="auto">
+<li dir="auto">Use properties of your specific problem to
+help solve it. Is the graph a DAG? Are the
+weights always positive? …</li>
+</ul>
+</li>
+</ul>
+<h2 dir="auto" id="extension-material">Extension Material</h2>
+<h3 dir="auto" id="transitive-closure">Transitive Closure</h3>
+<ul dir="auto">
+<li dir="auto">Given a digraph G, the
+transitive closure of G is the
+digraph G* such that
+<ul dir="auto">
+<li dir="auto">G* has the same vertices
+as G</li>
+<li dir="auto">if G has a directed path
+from u to v (u <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo mathvariant="normal">≠</mo></mrow><annotation encoding="application/x-tex">\ne</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span></span></span></span> v), G*
+has a directed edge from
+u to v</li>
+</ul>
+</li>
+<li dir="auto">Transitive closure provides reachability information about a digraph</li>
+</ul>
+<h3 dir="auto" id="computing-transitive-closure">Computing Transitive Closure</h3>
+<ul dir="auto">
+<li dir="auto">Perform DFS starting
+at each vertex
+<ul dir="auto">
+<li dir="auto">O(n(n+m))</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="dynamic-programming">Dynamic Programming</h3>
+<ul dir="auto">
+<li dir="auto">Powerful technique for solving problems</li>
+<li dir="auto">Idea: Break the problem into smaller
+subproblems
+<ul dir="auto">
+<li dir="auto">Solve the subproblems</li>
+<li dir="auto">Combine the solutions to solve the full problem</li>
+<li dir="auto">Reuse subproblem solutions (only compute once, cache the result)</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="floyd-warshall-algorithm">Floyd-Warshall Algorithm</h3>
+<ul dir="auto">
+<li dir="auto">Number vertices <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mn>1</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>v</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">v_{1}, ..., v_{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li dir="auto">Compute Graphs <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mn>0</mn></msub><mi>m</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>G</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">G_{0}m ..., G_{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">m</span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mn>0</mn></msub><mo>=</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">G_{0} = G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span></li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">G_{k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> has directed edge <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo separator="true">,</mo><msub><mi>v</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(v_{i}, v_{j})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> if <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> has a directed path from <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">v_{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">v_{j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span>, with intermediate vertices <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mn>1</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>v</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">v_{1}, ..., v_{k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>n</mi></msub><mo>=</mo><msup><mi>G</mi><mo lspace="0em" rspace="0em">∗</mo></msup></mrow><annotation encoding="application/x-tex">G_{n} = G^{*}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6887em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∗</span></span></span></span></span></span></span></span></span></span></span></span></li>
+<li dir="auto">In pahse <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>, digraph <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">G_{k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is computed from <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">G_{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li dir="auto">Running time: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^{3})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> assuming <code>areAdjacent</code> is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> e.g. adjacency matrix</li>
+</ul>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>iteration 0</th>
+<th>iteration 1</th>
+<th>iteration 2</th>
+<th>iteration 3</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="image-15.png" alt="Alt text" data-src="image-15.png"></td>
+<td><img src="image-16.png" alt="Alt text" data-src="image-16.png"></td>
+<td><img src="image-17.png" alt="Alt text" data-src="image-17.png"></td>
+<td><img src="image-18.png" alt="Alt text" data-src="image-18.png"></td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="all-pairs-shortest-paths">All pairs shortest paths</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Floyd-Warshall can also be used to solve the All-Pairs Shortest Path problem</p>
+</li>
+<li dir="auto">
+<p dir="auto">Can handle directed, weighted graphs, even where weights are negative!</p>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>Cannot handle negative cycles</strong> a cycle in a graph where the weights summed up is less than 0</p>
+</li>
+<li dir="auto">
+<p dir="auto">But it may be modified to detect them</p>
+</li>
+<li dir="auto">
+<p dir="auto">Bellman-Ford can detect negative cycles, but solves SSSP, not APSP</p>
+</li>
+<li dir="auto">
+<p dir="auto">Johnson’s algorithm can solve APSP in any weighted graph</p>
+<ul dir="auto">
+<li dir="auto">Can detect negative cycles</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="joels-insights">Joels insights:</h3>
+<ul dir="auto">
+<li dir="auto">Weighted or not?
+<ul dir="auto">
+<li dir="auto">Weights positive or not?</li>
+</ul>
+</li>
+<li dir="auto">Directed or undirected?</li>
+<li dir="auto">Simple?
+<ul dir="auto">
+<li dir="auto">Self loops or parallel edges?</li>
+</ul>
+</li>
+<li dir="auto">Cycles? Negative cycles?</li>
+</ul>
+
+</main>
+</body>
+</html>

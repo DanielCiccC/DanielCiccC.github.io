@@ -1,3 +1,4 @@
+Skipping C:/git/DanielCiccC.github.io/assets: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/BSAN4201: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/build.sh: 'notes' or 'docs' directory not found.
 cp: cannot stat 'C:/git/DanielCiccC.github.io/COMP3506/notes/assets/*.jpeg': No such file or directory
@@ -8,18 +9,10 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.png': No s
 cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.gif': No such file or directory
 Skipping C:/git/DanielCiccC.github.io/errorlog.txt: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/file_tracker.py: 'notes' or 'docs' directory not found.
+Skipping C:/git/DanielCiccC.github.io/image_renamer.py: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/KWM_law: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
 C:/git/DanielCiccC.github.io/COMP3506/docs/textbook_wk2.html
 Replaced 'undefined' in COMP3506/docs/textbook_wk2.html with its name.
-warning: in the working copy of 'COMP3506/docs/textbook_wk2.html', CRLF will be replaced by LF the next time Git touches it
-warning: in the working copy of 'errorlog.txt', CRLF will be replaced by LF the next time Git touches it
-[main a094d06] The following have been changed: DECO3801/docs/assets/IMG3.PNG DECO3801/notes/assets/IMG3.PNG COMP3506/docs/main_COMP3506.html COMP3506/docs/tutorial9.html COMP3506/notes/main_COMP3506.md
- 5 files changed, 37 insertions(+), 26 deletions(-)
- create mode 100644 DECO3801/docs/assets/IMG3.PNG
- create mode 100644 DECO3801/notes/assets/IMG3.PNG
-To https://github.com/DanielCiccC/DanielCiccC.github.io.git
-   759d8cb..a094d06  main -> main
-Build Complete
