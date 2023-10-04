@@ -79,6 +79,49 @@
 <li dir="auto">Pivoted a lot from out original project. From last week, we decided to narrow down our scope to specifically tailor our application to political bias. In this development, we have included the idea of a political figure homepage, where a user can see a feed of unbiased summaries of a political figure.</li>
 <li dir="auto">While all our members are busy, I have concerns that we do not have a strong project structure of the phases of our new build, and the dependencies that will eventually develop as some people are waiting on implementation from others. The jira's desparately need to be updated to reflect the changes in scope. I will update this immediately after submitting this snapshot</li>
 </ul>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-string">&#x27;&#x27;&#x27;
+ID 
+NameCode VARCHAR(255) NOT NULL UNIQUE,
+InProduction BOOLEAN,
+InsertedAt DATETIME,
+InsertedBy VARCHAR(50)
+&#x27;&#x27;&#x27;</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Politician_PositionNameCodes</span>(<span class="hljs-title class_ inherited__">table</span>):
+  
+  <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, nameCode=<span class="hljs-built_in">str</span>, inProduction=<span class="hljs-built_in">bool</span></span>):
+    <span class="hljs-built_in">super</span>().__init__()
+    self.nameCode = nameCode
+    self.inProd = inProduction
+    self.name = Politician_PositionNameCodes.__name__
+    
+
+  <span class="hljs-keyword">def</span> <span class="hljs-title function_">__str__</span>(<span class="hljs-params">self</span>):
+    <span class="hljs-keyword">if</span> self.<span class="hljs-built_in">id</span> <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+      <span class="hljs-keyword">return</span> <span class="hljs-string">f&#x27;<span class="hljs-subst">{self.name}</span> Record has not been inserted into DB - ID is NONE&#x27;</span>
+    <span class="hljs-keyword">else</span>:
+      <span class="hljs-keyword">return</span> <span class="hljs-string">f&#x27;<span class="hljs-subst">{self.name}</span>[<span class="hljs-subst">{self.<span class="hljs-built_in">id</span>}</span>, <span class="hljs-subst">{self.nameCode}</span>, <span class="hljs-subst">{self.inProd}</span>]&#x27;</span>
+  
+  <span class="hljs-string">&#x27;&#x27;&#x27;
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  &#x27;&#x27;&#x27;</span>
+  <span class="hljs-keyword">def</span> <span class="hljs-title function_">insertSQL</span>(<span class="hljs-params">self, insertedBy</span>) -&gt; <span class="hljs-built_in">str</span>:
+    query = <span class="hljs-string">f&quot;&quot;&quot;
+    INSERT INTO <span class="hljs-subst">{self.name}</span> (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    &#x27;<span class="hljs-subst">{self.nameCode}</span>&#x27;,
+    <span class="hljs-subst">{<span class="hljs-number">1</span> <span class="hljs-keyword">if</span> self.inProd <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>}</span>, 
+    NOW(),
+    &#x27;<span class="hljs-subst">{insertedBy}</span>&#x27;
+    );
+    &quot;&quot;&quot;</span>
+    <span class="hljs-keyword">return</span> query
+  
+  <span class="hljs-keyword">def</span> <span class="hljs-title function_">getName</span>(<span class="hljs-params">self</span>):
+    <span class="hljs-keyword">return</span> self.name
+</div></code></pre>
+<ul dir="auto">
+<li dir="auto">talk briefly about the transaction data client here also, neatly wraps around</li>
+</ul>
 <pre><code dir="auto"><code><div>[2023-10-04 11:24:14.489746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection &lt;pymysql.connections.Connection object at 0x000001483AF162D0&gt;]
 [2023-10-04 11:24:14.491739] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor &lt;pymysql.cursors.DictCursor object at 0x000001483ADE1110&gt;]
 [2023-10-04 11:24:14.950751] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
@@ -91,11 +134,11 @@
 [2023-10-04 11:24:15.444174] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection &lt;pymysql.connections.Connection object at 0x000001483AF162D0&gt;]
 [2023-10-04 11:24:15.445176] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor &lt;pymysql.cursors.DictCursor object at 0x000001483ADE1110&gt;]
 </div></code></code></pre>
-<h2 dir="auto" id="week-8-journal">Week 8 journal</h2>
+<h2 dir="auto" id="week-8-journal">Week 8 Journal</h2>
 <ul dir="auto">
 <li dir="auto">In addition to this build, I have developed a website to maintain my reflective journals.
 <ul dir="auto">
-<li dir="auto">Explain briefly how the website was created - will aid</li>
+<li dir="auto">Explain briefly how the website was created - will aid in submissions and can easily draft, add images and update to a site.</li>
 </ul>
 </li>
 <li dir="auto">Spent a lot of the time organising the teams developmental jiras
@@ -111,10 +154,10 @@ Each jira maintains three parts:</li>
 <li dir="auto">Success Criteria</li>
 <li dir="auto">Images (for reference only)</li>
 </ol>
-<p dir="auto">For example</p>
-<p dir="auto"><img src="image-2.png" alt="Alt text" data-src="image-2.png">
-<img src="image-3.png" alt="Alt text" data-src="image-3.png">
-<img src="image-4.png" alt="Alt text" data-src="image-4.png"></p>
+<p dir="auto">The following three images are screenshotted from jira <code>PRO-72</code>: Phase 4 API routes.</p>
+<p dir="auto"><img src="assets\IMG4.PNG" alt="Alt text" data-src="assets%5CIMG4.PNG">
+<img src="assets\IMG5.PNG" alt="Alt text" data-src="assets%5CIMG5.PNG">
+<img src="assets\IMG6.PNG" alt="Alt text" data-src="assets%5CIMG6.PNG"></p>
 <ul dir="auto">
 <li dir="auto">
 <p dir="auto">enables other features, such as the ability to engage in conversation and find dependencies and blockers for this task.</p>
@@ -137,7 +180,7 @@ Each jira maintains three parts:</li>
 </ul>
 </li>
 <li dir="auto">
-<p dir="auto">Received feedback on our journals to date.</p>
+<p dir="auto">Received feedback on our journals to date. My tutor raised that I should be more actionable in my responses. I have been doing things, and there have been problems, but I haven't been vocal in how I am attempting to improve our processes and solve active issues.</p>
 </li>
 </ul>
 <h2 dir="auto" id="week-10-journal">Week 10 Journal</h2>
@@ -146,8 +189,8 @@ Each jira maintains three parts:</li>
 <li dir="auto">Implemented caches and API endpoint routes to handle recents and saved Articles</li>
 <li dir="auto">new table architecture to support the new wireframe design. Our idea has pivoted to comparing political candidates for an upcoming election. Endpoint routes</li>
 </ul>
-<p dir="auto"><img src="image-5.png" alt="Alt text" data-src="image-5.png">
-<img src="image-6.png" alt="Alt text" data-src="image-6.png"></p>
+<p dir="auto"><img src="assets\IMG7.PNG" alt="Alt text" data-src="assets%5CIMG7.PNG">
+<img src="assets\IMG8.PNG" alt="Alt text" data-src="assets%5CIMG8.PNG"></p>
 <ul dir="auto">
 <li dir="auto">The jira outlined in week 8 asked a front end developer to outline all the API endpoints they would require in the last phase of the build; because this exercise was completed early, I as a developer can easily modify existing table structures, deriver functions and backend management layer to faciliate the data in the exact form he specifies. Most jiras like this necessitate and endpoint to created in out <code>API.py</code> doc, with sufficient documentation. the follow code is an example of a politician, and all the related info that was needed to send to the page.</li>
 </ul>

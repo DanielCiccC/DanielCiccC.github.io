@@ -58,6 +58,50 @@ Almost immediately after submitting our Statement of work, I had another convers
 - Working on connecting a database on AWS cloud to using that as a global database for our newscuration project. I also realised that I had not finished previous work creating a bias summary prompt for the frontend developers to begin implementing. I shall have to complete this before I begin building transaction tables and databases for backend.
 - Pivoted a lot from out original project. From last week, we decided to narrow down our scope to specifically tailor our application to political bias. In this development, we have included the idea of a political figure homepage, where a user can see a feed of unbiased summaries of a political figure.
 - While all our members are busy, I have concerns that we do not have a strong project structure of the phases of our new build, and the dependencies that will eventually develop as some people are waiting on implementation from others. The jira's desparately need to be updated to reflect the changes in scope. I will update this immediately after submitting this snapshot
+  
+
+```python
+'''
+ID 
+NameCode VARCHAR(255) NOT NULL UNIQUE,
+InProduction BOOLEAN,
+InsertedAt DATETIME,
+InsertedBy VARCHAR(50)
+'''
+class Politician_PositionNameCodes(table):
+  
+  def __init__(self, nameCode=str, inProduction=bool):
+    super().__init__()
+    self.nameCode = nameCode
+    self.inProd = inProduction
+    self.name = Politician_PositionNameCodes.__name__
+    
+
+  def __str__(self):
+    if self.id is None:
+      return f'{self.name} Record has not been inserted into DB - ID is NONE'
+    else:
+      return f'{self.name}[{self.id}, {self.nameCode}, {self.inProd}]'
+  
+  '''
+  This insert statement only takes one parameter; the name of the user inserting the record.
+  '''
+  def insertSQL(self, insertedBy) -> str:
+    query = f"""
+    INSERT INTO {self.name} (NameCode, InProduction, InsertedAt, InsertedBy)
+    VALUES (
+    '{self.nameCode}',
+    {1 if self.inProd else 0}, 
+    NOW(),
+    '{insertedBy}'
+    );
+    """
+    return query
+  
+  def getName(self):
+    return self.name
+```
+- talk briefly about the transaction data client here also, neatly wraps around 
 
 ```
 [2023-10-04 11:24:14.489746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001483AF162D0>]
@@ -73,9 +117,9 @@ Almost immediately after submitting our Statement of work, I had another convers
 [2023-10-04 11:24:15.445176] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001483ADE1110>]
 ```
 
-## Week 8 journal
+## Week 8 Journal
 - In addition to this build, I have developed a website to maintain my reflective journals. 
-  - Explain briefly how the website was created - will aid  
+  - Explain briefly how the website was created - will aid in submissions and can easily draft, add images and update to a site.
 - Spent a lot of the time organising the teams developmental jiras
   - backlog is ripe with jiras to have development underway, with worded 
 Each jira maintains three parts:
@@ -84,7 +128,7 @@ Each jira maintains three parts:
 3. Success Criteria
 4. Images (for reference only)
 
-For example
+The following three images are screenshotted from jira ``PRO-72``: Phase 4 API routes.
 
 ![Alt text](assets\IMG4.PNG)
 ![Alt text](assets\IMG5.PNG)
@@ -102,7 +146,7 @@ For example
   - https://www.geeksforgeeks.org/how-to-integrate-mysql-database-with-django/
   - Although the system already works, is simple to use and implement into a system, utilising a ready made system would mean that more time could be dedicated to implementing new systems
 
-- Received feedback on our journals to date. 
+- Received feedback on our journals to date. My tutor raised that I should be more actionable in my responses. I have been doing things, and there have been problems, but I haven't been vocal in how I am attempting to improve our processes and solve active issues.
 
 ## Week 10 Journal
 - Spent a large amount of time over the pause week to continue implementing associated jiras in the back of the 

@@ -3,7 +3,7 @@ import re
 import shutil
 
 # Define the directory where your markdown files are located
-directory = 'DECO3801/notes/'  # You can change this to your desired directory
+directory = 'COMP3506/notes/'  # You can change this to your desired directory
 
 # Iterate through files in the directory
 for filename in os.listdir(directory):
