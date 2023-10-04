@@ -1,26 +1,8 @@
-Processed lecture2.md
-Processed lecture3.md
-Processed lecture4.md
-Processed lecture5.md
-Processed lecture6.md
-Processed lecture7.md
-Processed lecture8.md
-Processed lecture9.md
-Processed main_COMP3506.md
-Processed mosssetup.md
-Processed textbook_wk1.md
-Processed textbook_wk2.md
-Processed textbook_wk3.md
-Processed textbook_wk4.md
-Processed tutorial1.md
-Processed tutorial10.md
-Processed tutorial2.md
-Processed tutorial5.md
-Processed tutorial6.md
-Processed tutorial7.md
-Processed tutorial8.md
-Processed tutorial9.md
-Done.
+Traceback (most recent call last):
+  File "C:\git\DanielCiccC.github.io\image_renamer.py", line 18, in <module>
+    with open(directory + 'assets/img_num.txt', 'r') as img_num:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'DECO3801/notes/assets/img_num.txt'
 Skipping C:/git/DanielCiccC.github.io/assets: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/BSAN4201: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/build.sh: 'notes' or 'docs' directory not found.
