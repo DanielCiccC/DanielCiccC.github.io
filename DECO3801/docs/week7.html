@@ -78,7 +78,115 @@
 <li dir="auto">Working on connecting a database on AWS cloud to using that as a global database for our newscuration project. I also realised that I had not finished previous work creating a bias summary prompt for the frontend developers to begin implementing. I shall have to complete this before I begin building transaction tables and databases for backend.</li>
 <li dir="auto">Pivoted a lot from out original project. From last week, we decided to narrow down our scope to specifically tailor our application to political bias. In this development, we have included the idea of a political figure homepage, where a user can see a feed of unbiased summaries of a political figure.</li>
 <li dir="auto">While all our members are busy, I have concerns that we do not have a strong project structure of the phases of our new build, and the dependencies that will eventually develop as some people are waiting on implementation from others. The jira's desparately need to be updated to reflect the changes in scope. I will update this immediately after submitting this snapshot</li>
-<li dir="auto"></li>
+</ul>
+<pre><code dir="auto"><code><div>[2023-10-04 11:24:14.489746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection &lt;pymysql.connections.Connection object at 0x000001483AF162D0&gt;]
+[2023-10-04 11:24:14.491739] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor &lt;pymysql.cursors.DictCursor object at 0x000001483ADE1110&gt;]
+[2023-10-04 11:24:14.950751] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 11:24:15.442174] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT *
+    FROM Politician_PositionNameCodes
+    WHERE 1=1
+    ]
+[{'ID': 1, 'NameCode': 'Prime Minister of Australia', 'InProduction': 0, 'InsertedAt': datetime.datetime(2023, 9, 28, 8, 2, 3), 'InsertedBy': 'Daniel Ciccotosto-Camp'}]
+[2023-10-04 11:24:15.444174] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection &lt;pymysql.connections.Connection object at 0x000001483AF162D0&gt;]
+[2023-10-04 11:24:15.445176] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor &lt;pymysql.cursors.DictCursor object at 0x000001483ADE1110&gt;]
+</div></code></code></pre>
+<h2 dir="auto" id="week-8-journal">Week 8 journal</h2>
+<ul dir="auto">
+<li dir="auto">In addition to this build, I have developed a website to maintain my reflective journals.
+<ul dir="auto">
+<li dir="auto">Explain briefly how the website was created - will aid</li>
+</ul>
+</li>
+<li dir="auto">Spent a lot of the time organising the teams developmental jiras
+<ul dir="auto">
+<li dir="auto">backlog is ripe with jiras to have development underway, with worded
+Each jira maintains three parts:</li>
+</ul>
+</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">Context</li>
+<li dir="auto">Requirements</li>
+<li dir="auto">Success Criteria</li>
+<li dir="auto">Images (for reference only)</li>
+</ol>
+<p dir="auto">For example</p>
+<p dir="auto"><img src="image-2.png" alt="Alt text" data-src="image-2.png">
+<img src="image-3.png" alt="Alt text" data-src="image-3.png">
+<img src="image-4.png" alt="Alt text" data-src="image-4.png"></p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">enables other features, such as the ability to engage in conversation and find dependencies and blockers for this task.</p>
+</li>
+<li dir="auto">
+<p dir="auto">At the moment, there are 27 issues in the jira backlog. Our meeting Sunday will enable us to chat about the upcoming work, and delegate tasks ready for us to complete over the following week.</p>
+</li>
+</ul>
+<h2 dir="auto" id="week-9-journal">Week 9 Journal</h2>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Ron has developed a system to organise our table structures which is so complex That I stuggle to be able to understand it, and add features to the class without errors and bugs</p>
+</li>
+<li dir="auto">
+<p dir="auto">At the same time, I also have regrets about the implementation of the model-template and data layer driven by AWS cloud.</p>
+<ul dir="auto">
+<li dir="auto">A little more research could have found a system that already has integration and adopts a system like this.</li>
+<li dir="auto"><a href="https://www.geeksforgeeks.org/how-to-integrate-mysql-database-with-django/">https://www.geeksforgeeks.org/how-to-integrate-mysql-database-with-django/</a></li>
+<li dir="auto">Although the system already works, is simple to use and implement into a system, utilising a ready made system would mean that more time could be dedicated to implementing new systems</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Received feedback on our journals to date.</p>
+</li>
+</ul>
+<h2 dir="auto" id="week-10-journal">Week 10 Journal</h2>
+<ul dir="auto">
+<li dir="auto">Spent a large amount of time over the pause week to continue implementing associated jiras in the back of the</li>
+<li dir="auto">Implemented caches and API endpoint routes to handle recents and saved Articles</li>
+<li dir="auto">new table architecture to support the new wireframe design. Our idea has pivoted to comparing political candidates for an upcoming election. Endpoint routes</li>
+</ul>
+<p dir="auto"><img src="image-5.png" alt="Alt text" data-src="image-5.png">
+<img src="image-6.png" alt="Alt text" data-src="image-6.png"></p>
+<ul dir="auto">
+<li dir="auto">The jira outlined in week 8 asked a front end developer to outline all the API endpoints they would require in the last phase of the build; because this exercise was completed early, I as a developer can easily modify existing table structures, deriver functions and backend management layer to faciliate the data in the exact form he specifies. Most jiras like this necessitate and endpoint to created in out <code>API.py</code> doc, with sufficient documentation. the follow code is an example of a politician, and all the related info that was needed to send to the page.</li>
+</ul>
+<pre><code class="code-line language-python" dir="auto"><div><span class="hljs-string">&#x27;&#x27;&#x27;
+Returns:
+    ID int,
+    Fname : str 
+    Lname : str 
+    About : str 
+    Age : int
+    Gender : str 
+    CountryCode : str
+    InProduction : Boolean
+    InsertedAt : DATETIME
+    InsertedBy : str
+    ImageLink : str
+    Summary : str
+    Articles : [
+        {ID : int
+        URL : str,
+        UpperBias : float,
+        LowerBias : float,
+        Summary TEXT,
+        InProduction : bool,
+        InsertedAt : DATETIME,
+        InsertedBy : str
+        Header : str,
+        OriginalText : str,
+        SummaryParagraph : str},
+    ]
+&#x27;&#x27;&#x27;</span>
+<span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/GetPoliticianByID&#x27;</span>, methods=[<span class="hljs-string">&#x27;POST&#x27;</span>]</span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">politicianRequestByID</span>():
+    data = request.get_json()
+    <span class="hljs-built_in">id</span> = data.get(<span class="hljs-string">&#x27;id&#x27;</span>)
+    <span class="hljs-keyword">return</span> sm.getPoliticianItem(<span class="hljs-built_in">id</span>, <span class="hljs-literal">None</span>)
+</div></code></pre>
+<ul dir="auto">
+<li dir="auto">conflict with with a teammate regarding the amount of work - priortising other studies at this particular point in time</li>
 </ul>
 
 </main>

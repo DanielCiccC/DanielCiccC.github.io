@@ -58,4 +58,97 @@ Almost immediately after submitting our Statement of work, I had another convers
 - Working on connecting a database on AWS cloud to using that as a global database for our newscuration project. I also realised that I had not finished previous work creating a bias summary prompt for the frontend developers to begin implementing. I shall have to complete this before I begin building transaction tables and databases for backend.
 - Pivoted a lot from out original project. From last week, we decided to narrow down our scope to specifically tailor our application to political bias. In this development, we have included the idea of a political figure homepage, where a user can see a feed of unbiased summaries of a political figure.
 - While all our members are busy, I have concerns that we do not have a strong project structure of the phases of our new build, and the dependencies that will eventually develop as some people are waiting on implementation from others. The jira's desparately need to be updated to reflect the changes in scope. I will update this immediately after submitting this snapshot
-- 
+
+```
+[2023-10-04 11:24:14.489746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001483AF162D0>]
+[2023-10-04 11:24:14.491739] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor <pymysql.cursors.DictCursor object at 0x000001483ADE1110>]
+[2023-10-04 11:24:14.950751] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection to database newscuration]
+[2023-10-04 11:24:15.442174] [Daniel Ciccotosto-Camp] [SUCCESS] [Successfully attempted query: 
+    SELECT *
+    FROM Politician_PositionNameCodes
+    WHERE 1=1
+    ]
+[{'ID': 1, 'NameCode': 'Prime Minister of Australia', 'InProduction': 0, 'InsertedAt': datetime.datetime(2023, 9, 28, 8, 2, 3), 'InsertedBy': 'Daniel Ciccotosto-Camp'}]
+[2023-10-04 11:24:15.444174] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001483AF162D0>]
+[2023-10-04 11:24:15.445176] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001483ADE1110>]
+```
+
+## Week 8 journal
+- In addition to this build, I have developed a website to maintain my reflective journals. 
+  - Explain briefly how the website was created - will aid  
+- Spent a lot of the time organising the teams developmental jiras
+  - backlog is ripe with jiras to have development underway, with worded 
+Each jira maintains three parts:
+1. Context
+2. Requirements
+3. Success Criteria
+4. Images (for reference only)
+
+For example
+
+![Alt text](image-2.png)
+![Alt text](image-3.png)
+![Alt text](image-4.png)
+
+- enables other features, such as the ability to engage in conversation and find dependencies and blockers for this task.
+
+- At the moment, there are 27 issues in the jira backlog. Our meeting Sunday will enable us to chat about the upcoming work, and delegate tasks ready for us to complete over the following week.
+
+## Week 9 Journal
+- Ron has developed a system to organise our table structures which is so complex That I stuggle to be able to understand it, and add features to the class without errors and bugs
+
+- At the same time, I also have regrets about the implementation of the model-template and data layer driven by AWS cloud.
+  - A little more research could have found a system that already has integration and adopts a system like this.
+  - https://www.geeksforgeeks.org/how-to-integrate-mysql-database-with-django/
+  - Although the system already works, is simple to use and implement into a system, utilising a ready made system would mean that more time could be dedicated to implementing new systems
+
+- Received feedback on our journals to date. 
+
+## Week 10 Journal
+- Spent a large amount of time over the pause week to continue implementing associated jiras in the back of the 
+- Implemented caches and API endpoint routes to handle recents and saved Articles
+- new table architecture to support the new wireframe design. Our idea has pivoted to comparing political candidates for an upcoming election. Endpoint routes
+
+![Alt text](image-5.png)
+![Alt text](image-6.png)
+
+
+- The jira outlined in week 8 asked a front end developer to outline all the API endpoints they would require in the last phase of the build; because this exercise was completed early, I as a developer can easily modify existing table structures, deriver functions and backend management layer to faciliate the data in the exact form he specifies. Most jiras like this necessitate and endpoint to created in out ``API.py`` doc, with sufficient documentation. the follow code is an example of a politician, and all the related info that was needed to send to the page.
+
+```python
+'''
+Returns:
+    ID int,
+    Fname : str 
+    Lname : str 
+    About : str 
+    Age : int
+    Gender : str 
+    CountryCode : str
+    InProduction : Boolean
+    InsertedAt : DATETIME
+    InsertedBy : str
+    ImageLink : str
+    Summary : str
+    Articles : [
+        {ID : int
+        URL : str,
+        UpperBias : float,
+        LowerBias : float,
+        Summary TEXT,
+        InProduction : bool,
+        InsertedAt : DATETIME,
+        InsertedBy : str
+        Header : str,
+        OriginalText : str,
+        SummaryParagraph : str},
+    ]
+'''
+@app.route('/GetPoliticianByID', methods=['POST'])
+def politicianRequestByID():
+    data = request.get_json()
+    id = data.get('id')
+    return sm.getPoliticianItem(id, None)
+```
+
+- conflict with with a teammate regarding the amount of work - priortising other studies at this particular point in time
