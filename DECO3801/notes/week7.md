@@ -86,9 +86,9 @@ Each jira maintains three parts:
 
 For example
 
-![Alt text](image-2.png)
-![Alt text](image-3.png)
-![Alt text](image-4.png)
+![Alt text](assets\IMG4.PNG)
+![Alt text](assets\IMG5.PNG)
+![Alt text](assets\IMG6.PNG)
 
 - enables other features, such as the ability to engage in conversation and find dependencies and blockers for this task.
 
@@ -109,8 +109,8 @@ For example
 - Implemented caches and API endpoint routes to handle recents and saved Articles
 - new table architecture to support the new wireframe design. Our idea has pivoted to comparing political candidates for an upcoming election. Endpoint routes
 
-![Alt text](image-5.png)
-![Alt text](image-6.png)
+![Alt text](assets\IMG7.PNG)
+![Alt text](assets\IMG8.PNG)
 
 
 - The jira outlined in week 8 asked a front end developer to outline all the API endpoints they would require in the last phase of the build; because this exercise was completed early, I as a developer can easily modify existing table structures, deriver functions and backend management layer to faciliate the data in the exact form he specifies. Most jiras like this necessitate and endpoint to created in out ``API.py`` doc, with sufficient documentation. the follow code is an example of a politician, and all the related info that was needed to send to the page.
