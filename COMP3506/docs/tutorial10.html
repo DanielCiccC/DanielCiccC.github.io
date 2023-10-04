@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="week-10-tutorial-1">Week 10 tutorial</h1>
+<h4 dir="auto" id="last-4-algorithms-you-can-do-in-a-graph-1">Last 4 algorithms you can do in a graph</h4>
+<h3 dir="auto" id="shortest-path-algorithms-1">Shortest path algorithms</h3>
+<ul dir="auto">
+<li dir="auto">Each edge has a numerical weight</li>
+<li dir="auto">Weight can be: Cost, Distance, etc</li>
+</ul>
+<p dir="auto">Properties:</p>
+<ol dir="auto">
+<li dir="auto"><strong>Subpath of a shortest path is itself a shortest path</strong></li>
+<li dir="auto">There is a tree of shortest paths from a start vertex to all other vertices</li>
+</ol>
+<p dir="auto"><img src="image-1.png" alt="Alt text" data-src="image-1.png"></p>
+<h3 dir="auto" id="dijkstras-algorithm-1">Dijkstra's algorithm</h3>
+<ul dir="auto">
+<li dir="auto">Computes the shortest path from one vertex to all other vertices</li>
+<li dir="auto">Greedy algorithm: At each step we relax the “vertices cloud”</li>
+<li dir="auto">Edge relaxation</li>
+<li dir="auto">Run time: O((n + m) log n)</li>
+</ul>
+<p dir="auto">Assumptions:</p>
+<ul dir="auto">
+<li dir="auto">Graph is connected</li>
+<li dir="auto">Edge weights are not negative</li>
+</ul>
+<h3 dir="auto" id="method-1">Method:</h3>
+<p dir="auto">Start at a vertex, with all unexplored vertices as weight ∞.</p>
+<ol dir="auto">
+<li dir="auto">For all unvisited vertices that you have a direct path to, update the
+weights if they are smaller than the current weight.</li>
+<li dir="auto">Visit a previously unvisited vertex that takes the least “cost”/“effort”
+● Keep track of the edges you have travelled along
+Repeat this until all vertices have been visited.</li>
+</ol>
+<p dir="auto"><img src="image-3.png" alt="Alt text" data-src="image-3.png"></p>
+<p dir="auto"><img src="image-4.png" alt="Alt text" data-src="image-4.png"></p>
+<h3 dir="auto" id="dag---based-algorithm-example-1">DAG - based algorithm Example</h3>
+<p dir="auto"><img src="image-5.png" alt="Alt text" data-src="image-5.png"></p>
+<h3 dir="auto" id="minimum-spanning-tree-1">Minimum spanning tree</h3>
+<ul dir="auto">
+<li dir="auto">Spanning Subgraph: Subgraph of G contain all vertices</li>
+<li dir="auto">Tree
+<ul dir="auto">
+<li dir="auto">Connected acyclic graph
+Spanning Tree</li>
+<li dir="auto">Subset of edges of graph G that form a tree &amp; hit all vertices of G</li>
+</ul>
+</li>
+<li dir="auto">Minimum Spanning Tree
+<ul dir="auto">
+<li dir="auto">Spanning tree of a weighted graph with minimum total edge weight</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><strong>Cycle Property</strong></p>
+<ul dir="auto">
+<li dir="auto">Cycle Property
+<ul dir="auto">
+<li dir="auto">MST should have no cycles</li>
+</ul>
+</li>
+<li dir="auto">Partition Property:
+<ul dir="auto">
+<li dir="auto">Partition G’s vertices into subsets
+U &amp; V</li>
+</ul>
+</li>
+<li dir="auto">Let e be an edge of minimum
+weight across the partition</li>
+<li dir="auto">There is a minimum spanning
+tree of G containing edge e</li>
+</ul>
+<p dir="auto"><img src="image-6.png" alt="Alt text" data-src="image-6.png"></p>
+<h3 dir="auto" id="prim-jarniks-algorithm-1">Prim-Jarnik’s Algorithm</h3>
+<ul dir="auto">
+<li dir="auto">Purpose: Find MST</li>
+<li dir="auto">Greedy algorithm</li>
+<li dir="auto">Run time: O((n + m) log (n))</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">First edge: Find the smallest weighted edge</li>
+<li dir="auto">Until you create a MST:</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Find the next minimum weighted edge that is already connected to the current tree. Ensure the edge you select does not produce a cycle (violates the concept of the tree)</li>
+</ul>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>before</th>
+<th>after</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="image-7.png" alt="Alt text" data-src="image-7.png"></td>
+<td><img src="image-8.png" alt="Alt text" data-src="image-8.png"></td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="kruskals-algorithm-1">Kruskal's algorithm</h3>
+<ul dir="auto">
+<li dir="auto">Purpose: Find MST</li>
+<li dir="auto">Greedy algorithm</li>
+<li dir="auto">Run time: O((n + m) log n)</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">Select smallest edge anywhere in the graph</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Discard the edge if it forms a cycle</li>
+</ul>
+
+</main>
+</body>
+</html>

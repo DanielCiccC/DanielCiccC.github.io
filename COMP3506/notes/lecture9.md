@@ -337,7 +337,7 @@ subproblems
   - $G_{0} = G$
   - $G_{k}$ has directed edge $(v_{i}, v_{j})$ if $G$ has a directed path from $v_{i}$ to $v_{j}$, with intermediate vertices $v_{1}, ..., v_{k}$
 - $G_{n} = G^{*}$
-- In pahse $k$, digraph $G_{k}$ is computed from $G_{k-1}$
+- In phase $k$, digraph $G_{k}$ is computed from $G_{k-1}$
 - Running time: $O(n^{3})$ assuming ``areAdjacent`` is $O(1)$ e.g. adjacency matrix
 
 iteration 0 | iteration 1 | iteration 2 | iteration 3
