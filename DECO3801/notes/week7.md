@@ -45,8 +45,7 @@ Almost immediately after submitting our Statement of work, I had another convers
 -  Spent most of the week organising the milestone presentation alongside Yash and Sean. 
 -  Spent the leftover time I had updated the summary prompt to be as efficient and consistent as possible
 -  Pivoted the project a second time, to be targeted towards political bias. Concerns regarding creditbility of facts, in which Yash discussed the use of a polling system or commenting system to discuss the credibility of the facts we present, alongside a disclaimer.
--  In this pivot, we would also include a page for political figures to search for
--  Sean had spent time updating the wireframes to reflect changes in the build of our project.
+-  In this pivot, we would now also include a political search. I have concerns that this will grealt increase the complexity of the table structures, and the workload for the developers to build this within our given timeframe.
 
 [Our most up to date wireframe, outlining poltiical figure websites](WIREFRAMES3.0.pdf)
 
@@ -59,6 +58,15 @@ Almost immediately after submitting our Statement of work, I had another convers
 - Pivoted a lot from out original project. From last week, we decided to narrow down our scope to specifically tailor our application to political bias. In this development, we have included the idea of a political figure homepage, where a user can see a feed of unbiased summaries of a political figure.
 - While all our members are busy, I have concerns that we do not have a strong project structure of the phases of our new build, and the dependencies that will eventually develop as some people are waiting on implementation from others. The jira's desparately need to be updated to reflect the changes in scope. I will update this immediately after submitting this snapshot
   
+#### Greatest contribution this week - Data management organisation
+### (NEED TO ELBAORATE THIS FURTHER) 
+- Needed to build a database management system that all the developers in the team could easily use
+- I didn't want developers to have mismatched tables structures between their local envrionments, and I also wanted to avoid needing to duplicate in their individual environments. Ideally, we would have one master database system that all developers could alter, and propogate to all other users. Of course, some redundancies and versioning control will need to be in place, details related to that could be organised later.
+- After some preliminary amongst peers and industry professionals, I opted to created an AWS account and build an RDS (Relational Database System) instance. With a cloud siolution such as this, all developers could remotely access the database, perform DDL operations and retrieve the most up-to-date versions of table structures used in our project.
+
+- ss of the Newscuration AWS instance
+- Created a ORM tool inpython, to handle insertion and querying of table elements, similar to like softwares sich as [java hibernate](https://hibernate.org/)
+
 
 ```python
 '''
@@ -101,7 +109,8 @@ class Politician_PositionNameCodes(table):
   def getName(self):
     return self.name
 ```
-- talk briefly about the transaction data client here also, neatly wraps around 
+- talk briefly about the transaction data client here also, neatly wraps around mysql output and prints to a log file and to terminal output.
+- Very carefully handled errors in output, to catch bad insertions and queries into the database. 
 
 ```
 [2023-10-04 11:24:14.489746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection <pymysql.connections.Connection object at 0x000001483AF162D0>]
@@ -116,30 +125,33 @@ class Politician_PositionNameCodes(table):
 [2023-10-04 11:24:15.444174] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing Connection <pymysql.connections.Connection object at 0x000001483AF162D0>]
 [2023-10-04 11:24:15.445176] [Daniel Ciccotosto-Camp] [SUCCESS] [Closing cursor <pymysql.cursors.DictCursor object at 0x000001483ADE1110>]
 ```
-
 ## Week 8 Journal
 - In addition to this build, I have developed a website to maintain my reflective journals. 
   - Explain briefly how the website was created - will aid in submissions and can easily draft, add images and update to a site.
 - Spent a lot of the time organising the teams developmental jiras
-  - backlog is ripe with jiras to have development underway, with worded 
-Each jira maintains three parts:
-1. Context
-2. Requirements
-3. Success Criteria
-4. Images (for reference only)
+- Explain why this business operations tool is effective in organising team goals and aids in the our developmental process
+  - backlog is ripe with jiras to have development underway, with worded explanations about what has to be completed within each jira.
 
-The following three images are screenshotted from jira ``PRO-72``: Phase 4 API routes.
+
+Each jira maintains three parts:
+1. **Context**: what has been going on in the background? What has been developed up to this stage and what phase of work are we currently building?
+2. **Requirements**: what has to be developed in this piece of work?
+3. **Success Criteria**: what is an acceptable output/change that will see that this work has been developed?
+4. **Images**: (for reference only)
+
+The following three images are screenshotted from jira ``PRO-72: Phase 4 API routes.``
 
 ![Alt text](assets\IMG4.PNG)
 ![Alt text](assets\IMG5.PNG)
 ![Alt text](assets\IMG6.PNG)
 
-- enables other features, such as the ability to engage in conversation and find dependencies and blockers for this task.
-
+- Enables other features, such as the ability to engage in conversation and find dependencies and blockers for this task.
 - At the moment, there are 27 issues in the jira backlog. Our meeting Sunday will enable us to chat about the upcoming work, and delegate tasks ready for us to complete over the following week.
 
 ## Week 9 Journal
-- Ron has developed a system to organise our table structures which is so complex That I stuggle to be able to understand it, and add features to the class without errors and bugs
+Issues:
+- Ron has developed a system to organise our table structures which is so complex that I stuggle to be able to understand it add functionality to improve it.
+- Began to develop a new feature - ``PRO-78`` - most popular articles. I originally had begun work on this piece but after a code review from Ron was merged into main, the changes had spawned so many merge conflicts that I had to scrap the branch (and the work I had nearly completed) and after conversation with Ron, reassign it to him. This was particularly frustrating as I had spent some time developing this new feature and 
 
 - At the same time, I also have regrets about the implementation of the model-template and data layer driven by AWS cloud.
   - A little more research could have found a system that already has integration and adopts a system like this.
@@ -149,7 +161,7 @@ The following three images are screenshotted from jira ``PRO-72``: Phase 4 API r
 - Received feedback on our journals to date. My tutor raised that I should be more actionable in my responses. I have been doing things, and there have been problems, but I haven't been vocal in how I am attempting to improve our processes and solve active issues.
 
 ## Week 10 Journal
-- Spent a large amount of time over the pause week to continue implementing associated jiras in the back of the 
+- Spent a large amount of time over the pause week to continue implementing associated jiras during our sprint
 - Implemented caches and API endpoint routes to handle recents and saved Articles
 - new table architecture to support the new wireframe design. Our idea has pivoted to comparing political candidates for an upcoming election. Endpoint routes
 
@@ -163,17 +175,17 @@ The following three images are screenshotted from jira ``PRO-72``: Phase 4 API r
 '''
 Returns:
     ID int,
-    Fname : str 
-    Lname : str 
-    About : str 
-    Age : int
-    Gender : str 
-    CountryCode : str
-    InProduction : Boolean
-    InsertedAt : DATETIME
-    InsertedBy : str
-    ImageLink : str
-    Summary : str
+    Fname : str,
+    Lname : str,
+    About : str,
+    Age : int,
+    Gender : str,
+    CountryCode : str,
+    InProduction : Boolean,
+    InsertedAt : DATETIME,
+    InsertedBy : str,
+    ImageLink : str,
+    Summary : str,
     Articles : [
         {ID : int
         URL : str,

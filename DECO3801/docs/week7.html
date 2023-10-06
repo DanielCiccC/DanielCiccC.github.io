@@ -66,8 +66,7 @@
 <li dir="auto">Spent most of the week organising the milestone presentation alongside Yash and Sean.</li>
 <li dir="auto">Spent the leftover time I had updated the summary prompt to be as efficient and consistent as possible</li>
 <li dir="auto">Pivoted the project a second time, to be targeted towards political bias. Concerns regarding creditbility of facts, in which Yash discussed the use of a polling system or commenting system to discuss the credibility of the facts we present, alongside a disclaimer.</li>
-<li dir="auto">In this pivot, we would also include a page for political figures to search for</li>
-<li dir="auto">Sean had spent time updating the wireframes to reflect changes in the build of our project.</li>
+<li dir="auto">In this pivot, we would now also include a political search. I have concerns that this will grealt increase the complexity of the table structures, and the workload for the developers to build this within our given timeframe.</li>
 </ul>
 <p dir="auto"><a href="WIREFRAMES3.0.pdf">Our most up to date wireframe, outlining poltiical figure websites</a></p>
 <h4 dir="auto" id="an-example-image">An example image:</h4>
@@ -78,6 +77,25 @@
 <li dir="auto">Working on connecting a database on AWS cloud to using that as a global database for our newscuration project. I also realised that I had not finished previous work creating a bias summary prompt for the frontend developers to begin implementing. I shall have to complete this before I begin building transaction tables and databases for backend.</li>
 <li dir="auto">Pivoted a lot from out original project. From last week, we decided to narrow down our scope to specifically tailor our application to political bias. In this development, we have included the idea of a political figure homepage, where a user can see a feed of unbiased summaries of a political figure.</li>
 <li dir="auto">While all our members are busy, I have concerns that we do not have a strong project structure of the phases of our new build, and the dependencies that will eventually develop as some people are waiting on implementation from others. The jira's desparately need to be updated to reflect the changes in scope. I will update this immediately after submitting this snapshot</li>
+</ul>
+<h4 dir="auto" id="greatest-contribution-this-week---data-management-organisation">Greatest contribution this week - Data management organisation</h4>
+<h3 dir="auto" id="need-to-elbaorate-this-further">(NEED TO ELBAORATE THIS FURTHER)</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Needed to build a database management system that all the developers in the team could easily use</p>
+</li>
+<li dir="auto">
+<p dir="auto">I didn't want developers to have mismatched tables structures between their local envrionments, and I also wanted to avoid needing to duplicate in their individual environments. Ideally, we would have one master database system that all developers could alter, and propogate to all other users. Of course, some redundancies and versioning control will need to be in place, details related to that could be organised later.</p>
+</li>
+<li dir="auto">
+<p dir="auto">After some preliminary amongst peers and industry professionals, I opted to created an AWS account and build an RDS (Relational Database System) instance. With a cloud siolution such as this, all developers could remotely access the database, perform DDL operations and retrieve the most up-to-date versions of table structures used in our project.</p>
+</li>
+<li dir="auto">
+<p dir="auto">ss of the Newscuration AWS instance</p>
+</li>
+<li dir="auto">
+<p dir="auto">Created a ORM tool inpython, to handle insertion and querying of table elements, similar to like softwares sich as <a href="https://hibernate.org/">java hibernate</a></p>
+</li>
 </ul>
 <pre><code class="code-line language-python" dir="auto"><div><span class="hljs-string">&#x27;&#x27;&#x27;
 ID 
@@ -120,7 +138,8 @@ InsertedBy VARCHAR(50)
     <span class="hljs-keyword">return</span> self.name
 </div></code></pre>
 <ul dir="auto">
-<li dir="auto">talk briefly about the transaction data client here also, neatly wraps around</li>
+<li dir="auto">talk briefly about the transaction data client here also, neatly wraps around mysql output and prints to a log file and to terminal output.</li>
+<li dir="auto">Very carefully handled errors in output, to catch bad insertions and queries into the database.</li>
 </ul>
 <pre><code dir="auto"><code><div>[2023-10-04 11:24:14.489746] [Daniel Ciccotosto-Camp] [SUCCESS] [Established connection &lt;pymysql.connections.Connection object at 0x000001483AF162D0&gt;]
 [2023-10-04 11:24:14.491739] [Daniel Ciccotosto-Camp] [SUCCESS] [Established cursor &lt;pymysql.cursors.DictCursor object at 0x000001483ADE1110&gt;]
@@ -141,35 +160,36 @@ InsertedBy VARCHAR(50)
 <li dir="auto">Explain briefly how the website was created - will aid in submissions and can easily draft, add images and update to a site.</li>
 </ul>
 </li>
-<li dir="auto">Spent a lot of the time organising the teams developmental jiras
+<li dir="auto">Spent a lot of the time organising the teams developmental jiras</li>
+<li dir="auto">Explain why this business operations tool is effective in organising team goals and aids in the our developmental process
 <ul dir="auto">
-<li dir="auto">backlog is ripe with jiras to have development underway, with worded
-Each jira maintains three parts:</li>
+<li dir="auto">backlog is ripe with jiras to have development underway, with worded explanations about what has to be completed within each jira.</li>
 </ul>
 </li>
 </ul>
+<p dir="auto">Each jira maintains three parts:</p>
 <ol dir="auto">
-<li dir="auto">Context</li>
-<li dir="auto">Requirements</li>
-<li dir="auto">Success Criteria</li>
-<li dir="auto">Images (for reference only)</li>
+<li dir="auto"><strong>Context</strong>: what has been going on in the background? What has been developed up to this stage and what phase of work are we currently building?</li>
+<li dir="auto"><strong>Requirements</strong>: what has to be developed in this piece of work?</li>
+<li dir="auto"><strong>Success Criteria</strong>: what is an acceptable output/change that will see that this work has been developed?</li>
+<li dir="auto"><strong>Images</strong>: (for reference only)</li>
 </ol>
-<p dir="auto">The following three images are screenshotted from jira <code>PRO-72</code>: Phase 4 API routes.</p>
+<p dir="auto">The following three images are screenshotted from jira <code>PRO-72: Phase 4 API routes.</code></p>
 <p dir="auto"><img src="assets\IMG4.PNG" alt="Alt text" data-src="assets%5CIMG4.PNG">
 <img src="assets\IMG5.PNG" alt="Alt text" data-src="assets%5CIMG5.PNG">
 <img src="assets\IMG6.PNG" alt="Alt text" data-src="assets%5CIMG6.PNG"></p>
 <ul dir="auto">
-<li dir="auto">
-<p dir="auto">enables other features, such as the ability to engage in conversation and find dependencies and blockers for this task.</p>
-</li>
-<li dir="auto">
-<p dir="auto">At the moment, there are 27 issues in the jira backlog. Our meeting Sunday will enable us to chat about the upcoming work, and delegate tasks ready for us to complete over the following week.</p>
-</li>
+<li dir="auto">Enables other features, such as the ability to engage in conversation and find dependencies and blockers for this task.</li>
+<li dir="auto">At the moment, there are 27 issues in the jira backlog. Our meeting Sunday will enable us to chat about the upcoming work, and delegate tasks ready for us to complete over the following week.</li>
 </ul>
 <h2 dir="auto" id="week-9-journal">Week 9 Journal</h2>
+<p dir="auto">Issues:</p>
 <ul dir="auto">
 <li dir="auto">
-<p dir="auto">Ron has developed a system to organise our table structures which is so complex That I stuggle to be able to understand it, and add features to the class without errors and bugs</p>
+<p dir="auto">Ron has developed a system to organise our table structures which is so complex that I stuggle to be able to understand it add functionality to improve it.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Began to develop a new feature - <code>PRO-78</code> - most popular articles. I originally had begun work on this piece but after a code review from Ron was merged into main, the changes had spawned so many merge conflicts that I had to scrap the branch (and the work I had nearly completed) and after conversation with Ron, reassign it to him. This was particularly frustrating as I had spent some time developing this new feature and</p>
 </li>
 <li dir="auto">
 <p dir="auto">At the same time, I also have regrets about the implementation of the model-template and data layer driven by AWS cloud.</p>
@@ -185,7 +205,7 @@ Each jira maintains three parts:</li>
 </ul>
 <h2 dir="auto" id="week-10-journal">Week 10 Journal</h2>
 <ul dir="auto">
-<li dir="auto">Spent a large amount of time over the pause week to continue implementing associated jiras in the back of the</li>
+<li dir="auto">Spent a large amount of time over the pause week to continue implementing associated jiras during our sprint</li>
 <li dir="auto">Implemented caches and API endpoint routes to handle recents and saved Articles</li>
 <li dir="auto">new table architecture to support the new wireframe design. Our idea has pivoted to comparing political candidates for an upcoming election. Endpoint routes</li>
 </ul>
@@ -197,17 +217,17 @@ Each jira maintains three parts:</li>
 <pre><code class="code-line language-python" dir="auto"><div><span class="hljs-string">&#x27;&#x27;&#x27;
 Returns:
     ID int,
-    Fname : str 
-    Lname : str 
-    About : str 
-    Age : int
-    Gender : str 
-    CountryCode : str
-    InProduction : Boolean
-    InsertedAt : DATETIME
-    InsertedBy : str
-    ImageLink : str
-    Summary : str
+    Fname : str,
+    Lname : str,
+    About : str,
+    Age : int,
+    Gender : str,
+    CountryCode : str,
+    InProduction : Boolean,
+    InsertedAt : DATETIME,
+    InsertedBy : str,
+    ImageLink : str,
+    Summary : str,
     Articles : [
         {ID : int
         URL : str,
