@@ -292,7 +292,7 @@ Algorithm
 - Single Pair Reachability:
   - Is there a path from $u$ to $v$ in $G$?
 - Single Pair Shortest Path:
-  - What is the shortest path (and its cost) frin $u$ to $v$ in $G$?
+  - What is the shortest path (and its cost) from $u$ to $v$ in $G$?
 - Single Source Shortest Path:
   - What is the shortest path (and associated costs) from v to all other u in G?
 - All-Pairs Shortest Paths:
