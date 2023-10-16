@@ -1,4 +1,5 @@
 Processed lecture10.md
+Processed lecture11.md
 Processed lecture2.md
 Processed lecture3.md
 Processed lecture4.md

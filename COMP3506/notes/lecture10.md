@@ -253,3 +253,86 @@ Compact representation of a compressed trie for an array of strings
 
 ### Building the Trie
 - Each node (or edge) also holds a weight corresponding to the volume of queries that were issued for that prefix
+
+### Querying the Trie
+
+- Given a prefix P, we want to return a ranked list of k completions
+  - k is usually small, about 5-10 suggestions
+  - P is usually streamed, increasing in length
+    - Query starts empty, grows character-by-character
+    - Search is repeatedly triggered as the query is built, and suggestions returned ASAP!
+    - Only return endpoint suggestions – ranked by weight
+
+![Alt text](assets\IMG152.PNG)
+
+![Alt text](assets\IMG153.PNG)
+
+## Suffix arrays
+
+### Suffix Tree (Suffix Trie)
+- Suffix tree of a string T is the compressed trie of all 
+the suffixes of T
+
+![Alt text](assets\IMG154.PNG)
+
+- ``n`` suffixes for a string of length n
+
+### Suffix Tree: Compact Rep.
+
+![Alt text](assets\IMG155.PNG)
+
+### Suffix Tree Pattern Matching
+-  Maintain, at each node, the number of 
+leaf nodes below
+- Walk down the tree until we run out of 
+pattern to match
+- Return the count of leaf nodes below us
+- **find the patterns in text**
+  - number of children in a suffix array
+
+### Other query types
+- Count the number of occurrences of ``P`` in ``T``  (we just saw this)
+- Output the locations of all occurrences of ``P`` in ``T`` 
+- Check whether ``P`` is a suffix of ``T`` 
+- Find the longest repeat in ``T`` (the longest substring that occurs twice in ``T``)
+
+Given two strings ``A`` and ``B``, what is their longest common substring?
+- Idea: Create a new string by concatenating ``A`` and ``B`` together with a special delimiter
+  - ``C = A|B``  (where ‘|’ is our special delimiter)
+- Build a suffix tree on ``C``
+- Mark subtrees with a bit corresponding to whether the subtree holds a suffix of ``A``
+- Do the same for ``B``
+- The deepest node with both bits set is the longest common substring of both!
+
+- Compact representation of the suffix tree for a string ``T`` of size ``t`` from an alphabet of size ``d``
+- Uses $O(t)$ space (linear in the input text)
+- Supports arbitrary pattern matching queries in T in O(d x p) time, where p is the size of the pattern
+  - If we assume d is O(1), this becomes O(p) time
+  - Then, finding all occurrences of P in Twill cost O(p + k) where k is the number of times P occurs in T!
+- Can construct a suffix tree in O(t) time
+  - Out of scope of this course: Ukkonen’s algorithm.
+- **If you have a text in a pattern, to find all positions of the pattern in the text, build a suffix tree and find them all much quicker**
+
+### Suffix Arrays
+- Suffix Trees:
+Even though space consumption is ``O(t)`` where ``t = |T|`` (linear in the size of the indexed text), their pointer-based representation can be quite costly (Think about very large input strings…)
+- Idea: We can use an array instead!
+
+- Write down all suffixes of T
+- The i-th suffix begins at position i
+- Sort the suffixes lexicographically, and let the i values “come along for the ride”
+- The resultant indexes are the suffix array!
+
+![Alt text](assets\IMG156.PNG)
+
+Does the string “bana” occur in T ? Binary Search the SA!
+
+![Alt text](assets\IMG157.PNG)
+
+- MIGHT NEED LOWER BOUNDING
+
+### Suffix Array Analysis
+- Can be constructed in linear time, O(n) Out of scope for this course
+- Space occupancy is empirically better than the suffix tree (dont need to store pointers)
+  - Just store T and a list of |T| integers!
+- May support a limited subset of suffix tree operations, but can be augmented to achieve more functionality

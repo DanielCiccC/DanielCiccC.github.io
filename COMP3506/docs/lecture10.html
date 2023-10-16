@@ -86,7 +86,7 @@ for each possible shift of P relative to T</li>
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="image-1.png" alt="Alt text" data-src="image-1.png"></p>
+<p dir="auto"><img src="assets\IMG138.PNG" alt="Alt text" data-src="assets%5CIMG138.PNG"></p>
 <h3 dir="auto" id="can-we-do-better">Can we do better?</h3>
 <ul dir="auto">
 <li dir="auto">Boyer-Moore pattern matching algorithm</li>
@@ -103,7 +103,7 @@ approach by using two heuristics
 <li dir="auto">Compare P with a subsequence of T moving
 backwards</li>
 </ul>
-<p dir="auto"><img src="image-3.png" alt="Alt text" data-src="image-3.png"></p>
+<p dir="auto"><img src="assets\IMG139.PNG" alt="Alt text" data-src="assets%5CIMG139.PNG"></p>
 <h3 dir="auto" id="boyer-moore-character-jump-heuristic">Boyer-Moore: Character-Jump Heuristic</h3>
 <ul dir="auto">
 <li dir="auto">
@@ -111,18 +111,18 @@ backwards</li>
 <ul dir="auto">
 <li dir="auto">if P contains c, shift P to align the last occurrence of c in
 P with T[i]
-<img src="image-4.png" alt="Alt text" data-src="image-4.png"></li>
+<img src="assets\IMG140.PNG" alt="Alt text" data-src="assets%5CIMG140.PNG"></li>
 </ul>
 </li>
 <li dir="auto">
 <p dir="auto">Else, shift P to align P[0] with T[i + 1]</p>
 </li>
 </ul>
-<p dir="auto"><img src="image-5.png" alt="Alt text" data-src="image-5.png"></p>
+<p dir="auto"><img src="assets\IMG141.PNG" alt="Alt text" data-src="assets%5CIMG141.PNG"></p>
 <h3 dir="auto" id="example">Example</h3>
 <ul dir="auto">
 <li dir="auto">at the end, mitmatches on a h and realigns
-<img src="image-6.png" alt="Alt text" data-src="image-6.png"></li>
+<img src="assets\IMG142.PNG" alt="Alt text" data-src="assets%5CIMG142.PNG"></li>
 </ul>
 <h3 dir="auto" id="last-occurrence-function">Last-Occurrence Function</h3>
 <ul dir="auto">
@@ -142,7 +142,7 @@ pattern P and the alphabet <span class="katex"><span class="katex-mathml"><math 
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="image-7.png" alt="Alt text" data-src="image-7.png"></p>
+<p dir="auto"><img src="assets\IMG143.PNG" alt="Alt text" data-src="assets%5CIMG143.PNG"></p>
 <h3 dir="auto" id="last-occurrence-function-1">Last Occurrence Function</h3>
 <p dir="auto">Can be represented by an array indexed by the numeric codes of the characters</p>
 <ul dir="auto">
@@ -188,7 +188,7 @@ is significantly faster than
 the brute-force algorithm</li>
 </ul>
 <h4 dir="auto" id="worst-case-example">Worst case example</h4>
-<p dir="auto"><img src="image-8.png" alt="Alt text" data-src="image-8.png"></p>
+<p dir="auto"><img src="assets\IMG144.PNG" alt="Alt text" data-src="assets%5CIMG144.PNG"></p>
 <h3 dir="auto" id="knuth-morris-pratt-kmp-algorithm">Knuth-Morris-Pratt (KMP) Algorithm</h3>
 <ul dir="auto">
 <li dir="auto">Compares the pattern to the text left-to-right
@@ -204,7 +204,7 @@ the brute-force algorithm</li>
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="image-9.png" alt="Alt text" data-src="image-9.png"></p>
+<p dir="auto"><img src="assets\IMG145.PNG" alt="Alt text" data-src="assets%5CIMG145.PNG"></p>
 <h3 dir="auto" id="kmp-failure-function">KMP failure function</h3>
 <ul dir="auto">
 <li dir="auto">KMP algorithm preprocesses the pattern</li>
@@ -275,7 +275,7 @@ else
 return  -1 { no match }
 </div></code></code></pre>
 <h3 dir="auto" id="example-1">Example</h3>
-<p dir="auto"><img src="image-10.png" alt="Alt text" data-src="image-10.png"></p>
+<p dir="auto"><img src="assets\IMG146.PNG" alt="Alt text" data-src="assets%5CIMG146.PNG"></p>
 <h2 dir="auto" id="tries---retrieval-tries">Tries - Retrieval Tries</h2>
 <h3 dir="auto" id="preprocessing-steps">Preprocessing steps</h3>
 <ul dir="auto">
@@ -292,11 +292,11 @@ return  -1 { no match }
 </ul>
 <p dir="auto">Standard trie for the set of strings
 S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
-<p dir="auto"><img src="image-11.png" alt="Alt text" data-src="image-11.png"></p>
+<p dir="auto"><img src="assets\IMG147.PNG" alt="Alt text" data-src="assets%5CIMG147.PNG"></p>
 <ul dir="auto">
 <li dir="auto">sometime represented as a special symbol to denote that a word ends on an internal node</li>
 </ul>
-<p dir="auto"><img src="image-12.png" alt="Alt text" data-src="image-12.png"></p>
+<p dir="auto"><img src="assets\IMG148.PNG" alt="Alt text" data-src="assets%5CIMG148.PNG"></p>
 <h3 dir="auto" id="analysis-of-standard-tries">Analysis of standard tries</h3>
 <ul dir="auto">
 <li dir="auto">
@@ -324,8 +324,8 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
 <p dir="auto">Leaf stores indices where associated word begins (“see” starts at index 0 &amp; 24, leaf for “see” stores those indices)</p>
 </li>
 </ul>
-<p dir="auto"><img src="image-13.png" alt="Alt text" data-src="image-13.png"></p>
-<p dir="auto"><img src="image-14.png" alt="Alt text" data-src="image-14.png"></p>
+<p dir="auto"><img src="assets\IMG149.PNG" alt="Alt text" data-src="assets%5CIMG149.PNG"></p>
+<p dir="auto"><img src="assets\IMG150.PNG" alt="Alt text" data-src="assets%5CIMG150.PNG"></p>
 <h3 dir="auto" id="compressed-tries">Compressed Tries</h3>
 <ul dir="auto">
 <li dir="auto">
@@ -341,7 +341,7 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="image-15.png" alt="Alt text" data-src="image-15.png"></p>
+<p dir="auto"><img src="assets\IMG151.PNG" alt="Alt text" data-src="assets%5CIMG151.PNG"></p>
 <ul dir="auto">
 <li dir="auto">What is the maximum number of nodes in a compressed trie storing s words?
 <ul dir="auto">
@@ -372,6 +372,136 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
 <h3 dir="auto" id="building-the-trie">Building the Trie</h3>
 <ul dir="auto">
 <li dir="auto">Each node (or edge) also holds a weight corresponding to the volume of queries that were issued for that prefix</li>
+</ul>
+<h3 dir="auto" id="querying-the-trie">Querying the Trie</h3>
+<ul dir="auto">
+<li dir="auto">Given a prefix P, we want to return a ranked list of k completions
+<ul dir="auto">
+<li dir="auto">k is usually small, about 5-10 suggestions</li>
+<li dir="auto">P is usually streamed, increasing in length
+<ul dir="auto">
+<li dir="auto">Query starts empty, grows character-by-character</li>
+<li dir="auto">Search is repeatedly triggered as the query is built, and suggestions returned ASAP!</li>
+<li dir="auto">Only return endpoint suggestions – ranked by weight</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="image-1.png" alt="Alt text" data-src="image-1.png"></p>
+<p dir="auto"><img src="image-3.png" alt="Alt text" data-src="image-3.png"></p>
+<h2 dir="auto" id="suffix-arrays">Suffix arrays</h2>
+<h3 dir="auto" id="suffix-tree-suffix-trie">Suffix Tree (Suffix Trie)</h3>
+<ul dir="auto">
+<li dir="auto">Suffix tree of a string T is the compressed trie of all
+the suffixes of T</li>
+</ul>
+<p dir="auto"><img src="image-4.png" alt="Alt text" data-src="image-4.png"></p>
+<ul dir="auto">
+<li dir="auto"><code>n</code> suffixes for a string of length n</li>
+</ul>
+<h3 dir="auto" id="suffix-tree-compact-rep">Suffix Tree: Compact Rep.</h3>
+<p dir="auto"><img src="image-5.png" alt="Alt text" data-src="image-5.png"></p>
+<h3 dir="auto" id="suffix-tree-pattern-matching">Suffix Tree Pattern Matching</h3>
+<ul dir="auto">
+<li dir="auto">Maintain, at each node, the number of
+leaf nodes below</li>
+<li dir="auto">Walk down the tree until we run out of
+pattern to match</li>
+<li dir="auto">Return the count of leaf nodes below us</li>
+<li dir="auto"><strong>find the patterns in text</strong>
+<ul dir="auto">
+<li dir="auto">number of children in a suffix array</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="other-query-types">Other query types</h3>
+<ul dir="auto">
+<li dir="auto">Count the number of occurrences of <code>P</code> in <code>T</code>  (we just saw this)</li>
+<li dir="auto">Output the locations of all occurrences of <code>P</code> in <code>T</code></li>
+<li dir="auto">Check whether <code>P</code> is a suffix of <code>T</code></li>
+<li dir="auto">Find the longest repeat in <code>T</code> (the longest substring that occurs twice in <code>T</code>)</li>
+</ul>
+<p dir="auto">Given two strings <code>A</code> and <code>B</code>, what is their longest common substring?</p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Idea: Create a new string by concatenating <code>A</code> and <code>B</code> together with a special delimiter</p>
+<ul dir="auto">
+<li dir="auto"><code>C = A|B</code>  (where ‘|’ is our special delimiter)</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Build a suffix tree on <code>C</code></p>
+</li>
+<li dir="auto">
+<p dir="auto">Mark subtrees with a bit corresponding to whether the subtree holds a suffix of <code>A</code></p>
+</li>
+<li dir="auto">
+<p dir="auto">Do the same for <code>B</code></p>
+</li>
+<li dir="auto">
+<p dir="auto">The deepest node with both bits set is the longest common substring of both!</p>
+</li>
+<li dir="auto">
+<p dir="auto">Compact representation of the suffix tree for a string <code>T</code> of size <code>t</code> from an alphabet of size <code>d</code></p>
+</li>
+<li dir="auto">
+<p dir="auto">Uses <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> space (linear in the input text)</p>
+</li>
+<li dir="auto">
+<p dir="auto">Supports arbitrary pattern matching queries in T in O(d x p) time, where p is the size of the pattern</p>
+<ul dir="auto">
+<li dir="auto">If we assume d is O(1), this becomes O(p) time</li>
+<li dir="auto">Then, finding all occurrences of P in Twill cost O(p + k) where k is the number of times P occurs in T!</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Can construct a suffix tree in O(t) time</p>
+<ul dir="auto">
+<li dir="auto">Out of scope of this course: Ukkonen’s algorithm.</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>If you have a text in a pattern, to find all positions of the pattern in the text, build a suffix tree and find them all much quicker</strong></p>
+</li>
+</ul>
+<h3 dir="auto" id="suffix-arrays-1">Suffix Arrays</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Suffix Trees:
+Even though space consumption is <code>O(t)</code> where <code>t = |T|</code> (linear in the size of the indexed text), their pointer-based representation can be quite costly (Think about very large input strings…)</p>
+</li>
+<li dir="auto">
+<p dir="auto">Idea: We can use an array instead!</p>
+</li>
+<li dir="auto">
+<p dir="auto">Write down all suffixes of T</p>
+</li>
+<li dir="auto">
+<p dir="auto">The i-th suffix begins at position i</p>
+</li>
+<li dir="auto">
+<p dir="auto">Sort the suffixes lexicographically, and let the i values “come along for the ride”</p>
+</li>
+<li dir="auto">
+<p dir="auto">The resultant indexes are the suffix array!</p>
+</li>
+</ul>
+<p dir="auto"><img src="image-6.png" alt="Alt text" data-src="image-6.png"></p>
+<p dir="auto">Does the string “bana” occur in T ? Binary Search the SA!</p>
+<p dir="auto"><img src="image-7.png" alt="Alt text" data-src="image-7.png"></p>
+<ul dir="auto">
+<li dir="auto">MIGHT NEED LOWER BOUNDING</li>
+</ul>
+<h3 dir="auto" id="suffix-array-analysis">Suffix Array Analysis</h3>
+<ul dir="auto">
+<li dir="auto">Can be constructed in linear time, O(n) Out of scope for this course</li>
+<li dir="auto">Space occupancy is empirically better than the suffix tree (dont need to store pointers)
+<ul dir="auto">
+<li dir="auto">Just store T and a list of |T| integers!</li>
+</ul>
+</li>
+<li dir="auto">May support a limited subset of suffix tree operations, but can be augmented to achieve more functionality</li>
 </ul>
 
 </main>
