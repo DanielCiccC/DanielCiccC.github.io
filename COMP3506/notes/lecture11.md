@@ -162,3 +162,106 @@ But we can do better (where better does not mean a better code, but more beautif
 
 **Canonical codes**
 - chop off the lest significant bit (LSB)
+
+### Canonical codes - tree shape
+Because it means we can minimize the amount of information we provide to the decoder.
+Suppose we pass the symbols to the decoder in lexicographical order.
+If we sort the codewords first by their length and then lexicographically, 
+all we need to provide the decoder is the list of codeword lengths!
+
+Sort them within their bit length buckets 
+
+![Alt text](assets\IMG164.PNG)
+
+How to transmit the codebook?
+- Easy! Just transmit symbols in decreasing order of 
+bitlength, recording the number of symbols in each 
+bitlength group
+- Codebook = (4, 2, 2, 2, 0) (A, B, R, Y, L, M, C, O, U, Z)
+  - know the most simple codeword you can come up with for a length of 5 bitlength group (it is 00000)
+  - 0: “zero codewords of length 1”
+  - 2: “two codewords of length 2”
+
+
+### Decoder
+- Step 1. Recover the code/symbol mapping.
+- Step 2. Apply it to the bit sequence.
+
+### Compression and coding
+-  Compression is the process of:
+1. Building a probability model over the input
+2. Applying that probability model to the data
+
+## Lempel-Ziv Schemes
+
+### Statistical Methods
+**Static Models**
+- Use the same model for all inputs
+- ASCII, Morse code, …
+
+**Dynamic Models**
+- Generate the statistical model based on the input 
+- Huffman codes
+  
+**Adaptive Models**
+- Update the model as you read through the input
+- Lempel-Ziv
+
+### Lempel-Ziv Compression
+Basic idea: Use a dictionary to determine if you have seen something before. If so, don’t output the “thing”, just output its index in the dictionary!
+- dictionary is the context of stuff you've seen before
+
+- Setup: Want to encode some source ``S``
+- LZ77 uses a sliding “context” window to serve as the dictionary (the previous W chars)
+- At position p, search for the longest match ``S[p..]`` with respect to ``P[p-W … p-1]`` and code the match if found
+
+
+- S = “HELLO YELLOW”, W = 5
+- If we were looking at p=7 (the “E” in “YELLOW”)
+
+
+### LZ77 example
+
+- What I 'mismatched' was an A
+![Alt text](assets\IMG165.PNG)
+
+### LZ77 decoding example
+
+- The algorithm we observed is a simplified version of 
+LZ77
+- The true LZ77 employs a lookahead buffer that 
+allows matches to overflow into the current pattern!
+At decoding time you will see this: (3, 5, X)
+How can I decode 5 elements when I only go back by 
+an offset of 3?
+
+![Alt text](assets\IMG166.PNG)
+
+
+### What about Huffman?
+- We can use the output of LZ as input to 
+Huffman!
+  - In particular, we can use LZ to replace the input 
+text with back pointers as we saw previously
+  - We then can use Huffman coding on the output stream provided by LZ to better handle those symbols (often a different Huffman code for each part of the stream)
+  - This is know as DEFLATE (or FLATE) and is used in PKZIP
+
+### LZ* challenges
+- LZ compression offers a number of 
+interesting algorithmic challenges
+  - How to match patterns in the window?
+  - How big should the dictionary/window be?
+  - How can we better handle inefficiencies where the encoded 
+segment is larger than its original representation?
+  - How many bits to use for each part of the triple?
+  - And so on…
+- In practice, (zlib for example), LZ77 uses W=32K
+
+### Variable Byte
+
+130 would usually be:
+``00000000000000000000000010000010``
+But now we can represent it as:
+``10000001 00000010``
+The leftmost 1 says “you need to read 
+another byte” (continuation bit)

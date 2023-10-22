@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="tutorial-12">Tutorial 12</h1>
+<h3 dir="auto" id="always-a-huffman-encoding-question-in-the-exam"><strong>ALWAYS A HUFFMAN ENCODING QUESTION IN THE EXAM</strong></h3>
+<h3 dir="auto" id="test-compression-and-encoding-tries">Test compression and encoding tries</h3>
+<ul dir="auto">
+<li dir="auto">Compress string to smaller string
+<ul dir="auto">
+<li dir="auto">Why? Saves memory usage</li>
+</ul>
+</li>
+<li dir="auto">Each letter maps to a binary code
+<ul dir="auto">
+<li dir="auto">0 for left child</li>
+<li dir="auto">1 for right child</li>
+</ul>
+</li>
+<li dir="auto">Binary code: path from root to external
+leaf</li>
+<li dir="auto">What is the word: 010110010</li>
+</ul>
+<p dir="auto"><img src="image-5.png" alt="Alt text" data-src="image-5.png"></p>
+<h3 dir="auto" id="tree-optimisation-and-huffmans-algorithm">Tree optimisation and Huffman's Algorithm</h3>
+<ul dir="auto">
+<li dir="auto">Purpose: Minimise size of encoding</li>
+<li dir="auto">Idea: Frequent letters have shorter codes</li>
+<li dir="auto">Run time: O(n + d∙log d)
+<ul dir="auto">
+<li dir="auto">n: size of text</li>
+<li dir="auto">d: number of distinct characters
+<ul dir="auto">
+<li dir="auto">Have to merge d subtrees</li>
+</ul>
+</li>
+<li dir="auto">Priority queue is implemented using a heap</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="huffmans-algorithm">Huffman's Algorithm</h3>
+<ol dir="auto">
+<li dir="auto">Calculate frequency of each character</li>
+<li dir="auto">Add each character to a Priority Queue</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Key: Frequency of character/tree</li>
+<li dir="auto">Value: The tree</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">Until Priority Queue’s size is less than 1</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Remove the 2 smallest elements from the priority queue</li>
+<li dir="auto">Create a binary tree with the 2 elements.</li>
+<li dir="auto">Add the binary tree with updated priority key to the priority queue</li>
+</ul>
+<h3 dir="auto" id="huffman-algorithm-example">Huffman algorithm: example</h3>
+<p dir="auto">WORD: Abracadabra</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Character</strong></th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>d</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><strong>Frequency</strong></td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p dir="auto"><img src="image-7.png" alt="Alt text" data-src="image-7.png"></p>
+<ul dir="auto">
+<li dir="auto">normally need 88 bits (11 x 8 bits)</li>
+<li dir="auto">only need 23 bits</li>
+<li dir="auto">New encoding: 0 110 111 0 100 0 101 0 110 111 0
+<ul dir="auto">
+<li dir="auto">Size: 23</li>
+</ul>
+</li>
+</ul>
+
+</main>
+</body>
+</html>

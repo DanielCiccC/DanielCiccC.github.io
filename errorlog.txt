@@ -16,6 +16,7 @@ Processed textbook_wk3.md
 Processed textbook_wk4.md
 Processed tutorial1.md
 Processed tutorial10.md
+Processed tutorial12.md
 Processed tutorial2.md
 Processed tutorial5.md
 Processed tutorial6.md
