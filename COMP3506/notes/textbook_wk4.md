@@ -84,7 +84,7 @@ We could consider using an array-based structure to maintain the names of the pa
 - The elements are strings, and the string naturally have different lengths
 - Python could attempt to reserve enough space to hold the maximum string length, but that would be wasteful
 
-Instead, Python represents a list or ruple instance using an internal storage mechanism as an array of object ***references***.
+Instead, Python represents a list or tuple instance using an internal storage mechanism as an array of object ***references***.
 
 ![Alt text](assets/IMG25.PNG)
 
@@ -197,4 +197,4 @@ Length: 26; Size in bytes: 352
 
 
 
-# Chapter 8
+# Chapter 7.1

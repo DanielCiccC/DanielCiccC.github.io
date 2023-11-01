@@ -24,8 +24,8 @@
 
 </header>
 <main>
-<h1 dir="auto" id="lecture-4-1">Lecture 4</h1>
-<h3 dir="auto" id="stacks-1">Stacks</h3>
+<h1 dir="auto" id="lecture-4">Lecture 4</h1>
+<h3 dir="auto" id="stacks">Stacks</h3>
 <ul dir="auto">
 <li dir="auto">Stores arbitary objects
 <ul dir="auto">
@@ -40,7 +40,7 @@
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="stack-operations-1">Stack operations</h3>
+<h3 dir="auto" id="stack-adt-operations">Stack ADT (operations)</h3>
 <ul dir="auto">
 <li dir="auto"><code>push(T)</code></li>
 <li dir="auto"><code>pop()</code></li>
@@ -49,7 +49,7 @@
 <li dir="auto"><code>boolean isEmpty()</code></li>
 </ul>
 <p dir="auto"><img src="assets/IMG29.PNG" alt="Alt text" data-src="assets/IMG29.PNG"></p>
-<h3 dir="auto" id="array-base-stack-1">Array-base stack</h3>
+<h3 dir="auto" id="array-base-stack">Array-base stack</h3>
 <ul dir="auto">
 <li dir="auto">Simple stack implementation</li>
 <li dir="auto">Add elements from left to right</li>
@@ -87,7 +87,7 @@ Algorithm pop()
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="performance-1">Performance</h3>
+<h3 dir="auto" id="performance">Performance</h3>
 <ul dir="auto">
 <li dir="auto">If we use a dynamic array, do we use a constant time for push</li>
 <li dir="auto">Space is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
@@ -99,12 +99,12 @@ Algorithm pop()
 </li>
 <li dir="auto">Typically the size (the number of elements on the stack) is maintained inside the structure</li>
 </ul>
-<h3 dir="auto" id="other-implementations-1">Other implementations</h3>
+<h3 dir="auto" id="other-implementations">Other implementations</h3>
 <ul dir="auto">
 <li dir="auto">
 <p dir="auto">We could use an extensible list</p>
 <ul dir="auto">
-<li dir="auto">Amortised <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> push - why?</li>
+<li dir="auto">Amortised <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> push</li>
 <li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> pop</li>
 </ul>
 </li>
@@ -119,7 +119,7 @@ Algorithm pop()
 </ul>
 </li>
 </ul>
-<h2 dir="auto" id="queues-1">Queues</h2>
+<h2 dir="auto" id="queues">Queues</h2>
 <ul dir="auto">
 <li dir="auto">Stores arbitary objects</li>
 <li dir="auto">Insertions and deletions are FILO</li>
@@ -130,26 +130,29 @@ Algorithm pop()
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="queue-operations-1">Queue operations</h3>
+<h3 dir="auto" id="queue-operations">Queue operations</h3>
 <ul dir="auto">
 <li dir="auto"><code>enqueue(T)</code></li>
-<li dir="auto"><code> T dequeue()</code></li>
+<li dir="auto"><code>T dequeue()</code></li>
 <li dir="auto"><code>T first()</code></li>
 <li dir="auto"><code>integer size()</code></li>
 <li dir="auto"><code>boolean isEmpty()</code></li>
 </ul>
 <p dir="auto"><img src="assets/IMG30.PNG" alt="Alt text" data-src="assets/IMG30.PNG"></p>
-<h3 dir="auto" id="array-base-queue-1">Array-Base queue</h3>
+<h3 dir="auto" id="array-base-queue">Array-Base queue</h3>
 <ul dir="auto">
 <li dir="auto">Use an array of size <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> in a circular fashion</li>
 <li dir="auto">Two variables keep track of the front and size
 <ul dir="auto">
 <li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> index of the front element</li>
-<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">sz</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">sz</span></span></span></span> number of stored elements</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">sz</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">sz</span></span></span></span> number of stored elements (size)</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mo stretchy="false">(</mo><mi>f</mi><mo>+</mo><mi>s</mi><mi>z</mi><mo stretchy="false">)</mo><mspace></mspace><mspace width="0.6667em"/><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mtext> </mtext><mtext> </mtext><mi>N</mi></mrow><annotation encoding="application/x-tex">r = (f + sz) \mod N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">sz</span><span class="mclose">)</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.6667em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mn>10</mn><mo separator="true">,</mo><mi>f</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mi>s</mi><mi>z</mi><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">N=10, f=1, sz=8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">10</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">sz</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span></span></span></span></li>
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="operations-1">Operations</h3>
+<p dir="auto"><img src="image-1.png" alt="Alt text" data-src="image-1.png"></p>
+<h3 dir="auto" id="operations">Operations</h3>
 <ul dir="auto">
 <li dir="auto">Enqueue throws an exception if an array is full
 <ul dir="auto">
@@ -158,6 +161,7 @@ Algorithm pop()
 </li>
 <li dir="auto">Uses modulo operator <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>o</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">mod</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal">d</span></span></span></span></li>
 </ul>
+<p dir="auto">The following are <code>enqueue</code> and <code>dequeue</code> operations</p>
 <pre><code dir="auto"><code><div>Algorithm enqueue(item)
     if size() = N then
         throw IllegalStateException
@@ -175,7 +179,7 @@ Algorithm deqeue()
         sz &lt;- (sz - 1)
         return item
 </div></code></code></pre>
-<h3 dir="auto" id="programming-call-stacks-1">Programming: Call stacks</h3>
+<h3 dir="auto" id="programming-call-stacks">Programming: Call stacks</h3>
 <p dir="auto">Programming languages use stacks to keep track of the current execution</p>
 <ul dir="auto">
 <li dir="auto">As methods are called, they are pushed to the call stack including information about the memory address of the instruction being  executed (or the method being called) and the local variables required.</li>
@@ -198,7 +202,7 @@ reverse([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<
 <li dir="auto">Also parentheses matching</li>
 <li dir="auto">HTML Tag Matching</li>
 </ul>
-<h3 dir="auto" id="application-of-queues-round-robin-scheduler-1">Application of Queues: Round Robin Scheduler</h3>
+<h3 dir="auto" id="application-of-queues-round-robin-scheduler">Application of Queues: Round Robin Scheduler</h3>
 <ul dir="auto">
 <li dir="auto">Can be implemented using a queue Q repeately performing the following steps:
 <ol dir="auto">
@@ -208,12 +212,12 @@ reverse([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<
 </ol>
 </li>
 </ul>
-<h2 dir="auto" id="iterators-1">Iterators</h2>
+<h2 dir="auto" id="iterators">Iterators</h2>
 <ul dir="auto">
 <li dir="auto">Structure, and ADT</li>
 <li dir="auto">Facilitate scanning through a sequence of elements</li>
 </ul>
-<h3 dir="auto" id="iterable-interface-1">Iterable interface</h3>
+<h3 dir="auto" id="iterable-interface">Iterable interface</h3>
 <ul dir="auto">
 <li dir="auto">Iterable has to following method
 <ul dir="auto">
@@ -239,14 +243,12 @@ x = <span class="hljs-built_in">iter</span>(mylist) <span class="hljs-comment">#
 &lt;list_iterator <span class="hljs-built_in">object</span> at <span class="hljs-number">0x000</span>…&gt;
 m = <span class="hljs-built_in">next</span>(x)
 <span class="hljs-built_in">print</span> (m)
-
 a
-
 m = <span class="hljs-built_in">next</span>(x)
 <span class="hljs-built_in">print</span>(m)
 b
 </div></code></pre>
-<h3 dir="auto" id="implementing-iterators-1">Implementing iterators</h3>
+<h3 dir="auto" id="implementing-iterators">Implementing iterators</h3>
 <ul dir="auto">
 <li dir="auto">Implement two methods in your class</li>
 <li dir="auto"><code>__iter__ </code>returns the iterator object</li>
@@ -269,7 +271,7 @@ called implicitly after each increment (in a
 <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> Counter(<span class="hljs-number">3</span>, <span class="hljs-number">9</span>):
     <span class="hljs-built_in">print</span>(c)
 </div></code></pre>
-<h2 dir="auto" id="tree-basics-1">Tree basics</h2>
+<h2 dir="auto" id="tree-basics">Tree basics</h2>
 <ul dir="auto">
 <li dir="auto">Abstract model of hierarchical structure</li>
 <li dir="auto">Consists of nodes with a parent-child relation
@@ -279,13 +281,13 @@ called implicitly after each increment (in a
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="arthemtic-expression-tree-1">Arthemtic Expression tree</h3>
+<h3 dir="auto" id="arthemtic-expression-tree">Arthemtic Expression tree</h3>
 <ul dir="auto">
 <li dir="auto">Leaf nodes are operands (numbers)</li>
 <li dir="auto">parents are operators</li>
 </ul>
 <p dir="auto"><img src="assets/IMG32.PNG" alt="Alt text" data-src="assets/IMG32.PNG"></p>
-<h3 dir="auto" id="tree-terminology-1">Tree terminology</h3>
+<h3 dir="auto" id="tree-terminology">Tree terminology</h3>
 <table dir="auto">
 <thead dir="auto">
 <tr dir="auto">
@@ -354,7 +356,7 @@ called implicitly after each increment (in a
 </table>
 <p dir="auto"><img src="assets/IMG33.PNG" alt="Alt text" data-src="assets/IMG33.PNG"></p>
 <p dir="auto"><img src="assets/IMG34.PNG" alt="Alt text" data-src="assets/IMG34.PNG"></p>
-<h3 dir="auto" id="tree-properties-1">Tree properties</h3>
+<h3 dir="auto" id="tree-properties">Tree properties</h3>
 <ul dir="auto">
 <li dir="auto">If every internal node has at least 2 child nodes
 <ul dir="auto">
@@ -364,13 +366,13 @@ called implicitly after each increment (in a
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="general-tree-structure-1">General Tree Structure</h3>
+<h3 dir="auto" id="general-tree-structure">General Tree Structure</h3>
 <p dir="auto"><img src="assets/IMG35.PNG" alt="Alt text" data-src="assets/IMG35.PNG"></p>
 <ul dir="auto">
 <li dir="auto">Stores a pointer to it's parent</li>
 <li dir="auto">Has a collection (container of 'stuff', list)</li>
 </ul>
-<h3 dir="auto" id="tree-adt-1">Tree ADT</h3>
+<h3 dir="auto" id="tree-adt">Tree ADT</h3>
 <ul dir="auto">
 <li dir="auto"><code>size()</code></li>
 <li dir="auto"><code>isEmpty()</code></li>
@@ -390,14 +392,14 @@ called implicitly after each increment (in a
 <li dir="auto"><code>isExternal(p)</code></li>
 <li dir="auto"><code>isRoot(p)</code></li>
 </ul>
-<h3 dir="auto" id="tree-cdt-1">Tree CDT</h3>
+<h3 dir="auto" id="tree-cdt">Tree CDT</h3>
 <p dir="auto">C is 'concrete'. Common update methods</p>
 <ul dir="auto">
 <li dir="auto"><code>replace(p,o)</code></li>
 <li dir="auto"><code>addRoot(o)</code></li>
 <li dir="auto"><code>remove(p)</code></li>
 </ul>
-<h3 dir="auto" id="preorder-traversal-1">Preorder Traversal</h3>
+<h3 dir="auto" id="preorder-traversal">Preorder Traversal</h3>
 <ul dir="auto">
 <li dir="auto">A node is visited before its descendants
 <ul dir="auto">
@@ -412,7 +414,7 @@ called implicitly after each increment (in a
     for each child c of p
         preorder(c)
 </div></code></code></pre>
-<h3 dir="auto" id="postorder-traversal-1">Postorder traversal</h3>
+<h3 dir="auto" id="postorder-traversal">Postorder traversal</h3>
 <ul dir="auto">
 <li dir="auto">A node is visited after its descendants</li>
 </ul>
@@ -422,7 +424,7 @@ called implicitly after each increment (in a
         postOrder(c)
     visit(p)
 </div></code></code></pre>
-<h2 dir="auto" id="binary-trees-1">Binary Trees</h2>
+<h2 dir="auto" id="binary-trees">Binary Trees</h2>
 <ul dir="auto">
 <li dir="auto">Each internal node has at most two children
 <ul dir="auto">
@@ -443,15 +445,77 @@ called implicitly after each increment (in a
 </ul>
 </li>
 </ul>
+<h3 dir="auto" id="binary-tree-adt">Binary tree ADT</h3>
+<p dir="auto">Additional methods:</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><code>left(p)</code></td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td><code>right(p)</code></td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td><code>sibling(p)</code></td>
+<td>Do I have a sibling, if so, give me a reference to it</td>
+</tr>
+</tbody>
+</table>
+<h4 dir="auto" id="traversal">Traversal</h4>
+<ul dir="auto">
+<li dir="auto">A node is visited after its left subtree and before its right subtree</li>
+<li dir="auto">There is no generic <em>inOrder</em> traversal methods for a k-ary tree</li>
+</ul>
+<h3 dir="auto" id="print-arithmetic-expressions">Print arithmetic expressions</h3>
+<ul dir="auto">
+<li dir="auto">Print operand or operator when visiting node</li>
+<li dir="auto">Print '(' before traversing left subtree</li>
+<li dir="auto">print ')' after traversing right subtree</li>
+</ul>
+<p dir="auto"><img src="assets/IMG44.PNG" alt="Alt text" data-src="assets/IMG44.PNG"></p>
+<h3 dir="auto" id="euler-tour-traversal">Euler Tour Traversal</h3>
+<ul dir="auto">
+<li dir="auto">Handle preorder, postorder and inorder traversals</li>
+<li dir="auto">Each node (in a binary tree) is visited three times
+<ul dir="auto">
+<li dir="auto">blend different trvaersals to achieve more complex functionality</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="linked-structure-for-binary-trees">Linked Structure for Binary Trees</h3>
+<ul dir="auto">
+<li dir="auto">Node stores
+<ul dir="auto">
+<li dir="auto">element</li>
+<li dir="auto">parent node</li>
+<li dir="auto">left child node</li>
+<li dir="auto">right child node</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets/IMG45.PNG" alt="Alt text" data-src="assets/IMG45.PNG"></p>
+<h3 dir="auto" id="breadth-first-travsersal">Breadth-first travsersal</h3>
+<ul dir="auto">
+<li dir="auto">Visit all the nodes at depth <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span> before visiting nodes at depth <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></li>
+<li dir="auto">Visiting level by level</li>
+</ul>
 <p dir="auto"><img src="assets/IMG38.PNG" alt="Alt text" data-src="assets/IMG38.PNG"></p>
-<h3 dir="auto" id="examples-2">Examples</h3>
+<h3 dir="auto" id="examples">Examples</h3>
 <p dir="auto"><img src="assets/IMG39.PNG" alt="Alt text" data-src="assets/IMG39.PNG"></p>
 <p dir="auto">Proper binary tree</p>
 <ul dir="auto">
 <li dir="auto">Every node, <em>except for the leaves</em> has two children</li>
 <li dir="auto">Also called a full binary tree</li>
 </ul>
-<h3 dir="auto" id="examples-3">Examples</h3>
+<h3 dir="auto" id="examples-1">Examples</h3>
 <p dir="auto"><img src="assets/IMG40.PNG" alt="Alt text" data-src="assets/IMG40.PNG"></p>
 
 </main>

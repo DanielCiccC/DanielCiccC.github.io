@@ -8,7 +8,7 @@
   - Insertions at the top of the stack
   - Removals from the top of the stack
 
-### Stack operations
+### Stack ADT (operations)
 - ``push(T)``
 - ``pop()``
 - ``T top()``
@@ -52,7 +52,7 @@ Algorithm pop()
 
 ### Other implementations
 - We could use an extensible list
-  - Amortised $O(1)$ push - why?
+  - Amortised $O(1)$ push
   - $O(1)$ pop
 
 - Could also use some sort of linked list
@@ -68,7 +68,7 @@ Algorithm pop()
 
 ### Queue operations
 - ``enqueue(T)``
-- `` T dequeue()``
+- ``T dequeue()``
 - ``T first()``
 - ``integer size()``
 - ``boolean isEmpty()``
@@ -79,13 +79,18 @@ Algorithm pop()
 - Use an array of size $N$ in a circular fashion
 - Two variables keep track of the front and size
   - $f$ index of the front element
-  - $sz$ number of stored elements
+  - $sz$ number of stored elements (size)
+  - $r = (f + sz) \mod N$
+  - $N=10, f=1, sz=8$
+
+![Alt text](assets\IMG181.PNG)
 
 ### Operations
 - Enqueue throws an exception if an array is full
   - implementation dependent (of having a full sized list)
 - Uses modulo operator $mod$
 
+The following are `enqueue` and `dequeue` operations
 ```
 Algorithm enqueue(item)
     if size() = N then
@@ -160,9 +165,7 @@ print(x)
 <list_iterator object at 0x000…>
 m = next(x)
 print (m)
-
 a
-
 m = next(x)
 print(m)
 b
