@@ -15,7 +15,7 @@ for time import time
 start_time = time()
 # run the algorithm
 end_time = time()
-elaqpsed = end time - start_time
+elapsed = end time - start_time
 ```
 - We can use this approach to gather experimental data on the efficiency of Python's list class
 - Not the best measure of algorithm efficiency; other background process may yield and unfair test. A fairer metric is the number of CPU cycles that are used by the algorithm
@@ -45,9 +45,8 @@ A primitive operation corresponds to a low-level instruction with an execution t
 Henceforth, to capture the growth of an algorithms's running time, we will associate a function $f(n)$ that characterises the number of primitive operations performed, relative to the input size $n$.
 
 ## Focus on worst-case input
-- characterise the running times in terms of the wrost case, as a function of the input size, $n$, of the algorithm.
+- characterise the running times in terms of the worst case, as a function of the input size, $n$, of the algorithm.
   - easier than avergae case analysis
-
 
 # Recursion
 Begin with the following four example of the use of recursion, providing an python implementation for each:

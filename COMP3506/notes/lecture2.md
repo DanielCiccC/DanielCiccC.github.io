@@ -43,6 +43,11 @@ Make the smallest possible class of the functions (the "tightest" possible bound
   - Else there will be a stack overflow - if more than 1000 calls in python
   - Every recursive chain of calls must eventually reach a base case.
 
+### Types of recursion:
+- **Linear recursion**
+- **Binary Recursion**
+- **Multiple recursion**
+
 ### Linear recursion:
 - Performs a single recursive call
 
@@ -75,6 +80,17 @@ def reverse_list(my_list, i, j):
 - Two calls for each non-base case
 ![Alt text](assets/IMG6.PNG)
 
+```python
+def binary_sum(S, start, stop):
+  if start >= stop:
+    return 0
+  elif start == stop-1:
+    return S[start]
+  else:
+    mid = (start + stop) // 2
+    return binary_sum(S, start, mid) + binary_sum(S, mid, stop)
+```
+
 ## Multiple recursion
 
 - Makes potentially many recursive calls:
@@ -93,6 +109,7 @@ def directory_tree(path):
 
 ### Recursion activity
 - Use recursion to sort an array of n integers
+- Call this ``selectionSort``
 
 **Base Case**
 - $n=1$, nothing to sort
@@ -104,7 +121,7 @@ def directory_tree(path):
 ```
 Algorithm selectionSort(A, n)
     if n > 1 then
-        maxIndex  0
+        maxIndex <- 0
         for i <- 1 to n - 1 do
             if A[i] > A[maxIndex] then
                 maxIndex <- i
@@ -121,6 +138,8 @@ T(n) =
 \end{cases}
 $$
 
+### Running time of selectionSort
+![Alt text](assets\IMG171.PNG)
 - $n$ decreases by one in each call, so there will be $n$ recursive calls in total
 
 $$
@@ -128,6 +147,9 @@ $$
 T(n) &= O(n) + T(n – 1)\\
 &= O(n) + O(n - 1) + T(n – 2) \\
 &= O(n) + O(n - 1) + O(n - 2) + T(n – 3)\\
+T(n) &= 1+2+3+4+...+n-1 + n \\
+T(n) &= n(n-1)/2 \\
+T(n) \; \; &\text{is} \; \; O(n^{2}) \\
 \end{align}
 $$
 
@@ -140,10 +162,18 @@ for i
     return fib(n - 1) + fib(n - 2)
 ```
 ![Alt text](assets/IMG7.PNG)
+- The number of calls doubles at each level in the recursion tree
+- Therefore the total number of calls will be less than or equal to $2^{n}$
+We can say this algorithm is $O(2^{n})$
 
 # Divide and conquer algorithm paradigm
 ## Search Algorithm
 Binary search, list the element in a sorted list in $log_{2} n$ time
+- Compare the middle element, `m`, with `k`
+  - If k < m, search the left half
+  - If k > m, search the right half
+  - If k = m, return true
+
 ```python
 """ Return true us target is found in indicated portion of a Python list
 The search only considers the portion from data[low] to data[high] inclusive
@@ -175,9 +205,9 @@ $$ T(n/2) = T((n/2)/2) + 1 = T(n/4) + 1$$
 $$ T(n/4) = T(n/8) + 1 $$
 At the $k$th step:
 Let $k = \log n$
-$$ T(n/2^{k}) + k = T(n / 2^{\log_{2}n}) + \log_{2}n $$
-$$ T(n/2^{k}) + k = T(n /n) + \log_{2}n $$
-$$ T(n/2^{k}) + k = 1 + \log_{2}n $$
+$$ T(n/2^{k}) + 1 = T(n / 2^{\log_{2}n}) + \log_{2}n $$
+$$ T(n/2^{k}) + 1 = T(n /n) + \log_{2}n $$
+$$ T(n/2^{k}) + 1 = 1 + \log_{2}n $$
 
 # Sorting
 - Sorting is a fundamental operation
@@ -191,18 +221,108 @@ $$ T(n/2^{k}) + k = 1 + \log_{2}n $$
 
 ### Merge-Sort
 - Sorting based on the divide-and-conquer paradigm
+- Guaranteed $O(n \log n)$ running time
 - Sort input sequence $A$ with $n$ elements
   - Divide: partition $A$ into two halves
   - Recur: Recursively sort each half
   - Conquer: merge the two halves
-- UPDATE THIS
+
+**DIVIDE STEP**
+```
+Algorithm mergeSort(A, l, r)
+  Input an array A 
+  Output A sorted between indices l and r
+  
+  if l < r
+    m <- floor((l + r) ÷ 2 ) 
+    mergeSort(S, l, m)
+    mergeSort(S, m + 1, r)
+    merge(S, l, m, r)
+```
+
+**CONQUER STEP**
+- Conquer step Merging two sorted sequences, each with n÷2 elements, takes $O(n)$ time
+![Alt text](assets\IMG172.PNG)
+
 
 ![Alt text](assets/IMG8.PNG)
 #### Analysis of Merge Sort:
-- UPDATE
+We can express the running time of mergesort as:
+$$ 
+T(n) = 
+\begin{cases}
+        O(1) & \text{if } n < 2 \\
+        O(1) + 2\cdot T(n/2)  & \text{if } n \ge 2
+\end{cases}
+$$
+- Depth h of the merge-sort tree is $O(lg n)$
+- Overall amount of work done at nodes of depth `i` is $O(n)$
+- Thus, the total running time of merge-sort is $O(n \log n)$
 
 ### Quicksort
 - Randomised Divide and conquer sorting algorithm
 - Similar to Merge sort
   - Picking a pivot, splitting on the left and the right
-- UPDATE
+
+- **Divide**: pick a random 
+element x (called pivot) 
+and partition S into 
+  - `L` elements less than x
+  - `E` elements equal to x
+  - `G` elements greater than x
+- **Recur**: sort `L` and `G`
+- **Conquer**: join `L`, `E` and `G`
+
+#### Divide step
+- Partition input sequence
+  - remove, in turn, each element y from S, and 
+  - insert y into L, E or G, depending on the result of the comparison with the pivot x
+- Each insertion and removal is at the beginning or end of a sequence
+  - hence takes O(1) time
+- Thus, the partition step of quick-sort takes O(n) time
+
+![Alt text](assets\IMG173.PNG)
+
+
+### Performance Analysis
+- Worst case for quick-sort occurs when the pivot is the 
+minimum or maximum element
+- Running time is proportional to the sum: n + (n−1) + … + 2 + 1
+- Thus, the worst-case running time of quick-sort is $O(n^{2})$
+
+### Expected running time
+- Consider a recursive call of quick-sort on a sequence of size s
+  - Good call: the sizes of L and G are each less than 3s÷4
+  - Bad call: one of L and G has size greater than 3s÷4
+
+![Alt text](assets\IMG174.PNG)
+
+- Good calls have a probability 1/2
+  - ½ of the possible pivots cause good calls
+
+- Probabilistic Fact: Expected number of coin tosses required in 
+order to get k heads is 2k
+  - expected height of the quick-sort tree is O(log n)
+  - Amount of work done at nodes of the same depth is O(n)
+Thus, the expected running time of quick-sort is O(n log n)
+
+### In-place Quick-Sort
+- In partition step, use replace operations to rearrange the elements of the input sequence
+  - elements less than the pivot have index less than h
+  - elements equal to the pivot have index between h and k
+  - elements greater than the pivot have index greater than k
+- Recursive calls consider
+  - elements with index less than h
+  - elements with index greater than k
+
+- Perform partition using two indices to split S into L and E 
+& G (a similar method can split E & G into E and G).
+
+![Alt text](assets\IMG175.PNG)
+
+- Repeat until j and k cross:
+  - Scan j to the right until finding an element > x.
+  - Scan k to the left until finding an element < x.
+  - Swap elements at indices j and k
+
+![Alt text](assets\IMG176.PNG)
