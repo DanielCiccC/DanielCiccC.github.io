@@ -135,7 +135,7 @@ Unlike merge sort however, the height of the quick sort tree is linear in the wo
 sequence consists of $n$ distinct elements and is already sorted.
 
 ### Running time of quick sort
-- The divide step and contanenation of of quick sort can be implemented in linear time
+- The divide step and contanenation of quick sort can be implemented in linear time
 - We can bound the overall running time of the quick sort as $O(h\cdot n)$, where $h$ is the height of the quicksort tree $T$ for that execution.
   - The worst case of quick sort runs in $O(n^{2})$ time.
   - The best case for quick-sort on a sequences occurs when subsequences $L$ and $G$ are roughly the same size. In that case, the tree has height $\log n$ and therefore would run in $O(n \log n)$ time.

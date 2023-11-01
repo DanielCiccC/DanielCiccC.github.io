@@ -1,3 +1,4 @@
+Processed all_algorithms_in_order.md
 Processed lecture1.md
 Processed lecture10.md
 Processed lecture11.md

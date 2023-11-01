@@ -56,17 +56,50 @@ b, c, a
 c, a, b, 
 c, b, a
 
+- Height of decision tree is a lower bound on running time
+- Every unique input permutation must lead to a separate leaf 
+output 
+  - if not, some input …4…5… would have same output ordering 
+as …5…4…, which would be wrong
+- There are $n!=1\cdot 2 \cdot  … \cdot  n$ leaves – height is at least $\log (n!)$
+
 Every comparison based sort takes at best $n \log n$ time
-- Add a ss of the proof here
+
+![Alt text](assets\IMG177.PNG)
+
+### Lower Bound
+- Comparison-based sorting algorithms takes at 
+least log(n!) time
+- ∴ any such algorithm takes at least
+  - $log 𝑛! ≥ log (n/2)^{n/2} = (n/2) \log (n/2)$
+- Any comparison-based sorting algorithm must run in $Ω(n \log n)$ time
+  - merge and heap sorts are **asymptotically optimal**
+    - no other comparison sorts are faster by more than a **constant factor**
 
 ### Bucket sort
-- $S$ be a list of $n$ key, element items with keys in the range of [0, N-1]
+- Let $S$ be a list of $n$ (key, element) items with keys in the range of [0, N-1]
 - Create a bucket for each element
 - Because the buckets are already sorted in the array, iterate through the buckets and link them together
 
 ![Alt text](assets/IMG17.png)
 
-#### Analysis
+```
+Algorithm bucketSort(S):
+  Input: sequence S of n entries with integer keys in the range [0, N − 1] 
+  Output: sequence S sorted in nondecreasing order of the keys
+  
+  B ← array of N empty sequences 
+  for each entry e in S do
+    k ← key of e
+    remove e from S
+    insert e at the end of bucket B[k] 
+  for i ← 0 to N−1 do
+    for each entry e in B[i] do
+      remove e from B[i]
+      insert e at the end of S
+```
+
+#### Analysis (algorithm above)
 - Initialising the bucket array has to take $n$ time
 - Phase 1 takes $O(n)$ time
 - Phase 2 takes $O(n + N)$ time (has to iterate through each chain, in the whole bucket)
@@ -74,45 +107,74 @@ Every comparison based sort takes at best $n \log n$ time
 
 #### Properties and Extensions
 - Stable sort property
-- Relative order of any two items with the  same key is preserved after the execution of the algorithm
+  - Relative order of any two items with the same key is preserved after the execution of the algorithm
+
+
 ### Lexicographic order:
-- d-tuple is a sequence of d keys $(k1, k2, k3, ..., kd)$ where 
-is said to be the i-th dimension of the tuple
+- d-tuple is a sequence of d keys $(k1, k2, k3, ..., kd)$ where key $k_{i}$ is said to be the i-th dimension of the tuple
+![Alt text](assets\IMG178.PNG)
 
 ### Lexicographic-sort (Tuple sort)
-- Comparator that compares two tuples by their ith dimension
-- *LexicographicSort* sorts a sequence of d-tuples in 
-lexicographic order by executing stableSort, d times
+- Comparator that compares two tuples by their dth dimension
+- *LexicographicSort* sorts a sequence of d-tuples in lexicographic order by executing stableSort, d times
   - Once per dimension
 - Runs in $O(d\cdot T(n))$ time
+  - where $T(n)$ is the running time of `stableSort`
+
+```
+Algorithm lexicographicSort(S)
+  Input sequence S of d-tuples
+  Output sequence S sorted in lexicographic order
+  for i <- d downto 1
+    stableSort(S, Ci)
+```
 
 ### Radix sort
 - Specialiation of lexicographic-sort
-  - Uses bucket sort as the stable sorting algorithm in each dimension
-  - Applicable to tuples where the keys in each dimension $i$ are integers in the range $[0, N-1]$.
-  - Take the sequences of $d$-tuples
+  - *Uses bucket sort as the stable sorting algorithm* in each dimension
+- Applicable to tuples where the keys in each dimension $i$ are integers in the range $[0, N-1]$.
+- Runs in $O(d \cdot (n + N))$ time
 
 ### Radix-sort for binary numbers
-- COnsider a sequence of $n$, $b$-bit integers
+- Consider a sequence of $n$, $b$-bit integers
 - Represent each elements as a $b$-tuple of integers in the range $[0, 1]$ and apply radix-sort with $N=2$
-- Runs in $b\cdot (n+2)$ or $O(n\cdot n)$ time
+- Runs in $b\cdot (n+2)$ or $O(b\cdot n)$ time. This is because we know N = 2
 
-#### Memory Sort
-![sorting](assets/IMG18.png)
+### Example
+![Alt text](assets\IMG179.PNG)
+
+#### Memory usage
+- Original sequence and bucket array
+  - $O(n + N)$
+- Sort: 10, 999, 3, 100,000,000, 20
+Bucket Sort:
+- $O(5 + 100 000 000)$ (most will be empty)
+
+Radix Sort: (converting to binary)
+- $O(5 + 2)$ space ovverhead is much more attractive
 
 ## Arrays
 A linear structure is one whose elements can be seen as being in a sequence. That is, one element follows the next.
+- lists
+- stacks
+- queues
+- Vectors
 
+### Static sequence ADT
 ADT for a sequence: given a list of items $X$ in some order:
 - ``build(x)``: make new data stucture for items in $X$
-- ``len(x)``
-- ``get(x)``
-- ``add(x)`` add $x$ to $X$
+- ``len(x)`` : Return n
+- ``get(x)`` : return the element at position i
+- ``set(i,x)`` : set $x_{i}$ to x
 Arrays must be consecutive memory cells
 - size must be verified at creation (is static)
   - constant random time access
   - But what if we want to insert something?
   - What if we need more space?
+
+### Dynamic Sequence ADT
+- Same ADT as before, PLUS:
+- ``add(x)`` add $x_{i}$ to $X$
 
 ### Array implementation efficiency:
 - Accessing an element
@@ -165,13 +227,40 @@ of the list
   - $O(n)$
   - Can do better by adding a reference to the tail
 
-## Extensible lists and Amortisation
+### Note: Augmentation
+- Accessing tail
+- $O(n)$
+```python
+class LinkedList:
+  def __init__(self):
+    self.__head = None
+    self.__tail = None
+    self.__size = 0
+```
+
+## ExtensibleLists
+
+### Insertion
+- add(i, o) – make room for the new element
+- Worst case (i = 0), takes O(n) time
+
+### Removal
+- remove(i) – fill the hole left by the removed element 
+- Worst case (i = 0), takes O(n) time
+
+![Alt text](assets\IMG180.PNG)
+
+### Performance
 - Array-based implementation of a dynamic list
-  - space used by the data structure is $O(n)$
-  - Accessing the element at $i$ takes $O(1)$ time
-  - *Add* and *remove* tun in $O(n)$ time
+  - space used by the data structure is O(n)
+  - accessing the element at i takes O(1) time
+  - add and remove run in O(n) time
+- add – when array is full
+  - instead of throwing an exception
+  - replace the array with a larger one
+
 ## Extensible lists 
-- push(o)/add(o)/append(o) adds element o at the end 
+- push(o)/add(o)/append(o) adds element `o` at the end 
 of the list 
 - How large should the new array be if we run out of 
 capacity?
@@ -180,11 +269,13 @@ capacity?
   - double the size?
 
 #### Comparison of Strategies
-Incremental strategy analysis
-- a sequence of n pushes will take $O(n)$ time per push
+- Amortised time of a push operation is the average time taken by a push operation over 
+the series of operations
 
-Doubling strategy analysis
+#### Incremental strategy analysis
+  - a sequence of n pushes will take $O(n)$ time per push
+
+#### Doubling strategy analysis
 - Array is replaced $k = \log _{2} n$ times
 - Total time of $T(n)$ of a series of $n$ push operations is proportional to $3n-1$
 - Amortised time of push is $T(n) / 2 = O(1)$
-- 
