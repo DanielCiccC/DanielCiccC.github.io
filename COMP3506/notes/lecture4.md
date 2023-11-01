@@ -146,8 +146,8 @@ reverse([1,2,3,4,5,6])
 - Facilitate scanning through a sequence of elements
 
 ### Iterable interface
-- Iterable has to following method
-  - ``iterator``
+- Iterable has the following method
+  - ``iterator()``
 - A python list is iterable
   - produces an iterator for its collection as the return value of the ``iterator()`` method
 
@@ -195,6 +195,7 @@ for c in Counter(3, 9):
     print(c)
 ```
 
+# Trees
 ## Tree basics
 - Abstract model of hierarchical structure
 - Consists of nodes with a parent-child relation
@@ -210,24 +211,25 @@ for c in Counter(3, 9):
 ### Tree terminology
 |***Terminoplogy*** | ***Meaning***
 |---|---
-| Root |has no parents
-| Internal Node |$\ge 1$ child
-| External node |a.k.a. leaf
-| Edge | line
-| Ancestors of a node |anything connected and 'above'
-| Descendants of a node |anything connected and 'below'
-| Siblings |share parent
-| Degree |number of outlinks, i.e. links going outwards
-| level |root is at level 0
-| Depth of a node/tree |Count of edges from node to the root, Depth of $k=3$
-| Height of a node/tree | Number of edges of the *longest* path to a leaf 
-| Subtree | A tree that you root at some arbitrary node
+| Root | (root node) has no parents
+| Internal Node | has at least one child, cannot be an external node
+| External node | a.k.a. leaf
+| Edge | line between nodes
+| Path | set of edges that have to be connected
+| Ancestors of a node | anything connected the node and is 'above' or parent to it
+| Descendants of a node | anything connected and 'below'
+| Siblings | share the same parent
+| Degree | number of outlinks, i.e. links going downwards
+| level | defined as the root being at level 0, and every child node being an additional level down
+| Depth of a node/tree | Count the number of edges from node to the root, Depth of $k=3$
+| Height of a node/tree | Number of edges on the *longest* path to a leaf 
+| Subtree | A tree that you root at some arbitrary node (e.g. c below)
 | $k$-ary tree | At most $k$ children for a given node
 | 2-ary Tree | at most 3 children for a given node
 
-![Alt text](assets/IMG33.PNG)
-
-![Alt text](assets/IMG34.PNG)
+|**binary Tree** | **k-ary tree**
+|--- | --- |
+![Alt text](assets/IMG33.PNG) |![Alt text](assets/IMG34.PNG)
 
 ### Tree properties
 - If every internal node has at least 2 child nodes
@@ -278,6 +280,17 @@ Algorithm preOrder(p)
     for each child c of p
         preorder(c)
 ```
+You would get the following:
+- Make Money Fast!
+- 1. Motivations
+- 1.1 Greed
+- 1.2 Avidity
+- 2. Methods
+- 2.1 Stock Fraud
+- 2.1 Ponzi Scheme
+- 2.3 Bank Robbery
+- References
+
 
 ### Postorder traversal
 - A node is visited after its descendants
@@ -291,16 +304,21 @@ Algorithm postOrder(p)
     visit(p)
 ```
 
+
+
 ## Binary Trees
 - Each internal node has at most two children
   - Exactly two for a properr binary tree
 - Internal node has a left child and right child
-- Full level
+- **Full level**
   - level $l$ is full if it contains $2^{l}$ nodes
-- Complete binary tree
+- **Complete binary tree**
   - for height $h$
   - Level $0, ...,h-1$ are full
   - In level $h$, all leaf nodes are as far left as possible
+- **Proper** Binary tree
+  - every node, except for leaves, has two children
+  - also called a full binary tree
 
 ### Binary tree ADT 
 Additional methods:
