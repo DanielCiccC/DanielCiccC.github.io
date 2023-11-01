@@ -151,7 +151,7 @@ Algorithm pop()
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="image-1.png" alt="Alt text" data-src="image-1.png"></p>
+<p dir="auto"><img src="assets\IMG181.PNG" alt="Alt text" data-src="assets%5CIMG181.PNG"></p>
 <h3 dir="auto" id="operations">Operations</h3>
 <ul dir="auto">
 <li dir="auto">Enqueue throws an exception if an array is full
@@ -219,9 +219,9 @@ reverse([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<
 </ul>
 <h3 dir="auto" id="iterable-interface">Iterable interface</h3>
 <ul dir="auto">
-<li dir="auto">Iterable has to following method
+<li dir="auto">Iterable has the following method
 <ul dir="auto">
-<li dir="auto"><code>iterator</code></li>
+<li dir="auto"><code>iterator()</code></li>
 </ul>
 </li>
 <li dir="auto">A python list is iterable
@@ -271,6 +271,7 @@ called implicitly after each increment (in a
 <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> Counter(<span class="hljs-number">3</span>, <span class="hljs-number">9</span>):
     <span class="hljs-built_in">print</span>(c)
 </div></code></pre>
+<h1 dir="auto" id="trees">Trees</h1>
 <h2 dir="auto" id="tree-basics">Tree basics</h2>
 <ul dir="auto">
 <li dir="auto">Abstract model of hierarchical structure</li>
@@ -298,11 +299,11 @@ called implicitly after each increment (in a
 <tbody dir="auto">
 <tr dir="auto">
 <td>Root</td>
-<td>has no parents</td>
+<td>(root node) has no parents</td>
 </tr>
 <tr dir="auto">
 <td>Internal Node</td>
-<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\ge 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> child</td>
+<td>has at least one child, cannot be an external node</td>
 </tr>
 <tr dir="auto">
 <td>External node</td>
@@ -310,11 +311,15 @@ called implicitly after each increment (in a
 </tr>
 <tr dir="auto">
 <td>Edge</td>
-<td>line</td>
+<td>line between nodes</td>
+</tr>
+<tr dir="auto">
+<td>Path</td>
+<td>set of edges that have to be connected</td>
 </tr>
 <tr dir="auto">
 <td>Ancestors of a node</td>
-<td>anything connected and 'above'</td>
+<td>anything connected the node and is 'above' or parent to it</td>
 </tr>
 <tr dir="auto">
 <td>Descendants of a node</td>
@@ -322,27 +327,27 @@ called implicitly after each increment (in a
 </tr>
 <tr dir="auto">
 <td>Siblings</td>
-<td>share parent</td>
+<td>share the same parent</td>
 </tr>
 <tr dir="auto">
 <td>Degree</td>
-<td>number of outlinks, i.e. links going outwards</td>
+<td>number of outlinks, i.e. links going downwards</td>
 </tr>
 <tr dir="auto">
 <td>level</td>
-<td>root is at level 0</td>
+<td>defined as the root being at level 0, and every child node being an additional level down</td>
 </tr>
 <tr dir="auto">
 <td>Depth of a node/tree</td>
-<td>Count of edges from node to the root, Depth of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">k=3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span></span></span></span></td>
+<td>Count the number of edges from node to the root, Depth of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">k=3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span></span></span></span></td>
 </tr>
 <tr dir="auto">
 <td>Height of a node/tree</td>
-<td>Number of edges of the <em>longest</em> path to a leaf</td>
+<td>Number of edges on the <em>longest</em> path to a leaf</td>
 </tr>
 <tr dir="auto">
 <td>Subtree</td>
-<td>A tree that you root at some arbitrary node</td>
+<td>A tree that you root at some arbitrary node (e.g. c below)</td>
 </tr>
 <tr dir="auto">
 <td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>-ary tree</td>
@@ -354,8 +359,20 @@ called implicitly after each increment (in a
 </tr>
 </tbody>
 </table>
-<p dir="auto"><img src="assets/IMG33.PNG" alt="Alt text" data-src="assets/IMG33.PNG"></p>
-<p dir="auto"><img src="assets/IMG34.PNG" alt="Alt text" data-src="assets/IMG34.PNG"></p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>binary Tree</strong></th>
+<th><strong>k-ary tree</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="assets/IMG33.PNG" alt="Alt text" data-src="assets/IMG33.PNG"></td>
+<td><img src="assets/IMG34.PNG" alt="Alt text" data-src="assets/IMG34.PNG"></td>
+</tr>
+</tbody>
+</table>
 <h3 dir="auto" id="tree-properties">Tree properties</h3>
 <ul dir="auto">
 <li dir="auto">If every internal node has at least 2 child nodes
@@ -414,6 +431,26 @@ called implicitly after each increment (in a
     for each child c of p
         preorder(c)
 </div></code></code></pre>
+<p dir="auto">You would get the following:</p>
+<ul dir="auto">
+<li dir="auto">Make Money Fast!</li>
+<li dir="auto">
+<ol dir="auto">
+<li dir="auto">Motivations</li>
+</ol>
+</li>
+<li dir="auto">1.1 Greed</li>
+<li dir="auto">1.2 Avidity</li>
+<li dir="auto">
+<ol start="2" dir="auto">
+<li dir="auto">Methods</li>
+</ol>
+</li>
+<li dir="auto">2.1 Stock Fraud</li>
+<li dir="auto">2.1 Ponzi Scheme</li>
+<li dir="auto">2.3 Bank Robbery</li>
+<li dir="auto">References</li>
+</ul>
 <h3 dir="auto" id="postorder-traversal">Postorder traversal</h3>
 <ul dir="auto">
 <li dir="auto">A node is visited after its descendants</li>
@@ -432,18 +469,44 @@ called implicitly after each increment (in a
 </ul>
 </li>
 <li dir="auto">Internal node has a left child and right child</li>
-<li dir="auto">Full level
+<li dir="auto"><strong>Full level</strong>
 <ul dir="auto">
 <li dir="auto">level <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> is full if it contains <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>l</mi></msup></mrow><annotation encoding="application/x-tex">2^{l}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span></span></span></span></span></span></span></span></span> nodes</li>
 </ul>
 </li>
-<li dir="auto">Complete binary tree
+<li dir="auto"><strong>Complete binary tree</strong>
 <ul dir="auto">
 <li dir="auto">for height <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span></li>
 <li dir="auto">Level <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><mi>h</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0, ...,h-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> are full</li>
 <li dir="auto">In level <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span>, all leaf nodes are as far left as possible</li>
 </ul>
 </li>
+<li dir="auto"><strong>Proper</strong> Binary tree
+<ul dir="auto">
+<li dir="auto">every node, except for leaves, has two children</li>
+<li dir="auto">also called a full binary tree</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="properties-of-complete-binary-trees">Properties of complete binary trees</h3>
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">h = O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> with at least two nodes</li>
+</ul>
+<h3 dir="auto" id="properties-of-proper-binary-trees">Properties of proper binary trees</h3>
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>=</mo><mi>i</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">e = i + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7429em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>2</mn><mi>e</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n = 2e − 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>≤</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">h \le i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.136em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span></li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>≤</mo><mn>2</mn><mi>h</mi></mrow><annotation encoding="application/x-tex">e \le 2 h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">2</span><span class="mord mathnormal">h</span></span></span></span></li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>≥</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mi>e</mi></mrow><annotation encoding="application/x-tex">h \ge \log_{2} e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.136em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9386em;vertical-align:-0.2441em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.207em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">e</span></span></span></span></li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>≥</mo><msub><mrow><mi>log</mi><mo>⁡</mo></mrow><mn>2</mn></msub><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">h \ge \log_{2} (n + 1) − 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.136em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.207em;"><span style="top:-2.4559em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2441em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></li>
+</ul>
+<p dir="auto">Notation:</p>
+<ul dir="auto">
+<li dir="auto"><code>n</code> - number of nodes</li>
+<li dir="auto"><code>e</code> - number of external nodes</li>
+<li dir="auto"><code>i</code> - number of internal nodes</li>
+<li dir="auto"><code>h</code> - height</li>
 </ul>
 <h3 dir="auto" id="binary-tree-adt">Binary tree ADT</h3>
 <p dir="auto">Additional methods:</p>
@@ -469,7 +532,7 @@ called implicitly after each increment (in a
 </tr>
 </tbody>
 </table>
-<h4 dir="auto" id="traversal">Traversal</h4>
+<h4 dir="auto" id="traversal---inorder-traversal">Traversal - Inorder traversal</h4>
 <ul dir="auto">
 <li dir="auto">A node is visited after its left subtree and before its right subtree</li>
 <li dir="auto">There is no generic <em>inOrder</em> traversal methods for a k-ary tree</li>
@@ -481,6 +544,7 @@ called implicitly after each increment (in a
 <li dir="auto">print ')' after traversing right subtree</li>
 </ul>
 <p dir="auto"><img src="assets/IMG44.PNG" alt="Alt text" data-src="assets/IMG44.PNG"></p>
+<p dir="auto">((2 * (a − 1)) + (3 * b))</p>
 <h3 dir="auto" id="euler-tour-traversal">Euler Tour Traversal</h3>
 <ul dir="auto">
 <li dir="auto">Handle preorder, postorder and inorder traversals</li>
@@ -490,6 +554,7 @@ called implicitly after each increment (in a
 </ul>
 </li>
 </ul>
+<p dir="auto"><img src="image-1.png" alt="Alt text" data-src="image-1.png"></p>
 <h3 dir="auto" id="linked-structure-for-binary-trees">Linked Structure for Binary Trees</h3>
 <ul dir="auto">
 <li dir="auto">Node stores
@@ -502,21 +567,34 @@ called implicitly after each increment (in a
 </li>
 </ul>
 <p dir="auto"><img src="assets/IMG45.PNG" alt="Alt text" data-src="assets/IMG45.PNG"></p>
+<h3 dir="auto" id="array-based-representation-of-binary-trees">Array-Based Representation of Binary Trees</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Nodes are stored in an array A</p>
+</li>
+<li dir="auto">
+<p dir="auto">Node v is stored at A[rank(v)]</p>
+<ul dir="auto">
+<li dir="auto">rank(root) = 0</li>
+<li dir="auto">if node is the left child of parent(node), rank(node) = 2 × rank(parent(node)) + 1
+<ul dir="auto">
+<li dir="auto">2n + 1</li>
+</ul>
+</li>
+<li dir="auto">if node is the right child of parent(node), rank(node) = 2  ×rank(parent(node)) + 2
+<ul dir="auto">
+<li dir="auto">2n + 2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 dir="auto" id="breadth-first-travsersal">Breadth-first travsersal</h3>
 <ul dir="auto">
 <li dir="auto">Visit all the nodes at depth <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span> before visiting nodes at depth <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></li>
 <li dir="auto">Visiting level by level</li>
 </ul>
 <p dir="auto"><img src="assets/IMG38.PNG" alt="Alt text" data-src="assets/IMG38.PNG"></p>
-<h3 dir="auto" id="examples">Examples</h3>
-<p dir="auto"><img src="assets/IMG39.PNG" alt="Alt text" data-src="assets/IMG39.PNG"></p>
-<p dir="auto">Proper binary tree</p>
-<ul dir="auto">
-<li dir="auto">Every node, <em>except for the leaves</em> has two children</li>
-<li dir="auto">Also called a full binary tree</li>
-</ul>
-<h3 dir="auto" id="examples-1">Examples</h3>
-<p dir="auto"><img src="assets/IMG40.PNG" alt="Alt text" data-src="assets/IMG40.PNG"></p>
 
 </main>
 </body>

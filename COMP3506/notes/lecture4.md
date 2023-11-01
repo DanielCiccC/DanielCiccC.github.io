@@ -304,8 +304,6 @@ Algorithm postOrder(p)
     visit(p)
 ```
 
-
-
 ## Binary Trees
 - Each internal node has at most two children
   - Exactly two for a properr binary tree
@@ -320,6 +318,25 @@ Algorithm postOrder(p)
   - every node, except for leaves, has two children
   - also called a full binary tree
 
+### Properties of complete binary trees
+- $h = O(\log n)$ with at least two nodes
+
+### Properties of proper binary trees
+- $e = i + 1$
+- $n = 2e − 1$
+- $h \le i$
+- $e \le 2 h$
+- $h \ge \log_{2} e$
+- $h \ge \log_{2} (n + 1) − 1$
+  
+Notation:
+
+  - `n` - number of nodes
+  - `e` - number of external nodes
+  - `i` - number of internal nodes
+  - `h` - height
+
+
 ### Binary tree ADT 
 Additional methods:
 |name| description
@@ -328,7 +345,7 @@ Additional methods:
 ``right(p)``|
 ``sibling(p)`` | Do I have a sibling, if so, give me a reference to it
 
-#### Traversal
+#### Traversal - Inorder traversal
 - A node is visited after its left subtree and before its right subtree
 - There is no generic *inOrder* traversal methods for a k-ary tree
 
@@ -339,10 +356,14 @@ Additional methods:
 
 ![Alt text](assets/IMG44.PNG)
 
+((2 * (a − 1)) + (3 * b))
+
 ### Euler Tour Traversal
 - Handle preorder, postorder and inorder traversals
 - Each node (in a binary tree) is visited three times
   - blend different trvaersals to achieve more complex functionality
+
+![Alt text](assets\IMG182.PNG)
 
 ### Linked Structure for Binary Trees
 - Node stores
@@ -351,23 +372,20 @@ Additional methods:
   - left child node
   - right child node
 
-
 ![Alt text](assets/IMG45.PNG)
+
+### Array-Based Representation of Binary Trees
+-  Nodes are stored in an array A
+
+- Node v is stored at A[rank(v)]
+  - rank(root) = 0
+  - if node is the left child of parent(node), rank(node) = 2 × rank(parent(node)) + 1
+    - 2n + 1
+  - if node is the right child of parent(node), rank(node) = 2  ×rank(parent(node)) + 2
+    - 2n + 2
 
 ### Breadth-first travsersal
 - Visit all the nodes at depth $d$ before visiting nodes at depth $d+1$
 - Visiting level by level
 
 ![Alt text](assets/IMG38.PNG)
-
-### Examples
-
-![Alt text](assets/IMG39.PNG)
-
-Proper binary tree
-- Every node, *except for the leaves* has two children
-- Also called a full binary tree
-
-### Examples
-
-![Alt text](assets/IMG40.PNG)
