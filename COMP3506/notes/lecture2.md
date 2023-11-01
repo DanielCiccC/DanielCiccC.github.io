@@ -326,5 +326,3 @@ Thus, the expected running time of quick-sort is O(n log n)
   - Swap elements at indices j and k
 
 ![Alt text](assets\IMG176.PNG) 
-
-s
