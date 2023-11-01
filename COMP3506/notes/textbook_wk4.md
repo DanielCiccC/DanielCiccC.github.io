@@ -176,3 +176,25 @@ Length: 26; Size in bytes: 352
 -  We see that an empty list instance already requires a certain number of bytes of memory
 -  As soon as the ﬁrst element is inserted into the list, we detect a change in the underlying size of the structure
 -  Because a list is a referential structure, the result of ``getsizeof`` for a list instance only includes the size for representing its primary structure; it does not account for memory used by the objects that are elements of the list.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Chapter 8

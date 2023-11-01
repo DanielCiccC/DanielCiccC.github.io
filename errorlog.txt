@@ -1,5 +1,6 @@
 Processed lecture10.md
 Processed lecture11.md
+Processed lecture12.md
 Processed lecture2.md
 Processed lecture3.md
 Processed lecture4.md
@@ -37,5 +38,10 @@ Skipping C:/git/DanielCiccC.github.io/errorlog.txt: 'notes' or 'docs' directory 
 Skipping C:/git/DanielCiccC.github.io/image_renamer.py: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/KWM_law: 'notes' or 'docs' directory not found.
+cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.jpg': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.jpeg': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.PNG': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.png': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.gif': No such file or directory
 Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
