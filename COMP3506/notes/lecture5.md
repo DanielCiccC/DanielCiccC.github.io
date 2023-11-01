@@ -65,20 +65,26 @@ class point:
 ```
 
 ### Sequence-based priority queue
-- Implementation with an unsorted list
+- Implementation with an ***unsorted*** list
   - Insertion takes $O(1)$ time
   - ``removemin()`` and ``min()`` take $O(n)$ time
 
-- Implementation with a sorted list
+- Implementation with a ***sorted*** list
     - ``Insert(p)`` take $O(n)$ time
     - ``RemoveMin()`` and ``min()`` take $O(1)$ time
 
 ## Heaps
-- Binary tree storing keys
+- Binary tree storing keys at its nodes and satisfying the following properties:
 - **Heap order**: the key of the node is $\ge$ the key of its parent
+  - $key(v) \ge key(parent(v))$
 - Has to be a **complete binary tree**
   - at height $h$, the internal nodes are to the left of the external nodes
 - **Last node** of a heap is the rightmost nodes of maximum depth
+
+### Heap properties
+- A heap can implement a priority queue
+- Store a (key, element) entry at each node
+- Keep track of the position of the last node
 
 ### Insertion into a heap
 - **Insert** in the PQ ADT corresponds to inserting key $k$ into the heap
@@ -87,23 +93,44 @@ class point:
 
 ### Upheap
 - After inserting a new key $k$, the heap-order property (child nodes must have keys >= their parents) may be violated
+- Upheap swaps k along an upward path from the insertion node, until k reaches the root or a node whose parent has a key less than or equal to k
 - Since a heap has height $O(\log n)$ upheap runs in $O(\log n)$ time
   - worst case you swap all the way up the tree, which is length $\log n$
 
+|addition of key 3 | addition of key 4 | final result 
+|--- | --- | --- |
+![Alt text](assets\IMG183.PNG) | ![Alt text](assets\IMG184.PNG) | ![Alt text](assets\IMG185.PNG)
+
+### removal from a heap
+removeMin in the PQ ADT corresponds to removing the root key from the heap
+- Removal algorithm
+1. Replace the root key with the key of the last node w
+2. Remove w
+3. Restore the heap-order property (downheap)
+
 ### Downheap
+- Downheap replaces root key with key `k` of the last node and swaps key `k` along a downward path from the root
+  - swaps with the smaller of the two keys
 - Because height of tree is $\log n$, downheap runs in $O(\log n)$
 - ``removeMin()`` corresponds to removing the root (smallest key) from the heap
 - Algorithm:
   - Swap the last position with the root, and retrieve the node
 
-### Inserting another node
+| ``removeMin`` | **intemediate step** | **result** 
+| --- | --- | --- |
+| ![Alt text](assets\IMG186.PNG) | ![Alt text](assets\IMG187.PNG) | ![Alt text](assets\IMG188.PNG)
+
+
+### Updating/Inserting another node
+- Insertion node can be found by traversing a path of O(log n) nodes, BUT
 - Depends on how the binary tree is implemented. With a linkedlist, $O( 2 \log n)$ (traversing up the tree and back down again)
-- Using an array:
-  - For a node at index $i$:
-    - left child is at the index $2i+1$
-    - right child is at the index $2i + 2$
-    - ``removeMin()`` corresponds to removing/swapping at index $n-1$, plus more swapping
-    - Upheap and downheap operating correspond to swapping
+
+### Array-Based Heap Implementation
+- For a node at index $i$:
+  - left child is at the index $2i+1$
+  - right child is at the index $2i + 2$
+  - ``removeMin()`` corresponds to removing/swapping at index $n-1$, plus more swapping
+  - Upheap and downheap operating correspond to swapping
 
 ### Heap-sort
 - Take $n$ items, insert and ``removeMin()`` in $\log n$ time
@@ -112,12 +139,28 @@ class point:
 ### Heap construction
 - Construct a heap containing $n$ items
 - Using *Insert*
-- **Bottom-up heap construction** : UPDATE THIS
+  - n calls give $O(n \log n)$ time
+- Special case construction by merging
+  - Bottom-up heap construction
+  - Better than O(n log n) or I wouldn’t be telling you about it!
+
+### Merging two heaps
+- Given two heaps *and a key k*
+- Create a new heap with the root node storing k and with the two heaps as subtrees
+- Perform downheap to restore the heap-order property
+
+| ``initial`` | **add key: intemediate step** | **result** 
+| --- | --- | --- |
+| ![Alt text](assets\IMG189.PNG) | ![Alt text](assets\IMG190.PNG) | ![Alt text](assets\IMG191.PNG)
+
+- Can construct a heap storing n given keys using bottom-up construction with log n phases
+- In phase i, pairs of heaps with $2^{i} - 1$ keys are merged into heaps with $2^{i + 1} - 1$ keys
+- $2^{i} - 1 + 2^{i} - 1 = 2^{i + 1} - 1$
 
 
 ### Analysis
 - Worst-case time of a downheap with a proxy path
-  - Worst case amount of work for each individual downheap has to participate
+  - Worst case scenario is that a downheap opeation has to be performed for each merge
 - The total number of nodes of the proxy paths is $O(n)$
 - Bottom-up heap construction runs in $O(n)$ time
 
@@ -135,7 +178,7 @@ class point:
 ### ADT Adaptable Priority Queue
 |**Method**|**Description**
 |---|---
-|``remove(e)`` | remove an arbitrary element
+|``remove(e)`` | remove an arbitrary element (not necessarily the minimum or maximum)
 |``replaceKey(e, k)`` | Essentially a priority update
 | ``replaceValue(e, v)`` | changing the value of the item
 
@@ -144,6 +187,9 @@ class point:
 
 ### Locating entries
 - ``remove(), replaceKey(e, v)`` and ``replaceValue(e, v)`` need fast ways of locating an entry $e$ in a priority queue
+- For instance, how would you locate the entry with key 11?
+  
+![Alt text](assets\IMG192.PNG)
 - Can search the entire queue
   - Are faster methods
 - Position in the data structure 
@@ -163,6 +209,35 @@ node as they move around
   - position (or rank) of the item in the list
 - In turn, the position (or array cell) stores the entry
 -  Back pointers (or ranks) are updated during swaps
+
+![Alt text](assets\IMG193.PNG)
+
+### List APQ Run time
+- ``remove(e)`` and `replaceValue(e, x)` take constant time
+  - Assuming you already have a reference to `e`
+- ``replaceKey(e, k)`` runs in `O(n)` time
+  - We get to the value in constant time, but we may need to 
+traverse the container to find the correct new location
+- Achieve this using a hashmap implementation for example
+
+### Heap APQ Run Time
+**Operation** | performance 
+| --- | ---
+| ``replaceValue(e, x)`` | $O(1)$
+| ``remove(e) `` | $O(\log n)$
+| ``replaceKey(e, k)`` | $O(\log n)$
+
+## Performance
+❑ Improved times thanks to location-aware entries are highlighted in red
+**Method** | **Unsorted List** | **Sorted List** | **Heap**
+| --- | --- | --- | ---
+| ``size, isEmpty``| $O(1)$| $O(1)$ | $O(1)$ |
+| ``insert`` |$O(1)$ | $O(n)$| $O(\log n)$
+| ``min`` | $O(n)$ | $O(1)$|$O(1)$
+| ``removeMin``| $O(n)$ |$O(1)$ | $O(\log n)$
+| ``remove`` |$O(1)$ | $O(1)$| $O(\log n)$
+| ``replaceKey`` | $O(1)$|$O(n)$ | $O(\log n)$
+| ``replaceValue`` | $O(1)$| $O(1)$|$O(1)$
 
 ### Min-heap vs maxheap
 **Min-heap**
@@ -204,7 +279,7 @@ Generally (and a very interesting point)
   - get, put and remove return null 
 (None) if a requested entry is not  present
 - None is a sentinel value
-  -  Thus, we cannot store None as a key!
+  -  **Thus, we cannot store None as a key!**
 - Alternative: throw an exception for a key that is not in the map
 
 ![Alt text](assets/IMG50.PNG)
@@ -226,7 +301,7 @@ Generally (and a very interesting point)
   - Priority queues allow access to highest priority element
 
 ### Simple List-Based Map
-Implemented using an unsorted list 
+Implemented using an *unsorted* list 
 - Store the items of the map in a list $S$ (based on a 
 doubly-linked list), in arbitrary order
 

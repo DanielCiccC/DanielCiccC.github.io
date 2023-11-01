@@ -47,3 +47,4 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.png': No such f
 cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.gif': No such file or directory
 Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
+Skipping C:/git/DanielCiccC.github.io/reimage.sh: 'notes' or 'docs' directory not found.
