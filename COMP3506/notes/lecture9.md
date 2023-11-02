@@ -14,7 +14,7 @@ a path of minimum total weight between u and v
 - Example:
   - shortest path between Brisbane and Geraldton
 
-If every weight had the same cost
+**If every weight had the same cost**
 - breadth first search would be the optimal algorithm
 
 ![Alt text](assets\IMG114.PNG)
@@ -31,10 +31,8 @@ You could have a single course of shortest path
 - E.g. the shortest path from brisbane, to any other airport
 
 ### Dijkstra's Algorithm
-- Distance of a vertex v from a vertex s is the 
-length of the shortest path between s and v
-- Dijkstra’s algorithm computes the distances of 
-all the vertices from a given start vertex s
+- Distance of a vertex v from a vertex s is the length of the shortest path between s and v
+- Dijkstra’s algorithm computes the distances of all the vertices from a given start vertex s
 - Assumptions
   - graph is connected
   - edges are undirected
@@ -86,27 +84,28 @@ for all  v <- G.vertices()
 - Graph operations
   - find all the incident edges once for each vertex
 - Label operations
-  - set/get the distance and locator labels of vertex z O(deg(z)) times
+  - set/get the distance and locator labels of vertex `z` $O(deg(z))$ times
   - setting/getting a label takes O(1) time
 - Priority queue operations
   - each vertex is **inserted once** into and **removed once** from the priority 
 queue, where each insertion or removal takes $O(log n)$ time
-  - key of a vertex in the priority queue is modified at most deg(w) 
+  - key of a vertex in the priority queue is modified at most ``deg(w)`` 
 times, where each key change takes O(log n) time 
 - Dijkstra’s algorithm runs in $O((n + m) log n)$ time
   - provided the graph is implemented as an adjacency list/map
   - recall that $\sum_{v} deg(v) = 2m$
   - can also be expressed as O(m log n) since the graph is connected
 
+recall:
+- $n = |v|$ number of vertices
+- $m = |e|$ number of edges
+
+
 ### Why it Doesn’t Work for Negative-Weight Edges
-Dijkstra’s algorithm is based on the greedy method
+Dijkstra’s algorithm is based on the *greedy* method
 - adds vertices by increasing distance
-- If a node with a negative 
-incident edge were to be added 
-late to the cloud, it could mess 
-up distances for vertices already 
-in the cloud. 
-  - negative edges are going to 'mees up' distances already inside your cloud
+- If a node with a negative incident edge were to be added late to the cloud, it could mess up distances for vertices already in the cloud. 
+  - negative edges are going to 'mess up' distances already inside your cloud
   - negative cycle - can keep on going around a cycle and costs keep getting lower and lower
 ![Alt text](assets\IMG116.PNG)
 
@@ -118,15 +117,11 @@ in the cloud.
 - create a table to recount the edges of the shortest path
 
 ### DAG-Based algorithm
-- Works even with 
-negative-weight 
-edges
+- Works even with negative-weight edges
 - Uses topological order
   - Use topological order to iterate through all vertices, starting with the smallest topological ordering
-- Doesn’t use other 
-data structures
-- Is much faster than 
-Dijkstra’s algorithm
+- Doesn’t use other data structures
+- Is much faster than Dijkstra’s algorithm
 - Running time
   - O(n+m)
 
@@ -146,6 +141,11 @@ Algorithm DagDistances(G, s):
             if r < getDistance(z)
                 setDistance(z, r)
 ```
+
+init | Label nodes with initial distances | Topological sort | visit in topological order | result
+|--- |--- |--- |--- |---
+![Alt text](assets\IMG196.PNG) | ![Alt text](assets\IMG197.PNG) | ![Alt text](assets\IMG198.PNG) | ![Alt text](assets\IMG199.PNG) | ![Alt text](assets\IMG200.PNG)
+
 
 ## Downside of DAG Approach?
 - Not all graphs are DAG's
