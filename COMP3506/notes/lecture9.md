@@ -155,18 +155,14 @@ init | Label nodes with initial distances | Topological sort | visit in topologi
   - subgraph of a graph G
 containing all vertices of G
 - Spanning Tree
-  - spanning subgraph that is 
-itself a (free) tree
-- Minimum Spanning Tree 
-(MST)
-  - spanning tree of a weighted 
-graph with minimum total
-edge weight 
+  - spanning subgraph that is itself a (free) tree
+- Minimum Spanning Tree (MST)
+  - spanning tree of a weighted graph with minimum total edge weight 
 
 ![Alt text](assets\IMG117.PNG)
 
 ### Aren't MST's = shortest path?
-- We know that single-sourse shortest path yields a trwee of shortest paths from origin u
+- We know that single-sourse shortest path yields a trwee of shortest paths from origin `u`
 - Can we just run that?
   - No
 
@@ -174,9 +170,9 @@ edge weight
 
 
 ### Cycle property
-- Let T be a MST of a weighted graph G
-- Let e be an edge of G that is not in T
-- Let C be the cycle formed by e with T
+- Let `T` be a MST of a weighted graph `G`
+- Let `e` be an edge of `G` that is not in `T`
+- Let `C` be the cycle formed by `e` with `T`
 - For every edge f of C, weight(f) $\le$ weight(e)
 
 ![Alt text](assets\IMG118.PNG)
@@ -189,13 +185,11 @@ across the partition
 - There is a minimum spanning tree of 
 G containing edge e
 
-Proof
+**Proof**
 - Let T be an MST of G
-- If T does not contain e, consider the 
-cycle C formed by e with T and let  f
+- If T does not contain e, consider the cycle C formed by e with T and let  f
 be an edge of C across the partition
-- By the cycle property,
-weight(f) $\le$ weight(e)
+- By the cycle property, weight(f) $\le$ weight(e)
 - Thus, weight(f) = weight(e)
 - We obtain another MST by replacing f with e
 
@@ -203,34 +197,37 @@ weight(f) $\le$ weight(e)
 
 ### Prim-Jarnik’s Algorithm
 - Similar to Dijkstra’s algorithm
-- Pick an arbitrary vertex s and grow the MST 
-as a cloud of vertices, starting from s
-- Store with each vertex v, a label d(v)
-  - smallest weight of an edge connecting v to a 
-vertex in the cloud 
+- Pick an arbitrary vertex s and grow the MST as a cloud of vertices, starting from s
+- Store with each vertex v, **a label d(v)**
+  - smallest weight of an edge connecting v to a vertex in the cloud 
 - At each step
-  - add to the cloud the vertex u outside the cloud 
-with the smallest distance label
+  - add to the cloud the vertex u outside the cloud with the **smallest distance label**
   - update the labels of the vertices adjacent to u
 
 KEY DIFFERENCE: Not trying to find the minimum distance, trying to find the minimum spanning tree
 
 ![Alt text](assets\IMG120.PNG)
 
+### Analysis
 - Graph operations
   - cycle through the incident edges once for each vertex
 - Label operations
-  - set/get distance, parent and locator labels of vertex z O(deg(z)) times
+  - set/get distance, parent and locator labels of vertex `z` ``O(deg(z))`` times
   - setting/getting a label takes $O(1)$ time
 - Priority queue operations
   - each vertex is inserted once into and removed once from the priority 
 queue, where each insertion or removal takes $O(\log n)$ time
-  - key of a vertex w in the priority queue is modified at most deg(w) 
+  - key of a vertex w in the priority queue is modified at most ``deg(w)`` 
 times, where each key change takes $O(\log n)$ time 
 - Prim-Jarnik’s algorithm runs in $O((n + m) \log n)$ time
   - provided the graph is represented by an adjacency list structure
   - recall that $\sum_{v} deg(v) = 2m$
   - can also be expressed as O(m log n) since the graph is connected
+
+
+Recall:
+- $n = |v|$ number of vertices
+- $m = |e|$ number of edges
 
 ### Kruskal's Approach
 - Maintain a partition of the vertices into clusters
@@ -251,10 +248,15 @@ Algorithm Kruskal(G)
 for each vertex v in G do
     define an elementary cluster C(v) = {v}
 Initialise a priority queue Q to contain all edges in G, using the weights as keys
-T -> null {T will ultimately contain the edges of the MST}
+T -> null           {T will ultimately contain the edges of the MST}
 
 while T has fewer than n-1 edges to
-    (u,v) = value returned by Q.remove_min()
+    (u,v) = value returned by Q.remove_min() (``find``)
+    Let C(u) be the cluster containing u, and let C(v) be the cluster containing v
+    if C(u) != C(v) then
+      add edge (u,v) to T
+      Merge C(u) and C(v) into one cluster (``union``)
+return tree T
 ```
 
 ![Alt text](assets\IMG121.PNG)
@@ -264,9 +266,9 @@ while T has fewer than n-1 edges to
 - Priority queue extracts the edges by increasing weight
 - An edge is accepted if it connects distinct trees
 - Need a data structure that maintains a partition, i.e., a collection of disjoint sets, with operations:
-  - makeSet(u): create a set consisting of u
-  - find(u): return the set storing u
-  - union(A, B): replace sets A and B with their union
+  - ``makeSet(u)``: create a set containing new element `u`
+  - ``find(u)``: return the set storing u
+  - ``union(A, B)``: replace sets A and B with their union
 
 ### List-based partition
 - Each set is stored in a sequence
@@ -276,16 +278,18 @@ while T has fewer than n-1 edges to
     - actually grows the inverse of the Ackuman function $O(\alpha (n))$
   - union(A, B) moves the elements of the smaller set to the sequence of the larger set and updates their references
     - takes $min(|A|, |B|)$ time
-- Whenever an element is processed, it goes into a set of size at least double, hence each element is processed at most log n times
+- Whenever an element is processed, it goes into a set of size at least double, hence each element is processed at most $log n$ times
 
 ### Partition-base implementation
 - Partition-based version of Kruskal’s 
 Algorithm 
   - cluster merges as unions 
   - cluster locations as finds
-- Running time O((n + m) log n)
-  - priority queue operations: O(m log n)
-  - union-find operations: O(n log n)
+- Running time $O((n + m) log n)$
+  - priority queue operations: $O(m log n)$
+    - Is actually $O(m \log m)$ but we note that $m$ is $O(n^{2})$ for a simple graph. Using log laws we get this this result.
+  - union-find operations: $O(n log n)$
+    - each position can be charged at most $O(\log n)$ times, since the size of the cluster's group doubles each time. Occurs max $n$ times, therefore, $O(n log n)$
 
 ## Solving Graph problems
 
@@ -296,15 +300,12 @@ Algorithm
 - Single Source Shortest Path:
   - What is the shortest path (and associated costs) from v to all other u in G?
 - All-Pairs Shortest Paths:
-  - What is the shortest path (and associated 
-costs) between all pairs of vertices in G?
-- Each problem is at least as hard as the 
-previous one… 
-  - Use properties of your specific problem to 
-help solve it. Is the graph a DAG? Are the 
-weights always positive? …
+  - What is the shortest path (and associated costs) between all pairs of vertices in G?
+- Each problem is at least as hard as the previous one… 
+  - Use properties of your specific problem to help solve it. Is the graph a DAG? Are the weights always positive? …
 
 ## Extension Material
+**NONE OF THIS WILL APPEAR ON THE FINAL EXAM**
 
 ### Transitive Closure
 - Given a digraph G, the 

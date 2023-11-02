@@ -262,16 +262,12 @@ containing all vertices of G</li>
 </li>
 <li dir="auto">Spanning Tree
 <ul dir="auto">
-<li dir="auto">spanning subgraph that is
-itself a (free) tree</li>
+<li dir="auto">spanning subgraph that is itself a (free) tree</li>
 </ul>
 </li>
-<li dir="auto">Minimum Spanning Tree
-(MST)
+<li dir="auto">Minimum Spanning Tree (MST)
 <ul dir="auto">
-<li dir="auto">spanning tree of a weighted
-graph with minimum total
-edge weight</li>
+<li dir="auto">spanning tree of a weighted graph with minimum total edge weight</li>
 </ul>
 </li>
 </ul>
@@ -279,7 +275,7 @@ edge weight</li>
 <h3 dir="auto" id="arent-msts--shortest-path">Aren't MST's = shortest path?</h3>
 <ul dir="auto">
 <li dir="auto">
-<p dir="auto">We know that single-sourse shortest path yields a trwee of shortest paths from origin u</p>
+<p dir="auto">We know that single-sourse shortest path yields a trwee of shortest paths from origin <code>u</code></p>
 </li>
 <li dir="auto">
 <p dir="auto">Can we just run that?</p>
@@ -293,9 +289,9 @@ edge weight</li>
 </ul>
 <h3 dir="auto" id="cycle-property">Cycle property</h3>
 <ul dir="auto">
-<li dir="auto">Let T be a MST of a weighted graph G</li>
-<li dir="auto">Let e be an edge of G that is not in T</li>
-<li dir="auto">Let C be the cycle formed by e with T</li>
+<li dir="auto">Let <code>T</code> be a MST of a weighted graph <code>G</code></li>
+<li dir="auto">Let <code>e</code> be an edge of <code>G</code> that is not in <code>T</code></li>
+<li dir="auto">Let <code>C</code> be the cycle formed by <code>e</code> with <code>T</code></li>
 <li dir="auto">For every edge f of C, weight(f) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo></mrow><annotation encoding="application/x-tex">\le</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≤</span></span></span></span> weight(e)</li>
 </ul>
 <p dir="auto"><img src="assets\IMG118.PNG" alt="Alt text" data-src="assets%5CIMG118.PNG"></p>
@@ -308,14 +304,12 @@ across the partition</li>
 <li dir="auto">There is a minimum spanning tree of
 G containing edge e</li>
 </ul>
-<p dir="auto">Proof</p>
+<p dir="auto"><strong>Proof</strong></p>
 <ul dir="auto">
 <li dir="auto">Let T be an MST of G</li>
-<li dir="auto">If T does not contain e, consider the
-cycle C formed by e with T and let  f
+<li dir="auto">If T does not contain e, consider the cycle C formed by e with T and let  f
 be an edge of C across the partition</li>
-<li dir="auto">By the cycle property,
-weight(f) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo></mrow><annotation encoding="application/x-tex">\le</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≤</span></span></span></span> weight(e)</li>
+<li dir="auto">By the cycle property, weight(f) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo></mrow><annotation encoding="application/x-tex">\le</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≤</span></span></span></span> weight(e)</li>
 <li dir="auto">Thus, weight(f) = weight(e)</li>
 <li dir="auto">We obtain another MST by replacing f with e</li>
 </ul>
@@ -323,24 +317,22 @@ weight(f) <span class="katex"><span class="katex-mathml"><math xmlns="http://www
 <h3 dir="auto" id="prim-jarniks-algorithm">Prim-Jarnik’s Algorithm</h3>
 <ul dir="auto">
 <li dir="auto">Similar to Dijkstra’s algorithm</li>
-<li dir="auto">Pick an arbitrary vertex s and grow the MST
-as a cloud of vertices, starting from s</li>
-<li dir="auto">Store with each vertex v, a label d(v)
+<li dir="auto">Pick an arbitrary vertex s and grow the MST as a cloud of vertices, starting from s</li>
+<li dir="auto">Store with each vertex v, <strong>a label d(v)</strong>
 <ul dir="auto">
-<li dir="auto">smallest weight of an edge connecting v to a
-vertex in the cloud</li>
+<li dir="auto">smallest weight of an edge connecting v to a vertex in the cloud</li>
 </ul>
 </li>
 <li dir="auto">At each step
 <ul dir="auto">
-<li dir="auto">add to the cloud the vertex u outside the cloud
-with the smallest distance label</li>
+<li dir="auto">add to the cloud the vertex u outside the cloud with the <strong>smallest distance label</strong></li>
 <li dir="auto">update the labels of the vertices adjacent to u</li>
 </ul>
 </li>
 </ul>
 <p dir="auto">KEY DIFFERENCE: Not trying to find the minimum distance, trying to find the minimum spanning tree</p>
 <p dir="auto"><img src="assets\IMG120.PNG" alt="Alt text" data-src="assets%5CIMG120.PNG"></p>
+<h3 dir="auto" id="analysis">Analysis</h3>
 <ul dir="auto">
 <li dir="auto">Graph operations
 <ul dir="auto">
@@ -349,7 +341,7 @@ with the smallest distance label</li>
 </li>
 <li dir="auto">Label operations
 <ul dir="auto">
-<li dir="auto">set/get distance, parent and locator labels of vertex z O(deg(z)) times</li>
+<li dir="auto">set/get distance, parent and locator labels of vertex <code>z</code> <code>O(deg(z))</code> times</li>
 <li dir="auto">setting/getting a label takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> time</li>
 </ul>
 </li>
@@ -357,7 +349,7 @@ with the smallest distance label</li>
 <ul dir="auto">
 <li dir="auto">each vertex is inserted once into and removed once from the priority
 queue, where each insertion or removal takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
-<li dir="auto">key of a vertex w in the priority queue is modified at most deg(w)
+<li dir="auto">key of a vertex w in the priority queue is modified at most <code>deg(w)</code>
 times, where each key change takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
 </ul>
 </li>
@@ -368,6 +360,11 @@ times, where each key change takes <span class="katex"><span class="katex-mathml
 <li dir="auto">can also be expressed as O(m log n) since the graph is connected</li>
 </ul>
 </li>
+</ul>
+<p dir="auto">Recall:</p>
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mi mathvariant="normal">∣</mi><mi>v</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">n = |v|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord">∣</span></span></span></span> number of vertices</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi mathvariant="normal">∣</mi><mi>e</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">m = |e|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">e</span><span class="mord">∣</span></span></span></span> number of edges</li>
 </ul>
 <h3 dir="auto" id="kruskals-approach">Kruskal's Approach</h3>
 <ul dir="auto">
@@ -397,10 +394,15 @@ times, where each key change takes <span class="katex"><span class="katex-mathml
 for each vertex v in G do
     define an elementary cluster C(v) = {v}
 Initialise a priority queue Q to contain all edges in G, using the weights as keys
-T -&gt; null {T will ultimately contain the edges of the MST}
+T -&gt; null           {T will ultimately contain the edges of the MST}
 
 while T has fewer than n-1 edges to
-    (u,v) = value returned by Q.remove_min()
+    (u,v) = value returned by Q.remove_min() (``find``)
+    Let C(u) be the cluster containing u, and let C(v) be the cluster containing v
+    if C(u) != C(v) then
+      add edge (u,v) to T
+      Merge C(u) and C(v) into one cluster (``union``)
+return tree T
 </div></code></code></pre>
 <p dir="auto"><img src="assets\IMG121.PNG" alt="Alt text" data-src="assets%5CIMG121.PNG"></p>
 <h3 dir="auto" id="data-structure-for-krukals-approach">Data Structure for Krukal's Approach</h3>
@@ -410,9 +412,9 @@ while T has fewer than n-1 edges to
 <li dir="auto">An edge is accepted if it connects distinct trees</li>
 <li dir="auto">Need a data structure that maintains a partition, i.e., a collection of disjoint sets, with operations:
 <ul dir="auto">
-<li dir="auto">makeSet(u): create a set consisting of u</li>
-<li dir="auto">find(u): return the set storing u</li>
-<li dir="auto">union(A, B): replace sets A and B with their union</li>
+<li dir="auto"><code>makeSet(u)</code>: create a set containing new element <code>u</code></li>
+<li dir="auto"><code>find(u)</code>: return the set storing u</li>
+<li dir="auto"><code>union(A, B)</code>: replace sets A and B with their union</li>
 </ul>
 </li>
 </ul>
@@ -434,7 +436,7 @@ while T has fewer than n-1 edges to
 </li>
 </ul>
 </li>
-<li dir="auto">Whenever an element is processed, it goes into a set of size at least double, hence each element is processed at most log n times</li>
+<li dir="auto">Whenever an element is processed, it goes into a set of size at least double, hence each element is processed at most <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">log n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">n</span></span></span></span> times</li>
 </ul>
 <h3 dir="auto" id="partition-base-implementation">Partition-base implementation</h3>
 <ul dir="auto">
@@ -445,10 +447,18 @@ Algorithm
 <li dir="auto">cluster locations as finds</li>
 </ul>
 </li>
-<li dir="auto">Running time O((n + m) log n)
+<li dir="auto">Running time <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O((n + m) log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">((</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>
 <ul dir="auto">
-<li dir="auto">priority queue operations: O(m log n)</li>
-<li dir="auto">union-find operations: O(n log n)</li>
+<li dir="auto">priority queue operations: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>m</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(m log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>
+<ul dir="auto">
+<li dir="auto">Is actually <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>m</mi><mi>log</mi><mo>⁡</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(m \log m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span> but we note that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^{2})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> for a simple graph. Using log laws we get this this result.</li>
+</ul>
+</li>
+<li dir="auto">union-find operations: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>
+<ul dir="auto">
+<li dir="auto">each position can be charged at most <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> times, since the size of the cluster's group doubles each time. Occurs max <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> times, therefore, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -471,20 +481,17 @@ Algorithm
 </li>
 <li dir="auto">All-Pairs Shortest Paths:
 <ul dir="auto">
-<li dir="auto">What is the shortest path (and associated
-costs) between all pairs of vertices in G?</li>
+<li dir="auto">What is the shortest path (and associated costs) between all pairs of vertices in G?</li>
 </ul>
 </li>
-<li dir="auto">Each problem is at least as hard as the
-previous one…
+<li dir="auto">Each problem is at least as hard as the previous one…
 <ul dir="auto">
-<li dir="auto">Use properties of your specific problem to
-help solve it. Is the graph a DAG? Are the
-weights always positive? …</li>
+<li dir="auto">Use properties of your specific problem to help solve it. Is the graph a DAG? Are the weights always positive? …</li>
 </ul>
 </li>
 </ul>
 <h2 dir="auto" id="extension-material">Extension Material</h2>
+<p dir="auto"><strong>NONE OF THIS WILL APPEAR ON THE FINAL EXAM</strong></p>
 <h3 dir="auto" id="transitive-closure">Transitive Closure</h3>
 <ul dir="auto">
 <li dir="auto">Given a digraph G, the
