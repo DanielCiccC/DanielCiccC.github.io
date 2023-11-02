@@ -44,14 +44,10 @@ Might want to have a directed edge (can go in one direction, but can't go back)
 ![Alt text](assets/IMG97.PNG)
 
 ### Terminology
-- End vertices (or endpoints) 
-of an edge
-  - U and V are endpoints
-of ``a``
-- Edges incident on 
-a vertex
-  - a, d, and b are 
-incident on V
+- End vertices (or endpoints) of an edge
+  - U and V are endpoints of ``a``
+- Edges incident on a vertex
+  - a, d, and b are incident on V
 - Adjacent vertices
   - U and V are adjacent
      - connected by a vertix
@@ -62,8 +58,7 @@ incident on V
   - indegree, how many edges are coming into the node
   - outdegree, how many edges outbound from the node
 - Parallel edges
-  - h and i are parallel 
-edges
+  - h and i are parallel edges
 - Self-loop
   - j is a self-loop
 
@@ -78,8 +73,7 @@ vertices and edges
   - each edge is preceded and 
 followed by its endpoints
 - Simple path
-  - all vertices and edges are 
-distinct
+  - all vertices and edges are distinct
 - Examples
   - $P_{1} =(V,b,X,h,Z)$ is a simple path
   - $P_{2} =(U,c,W,e,X,g,Y,f,W,d,V)$ is not a simple path 
@@ -102,15 +96,15 @@ distinct
 
 ### Subgraphs
 - Subgraph S of a graph G is a graph such that 
-  - vertices of S are a subset of the vertices of G
+  - vertices of S are a *subset* of the vertices of G
   - edges of S are a subset of the edges of G
-- Spanning subgraph of G is a subgraph that contains all the vertices of G
+- Spanning subgraph of G is a subgraph that contains *all* the vertices of G
 
 ![Alt text](assets/IMG101.PNG)
 
 ### Connectivity
 
-- Graph is connected if there is a simple path between every pair of vertices
+- Graph is connected if there is a *simple path* between every pair of vertices
 - Connected component of a graph G is a connected subgraph of G
 
 ![Alt text](assets/IMG102.PNG)
@@ -119,13 +113,13 @@ distinct
 - Undirected graph T is an unrooted tree if 
   - T is connected
   - T has no simple cycles
-- An undirected graph is a forest if it contains no simple cycles
+- An undirected graph is a ***forest** if it contains no simple cycles*
 - If you have graphs are disconnected and you want to check a component, you need to check every disconnected grpah you haven't checked
 
 ![Alt text](assets/IMG103.PNG)
 
 ### Spanning Trees and Forests
-- Spanning tree of a connected graph is a spanning subgraph that is a tree
+- **Spanning tree **of a connected graph is a spanning subgraph that is a tree
 - Spanning forest of a graph is a spanning subgraph that is a forest
     - dropped edges, no longer have cycles anymore
 
@@ -142,9 +136,9 @@ $$ \sum_{v} deg(v) = 2m $$
 
 ### Graph Density
 - Undirected simple graph
-  - $𝐷 = \dfrac{2𝑚}{𝑛(𝑛−1)}$
+$$𝐷 = \dfrac{2𝑚}{𝑛(𝑛−1)}$$
   - Directed simple graph
-  - $𝐷 = \dfrac{m}{𝑛(𝑛−1)}$
+$$𝐷 = \dfrac{m}{𝑛(𝑛−1)}$$
 - Maximum density is 1
 - Minimum density is 0
 - Sparse
@@ -180,8 +174,7 @@ $$ \sum_{v} deg(v) = 2m $$
 ``removeEdge(e)`` | Removes edge $e$ from the graph
 
 ### Edge list
-
-- Sequence of edges
+- **Sequence of edges**
   - represented by vertex pairs
 Edge List (image below)
 (1,2)
@@ -201,8 +194,8 @@ Edge List (image below)
   - origin vertex object
   - destination vertex object
   - reference to position in edge sequence
-    - Going to store weight in object
-    - going to hold pointers to the vertices it is referring to
+    - Going to *store weight in object*
+    - going to *hold pointers to the vertices* it is referring to
 - Vertex sequence
   - sequence of vertex objects
 - Edge sequence
@@ -213,7 +206,7 @@ Edge List (image below)
 ### Adjacency List Structure
 - Extends edge list
 - Incidence sequence for each vertex
-  - sequence of references to edge objects of incident edges
+  - *sequence of references to edge objects* of incident edges
 - Augmented edge objects
   - references to associated positions in incidence sequences of end vertices
 
@@ -246,10 +239,19 @@ vertices
 | |Edge list | Adjacency List | Adjacency Matrix
 |---|---|---|---
 Space| $n+m$| $n+m$ | $n^{2}$
-``outgoingEdges(v)`` and ``incomingEdge(v)``| m | deg($v$) | $n$
-FINISH THIS
+``outgoingEdges(v)`` | m | deg($v$) | $n$
+``incomingEdge(v)`` | m | deg($v$)|$n$ 
+``getEdge(v, w)``| m | min(``deg(v)``, ``deg(w)``) | 1
+``insertVertex(o)``| 1 |1 |$n^{2}$
+``insertEdge(v, w, o)``|1 | 1 | 1
+``removeVertex(v)`` | m | ``deg(v)`` |$n^{2}$
+``removeEdge(e)``| 1 | 1 | 1
 
- ### Graph traversal
+- $n = |v|$ number of vertices
+- $m = |e|$ number of edges
+
+
+## Graph traversal
 - Systematic process for exploring a graph
   - visit all vertices and edges
 - Efficient if done in linear time
@@ -262,7 +264,7 @@ FINISH THIS
   - visits all the vertices and edges of G
   - determines whether G is connected
   - computes the connected components of G
-  - computes a spanning forest of G
+  - computes *a* spanning forest of G
 
 ```
 Algorithm DFS(G, v):
@@ -270,7 +272,7 @@ Algorithm DFS(G, v):
     Output Collection of vertices reachable from v and their discovery edges and back edges
 
     Mark vertex v as visited
-    for all e  G.outgoingEdges(v) do
+    for all e in G.outgoingEdges(v) do
         if e is not explored then
             w <- G.opposite(v, e)
             if w has not been visited then
@@ -285,16 +287,9 @@ Algorithm DFS(G, v):
 
 ### properties of DFS
 - Property 1
-  - DFS(G, v) visits all the 
-vertices and edges in 
-the connected 
-component of v
+  - DFS(G, v) visits all the vertices and edges in the connected component of v
 - Property 2
-  - Discovery edges labelled 
-by DFS(G, v) *form a 
-spanning tree* of the 
-connected component 
-of v
+  - Discovery edges labelled by DFS(G, v) *form a spanning tree* of the connected component of v
 
 ### Analysis of DFS
 - Setting/getting a vertex/edge label takes O(1) time
@@ -310,8 +305,8 @@ of v
     - recall that $\sum_{v} deg(v) = 2m$
 
 ### Path Finding And Cycle Finding
-- in assignment
-- UPDATE
+- DFS can be modified to identify a path from one vertex to another
+- can be used to identify cycles through backedges
 
 ### DFS for entire graph
 - Have to run DFS for all nodes on each subsequent run
@@ -330,7 +325,7 @@ Algorithm DFS(G):
             DFS(G, v)
 ```
 
-### BFS Algorithm from a vertex
+## BFS Algorithm from a vertex
 ```
 Algorithm BFS(G, u)
     Input Graph G and a vertex u of G
@@ -341,9 +336,9 @@ Algorithm BFS(G, u)
     Mark vertex u as visited
     while Q.isEmpty() do
         v = Q.dequeue()
-        for all e  G.incidentEdges(v) do
+        for all e in G.incidentEdges(v) do
             if e is not explored then
-                w  G.opposite(v, e)
+                w <- G.opposite(v, e)
                 if w has not been visited then
                     Record edge e as a discovery edge for vertex w
                     Q.enqueue(w)
@@ -360,20 +355,15 @@ Algorithm BFS(G, u)
 
 ### DFS vs. BFS
 Back edge (v, w)
-- w is an ancestor of v
-in the tree of 
-discovery edges
-Cross edge (v, w)
-- w is in the same level 
-as v, or in the next 
-level
+- w is an ancestor of v in the tree of discovery edges Cross edge (v, w)
+- w is in the same level as v, or in the next level
 
 ## BSF Properties
 - Notation
   - $G_{s}$ connected component of s
 - Property 1
-  - $BFS(G, s)$ visits all the vertices and
-edges of $G_{s}$
+  - $BFS(G, s)$ visits all the vertices and edges of $G_{s}$
+    - WILL ONLY VISIT ONE CONNECTED COMPONENT
 - Property 2
   - Discovery edges labeled by $BFS(G, s)$ form a spanning tree $T_{s}$ of $G_{s}$
 - Property 3
@@ -390,14 +380,12 @@ edges of $G_{s}$
   - once as UNEXPLORED
   - once as DISCOVERY or CROSS
 - Each vertex is inserted once into a sequence $L_{i}$
-- Method outgoingEdges is called once for each vertex
+- Method ``outgoingEdges`` is called once for each vertex
 - BFS runs in O(n + m) time
   - provided graph is implemented as an adjacency list
     - recall that $\sum_{v} deg(v) = 2m$
 
-
 ## Directed Graphs
-
 - Graph whose edges are all directed
   - “directed graph”
 - Applications
@@ -420,11 +408,9 @@ are all directed
   - each edge goes in one direction
   - edge (a,b) goes from a to b, but not b to a
 - If G is simple
-- $m < n\cdot (n - 1)$
-- If in-edges and out-edges are kept in separate 
-adjacency lists
-- can perform listing of incoming edges and 
-outgoing edges in time proportional to their size
+  - $m < n\cdot (n - 1)$
+- If in-edges and out-edges are kept in separate adjacency lists
+- can perform listing of incoming edges and outgoing edges in time proportional to their size
 
 ### Digraph Application
 Scheduling: edge (a,b) means task a must be completed before b can be started
@@ -445,14 +431,14 @@ four types of edges
 - Directed DFS starting at vertex s determines the vertices reachable from s
 
 ### Reachability
-DFS tree rooted at vertex v
-- vertices reachable from v via directed paths
+DFS tree rooted at vertex `v`
+- vertices reachable from `v` via directed paths
   - e.g. if we take c, we can only go to e, to d, to a, to c as well
   - given some vertex, which other ones can we get to?
 
 ![Alt text](assets\IMG127.PNG)
 
-### String connectivity
+### Strong connectivity
 - Reach a vertex from any given vertex
 - If we can run of every node and we can get to every other node, then we are done
 
@@ -460,8 +446,7 @@ DFS tree rooted at vertex v
 - Pick a vertex ``v`` in ``G``
 - Perform a DFS from ``v`` in ``G``
   - if there’s a w not visited, false
-- Let ``G’`` be ``G`` with edges 
-reversed
+- Let ``G’`` be ``G`` with edges reversed
 - Perform a DFS from ``v`` in ``G’``
   - if there’s a ``w`` not visited, false
   - else, true
@@ -474,11 +459,8 @@ reversed
 - Directed acyclic graph (DAG)
   - digraph with no directed cycles
 - Topological ordering of a digraph is a numbering $v_{1}, ..., v_{n}$ of the vertices such that for every edge $(v_{i}, v_{j})$, we have $i < j$
-- Example: in a task scheduling 
-digraph, a topological ordering of 
-a task sequence that satisfies the 
-precedence constraints
-  - Not one topological ordering for a graph
+- Example: in a task scheduling digraph, a topological ordering of a task sequence that satisfies the precedence constraints
+- Not one topological ordering for a graph
 
 **Theorem**
 
@@ -487,6 +469,8 @@ A digraph has a topological ordering if and only if it is a DAG
 ![Alt text](assets\IMG129.PNG)
 
 ### Algorithim for Topological sorting
+- Essentially, find the vertex with no outgoing edges, and label it the highest number. remove it from the graph and edges associated with it
+- 
 ```
 Algorithm TopologicalSort(G):
   H <- G // Temporary copy of G
