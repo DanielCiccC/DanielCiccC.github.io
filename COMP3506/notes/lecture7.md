@@ -11,32 +11,30 @@ An ordered map implemented by means of a sorted list. Stores key-value pairs
 - use binary search to lookup keys
 
 ### Search tables performance:
-- Searches take O(log n) time
+- Searches take $O(\log n)$ time
   - using binary search
-- Inserting a new item takes O(n) time
-- Removing an item takes O(n) time
+- Inserting a new item takes $O(n)$ time
+- Removing an item takes $O(n)$ time
 
 ### Binary search trees
-- Binary tree storing keys (or key-value entries) at its internal nodes and satisfying the following property:
-- Let u, v, and w be three nodes such that u is in the left subtree of v and w is in the right subtree of v.
+- Binary tree storing keys (or key-value entries) at its **internal nodes** and satisfying the following property:
+- Let `u`, `v`, and `w` be three nodes such that `u` is in the left subtree of v and w is in the right subtree of v.
   - $key(u) \le key(v) \le key(w)$
   - v is in the middle, u on left and w is on the right
-- External nodes do not store items
+- **External nodes do not store items**
 - In-order traversal of a binary search tree visits the keys in increasing order
 
 - Be careful: key can be tuples or pairs
 - For instance in the one below, compare number first, then letter
 
-
-![Alt text](assets/IMG64.PNG)
-
-![Alt text](assets/IMG65.PNG)
+search tree image 1 | search tree image 2
+|--- | ---
+![Alt text](assets/IMG64.PNG) | ![Alt text](assets/IMG65.PNG)
 
 ### Search for key $k$
 - Trace a downward path starting at the root
 - Next node visited depends on the comparison of k with the key of the current node
-  - if a leaf is reached, the 
-key is not found
+  - if a leaf is reached, the key is not found
 Example: ``get(4)``
   - call ``TreeSearch(4, root)``
 - Algorithms for nearest neighbour queries are similar
@@ -44,11 +42,9 @@ Example: ``get(4)``
 - Search proceeds down the tree to found item or an external node
 - Example: Search for item with key 11
 
-![Alt text](assets/IMG66.PNG)
-
-Search for key 8:
-
-![Alt text](assets/IMG67.PNG)
+**Intermediate step** | **result, no node**
+|--- | ---
+![Alt text](assets\IMG194.PNG) | ![Alt text](assets\IMG195.PNG)
 
 ### Insertion
 
@@ -63,12 +59,12 @@ Example: insert 5
 
 ![Alt text](assets/IMG68.PNG)
 
+
 ### Deletion
 
 ``remove(k)``
 - search for key k
-Assume key k is in the 
-tree
+- Assume key k is in the tree
 - $v$ is the node storing $k$
   - If node $v$ has a leaf child $w$
     - remove $v$ and $w$ with ``removeExternal(w)``
@@ -79,8 +75,9 @@ Example: remove 4
 ![Alt text](assets/IMG68.PNG)
 
 - Consider the case where the key k to be removed is stored at a node v whose children are both internal
-    - HAVE TO PERFROM IN-ORDER TRAVERSAL
+    - **HAVE TO PERFROM IN-ORDER TRAVERSAL**
     - find internal node w that follows v in an in-order traversal
+    - 'I need to find the next key bigger than `k`'
     - copy key(w) into node v
     - remove node w and its  left child z
 - must be a leaf 
@@ -96,7 +93,7 @@ Example: What steps would be involved in deleting the node with key=58?
 
 ### Performance
 
-- Consider an ordered  map with n items implemented by means of a binary search tree of height h
+- Consider an ordered map with n items implemented by means of a binary search tree of height h
   - space used is O(n) (we have n things)
   - get, put and remove take O(h) time ($h$ is the height of the tree)
     - when the tree is a stick, $h = n$
@@ -105,7 +102,7 @@ Example: What steps would be involved in deleting the node with key=58?
   - O(log n) in the best case
 
 ### What is I want to store duplicate keys?
-- Create a multimap (lookupo multimap ADT)
+- Create a multimap (lookup multimap ADT)
   - return the list, and return that for a given key
 - One node with a key
 
@@ -198,11 +195,9 @@ tree, must continue checking for balance until the root of T is reached
 
 ### tri-node restructuring
 - Order preserving
-  - changes preserve the in-order traversal of
-all nodes
+  - changes preserve the in-order traversal of all nodes
 - Local changes
-  - changes are made locally when the 
-grandparent is unbalanced
+  - changes are made locally when the grandparent is unbalanced
   - only a constant number of nodes are altered
   - single restructure restores the height-balance property globally
 
@@ -221,7 +216,7 @@ grandparent is unbalanced
   - nodes are splayed after being accessed
     - deepest internal node accessed
 - Do not enforce a logarithmic upper bound on height of the tree
-  - worst-case time complexity of search, delete and insert is O(n)
+  - worst-case time complexity of search, delete and insert is $O(n)$
 
 - Moves a node to the root using rotations
 - Performed after all operations

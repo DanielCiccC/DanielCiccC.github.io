@@ -42,28 +42,28 @@
 </ul>
 <h3 dir="auto" id="search-tables-performance">Search tables performance:</h3>
 <ul dir="auto">
-<li dir="auto">Searches take O(log n) time
+<li dir="auto">Searches take <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time
 <ul dir="auto">
 <li dir="auto">using binary search</li>
 </ul>
 </li>
-<li dir="auto">Inserting a new item takes O(n) time</li>
-<li dir="auto">Removing an item takes O(n) time</li>
+<li dir="auto">Inserting a new item takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
+<li dir="auto">Removing an item takes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> time</li>
 </ul>
 <h3 dir="auto" id="binary-search-trees">Binary search trees</h3>
 <ul dir="auto">
 <li dir="auto">
-<p dir="auto">Binary tree storing keys (or key-value entries) at its internal nodes and satisfying the following property:</p>
+<p dir="auto">Binary tree storing keys (or key-value entries) at its <strong>internal nodes</strong> and satisfying the following property:</p>
 </li>
 <li dir="auto">
-<p dir="auto">Let u, v, and w be three nodes such that u is in the left subtree of v and w is in the right subtree of v.</p>
+<p dir="auto">Let <code>u</code>, <code>v</code>, and <code>w</code> be three nodes such that <code>u</code> is in the left subtree of v and w is in the right subtree of v.</p>
 <ul dir="auto">
 <li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>e</mi><mi>y</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>k</mi><mi>e</mi><mi>y</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>k</mi><mi>e</mi><mi>y</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">key(u) \le key(v) \le key(w)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.03588em;">ey</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.03588em;">ey</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.03588em;">ey</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span></li>
 <li dir="auto">v is in the middle, u on left and w is on the right</li>
 </ul>
 </li>
 <li dir="auto">
-<p dir="auto">External nodes do not store items</p>
+<p dir="auto"><strong>External nodes do not store items</strong></p>
 </li>
 <li dir="auto">
 <p dir="auto">In-order traversal of a binary search tree visits the keys in increasing order</p>
@@ -75,8 +75,20 @@
 <p dir="auto">For instance in the one below, compare number first, then letter</p>
 </li>
 </ul>
-<p dir="auto"><img src="assets/IMG64.PNG" alt="Alt text" data-src="assets/IMG64.PNG"></p>
-<p dir="auto"><img src="assets/IMG65.PNG" alt="Alt text" data-src="assets/IMG65.PNG"></p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>search tree image 1</th>
+<th>search tree image 2</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="assets/IMG64.PNG" alt="Alt text" data-src="assets/IMG64.PNG"></td>
+<td><img src="assets/IMG65.PNG" alt="Alt text" data-src="assets/IMG65.PNG"></td>
+</tr>
+</tbody>
+</table>
 <h3 dir="auto" id="search-for-key-k">Search for key <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></h3>
 <ul dir="auto">
 <li dir="auto">
@@ -85,8 +97,7 @@
 <li dir="auto">
 <p dir="auto">Next node visited depends on the comparison of k with the key of the current node</p>
 <ul dir="auto">
-<li dir="auto">if a leaf is reached, the
-key is not found
+<li dir="auto">if a leaf is reached, the key is not found
 Example: <code>get(4)</code></li>
 <li dir="auto">call <code>TreeSearch(4, root)</code></li>
 </ul>
@@ -101,9 +112,20 @@ Example: <code>get(4)</code></li>
 <p dir="auto">Example: Search for item with key 11</p>
 </li>
 </ul>
-<p dir="auto"><img src="assets/IMG66.PNG" alt="Alt text" data-src="assets/IMG66.PNG"></p>
-<p dir="auto">Search for key 8:</p>
-<p dir="auto"><img src="assets/IMG67.PNG" alt="Alt text" data-src="assets/IMG67.PNG"></p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Intermediate step</strong></th>
+<th><strong>result, no node</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="assets\IMG194.PNG" alt="Alt text" data-src="assets%5CIMG194.PNG"></td>
+<td><img src="assets\IMG195.PNG" alt="Alt text" data-src="assets%5CIMG195.PNG"></td>
+</tr>
+</tbody>
+</table>
 <h3 dir="auto" id="insertion">Insertion</h3>
 <ul dir="auto">
 <li dir="auto"><code>put(k, o)</code></li>
@@ -121,9 +143,8 @@ Example: <code>get(4)</code></li>
 <h3 dir="auto" id="deletion">Deletion</h3>
 <p dir="auto"><code>remove(k)</code></p>
 <ul dir="auto">
-<li dir="auto">search for key k
-Assume key k is in the
-tree</li>
+<li dir="auto">search for key k</li>
+<li dir="auto">Assume key k is in the tree</li>
 <li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> is the node storing <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>
 <ul dir="auto">
 <li dir="auto">If node <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> has a leaf child <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span>
@@ -140,8 +161,9 @@ tree</li>
 <ul dir="auto">
 <li dir="auto">Consider the case where the key k to be removed is stored at a node v whose children are both internal
 <ul dir="auto">
-<li dir="auto">HAVE TO PERFROM IN-ORDER TRAVERSAL</li>
+<li dir="auto"><strong>HAVE TO PERFROM IN-ORDER TRAVERSAL</strong></li>
 <li dir="auto">find internal node w that follows v in an in-order traversal</li>
+<li dir="auto">'I need to find the next key bigger than <code>k</code>'</li>
 <li dir="auto">copy key(w) into node v</li>
 <li dir="auto">remove node w and its  left child z</li>
 </ul>
@@ -167,7 +189,7 @@ tree</li>
 </table>
 <h3 dir="auto" id="performance">Performance</h3>
 <ul dir="auto">
-<li dir="auto">Consider an ordered  map with n items implemented by means of a binary search tree of height h
+<li dir="auto">Consider an ordered map with n items implemented by means of a binary search tree of height h
 <ul dir="auto">
 <li dir="auto">space used is O(n) (we have n things)</li>
 <li dir="auto">get, put and remove take O(h) time (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span> is the height of the tree)
@@ -186,7 +208,7 @@ tree</li>
 </ul>
 <h3 dir="auto" id="what-is-i-want-to-store-duplicate-keys">What is I want to store duplicate keys?</h3>
 <ul dir="auto">
-<li dir="auto">Create a multimap (lookupo multimap ADT)
+<li dir="auto">Create a multimap (lookup multimap ADT)
 <ul dir="auto">
 <li dir="auto">return the list, and return that for a given key</li>
 </ul>
@@ -342,14 +364,12 @@ tree, must continue checking for balance until the root of T is reached</li>
 <ul dir="auto">
 <li dir="auto">Order preserving
 <ul dir="auto">
-<li dir="auto">changes preserve the in-order traversal of
-all nodes</li>
+<li dir="auto">changes preserve the in-order traversal of all nodes</li>
 </ul>
 </li>
 <li dir="auto">Local changes
 <ul dir="auto">
-<li dir="auto">changes are made locally when the
-grandparent is unbalanced</li>
+<li dir="auto">changes are made locally when the grandparent is unbalanced</li>
 <li dir="auto">only a constant number of nodes are altered</li>
 <li dir="auto">single restructure restores the height-balance property globally</li>
 </ul>
@@ -405,7 +425,7 @@ grandparent is unbalanced</li>
 <li dir="auto">
 <p dir="auto">Do not enforce a logarithmic upper bound on height of the tree</p>
 <ul dir="auto">
-<li dir="auto">worst-case time complexity of search, delete and insert is O(n)</li>
+<li dir="auto">worst-case time complexity of search, delete and insert is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
 </ul>
 </li>
 <li dir="auto">
