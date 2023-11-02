@@ -1,9 +1,9 @@
 # Lecture 6
 
 ## Hash Table
-- we care about Seach, inserting and deleting items
+- we care about Search, inserting and deleting items
 
-We want:
+**We want:**
 - $O(1)$ worst case insert, find and delete
   
 We can have:
@@ -13,14 +13,12 @@ We can have:
 - Settle for $O(1)$ in the *average* case
 
 ### Direct Access array
-Consider a setting in which a map with n items 
-uses keys that are known to be integers in a 
-range from 0 to N − 1
+Consider a setting in which a map with n items uses keys that are known to be integers in a range from 0 to N − 1
 -  for some N ≥ n
 - Very good if key space is small (constant time  insert/delete/lookup) – data is at position k
   -  But if $N >> n$ we will pay extreme space overhead
      - The array will be very sparse and wasteful
-     - e.g. if we have three items, and one of the keys was '6221' means at least 6221 items
+     - e.g. if we have three items, and one of the keys was '6221' means at least 6221 length array
 
 ### More general types of keys
 What should we do if our keys are not integers 
@@ -40,10 +38,9 @@ corresponding indices in a table
 
 - You can define a hash function on whatever kind of data you want
 
-#### Compression functions
-- In textbook, we call it a compression function
-Hash function h maps keys of a given type to 
-integers in a fixed interval [0, N - 1]
+#### Hash functions and Hash Tables
+- Hash function h maps keys of a given type to 
+integers in a fixed interval ``[0, N - 1]``
   -  $h(x) = x \mod N$ – hash function for integer keys
   -  Take the integer and modulo it by the hash table size. Is this a good idea?
   -  Potential for lots of collisions
@@ -64,15 +61,15 @@ function
 
 ### Hash functions
 Usually specified as the composition of two functions
-- Hash code
-  - Keys -> integers
-- Compression function
-  - keys -> integers → [0, N - 1]
+- Hash code 
+  - $h_{1}:$ keys $\rarr$ integers 
+- Compression function 
+  - $h_{2}:$ integers $\rarr \; \; [0, N-1]$
   - in compression function to keey array in check
 
 ![Alt text](assets/IMG54.PNG)
 
-### Hash codes
+## Hash codes
 **Component Sum**:
 Partition the bits of the key into components of 
 fixed length
@@ -106,11 +103,9 @@ quantities from the original key,  $a_{0}, a_{1}, a_{2}, ..., a_{n-1}$
 Intutition on paper
 - the more randomness I can scatter throughout the bits, the better (I want to avoid collisions as best I can)
 
-**Cyclic Shift**
-- Variant of polynomial accumulation that replaces 
-the multiplication with a bit shift
-- Shift n bits from one side of bit pattern to the other 
-side during the partial accumulation
+### Cyclic Shift
+- Variant of polynomial accumulation that replaces the multiplication with a bit shift
+- Shift n bits from one side of bit pattern to the other side during the partial accumulation
 
 ![Alt text](assets/IMG56.PNG)
 
@@ -138,6 +133,7 @@ that occurred for a hash code
 
 ![Alt text](assets/IMG57.PNG)
 
+## Compression Functions
 ### Division
 - $h_{2}(y) = y \mod N$
 - size N of the hash table should be prime
@@ -161,10 +157,10 @@ to integers in a fixed interval [0, N-1]
 - Collisions occur when different elements are 
 mapped to the same cell
 
-### Collision Handling
-- Collisions occur when different elements are mapped to the same
-cell
-- Separate Chaining
+## Collision Handling
+- Collisions occur when different elements are mapped to the same cell
+
+### Separate Chaining
   -  each cell in the table points to a linked list of entries that map there
     - or extensible list, etc.
   -  simple, but requires additional memory outside the table
@@ -203,13 +199,21 @@ Algorithm remove(k):
 - Colliding items lump together
   -  causing future collisions to cause a longer sequence of probes
 
-
 Insert keys 18, 41, 22, 44, 59, 32, 31, 73, in this order
+
 ![Alt text](assets/IMG59.PNG)
 
 - When you delete an item, cannot make it empty
   - empty implies there are hash is free, but elements could have been appending further on in the list
 - append a placeholder value that will never show up in the list
+
+``put(k, o)``
+- throw an exception if the table is full
+- start at cell h(k) 
+- probe consecutive cells until one of the following occurs
+  - cell i is found that is either empty, or
+  - N cells have been unsuccessfully probed
+- store (k, o) in cell i
 
 ### Quadratic Probing
 - Probe index calculated by quadratic function
@@ -222,34 +226,32 @@ Insert keys 18, 41, 22, 44, 59, 32, 31, 73, in this order
 
 
 ### Double hashing
-Secondary hash function $d(k)$ handles collisions by 
-placing an item in the first available cell of the series 
-$(h(k) + jd(k)) \mod N$ for $j = 1, 2, … , N - 1$
+Secondary hash function $d(k)$ handles collisions by placing an item in the first available cell of the series 
+$(h(k) + jd(k)) \mod N$ for $j = 0, 1, 2, … , N - 1$
 
 Consider a hash table storing integer keys that handles collision with double 
 hashing
 
+
 ![Alt text](assets/IMG60.PNG)
 
 ### Hashing performance
-- O(1) – expected running time of all Map 
-operations
--  O(n) – worst case for searches, insertions and 
-removals
+- O(1) – expected running time of all Map operations
+-  O(n) – worst case for searches, insertions and removals
    - occurs when all keys inserted into the map collide
 
-Load factor $a = n÷N$ affects performance of a hash table
+Load factor $a = n/N$ affects performance of a hash table
 -  Expected number of probes for an insertion 
 with open addressing is
  - $1 ÷ (1 - \alpha)$
 - So what might be a reasonable load factor?
 
 ### Load Factors
-- **Chaining**: $\alpha$ = 0.8 to 1.0 acceptable
+- **Separate Chaining**: $\alpha$ = 0.8 to 1.0 acceptable
   - If $\alpha$ = 1, one element per list
   - Low space overhead; a good hash function will give us on average $\alpha$ elements per linked list
   - Note that load can be arbitrarily large (chains approach infinite length as $\alpha$ approaches infinity)
-- Probing: Depends on the type, but typically $\alpha$ < 2/3 is desired
+- **Linear Probing**: Depends on the type, but typically $\alpha$ < 2/3 is desired
   -  Python’s own open addressing uses 2/3
  -  State-of-art mechanisms can do well even with $\alpha$ > 0.9
 - Can $\alpha$ > 1.0 ?
@@ -284,6 +286,7 @@ other than maps
 
 - w is a 'yes' as some of the bits are on
 
+### Perfect hashing
 Idea: Given our set of keys S, we do some “offline work” to find a hash function that gives no collisions
 - Then, we know that we can always get constant-time access to those entries!
 - Example: h(k) = k mod 10 is perfect for $S = {10, 21, 32, 43, 54, 65, 76, 87, 98}$

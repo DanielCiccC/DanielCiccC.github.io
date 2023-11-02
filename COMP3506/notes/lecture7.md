@@ -1,4 +1,4 @@
-# Lecture 7
+# Lecture 6 continued
 
 - Note: our key focus in COMP306 will be on Binary search tree, AVL trees and Splay trees
 

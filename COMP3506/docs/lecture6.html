@@ -27,9 +27,9 @@
 <h1 dir="auto" id="lecture-6">Lecture 6</h1>
 <h2 dir="auto" id="hash-table">Hash Table</h2>
 <ul dir="auto">
-<li dir="auto">we care about Seach, inserting and deleting items</li>
+<li dir="auto">we care about Search, inserting and deleting items</li>
 </ul>
-<p dir="auto">We want:</p>
+<p dir="auto"><strong>We want:</strong></p>
 <ul dir="auto">
 <li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> worst case insert, find and delete</li>
 </ul>
@@ -41,9 +41,7 @@
 <li dir="auto">Settle for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> in the <em>average</em> case</li>
 </ul>
 <h3 dir="auto" id="direct-access-array">Direct Access array</h3>
-<p dir="auto">Consider a setting in which a map with n items
-uses keys that are known to be integers in a
-range from 0 to N − 1</p>
+<p dir="auto">Consider a setting in which a map with n items uses keys that are known to be integers in a range from 0 to N − 1</p>
 <ul dir="auto">
 <li dir="auto">for some N ≥ n</li>
 <li dir="auto">Very good if key space is small (constant time  insert/delete/lookup) – data is at position k
@@ -51,7 +49,7 @@ range from 0 to N − 1</p>
 <li dir="auto">But if <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>&gt;</mo><mo>&gt;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">N &gt;&gt; n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> we will pay extreme space overhead
 <ul dir="auto">
 <li dir="auto">The array will be very sparse and wasteful</li>
-<li dir="auto">e.g. if we have three items, and one of the keys was '6221' means at least 6221 items</li>
+<li dir="auto">e.g. if we have three items, and one of the keys was '6221' means at least 6221 length array</li>
 </ul>
 </li>
 </ul>
@@ -82,12 +80,11 @@ corresponding indices in a table</li>
 <ul dir="auto">
 <li dir="auto">You can define a hash function on whatever kind of data you want</li>
 </ul>
-<h4 dir="auto" id="compression-functions">Compression functions</h4>
+<h4 dir="auto" id="hash-functions-and-hash-tables">Hash functions and Hash Tables</h4>
 <ul dir="auto">
 <li dir="auto">
-<p dir="auto">In textbook, we call it a compression function
-Hash function h maps keys of a given type to
-integers in a fixed interval [0, N - 1]</p>
+<p dir="auto">Hash function h maps keys of a given type to
+integers in a fixed interval <code>[0, N - 1]</code></p>
 <ul dir="auto">
 <li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi><mspace></mspace><mspace width="0.6667em"/><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mtext> </mtext><mtext> </mtext><mi>N</mi></mrow><annotation encoding="application/x-tex">h(x) = x \mod N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">h</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.6667em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> – hash function for integer keys</li>
 <li dir="auto">Take the integer and modulo it by the hash table size. Is this a good idea?</li>
@@ -130,18 +127,18 @@ function</p>
 <ul dir="auto">
 <li dir="auto">Hash code
 <ul dir="auto">
-<li dir="auto">Keys -&gt; integers</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>:</mo></mrow><annotation encoding="application/x-tex">h_{1}:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span></span></span></span> keys <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rarr</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> integers</li>
 </ul>
 </li>
 <li dir="auto">Compression function
 <ul dir="auto">
-<li dir="auto">keys -&gt; integers → [0, N - 1]</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mn>2</mn></msub><mo>:</mo></mrow><annotation encoding="application/x-tex">h_{2}:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span></span></span></span> integers <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo><mtext>  </mtext><mtext>  </mtext><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mi>N</mi><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">\rarr \; \; [0, N-1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span></li>
 <li dir="auto">in compression function to keey array in check</li>
 </ul>
 </li>
 </ul>
 <p dir="auto"><img src="assets/IMG54.PNG" alt="Alt text" data-src="assets/IMG54.PNG"></p>
-<h3 dir="auto" id="hash-codes">Hash codes</h3>
+<h2 dir="auto" id="hash-codes">Hash codes</h2>
 <p dir="auto"><strong>Component Sum</strong>:
 Partition the bits of the key into components of
 fixed length</p>
@@ -184,12 +181,10 @@ quantities from the original key,  <span class="katex"><span class="katex-mathml
 <ul dir="auto">
 <li dir="auto">the more randomness I can scatter throughout the bits, the better (I want to avoid collisions as best I can)</li>
 </ul>
-<p dir="auto"><strong>Cyclic Shift</strong></p>
+<h3 dir="auto" id="cyclic-shift">Cyclic Shift</h3>
 <ul dir="auto">
-<li dir="auto">Variant of polynomial accumulation that replaces
-the multiplication with a bit shift</li>
-<li dir="auto">Shift n bits from one side of bit pattern to the other
-side during the partial accumulation</li>
+<li dir="auto">Variant of polynomial accumulation that replaces the multiplication with a bit shift</li>
+<li dir="auto">Shift n bits from one side of bit pattern to the other side during the partial accumulation</li>
 </ul>
 <p dir="auto"><img src="assets/IMG56.PNG" alt="Alt text" data-src="assets/IMG56.PNG"></p>
 <pre><code class="code-line language-python" dir="auto"><div><span class="hljs-keyword">def</span> <span class="hljs-title function_">cyclic_hash</span>(<span class="hljs-params">my_string</span>):
@@ -219,6 +214,7 @@ that occurred for a hash code</li>
 </li>
 </ul>
 <p dir="auto"><img src="assets/IMG57.PNG" alt="Alt text" data-src="assets/IMG57.PNG"></p>
+<h2 dir="auto" id="compression-functions">Compression Functions</h2>
 <h3 dir="auto" id="division">Division</h3>
 <ul dir="auto">
 <li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>y</mi><mspace></mspace><mspace width="0.6667em"/><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mtext> </mtext><mtext> </mtext><mi>N</mi></mrow><annotation encoding="application/x-tex">h_{2}(y) = y \mod N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.6667em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></li>
@@ -254,17 +250,15 @@ to integers in a fixed interval [0, N-1]</li>
 <li dir="auto">Collisions occur when different elements are
 mapped to the same cell</li>
 </ul>
-<h3 dir="auto" id="collision-handling">Collision Handling</h3>
+<h2 dir="auto" id="collision-handling">Collision Handling</h2>
 <ul dir="auto">
-<li dir="auto">Collisions occur when different elements are mapped to the same
-cell</li>
-<li dir="auto">Separate Chaining
-<ul dir="auto">
-<li dir="auto">each cell in the table points to a linked list of entries that map there</li>
-<li dir="auto">or extensible list, etc.</li>
-<li dir="auto">simple, but requires additional memory outside the table</li>
+<li dir="auto">Collisions occur when different elements are mapped to the same cell</li>
 </ul>
-</li>
+<h3 dir="auto" id="separate-chaining">Separate Chaining</h3>
+<ul dir="auto">
+<li dir="auto">each cell in the table points to a linked list of entries that map there
+- or extensible list, etc.</li>
+<li dir="auto">simple, but requires additional memory outside the table</li>
 </ul>
 <p dir="auto"><img src="assets/img58.PNG" alt="Alt text" data-src="assets/img58.PNG"></p>
 <h3 dir="auto" id="map-with-separate-chaining">Map with Separate Chaining</h3>
@@ -307,8 +301,8 @@ Algorithm remove(k):
 </ul>
 </li>
 </ul>
-<p dir="auto">Insert keys 18, 41, 22, 44, 59, 32, 31, 73, in this order
-<img src="assets/IMG59.PNG" alt="Alt text" data-src="assets/IMG59.PNG"></p>
+<p dir="auto">Insert keys 18, 41, 22, 44, 59, 32, 31, 73, in this order</p>
+<p dir="auto"><img src="assets/IMG59.PNG" alt="Alt text" data-src="assets/IMG59.PNG"></p>
 <ul dir="auto">
 <li dir="auto">When you delete an item, cannot make it empty
 <ul dir="auto">
@@ -316,6 +310,18 @@ Algorithm remove(k):
 </ul>
 </li>
 <li dir="auto">append a placeholder value that will never show up in the list</li>
+</ul>
+<p dir="auto"><code>put(k, o)</code></p>
+<ul dir="auto">
+<li dir="auto">throw an exception if the table is full</li>
+<li dir="auto">start at cell h(k)</li>
+<li dir="auto">probe consecutive cells until one of the following occurs
+<ul dir="auto">
+<li dir="auto">cell i is found that is either empty, or</li>
+<li dir="auto">N cells have been unsuccessfully probed</li>
+</ul>
+</li>
+<li dir="auto">store (k, o) in cell i</li>
 </ul>
 <h3 dir="auto" id="quadratic-probing">Quadratic Probing</h3>
 <ul dir="auto">
@@ -337,24 +343,21 @@ Algorithm remove(k):
 </li>
 </ul>
 <h3 dir="auto" id="double-hashing">Double hashing</h3>
-<p dir="auto">Secondary hash function <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span> handles collisions by
-placing an item in the first available cell of the series
-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo>+</mo><mi>j</mi><mi>d</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mspace></mspace><mspace width="0.6667em"/><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mtext> </mtext><mtext> </mtext><mi>N</mi></mrow><annotation encoding="application/x-tex">(h(k) + jd(k)) \mod N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">h</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">))</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.6667em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><mi>N</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">j = 1, 2, … , N - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></p>
+<p dir="auto">Secondary hash function <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span> handles collisions by placing an item in the first available cell of the series
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo>+</mo><mi>j</mi><mi>d</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mspace></mspace><mspace width="0.6667em"/><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mtext> </mtext><mtext> </mtext><mi>N</mi></mrow><annotation encoding="application/x-tex">(h(k) + jd(k)) \mod N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">h</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">))</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.6667em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><mi>N</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">j = 0, 1, 2, … , N - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></p>
 <p dir="auto">Consider a hash table storing integer keys that handles collision with double
 hashing</p>
 <p dir="auto"><img src="assets/IMG60.PNG" alt="Alt text" data-src="assets/IMG60.PNG"></p>
 <h3 dir="auto" id="hashing-performance">Hashing performance</h3>
 <ul dir="auto">
-<li dir="auto">O(1) – expected running time of all Map
-operations</li>
-<li dir="auto">O(n) – worst case for searches, insertions and
-removals
+<li dir="auto">O(1) – expected running time of all Map operations</li>
+<li dir="auto">O(n) – worst case for searches, insertions and removals
 <ul dir="auto">
 <li dir="auto">occurs when all keys inserted into the map collide</li>
 </ul>
 </li>
 </ul>
-<p dir="auto">Load factor <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>n</mi><mo>÷</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">a = n÷N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> affects performance of a hash table</p>
+<p dir="auto">Load factor <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>n</mi><mi mathvariant="normal">/</mi><mi>N</mi></mrow><annotation encoding="application/x-tex">a = n/N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> affects performance of a hash table</p>
 <ul dir="auto">
 <li dir="auto">Expected number of probes for an insertion
 with open addressing is</li>
@@ -363,14 +366,14 @@ with open addressing is</li>
 </ul>
 <h3 dir="auto" id="load-factors">Load Factors</h3>
 <ul dir="auto">
-<li dir="auto"><strong>Chaining</strong>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> = 0.8 to 1.0 acceptable
+<li dir="auto"><strong>Separate Chaining</strong>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> = 0.8 to 1.0 acceptable
 <ul dir="auto">
 <li dir="auto">If <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> = 1, one element per list</li>
 <li dir="auto">Low space overhead; a good hash function will give us on average <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> elements per linked list</li>
 <li dir="auto">Note that load can be arbitrarily large (chains approach infinite length as <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> approaches infinity)</li>
 </ul>
 </li>
-<li dir="auto">Probing: Depends on the type, but typically <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> &lt; 2/3 is desired
+<li dir="auto"><strong>Linear Probing</strong>: Depends on the type, but typically <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> &lt; 2/3 is desired
 <ul dir="auto">
 <li dir="auto">Python’s own open addressing uses 2/3</li>
 </ul>
@@ -437,6 +440,7 @@ or not” (think duplication detection for example)</p>
 <ul dir="auto">
 <li dir="auto">w is a 'yes' as some of the bits are on</li>
 </ul>
+<h3 dir="auto" id="perfect-hashing">Perfect hashing</h3>
 <p dir="auto">Idea: Given our set of keys S, we do some “offline work” to find a hash function that gives no collisions</p>
 <ul dir="auto">
 <li dir="auto">Then, we know that we can always get constant-time access to those entries!</li>
