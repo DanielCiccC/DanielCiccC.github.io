@@ -147,10 +147,10 @@ init | Label nodes with initial distances | Topological sort | visit in topologi
 ![Alt text](assets\IMG196.PNG) | ![Alt text](assets\IMG197.PNG) | ![Alt text](assets\IMG198.PNG) | ![Alt text](assets\IMG199.PNG) | ![Alt text](assets\IMG200.PNG)
 
 
-## Downside of DAG Approach?
+### Downside of DAG Approach?
 - Not all graphs are DAG's
 
-### Minimum Spanning trees
+## Minimum Spanning trees
 - Spanning Subgraph
   - subgraph of a graph G
 containing all vertices of G
