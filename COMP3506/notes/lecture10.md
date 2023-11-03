@@ -36,7 +36,6 @@ Algorithm BruteForceMatch(T, P)
         else
             break while loop {mismatch}
         return  -1 {no match anywhere}
-
 ```
 
 - Brute-force pattern matching runs in time O(nm)
@@ -46,7 +45,7 @@ Algorithm BruteForceMatch(T, P)
 ![Alt text](assets\IMG138.PNG)
 
 ### Can we do better?
-- Boyer-Moore pattern matching algorithm
+- **Boyer-Moore** pattern matching algorithm
 - Attempts to improve the Brute-Force 
 approach by using two heuristics
   - Looking-glass heuristic
@@ -70,11 +69,23 @@ P with T[i]
 
 ### Example
 - at the end, mitmatches on a h and realigns
+  
 ![Alt text](assets\IMG142.PNG)
+
+### Terminology (used further)
+
+symbol | def'n
+|--- | ---
+|$\Sigma$ | alphabet
+| $P$ | Pattern
+| $T$ | full string (to pattern match)
+| $m$ | $|P|$, the size of the pattern P
+| $s$ | $|\Sigma |$, the size of sigma
+
 
 ### Last-Occurrence Function
 - Boyer-Moore’s algorithm preprocesses the 
-pattern P and the alphabet $\Sigma$ to build the last-occurrence function L mapping $\Sigma$ to integers, where $L(c)$ is defined as
+pattern P and the alphabet $\Sigma$ to build the **last-occurrence** function L mapping $\Sigma$ to integers, where $L(c)$ is defined as
   - largest index i such that P[i] = c or
   - -1 if no such index exists 
 
@@ -82,13 +93,14 @@ pattern P and the alphabet $\Sigma$ to build the last-occurrence function L mapp
   - $\Sigma = {a, b, c, d}$ 
   - $P = abacab$
 
-
-![Alt text](assets\IMG143.PNG)
+Then:
+$c$ | a | b | c | d
+|--- | --- | --- |--- | --- |
+|$L(c)$ | 4 | 5 | 3 | -1
 
 ### Last Occurrence Function
 Can be represented by an array indexed by the numeric codes of the characters
-- computed in $O(m + s)$ time, where m is the 
-size of P and s is the size of $\Sigma$
+- computed in $O(m + s)$ time, where `m` is the size of `P` and `s` is the size of $\Sigma$
 - accessed in O(1) time
 
 ```
@@ -115,14 +127,12 @@ repeat
 
 ### Performance analysis
 
-- Runs in O(nm + s) time
+- Runs in $O(nm + s)$ time
   - Could potentially be worst than brute force time
 - Example of worst case
   - T = aaa … a
   - P = baaa
-- Boyer-Moore’s algorithm 
-is significantly faster than 
-the brute-force algorithm
+- Boyer-Moore’s algorithm is *significantly* faster than the brute-force algorithm
 
 #### Worst case example
 
@@ -196,7 +206,7 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }
 
 ![Alt text](assets\IMG147.PNG)
 
-- sometime represented as a special symbol to denote that a word ends on an internal node
+- sometimes represented as a special symbol to denote that a word ends on an internal node
 
 ![Alt text](assets\IMG148.PNG)
 
@@ -205,10 +215,10 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }
 - ``n`` total size of the strings in S
 - ``m`` size of the string parameter of the (e.g. search) operation
 - ``d`` size of the alphabet (mostly fixed? i.e. acgt)
-- uses O(n) space
-- supports searches, insertions and deletions in time O(dm)
+- uses ``O(n)`` space
+- supports searches, insertions and deletions in time ``O(dm)``
 
-
+### Word matching with a trie
 - Insert words of the text into trie
 - Each leaf is associated w/ one particular word
 - Leaf stores indices where associated word begins (“see” starts at index 0 & 24, leaf for “see” stores those indices)
@@ -230,7 +240,7 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }
 - What is the maximum number of nodes in a compressed trie storing s words?
   - s + (s -1) = 2 s -1
 
-### Compact Representation
+### Compact Representation (NOT ON EXAM)
 
 Want to create a compact representation of a compressed tree 
 
@@ -263,15 +273,15 @@ Compact representation of a compressed trie for an array of strings
     - Search is repeatedly triggered as the query is built, and suggestions returned ASAP!
     - Only return endpoint suggestions – ranked by weight
 
-![Alt text](assets\IMG152.PNG)
-
-![Alt text](assets\IMG153.PNG)
+Given the prefix | return the list of k completions
+|--- | ---
+![Alt text](assets\IMG152.PNG) | ![Alt text](assets\IMG153.PNG)
 
 ## Suffix arrays
 
 ### Suffix Tree (Suffix Trie)
-- Suffix tree of a string T is the compressed trie of all 
-the suffixes of T
+- Suffix tree of a string `T` is the compressed trie of all 
+the suffixes of `T`
 
 ![Alt text](assets\IMG154.PNG)
 
@@ -286,8 +296,8 @@ the suffixes of T
 leaf nodes below
 - Walk down the tree until we run out of 
 pattern to match
-- Return the count of leaf nodes below us
-- **find the patterns in text**
+- **Return the count of leaf nodes below us**
+- *find the patterns in text*
   - number of children in a suffix array
 
 ### Other query types
@@ -304,12 +314,13 @@ Given two strings ``A`` and ``B``, what is their longest common substring?
 - Do the same for ``B``
 - The deepest node with both bits set is the longest common substring of both!
 
+### Analysis and performance
 - Compact representation of the suffix tree for a string ``T`` of size ``t`` from an alphabet of size ``d``
 - Uses $O(t)$ space (linear in the input text)
-- Supports arbitrary pattern matching queries in T in O(d x p) time, where p is the size of the pattern
-  - If we assume d is O(1), this becomes O(p) time
-  - Then, finding all occurrences of P in Twill cost O(p + k) where k is the number of times P occurs in T!
-- Can construct a suffix tree in O(t) time
+- Supports arbitrary pattern matching queries in `T` in `O(d x p)` time, where `p` is the size of the pattern
+  - If we assume `d` is `O(1)`, this becomes `O(p)` time
+  - Then, finding all occurrences of P in T will cost `O(p + k)` where `k` is the number of times `P` occurs in `T`!
+- Can construct a suffix tree in `O(t)` time
   - Out of scope of this course: Ukkonen’s algorithm.
 - **If you have a text in a pattern, to find all positions of the pattern in the text, build a suffix tree and find them all much quicker**
 
@@ -332,7 +343,7 @@ Does the string “bana” occur in T ? Binary Search the SA!
 - MIGHT NEED LOWER BOUNDING
 
 ### Suffix Array Analysis
-- Can be constructed in linear time, O(n) Out of scope for this course
+- Can be constructed in linear time, `O(n)` Out of scope for this course
 - Space occupancy is empirically better than the suffix tree (dont need to store pointers)
-  - Just store T and a list of |T| integers!
+  - Just store `T` and a list of $|T|$ integers!
 - May support a limited subset of suffix tree operations, but can be augmented to achieve more functionality

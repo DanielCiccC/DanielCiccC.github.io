@@ -281,15 +281,14 @@ return tree T
 - Whenever an element is processed, it goes into a set of size at least double, hence each element is processed at most $log n$ times
 
 ### Partition-base implementation
-- Partition-based version of Kruskal’s 
-Algorithm 
+- Partition-based version of Kruskal’s Algorithm 
   - cluster merges as unions 
   - cluster locations as finds
-- Running time $O((n + m) log n)$
-  - priority queue operations: $O(m log n)$
-    - Is actually $O(m \log m)$ but we note that $m$ is $O(n^{2})$ for a simple graph. Using log laws we get this this result.
-  - union-find operations: $O(n log n)$
-    - each position can be charged at most $O(\log n)$ times, since the size of the cluster's group doubles each time. Occurs max $n$ times, therefore, $O(n log n)$
+- Running time of kruskal's algorithm: $O((n + m) \log n)$
+  - priority queue operations: $O(m \log n)$
+    - Is actually $O(m \log m)$ but we note that $m$ is $O(n^{2})$ for a simple graph. Using log laws we get to this result.
+  - union-find operations: $O(n \log n)$
+    - each position can be charged at most $O(\log n)$ times, since the size of the cluster's group doubles each time. Occurs max $n$ times, therefore, $O(n \log n)$
 
 ## Solving Graph problems
 

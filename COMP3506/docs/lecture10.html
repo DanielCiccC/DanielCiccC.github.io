@@ -24,9 +24,9 @@
 
 </header>
 <main>
-<h1 dir="auto" id="lecture-10">Lecture 10</h1>
-<h2 dir="auto" id="strings-and-pattern-matching">Strings and pattern matching</h2>
-<h3 dir="auto" id="strings">Strings</h3>
+<h1 dir="auto" id="lecture-10-1">Lecture 10</h1>
+<h2 dir="auto" id="strings-and-pattern-matching-1">Strings and pattern matching</h2>
+<h3 dir="auto" id="strings-1">Strings</h3>
 <ul dir="auto">
 <li dir="auto">
 <p dir="auto">Sequence of characters</p>
@@ -48,7 +48,7 @@
 <p dir="auto">Suffix: substring of the type <code>S[i...m-1]</code></p>
 </li>
 </ul>
-<h3 dir="auto" id="pattern-matching-problem">Pattern Matching Problem</h3>
+<h3 dir="auto" id="pattern-matching-problem-1">Pattern Matching Problem</h3>
 <ul dir="auto">
 <li dir="auto">Given string <code>T</code> (text) and P(pattern)
 <ul dir="auto">
@@ -56,7 +56,7 @@
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="brute-force-pattern-matching">Brute force pattern matching</h3>
+<h3 dir="auto" id="brute-force-pattern-matching-1">Brute force pattern matching</h3>
 <ul dir="auto">
 <li dir="auto">Compare the pattern P with the text T
 for each possible shift of P relative to T</li>
@@ -76,7 +76,6 @@ for each possible shift of P relative to T</li>
         else
             break while loop {mismatch}
         return  -1 {no match anywhere}
-
 </div></code></code></pre>
 <ul dir="auto">
 <li dir="auto">Brute-force pattern matching runs in time O(nm)</li>
@@ -87,9 +86,9 @@ for each possible shift of P relative to T</li>
 </li>
 </ul>
 <p dir="auto"><img src="assets\IMG138.PNG" alt="Alt text" data-src="assets%5CIMG138.PNG"></p>
-<h3 dir="auto" id="can-we-do-better">Can we do better?</h3>
+<h3 dir="auto" id="can-we-do-better-1">Can we do better?</h3>
 <ul dir="auto">
-<li dir="auto">Boyer-Moore pattern matching algorithm</li>
+<li dir="auto"><strong>Boyer-Moore</strong> pattern matching algorithm</li>
 <li dir="auto">Attempts to improve the Brute-Force
 approach by using two heuristics
 <ul dir="auto">
@@ -98,13 +97,13 @@ approach by using two heuristics
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="boyer-moore-looking-glass-heuristic">Boyer-Moore: Looking-Glass Heuristic</h3>
+<h3 dir="auto" id="boyer-moore-looking-glass-heuristic-1">Boyer-Moore: Looking-Glass Heuristic</h3>
 <ul dir="auto">
 <li dir="auto">Compare P with a subsequence of T moving
 backwards</li>
 </ul>
 <p dir="auto"><img src="assets\IMG139.PNG" alt="Alt text" data-src="assets%5CIMG139.PNG"></p>
-<h3 dir="auto" id="boyer-moore-character-jump-heuristic">Boyer-Moore: Character-Jump Heuristic</h3>
+<h3 dir="auto" id="boyer-moore-character-jump-heuristic-1">Boyer-Moore: Character-Jump Heuristic</h3>
 <ul dir="auto">
 <li dir="auto">
 <p dir="auto">When a mismatch occurs at T[i] = c</p>
@@ -119,16 +118,47 @@ P with T[i]
 </li>
 </ul>
 <p dir="auto"><img src="assets\IMG141.PNG" alt="Alt text" data-src="assets%5CIMG141.PNG"></p>
-<h3 dir="auto" id="example">Example</h3>
+<h3 dir="auto" id="example-2">Example</h3>
 <ul dir="auto">
-<li dir="auto">at the end, mitmatches on a h and realigns
-<img src="assets\IMG142.PNG" alt="Alt text" data-src="assets%5CIMG142.PNG"></li>
+<li dir="auto">at the end, mitmatches on a h and realigns</li>
 </ul>
-<h3 dir="auto" id="last-occurrence-function">Last-Occurrence Function</h3>
+<p dir="auto"><img src="assets\IMG142.PNG" alt="Alt text" data-src="assets%5CIMG142.PNG"></p>
+<h3 dir="auto" id="terminology-used-further-1">Terminology (used further)</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>symbol</th>
+<th>def'n</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Σ</span></span></span></span></td>
+<td>alphabet</td>
+</tr>
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span></td>
+<td>Pattern</td>
+</tr>
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span></td>
+<td>full string (to pattern match)</td>
+</tr>
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span></td>
+<td>$</td>
+</tr>
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span></td>
+<td>$</td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="last-occurrence-function-2">Last-Occurrence Function</h3>
 <ul dir="auto">
 <li dir="auto">
 <p dir="auto">Boyer-Moore’s algorithm preprocesses the
-pattern P and the alphabet <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Σ</span></span></span></span> to build the last-occurrence function L mapping <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Σ</span></span></span></span> to integers, where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">L(c)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mclose">)</span></span></span></span> is defined as</p>
+pattern P and the alphabet <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Σ</span></span></span></span> to build the <strong>last-occurrence</strong> function L mapping <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Σ</span></span></span></span> to integers, where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">L(c)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mclose">)</span></span></span></span> is defined as</p>
 <ul dir="auto">
 <li dir="auto">largest index i such that P[i] = c or</li>
 <li dir="auto">-1 if no such index exists</li>
@@ -142,12 +172,31 @@ pattern P and the alphabet <span class="katex"><span class="katex-mathml"><math 
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="assets\IMG143.PNG" alt="Alt text" data-src="assets%5CIMG143.PNG"></p>
-<h3 dir="auto" id="last-occurrence-function-1">Last Occurrence Function</h3>
+<p dir="auto">Then:</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>d</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">L(c)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal">c</span><span class="mclose">)</span></span></span></span></td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="last-occurrence-function-3">Last Occurrence Function</h3>
 <p dir="auto">Can be represented by an array indexed by the numeric codes of the characters</p>
 <ul dir="auto">
-<li dir="auto">computed in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>m</mi><mo>+</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(m + s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">s</span><span class="mclose">)</span></span></span></span> time, where m is the
-size of P and s is the size of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Σ</span></span></span></span></li>
+<li dir="auto">computed in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>m</mi><mo>+</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(m + s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">s</span><span class="mclose">)</span></span></span></span> time, where <code>m</code> is the size of <code>P</code> and <code>s</code> is the size of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Σ</span></span></span></span></li>
 <li dir="auto">accessed in O(1) time</li>
 </ul>
 <pre><code dir="auto"><code><div>Algorithm BoyerMooreMatch(T, P, S)
@@ -170,9 +219,9 @@ repeat
     until  i &gt; n - 1
     return -1 { no match}
 </div></code></code></pre>
-<h3 dir="auto" id="performance-analysis">Performance analysis</h3>
+<h3 dir="auto" id="performance-analysis-1">Performance analysis</h3>
 <ul dir="auto">
-<li dir="auto">Runs in O(nm + s) time
+<li dir="auto">Runs in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>m</mi><mo>+</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(nm + s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">nm</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">s</span><span class="mclose">)</span></span></span></span> time
 <ul dir="auto">
 <li dir="auto">Could potentially be worst than brute force time</li>
 </ul>
@@ -183,13 +232,11 @@ repeat
 <li dir="auto">P = baaa</li>
 </ul>
 </li>
-<li dir="auto">Boyer-Moore’s algorithm
-is significantly faster than
-the brute-force algorithm</li>
+<li dir="auto">Boyer-Moore’s algorithm is <em>significantly</em> faster than the brute-force algorithm</li>
 </ul>
-<h4 dir="auto" id="worst-case-example">Worst case example</h4>
+<h4 dir="auto" id="worst-case-example-1">Worst case example</h4>
 <p dir="auto"><img src="assets\IMG144.PNG" alt="Alt text" data-src="assets%5CIMG144.PNG"></p>
-<h3 dir="auto" id="knuth-morris-pratt-kmp-algorithm">Knuth-Morris-Pratt (KMP) Algorithm</h3>
+<h3 dir="auto" id="knuth-morris-pratt-kmp-algorithm-1">Knuth-Morris-Pratt (KMP) Algorithm</h3>
 <ul dir="auto">
 <li dir="auto">Compares the pattern to the text left-to-right
 <ul dir="auto">
@@ -205,7 +252,7 @@ the brute-force algorithm</li>
 </li>
 </ul>
 <p dir="auto"><img src="assets\IMG145.PNG" alt="Alt text" data-src="assets%5CIMG145.PNG"></p>
-<h3 dir="auto" id="kmp-failure-function">KMP failure function</h3>
+<h3 dir="auto" id="kmp-failure-function-1">KMP failure function</h3>
 <ul dir="auto">
 <li dir="auto">KMP algorithm preprocesses the pattern</li>
 <li dir="auto">Failure function F(j) is defined as the size of the largest prefix of P[0..j] that is also a suffix of P[1..j]</li>
@@ -244,7 +291,7 @@ the brute-force algorithm</li>
 </tr>
 </tbody>
 </table>
-<h3 dir="auto" id="kmp-algorithm">KMP Algorithm</h3>
+<h3 dir="auto" id="kmp-algorithm-1">KMP Algorithm</h3>
 <ul dir="auto">
 <li dir="auto">Failure function can be represented by an array and can be computed in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span> time</li>
 <li dir="auto">Each iteration of the while-loop, either
@@ -274,10 +321,10 @@ else
         i &lt;- i + 1
 return  -1 { no match }
 </div></code></code></pre>
-<h3 dir="auto" id="example-1">Example</h3>
+<h3 dir="auto" id="example-3">Example</h3>
 <p dir="auto"><img src="assets\IMG146.PNG" alt="Alt text" data-src="assets%5CIMG146.PNG"></p>
-<h2 dir="auto" id="tries---retrieval-tries">Tries - Retrieval Tries</h2>
-<h3 dir="auto" id="preprocessing-steps">Preprocessing steps</h3>
+<h2 dir="auto" id="tries---retrieval-tries-1">Tries - Retrieval Tries</h2>
+<h3 dir="auto" id="preprocessing-steps-1">Preprocessing steps</h3>
 <ul dir="auto">
 <li dir="auto">Preprocessing the pattern speeds up pattern matching queries
 <ul dir="auto">
@@ -294,39 +341,26 @@ return  -1 { no match }
 S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
 <p dir="auto"><img src="assets\IMG147.PNG" alt="Alt text" data-src="assets%5CIMG147.PNG"></p>
 <ul dir="auto">
-<li dir="auto">sometime represented as a special symbol to denote that a word ends on an internal node</li>
+<li dir="auto">sometimes represented as a special symbol to denote that a word ends on an internal node</li>
 </ul>
 <p dir="auto"><img src="assets\IMG148.PNG" alt="Alt text" data-src="assets%5CIMG148.PNG"></p>
-<h3 dir="auto" id="analysis-of-standard-tries">Analysis of standard tries</h3>
+<h3 dir="auto" id="analysis-of-standard-tries-1">Analysis of standard tries</h3>
 <ul dir="auto">
-<li dir="auto">
-<p dir="auto"><code>n</code> total size of the strings in S</p>
-</li>
-<li dir="auto">
-<p dir="auto"><code>m</code> size of the string parameter of the (e.g. search) operation</p>
-</li>
-<li dir="auto">
-<p dir="auto"><code>d</code> size of the alphabet (mostly fixed? i.e. acgt)</p>
-</li>
-<li dir="auto">
-<p dir="auto">uses O(n) space</p>
-</li>
-<li dir="auto">
-<p dir="auto">supports searches, insertions and deletions in time O(dm)</p>
-</li>
-<li dir="auto">
-<p dir="auto">Insert words of the text into trie</p>
-</li>
-<li dir="auto">
-<p dir="auto">Each leaf is associated w/ one particular word</p>
-</li>
-<li dir="auto">
-<p dir="auto">Leaf stores indices where associated word begins (“see” starts at index 0 &amp; 24, leaf for “see” stores those indices)</p>
-</li>
+<li dir="auto"><code>n</code> total size of the strings in S</li>
+<li dir="auto"><code>m</code> size of the string parameter of the (e.g. search) operation</li>
+<li dir="auto"><code>d</code> size of the alphabet (mostly fixed? i.e. acgt)</li>
+<li dir="auto">uses <code>O(n)</code> space</li>
+<li dir="auto">supports searches, insertions and deletions in time <code>O(dm)</code></li>
+</ul>
+<h3 dir="auto" id="word-matching-with-a-trie-1">Word matching with a trie</h3>
+<ul dir="auto">
+<li dir="auto">Insert words of the text into trie</li>
+<li dir="auto">Each leaf is associated w/ one particular word</li>
+<li dir="auto">Leaf stores indices where associated word begins (“see” starts at index 0 &amp; 24, leaf for “see” stores those indices)</li>
 </ul>
 <p dir="auto"><img src="assets\IMG149.PNG" alt="Alt text" data-src="assets%5CIMG149.PNG"></p>
 <p dir="auto"><img src="assets\IMG150.PNG" alt="Alt text" data-src="assets%5CIMG150.PNG"></p>
-<h3 dir="auto" id="compressed-tries">Compressed Tries</h3>
+<h3 dir="auto" id="compressed-tries-1">Compressed Tries</h3>
 <ul dir="auto">
 <li dir="auto">
 <p dir="auto">Compressed trie has internal nodes of degree at least two</p>
@@ -349,7 +383,7 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="compact-representation">Compact Representation</h3>
+<h3 dir="auto" id="compact-representation-not-on-exam-1">Compact Representation (NOT ON EXAM)</h3>
 <p dir="auto">Want to create a compact representation of a compressed tree</p>
 <p dir="auto">Compact representation of a compressed trie for an array of strings</p>
 <ul dir="auto">
@@ -357,23 +391,23 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
 <li dir="auto">Uses <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">s</span><span class="mclose">)</span></span></span></span> space, where s is the number of strings in the array</li>
 <li dir="auto">Serves as an auxiliary index structure</li>
 </ul>
-<h3 dir="auto" id="tries---outside-of-patterns">Tries - outside of patterns</h3>
+<h3 dir="auto" id="tries---outside-of-patterns-1">Tries - outside of patterns</h3>
 <ul dir="auto">
 <li dir="auto">Tries have other common uses outside of simple pattern matching (finding patterns in a given text efficiently)</li>
 <li dir="auto">One common example: Autosuggestion engines</li>
 </ul>
-<h3 dir="auto" id="input-query-logs">Input: Query Logs</h3>
+<h3 dir="auto" id="input-query-logs-1">Input: Query Logs</h3>
 <ul dir="auto">
 <li dir="auto">Take a large log of historical queries</li>
 <li dir="auto">Count the number of times each query appears</li>
 <li dir="auto">Basic idea: The autosuggestion engine should spit out suggestions based on historical popularity</li>
 <li dir="auto">Input data then becomes a sequence of <query> <count> pairs</li>
 </ul>
-<h3 dir="auto" id="building-the-trie">Building the Trie</h3>
+<h3 dir="auto" id="building-the-trie-1">Building the Trie</h3>
 <ul dir="auto">
 <li dir="auto">Each node (or edge) also holds a weight corresponding to the volume of queries that were issued for that prefix</li>
 </ul>
-<h3 dir="auto" id="querying-the-trie">Querying the Trie</h3>
+<h3 dir="auto" id="querying-the-trie-1">Querying the Trie</h3>
 <ul dir="auto">
 <li dir="auto">Given a prefix P, we want to return a ranked list of k completions
 <ul dir="auto">
@@ -388,34 +422,46 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="image-1.png" alt="Alt text" data-src="image-1.png"></p>
-<p dir="auto"><img src="image-3.png" alt="Alt text" data-src="image-3.png"></p>
-<h2 dir="auto" id="suffix-arrays">Suffix arrays</h2>
-<h3 dir="auto" id="suffix-tree-suffix-trie">Suffix Tree (Suffix Trie)</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>Given the prefix</th>
+<th>return the list of k completions</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="assets\IMG152.PNG" alt="Alt text" data-src="assets%5CIMG152.PNG"></td>
+<td><img src="assets\IMG153.PNG" alt="Alt text" data-src="assets%5CIMG153.PNG"></td>
+</tr>
+</tbody>
+</table>
+<h2 dir="auto" id="suffix-arrays-2">Suffix arrays</h2>
+<h3 dir="auto" id="suffix-tree-suffix-trie-1">Suffix Tree (Suffix Trie)</h3>
 <ul dir="auto">
-<li dir="auto">Suffix tree of a string T is the compressed trie of all
-the suffixes of T</li>
+<li dir="auto">Suffix tree of a string <code>T</code> is the compressed trie of all
+the suffixes of <code>T</code></li>
 </ul>
-<p dir="auto"><img src="image-4.png" alt="Alt text" data-src="image-4.png"></p>
+<p dir="auto"><img src="assets\IMG154.PNG" alt="Alt text" data-src="assets%5CIMG154.PNG"></p>
 <ul dir="auto">
 <li dir="auto"><code>n</code> suffixes for a string of length n</li>
 </ul>
-<h3 dir="auto" id="suffix-tree-compact-rep">Suffix Tree: Compact Rep.</h3>
-<p dir="auto"><img src="image-5.png" alt="Alt text" data-src="image-5.png"></p>
-<h3 dir="auto" id="suffix-tree-pattern-matching">Suffix Tree Pattern Matching</h3>
+<h3 dir="auto" id="suffix-tree-compact-rep-1">Suffix Tree: Compact Rep.</h3>
+<p dir="auto"><img src="assets\IMG155.PNG" alt="Alt text" data-src="assets%5CIMG155.PNG"></p>
+<h3 dir="auto" id="suffix-tree-pattern-matching-1">Suffix Tree Pattern Matching</h3>
 <ul dir="auto">
 <li dir="auto">Maintain, at each node, the number of
 leaf nodes below</li>
 <li dir="auto">Walk down the tree until we run out of
 pattern to match</li>
-<li dir="auto">Return the count of leaf nodes below us</li>
-<li dir="auto"><strong>find the patterns in text</strong>
+<li dir="auto"><strong>Return the count of leaf nodes below us</strong></li>
+<li dir="auto"><em>find the patterns in text</em>
 <ul dir="auto">
 <li dir="auto">number of children in a suffix array</li>
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="other-query-types">Other query types</h3>
+<h3 dir="auto" id="other-query-types-1">Other query types</h3>
 <ul dir="auto">
 <li dir="auto">Count the number of occurrences of <code>P</code> in <code>T</code>  (we just saw this)</li>
 <li dir="auto">Output the locations of all occurrences of <code>P</code> in <code>T</code></li>
@@ -424,48 +470,34 @@ pattern to match</li>
 </ul>
 <p dir="auto">Given two strings <code>A</code> and <code>B</code>, what is their longest common substring?</p>
 <ul dir="auto">
-<li dir="auto">
-<p dir="auto">Idea: Create a new string by concatenating <code>A</code> and <code>B</code> together with a special delimiter</p>
+<li dir="auto">Idea: Create a new string by concatenating <code>A</code> and <code>B</code> together with a special delimiter
 <ul dir="auto">
 <li dir="auto"><code>C = A|B</code>  (where ‘|’ is our special delimiter)</li>
 </ul>
 </li>
-<li dir="auto">
-<p dir="auto">Build a suffix tree on <code>C</code></p>
-</li>
-<li dir="auto">
-<p dir="auto">Mark subtrees with a bit corresponding to whether the subtree holds a suffix of <code>A</code></p>
-</li>
-<li dir="auto">
-<p dir="auto">Do the same for <code>B</code></p>
-</li>
-<li dir="auto">
-<p dir="auto">The deepest node with both bits set is the longest common substring of both!</p>
-</li>
-<li dir="auto">
-<p dir="auto">Compact representation of the suffix tree for a string <code>T</code> of size <code>t</code> from an alphabet of size <code>d</code></p>
-</li>
-<li dir="auto">
-<p dir="auto">Uses <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> space (linear in the input text)</p>
-</li>
-<li dir="auto">
-<p dir="auto">Supports arbitrary pattern matching queries in T in O(d x p) time, where p is the size of the pattern</p>
+<li dir="auto">Build a suffix tree on <code>C</code></li>
+<li dir="auto">Mark subtrees with a bit corresponding to whether the subtree holds a suffix of <code>A</code></li>
+<li dir="auto">Do the same for <code>B</code></li>
+<li dir="auto">The deepest node with both bits set is the longest common substring of both!</li>
+</ul>
+<h3 dir="auto" id="analysis-and-performance-1">Analysis and performance</h3>
 <ul dir="auto">
-<li dir="auto">If we assume d is O(1), this becomes O(p) time</li>
-<li dir="auto">Then, finding all occurrences of P in Twill cost O(p + k) where k is the number of times P occurs in T!</li>
+<li dir="auto">Compact representation of the suffix tree for a string <code>T</code> of size <code>t</code> from an alphabet of size <code>d</code></li>
+<li dir="auto">Uses <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> space (linear in the input text)</li>
+<li dir="auto">Supports arbitrary pattern matching queries in <code>T</code> in <code>O(d x p)</code> time, where <code>p</code> is the size of the pattern
+<ul dir="auto">
+<li dir="auto">If we assume <code>d</code> is <code>O(1)</code>, this becomes <code>O(p)</code> time</li>
+<li dir="auto">Then, finding all occurrences of P in T will cost <code>O(p + k)</code> where <code>k</code> is the number of times <code>P</code> occurs in <code>T</code>!</li>
 </ul>
 </li>
-<li dir="auto">
-<p dir="auto">Can construct a suffix tree in O(t) time</p>
+<li dir="auto">Can construct a suffix tree in <code>O(t)</code> time
 <ul dir="auto">
 <li dir="auto">Out of scope of this course: Ukkonen’s algorithm.</li>
 </ul>
 </li>
-<li dir="auto">
-<p dir="auto"><strong>If you have a text in a pattern, to find all positions of the pattern in the text, build a suffix tree and find them all much quicker</strong></p>
-</li>
+<li dir="auto"><strong>If you have a text in a pattern, to find all positions of the pattern in the text, build a suffix tree and find them all much quicker</strong></li>
 </ul>
-<h3 dir="auto" id="suffix-arrays-1">Suffix Arrays</h3>
+<h3 dir="auto" id="suffix-arrays-3">Suffix Arrays</h3>
 <ul dir="auto">
 <li dir="auto">
 <p dir="auto">Suffix Trees:
@@ -487,18 +519,18 @@ Even though space consumption is <code>O(t)</code> where <code>t = |T|</code> (l
 <p dir="auto">The resultant indexes are the suffix array!</p>
 </li>
 </ul>
-<p dir="auto"><img src="image-6.png" alt="Alt text" data-src="image-6.png"></p>
+<p dir="auto"><img src="assets\IMG156.PNG" alt="Alt text" data-src="assets%5CIMG156.PNG"></p>
 <p dir="auto">Does the string “bana” occur in T ? Binary Search the SA!</p>
-<p dir="auto"><img src="image-7.png" alt="Alt text" data-src="image-7.png"></p>
+<p dir="auto"><img src="assets\IMG157.PNG" alt="Alt text" data-src="assets%5CIMG157.PNG"></p>
 <ul dir="auto">
 <li dir="auto">MIGHT NEED LOWER BOUNDING</li>
 </ul>
-<h3 dir="auto" id="suffix-array-analysis">Suffix Array Analysis</h3>
+<h3 dir="auto" id="suffix-array-analysis-1">Suffix Array Analysis</h3>
 <ul dir="auto">
-<li dir="auto">Can be constructed in linear time, O(n) Out of scope for this course</li>
+<li dir="auto">Can be constructed in linear time, <code>O(n)</code> Out of scope for this course</li>
 <li dir="auto">Space occupancy is empirically better than the suffix tree (dont need to store pointers)
 <ul dir="auto">
-<li dir="auto">Just store T and a list of |T| integers!</li>
+<li dir="auto">Just store <code>T</code> and a list of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>T</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|T|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">∣</span></span></span></span> integers!</li>
 </ul>
 </li>
 <li dir="auto">May support a limited subset of suffix tree operations, but can be augmented to achieve more functionality</li>
