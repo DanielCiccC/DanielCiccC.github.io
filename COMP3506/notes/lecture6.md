@@ -231,6 +231,11 @@ $(h(k) + jd(k)) \mod N$ for $j = 0, 1, 2, … , N - 1$
 
 Consider a hash table storing integer keys that handles collision with double 
 hashing
+E.g.
+- $N=13$
+- $h(k) = k \mod 13$
+- $d(k) = 7-k \mod 7$
+- $(h(k) + j\cdot d(k)) \mod 13$ 
 
 
 ![Alt text](assets/IMG60.PNG)

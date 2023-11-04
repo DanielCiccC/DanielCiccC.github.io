@@ -158,7 +158,7 @@ $$f(n) \ge c \cdot g(n)  \; \; \text{for} \; \; n  \ge n_{0} $$
 ### Big-Theta Notation
 
 - Big-Theta notation describes a tight bound on a function (if one exists)
-- f(n) is $\Theta (g(n))$ if f(n) is asymptotically equal to g(n)
+- $f(n)$ is $\Theta (g(n))$ if f(n) is asymptotically equal to g(n)
 - That is,
 
 Given functions $f(n)$ and $\Theta (n)$, we say that $f(n)$ is $\Theta (g(n))$

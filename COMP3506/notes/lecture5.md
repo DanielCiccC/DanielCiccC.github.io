@@ -166,8 +166,8 @@ removeMin in the PQ ADT corresponds to removing the root key from the heap
 
 ### Summary:
 
-|Performance
-|---
+|Performance | artefact
+|--- | ---
 |$O(n)$ | space
 |$O(n)$ | build
 |$O(\log n)$ | ``getMin()``
