@@ -17,10 +17,10 @@
 - And so on!
 
 ### Basic idea
-- We are given a text M
-- We encode M to generate a (hopefully) compressed representation C (M) 
-- Given C (M ), we can decode it to get back M’
-  - Lossless compression: M = M’
+- We are given a text `M`
+- We encode `M` to generate a (hopefully) compressed representation $C(M)$ 
+- Given $C(M)$, we can decode it to get back $M\prime$
+  - Lossless compression: $M = M\prime$
   - Lossy otherwise
 - Compression ratio: bits in C(M) / bits in M
     - the smaller the value the better
@@ -53,12 +53,14 @@ CCCCCCCCCCCCCCCCCCCCCCCCCTGG
 Ratio: $(11*8 + 3*32) / (58*8)$
   Around 40% of the original!
 
+### Run-Length-Encoding (RLE)
 - The more general idea here is called Run Length Encoding (RLE). 
 - List the character and then the run length as a pair:
+  - G1T1C1A1C9 means (G, 1) (T, 1) (C, 1) (A, 1) (C, 9)
+  - Works well for long runs of repeated data
 
 ### Smarter DNA coding
-- Alphabet size is 4, so we can represent 
-each base (A, G, T, C) with just two bits!
+- Alphabet size is 4, so we can represent each base (A, G, T, C) with just two bits!
 - A = 00, G = 01, T = 10, C = 11
 - Uses 112 bits (ignoring padding)
 - That’s about 25% of the original!
@@ -82,11 +84,11 @@ encode each character
 
 - Mapping each character of an alphabet to a binary code-word
   - no code-word is the prefix of another code-word
-  - Proof: No internal node is used as an endpoint
+  - Proof: *No internal node is used as an endpoint*
 - Encoding trie represents a prefix code
   - each external node stores a character
   - code word of a character is given by the path from the root to the external node storing the character 
-    - 0 for a left child and 1 for a right child
+    - 0 for a left child and 1 for a right child, e.g.
 
 |**Codex** | **Graph** |
 |---|---|
@@ -105,18 +107,16 @@ encode each character
   
 ![Alt text](assets\IMG160.PNG)
 
-- We want to find an optimal prefix-free coding scheme
-- How do we do that? Huffman coding!
 
-### Huffman Coding: History
-Given a string X, constructs a prefix code that 
-minimises the size of the encoding of X
+### Huffman Coding
+- We want to find an optimal prefix-free coding scheme
+- Given a string X, constructs a prefix code that minimises the size of the encoding of X
 - Given: a set of $n$ positive weights $w_{i}$
 - Compute: a set of $n$ corresponding codeword lengths, $l_{i}$, such that:
 
 $$\sum _{i=1} ^{n} 2^{-li} \le 1 \; \; \text{and}  \; \; \sum _{i=1} ^{n} w_{i} \cdot l_{i} \; \; \text{is minimal}$$
 
-- ensures we get a viable code (can't set li = 0)
+- ensures we get a viable code (can't set $l_{i}$ = 0)
 - minimises the overall cost of storing the input
 
 ```
@@ -142,14 +142,13 @@ return T
 
 ### Analysis of Huffman’s Algorithm
 Assuming that
-- n is the size of X
-- d is the number of distinct characters of X
+- `n` : size of X
+- `d` : number of distinct characters of X
 - PQ is implemented using a heap
-- Runs in O(n + d∙log d) time
+- Runs in $O(n + d \cdot \log d)$ time
 
 ## Real Huffman coding
-In practice, we don’t actually care about the codewords in the first instance – we
-actually want to compute the set of codeword lengths (how many bits to assign to each codeword)
+In practice, we don’t actually care about the codewords in the first instance – *we actually want to compute the set of codeword lengths* (how many bits to assign to each codeword)
 
 #### Huffman's example
 
@@ -167,21 +166,19 @@ But we can do better (where better does not mean a better code, but more beautif
 Because it means we can minimize the amount of information we provide to the decoder.
 Suppose we pass the symbols to the decoder in lexicographical order.
 If we sort the codewords first by their length and then lexicographically, 
-all we need to provide the decoder is the list of codeword lengths!
+all we need to provide the **decoder is the list of codeword lengths!**
 
 Sort them within their bit length buckets 
 
 ![Alt text](assets\IMG164.PNG)
 
-How to transmit the codebook?
-- Easy! Just transmit symbols in decreasing order of 
-bitlength, recording the number of symbols in each 
-bitlength group
+### How to transmit the codebook?
+- Transmit symbols in decreasing order of bitlength, recording the number of symbols in each bitlength group
+- IMPORTANT
 - Codebook = (4, 2, 2, 2, 0) (A, B, R, Y, L, M, C, O, U, Z)
   - know the most simple codeword you can come up with for a length of 5 bitlength group (it is 00000)
   - 0: “zero codewords of length 1”
   - 2: “two codewords of length 2”
-
 
 ### Decoder
 - Step 1. Recover the code/symbol mapping.

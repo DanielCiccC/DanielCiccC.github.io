@@ -68,15 +68,15 @@ for all  v <- G.vertices()
     else
         setDistance(v, (inf))
     PQ.insert(getDistance(v), v)
-    while !PQ.isEmpty()
-        u <- PQ.removeMin()
-        for all e in G.incidentEdges(u)
-            { relax edge e }
-            z <- G.opposite(u, e)
-            r <- getDistance(u) + weight(e)
-            if r < getDistance(z)
-                setDistance(z, r)
-                PQ.replaceKey(getLocator(z), r)
+while !PQ.isEmpty()
+    u <- PQ.removeMin()
+    for all e in G.incidentEdges(u)
+        { relax edge e }
+        z <- G.opposite(u, e)
+        r <- getDistance(u) + weight(e)
+        if r < getDistance(z)
+            setDistance(z, r)
+            PQ.replaceKey(getLocator(z), r)
 ```
 
 ### Analysis of Dijkstra's Algorithm
@@ -88,13 +88,13 @@ for all  v <- G.vertices()
   - setting/getting a label takes O(1) time
 - Priority queue operations
   - each vertex is **inserted once** into and **removed once** from the priority 
-queue, where each insertion or removal takes $O(log n)$ time
+queue, where each insertion or removal takes $O(\log n)$ time ($O(n \log n)$ changes total)
   - key of a vertex in the priority queue is modified at most ``deg(w)`` 
-times, where each key change takes O(log n) time 
+times, where each key change takes $O(\log n)$ time (therefore $O(m \log n)$ key changes in PQ)
 - Dijkstra’s algorithm runs in $O((n + m) log n)$ time
   - provided the graph is implemented as an adjacency list/map
   - recall that $\sum_{v} deg(v) = 2m$
-  - can also be expressed as O(m log n) since the graph is connected
+  - can also be expressed as $O(m \log n)$ since the graph is connected
 
 recall:
 - $n = |v|$ number of vertices
@@ -107,6 +107,8 @@ Dijkstra’s algorithm is based on the *greedy* method
 - If a node with a negative incident edge were to be added late to the cloud, it could mess up distances for vertices already in the cloud. 
   - negative edges are going to 'mess up' distances already inside your cloud
   - negative cycle - can keep on going around a cycle and costs keep getting lower and lower
+
+
 ![Alt text](assets\IMG116.PNG)
 
 ### Greedy Algorithm

@@ -93,13 +93,13 @@ Example: What steps would be involved in deleting the node with key=58?
 
 ### Performance
 
-- Consider an ordered map with n items implemented by means of a binary search tree of height h
+- Consider an ordered map with `n` items implemented by means of a binary search tree of height h
   - space used is O(n) (we have n things)
-  - get, put and remove take O(h) time ($h$ is the height of the tree)
+  - get, put and remove take $O(h)$ time ($h$ is the height of the tree)
     - when the tree is a stick, $h = n$
 - Height h is
-  - O(n) in the worst case
-  - O(log n) in the best case
+  - $O(n)$ in the worst case
+  - $O(\log n)$ in the best case
 
 ### What is I want to store duplicate keys?
 - Create a multimap (lookup multimap ADT)

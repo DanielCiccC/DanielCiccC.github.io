@@ -110,7 +110,7 @@ removeMin in the PQ ADT corresponds to removing the root key from the heap
 
 ### Downheap
 - Downheap replaces root key with key `k` of the last node and swaps key `k` along a downward path from the root
-  - swaps with the smaller of the two keys
+  - **swaps with the smaller of the two keys**
 - Because height of tree is $\log n$, downheap runs in $O(\log n)$
 - ``removeMin()`` corresponds to removing the root (smallest key) from the heap
 - Algorithm:
@@ -228,7 +228,7 @@ traverse the container to find the correct new location
 | ``replaceKey(e, k)`` | $O(\log n)$
 
 ## Performance
-❑ Improved times thanks to location-aware entries are highlighted in red
+- Improved times thanks to location-aware entries are highlighted in red
 **Method** | **Unsorted List** | **Sorted List** | **Heap**
 | --- | --- | --- | ---
 | ``size, isEmpty``| $O(1)$| $O(1)$ | $O(1)$ |

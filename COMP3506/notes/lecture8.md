@@ -334,7 +334,7 @@ Algorithm BFS(G, u)
     Q = new empty queue
     Q.enqueue(u)
     Mark vertex u as visited
-    while Q.isEmpty() do
+    while Q.isEmpty() do
         v = Q.dequeue()
         for all e in G.incidentEdges(v) do
             if e is not explored then
@@ -470,7 +470,7 @@ A digraph has a topological ordering if and only if it is a DAG
 
 ### Algorithim for Topological sorting
 - Essentially, find the vertex with no outgoing edges, and label it the highest number. remove it from the graph and edges associated with it
-- 
+  
 ```
 Algorithm TopologicalSort(G):
   H <- G // Temporary copy of G
