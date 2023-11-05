@@ -24,14 +24,14 @@
 
 </header>
 <main>
-<h1 dir="auto" id="lecture-11-1">Lecture 11</h1>
-<h2 dir="auto" id="text-compression-1">Text compression</h2>
-<h3 dir="auto" id="what-is-compression-1">What is compression?</h3>
+<h1 dir="auto" id="lecture-11">Lecture 11</h1>
+<h2 dir="auto" id="text-compression">Text compression</h2>
+<h3 dir="auto" id="what-is-compression">What is compression?</h3>
 <ul dir="auto">
 <li dir="auto">Idea: We want to reduce the size of some data. This allows faster transfer across networks, smaller footprint to store, …</li>
 <li dir="auto">Why: Because data is exploding!!11!</li>
 </ul>
-<h3 dir="auto" id="when-is-compression-used-1">When is compression used?</h3>
+<h3 dir="auto" id="when-is-compression-used">When is compression used?</h3>
 <ul dir="auto">
 <li dir="auto">Very often!</li>
 <li dir="auto">Files: zip, gzip, bzip2, xz, …</li>
@@ -41,13 +41,13 @@
 <li dir="auto">Videos: mpeg, divx, …</li>
 <li dir="auto">And so on!</li>
 </ul>
-<h3 dir="auto" id="basic-idea-1">Basic idea</h3>
+<h3 dir="auto" id="basic-idea">Basic idea</h3>
 <ul dir="auto">
-<li dir="auto">We are given a text M</li>
-<li dir="auto">We encode M to generate a (hopefully) compressed representation C (M)</li>
-<li dir="auto">Given C (M ), we can decode it to get back M’
+<li dir="auto">We are given a text <code>M</code></li>
+<li dir="auto">We encode <code>M</code> to generate a (hopefully) compressed representation <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">C(M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span></li>
+<li dir="auto">Given <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">C(M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span>, we can decode it to get back <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo mathvariant="normal">′</mo></mrow><annotation encoding="application/x-tex">M\prime</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord">′</span></span></span></span>
 <ul dir="auto">
-<li dir="auto">Lossless compression: M = M’</li>
+<li dir="auto">Lossless compression: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mi>M</mi><mo mathvariant="normal">′</mo></mrow><annotation encoding="application/x-tex">M = M\prime</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord">′</span></span></span></span></li>
 <li dir="auto">Lossy otherwise</li>
 </ul>
 </li>
@@ -57,7 +57,7 @@
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="lossy-vs-lossless-1">Lossy vs Lossless</h3>
+<h3 dir="auto" id="lossy-vs-lossless">Lossy vs Lossless</h3>
 <p dir="auto">Lossy compression</p>
 <ul dir="auto">
 <li dir="auto">Common for images, sound, video</li>
@@ -73,7 +73,7 @@
 </li>
 <li dir="auto">Typical ratios: 50%?</li>
 </ul>
-<h3 dir="auto" id="simple-ideas-and-intuition-1">Simple Ideas and Intuition</h3>
+<h3 dir="auto" id="simple-ideas-and-intuition">Simple Ideas and Intuition</h3>
 <ul dir="auto">
 <li dir="auto">Look for redundancy
 <ul dir="auto">
@@ -92,14 +92,19 @@ CCCCCCCCCCCCCCCCCCCCCCCCCTGG
 </div></code></code></pre>
 <p dir="auto">Ratio: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>11</mn><mo>∗</mo><mn>8</mn><mo>+</mo><mn>3</mn><mo>∗</mo><mn>32</mn><mo stretchy="false">)</mo><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mn>58</mn><mo>∗</mo><mn>8</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(11*8 + 3*32) / (58*8)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">11</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">32</span><span class="mclose">)</span><span class="mord">/</span><span class="mopen">(</span><span class="mord">58</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">8</span><span class="mclose">)</span></span></span></span>
 Around 40% of the original!</p>
+<h3 dir="auto" id="run-length-encoding-rle">Run-Length-Encoding (RLE)</h3>
 <ul dir="auto">
 <li dir="auto">The more general idea here is called Run Length Encoding (RLE).</li>
-<li dir="auto">List the character and then the run length as a pair:</li>
-</ul>
-<h3 dir="auto" id="smarter-dna-coding-1">Smarter DNA coding</h3>
+<li dir="auto">List the character and then the run length as a pair:
 <ul dir="auto">
-<li dir="auto">Alphabet size is 4, so we can represent
-each base (A, G, T, C) with just two bits!</li>
+<li dir="auto">G1T1C1A1C9 means (G, 1) (T, 1) (C, 1) (A, 1) (C, 9)</li>
+<li dir="auto">Works well for long runs of repeated data</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="smarter-dna-coding">Smarter DNA coding</h3>
+<ul dir="auto">
+<li dir="auto">Alphabet size is 4, so we can represent each base (A, G, T, C) with just two bits!</li>
 <li dir="auto">A = 00, G = 01, T = 10, C = 11</li>
 <li dir="auto">Uses 112 bits (ignoring padding)</li>
 <li dir="auto">That’s about 25% of the original!</li>
@@ -114,7 +119,7 @@ give C a shorter code word?</li>
 <li dir="auto">Uses a different number of bits to
 encode each character</li>
 </ul>
-<h3 dir="auto" id="variable-length-codes-1">Variable length codes</h3>
+<h3 dir="auto" id="variable-length-codes">Variable length codes</h3>
 <ul dir="auto">
 <li dir="auto">Ambiguity problems</li>
 <li dir="auto">G = 10, A = 0, C = 1, T = 11</li>
@@ -125,7 +130,7 @@ encode each character</li>
 </li>
 <li dir="auto">Codewords must be prefix free</li>
 </ul>
-<h3 dir="auto" id="prefix-codes-1">Prefix Codes</h3>
+<h3 dir="auto" id="prefix-codes">Prefix Codes</h3>
 <ul dir="auto">
 <li dir="auto">
 <p dir="auto">We can compress a string X into a smaller string Y by using a prefix code for the characters of X</p>
@@ -134,7 +139,7 @@ encode each character</li>
 <p dir="auto">Mapping each character of an alphabet to a binary code-word</p>
 <ul dir="auto">
 <li dir="auto">no code-word is the prefix of another code-word</li>
-<li dir="auto">Proof: No internal node is used as an endpoint</li>
+<li dir="auto">Proof: <em>No internal node is used as an endpoint</em></li>
 </ul>
 </li>
 <li dir="auto">
@@ -143,7 +148,7 @@ encode each character</li>
 <li dir="auto">each external node stores a character</li>
 <li dir="auto">code word of a character is given by the path from the root to the external node storing the character
 <ul dir="auto">
-<li dir="auto">0 for a left child and 1 for a right child</li>
+<li dir="auto">0 for a left child and 1 for a right child, e.g.</li>
 </ul>
 </li>
 </ul>
@@ -158,12 +163,12 @@ encode each character</li>
 </thead>
 <tbody dir="auto">
 <tr dir="auto">
-<td><img src="image-1.png" alt="Alt text" data-src="image-1.png"></td>
-<td><img src="image-3.png" alt="Alt text" data-src="image-3.png"></td>
+<td><img src="assets\IMG158.PNG" alt="Alt text" data-src="assets%5CIMG158.PNG"></td>
+<td><img src="assets\IMG159.PNG" alt="Alt text" data-src="assets%5CIMG159.PNG"></td>
 </tr>
 </tbody>
 </table>
-<h3 dir="auto" id="encoding-tree-optimisation-1">Encoding Tree Optimisation</h3>
+<h3 dir="auto" id="encoding-tree-optimisation">Encoding Tree Optimisation</h3>
 <ul dir="auto">
 <li dir="auto">
 <p dir="auto">Given a text string X, find a prefix code for the characters of X that yields the smallest possible encoding for X</p>
@@ -185,22 +190,18 @@ encode each character</li>
 <p dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">T_{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> encodes X into 23 bits</p>
 </li>
 </ul>
-<p dir="auto"><img src="image-4.png" alt="Alt text" data-src="image-4.png"></p>
+<p dir="auto"><img src="assets\IMG160.PNG" alt="Alt text" data-src="assets%5CIMG160.PNG"></p>
+<h3 dir="auto" id="huffman-coding">Huffman Coding</h3>
 <ul dir="auto">
 <li dir="auto">We want to find an optimal prefix-free coding scheme</li>
-<li dir="auto">How do we do that? Huffman coding!</li>
-</ul>
-<h3 dir="auto" id="huffman-coding-history-1">Huffman Coding: History</h3>
-<p dir="auto">Given a string X, constructs a prefix code that
-minimises the size of the encoding of X</p>
-<ul dir="auto">
+<li dir="auto">Given a string X, constructs a prefix code that minimises the size of the encoding of X</li>
 <li dir="auto">Given: a set of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> positive weights <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">w_{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
 <li dir="auto">Compute: a set of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> corresponding codeword lengths, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>l</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">l_{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0197em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, such that:</li>
 </ul>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mn>2</mn><mrow><mo>−</mo><mi>l</mi><mi>i</mi></mrow></msup><mo>≤</mo><mn>1</mn><mtext>  </mtext><mtext>  </mtext><mtext>and</mtext><mtext>  </mtext><mtext>  </mtext><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>w</mi><mi>i</mi></msub><mo>⋅</mo><msub><mi>l</mi><mi>i</mi></msub><mtext>  </mtext><mtext>  </mtext><mtext>is minimal</mtext></mrow><annotation encoding="application/x-tex">\sum _{i=1} ^{n} 2^{-li} \le 1 \; \; \text{and}  \; \; \sum _{i=1} ^{n} w_{i} \cdot l_{i} \; \; \text{is minimal}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.9291em;vertical-align:-1.2777em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight">i</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.9291em;vertical-align:-1.2777em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">and</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0197em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">is minimal</span></span></span></span></span></span></p>
 </math>
 <ul dir="auto">
-<li dir="auto">ensures we get a viable code (can't set li = 0)</li>
+<li dir="auto">ensures we get a viable code (can't set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>l</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">l_{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0197em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 0)</li>
 <li dir="auto">minimises the overall cost of storing the input</li>
 </ul>
 <pre><code dir="auto"><code><div>Algorithm Huffman(X):
@@ -220,39 +221,37 @@ while PQ.size() &gt; 1 do
     (f, T) = PQ.removeMin()
 return T
 </div></code></code></pre>
-<p dir="auto"><img src="image-5.png" alt="Alt text" data-src="image-5.png"></p>
-<h3 dir="auto" id="analysis-of-huffmans-algorithm-1">Analysis of Huffman’s Algorithm</h3>
+<p dir="auto"><img src="assets\IMG161.PNG" alt="Alt text" data-src="assets%5CIMG161.PNG"></p>
+<h3 dir="auto" id="analysis-of-huffmans-algorithm">Analysis of Huffman’s Algorithm</h3>
 <p dir="auto">Assuming that</p>
 <ul dir="auto">
-<li dir="auto">n is the size of X</li>
-<li dir="auto">d is the number of distinct characters of X</li>
+<li dir="auto"><code>n</code> : size of X</li>
+<li dir="auto"><code>d</code> : number of distinct characters of X</li>
 <li dir="auto">PQ is implemented using a heap</li>
-<li dir="auto">Runs in O(n + d∙log d) time</li>
+<li dir="auto">Runs in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>d</mi><mo>⋅</mo><mi>log</mi><mo>⁡</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n + d \cdot \log d)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mclose">)</span></span></span></span> time</li>
 </ul>
-<h2 dir="auto" id="real-huffman-coding-1">Real Huffman coding</h2>
-<p dir="auto">In practice, we don’t actually care about the codewords in the first instance – we
-actually want to compute the set of codeword lengths (how many bits to assign to each codeword)</p>
-<h4 dir="auto" id="huffmans-example-1">Huffman's example</h4>
-<p dir="auto"><img src="image-7.png" alt="Alt text" data-src="image-7.png"></p>
+<h2 dir="auto" id="real-huffman-coding">Real Huffman coding</h2>
+<p dir="auto">In practice, we don’t actually care about the codewords in the first instance – <em>we actually want to compute the set of codeword lengths</em> (how many bits to assign to each codeword)</p>
+<h4 dir="auto" id="huffmans-example">Huffman's example</h4>
+<p dir="auto"><img src="assets\IMG162.PNG" alt="Alt text" data-src="assets%5CIMG162.PNG"></p>
 <p dir="auto">Assign codewords by the branch direction of the tree: “If we go left, assign 0, else assign 1”
 But we can do better (where better does not mean a better code, but more beautiful, elegant, and less overhead when transmitting the codebook)</p>
-<p dir="auto"><img src="image-8.png" alt="Alt text" data-src="image-8.png"></p>
+<p dir="auto"><img src="assets\IMG163.PNG" alt="Alt text" data-src="assets%5CIMG163.PNG"></p>
 <p dir="auto"><strong>Canonical codes</strong></p>
 <ul dir="auto">
 <li dir="auto">chop off the lest significant bit (LSB)</li>
 </ul>
-<h3 dir="auto" id="canonical-codes---tree-shape-1">Canonical codes - tree shape</h3>
+<h3 dir="auto" id="canonical-codes---tree-shape">Canonical codes - tree shape</h3>
 <p dir="auto">Because it means we can minimize the amount of information we provide to the decoder.
 Suppose we pass the symbols to the decoder in lexicographical order.
 If we sort the codewords first by their length and then lexicographically,
-all we need to provide the decoder is the list of codeword lengths!</p>
+all we need to provide the <strong>decoder is the list of codeword lengths!</strong></p>
 <p dir="auto">Sort them within their bit length buckets</p>
-<p dir="auto"><img src="image-1.png" alt="Alt text" data-src="image-1.png"></p>
-<p dir="auto">How to transmit the codebook?</p>
+<p dir="auto"><img src="assets\IMG164.PNG" alt="Alt text" data-src="assets%5CIMG164.PNG"></p>
+<h3 dir="auto" id="how-to-transmit-the-codebook">How to transmit the codebook?</h3>
 <ul dir="auto">
-<li dir="auto">Easy! Just transmit symbols in decreasing order of
-bitlength, recording the number of symbols in each
-bitlength group</li>
+<li dir="auto">Transmit symbols in decreasing order of bitlength, recording the number of symbols in each bitlength group</li>
+<li dir="auto"><strong>IMPORTANT</strong></li>
 <li dir="auto">Codebook = (4, 2, 2, 2, 0) (A, B, R, Y, L, M, C, O, U, Z)
 <ul dir="auto">
 <li dir="auto">know the most simple codeword you can come up with for a length of 5 bitlength group (it is 00000)</li>
@@ -261,12 +260,12 @@ bitlength group</li>
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="decoder-1">Decoder</h3>
+<h3 dir="auto" id="decoder">Decoder</h3>
 <ul dir="auto">
 <li dir="auto">Step 1. Recover the code/symbol mapping.</li>
 <li dir="auto">Step 2. Apply it to the bit sequence.</li>
 </ul>
-<h3 dir="auto" id="compression-and-coding-1">Compression and coding</h3>
+<h3 dir="auto" id="compression-and-coding">Compression and coding</h3>
 <ul dir="auto">
 <li dir="auto">Compression is the process of:</li>
 </ul>
@@ -274,8 +273,8 @@ bitlength group</li>
 <li dir="auto">Building a probability model over the input</li>
 <li dir="auto">Applying that probability model to the data</li>
 </ol>
-<h2 dir="auto" id="lempel-ziv-schemes-1">Lempel-Ziv Schemes</h2>
-<h3 dir="auto" id="statistical-methods-1">Statistical Methods</h3>
+<h2 dir="auto" id="lempel-ziv-schemes">Lempel-Ziv Schemes</h2>
+<h3 dir="auto" id="statistical-methods">Statistical Methods</h3>
 <p dir="auto"><strong>Static Models</strong></p>
 <ul dir="auto">
 <li dir="auto">Use the same model for all inputs</li>
@@ -291,7 +290,7 @@ bitlength group</li>
 <li dir="auto">Update the model as you read through the input</li>
 <li dir="auto">Lempel-Ziv</li>
 </ul>
-<h3 dir="auto" id="lempel-ziv-compression-1">Lempel-Ziv Compression</h3>
+<h3 dir="auto" id="lempel-ziv-compression">Lempel-Ziv Compression</h3>
 <p dir="auto">Basic idea: Use a dictionary to determine if you have seen something before. If so, don’t output the “thing”, just output its index in the dictionary!</p>
 <ul dir="auto">
 <li dir="auto">
@@ -313,12 +312,12 @@ bitlength group</li>
 <p dir="auto">If we were looking at p=7 (the “E” in “YELLOW”)</p>
 </li>
 </ul>
-<h3 dir="auto" id="lz77-example-1">LZ77 example</h3>
+<h3 dir="auto" id="lz77-example">LZ77 example</h3>
 <ul dir="auto">
 <li dir="auto">What I 'mismatched' was an A
-<img src="image-3.png" alt="Alt text" data-src="image-3.png"></li>
+<img src="assets\IMG165.PNG" alt="Alt text" data-src="assets%5CIMG165.PNG"></li>
 </ul>
-<h3 dir="auto" id="lz77-decoding-example-1">LZ77 decoding example</h3>
+<h3 dir="auto" id="lz77-decoding-example">LZ77 decoding example</h3>
 <ul dir="auto">
 <li dir="auto">The algorithm we observed is a simplified version of
 LZ77</li>
@@ -328,7 +327,41 @@ At decoding time you will see this: (3, 5, X)
 How can I decode 5 elements when I only go back by
 an offset of 3?</li>
 </ul>
-<p dir="auto"><img src="image-4.png" alt="Alt text" data-src="image-4.png"></p>
+<p dir="auto"><img src="assets\IMG166.PNG" alt="Alt text" data-src="assets%5CIMG166.PNG"></p>
+<h3 dir="auto" id="what-about-huffman">What about Huffman?</h3>
+<ul dir="auto">
+<li dir="auto">We can use the output of LZ as input to
+Huffman!
+<ul dir="auto">
+<li dir="auto">In particular, we can use LZ to replace the input
+text with back pointers as we saw previously</li>
+<li dir="auto">We then can use Huffman coding on the output stream provided by LZ to better handle those symbols (often a different Huffman code for each part of the stream)</li>
+<li dir="auto">This is know as DEFLATE (or FLATE) and is used in PKZIP</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="lz-challenges">LZ* challenges</h3>
+<ul dir="auto">
+<li dir="auto">LZ compression offers a number of
+interesting algorithmic challenges
+<ul dir="auto">
+<li dir="auto">How to match patterns in the window?</li>
+<li dir="auto">How big should the dictionary/window be?</li>
+<li dir="auto">How can we better handle inefficiencies where the encoded
+segment is larger than its original representation?</li>
+<li dir="auto">How many bits to use for each part of the triple?</li>
+<li dir="auto">And so on…</li>
+</ul>
+</li>
+<li dir="auto">In practice, (zlib for example), LZ77 uses W=32K</li>
+</ul>
+<h3 dir="auto" id="variable-byte">Variable Byte</h3>
+<p dir="auto">130 would usually be:
+<code>00000000000000000000000010000010</code>
+But now we can represent it as:
+<code>10000001 00000010</code>
+The leftmost 1 says “you need to read
+another byte” (continuation bit)</p>
 
 </main>
 </body>

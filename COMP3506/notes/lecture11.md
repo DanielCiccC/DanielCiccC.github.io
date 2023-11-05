@@ -174,7 +174,7 @@ Sort them within their bit length buckets
 
 ### How to transmit the codebook?
 - Transmit symbols in decreasing order of bitlength, recording the number of symbols in each bitlength group
-- IMPORTANT
+- **IMPORTANT**
 - Codebook = (4, 2, 2, 2, 0) (A, B, R, Y, L, M, C, O, U, Z)
   - know the most simple codeword you can come up with for a length of 5 bitlength group (it is 00000)
   - 0: “zero codewords of length 1”
