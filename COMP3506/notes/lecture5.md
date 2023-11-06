@@ -228,7 +228,9 @@ node as they move around
 
 ## Performance
 - Improved times thanks to location-aware entries are highlighted in red
-**Method** | **Unsorted List** | **Sorted List** | **Heap**
+
+
+| **Method** | **Unsorted List** | **Sorted List** | **Heap**
 | --- | --- | --- | ---
 | ``size, isEmpty``| $O(1)$| $O(1)$ | $O(1)$ 
 | ``insert`` |$O(1)$ | $O(n)$| $O(\log n)$
