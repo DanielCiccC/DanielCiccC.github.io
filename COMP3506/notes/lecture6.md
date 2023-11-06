@@ -83,6 +83,7 @@ Example:
 **Polynomial Accumulation**:
 - Partition the bits of the key into a sequence of 
 components of fixed length (e.g. 8, 16 or 32 bits)
+  - $a_{0}, a_{1}, a_{2}, ..., a_{n-1}$
 - Evaluate the polynomial at a fixed value $z$, ignoring overflows
 Empirically, $z = {33, 37, 39, 41}$ are reasonable.
 - This is a type of “rolling” hash function – each step depends on the value of the previous step

@@ -68,7 +68,7 @@ P with T[i]
 ![Alt text](assets\IMG141.PNG)
 
 ### Example
-- at the end, mitmatches on a h and realigns
+- at the end, mismatches on a h and realigns
   
 ![Alt text](assets\IMG142.PNG)
 
