@@ -216,9 +216,8 @@ node as they move around
 - ``remove(e)`` and `replaceValue(e, x)` take constant time
   - Assuming you already have a reference to `e`
 - ``replaceKey(e, k)`` runs in `O(n)` time
-  - We get to the value in constant time, but we may need to 
-traverse the container to find the correct new location
-- Achieve this using a hashmap implementation for example
+  - We get to the value in constant time, but we may need to traverse the container to find the correct new location
+- Achieve this using a **hashmap** implementation for example
 
 ### Heap APQ Run Time
 **Operation** | performance 
@@ -231,7 +230,7 @@ traverse the container to find the correct new location
 - Improved times thanks to location-aware entries are highlighted in red
 **Method** | **Unsorted List** | **Sorted List** | **Heap**
 | --- | --- | --- | ---
-| ``size, isEmpty``| $O(1)$| $O(1)$ | $O(1)$ |
+| ``size, isEmpty``| $O(1)$| $O(1)$ | $O(1)$ 
 | ``insert`` |$O(1)$ | $O(n)$| $O(\log n)$
 | ``min`` | $O(n)$ | $O(1)$|$O(1)$
 | ``removeMin``| $O(n)$ |$O(1)$ | $O(\log n)$
