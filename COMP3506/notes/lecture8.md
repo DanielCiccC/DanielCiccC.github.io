@@ -114,12 +114,12 @@ followed by its endpoints
   - T is connected
   - T has no simple cycles
 - An undirected graph is a ***forest** if it contains no simple cycles*
-- If you have graphs are disconnected and you want to check a component, you need to check every disconnected grpah you haven't checked
+- If you have graphs are disconnected and you want to check a component, you need to check every disconnected graph you haven't checked
 
 ![Alt text](assets/IMG103.PNG)
 
 ### Spanning Trees and Forests
-- **Spanning tree **of a connected graph is a spanning subgraph that is a tree
+- **Spanning tree** of a connected graph is a spanning subgraph that is a tree
 - Spanning forest of a graph is a spanning subgraph that is a forest
     - dropped edges, no longer have cycles anymore
 

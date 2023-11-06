@@ -164,7 +164,7 @@ containing all vertices of G
 ![Alt text](assets\IMG117.PNG)
 
 ### Aren't MST's = shortest path?
-- We know that single-sourse shortest path yields a trwee of shortest paths from origin `u`
+- We know that single-source shortest path yields a trwee of shortest paths from origin `u`
 - Can we just run that?
   - No
 
