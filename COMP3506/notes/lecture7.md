@@ -75,7 +75,7 @@ Example: remove 4
 ![Alt text](assets/IMG68.PNG)
 
 - Consider the case where the key k to be removed is stored at a node v whose children are both internal
-    - **HAVE TO PERFROM IN-ORDER TRAVERSAL**
+    - **HAVE TO PERFORM IN-ORDER TRAVERSAL**
     - find internal node w that follows v in an in-order traversal
     - 'I need to find the next key bigger than `k`'
     - copy key(w) into node v
