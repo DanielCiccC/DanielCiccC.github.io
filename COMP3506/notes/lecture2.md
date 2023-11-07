@@ -123,11 +123,11 @@ Algorithm selectionSort(A, n)
     if n > 1 then
         maxIndex <- 0
         for i <- 1 to n - 1 do
-            if A[i] > A[maxIndex] then
-                maxIndex <- i
+          if A[i] > A[maxIndex] then
+              maxIndex <- i
 
-        swap(A[maxIndex], A[n – 1])
-        selectionSort(A, n - 1)
+          swap(A[maxIndex], A[n – 1])
+          selectionSort(A, n - 1)
 ```
 - Each time I recurse, I reduce the list by 1
 $$ 
@@ -213,7 +213,8 @@ $$ T(n/2^{k}) + 1 = 1 + \log_{2}n $$
 - Sorting is a fundamental operation
 - Given a list, how would you do it?
 - Bubble sort, insertion sort, or selection sort
-- 
+  
+
 ### Bubblesort
 - Bubble the greatest number to the top
 - $n^{2}$ time complexity
@@ -252,10 +253,10 @@ $$
 T(n) = 
 \begin{cases}
         O(1) & \text{if } n < 2 \\
-        O(1) + 2\cdot T(n/2)  & \text{if } n \ge 2
+        O(n) + 2\cdot T(n/2)  & \text{if } n \ge 2
 \end{cases}
 $$
-- Depth h of the merge-sort tree is $O(lg n)$
+- Depth h of the merge-sort tree is $O(\log n)$
 - Overall amount of work done at nodes of depth `i` is $O(n)$
 - Thus, the total running time of merge-sort is $O(n \log n)$
 
