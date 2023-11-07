@@ -826,6 +826,33 @@ four types of edges
     n &lt;- n - 1
     Remove v from H
 </div></code></code></pre>
+<h3 dir="auto" id="topological-sorting-with-dfs">Topological sorting with DFS</h3>
+<pre><code dir="auto"><code><div>Algorithm topologicalDFS(G)
+  Input dag G
+  Output topological ordering of G
+  
+  n &lt;- G.numVertices()
+  for all  u in G.vertices() do
+    Set u to be unvisited
+  for all  v in G.vertices() do
+    if v has not been visited then
+      topologicalDFS(G, v)
+
+Algorithm topologicalDFS(G, v)
+  Input graph G and a start vertex v of G
+  Output labeling of the vertices of G in the connected component of v
+  
+  #Mark vertex v as visited
+  for all  e in G.outgoingEdges(v) do
+    w &lt;- G.opposite(v, e)
+      if w has not been visited then
+        { e is a discovery edge }
+        topologicalDFS(G, w)
+      else
+        { e is a forward or cross edge }
+  #Label v with topological number n
+  n &lt;- n - 1
+</div></code></code></pre>
 <p dir="auto"><img src="assets\IMG130.PNG" alt="Alt text" data-src="assets%5CIMG130.PNG"></p>
 
 </main>

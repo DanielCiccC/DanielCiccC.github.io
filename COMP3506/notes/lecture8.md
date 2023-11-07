@@ -482,4 +482,33 @@ Algorithm TopologicalSort(G):
     Remove v from H
 ```
 
+### Topological sorting with DFS
+```
+Algorithm topologicalDFS(G)
+  Input dag G
+  Output topological ordering of G
+  
+  n <- G.numVertices()
+  for all  u in G.vertices() do
+    Set u to be unvisited
+  for all  v in G.vertices() do
+    if v has not been visited then
+      topologicalDFS(G, v)
+
+Algorithm topologicalDFS(G, v)
+  Input graph G and a start vertex v of G
+  Output labeling of the vertices of G in the connected component of v
+  
+  #Mark vertex v as visited
+  for all  e in G.outgoingEdges(v) do
+    w <- G.opposite(v, e)
+      if w has not been visited then
+        { e is a discovery edge }
+        topologicalDFS(G, w)
+      else
+        { e is a forward or cross edge }
+  #Label v with topological number n
+  n <- n - 1
+```
+
 ![Alt text](assets\IMG130.PNG)
