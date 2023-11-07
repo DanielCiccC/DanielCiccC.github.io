@@ -243,6 +243,8 @@ Algorithm mergeSort(A, l, r)
 
 **CONQUER STEP**
 - Conquer step Merging two sorted sequences, each with n÷2 elements, takes $O(n)$ time
+
+
 ![Alt text](assets\IMG172.PNG)
 
 
