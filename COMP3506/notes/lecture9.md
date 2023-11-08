@@ -91,7 +91,7 @@ while !PQ.isEmpty()
 queue, where each insertion or removal takes $O(\log n)$ time ($O(n \log n)$ changes total)
   - key of a vertex in the priority queue is modified at most ``deg(w)`` 
 times, where each key change takes $O(\log n)$ time (therefore $O(m \log n)$ key changes in PQ)
-- Dijkstra’s algorithm runs in $O((n + m) log n)$ time
+- Dijkstra’s algorithm runs in $O((n + m) \log n)$ time
   - provided the graph is implemented as an adjacency list/map
   - recall that $\sum_{v} deg(v) = 2m$
   - can also be expressed as $O(m \log n)$ since the graph is connected

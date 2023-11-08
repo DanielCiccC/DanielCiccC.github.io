@@ -208,7 +208,7 @@ Simple process to insert between two elements
 
 ### Circularly Linked list
 
-![Alt text](assets/IMG22.ng)
+![Alt text](assets/IMG22.png)
 ## Extensible lists 
 - push(o)/add(o)/append(o)
 adds element o at the end 
