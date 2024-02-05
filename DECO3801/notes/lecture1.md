@@ -27,5 +27,4 @@ Wk12:
 
 Expo:
 - 2pm to 8pm
-- Some time within this tolerance threshold, you must be available to demo at this time 
-- 
+- Some time within this tolerance threshold, you must be available to demo at this time

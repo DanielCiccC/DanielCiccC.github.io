@@ -6,8 +6,6 @@ exec > errorlog.txt 2>&1
 # Set the root directory of your course subjects
 root_directory="C:/git/DanielCiccC.github.io"
 
-python image_renamer.py
-
 # Loop through all the course subjects
 for course in "$root_directory"/*; do
     # Check if the 'notes' and 'docs' directories exist for the current course
@@ -23,7 +21,7 @@ modified_files=$(git diff --name-only HEAD@{1} -- '*.html')
 if [ -n "$modified_files" ]; then
     for file in $modified_files; do
         echo "Running renamer.py on $file"
-        python renamer.py "$file"
+        python main/build/renamer.py "$file"
     done
 else
     echo "No modified .html files since the last commit."
