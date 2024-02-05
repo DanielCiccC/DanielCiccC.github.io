@@ -47,3 +47,9 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.gif': No such f
 Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/reimage.sh: 'notes' or 'docs' directory not found.
+Running renamer.py on DECO3801/docs/lecture1.html
+C:\Users\campd\AppData\Local\Programs\Python\Python311\python.exe: can't open file 'C:\\git\\DanielCiccC.github.io\\renamer.py': [Errno 2] No such file or directory
+Running renamer.py on DECO3801/docs/main_DECO3801.html
+C:\Users\campd\AppData\Local\Programs\Python\Python311\python.exe: can't open file 'C:\\git\\DanielCiccC.github.io\\renamer.py': [Errno 2] No such file or directory
+Running renamer.py on DECO3801/docs/week7.html
+C:\Users\campd\AppData\Local\Programs\Python\Python311\python.exe: can't open file 'C:\\git\\DanielCiccC.github.io\\renamer.py': [Errno 2] No such file or directory

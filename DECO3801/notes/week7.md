@@ -9,7 +9,8 @@ The contents of this page outline the work I have completed on a weekly basis re
 - This week we didn't do much, besides put in for our team formations. We were told that we will be accepting our project briefs soon (sometime in the next couple days). As soon as that happens, will will read through the list and put in our preferences asap.
 
 ## Week 3 journal
-- We put in our top preference for brief 38 - called 'New Curation', and received it too. This week, we began to have discussions about what the solution would look like, the technologies we would need to implement this and the business ops tools as we began to compile our statement of work.
+- We put in our top preference for brief 38 - called 'New Curation', and received it too. This week, we began to have discussions about what the solution would look like, the technologies we would need to implement this and the business ops tools as we began to compile our statement of work.  
+- 
 
 We will be using jira to manage our tasks, and confluence any large documentation. It will be my responsibility to manage upcoming work and build jira's to manage to workflow of the developers. This is the [current jira workstation](https://deco3801.atlassian.net/jira/software/projects/PRO/boards/1)
 

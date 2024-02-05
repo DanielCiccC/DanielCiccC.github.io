@@ -19,8 +19,15 @@ for course in "$root_directory"/*; do
     fi
 done
 
-# rename the html docs
-# python main/build/renamer.py COMP3506/docs/textbook_wk2.html
+modified_files=$(git diff --name-only HEAD@{1} -- '*.html')
+if [ -n "$modified_files" ]; then
+    for file in $modified_files; do
+        echo "Running renamer.py on $file"
+        python renamer.py "$file"
+    done
+else
+    echo "No modified .html files since the last commit."
+fi
 
 
 # echo "All HTML documents have been copied from $sourceDirectory to $destinationDirectory."
