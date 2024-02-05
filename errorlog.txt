@@ -22,9 +22,12 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.gif': No such f
 Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/reimage.sh: 'notes' or 'docs' directory not found.
-Running renamer.py on DECO3801/docs/lecture1.html
-C:/git/DanielCiccC.github.io/DECO3801/docs/lecture1.html
-Replaced 'undefined' in DECO3801/docs/lecture1.html with its name.
-Running renamer.py on DECO3801/docs/week7.html
-C:/git/DanielCiccC.github.io/DECO3801/docs/week7.html
-Replaced 'undefined' in DECO3801/docs/week7.html with its name.
+Running renamer.py on FINM3403/docs/main_FINM3403.html
+C:/git/DanielCiccC.github.io/FINM3403/docs/main_FINM3403.html
+Replaced 'undefined' in FINM3403/docs/main_FINM3403.html with its name.
+Running renamer.py on FINM3406/docs/main_FINM3406.html
+C:/git/DanielCiccC.github.io/FINM3406/docs/main_FINM3406.html
+Replaced 'undefined' in FINM3406/docs/main_FINM3406.html with its name.
+Running renamer.py on INFS3202/docs/main_INFS3202.html
+C:/git/DanielCiccC.github.io/INFS3202/docs/main_INFS3202.html
+Replaced 'undefined' in INFS3202/docs/main_INFS3202.html with its name.
