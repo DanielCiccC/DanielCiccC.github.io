@@ -4,5 +4,5 @@ All my notes from the beginning of lectures; Since these are moreso informationa
 
 | Snapshot | link | Content |
 | :-----: | ---- | ------- |
-|    1    |  [week 7 snapshot](../docs/week7.html) |         |
+|    [1](../docs/lecture1.html)    |  [week 7 snapshot](../docs/week7.html) |         |
 |         |      |         |
