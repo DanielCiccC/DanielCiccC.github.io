@@ -6,5 +6,11 @@ Welcome! You'll find some of my notes to courses (starting the second semester o
 
 #### [COMP3506](COMP3506/docs/main_COMP3506.html)
 
+#### [FINM3406](FINM3406/docs/main_FINM3406.html)
+
+#### [FINM3403](FINM3403/docs/main_FINM3403.html)
+
+#### [INFS3202](INFS3202/docs/main_INFS3202.html)
+
 
 [Markdown Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
