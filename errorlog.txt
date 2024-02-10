@@ -31,3 +31,6 @@ Replaced 'undefined' in FINM3406/docs/main_FINM3406.html with its name.
 Running renamer.py on INFS3202/docs/main_INFS3202.html
 C:/git/DanielCiccC.github.io/INFS3202/docs/main_INFS3202.html
 Replaced 'undefined' in INFS3202/docs/main_INFS3202.html with its name.
+Running renamer.py on index.html
+C:/git/DanielCiccC.github.io/index.html
+Replaced 'undefined' in index.html with its name.
