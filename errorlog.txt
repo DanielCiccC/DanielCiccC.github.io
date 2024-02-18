@@ -22,6 +22,6 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.gif': No such f
 Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/reimage.sh: 'notes' or 'docs' directory not found.
-Running renamer.py on index.html
-C:/git/DanielCiccC.github.io/index.html
-Replaced 'undefined' in index.html with its name.
+Running renamer.py on FINM3403/docs/lecture1.html
+C:/git/DanielCiccC.github.io/FINM3403/docs/lecture1.html
+Replaced 'undefined' in FINM3403/docs/lecture1.html with its name.

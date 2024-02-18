@@ -28,3 +28,83 @@ border counterparties
   - Central banks  
 - Settlement of transactions – No real money changes hands
   - The role of SWIFT
+  - Communication System
+  - Society of Worldwide International Financial Telecommunications
+    - Money often more through multiple banks before ending in the correct accounts
+  
+  ![Alt text](image.png)
+
+- chips, fedwire, target - organisations to transfer money
+
+
+### Exchange rate
+
+- A foreign exchange rate is the price of one currency expressed in terms of another currency.
+- A foreign exchange quotation (or quote) is a statement of willingness to buy or sell at an announced rate. 
+  - Market makers - foreign currency dealers and brokers
+  - binding quotes for a few minutes
+
+
+- normally quote to four digits
+- normally settles T+2
+- have all the contributors at the bottom, with their bid/ask
+
+
+### Terminology
+- Spot Rate: The exchange rate at which trades are executed immediately in the interbank market. About a third of all FX trading is done in this market.
+- Value Date for a spot transaction is the date on which parties receive the funds they have purchased – e.g., in trades involving USD, settlement occurs two business days after the deal.
+  - Foreign currency dealers provide two quotes: 
+        - Bid Price: Price at which the dealer is willing to buy a currency from you (i.e., client)
+        - Ask Price: Price at which the dealer is willing to sell a currency to you (i.e., client)
+- It is always the case that the Ask Price > Bid Price. The difference is the Bid-Ask spread
+- The less traded and more volatile a currency, the greater is the spread. 
+
+
+### Bid/ask prices
+$$\text{USDCHF} \; \; \; .8505-0.8507*$$
+USD - base currency
+CHF - Quote currency
+
+$\text{USDCHF}_{bid} = 0.8505$ - the rate at which the bank woll buy USD (base currency) in exchange for CHF
+
+$\text{USDCHF}_{ask} = 0.8507$ - the rate at which the bank will sell USD (base currency) for CHF
+
+- In the wholesale market, for a currency pair, there is a 
+base currency (the first currency in the pair), and quote currency (the second). This is what Bloomberg uses.
+- Other quotations used in business include
+  - Direct Quote: Home currency per unit of foreign currency (FC)
+  - Indirect Quote: Foreign currency (FC) per unit of Home currency
+  - American & European terms are direct and indirect quotes relative to the US dollar (USD). The quote in the previous slide is in European terms.
+
+-  Note that in all cases, the reciprocal of a direct quote is an indirect quote and vice-versa.
+-  
+
+### Example, AUDCHF
+$$\text{AUDCHF} \; \; \; .5699-0.5700*$$
+AUD - Base currency
+CHF - Quote currency
+
+- Cross-rate is an exchange rate that does NOT involve the 
+USD
+-  Explain the following quotes:
+-  $\text{AUDCHF}_{bid} = 0.5699$ the amount of AUD the **bank** would buy to you in excahnge for 1 CHF
+-  $\text{AUDCHF}_{ask} = 0.5700$ the amount of AUD the **bank** would sell to you in exchange for 1 CHF
+
+- Bid and Ask prices mixed with alternative quotations methods can lead to confusion. Try to remember:
+  - The dealer buys the denominator (or base) currency at the BID [client buys the numerator (or quote) currency at the bid]
+  - The dealer sells the denominator (base) currency at the ASK [client sells the numerator (or quote) currency at the ask]
+- When all else fails, remember that the commercial client always, ALWAYS gets the worse end of the deal
+
+### Inverse exchange rate
+![Alt text](image-3.png)
+![Alt text](image-4.png)
+
+- a direct bid is the reciprocal of an indirect ask
+- a direct ask is the reciprocal of an indirect bid
+
+# Bid-Ask spread
+- The difference between the bid and ask prices is the bid-ask spread. It represents a “round-trip” transaction and is the cost of entering into the transaction.
+
+$$\text{spread} = \frac{\text{Ask - Bid}}{\text{Ask}} \cdot 100$$
+$$\text{spread} = \frac{\text{0.5700 - 0.5699}}{\text{0.5700}} \cdot 100$$
+$$= 0.01754\% \; \; \text{or 1.75 basis points}$$
