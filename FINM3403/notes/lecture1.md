@@ -108,3 +108,56 @@ USD
 $$\text{spread} = \frac{\text{Ask - Bid}}{\text{Ask}} \cdot 100$$
 $$\text{spread} = \frac{\text{0.5700 - 0.5699}}{\text{0.5700}} \cdot 100$$
 $$= 0.01754\% \; \; \text{or 1.75 basis points}$$
+
+### Triangular arbitrage
+-  Cross rates can be used to check on opportunities for intermarket arbitrage.  Suppose the following exchange rates are available:
+
+![Alt text](image-5.png)
+
+- The synthetic (manufactured) cross rate between Euros and 
+Canadian dollars is: 
+
+$$\frac{Euro/U\$}{C/U\$} = EURO 1.5044/C\$$$
+
+### Arbitrage example
+![Alt text](image-6.png)
+
+### Forward contracts
+- Forward transactions require delivery at a future date of a specified amount of one currency for a specified amount of another currency.
+- This is a rate that is agreed upon today but 
+settled further into the future. 
+- Forward contracts are traded on the inter-bank 
+market. They can be tailored for
+  - contract sizes
+  - currency
+  - delivery dates 
+
+
+### Ways to quote forward rates
+- There are three ways to express forward rates:
+  - Via points to be added or subtracted from spot rate [known as swap points]
+  - Outright quotes
+  - As an annualized percentage forward premium or discount 
+
+### Forward quotes: Swap rates
+- Among themselves, foreign exchange traders 
+usually quote forward rates in terms of points, 
+also referred to as “forward points” or “swap 
+rates” (see previous slide).
+- A point (pip) is the last digit of a quotation
+  - A point (pip) is equal to 0.0001 (1/100 th of 1%) for most currencies.
+  - The Japanese yen is the exception. It is quoted only to two decimal places; A point, in this case, is 1/100.
+
+- If F > S then the currency in the denominator (base currency) is trading at a premium
+  - E.g. One AUD buys more USD in the forward market than the in the spot market 
+  - If ascending between bid/offer forward points then forward price will be higher than the current spot price
+- If F < S then the currency in the denominator (base currency) is trading at a discount*
+  - E.g. One AUD buys less USD in the forward market than the in the spot market
+  - If descending between bid/offer forward points then forward price will be lower than the current spot price
+  - If F = S then market is relatively flat
+
+![Alt text](image-7.png)
+
+ When the Bid Points > Ask Points, you subtract the points from the spot rate to get the outright forward quote:
+
+![Alt text](image-8.png)
