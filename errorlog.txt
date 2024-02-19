@@ -80,10 +80,9 @@ Processing LIT/...
 img_num.txt file not found
 Processing main/...
 img_num.txt file not found
-warning: in the working copy of 'index.html', CRLF will be replaced by LF the next time Git touches it
-Running renamer.py on INFS1200/docs/week2Summary.html
-C:/git/DanielCiccC.github.io/INFS1200/docs/week2Summary.html
-Replaced 'undefined' in INFS1200/docs/week2Summary.html with its name.
+Running renamer.py on INFS1200/docs/INFS1200.html
+C:/git/DanielCiccC.github.io/INFS1200/docs/INFS1200.html
+Replaced 'undefined' in INFS1200/docs/INFS1200.html with its name.
 Running renamer.py on index.html
 C:/git/DanielCiccC.github.io/index.html
 Replaced 'undefined' in index.html with its name.
