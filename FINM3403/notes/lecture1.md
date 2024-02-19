@@ -96,8 +96,8 @@ USD
 - When all else fails, remember that the commercial client always, ALWAYS gets the worse end of the deal
 
 ### Inverse exchange rate
-![Alt text](image-3.png)
-![Alt text](image-4.png)
+![Alt text](assets\IMG1.PNG)
+![Alt text](assets\IMG2.PNG)
 
 - a direct bid is the reciprocal of an indirect ask
 - a direct ask is the reciprocal of an indirect bid
@@ -112,7 +112,7 @@ $$= 0.01754\% \; \; \text{or 1.75 basis points}$$
 ### Triangular arbitrage
 -  Cross rates can be used to check on opportunities for intermarket arbitrage.  Suppose the following exchange rates are available:
 
-![Alt text](image-5.png)
+![Alt text](assets\IMG3.PNG)
 
 - The synthetic (manufactured) cross rate between Euros and 
 Canadian dollars is: 
@@ -120,7 +120,7 @@ Canadian dollars is:
 $$\frac{Euro/U\$}{C/U\$} = EURO 1.5044/C\$$$
 
 ### Arbitrage example
-![Alt text](image-6.png)
+![Alt text](assets\IMG4.PNG)
 
 ### Forward contracts
 - Forward transactions require delivery at a future date of a specified amount of one currency for a specified amount of another currency.
@@ -156,16 +156,16 @@ rates” (see previous slide).
   - If descending between bid/offer forward points then forward price will be lower than the current spot price
   - If F = S then market is relatively flat
 
-![Alt text](image-7.png)
+![Alt text](assets\IMG5.PNG)
 
  When the Bid Points > Ask Points, you subtract the points from the spot rate to get the outright forward quote:
 
-![Alt text](image-8.png)
+![Alt text](assets\IMG6.PNG)
 
 
 ### Forward premium/Discount
 - Forward premium (discount) exists when a currency purchases more (less) of the 2nd currency in the future than it does presently.
-![Alt text](image-9.png)
+![Alt text](assets\IMG7.PNG)
 
 ### % change in exchange rates
  The Australian dollar was quoted at CHF 
@@ -178,5 +178,5 @@ rates” (see previous slide).
 Thus, the appreciation/depreciation of the $, 
 relative to the CHF from t-1 to t is:
 
-![Alt text](image-10.png)
+![Alt text](assets\IMG8.PNG)
 

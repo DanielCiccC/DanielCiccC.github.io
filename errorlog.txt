@@ -17,7 +17,6 @@ Skipping C:/git/DanielCiccC.github.io/FINM3406: 'notes' or 'docs' directory not 
 Skipping C:/git/DanielCiccC.github.io/image_renamer.py: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/INFS3202: 'notes' or 'docs' directory not found.
-Skipping C:/git/DanielCiccC.github.io/KWM_law: 'notes' or 'docs' directory not found.
 cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.jpg': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.jpeg': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.PNG': No such file or directory
@@ -26,4 +25,52 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.gif': No such f
 Skipping C:/git/DanielCiccC.github.io/main: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/README.md: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/reimage.sh: 'notes' or 'docs' directory not found.
+Processing BSAN4201/...
+img_num.txt file not found
+Processing COMP3506/...
+Processed all_algorithms_in_order.md in COMP3506//notes/
+Processed lecture1.md in COMP3506//notes/
+Processed lecture10.md in COMP3506//notes/
+Processed lecture11.md in COMP3506//notes/
+Processed lecture2.md in COMP3506//notes/
+Processed lecture3.md in COMP3506//notes/
+Processed lecture4.md in COMP3506//notes/
+Processed lecture5.md in COMP3506//notes/
+Processed lecture6.md in COMP3506//notes/
+Processed lecture7.md in COMP3506//notes/
+Processed lecture8.md in COMP3506//notes/
+Processed lecture9.md in COMP3506//notes/
+Processed main_COMP3506.md in COMP3506//notes/
+Processed mosssetup.md in COMP3506//notes/
+Processed textbook_wk1.md in COMP3506//notes/
+Processed textbook_wk2.md in COMP3506//notes/
+Processed textbook_wk3.md in COMP3506//notes/
+Processed textbook_wk4.md in COMP3506//notes/
+Processed tutorial1.md in COMP3506//notes/
+Processed tutorial10.md in COMP3506//notes/
+Processed tutorial12.md in COMP3506//notes/
+Processed tutorial2.md in COMP3506//notes/
+Processed tutorial5.md in COMP3506//notes/
+Processed tutorial6.md in COMP3506//notes/
+Processed tutorial7.md in COMP3506//notes/
+Processed tutorial8.md in COMP3506//notes/
+Processed tutorial9.md in COMP3506//notes/
+Done.
+Processing DECO3801/...
+Processed lecture1.md in DECO3801//notes/
+Processed main_DECO3801.md in DECO3801//notes/
+Processed week7.md in DECO3801//notes/
+Done.
+Processing FINM3403/...
+Processed lecture1.md in FINM3403//notes/
+Processed main_FINM3403.md in FINM3403//notes/
+Done.
+Processing FINM3406/...
+img_num.txt file not found
+Processing INFS3202/...
+img_num.txt file not found
+Processing LIT/...
+img_num.txt file not found
+Processing main/...
+img_num.txt file not found
 No modified .html files since the last commit.

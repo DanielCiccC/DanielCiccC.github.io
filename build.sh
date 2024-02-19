@@ -17,6 +17,13 @@ for course in "$root_directory"/*; do
     fi
 done
 
+for dir in */; do
+    if [ -d "$dir/notes" ]; then
+        echo "Processing $dir..."
+        python image_renamer.py "$dir/notes/"
+    fi
+done
+
 modified_files=$(git diff --name-only HEAD@{1} -- '*.html')
 if [ -n "$modified_files" ]; then
     for file in $modified_files; do
