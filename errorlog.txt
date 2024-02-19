@@ -15,11 +15,10 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/FINM3403/notes/assets/*.gif': No s
 Skipping C:/git/DanielCiccC.github.io/FINM3406: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/image_renamer.py: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.
-cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200_TUTORING/notes/assets/*.jpg': No such file or directory
-cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200_TUTORING/notes/assets/*.jpeg': No such file or directory
-cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200_TUTORING/notes/assets/*.PNG': No such file or directory
-cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200_TUTORING/notes/assets/*.png': No such file or directory
-cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200_TUTORING/notes/assets/*.gif': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200/notes/assets/*.jpg': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200/notes/assets/*.jpeg': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200/notes/assets/*.png': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200/notes/assets/*.gif': No such file or directory
 Skipping C:/git/DanielCiccC.github.io/INFS3202: 'notes' or 'docs' directory not found.
 cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.jpg': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.jpeg': No such file or directory
@@ -71,9 +70,9 @@ Processed main_FINM3403.md in FINM3403//notes/
 Done.
 Processing FINM3406/...
 img_num.txt file not found
-Processing INFS1200_TUTORING/...
-Processed INFS1200.md in INFS1200_TUTORING//notes/
-Processed week2Summary.md in INFS1200_TUTORING//notes/
+Processing INFS1200/...
+Processed INFS1200.md in INFS1200//notes/
+Processed week2Summary.md in INFS1200//notes/
 Done.
 Processing INFS3202/...
 img_num.txt file not found
@@ -81,12 +80,15 @@ Processing LIT/...
 img_num.txt file not found
 Processing main/...
 img_num.txt file not found
+warning: in the working copy of 'main/docs/index.html', CRLF will be replaced by LF the next time Git touches it
 Running renamer.py on INFS1200_TUTORING/docs/INFS1200.html
-C:/git/DanielCiccC.github.io/INFS1200_TUTORING/docs/INFS1200.html
-Replaced 'undefined' in INFS1200_TUTORING/docs/INFS1200.html with its name.
-Running renamer.py on index.html
-C:/git/DanielCiccC.github.io/index.html
-Replaced 'undefined' in index.html with its name.
+Traceback (most recent call last):
+  File "C:\git\DanielCiccC.github.io\main\build\renamer.py", line 25, in <module>
+    replace_undefined(filename)
+  File "C:\git\DanielCiccC.github.io\main\build\renamer.py", line 6, in replace_undefined
+    with open('C:/git/DanielCiccC.github.io/' + filename, 'r', encoding='utf-8') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/git/DanielCiccC.github.io/INFS1200_TUTORING/docs/INFS1200.html'
 Running renamer.py on main/docs/index.html
 C:/git/DanielCiccC.github.io/main/docs/index.html
 Replaced 'undefined' in main/docs/index.html with its name.
