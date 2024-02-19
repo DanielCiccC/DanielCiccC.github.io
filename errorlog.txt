@@ -8,7 +8,11 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.jpeg': No 
 cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.png': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.gif': No such file or directory
 Skipping C:/git/DanielCiccC.github.io/errorlog.txt: 'notes' or 'docs' directory not found.
-Skipping C:/git/DanielCiccC.github.io/FINM3403: 'notes' or 'docs' directory not found.
+cp: cannot stat 'C:/git/DanielCiccC.github.io/FINM3403/notes/assets/*.jpg': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/FINM3403/notes/assets/*.jpeg': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/FINM3403/notes/assets/*.PNG': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/FINM3403/notes/assets/*.png': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/FINM3403/notes/assets/*.gif': No such file or directory
 Skipping C:/git/DanielCiccC.github.io/FINM3406: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/image_renamer.py: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.

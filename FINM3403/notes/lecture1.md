@@ -161,3 +161,22 @@ rates” (see previous slide).
  When the Bid Points > Ask Points, you subtract the points from the spot rate to get the outright forward quote:
 
 ![Alt text](image-8.png)
+
+
+### Forward premium/Discount
+- Forward premium (discount) exists when a currency purchases more (less) of the 2nd currency in the future than it does presently.
+![Alt text](image-9.png)
+
+### % change in exchange rates
+ The Australian dollar was quoted at CHF 
+0.9489/AUD in January 2013, while in January 
+2024, it was quoted at CHF 0.5701/AUD*
+
+- At t-1 (Jan 2013): CHF 0.9489/AUD
+- At t    (Jan 2024): CHF 0.5701/AUD.
+
+Thus, the appreciation/depreciation of the $, 
+relative to the CHF from t-1 to t is:
+
+![Alt text](image-10.png)
+
