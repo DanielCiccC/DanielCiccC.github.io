@@ -10,12 +10,16 @@ cp: cannot stat 'C:/git/DanielCiccC.github.io/DECO3801/notes/assets/*.gif': No s
 Skipping C:/git/DanielCiccC.github.io/errorlog.txt: 'notes' or 'docs' directory not found.
 cp: cannot stat 'C:/git/DanielCiccC.github.io/FINM3403/notes/assets/*.jpg': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/FINM3403/notes/assets/*.jpeg': No such file or directory
-cp: cannot stat 'C:/git/DanielCiccC.github.io/FINM3403/notes/assets/*.PNG': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/FINM3403/notes/assets/*.png': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/FINM3403/notes/assets/*.gif': No such file or directory
 Skipping C:/git/DanielCiccC.github.io/FINM3406: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/image_renamer.py: 'notes' or 'docs' directory not found.
 Skipping C:/git/DanielCiccC.github.io/index.html: 'notes' or 'docs' directory not found.
+cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200_TUTORING/notes/assets/*.jpg': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200_TUTORING/notes/assets/*.jpeg': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200_TUTORING/notes/assets/*.PNG': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200_TUTORING/notes/assets/*.png': No such file or directory
+cp: cannot stat 'C:/git/DanielCiccC.github.io/INFS1200_TUTORING/notes/assets/*.gif': No such file or directory
 Skipping C:/git/DanielCiccC.github.io/INFS3202: 'notes' or 'docs' directory not found.
 cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.jpg': No such file or directory
 cp: cannot stat 'C:/git/DanielCiccC.github.io/LIT/notes/assets/*.jpeg': No such file or directory
@@ -67,10 +71,16 @@ Processed main_FINM3403.md in FINM3403//notes/
 Done.
 Processing FINM3406/...
 img_num.txt file not found
+Processing INFS1200_TUTORING/...
+Processed INFS1200.md in INFS1200_TUTORING//notes/
+Processed week2Summary.md in INFS1200_TUTORING//notes/
+Done.
 Processing INFS3202/...
 img_num.txt file not found
 Processing LIT/...
 img_num.txt file not found
 Processing main/...
 img_num.txt file not found
-No modified .html files since the last commit.
+Running renamer.py on index.html
+C:/git/DanielCiccC.github.io/index.html
+Replaced 'undefined' in index.html with its name.

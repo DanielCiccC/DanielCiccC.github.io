@@ -32,7 +32,7 @@ border counterparties
   - Society of Worldwide International Financial Telecommunications
     - Money often more through multiple banks before ending in the correct accounts
   
-  ![Alt text](image.png)
+![Alt text](assets\IMG9.PNG)
 
 - chips, fedwire, target - organisations to transfer money
 
@@ -179,4 +179,3 @@ Thus, the appreciation/depreciation of the $,
 relative to the CHF from t-1 to t is:
 
 ![Alt text](assets\IMG8.PNG)
-
