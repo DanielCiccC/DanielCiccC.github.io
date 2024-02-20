@@ -83,6 +83,3 @@ img_num.txt file not found
 Running renamer.py on INFS1200/docs/INFS1200.html
 C:/git/DanielCiccC.github.io/INFS1200/docs/INFS1200.html
 Replaced 'undefined' in INFS1200/docs/INFS1200.html with its name.
-Running renamer.py on index.html
-C:/git/DanielCiccC.github.io/index.html
-Replaced 'undefined' in index.html with its name.
