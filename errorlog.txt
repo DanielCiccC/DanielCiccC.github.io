@@ -66,6 +66,7 @@ Processed week7.md in DECO3801//notes/
 Done.
 Processing FINM3403/...
 Processed lecture1.md in FINM3403//notes/
+Processed lecture2.md in FINM3403//notes/
 Processed main_FINM3403.md in FINM3403//notes/
 Done.
 Processing FINM3406/...
@@ -80,4 +81,6 @@ Processing LIT/...
 img_num.txt file not found
 Processing main/...
 img_num.txt file not found
-No modified .html files since the last commit.
+Running renamer.py on FINM3406/docs/main_FINM3406.html
+C:/git/DanielCiccC.github.io/FINM3406/docs/main_FINM3406.html
+Replaced 'undefined' in FINM3406/docs/main_FINM3406.html with its name.

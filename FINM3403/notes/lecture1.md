@@ -65,9 +65,9 @@ $$\text{USDCHF} \; \; \; .8505-0.8507*$$
 USD - base currency
 CHF - Quote currency
 
-$\text{USDCHF}_{bid} = 0.8505$ - the rate at which the bank woll buy USD (base currency) in exchange for CHF
+$\text{USDCHF}_{bid} = 0.8505$ - the rate at which the bank woll buy USD (base currency) in exchange for CHF (gives customer swiss francs)
 
-$\text{USDCHF}_{ask} = 0.8507$ - the rate at which the bank will sell USD (base currency) for CHF
+$\text{USDCHF}_{ask} = 0.8507$ - the rate at which the bank will sell USD (base currency) for CHF (receives swiss francs from customer)
 
 - In the wholesale market, for a currency pair, there is a 
 base currency (the first currency in the pair), and quote currency (the second). This is what Bloomberg uses.
@@ -95,6 +95,16 @@ USD
   - The dealer buys the denominator (or base) currency at the BID [client buys the numerator (or quote) currency at the bid]
   - The dealer sells the denominator (base) currency at the ASK [client sells the numerator (or quote) currency at the ask]
 - When all else fails, remember that the commercial client always, ALWAYS gets the worse end of the deal
+
+### Another Example
+American terms (e.g. British Pound)
+
+||Bid|Offer (ask)
+|---|---|---
+$/£ | 1.2749| 1.2750
+
+- Bid:  Dealer buys £ for $ at the Bid, Client sells £ for $ (i.e., dealer will buy £1,000,000 for $1,274,900)
+- Ask:  Dealer sells £ for $ at the Ask, Client buys £ for $ (i.e., dealer will sell £1,000,000 for $1,275,000)
 
 ### Inverse exchange rate
 ![Alt text](assets\IMG1.PNG)
@@ -125,10 +135,8 @@ $$\frac{Euro/U\$}{C/U\$} = EURO 1.5044/C\$$$
 
 ### Forward contracts
 - Forward transactions require delivery at a future date of a specified amount of one currency for a specified amount of another currency.
-- This is a rate that is agreed upon today but 
-settled further into the future. 
-- Forward contracts are traded on the inter-bank 
-market. They can be tailored for
+- This is a rate that is agreed upon today but settled further into the future. 
+- Forward contracts are traded on the inter-bank market. They can be tailored for
   - contract sizes
   - currency
   - delivery dates 
@@ -141,10 +149,7 @@ market. They can be tailored for
   - As an annualized percentage forward premium or discount 
 
 ### Forward quotes: Swap rates
-- Among themselves, foreign exchange traders 
-usually quote forward rates in terms of points, 
-also referred to as “forward points” or “swap 
-rates” (see previous slide).
+- Among themselves, foreign exchange traders usually quote forward rates in terms of points, also referred to as “forward points” or “swap rates”
 - A point (pip) is the last digit of a quotation
   - A point (pip) is equal to 0.0001 (1/100 th of 1%) for most currencies.
   - The Japanese yen is the exception. It is quoted only to two decimal places; A point, in this case, is 1/100.
@@ -157,12 +162,19 @@ rates” (see previous slide).
   - If descending between bid/offer forward points then forward price will be lower than the current spot price
   - If F = S then market is relatively flat
 
+### Swap rates
+- A forward quotation expressed in points is not a foreign exchange rate as such.
+- Rather, it is the difference between the forward rate and the spot rate.
+
 ![Alt text](assets\IMG5.PNG)
 
- When the Bid Points > Ask Points, you subtract the points from the spot rate to get the outright forward quote:
+#### When the Bid Points > Ask Points, you subtract the points from the spot rate to get the outright forward quote:
 
 ![Alt text](assets\IMG6.PNG)
 
+#### If the Bid Points < Ask Points, there is a forward premium, and you add the points to the spot rate to get the outright forward quote
+
+![Alt text](assets\IMG10.PNG)
 
 ### Forward premium/Discount
 - Forward premium (discount) exists when a currency purchases more (less) of the 2nd currency in the future than it does presently.
