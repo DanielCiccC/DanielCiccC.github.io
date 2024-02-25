@@ -71,7 +71,7 @@ Traceback (most recent call last):
     process_markdown_files(directory)
   File "C:\git\DanielCiccC.github.io\image_renamer.py", line 36, in process_markdown_files
     os.rename(org_img_path, new_img_path)
-FileNotFoundError: [WinError 2] The system cannot find the file specified: 'FINM3403//notes/image-4.png' -> 'FINM3403//notes/assets\\IMG24.PNG'
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'FINM3403//notes/image-1.png' -> 'FINM3403//notes/assets\\IMG21.PNG'
 Processing FINM3406/...
 img_num.txt file not found
 Processing INFS1200/...
@@ -87,6 +87,3 @@ img_num.txt file not found
 Running renamer.py on FINM3403/docs/lecture2.html
 C:/git/DanielCiccC.github.io/FINM3403/docs/lecture2.html
 Replaced 'undefined' in FINM3403/docs/lecture2.html with its name.
-Running renamer.py on FINM3406/docs/lecture1.html
-C:/git/DanielCiccC.github.io/FINM3406/docs/lecture1.html
-Replaced 'undefined' in FINM3406/docs/lecture1.html with its name.
