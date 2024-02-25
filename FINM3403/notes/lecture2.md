@@ -148,4 +148,100 @@ KA = Capital Inflow (cr) – Capital outflow (dr)
   - Direct investment (takeover or acquiring a substantial portion of a foreign company, i.e., ˃ 10%)
 - KA balance = Sum of portfolio investment and direct investment + 
   - Any returns on investment from international trades are accounted in the financial account
+  - Accurate to keep track of the transactions in the financial account
 
+![Alt text](image-1.png)
+
+- reserve assets - assets held by the central bank (gold, etc)
+- Errors and Omissions - difference between CA balance, Capital Account and Financial Account
+- Errors and omissions also used in valuations
+
+### Other Assets
+- **Official Reserves:** Total reserves held by official monetary authorities within a country (RBA in Australia).
+  - These reserves are typically comprised of major currencies that are used in international trade and financial transactions, gold and reserve accounts (SDRs) held at the IMF.
+  - Important account for fixed-rate regime countries (i.e., HK).
+  - For floating rate regime countries, such as the U.S. and Australia, official reserves are relatively unimportant.
+- **Net Errors and Omissions:** Account is used to account for statistical errors and/or untraceable monies within a country
+
+![Alt text](image-2.png)
+
+- the only way you can run a deficit if is someone is willing to fund it - funded by the central bank
+
+### Balance of Payments
+Assuming change in official reserves and errors are approximately zero:
+
+Current Account = (-) Financial Account
+
+This will hold approximately for floating rate countries.
+
+### Summary
+
+- The two major sub-accounts of the BOP, the Current and Capital/Financial Account, summarize the current tradeflows and international capital flows of a country.
+- The Current and Capital/Financial Account are typically inverse on balance, one in surplus while the other experiences deficit.
+- Although most nations strive for Current Account surpluses, it is not clear that a zero balance or a surplus on the Current Account is necessarily desirable.
+
+### Linking CA to national income
+- gauge the health of an economy
+- CA balance relative to the GDP
+
+Forms:
+- Y = National **Income**
+- $C + I + G$ = Domestic Residents **Spending** / Absorption
+- CA = excess of spending over income earned (Income – Spending)
+- CA Deficit → $CA < 0$ → Borrowing from Abroad to finance domestic spending
+- CA Surplus → $CA > 0$ → Lending Abroad
+
+![Alt text](image-3.png)
+
+![Alt text](image-4.png)
+
+### Savings, Investment & the CA
+
+- Macro identities for a country:
+  - National Income = Consumption + Savings
+  - National Spending = Consumption + Investment
+
+#### Conversely:
+- If National Investment < National Saving, then
+Net foreign investment > 0
+  - Implication: If a country’s spending *exceeds* its income,
+domestic savings is not enough to fund domestic
+investment, the country will need to import capital. This
+deficit of capital will come from overseas and will be
+reflected as a financial account surplus for that country.
+  - The link between the financial and current account:
+- National Income – National spending = Exports – Imports
+- Savings – Investment = Exports – Imports
+
+
+- Government budget deficits and current account deficits:
+  - National spending (NS) = Household (HH) spending + Private investment (PI) + Govt. spending
+    - What hosueholds spend, what investment companies spend and what governmnet spends
+  - HH spending = National Income – Private Savings – Taxes
+  - So, 
+
+National spending = [NI – PS – T] + PI + Govt. Spending
+
+NI – NS = (PS – PI) + (Taxes – Govt. spending)
+
+= Savings surplus + Govt. surplus
+
+= Exports – Imports (i.e., CA balance)
+- Current account deficit implies private savings + govt.
+budget is in deficit
+
+Are we consuming more debt because we are funding postive NPV projects or are me consuming more debt because residents are taking on more debt?
+
+### Implications
+- A current account deficit means a country is not saving enough to finance its domestic investment + government budget deficit
+- A current account deficit represents a collective national decision to consume and invest more than the nation is producing.
+
+### Are CA deficits Sustainable?
+- A growing economy can expect to run a current account deficit
+  - Countries that have large investment opportunities can run large current account deficits. Sometimes it makes sense to borrow abroad temporarily.
+- The absolute level of both savings and investment are important
+  - A CA deficit caused by low savings (high consumption spending) is less likely to be sustainable than a CA deficit because of high investment (recall CA balance = S – I)
+  - This is because higher investment increases future production capacity and the ability to pay back foreign liabilities
+- Composition of Investment Spending is important 
+  - The more the investment is in traded goods, then more likely to generate trade surpluses.
+- The manner in which CA deficits are financed is what matters
