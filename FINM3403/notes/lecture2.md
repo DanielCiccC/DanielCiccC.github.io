@@ -26,23 +26,23 @@ Adjustable peg
 Free floating system
 - fully flexible
 
-![Alt text](assets\IMG11.PNG)
+![Alt text](image-1.png)
 
 ### Currency Board: Hong Kong
 - Central bank of hong Kong stands to buy any Forex to maintain their price
 - defend their par value
-![Alt text](assets\IMG12.PNG)
+![Alt text](image-2.png)
 
 
 Since 1982, Hong Kong dollar has remained a very stable exchange rate
-![Alt text](assets\IMG13.PNG)
+![Alt text](image-3.png)
 
 ### Fixed exchange rate system
 
 |£0.35/$ is referred to as the “par value” i.e., AUD is fixed relative to GBP (anchor currency) at £0.35/$. | Fig 2: The exchange rate is "undervalued” at the par value of £0.35/$. |
 |---|---|
-![Alt text](assets\IMG14.PNG) | ![Alt text](assets\IMG15.PNG) |
-| ![Alt text](assets\IMG16.PNG)|![Alt text](assets\IMG17.PNG) |
+![Alt text](image-4.png) | ![Alt text](image-5.png) |
+| ![Alt text](image-6.png)|![Alt text](image-7.png) |
 
 
 
@@ -59,7 +59,7 @@ Since 1982, Hong Kong dollar has remained a very stable exchange rate
 
 | 5 year window | % window
 |---|---|
-| ![Alt text](assets\IMG18.PNG) | ![Alt text](assets\IMG19.PNG)
+| ![Alt text](image-8.png) | ![Alt text](image-9.png)
 
 ### Advantages of a Fixed ER
 1. Reduce transaction costs and exchange rate risk which can
@@ -85,11 +85,67 @@ A country must give up one of the three goals:
 - Full financial integration (free flow of capital)
 - Monetary independence (of domestic policies)
 
-![Alt text](assets\IMG20.PNG)
+![Alt text](image-10.png)
 
 ### The Balance of Payments (BOP)
 - The BOP is a statistical record of the flow of all of the payments between the residents of a country and the rest of the world in a given year.
     - Multinational businesses use various BOP measures to gauge the growth and health of specific types of trade or financial transactions by country and regions of the world against the home country
     - Monetary and fiscal policy must take the BOP into account at the national level---the BOP gives indications of the demand and supply of a country’s currency.
   - statistical record of the inflows and outflows of cash from the country (where and what was it used for)
-  - used to gauge the health of the country
+  - Used to gauge the health of the country
+  - Government spending relative to its revenue, etc.
+
+![Alt text](image-1.png)
+
+### Fundamentals of BOP Accounting
+- Transactions are recorded on the basis of double entry bookkeeping – by definition it has to balance
+    - Every “source” must have a “use”
+- BOP is a statement of flows, thus like a cash flow statement, not a balance sheet.
+- Every economic transaction recorded as a credit brings about an equal and offsetting debit entry
+
+### Accounting principles
+
+- Any transaction resulting in a payment to foreigners is entered in the BOP accounts as a debit and is given a negative sign.
+- Any transaction resulting in a receipt from foreigners is entered as a credit and given a positive sign.
+- To reiterate, every international transaction automatically enters the BOP twice, once as a credit and once as a debit
+    - If you buy something from a foreigner, you have to pay for it, and the foreigner has to either spend or store your payment.
+    - Examples of these paired transactions will be covered in the tutorial. 
+
+### Current account
+
+- It is record of a country’s trade in goods and services
+and of unilateral transfers.
+- It is divided into several sub-categories:
+    - Merchandise Trade: physical goods like beef, cars etc.
+    - Services: tourism, education, shipping and finance etc.
+      - Any service provided by trips and tourism
+    - Primary Income (“investment income”): interest income, dividends etc.
+    - Secondary Income (“unilateral transfers”): Foreign aid, pensions to retired people abroad, wages repatriated etc.
+- The sum of the sub-categories = CA balance
+- 
+![Alt text](image-3.png)
+
+CA = Exports (x) - Imports (M)
+
+- Current Account Deficit: $M > X → CA < 0$
+- Current Account Surplus: $M < X → CA > 0$
+
+Current Account Balance = Change in Net Foreign
+Wealth/Assets
+
+Implication: A country with a CA deficit must be
+increasing its net foreign debts by the amount of the
+deficit 
+- borrow from the rest of the world to be able to consume
+
+### The Financial Account
+
+- It includes all short- and long-term financial transactions pertaining to both international trade and flows associated with portfolio shifts (stocks, bonds etc.) 
+  
+KA = Capital Inflow (cr) – Capital outflow (dr)
+- The two main categories:
+  - Portfolio investment
+  - Direct investment (takeover or acquiring a substantial portion of a foreign company, i.e., ˃ 10%)
+- KA balance = Sum of portfolio investment and direct investment + 
+  - Any returns on investment from international trades are accounted in the financial account
+
