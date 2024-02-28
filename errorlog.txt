@@ -87,3 +87,48 @@ img_num.txt file not found
 Running renamer.py on INFS1200/docs/INFS1200.html
 C:/git/DanielCiccC.github.io/INFS1200/docs/INFS1200.html
 Replaced 'undefined' in INFS1200/docs/INFS1200.html with its name.
+warning: in the working copy of 'COMP3506/notes/all_algorithms_in_order.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/lecture1.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/lecture10.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/lecture11.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/lecture2.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/lecture3.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/lecture4.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/lecture5.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/lecture6.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/lecture7.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/lecture8.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/lecture9.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/main_COMP3506.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/mosssetup.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/textbook_wk1.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/textbook_wk2.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/textbook_wk3.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/textbook_wk4.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/tutorial1.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/tutorial10.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/tutorial12.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/tutorial2.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/tutorial5.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/tutorial6.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/tutorial7.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/tutorial8.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'COMP3506/notes/tutorial9.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'DECO3801/notes/lecture1.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'DECO3801/notes/main_DECO3801.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'DECO3801/notes/week7.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'FINM3403/notes/lecture1.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'INFS1200/docs/INFS1200.html', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'INFS1200/notes/INFS1200.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'INFS1200/notes/week2Summary.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'errorlog.txt', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'FINM3406/notes/tutorial1.md', CRLF will be replaced by LF the next time Git touches it
+[main 052d9a4] The following have been changed: FINM3406/docs/tutorial1.html FINM3406/notes/tutorial1.md INFS1200/docs/assets/prctwed9.drawio.png INFS3202/notes/Lecture2.md
+ 4 files changed, 44 insertions(+)
+ create mode 100644 FINM3406/docs/tutorial1.html
+ create mode 100644 FINM3406/notes/tutorial1.md
+ create mode 100644 INFS1200/docs/assets/prctwed9.drawio.png
+ create mode 100644 INFS3202/notes/Lecture2.md
+To https://github.com/DanielCiccC/DanielCiccC.github.io.git
+   65cc7cf..052d9a4  main -> main
+Build Complete

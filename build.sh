@@ -1,6 +1,6 @@
 #!/bin/bash
 
-exec > errorlog.txt 2>&1
+# exec > errorlog.txt 2>&1
 
 root_directory="C:/git/DanielCiccC.github.io"
 
