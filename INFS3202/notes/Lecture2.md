@@ -63,10 +63,10 @@
 - Simplicity and Speed: Rapid development of websites by minimizing the need for writing custom CSS or applying specific classes to HTML elements.
 - Learning Curve: Great for beginners because they don't require learning a system of classes.
 
-#### <a> Href tag
-- The <a> tag, also known as the anchor tag, is used in HTML to 
+#### \<a> Href tag
+- The \<a> tag, also known as the anchor tag, is used in HTML to 
 create hyperlinks that navigate to other web pages or resources.
-- The href attribute within the <a> tag specifies the destination 
+- The href attribute within the \<a> tag specifies the destination 
 URL that the link points to.
 
 #### Simple form
@@ -97,3 +97,20 @@ can click to hide or show more content.
 • This feature is particularly useful for implementing FAQs, collapsible lists, or any content that benefits from a 
 hide/show interaction to keep the page clean and improve user experience by not overwhelming them with 
 information all at once.
+
+### PHP
+What is PHP?
+- PHP: Hypertext Preprocessor
+- Server-side scripting language designed for web development
+- Can be embedded into HTML
+Why Use PHP?
+- Widely used and open-source
+- Efficient for building dynamic web pages
+- Compatible with various databases
+- Large community and extensive documentation
+
+#### Basic syntax
+- Starts with <?php and ends with ?>
+- PHP statements end with a semicolon (;)
+- A PHP file normally contains HTML tags, and some PHP scripting codes. 
+- The file extension is “.php”
