@@ -114,3 +114,150 @@ Why Use PHP?
 - PHP statements end with a semicolon (;)
 - A PHP file normally contains HTML tags, and some PHP scripting codes. 
 - The file extension is “.php”
+
+### PHP - Variables
+- Variables are "containers" for storing information.
+- Rules for PHP variable names:
+- Start with \$ (e.g., $name = “Aneesha”)
+- Must begin with a letter or the underscore character
+- Can only contain alpha-numeric characters and underscores
+- Should not contain spaces
+- Case sensitive ($Name ≠ $name)
+- PHP supports several data types: 
+Strings, Integers, Floats, Booleans, Arrays, etc.
+
+![Alt text](image-3.png)
+![Alt text](image-4.png)
+
+#### String concatenation
+- String concatenation in PHP is the process of joining two or more strings together into one single string. 
+- PHP uses the dot (.) operator for string concatenation. 
+- Useful generating HTML content with embedded PHP variables, combining user input into messages, or assembling file paths and URLs from separate parts.
+
+![Alt text](image-5.png)
+
+#### PHP – Control Structures – If statements
+if Statement:
+- The if statement is used to execute a block of code if a specified condition is true. 
+- It can be combined with an else statement to execute a code block if the condition is false.
+- You can also use elseif to specify a new condition to test if the first condition is false.
+
+![Alt text](image-6.png)
+
+#### Loops
+PHP supports while, for and foreach loops
+
+![Alt text](image-7.png)
+
+![Alt text](image-8.png)
+
+![Alt text](image-9.png)
+
+[PHP operators](https://www.w3schools.com/php/php_operators.asp)
+
+
+#### Working with forms
+
+![Alt text](image-10.png)
+
+#### PHP - Built-in SuperGlobals
+- Superglobal variables in are predefined variables that are accessible from anywhere in a PHP script. 
+- Superglobal variables are automatically available in all scopes, including functions and methods, 
+- Superglobal variables provide a simple way to access common values or data structures, 
+- e.g. HTTP headers, form data, session data, server environment variables, and more.
+- Superglobal variables examples:.
+  - $GLOBALS
+  - $_SERVER
+  - $_GET
+  - $_POST
+  - $_FILES
+  - $_COOKIE
+  - $_SESSION
+  - $_REQUEST
+  - $_ENV
+
+#### PHP – Forms – Get vs Post
+Information sent from a form with the GET method is visible to everyone (it will be displayed in the browser's address bar) and has limits on the amount of information to send.
+
+![Alt text](image-11.png)
+
+#### When to use Get
+- This method should not be used when sending passwords or other sensitive information!
+- This method is not suitable for very large variable values.
+- This method is case insensitive (all characters in lower case).
+- This can be useful for example where you want to be able to ***bookmark*** a page with specific query string values.
+
+![Alt text](image-12.png)
+
+
+#### Function in PHP
+
+• A function will be executed by a call to the function.
+• The PHP script defines a function showName that takes two parameters, $given_name and $family_name, and echoes them with a space in between and an exclamation mark, followed by a break (``<br>``).
+
+![Alt text](image-13.png)
+
+
+#### PHP - functions
+
+- Classes are the blueprint for creating objects. 
+- They encapsulate data for the object and methods to manipulate that data. 
+  - arrow indicates the instance variables
+- Using classes and objects allows you to implement the principles of object-oriented programming (OOP).
+
+![Alt text](image-14.png)
+
+
+#### Classes - visibility
+
+- **public**: The property or method can be accessed from anywhere.
+- **protected**: The property or method can be accessed within the class and by classes derived from that class.
+- **private**: The property or method can ONLY be accessed within the class.
+
+**Creating Objects**
+
+To create an instance of a class (i.e., an object), use the new keyword followed by the class name:
+Accessing Properties and Methods
+
+Once you have an object, you can access its properties and methods using the arrow operator ->. 
+Here's how to use the setColor and getColor methods:
+
+![Alt text](image-15.png)
+
+#### PHP – Classes – Constructor Method
+- A special method called a constructor (__construct()) can be defined in a class. 
+- It is automatically called when an object is created. 
+- Constructors are typically used to initialize properties or perform setup tasks.
+
+![Alt text](image-16.png)
+
+### UQCloud & NGINX Web Server
+
+#### Elements of a Web Server
+The basic elements of a web server includes 
+- Hardware
+- operating system
+- http server 
+
+![Alt text](image-17.png)
+
+### Web server software
+Top five open source web server
+- Apache HTTP Server
+- NGINX
+- Apache Tomcat
+- Node.js
+- Lighttpd
+
+UQCloud gives each student a Zone, which is a server that runs NGINX where various services can be enabled eg PHP, databases, etc…
+
+### NGINX Web server – Basic config file
+- root /var/www/html/htdocs;: 
+The root directive specifies the directory 
+where Nginx should look for the files to serve.
+- index index.html index.htm;: 
+
+This specifies the default files that 
+Nginx should look for when a directory is 
+requested.
+- After you change the configuration run:
