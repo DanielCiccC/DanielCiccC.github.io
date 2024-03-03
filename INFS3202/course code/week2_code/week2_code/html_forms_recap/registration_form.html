@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Registration Form</h1>
+
+<form action="/submit" method="post">
+  
+  <!-- Text Input -->
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+  <br><br>
+
+  <!-- Password Input -->
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+  <br><br>
+
+  <!-- Textarea -->
+  <label for="comments">Comments:</label>
+  <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+  <br><br>
+
+  <!-- Select Dropdown -->
+  <label for="occupation">Occupation:</label>
+  <select id="occupation" name="occupation">
+    <option value="frontEndDeveloper">Front End Developer</option>
+    <option value="backEndDeveloper">Back End Developer</option>
+    <option value="fullStackDeveloper">Full Stack Developer</option>
+    <option value="dataScientist">Data Scientist</option>
+    <option value="designer">Designer</option>
+  </select>
+  <br><br>
+
+  <!-- Checkbox -->
+  <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+  <label for="subscribe">Subscribe to newsletter</label>
+  <br><br>
+
+  <!-- Radio Buttons -->
+  <label for="new">New User</label>
+  <input type="radio" id="new" name="userType" value="new">
+  
+  <label for="existing">Existing User</label>
+  <input type="radio" id="existing" name="userType" value="existing">
+  <br><br>
+
+  <!-- Submit Button -->
+  <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
