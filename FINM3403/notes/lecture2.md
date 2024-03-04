@@ -26,23 +26,23 @@ Adjustable peg
 Free floating system
 - fully flexible
 
-![Alt text](image-1.png)
+![Alt text](image-37.png)
 
 ### Currency Board: Hong Kong
 - Central bank of hong Kong stands to buy any Forex to maintain their price
 - defend their par value
-![Alt text](image-2.png)
+![Alt text](image-38.png)
 
 
 Since 1982, Hong Kong dollar has remained a very stable exchange rate
-![Alt text](image-3.png)
+![Alt text](image-39.png)
 
 ### Fixed exchange rate system
 
 |£0.35/$ is referred to as the “par value” i.e., AUD is fixed relative to GBP (anchor currency) at £0.35/$. | Fig 2: The exchange rate is "undervalued” at the par value of £0.35/$. |
 |---|---|
-![Alt text](image-4.png) | ![Alt text](image-5.png) |
-| ![Alt text](image-6.png)|![Alt text](image-7.png) |
+![Alt text](image-40.png) | ![Alt text](image-41.png) |
+| ![Alt text](image-42.png)|![Alt text](image-43.png) |
 
 
 
@@ -59,7 +59,7 @@ Since 1982, Hong Kong dollar has remained a very stable exchange rate
 
 | 5 year window | % window
 |---|---|
-| ![Alt text](image-8.png) | ![Alt text](image-9.png)
+| ![Alt text](image-44.png) | ![Alt text](image-45.png)
 
 ### Advantages of a Fixed ER
 1. Reduce transaction costs and exchange rate risk which can
@@ -85,7 +85,7 @@ A country must give up one of the three goals:
 - Full financial integration (free flow of capital)
 - Monetary independence (of domestic policies)
 
-![Alt text](image-10.png)
+![Alt text](image-46.png)
 
 ### The Balance of Payments (BOP)
 - The BOP is a statistical record of the flow of all of the payments between the residents of a country and the rest of the world in a given year.
@@ -95,7 +95,7 @@ A country must give up one of the three goals:
   - Used to gauge the health of the country
   - Government spending relative to its revenue, etc.
 
-![Alt text](image-1.png)
+![Alt text](image-47.png)
 
 ### Fundamentals of BOP Accounting
 - Transactions are recorded on the basis of double entry bookkeeping – by definition it has to balance
@@ -122,8 +122,8 @@ and of unilateral transfers.
     - Primary Income (“investment income”): interest income, dividends etc.
     - Secondary Income (“unilateral transfers”): Foreign aid, pensions to retired people abroad, wages repatriated etc.
 - The sum of the sub-categories = CA balance
-- 
-![Alt text](image-3.png)
+  
+![Alt text](image-48.png)
 
 CA = Exports (x) - Imports (M)
 
@@ -150,7 +150,8 @@ KA = Capital Inflow (cr) – Capital outflow (dr)
   - Any returns on investment from international trades are accounted in the financial account
   - Accurate to keep track of the transactions in the financial account
 
-![Alt text](image-1.png)
+![Alt text](image-49.png)
+
 
 - reserve assets - assets held by the central bank (gold, etc)
 - Errors and Omissions - difference between CA balance, Capital Account and Financial Account
@@ -163,7 +164,7 @@ KA = Capital Inflow (cr) – Capital outflow (dr)
   - For floating rate regime countries, such as the U.S. and Australia, official reserves are relatively unimportant.
 - **Net Errors and Omissions:** Account is used to account for statistical errors and/or untraceable monies within a country
 
-![Alt text](image-2.png)
+![Alt text](image-50.png)
 
 - the only way you can run a deficit if is someone is willing to fund it - funded by the central bank
 
@@ -191,9 +192,9 @@ Forms:
 - CA Deficit → $CA < 0$ → Borrowing from Abroad to finance domestic spending
 - CA Surplus → $CA > 0$ → Lending Abroad
 
-![Alt text](image-3.png)
+![Alt text](image-51.png)
 
-![Alt text](image-4.png)
+![Alt text](image-52.png)
 
 ### Savings, Investment & the CA
 
