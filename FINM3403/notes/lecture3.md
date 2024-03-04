@@ -35,14 +35,14 @@ common currency should remain the same.
 
 S: exchange rate $/pound
 
-![Alt text](image-5.png)
+![Alt text](image-1.png)
 
 Conversely, the exchange rate could be deduced from the relative local product prices:
 
-![Alt text](image-6.png)
+![Alt text](image-2.png)
 
 
-![Alt text](image-7.png)
+![Alt text](image-3.png)
 
 - Implication: The demand for Australian wheat will increase forcing up its price. The price of UK wheat will drop.
   - Other costs, such as shipping, taxes, etc. are not incorporate into this difference
@@ -54,8 +54,7 @@ Conversely, the exchange rate could be deduced from the relative local product p
 - The PPP exchange rate between the two countries would then be:
 PI: Price-Index basket of goods at time $t$
 
-![Alt text](image-8.png)
-
+![Alt text](image-4.png)
 - The price of those two basket of goods have to be the same
   - $PI_{A, t} \; \; (PI_{B, t})$ are the price indices of the two countries (e.g. consumer price index) at time t
 - The Big Mac Index is an example of this variant of PPP.
@@ -64,7 +63,7 @@ PI: Price-Index basket of goods at time $t$
 ### The Big Mac Index
  -  most famous test of the Law of One Price is The Economist magazine’s Big Mac Hamburger standard.
 
-![Alt text](image-9.png)
+![Alt text](image-5.png)
 
 - The Big Mac can be viewed as a standardized bundle of goods that are individually traded, so we would expect it will only hold approximately. 
 
@@ -72,7 +71,7 @@ PI: Price-Index basket of goods at time $t$
   - Theoretically can buy a big MAC in a country where it is undervalued and sell it in a country where it is overvalued
   - Also include things like rent, labour, in the calculation of big Mac burger
 
-![Alt text](image-10.png)
+![Alt text](image-6.png)
 
 
 ### How well does it work?
@@ -93,20 +92,18 @@ PI: Price-Index basket of goods at time $t$
 
 $\pi$ : the inflation rate of country A, B
 
-![Alt text](image-11.png)
-
-![Alt text](image-12.png)
+![Alt text](image-7.png)
 
 
 ### Relative PPP
  Given inflation rates of 1.9% and 3% in Australia and the UK respectively, what is the prediction of PPP with regards to $A/GBP exchange rate?
 
-![Alt text](image-13.png)
+![Alt text](image-8.png)
 
 - General implication of relative PP is that countries with high rates of inflation will see their currencies depreciate against those with low rates of inflation
 
 
-![Alt text](image-14.png)
+![Alt text](image-9.png)
 
 ### Applications of relative PPP
 
