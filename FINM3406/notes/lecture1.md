@@ -154,7 +154,7 @@ things more abundantly better
 - Infrastructure
   - Roads, tunnels, airports, seaports, bridges
 
-![Alt text](image-1.png)
+![Alt text](assets\IMG1.PNG)
 
 ### Scope of Real Property
 - Public/Private

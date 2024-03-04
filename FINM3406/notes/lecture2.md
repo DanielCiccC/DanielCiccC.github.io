@@ -21,7 +21,7 @@ Thinking about real estate and a difference framework
   - when NSW was colonised
 - Capt. Phillip became governor of New South Wales, (NSW) (which at that time included Queensland and Victoria) and established a settlement.
   
-![Alt text](image-2.png)
+![Alt text](assets\IMG2.PNG)
 
 - Under English law, following the Norman invasion of 1066, all property was vested in the Crown.
 - Under the feudal system all lend was held from Crown various forms of service were required of the lords who 
@@ -153,7 +153,7 @@ Rights and Obligations under Leasehold Tenure
 
 - Big bulking building like bunnings, community title.
 
-![Alt text](image-3.png)
+![Alt text](assets\IMG3.PNG)
 
 
 ### Native title
@@ -190,7 +190,7 @@ Rights and Obligations under Leasehold Tenure
 
 ## CORPORATE REAL ESTATE & INVESTMENT REAL ESTATE
 - Business space, corporate statement. Just need to make as much money as possible
-![Alt text](image-4.png)
+![Alt text](assets\IMG4.PNG)
 
 ### Real Estate – Space Market
 - Rents are determined by the property features in the space market:
@@ -217,7 +217,7 @@ Rights and Obligations under Leasehold Tenure
 
 The capital and space markets are driven by different factors but are linked by their rents:
 
-![Alt text](image-5.png)
+![Alt text](assets\IMG5.PNG)
 
 Three key features of income producing (investment) properties:
 1.Location
@@ -270,7 +270,7 @@ Three key features of income producing (investment) properties:
 
 ## RISK MANAGEMENT
 
-![Alt text](image-6.png)
+![Alt text](assets\IMG6.PNG)
 
 ### Sources of risk
 
