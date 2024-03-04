@@ -103,7 +103,7 @@ $\pi$ : the inflation rate of country A, B
 - General implication of relative PP is that countries with high rates of inflation will see their currencies depreciate against those with low rates of inflation
 
 
-![Alt text](image-9.png)
+![Alt text](image-14.png)
 
 ### Applications of relative PPP
 
