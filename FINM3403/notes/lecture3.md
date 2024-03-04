@@ -35,14 +35,14 @@ common currency should remain the same.
 
 S: exchange rate $/pound
 
-![Alt text](image-1.png)
+![Alt text](assets\IMG59.PNG)
 
 Conversely, the exchange rate could be deduced from the relative local product prices:
 
-![Alt text](image-2.png)
+![Alt text](assets\IMG60.PNG)
 
 
-![Alt text](image-3.png)
+![Alt text](assets\IMG61.PNG)
 
 - Implication: The demand for Australian wheat will increase forcing up its price. The price of UK wheat will drop.
   - Other costs, such as shipping, taxes, etc. are not incorporate into this difference
@@ -54,7 +54,7 @@ Conversely, the exchange rate could be deduced from the relative local product p
 - The PPP exchange rate between the two countries would then be:
 PI: Price-Index basket of goods at time $t$
 
-![Alt text](image-4.png)
+![Alt text](assets\IMG62.PNG)
 - The price of those two basket of goods have to be the same
   - $PI_{A, t} \; \; (PI_{B, t})$ are the price indices of the two countries (e.g. consumer price index) at time t
 - The Big Mac Index is an example of this variant of PPP.
@@ -63,7 +63,7 @@ PI: Price-Index basket of goods at time $t$
 ### The Big Mac Index
  -  most famous test of the Law of One Price is The Economist magazine’s Big Mac Hamburger standard.
 
-![Alt text](image-5.png)
+![Alt text](assets\IMG63.PNG)
 
 - The Big Mac can be viewed as a standardized bundle of goods that are individually traded, so we would expect it will only hold approximately. 
 
@@ -71,7 +71,7 @@ PI: Price-Index basket of goods at time $t$
   - Theoretically can buy a big MAC in a country where it is undervalued and sell it in a country where it is overvalued
   - Also include things like rent, labour, in the calculation of big Mac burger
 
-![Alt text](image-6.png)
+![Alt text](assets\IMG64.PNG)
 
 
 ### How well does it work?
@@ -92,18 +92,18 @@ PI: Price-Index basket of goods at time $t$
 
 $\pi$ : the inflation rate of country A, B
 
-![Alt text](image-7.png)
+![Alt text](assets\IMG65.PNG)
 
 
 ### Relative PPP
  Given inflation rates of 1.9% and 3% in Australia and the UK respectively, what is the prediction of PPP with regards to $A/GBP exchange rate?
 
-![Alt text](image-8.png)
+![Alt text](assets\IMG66.PNG)
 
 - General implication of relative PP is that countries with high rates of inflation will see their currencies depreciate against those with low rates of inflation
 
 
-![Alt text](image-14.png)
+![Alt text](assets\IMG67.PNG)
 
 ### Applications of relative PPP
 
@@ -117,17 +117,17 @@ $\pi$ : the inflation rate of country A, B
 
 - Suppose the ¥/$ spot exchange rate and expected inflation for Japan and Australia are:
 
-![Alt text](image-15.png)
+![Alt text](assets\IMG68.PNG)
 
 - What is the expected ¥/$ exchange rate if relative PPP holds?
 
-![Alt text](image-16.png)
+![Alt text](assets\IMG69.PNG)
 
 ### The Real Exchange Rate
 - The real exchange rate measures deviations from PPP. 
   - That is, changes in the spot exchange rate that do not reflect differences in inflation rates between the two currencies in question.
 
-![Alt text](image-17.png)
+![Alt text](assets\IMG70.PNG)
 
 ### Real Exchange Rate
 - Appreciation in the real exchange rate measures deviations from PPP.  
@@ -140,7 +140,7 @@ $\pi$ : the inflation rate of country A, B
 
 - Interest rate parity (IRP) is an arbitrage condition that provides the linkage between the foreign exchange markets and the international money markets.
 
-![Alt text](image-18.png)
+![Alt text](assets\IMG71.PNG)
 
 - How does the market arrive at the bid forward exchange rates?
   - need current spot exchange rate, plus interest MM interest rate
@@ -156,15 +156,15 @@ the money market for 3 months. The options are
   - Invest in foreign currency denominated securities
 -  The returns on an Australian investment is given by
 
-![Alt text](image-19.png)
+![Alt text](assets\IMG72.PNG)
 
 - The return on foreign investment is given by
 
-![Alt text](image-20.png)
+![Alt text](assets\IMG73.PNG)
 
 - Gattinara Corp will be indifferent between the two investment opportunities if
 
-![Alt text](image-21.png)
+![Alt text](assets\IMG74.PNG)
 
 
 - Basic idea: Two alternative ways to transform from currency A at time 0 to currency B at time 1 should earn the same return.
@@ -175,7 +175,7 @@ the money market for 3 months. The options are
 - Suppose the 3-month money market rate is 8% p.a. (2% for 3-months) in the U.S. and 4%p.a. (1% for 3-months) in Switzerland, and the spot exchange rate is CHF1.48/$.
 - The 3-month forward rate must be CHF1.4655/$ to prevent arbitrage opportunities (i.e., interest rate parity must hold).
 
-![Alt text](image-22.png)
+![Alt text](assets\IMG75.PNG)
 
 ### Why Parity Holds?
 - This must hold by arbitrage. Otherwise, riskless profits 
@@ -189,7 +189,7 @@ arbitrage (CIA) and occurs whenever IRP does NOT hold. CIA can involve the follo
 ### Exmaple 2
 - The annual interest rate in the AUS and UK are 5% and 8% respectively. The current spot rate is $1.50/£ and the 1 year forward rate is $1.48/£. Can arbitrage profits be made?
 
-![Alt text](image-23.png)
+![Alt text](assets\IMG76.PNG)
 
 ### Covered Interest Arbitrage
 
@@ -201,13 +201,13 @@ arbitrage (CIA) and occurs whenever IRP does NOT hold. CIA can involve the follo
 pound interest rates to fall, while the higher level of borrowing 
 in Australia causes dollar interest rates to rise.
 
-![Alt text](image-24.png)
+![Alt text](assets\IMG77.PNG)
 
 ### The Fisher Effect
 
 - The Fisher effect (also called Fisher-closed) postulated by Irving Fisher states:
 
-![Alt text](image-25.png)
+![Alt text](assets\IMG78.PNG)
 
 This relation is often presented as a linear approximation stating that the nominal interest rate (i) is equal to a real interest rate (r) plus expected inflation ($\pi$)
 
@@ -216,19 +216,19 @@ $$i \approx r + \pi$$
 - Applied to two different countries, like the Australia and 
 Japan, the Fisher Effect would be stated as:
 
-![Alt text](image-26.png)
+![Alt text](assets\IMG79.PNG)
 
 ### The International Fisher Effect
 
 - The International Fisher Effect (also called Fisher-open or Uncovered Interest rate parity condition) states that the spot exchange rate should change to adjust for differences in interest rates between two countries:
 
-![Alt text](image-27.png)
+![Alt text](assets\IMG80.PNG)
 
-![Alt text](image-28.png)
+![Alt text](assets\IMG81.PNG)
 
-![Alt text](image-29.png)
+![Alt text](assets\IMG82.PNG)
 
-![Alt text](image-30.png)
+![Alt text](assets\IMG83.PNG)
 
 ### Uncovered Interest Rate Parity
 
@@ -236,16 +236,16 @@ Japan, the Fisher Effect would be stated as:
 • Even though you cannot make a riskless profit through CIA, given your estimation of the future spot rate, you can enter into an uncovered interest “arbitrage”
 • In an uncovered position, rather than locking in a forward rate today, you take your chances and hope you’re right about your assessment of the future spot rate
 
-![Alt text](image-31.png)
+![Alt text](assets\IMG84.PNG)
 
-![Alt text](image-32.png)
+![Alt text](assets\IMG85.PNG)
 
 
 - The Forward Rate as an Unbiased Predictor of the Future Spot Rate
   - Some forecasters believe that for the major floating currencies, foreign exchange markets are “efficient” and forward exchange rates are unbiased predictors of future exchange rates.
   - The forward exchange hypothesis states that the forward exchange rate, quoted at time t for delivery at time t+1, is equal to the expected value of the spot exchange rate at time t+1.
 
-![Alt text](image-33.png)
+![Alt text](assets\IMG86.PNG)
 
 - The Forward rate is said to be an unbiased predictor. Unbiased 
 prediction means that the forward rate will, on average, 
@@ -258,4 +258,4 @@ error is zero.
 • Suppose expected inflation in Japan is 1% and expected inflation in the U.S. is 5%. The current spot exchange rate is ¥104.00/$ and the one-year forward rate is ¥100.00/$.
 • See that all of our parity conditions predict that the ¥ will appreciate 4% relative to the $ over the next year.
 
-![Alt text](image-34.png)
+![Alt text](assets\IMG87.PNG)
