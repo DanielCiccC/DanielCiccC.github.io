@@ -13,3 +13,8 @@ $S(j/k)$ will refere ot the price of one unit of currency $k$ in terms of curren
 ### Bid-Ask spread
 - Bid - the price in which the bank dealer will pay (buy) the currency for
 - Ask - the price in which the bank dealer will sell the currency for
+
+### Calculating the cross-exchange rate Bid-Ask spread
+- use two direct or indirect quotes
+
+$S^{a}(\pounds / SFr) = S^{a}( \pounds / \$  ) \times (\$/sFr)$
