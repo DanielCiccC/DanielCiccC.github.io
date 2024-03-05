@@ -21,7 +21,7 @@ I am emailing in regard to your lecturer’s offer for student assistance in a d
 
 We are currently storing our data in an excel spreadsheet, however, to accommodate future growth we would like to implement a database system to track our ridesharing activities. I have tried to summarise the data stored currently in the excel sheet below. Would you please be able to create an Entity-Relationship diagram for us to use in our planning phase?
 
-**Users:** When a user signs up to create an account with us we ask them to provide their full name and DOB. We also assign them a unique id number. A user can also register **emergency contact(s)** specific to their account. Each emergency contact includes a *name* and *contact details*, with the name being *unique* per user account.
+**Users:** When a user signs up to create an account with us we ask them to provide their full name and DOB. We also assign them a unique id number. A user can also register **emergency contact(s)** *specific to their account*. Each emergency contact includes a *name* and *contact details*, with the name being *unique* per user account.
 
 **Staff**: We *split staff into two categories*, **Administration** and **Drivers**. All staff members have a *staffID* but for administration staff their *desk number* is also recorded. By law we are required to record the *licence number* of each driver. A staff member could work *both* as a driver and in administration.
 
@@ -80,3 +80,8 @@ look forward to viewing the student responses!
 Kind regards, 
 Peter Thompson 
 Director of Innovation | Dirt Road Driving   
+
+
+### Solution
+
+![Alt text](assets\IMG28.PNG)
