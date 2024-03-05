@@ -5,7 +5,7 @@
 Using the correspondence on the pages below, complete the following task. Please ask your tutors for help if you require clarification on any aspects of the brief. 
 
 ---
-#### Correspondence 1:
+### Correspondence 1:
 From: peter@dirtroaddriving.com.au
 
 To: INFS1200_7900@uq.edu.au
@@ -35,6 +35,7 @@ Kind regards,
 Peter Thompson
 Director of Innovation | Dirt Road Driving  
 
+---
 
 ### Correspondence 3: 
 
