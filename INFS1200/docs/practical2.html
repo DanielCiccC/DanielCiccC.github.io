@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="module-1-case-study">Module 1 Case Study</h1>
+<h3 dir="auto" id="task">Task</h3>
+<p dir="auto">Using the correspondence on the pages below, complete the following task. Please ask your tutors for help if you require clarification on any aspects of the brief.</p>
+<hr dir="auto">
+<h4 dir="auto" id="correspondence-1">Correspondence 1:</h4>
+<p dir="auto">From: <a href="mailto:peter@dirtroaddriving.com.au">peter@dirtroaddriving.com.au</a></p>
+<p dir="auto">To: <a href="mailto:INFS1200_7900@uq.edu.au">INFS1200_7900@uq.edu.au</a></p>
+<p dir="auto">Date: 17/3/2020 11:42 AM</p>
+<p dir="auto">Subject: Student Support for Industry Project</p>
+<p dir="auto">Dear INFS1200/7900 Student Team,</p>
+<p dir="auto">I am emailing in regard to your lecturer’s offer for student assistance in a database project our company is undertaking. I am the cofounder of a rural rideshare company called “Dirt Road Driving.” We specialise in offering our clients rideshare services in locations which are not serviced by other companies such as DiDi or Uber.</p>
+<p dir="auto">We are currently storing our data in an excel spreadsheet, however, to accommodate future growth we would like to implement a database system to track our ridesharing activities. I have tried to summarise the data stored currently in the excel sheet below. Would you please be able to create an Entity-Relationship diagram for us to use in our planning phase?</p>
+<p dir="auto"><strong>Users:</strong> When a user signs up to create an account with us we ask them to provide their full name and DOB. We also assign them a unique id number. A user can also register <strong>emergency contact(s)</strong> specific to their account. Each emergency contact includes a <em>name</em> and <em>contact details</em>, with the name being <em>unique</em> per user account.</p>
+<p dir="auto"><strong>Staff</strong>: We <em>split staff into two categories</em>, <strong>Administration</strong> and <strong>Drivers</strong>. All staff members have a <em>staffID</em> but for administration staff their <em>desk number</em> is also recorded. By law we are required to record the <em>licence number</em> of each driver. A staff member could work <em>both</em> as a driver and in administration.</p>
+<p dir="auto"><strong>Vehicles</strong>: We store the <em>VIN</em> number, <em>make</em> and <em>model</em> of each car used in our ride sharing service. However, <em>if the car</em> is a <strong>4WD</strong> then we also record the <em>ride height</em> and <em>wheel type</em>. For <strong>2WD</strong> cars we record if the car is <em>front wheel drive or back wheel drive</em>.</p>
+<p dir="auto">Trip: A trip is made up of a <strong>user</strong>, a <strong>vehicle</strong> and a <strong>driver</strong> as well as a <em>time stamp</em> of when the booking is made. Two additional timestamps demonstrating the <em>start</em> and <em>end</em> of the trip are also recorded. This allows us to calculate a ride <em>fare</em>. In a trip, the user may <em>request to stop</em> at several locations, which are all recorded for safety purposes. After a trip is made the user can submit a <em>rating</em>.</p>
+<p dir="auto">On behalf of the company I would like to extend our sincere thanks for your help and assistance.</p>
+<p dir="auto">Kind regards,
+Peter Thompson
+Director of Innovation | Dirt Road Driving</p>
+<h3 dir="auto" id="correspondence-3">Correspondence 3:</h3>
+<p dir="auto">From: <a href="mailto:peter@dirtroaddriving.com.au">peter@dirtroaddriving.com.au</a></p>
+<p dir="auto">To: <a href="mailto:INFS1200_7900@uq.edu.au">INFS1200_7900@uq.edu.au</a></p>
+<p dir="auto">Date: 27/3/2020 08:56 AM</p>
+<p dir="auto">Subject: RE: Student Support for Industry Project</p>
+<p dir="auto">Hi Elaine,</p>
+<p dir="auto">Sorry for my late response. Thank you for your email requesting clarification. After checking with
+our administration staff, I can provide the following information in response to your questions.</p>
+<p dir="auto">What “contact details” are stored for an emergency contact?
+We just store an <em>email address</em> and a <em>phone number</em>.</p>
+<p dir="auto">Just out of interest, why do you record the vehicle used for each trip? Wouldn’t a driver just drive
+the same vehicle each time?
+Actually, a <u> driver could potentially drive any vehicle in our system </u> when they complete a trip.
+Drivers often switch cars depending on the trip, especially in areas where there are no roads or just
+dirt tracks. As such we need to <u> record the vehicle used for each individual trip as well </u>. A driver is
+never permanently assigned to a specific vehicle.</p>
+<p dir="auto">Do you store any personal information regarding staff members (name, DOB, address) in addition
+to their staffID?
+Yes, we record each staff members <em>full name (first, middle and last)</em>, <em>DOB, address</em> and their
+<em>phone number(s)</em> as well.</p>
+<blockquote dir="auto">
+<p dir="auto">who else stores these kinds of details? What would it mean if these details are common?</p>
+</blockquote>
+<p dir="auto">Regarding Ratings…
+After a trip is completed the user is encouraged to rate the driver and the vehicle. However, they
+<u> rate the driver and the vehicle separately </u>. Each rating is stored as an integer out of 10. If a user
+takes another trip with the same driver or vehicle and decides to submit another rating, a new
+rating is not created, instead their old rating is updated.</p>
+<p dir="auto">I hope this helps! Please feel free to contact me if you require any more information/clarifications. I
+look forward to viewing the student responses!</p>
+<p dir="auto">Kind regards,
+Peter Thompson
+Director of Innovation | Dirt Road Driving</p>
+
+</main>
+</body>
+</html>

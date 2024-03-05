@@ -22,6 +22,7 @@ border counterparties
   - trade sizes 200-500M
 - Participants in the market:
   - International banks
+    - 100-200 banks willing to buy/sell foreign  currency in their own account
   - Bank customers engaged in commercial and Investment transactions, BHP, QIC, e.g. 
   - Non-bank dealers 
   - FX brokers
