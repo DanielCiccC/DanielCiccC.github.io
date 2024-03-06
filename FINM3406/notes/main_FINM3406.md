@@ -5,3 +5,4 @@ All my notes from the beginning of lectures; Since these are moreso informationa
 **Lecture** | **Tutorial**
 |---|---|
 [Lecture 1](lecture1.html) | [Tutorial 1](tutorial1.html)
+| [Lecture 2](lecture2.html) | [Tutorial 2](tutorial2.html)
