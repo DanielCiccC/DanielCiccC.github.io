@@ -26,11 +26,11 @@ Easier to link to different information
 - **HTTPS:** HTTPS is the secure version of HTTP, the protocol over which data is sent between your browser and the website that you are connected to. It means all communications between your browser and the website are encrypted.
 
 ### Example URL
-![Alt text](image-1.png)
+![Alt text](assets\IMG1.PNG)
 
 ### Model View Controller – Architectural Pattern
 
-![Alt text](image-2.png)
+![Alt text](assets\IMG2.PNG)
 
 - Model (ExampleModel.php): 
 Handles database operations.

@@ -127,15 +127,15 @@ Why Use PHP?
 - PHP supports several data types: 
 Strings, Integers, Floats, Booleans, Arrays, etc.
 
-![Alt text](image-3.png)
-![Alt text](image-4.png)
+![Alt text](assets\IMG3.PNG)
+![Alt text](assets\IMG4.PNG)
 
 #### String concatenation
 - String concatenation in PHP is the process of joining two or more strings together into one single string. 
 - PHP uses the dot (.) operator for string concatenation. 
 - Useful generating HTML content with embedded PHP variables, combining user input into messages, or assembling file paths and URLs from separate parts.
 
-![Alt text](image-5.png)
+![Alt text](assets\IMG5.PNG)
 
 #### PHP – Control Structures – If statements
 if Statement:
@@ -143,23 +143,23 @@ if Statement:
 - It can be combined with an else statement to execute a code block if the condition is false.
 - You can also use elseif to specify a new condition to test if the first condition is false.
 
-![Alt text](image-6.png)
+![Alt text](assets\IMG6.PNG)
 
 #### Loops
 PHP supports while, for and foreach loops
 
-![Alt text](image-7.png)
+![Alt text](assets\IMG7.PNG)
 
-![Alt text](image-8.png)
+![Alt text](assets\IMG8.PNG)
 
-![Alt text](image-9.png)
+![Alt text](assets\IMG9.PNG)
 
 [PHP operators](https://www.w3schools.com/php/php_operators.asp)
 
 
 #### Working with forms
 
-![Alt text](image-10.png)
+![Alt text](assets\IMG10.PNG)
 
 #### PHP - Built-in SuperGlobals
 - Superglobal variables in are predefined variables that are accessible from anywhere in a PHP script. 
@@ -180,7 +180,7 @@ PHP supports while, for and foreach loops
 #### PHP – Forms – Get vs Post
 Information sent from a form with the GET method is visible to everyone (it will be displayed in the browser's address bar) and has limits on the amount of information to send.
 
-![Alt text](image-11.png)
+![Alt text](assets\IMG11.PNG)
 
 #### When to use Get
 - This method should not be used when sending passwords or other sensitive information!
@@ -188,7 +188,7 @@ Information sent from a form with the GET method is visible to everyone (it will
 - This method is case insensitive (all characters in lower case).
 - This can be useful for example where you want to be able to ***bookmark*** a page with specific query string values.
 
-![Alt text](image-12.png)
+![Alt text](assets\IMG12.PNG)
 
 
 #### Function in PHP
@@ -196,7 +196,7 @@ Information sent from a form with the GET method is visible to everyone (it will
 • A function will be executed by a call to the function.
 • The PHP script defines a function showName that takes two parameters, $given_name and $family_name, and echoes them with a space in between and an exclamation mark, followed by a break (``<br>``).
 
-![Alt text](image-13.png)
+![Alt text](assets\IMG13.PNG)
 
 
 #### PHP - functions
@@ -206,7 +206,7 @@ Information sent from a form with the GET method is visible to everyone (it will
   - arrow indicates the instance variables
 - Using classes and objects allows you to implement the principles of object-oriented programming (OOP).
 
-![Alt text](image-14.png)
+![Alt text](assets\IMG14.PNG)
 
 
 #### Classes - visibility
@@ -223,14 +223,14 @@ Accessing Properties and Methods
 Once you have an object, you can access its properties and methods using the arrow operator ->. 
 Here's how to use the setColor and getColor methods:
 
-![Alt text](image-15.png)
+![Alt text](assets\IMG15.PNG)
 
 #### PHP – Classes – Constructor Method
 - A special method called a constructor (__construct()) can be defined in a class. 
 - It is automatically called when an object is created. 
 - Constructors are typically used to initialize properties or perform setup tasks.
 
-![Alt text](image-16.png)
+![Alt text](assets\IMG16.PNG)
 
 ### UQCloud & NGINX Web Server
 
@@ -240,7 +240,7 @@ The basic elements of a web server includes
 - operating system
 - http server 
 
-![Alt text](image-17.png)
+![Alt text](assets\IMG17.PNG)
 
 ### Web server software
 Top five open source web server
