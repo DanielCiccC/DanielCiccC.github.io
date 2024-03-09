@@ -86,6 +86,7 @@ GET Method
 - Data Appended to URL: Sends data in the URL itself, as key-value pairs in the query string.
 - Read Operations: Typically used for retrieving data, not modifying it.
 - Limited Data Size: Length restrictions due to URL length limitations (usually up to 2048 characters).
+  
 POST Method
 - Data in Body: Sends data in the request body, allowing for larger and more complex payloads. No inherent size limitation like with GET.
 - Write Operations: Typically used for sending data to be processed or stored on the server.
