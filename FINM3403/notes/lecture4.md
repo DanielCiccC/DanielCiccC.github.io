@@ -95,3 +95,97 @@ Call option
 - Grants the hodler the right but not the obligation to buy the security at the strike price
 Expiration
 - The point after which the option may no longer be used or exercised. Monthly option on a stcoker typically expire the third Friday of the month
+
+### Put Options
+Put option
+- Grants the hodler the right, but not the obligation to sell the security at the strike price
+
+***June 2024 109 put options on the Euro***
+
+
+### Basics of Options
+'The right, but not the obligation'
+
+- Types of Options
+  - Call: gives the holder the right to buy
+  - Put: gives the holder the right to sell
+- An **American option**  gives the buyer the right to exercise the 
+option at any time between the date of writing and the expiration or 
+maturity date. 
+  - American option will always be more expensive than an equivalent European option (of the same terms)
+- A **European option** can be exercised only on the expiration date, 
+not before. 
+- The **exercise or strike price (X)**, which is the exchange rate at 
+which foreign currency can be purchased (call) or sold (put). 
+- The **premium**, cost, price, or value of the option itself (paid in 
+advance by the buyer to the seller).
+- The underlying or actual spot exchange rate in the market. 
+
+![alt text](assets\IMG95.PNG)
+
+- at any given time you can only buy options from six months
+- Hedging: 600,000 contracts on the same size of the market.
+
+### Value of a call option at Expiration
+
+![alt text](assets\IMG96.PNG)
+
+### Value of the put option at Expiration
+
+- You might be interested in contracts that give you just the nice part of a forward sale
+  - That is, the right to sell at a pre-specified price when the currency trades below that price, without the obligation to sell at X when the currency is worth more.  
+  - With such an option, you obtain no less than X per unit of foreign currency, and possibly more than X.
+    - In contrast, with a forward sale you always get X. 
+    - A right to sell at X, without any obligation to do so, is called a put option, or put.
+
+![alt text](assets\IMG97.PNG)
+
+### Example
+- You buy a call on AUD at USD/AUD 0.5000 expiring on June 30 th . 
+- You are “long the call.”
+- Counter party is the writer of the call – Has to deliver AUD at 50¢ should you exercise the call
+  - If $S_{T}$ = USD/AUD 0.60 – Will exercise your right to buy AUD at 50¢ and save 0.10
+  - If $S_{T}$ < USD/AUD 0.50 – Will not exercise, since it can be purchased in the spot market at a cheaper price
+
+### Intrinsic and Time Value
+![alt text](assets\IMG98.PNG)
+
+### Factors that Affect Options Prices
+
+- current exchange rate (S) – as S $\uparrow$s, Call price s and Put price s
+- strike price (X) – as X s, Call price s and Put price s 
+- time to expiration (T) – as T s, the value s
+- volatility of the exchange rate ($\sigma$) –the higher the $\sigma$ of the exchange rate, the greater the value
+- interest rates (iA and iB).
+
+### Swaps
+- A swap is a contractual agreement to exchange periodic cash flows between two parties.
+- Single currency interest rate swap
+  - One counterparty exchanges the interest payments of a floating-rate debt obligation for the fixed-rate interest payments of the other counterparty.  Both debt obligations are denominated in the same currency.
+- Cross-currency interest rate swap
+  - One counterparty exchanges the debt service obligations of a bond denominated in one currency for the debt service obligations of the other counterparty denominated in another currency.
+
+NOTES:
+- regular intermediate payments before maturity
+- Same currency, exchanging cash flows between two different currencies
+
+### How do currency swaps work?
+- Here, the MNC would enter into an agreement with a counter party to exchange fixed rate debt service in one currency for fixed rate debt service in another currency.
+- Example: Suppose a U.S. MNC, Gaggle Co., wants to finance a ¥10 billion expansion of a Japanese plant.
+  - They could borrow dollars in the U.S. where they are well known and exchange dollars for yen. This results in exchange rate risk. OR
+  - They could borrow yen in the international bond market but pay a lot since they are not well known abroad. OR
+  - If Gaggle can find a Japanese MNC with a mirror-image financing need, both companies may benefit from a swap.
+
+![alt text](assets\IMG99.PNG)
+
+### Swap Bank
+- A swap bank is a generic term used to describe a financial institution that facilitates swaps between counterparties.
+- The swap bank serves as either a broker or a dealer.
+  - A broker matches counterparties but does not assume any of the risk of the swap.  The swap broker receives a commission for this service.
+  - Today most swap banks serve as dealers or market makers. As a market maker, the swap bank stands willing to accept either side of a currency swap.
+
+
+NOTE:
+- OTC market, will not know who is the counterparty
+- swap bank is a broker or a dealer
+
