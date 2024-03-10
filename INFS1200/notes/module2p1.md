@@ -20,7 +20,7 @@ Relations have specific properties, based on the mathematical set theory
 
 |**Component type** | **Example and description**
 | --- | ---
-| **Domain Types** | A domain D is a set of atomic values. An atomic value is indivisible (as far as the relational data model is concerned) <br> <br> Examples: <br> <br> Integers <br> Numbers and currency <br> Fixed or variable length character strings <br> Date, timestamp <br> Sub-range from a data type  <br>  - e.g.,1 £ grade £ 7 <br> Enumerated data type  <br>   - e.g.  Gender in {‘Male’, ‘Female’, ‘Other’} <br> Australian telephone numbers <br> Format: the digits “61” followed by 9 digits 0 - 9 <br> Car registration numbers <br>  - Format: 6 characters (either alpha or digits but no ‘Q’s allowed)
+| **Domain Types** | A domain D is a set of atomic values. An atomic value is indivisible (as far as the relational data model is concerned) <br> <br> Examples: <br> <br> - Integers <br> - Numbers and currency <br> - Fixed or variable length character strings <br> - Date, timestamp <br> - Sub-range from a data type  <br>  - e.g.,1 £ grade £ 7 <br> - Enumerated data type  <br> - e.g.  Gender in {‘Male’, ‘Female’, ‘Other’} <br> - Australian telephone numbers <br> - Format: the digits “61” followed by 9 digits 0 - 9 <br> - Car registration numbers <br>  - Format: 6 characters (either alpha or digits but no ‘Q’s allowed)
 |**Attributes** | Each attribute $A$ is the name of a role played by some domain $D$ in the relation named $R$. <br> The number of attributes in a relation $R$ is called the degree of $R$ <br> <br>  Example: salary is an attribute name <br> ![alt text](assets\IMG31.PNG)
 |**Tuples** | Each tuple t is an ordered list of n values: <br>$t = <v_{1}, v_{2}, ... v_{n}>$ <br> where each value $v_{i}(1\le i \le n)$ is an element of the corresponding domain of attribute A i or a special value called “NULL”
 
@@ -40,7 +40,7 @@ attributes $A_{1}, A_{2}, ..., A_{n}$
 - A relation instance r of the relation schema $R$, denoted by $r(R)$, is a set 
 of n-tuples $r = t_{1}, t_{2}, ..., t_{m}$
 
-**Relation Schema** | **Relation Schema**
+**Relation Schema** | **Relation Instance**
 | --- | --- 
 | ![alt text](assets\IMG32.PNG) | ![alt text](assets\IMG33.PNG)
 
