@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="practical-3">Practical 3</h1>
+<p dir="auto">Employee [ <ins>id</ins>, firstName, lastName, role]</p>
+<p dir="auto">Project [ <ins>name</ins>, description, funding, projectLeader]</p>
+<p dir="auto">TimeLog [ <ins>employeeID</ins>, projectName, date, hoursWorked, approved]</p>
+<ul dir="auto">
+<li dir="auto">Project.projectLeader references Employee.id</li>
+<li dir="auto">TimeLog.employeeID references Employee.id</li>
+<li dir="auto">TimeLog.projectName references Project.name</li>
+</ul>
+<p dir="auto"><img src="image-2.png" alt="alt text" data-src="image-2.png"></p>
+<hr dir="auto">
+<h2 dir="auto" id="section-a">Section A</h2>
+<h3 dir="auto" id="identifying-keys">Identifying Keys</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Attribute Type</strong></th>
+<th><strong>Answer</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>A minimal key</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>A foreign key</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="integrity-constraints">Integrity Constraints</h3>
+<h4 dir="auto" id="operation-1">Operation 1</h4>
+<p dir="auto">Update the tuple (“Website Setup”, “Get a functional website setup”,
+12000, 2019) to (“Website Setup”, “Get a functional website setup”,
+20000, 1919) in the relation “Project”</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Operation</strong></th>
+<th><strong>Answer</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Integrity constraint violated? (Write either “yes” or “no”)</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Type of constraint violated</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Description of violation</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 dir="auto" id="operation-2">Operation 2</h4>
+<p dir="auto">Insert the tuple (2014, “Rebecca”, “Zhang”, “Administration”) in the
+relation “Employee”</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Operation</strong></th>
+<th><strong>Answer</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Integrity constraint violated? (Write either “yes” or “no”)</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Type of constraint violated</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Description of violation</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 dir="auto" id="operation-3">Operation 3</h4>
+<p dir="auto">Update the tuple (2020, “2020 Marketing”, 2/1/2020, 5, true) to
+(1919, “Overall Marketing”, 2/1/2020, 5, true) in the relation
+“TimeLog”</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Operation</strong></th>
+<th><strong>Answer</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Integrity constraint violated? (Write either “yes” or “no”)</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Type of constraint violated</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Description of violation</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 dir="auto" id="operation-4">Operation 4</h4>
+<p dir="auto">Insert the tuple (, “Test”, “Test”, “Test”) in the relation “Employee”</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Operation</strong></th>
+<th><strong>Answer</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Integrity constraint violated? (Write either “yes” or “no”)</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Type of constraint violated</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Description of violation</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 dir="auto" id="operation-5">Operation 5</h4>
+<p dir="auto">Delete the tuple (2014, “Daniel”, “Johnson”, “Administration”) in the
+relation “Employee”</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Operation</strong></th>
+<th><strong>Answer</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Integrity constraint violated? (Write either “yes” or “no”)</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Type of constraint violated</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Description of violation</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 dir="auto" id="operation-6">Operation 6</h4>
+<p dir="auto">Insert the tuple (“Talent Recruitment Initiative”, “Get the best and
+brightest UQ graduates to work for us!”, 10000, 2014) in the relation
+“Project”</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Operation</strong></th>
+<th><strong>Answer</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Integrity constraint violated? (Write either “yes” or “no”)</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Type of constraint violated</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>IF YES <br> Description of violation</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+</main>
+</body>
+</html>
