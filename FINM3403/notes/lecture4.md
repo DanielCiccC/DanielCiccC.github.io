@@ -80,3 +80,18 @@ The trouble with forwards:
 ### Options contracts
 
 Options contracts give the option holder the right, but not the obligation to buy or sell a specified amount of the underlying asset (currency; stock) at a pre-determined price (exercise or strike price).
+
+### Call options
+- buy the underlying asset
+
+***June 2024 109 call option on the Euro***
+
+Strike price
+- the price at which the holder of the option may transact in the stock
+Underlying security
+- The security to which this option applies 
+  - stock of apple, currencies, etc.
+Call option
+- Grants the hodler the right but not the obligation to buy the security at the strike price
+Expiration
+- The point after which the option may no longer be used or exercised. Monthly option on a stcoker typically expire the third Friday of the month
