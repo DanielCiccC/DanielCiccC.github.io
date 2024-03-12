@@ -10,6 +10,11 @@ TimeLog [ <ins>employeeID</ins>, projectName, date, hoursWorked, approved]
 - TimeLog.employeeID references Employee.id
 - TimeLog.projectName references Project.name
 
+#### Semantic constraints
+- In addition to this, I thought I’d just mention that in accordance
+with company policy, the system does not allow administration staff to be project leaders.
+
+
 ![alt text](assets\IMG41.PNG)
 
 ---
