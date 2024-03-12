@@ -12,7 +12,7 @@ Welcome! You'll find some of my notes to courses (starting the second semester o
 
 #### [INFS3202](INFS3202/docs/main_INFS3202.html)
 
-#### [INFS1200 tutoring](INFS1200_TUTORING/docs/INFS1200.html)
+<!-- #### [INFS1200 tutoring](INFS1200_TUTORING/docs/INFS1200.html) -->
 
 
 [Markdown Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
