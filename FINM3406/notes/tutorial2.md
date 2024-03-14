@@ -3,7 +3,7 @@
 1. Describe the general nature of “Property”. 
 Characterstics and traits, etc.
 - Property rights as the right of a person to the possession, use, enjoyment and disposal of her/her property
-- With respect to it's application of real estate, interest is a borad legal term used to denote a property right
+- With respect to it's application of real estate, interest is a broad legal term used to denote a property right
   - Holder of an interest in real estate enjoys some right, or degree of control or use and may receive payment for the sale of such an interest
   - May be bought, sold or used as collateral for a loan
 2.  What are the two main classifications of the “things” we call property?
