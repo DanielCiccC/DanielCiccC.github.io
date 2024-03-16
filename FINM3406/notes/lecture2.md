@@ -23,6 +23,7 @@ Thinking about real estate and a difference framework
   
 ![Alt text](assets\IMG2.PNG)
 
+
 - Under English law, following the Norman invasion of 1066, all property was vested in the Crown.
 - Under the feudal system all lend was held from Crown various forms of service were required of the lords who 
 occupied the land these included military, spiritual and socage (payment) and system of Subinfeudation. 

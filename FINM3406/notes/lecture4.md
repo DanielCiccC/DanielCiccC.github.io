@@ -13,7 +13,6 @@ NOTES:
   - Can take valuation to the bank, etc.
 - real property, land, building, attachments
 
-
 - Why are valuations important? 
   - **Buying or selling a property**: The value of a property is a crucial factor in determining the purchase price or selling price.
   - **Financing**: Lenders require an accurate valuation of a property before approving a mortgage or other loan secured by real estate.
