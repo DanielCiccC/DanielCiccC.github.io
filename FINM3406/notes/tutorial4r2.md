@@ -3,6 +3,8 @@
 
 ### 1. What is real estate valuation and why is it important?
 
+- formal process 
+
 ### 2. How is market value for real estate defined?
 
 ### 3. How does the cost approach to real estate valuation work and what types of properties is it typically used for?

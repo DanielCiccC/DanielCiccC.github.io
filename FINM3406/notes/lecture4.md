@@ -3,8 +3,7 @@
 
 ### Real Estate Valuation
 - What is a valuation? 
-  - Real estate valuation is the formal process of determining the value or worth of real property, which as discussed 
-previously could include land, buildings, and other improvements. 
+  - Real estate valuation is the formal process of determining the value or worth of real property, which as discussed previously could include land, buildings, and other improvements. 
   - The aim of a real estate valuation is for an expert to establish an accurate and reliable assessment of the “value” of the bundle of rights that a person has in a particular property.
   - The assessment can be expressed as a range of values but generally a single amount is adopted.
 
