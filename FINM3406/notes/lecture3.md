@@ -51,6 +51,7 @@
 ### Property Risk
 ﻿
 - Risks that affect the property investment but not the market as a whole. May damage location, buildings and tenants.
+
 Risks:
 - location rental and capital value impacts: trading potential of a retail store impacted by reduced pedestrian access
 - Building failure- unexpected running costs, claims against owners allowing contaminating uses etc
@@ -71,7 +72,7 @@ Risks:
 
 #### Liquidity Risk
 - Occurs when a continuous market with many buyers and sellers and frequent transactions is not available. The more difficult an investment is to liquidate, the greater the risk that a price concession may have to be given to a buyer should the seller have to dispose of the asset quickly.
-  - NOTE: Not just a problem which is limited ot property
+  - NOTE: Not just a problem which is limited to property
 #### Management Risk
 - Most investments rely on management to keep space let and maintained.
 - The rate of return that the investor earns can depend on the competency of the management
@@ -230,7 +231,7 @@ Gearing | Typically 40% to 60%
   - “a B property in an A location”
   - Core property that includes current undeveloped land 
 
-Value Add:
+### Value Add:
 - Take on more risk by purchasing properties which:
   - Carry current vacancies
   - Have upcoming major tenant rollovers
@@ -318,7 +319,7 @@ NOTES:
 - negatives: profit in capital growth or income bled through fees
 - Volatility - management is not performing well and you unit is losing value as a result
 
-### Fund from Operation (FFO)
+### Fund From Operation (FFO)
 There are 5 ways a REIT can grow income and increase funds from operations:
 - Growing income from existing properties 
   - Renting more space 
@@ -385,28 +386,21 @@ LHS:
 - These securities are ‘stapled’ and cannot be traded separately. 
 - The trust holds the portfolio of assets, while the related company carries out the fund’s management functions and/or manages any development opportunities.
 
-Externally Managed model:
+### Externally Managed model:
 - Management taken on by separate entity to the property trust
 - Slowly collapsing over time
 - Often conflicts of interest between management and trust
 - Can provide better resourcing and management services than some REITs have capacity for
 
 ## MODERN PORTFOLIO THEORY
-- For many investors income properties are just one 
-part of an investment portfolio:
-  - May include other properties or asset classes (shares, 
-interest bearing securities)
-  - The key is that the risk of a property as an isolated 
-investment is greater than the risk the property adds to a 
+- For many investors income properties are just one part of an investment portfolio:
+  - May include other properties or asset classes (shares, interest bearing securities)
+  - The key is that the risk of a property as an isolated investment is greater than the risk the property adds to a 
 portfolio.
-- Modern portfolio theory (MPT) has become a well-
-accepted framework to construct or rebalance real 
-estate portfolios
+- Modern portfolio theory (MPT) has become a well-accepted framework to construct or rebalance real estate portfolios
 - MPT assumes investors are risk-averse 
-  - Given two assets offer the same expected return, investors 
-will prefer the less risky one 
-  - Investors will accept increased risk if compensated by 
-higher expected returns
+  - Given two assets offer the same expected return, investors will prefer the less risky one 
+  - Investors will accept increased risk if compensated by higher expected returns
 
 NOTE:
 - balancing real estate portfolios
@@ -580,10 +574,10 @@ compared to certain office markets)
 
 ### Disposal Process
 1. Internal Approvals
-- Internal Board and Investment Advisory Committee Approvals
+  - Internal Board and Investment Advisory Committee Approvals
 2. Data Collection 
-- Collection of all documents relating to the asset
-- Leases, management agreements, service contracts, maintenance records, tenant tax invoices, dispute notices
+  - Collection of all documents relating to the asset
+  - Leases, management agreements, service contracts, maintenance records, tenant tax invoices, dispute notices
 3. Internal Valuation of the Asset
   - Multiple pricing scenarios to target marketing date, use for recommendation of divestment.
 4. Due Diligence
