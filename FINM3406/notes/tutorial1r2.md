@@ -6,5 +6,20 @@
 1. 
 
 **Differences**
+1. **Capital Requirements**: Most capital assets are available in units of comparatively small capital value, and do not physically deteriorate or change over time
+2. **Management:** Property is a wasting asset 
+  - Requires continual capital investment in management, maintenance and refurbishment
+  - the ability exists, through a number of means, to improve an individual asset compared with other assets in that sub-category; 
+3. **Illiquidity:** real estate investments are typically less liquid than other asset classes, meaning it may take longer to buy or sell a property compared to stocks or bonds 
+4. ***Fixed* physical assets**: 
+- Real estate exists in a defined spatial context
+- Buildings can be relocated but land is immovable
+1. **Uniqueness**: individual economic units are unique, difference from one another through a combination of physical, legal, taxation, and equitable parameters
+2. **Asset class is segmented**: There are sub-categories, residential, commercial, industrial, public facilities, rural, mining, tourism etc as well as locational differentiation into CBD and fringe, etc.
+3. **Time horizon, creation and sale**: Creation of new assets typically take one to two years to complete, this contrasts with the rapidly changing business cycle.
+4. **Private negotiations**
+- Time consuming, costly and complex
+- Private negotiations between purchaser and seller
+- In real estate in Australia, we are charged stamp duty - charge by the 
 
 ### 2. Read pages 359 (from Does Private Property Exist) to page 374 of the Dialogue on Property by Cohen, F. Outline your views on the arguments made about the nature of private property and whether you think there are any alternate perspective frameworks that could challenge these arguments or make them outdated (ie feminist perspective, environmental impact of private property etc).

@@ -37,7 +37,7 @@ Introduction to some general real estate principles and the concept of Real Esta
     - Contractual rights (ie leases, mortgages, options etc) - NO
       - Lease forms creates property rights and contractual rights
     - Easements & Profit-a-prendre - YES
-      - Property right - access easement (e.g.). Seems tangible but aren't always tangible
+      - Property right - access easement (e.g.).
       - Profit-a-prendre - right to take from the property (harvest, e.g.)
 - Property Rights vs Contractual Rights
   - Privity of Contract vs Rights against the world
@@ -112,11 +112,11 @@ things more abundantly better
 - Localised Market
   - Markets differ from region to region
 - Segmented Market
-  - Segmentation can be based on use, size/scale and location
+    - Segmentation can be based on use, size/scale and location
     - further drill down - layers that perform differently. 
 - Private negotiations with high transaction costs
   - Time consuming, costly and complex
-  - Private negotiations between pruchaser and seller
+  - Private negotiations between purchaser and seller
   - In real estate in Australia, we are charged stamp duty - charge by the government to 'stamp' your enforce your contract
     - Based upon the value of your contract
 
@@ -189,4 +189,4 @@ Private
 - Quality of management impacts value
   - Improve the value by being smart, with renovations
 
-Equity in real estate - the equity compoenent is the amount you own in the property, excluding the debt component
+Equity in real estate - the equity component is the amount you own in the property, excluding the debt component
