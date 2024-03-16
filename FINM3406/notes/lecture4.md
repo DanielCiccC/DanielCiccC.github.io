@@ -316,7 +316,7 @@ NOTES:
 >   - aged care facilities, beds are licenced by the government
 >   - child care centres based upon number of licences in the building
 
-### Capitalisation method
+## Capitalisation method
 - This valuation method is used for investment class properties
 - This method has been widely accepted as being suitable for the estimation of Market Value. 
 - Under this method, the Future Sustainable Annual Net Income of the subject property is converted to a capital sum (or value) by a market derived multiplier.  
@@ -341,6 +341,9 @@ $$CV = \frac{NI}{I}$$
 - The factor is generally applied to the analysis/valuation of income streams (annuities) from real 
 property held freehold in fee simple which are considered to be enjoyed in perpetuity.  
 
+- As the capitalisation rate rises, investment value falls. For example:
+- Note the Cap Rate is a market derived discount rate BUT is different from discount rate applied in a Discount Cash Flow.
+
 ### Capitalisation Rate – Years Purchase
 - An alternate way of explaining the relationship between net income and 
 property value is the number of years needed to buy the property. 
@@ -350,7 +353,8 @@ $$\frac{1}{\text{Capitalisation Rate}} = \text{Years Purchase}$$
 
 For example, using the same figures as previously:
 
-$$\frac{1}{0.08} = 12.5 \text{Years purchased}$$
+$$\frac{1}{0.08} = 12.5 \; \; \text{years purchased}$$
+
 
 > NOTES:
 > challenges about income stream in perpetuity, buildings dont last forever
@@ -362,3 +366,67 @@ $$\frac{1}{0.08} = 12.5 \text{Years purchased}$$
 > difference between perpetuity:
 > ![alt text](assets\IMG15.PNG)
 > Not used in residential: often small yield with forseeable large renovations required to make the useful life of a residential property 50-100 years (normally last about 50 years)
+
+
+### Outgoings
+- Outgoings are the expenses incurred in operating an income producing property. They are limited to non-capital items.Typically, they would include:
+  - Repairs and Maintenance
+  - Rates, Land Taxes, Fire Brigade Levy
+  - Water & Sewerage, Gas, Oil and Power charges
+  - Security
+  - Gardening & Landscaping
+  - Cleaning, Waste Removal & Pest Control
+  - Insurances
+  - Air Conditioning, Ventilation, Lifts
+  - Management and Administrative costs
+
+- Some property costs are the responsibility of the owner (eg.,capital costs, land tax, etc). 
+- Other costs may be recovered from the Lessee, depending on what has been agreed in the lease document.  
+- Usually, any recoverable outgoings are charged to the Lessee monthly with the rent payment.  These costs are  based on a budget established at the beginning of each year, with audit adjustments at year’s end. The Lessee is then charged or credited with the annual difference (actual versus estimate). 
+
+### Property Income
+- **Gross Rent:** 
+  - The annual rent, usually paid on a monthly in advance basis, as set out in the Schedule to the lease. The gross rent is *inclusive of outgoings*.
+- **Net Rent:**
+  - The gross rent payable less outgoings incurred.  The lessee is required to pay an additional sum for outgoings as specified in the lease document.
+
+> **Example**
+> - An accountancy firm has leased one 1,000m2  floor of a 5,000m2 office building, plus 10 parking bays, for period of five years at a commencing rental rate of $250 per m2 per annum for the office space and $300 per calendar month per bay.   
+> - The lease indicates that the Lessee is required to pay 20% of the building outgoings as specified in a schedule to the lease document. Total budgeted recoverable outgoings for the building is $500,000, or $100 per m2  per annum.
+> - This is a net lease.  
+> - If it were a gross lease, the rental would have been stated in the lease as $350 per m2 and there would be no mention of outgoings being paid.    
+
+### Net vs Gross Rent
+
+Particulars | Amount
+| --- | ---
+**Net Rental:**    | Annual Cost
+1,000m 2  at $250m 2    | = $250,000
+<u> Outgoings:</u> |
+1,000m 2  at $100m 2   | = $100,000
+Sub Total    | = $350,000 (or $350m 2 )
+<u>Plus Car Parking:</u> |
+10 bays at $300pcm x 12 | =  $36,000
+<u>Total Cost per annum</u> | =  $386,000
+| --- | ---
+**Gross Rental:** |
+1,000m2 at $350m 2   | = $350,000
+Plus Car Parking:  | = $36,000
+<u>Total Cost per annum</u> | = $386,000
+
+
+### Establishing the Annual Net Sustainable Income  
+
+- The valuer must critically examine and review the lease documents for the subject property to establish the passing rental rates.  
+- The valuer must then compare those rental rates to the market rent that would be applicable to the property if being let at the time of valuation.  
+- It is the market rental that is considered to be the potential or Future Sustainable Income for the property and it is this rental that is used to calculate the NI. 
+- The valuer will also capture any other income that the property is capable of producing, ie., car parking, naming rights, signage, etc. 
+
+### Establishing the Capitalisation Rate (or Yield)
+• At the simplest level, the Cap Rate can be determined by the valuer through an 
+analysis of recently sold comparable properties.  
+• If two of the three factors of the basic capitalisation formula are known, then 
+the third can be derived.  
+• Therefore, if the sale amount (the capital value) and the Net Operating Income 
+can be established for the comparable properties, the third factor, the Cap Rate, 
+can be calculated:
