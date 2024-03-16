@@ -12,10 +12,10 @@ NOTE:
 - 
 
 ### Q2. How is market value for real estate defined
-- Marekt value is the estimated amount that a property would sell for in an open and competitive real estate market
+- Market value is the estimated amount that a property would sell for in an open and competitive real estate market
 - Assumptions:
   - both the buyer and seller have full knowledge of the properties condition and characteristics and
-  - There are no outside factors affecting the transaction, such as undeue pressure pressure to sell or a lack of willing buyers
+  - There are no outside factors affecting the transaction, such as undue pressure pressure to sell or a lack of willing buyers
 - The market value is typically determined by a Property Valuer, taking into account
   - Difference factors such as property's location, size condition and amenities
 
@@ -31,7 +31,7 @@ Whatever way you do the valuation; it is usually base on past data
 ### Q3. How does the cost approach to real estate valuation work and what types of properties is it typically used for?
 - The cost approach to real estate valuation works by estimating the cost to replace of reproduce a property
 - The considering factors such as depreciation, obsolescence, and physical deterioration
-- It is typically used a part of the summation method of valuation and for existiing use valuations
+- It is typically used a part of the summation method of valuation and for existing use valuations
 
 NOTE:
 - property on the land will depreciate - must apply things like depreciation to discount the property 
@@ -47,14 +47,14 @@ NOTE:
 
 
 ### Q5: How does the sale comparison approach to real estate valuation works and what types of properties is it typically used for>
-- The sale comparison or direct comparions or market comparison approach real estate valuation
+- The sale comparison or direct comparisons or market comparison approach real estate valuation
   - Works by comparing the subject property to recently sold properties that are similar in location, size condition and other key factors
-  - Typically used for residential peroperties that are not valued based upon their income propducing potential
-- One of the callenges of this approach is:
+  - Typically used for residential properties that are not valued based upon their income producing potential
+- One of the challenges of this approach is:
   - Limiting the number of adjustments to the sales evidence to the property being valued to allow for elements that aren't completely comparable to date of valuation will always be different to the date of sale
 
 ### Q6 What are some of the key factors that affect the value of a property, regardless of the valuation approach used?
-- key factors that affect the value of a proeprty include:
+- key factors that affect the value of a property include:
   - location 
   - size 
   - condition
@@ -65,10 +65,10 @@ NOTE:
   - The total income attributable to real property at full occupancy
   - It is the rent actually passing between tenant and landlord
   - Plus the estimated current market rent of any space vacant at the time
-  - The passing rent may not not be the same as surent market rent - especially when leases have been in place for some time
+  - The passing rent may not not be the same as current market rent - especially when leases have been in place for some time
 - Effective Gross Income
-  - The anticipated income from all operations of real property adjusted fo vacany and credit losses
-  - A credit loss would be represent by a tenant ind efault of rent payment
+  - The anticipated income from all operations of real property adjusted fo vacancy and credit losses
+  - A credit loss would be represent by a tenant in default of rent payment
 - Net Operating Income
   - the actual or anticipated net income remaining after deducting all operating expenses from effective gross income
 
@@ -80,18 +80,18 @@ Market value = NOI / Cap rate
 
 
 ### Q8 common challenges that arise during the real estate valuation process
-- incomplete and inaccurate daya
-- subjective judgements about property condition or quality
+- incomplete and inaccurate days
+- subjective judgments about property condition or quality
 - changes in market conditions over time
 
 ### Q9 Why is the capitalisation rate also referred to as the 'All Risks' rate?
-- The capitalisation rate is a financial metric used in real estate investing to detemine the value of income-producing properties
+- The capitalisation rate is a financial metric used in real estate investing to determine the value of income-producing properties
 - It is calculated by dividing the net operating income (NOI) of a property by market value or purchase price
-- Includes risks suchas as
+- Includes risks such as as
   - vacancy rates
   - maintenance costs
-  - market fluctuatuons and
-  - Other potentia risks that could impact the propertys income generation potential
+  - market fluctuations and
+  - Other potential risks that could impact the properties income generation potential
 - capitalisation rate represents the investors required rate of return, taking into account all the risks associated with the investment
 
 ### Q10 technology and data analytics be used to enhance the real estate valuation process

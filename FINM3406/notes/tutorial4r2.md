@@ -3,9 +3,25 @@
 
 ### 1. What is real estate valuation and why is it important?
 
-- formal process 
+- Formal process of determining the value or worth of real property
+  - Expert to establish the value of worth of real property
+
+Real estate valuation is used for:
+- purchase or sale of a property
+- Financing - lender require an accurate valuation of a property before approving a mortgage
+- Property tax assessment: used to determine the land tax and rate assessment, based on the assessed  value of the property
+- Insurance: used for determining the amount of insurance coverage needed
+- Annual reporting: valuations used in both private and public sectors
 
 ### 2. How is market value for real estate defined?
+
+International valuation standards:
+> The estimated amount for which an asset or liability should exchange on the valuation date between a willing buyer and a willing seller in an arm’s length transaction, after proper marketing and where the parties had each acted knowledgeably, prudently and without compulsion.
+
+Thus:
+- Buyer and seller both have full knowledge of the properties' condition
+- No outside factors affecting the transaction, such as undue pressure
+- 
 
 ### 3. How does the cost approach to real estate valuation work and what types of properties is it typically used for?
 
