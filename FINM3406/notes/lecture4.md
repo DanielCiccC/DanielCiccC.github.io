@@ -423,10 +423,58 @@ Plus Car Parking:  | = $36,000
 - The valuer will also capture any other income that the property is capable of producing, ie., car parking, naming rights, signage, etc. 
 
 ### Establishing the Capitalisation Rate (or Yield)
-• At the simplest level, the Cap Rate can be determined by the valuer through an 
-analysis of recently sold comparable properties.  
-• If two of the three factors of the basic capitalisation formula are known, then 
-the third can be derived.  
-• Therefore, if the sale amount (the capital value) and the Net Operating Income 
-can be established for the comparable properties, the third factor, the Cap Rate, 
-can be calculated:
+-  At the simplest level, the Cap Rate can be determined by the valuer through an analysis of recently sold comparable properties.  
+-  If two of the three factors of the basic capitalisation formula are known, then the third can be derived.  
+-  Therefore, if the sale amount (the capital value) and the Net Operating Income can be established for the comparable properties, the third factor, the Cap Rate, can be calculated:
+
+$$ i = \frac{NI}{CV} $$
+
+> Worked Example
+> - The valuer must then subtract all building operating costs from the gross income.  
+> - The final step in establishing the Net Sustainable Income is to apply a Vacancy Allowance factor which is also then subtracted from the income figure.
+> - For an example, let’s return to our office building:
+>
+> | Particulars | Amount/cost
+> | --- | ---
+> Area:    |  5,000m2
+> Rental Rate:   |  $350/m2 Gross
+> Outgoings:     | $100/m2
+> Parking Bays:  |  50
+> Parking Rate:  |  $300 Per Calendar Month 
+> Naming Rights: |   $10,000pa
+> Signage Rights:|    $15,000pa 
+> Occupancy Rate:|    95% 
+> Rental Income        |\$1,750,000  (\$350/m2 x 5,000m2)
+> Other Income| 
+> Parking          |\$180,000 (50 carparks x \$300 pcm x12 months) 
+> Naming Rights    |           $10,000
+> Signage Rights   |           $15,000 
+> Potential Gross Income|     $1,955,000
+> Less Vacancy Allowance|           $87,500  (5% of rent)
+> Effective Gross Income|      $1,867,500
+> Less Outgoings       |  $500,000  ($100/m2 x 5,000m2)
+> Net Operating Income |     $1,367,500
+> Capitalised at 8.5%  |    $16,088,235
+> Market Value:        |Adopt $16,100,000  
+
+### Shortcomings of the Capitalisation Method
+
+- **Data Errors:** 
+  - This has been an application of the Capitalisation Method at its most basic level. In the real world, there is obviously a lot more data collection, analysis and adjustment to the numbers that needs to be effected. 
+  - In short, this method is simple to apply but is highly sensitive to data errors. Not only is there the difficulty of locating recently sold comparable properties, but there is the added problem of assessing their net annual income and an applicable cap rate, as much of this information is confidential.
+
+- **Reliability of Information:**
+  - The valuer must invest considerable time and effort in reviewing the financial facts applicable to the subject property.  The most reliable information sources will be from other assignments undertaken by valuer and colleagues, and this may be limited in scope. 
+  - The valuer must therefore network with others in the industries and hope for a sharing of information. Even then, the available data may come from buildings with differences in age, condition, location, materials, quality of services and finishes, lease structures and management quality, to name a few.    
+
+- **The Assumption of Sustainable Net Income:** 
+  - The conventional practice is to estimate what a stabilised net annual income for the subject property will be. This assumes that this income level will “settle down” in perpetuity.  
+- **Selection of the Cap Rate:**
+  - A minor error in establishing the Cap Rate will have a major impact on the estimated property value.  
+  - The Cap Rate is often referred to as an “All Risk Yield” because it incorporates allowances for every source of risk to which the investment is perceived to be exposed.  
+  - The component risks would include the “risk free rate”, inflation, anticipated interest rate movements, rental rate movements, vacancies, building expense variations, obsolescence, terminal value risk, etc.  
+
+- Despite its shortcomings, the Capitalisation method is widely used in the property industry, either as a primary or secondary valuation methodology. 
+- It is not universally popular however, as one unkind commentator observed:
+
+> “The Capitalisation approach to valuation is a method that uses two unknowns (Sustainable Net Income and the Cap Rate) to calculate a third unknown (Property Value)!?”    
