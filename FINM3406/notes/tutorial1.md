@@ -17,8 +17,6 @@
 - Crypto currencies?
 
 
-
-
 ### Introduction to property - similarities and differences to other asset classes
 
 
