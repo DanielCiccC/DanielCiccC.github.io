@@ -3,11 +3,18 @@
 ### 1. Read the Introduction to Property chapter. Identify and discuss 5 ways in which real estate assets are similar to other asset classes and then identify and discuss 5 ways real estate assets are different to other assets classes.
  
 **Similarities**
-1. 
+1. **Potential for appreciation**: has the potential to appreciate in value over time
+2. **Income generation:** real estate, like stocks and bonds, can generate income through rental or lease payments
+3. **Risk and volatility:** real estate can be subject to market fluctuations and volatility, which can affect market value - subject to supply and demand
+4. **Diversification**: means of diversifying an investment portfolio, similar to how stocks and bonds can be used for diversification 
+-  Build to rent, other methods of diversifying a portfolio
+5. **Use of leverage**: investors can use leverage to purchase real estate, similar to how margin can be used to purchase stocks
+6. **Liquidity**: real estate, like other asset classes, though it may not be as liquid as some other investment
+7. **Demand and supply**: influenced by demand and supply dynamics, which can affect is price and value over time
 
 **Differences**
 1. **Capital Requirements**: Most capital assets are available in units of comparatively small capital value, and do not physically deteriorate or change over time
-2. **Management:** Property is a wasting asset 
+2. **Management:** Property is a wasting asset
   - Requires continual capital investment in management, maintenance and refurbishment
   - the ability exists, through a number of means, to improve an individual asset compared with other assets in that sub-category; 
 3. **Illiquidity:** real estate investments are typically less liquid than other asset classes, meaning it may take longer to buy or sell a property compared to stocks or bonds 
@@ -33,4 +40,3 @@ Arguments as outlined in the Dialogue of property:
 - social consideration of habits and forces, appealing to the sense of fairness lead the development of rules in property law, and that:
   - where considerations of productivity, certainty, enforceability, and fairness are divergent,
 - we find controversial problems in private ownership
-
