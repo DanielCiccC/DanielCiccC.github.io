@@ -6,5 +6,5 @@ All my notes from the beginning of lectures; Since these are moreso informationa
 |---|---| --- |
 [Lecture 1](lecture1.html) | [Tutorial 1](tutorial1.html) | [Tutorial 1, revised](tutorial1r2.html)
 | [Lecture 2](lecture2.html) | [Tutorial 2](tutorial2.html) | [Tutorial 2, revised](tutorial2r2.html)
- [Lecture 3](lecture3.html) | [Tutorial 3]() | 
- [Lecture 4](lecture4.html) | [Tutorial 4]() | 
+ [Lecture 3](lecture3.html) | [Tutorial 3](tutorial3.html) | 
+ [Lecture 4](lecture4.html) | [Tutorial 4](tutorial4.html) | 
