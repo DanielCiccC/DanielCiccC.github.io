@@ -1,6 +1,7 @@
 # Tutorial 2, revised
 
 ### 1. Describe the general nature of “Property”. 
+
 ### 2. What are the two main classifications of the “things” we call property?
 ### 3. Can Real Property be intangible? If yes, provide some examples.
 ### 4. What is meant by an “interest in property”?

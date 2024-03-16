@@ -19,7 +19,7 @@
     - NOTE: expect *x* to happen, what is the likelihood of *y* happening
     - What is a mitigated vs unmitigated risk, and find out how much it costs to mitigate the risk
     - Include an opportunity register, contract more for xy etc.
-    - Risks costs were offeset against opportunities you might have
+    - Risks costs were offset against opportunities you might have
 - Risks vs Issues
   - Risks are potential adverse outcomes
   - Issues are actual adverse outcomes
@@ -35,7 +35,7 @@
 ![alt text](assets\IMG7.PNG)
 
 - Worst risk that can happen is someone dying
-- when evaluating a proiject, which risks do you escalate, mitigate, etc?
+- when evaluating a project, which risks do you escalate, mitigate, etc?
 - e.g. anything medium or below we just monitor
 
 ### Financial Risks
@@ -75,18 +75,18 @@ Risks:
 #### Management Risk
 - Most investments rely on management to keep space let and maintained.
 - The rate of return that the investor earns can depend on the competency of the management
-    - NOTE: the quality of the management will dircetly impact its performance and potential litigation and liabilities
+    - NOTE: the quality of the management will directly impact its performance and potential litigation and liabilities
     - e.g. outsourced the management of supermarket to a bad management company and the property is never cleaned, more susceptible to TP accidents, e.g.
 
 #### Interest Rate Risk
 - Changes in interest rates will affect the price of all securities and investments.
 - Real estate tends to be highly levered, thus, rate of return earned by equity investors can be affected by changes in interest rates.
-  - rates go up, proeprty prices go back
+  - rates go up, property prices go back
   - Residential real estate is opposing this trend - should have stabilised -> supply not keeping uop with demand
 #### Legislative Risk
 - Real estate is subject to numerous regulations such as tax laws, rent control, zoning and other restrictions imposed by government.
 - Changes in legislation can adversely affect the profitability of an investment - especially for new development.
-  - NOTE: legislation impacts property, zoning, envrionmental heritage. Dealing with three layers of government
+  - NOTE: legislation impacts property, zoning, environmental heritage. Dealing with three layers of government
   - State reserves rights with respect to property law
   - Local government have delegated the laws of town planning 
   - Council makes decisions about planning that impacts peoples lives
@@ -95,7 +95,7 @@ Risks:
 - Value of real estate is often affected by changes in the environment or sudden awareness that the existing environment is potentially hazardous. E.g. Asbestos
   - NOTE: clean up costs with contamination
 - Environmental risk can cause more of a loss than other risks mentioned because the investor can be subject to clean-up costs that far exceed the property value.
-  - NOTE: is there an excessively large 'envirnonmental risk' e.g.
+  - NOTE: is there an excessively large 'environmental risk' e.g.
 ### Inflation Risk
 - Unexpected inflation can affect an investors expected rate of return if the income of the property does not increase sufficiently to offset the impact of inflation.
 
@@ -120,7 +120,7 @@ Risks:
   - Trustees of superannuation funds with assets >$10m
 
 NOTE:
-- good projects are fully subscribedor  offered to wholesale investors before retail investors
+- good projects are fully subscribed or offered to wholesale investors before retail investors
 - retail investors tend to get the 'dregs' of bad investment
 
 ### Wholesale Funds: Overview:
@@ -372,7 +372,7 @@ RHS:
 - entity managing the property is not necessarily the same as the trustee that owns the property
 
 LHS:
-- unitholder holds shares in the trust and the management company
+- unit holder holds shares in the trust and the management company
   - have an equity position in the company also
 - unit in the trust, and shares in the management company
 - most common
@@ -427,8 +427,8 @@ NOTE:
   - The market yield for the asset. Shows the ratio of the market rent to the current property value (on properties rented below market)
   - RY = market rent / property value
   - what is the market rent of the property value
-  - reversionary - at the end of the lease term, the right to posess the property reverts back to the owner
-  - in a perfect world, iniital yield and reversionary yield is the same
+  - reversionary - at the end of the lease term, the right to possess the property reverts back to the owner
+  - in a perfect world, initial yield and reversionary yield is the same
 
 
 #### Income return 
@@ -495,7 +495,7 @@ $$r_{p}=(w_{1}r_{1})+(w_{2}r_{2})+...$$
   - Income and capital growth opportunities
 
 - process purchasing every kind of infrastructure, e.g.
-- timing - hot market, buying/selling market will impact due diligent timeframes etc.
+- timing - hot market, buying/selling market will impact due diligent time frames etc.
 - WALE - 100 leases expiry at the end of year, WALE is one year. Average the lease expiry
   - can also weight based on income too, or how much space is becoming available
 
@@ -517,9 +517,9 @@ Typical Expression of Interest process (can be over 12 months)
  - Meet with agents to discuss opportunity
  - Review of Information Memorandum
  - Initial Pricing of Asset based on Financial Pack - Budget, Outgoings recovery model, Tenancy Schedule 
- - Initial review of documents provided in dataroom
+ - Initial review of documents provided in data room
  - Multiple pricing scenarios and sensitivity analysis
-   - not uncommon to pay $50-150 for an unsucessful property purchase
+   - not uncommon to pay $50-150 for an unsuccessful property purchase
 2. Engage Consultants
  - Usually only applicable in complicated transactions such as large scale retail for a market / trade area analysis
    s

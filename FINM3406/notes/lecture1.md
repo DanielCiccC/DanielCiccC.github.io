@@ -166,7 +166,7 @@ Public
 - Infrastructure
   - Roads, rail, ports, dams
 - Services
-  - Health, defence, law, education, recreation
+  - Health, defense, law, education, recreation
 Private
 - Corporate Real Estate
 - Investment Property

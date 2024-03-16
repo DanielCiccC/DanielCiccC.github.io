@@ -26,9 +26,9 @@ NOTES:
 - Lenders want security
   - have ratios with respect to value: LMI
   - LMI: you default on your loan and there is a shortfall purchasing back the property, insurance company will pay the difference
-- Valuation used for divorce settlements, statutory pruposed (resumed by the government)
+- Valuation used for divorce settlements, statutory purpose (resumed by the government)
 - Insurance for building; value the building for insurance
-  - If you over or underinsure your property, you are penalised
+  - If you over or under-insure your property, you are penalised
 
 
 ### Role of the property Valuer
@@ -57,7 +57,7 @@ NOTE:
 NOTE:
 - historic valuation, valuation at a particular point in the past for tax purposes, e.g.
 - CANNOT future-date a property valuation (and put their name on it, etc.)
-- Just an opinion - rarely will you see a valurer value a proeprty more than what is it worth (when getting valued after a sale)
+- Just an opinion - rarely will you see a valuer value a property more than what is it worth (when getting valued after a sale)
 - Professional indemnity insurance - sue if the valuation was wrong
   - Banks will be happy to take an AI generated value of the property
   - Potential for days to be numbered; simple valuations could be automated - residential for example
@@ -87,7 +87,7 @@ NOTE:
 
 ### Different types of valuations
 - **Land Value comprises**:
-  - ‘Private Benefit’ infrastructure, that services individual properties paid for through local government levied user charges (eg local roads, reticulated water and sewerage, stormwater drainage, local parks);
+  - ‘Private Benefit’ infrastructure, that services individual properties paid for through local government levied user charges (eg local roads, reticulated water and sewerage, storm water drainage, local parks);
   - ‘Social’ infrastructure paid for by government through tax and excise income (eg schools and hospitals, public transport, arterial road networks); and 
   - Urban externalities (eg amenity and aspect) 
 - Land value is impacted by external factors
@@ -357,10 +357,10 @@ $$\frac{1}{0.08} = 12.5 \; \; \text{years purchased}$$
 
 
 > NOTES:
-> challenges about income stream in perpetuity, buildings dont last forever
-> - use a cap rate, income lasts forever (but buiulding have exconomic obselence)
+> challenges about income stream in perpetuity, buildings don't last forever
+> - use a cap rate, income lasts forever (but building have economic obsolesce)
 >   - use PV calculation with discount rate, beyond 30-50 years is very marginal
->   - delta between 60-90 is margin, 90-1000 is non-existant
+>   - delta between 60-90 is margin, 90-1000 is non-existent
 > - rate - risks rate of maintaining the income stream in perpetuity
 > - challenges - need to know net income/market derived rate
 > difference between perpetuity:

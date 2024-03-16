@@ -17,7 +17,7 @@ Thinking about real estate and a difference framework
 - On 26 January 1788 at Sydney Cove, Captain Arthur Phillip R.N. formally took possession of Australia as a settled and occupied colony, thus commencing the settlement of Australia and the introduction of British legal system replacing any indigenous land rights and system of laws. 
   - Took land where they saw fit. Planted a flag and called it a colony
   - Any indigenous legal system was completely replaced.
-  - Historical quirk - the way in which nations expanded their territory. If you had a war with a country and won in, there were rules that applied as to how the laws changed. It mattered how you acquired territory as to the lpaws that prevailed.
+  - Historical quirk - the way in which nations expanded their territory. If you had a war with a country and won in, there were rules that applied as to how the laws changed. It mattered how you acquired territory as to the laws that prevailed.
   - when NSW was colonised
 - Capt. Phillip became governor of New South Wales, (NSW) (which at that time included Queensland and Victoria) and established a settlement.
   
@@ -26,7 +26,7 @@ Thinking about real estate and a difference framework
 - Under English law, following the Norman invasion of 1066, all property was vested in the Crown.
 - Under the feudal system all lend was held from Crown various forms of service were required of the lords who 
 occupied the land these included military, spiritual and socage (payment) and system of Subinfeudation. 
-  - provide crops, food, labour and miltary support
+  - provide crops, food, labour and military support
   - Or socage (payment) to the king
 - The Statute of Quia Emptores 1290 ended Subinfeudation as land owners were able to alienate by substitute without consent of the overlord, thus forming the basis upon which all estates in land are based. 
   - Market creating of real estate - little transaction of land
@@ -43,7 +43,7 @@ occupied the land these included military, spiritual and socage (payment) and sy
   - The States **did not give up the power to grant land and make laws about property.**
   - With commencement of the Australia Acts on 3 March 1986 Australia became fully independent of the British parliament and its courts.
 
-Each state has their own proeprty law frameworks
+Each state has their own property law frameworks
 
 ### Doctrine of Tenure, Estates & Waste
 
@@ -68,7 +68,7 @@ duration (an estate can be a future interest – ie vested vs contingent)
       - Fee tail was abolished about 100 years ago
       - Freehold life estate, can own the property until they die, and it is then inherited by someone else
         - Owned by the 'remainder man'
-        - reversionary interest is who is left with afer the life estate is gone'
+        - reversionary interest is who is left with after the life estate is gone'
         - Interest that is linked to the death of a person
     - Leasehold: for a certain duration, for a defined period. If the interest of the land is for a certain duration, 
 
@@ -76,7 +76,7 @@ duration (an estate can be a future interest – ie vested vs contingent)
   
 Owners of limited estates (ie less than fee-simple) are limited in their use of the land (ie cant do things to degrade its value) to protect future interests
 - NOTES: e.g. a life estate, person living cannot put a bulldozer through it
-  - If you dimish future interest property they have a right to sue
+  - If you diminish future interest property they have a right to sue
 
 
 ### Freehold
@@ -92,7 +92,7 @@ Owners of limited estates (ie less than fee-simple) are limited in their use of 
 
 ### Leasehold
 Crown leases – State grant of leasehold tenure (approx. 75% of Queensland is leasehold land)\
-- argicultural or mining projects
+- agricultural or mining projects
 - Maintain good habits in the early settlement; make it a condition of the agreement to make building of certain size, etc.
 - give farmers leases and make certain amounts of land cleared every year
 
@@ -103,7 +103,7 @@ Private leases (between an owner of fee-simple and a lessee or a lessee and a su
   - Privity of estate (same land held by both parties) 
   - Privity of Contract (both parties have contractual obligations with each other).
   - NOTE: can't always get a copy of a lease, does not have to be registered.
-  - Where there is an agreement between two people, this creates a tennancy. Lessee, lessor. The person who gives something is the 'or'. The person receiving (the benefit) is the 'ee'
+  - Where there is an agreement between two people, this creates a tenancy. Lessee, lessor. The person who gives something is the 'or'. The person receiving (the benefit) is the 'ee'
 
 
 ### Types of Leasehold Tenure
@@ -118,7 +118,7 @@ Private leases (between an owner of fee-simple and a lessee or a lessee and a su
   - one who comes in by right and holds over without right (not a trespasser)
   - Bound by terms of previous lease
     - NOTE: had a formal lease for a period
-    - If you are on a property without an agreement, you are a tennant at Sufferance. Still bound by the terms of the previous lease
+    - If you are on a property without an agreement, you are a tenant at Sufferance. Still bound by the terms of the previous lease
 
 Rights and Obligations under Leasehold Tenure
 - Written contract is the primary source of rights and obligations between the parties
@@ -126,7 +126,7 @@ Rights and Obligations under Leasehold Tenure
   - s 105 - tenant’s obligation to pay rent, keep in repair etc.
   - s 107 - landlord’s right to enter, repair etc
     - NOTES: regardless of what the contract says, you have an obligation to...
-    - NOTES: if tennant, obligations to the building that you occupy
+    - NOTES: if tenant, obligations to the building that you occupy
 - Common law - implied terms and conditions
   - Tenant right - quiet enjoyment
   - Landlord obligation - non derogation of grant
@@ -142,10 +142,10 @@ Rights and Obligations under Leasehold Tenure
 - A lease conveys an estate in the land to the tenant, a licence passes no estate in the land to the licensees.
   - NOTE: lease is a property right, you can sell it
 - A lease when granted cannot be revoked (subject to termination rights for breach) - but the grantor of a licence may revoke it at any time, upon reasonable notice.
-  - NOTE: may be able to settle the licencor for damages, but the original agreement may no longer be enforcable
+  - NOTE: may be able to settle the licencor for damages, but the original agreement may no longer be enforceable
 - A lease can be assigned to a third party in the absence of express stipulation to the contrary; a licence (unless coupled with an interest in land) cannot be assigned.
 - NOTE: important to know the difference, changes the risk profile
-- If it doesn't give you excluive possession of the property for a period of time, it is a licence
+- If it doesn't give you exclusive possession of the property for a period of time, it is a licence
 - Normally a clause in the agreement the the new owner would take over all the leases and licences originally.
 - Example: lease a building but licence the car park. Rocklea markets, buy fruit and veg, plus retail vendors. 4x4 blocks would be yearly licences.
 
@@ -226,9 +226,9 @@ Three key features of income producing (investment) properties:
 
 ### Location
 - At the city or regional level, the elements of the location to investigate are the strength of the economic base and demographic features
-- Suburb level - occupants will pay more to be amongst compatible, safe and pretigious buildings
+- Suburb level - occupants will pay more to be amongst compatible, safe and prestigious buildings
 - A good location has an element of monopoly, cannot be replicated elsewhere
-  - Can effect your asset - proximity to frastructure, labour, markets.
+  - Can effect your asset - proximity to infrastructure, labour, markets.
 - "Prime" locations have  more stable demand an lower vacancy risk than fringe or emerging location
   - use more likely to generate a revenue, and more revenue
 - Zoning and town planning controls can add potential to a property
@@ -236,7 +236,7 @@ Three key features of income producing (investment) properties:
 
 ### Buildings:
 - To produce a secure, growing income, buildings should be functional for current users and be adaptable to the changing needs of future occupants.
-  - What is the likihood that the uses will grow over time?
+  - What is the likelihood that the uses will grow over time?
 - Needs of residential tenants will vary slightly overtime - norms and fashions change
 - Needs of business tenants change through use of technology to meet needs of customers (manufacturing, provision of services, retail)
 - Demand tends to be 'price inelastic'
@@ -245,7 +245,7 @@ Three key features of income producing (investment) properties:
 - Environmental sustainability affects rental properties: 
   - Buildings that waste energy are more expensive to operate = lower net operating income to investors
   - Tenants are now demanding high standards of energy efficiency and assurances of healthy working conditions in the buildings they lease 
-  - Government funding may be available to make existing buildings more efficiente.g. solar hot water grants
+  - Government funding may be available to make existing buildings more efficient e.g. solar hot water grants
 
 ### Tenants
 
@@ -258,8 +258,8 @@ Three key features of income producing (investment) properties:
   - Lease length
   - Basis of rent review: fixed, indexed, ratchet, cap, collar
   - Responsibilities - opex, maintenance
-    - How do you review the rent? Generally there is a mechanism for the rent ot go up. referable to CPI? rachet (only  alwayys goes up). Cap/collar - can't go +-10% every three year review
-    - Responsibilities: income stream from sole trader vs multinational is greater, but generally more diffucult to deal with
+    - How do you review the rent? Generally there is a mechanism for the rent ot go up. referable to CPI? ratchet (only can go up). Cap/collar - can't go +-10% every three year review
+    - Responsibilities: income stream from sole trader vs multinational is greater, but generally more difficult to deal with
 - Tenants:
   - Financial strength - risks around rent payment
   - Potential growth - rental growth, space requirements
@@ -297,4 +297,3 @@ Risks:
 Challenge of real estate risk - refinance a loan
 - don't get a 25 year loan. If you are unlucky, you have not been able to refinance an expiring loan
   - bank may default it
-

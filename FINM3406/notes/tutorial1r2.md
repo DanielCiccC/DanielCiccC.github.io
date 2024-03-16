@@ -23,3 +23,14 @@
 - In real estate in Australia, we are charged stamp duty - charge by the 
 
 ### 2. Read pages 359 (from Does Private Property Exist) to page 374 of the Dialogue on Property by Cohen, F. Outline your views on the arguments made about the nature of private property and whether you think there are any alternate perspective frameworks that could challenge these arguments or make them outdated (ie feminist perspective, environmental impact of private property etc).
+
+Arguments as outlined in the Dialogue of property: 
+1. Beginning argument; property is basically a set of relations among men, which may or may not involve external objects
+2. Property and wealth; it is possible to have valueless property (a property which has no economic use and costs in taxes). Argument made that economic value is not essential to the existence of legal property
+- Could be wealth that did not exist of private property
+- Economic wealth exists in property due to its scarcity only
+3. The case of Montana mule;
+- social consideration of habits and forces, appealing to the sense of fairness lead the development of rules in property law, and that:
+  - where considerations of productivity, certainty, enforceability, and fairness are divergent,
+- we find controversial problems in private ownership
+
