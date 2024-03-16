@@ -50,11 +50,36 @@ The term estate means "all that a person owns"
 
 ### 6. Provide two examples of Freehold Estates.
 
+**Fee Simple Estate**
+- most complete form of ownership of real estate
+- Holder of fee simple estate is free to divide up the fee into lesser estate and sell, lease  or borrow against them
 
+**Life Estate**
+- Fewer ownership rights than a fee simple estate
+- a freehold estate that lasts as long as the life of the owner of the estate of the life of some person
+ - e.g. a grantor may with to make a gift to his/her property prior to dealth, yet wish to retain the use and enjoyment of the property until that time.
+- Life estate can be leased, mortgaged or sold
 
 ### 7. How do Freehold Estates differ from Leasehold Estates?
 
+- Freehold estate lasts for an indefinite period of time, no definitely ascertainable date on which the estate end
+- Leasehold estate expires on a definite date
+- Freehold estate connotes ownership of the property by the estate holder
+
 ### 8. What is the similarity between a Reversion and a Remainder?
+
+**Reversion**
+- Holder of the real estate (grantor) conveys to another person (grantee) a present estate in the property that has fewer ownership rights than the grantor's own estate and retains for the grantor the right to take back, as some time in the future, the full estate before the conveyance.
+- grantor has *reversionary fee interest*
+
+**Remainder**
+- when the grantor of a present estate with fewer ownership rights than the grantor's own estate convey's to a third person the reversionary interest.
+- IN OTHER WORDS - A remainder interest is a future interest created in someone other than the grantor, which becomes possessory upon the termination of a prior estate 
+  - For example, if a landowner grants a life estate to their nephew, with the remainder to their niece, the niece has a remainder interest in the property. When the nephew's life estate ends, the niece's remainder interest becomes possessory.
+
+**Similarities**
+- both examples of future estates
+- both created at the same time
 
 ### 9. What are the differences between a Reversion and a Remainder?
 

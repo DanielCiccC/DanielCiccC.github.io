@@ -62,14 +62,14 @@ duration (an estate can be a future interest – ie vested vs contingent)
     - Fee tail (historical – inheritance limited to certain descendants)
     - Life Estate (granted for duration of a person’s life – remainder/reversion)  
   - Leasehold – certain duration
-  - NOTES: the space can be held for a period of time. What is the estate, and how long do you have to own the estate?
+    > - NOTES: the space can be held for a period of time. What is the estate, and how long do you have to own the estate?
     - contingent estate: getting a property contingent on a contract/agreement
     - freehold estate - specific, but uncertain. IF you own a block of land and it is yours, you own it until you pass away or sell it etc.
       - Estate in fee simple is absolute and you have no constraint transferring or disposing it by a will
       - Fee tail was abolished about 100 years ago
       - Freehold life estate, can own the property until they die, and it is then inherited by someone else
         - Owned by the 'remainder man'
-        - reversionary interest is who is left with after the life estate is gone'
+        - reversionary interest is who is left with after the life estate is gone
         - Interest that is linked to the death of a person
     - Leasehold: for a certain duration, for a defined period. If the interest of the land is for a certain duration, 
 
