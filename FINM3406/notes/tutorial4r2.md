@@ -21,13 +21,35 @@ International valuation standards:
 Thus:
 - Buyer and seller both have full knowledge of the properties' condition
 - No outside factors affecting the transaction, such as undue pressure
-- 
 
 ### 3. How does the cost approach to real estate valuation work and what types of properties is it typically used for?
 
+**Cost Approach**
+- Estimate the cost to replace or reproduce a property
+  - Consider factors such as depreciation, obsolescence and physical depreciation
+- Typically used as part of the summation method and for existing use valuations
+
 ### 4. What is the income approach to real estate valuation and how is it used to value commercial properties?
 
+- Income approach to real estate is used to value properties that generate income
+  - apartment buildings, office buildings, retail centres etc.
+- Estimates the property based on it's potential income stream, using method such as the 
+  - capitalisation method
+  - discounted cash flow method
+
+Capitalisation method:
+$$CV = \frac{NI}{I}$$
+
+Where the valuer needs to establish:
+- the open market rental rate applicable to the property by reference to the market rental evidence $NI$
+- the capitalisation rate (yield) through analysis of recent sale evidence. $i$
+
+
 ### 5. How does the sales comparison approach to real estate valuation work and what types of properties is it typically used for?
+
+Sales comparison <-> Direct comparison
+- Used when sales evidence is comparable enough to subject to allow direct comparison.
+- Most popular method of valuation incorporated in the valuation of non income producing properties.
 
 ### 6. What are some of the key factors that affect the value of a property, regardless of the valuation approach used?
 

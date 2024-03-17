@@ -1,16 +1,16 @@
 # Lecture 4
 
-
 ### Real Estate Valuation
 - What is a valuation? 
   - Real estate valuation is the formal process of determining the value or worth of real property, which as discussed previously could include land, buildings, and other improvements. 
   - The aim of a real estate valuation is for an expert to establish an accurate and reliable assessment of the “value” of the bundle of rights that a person has in a particular property.
   - The assessment can be expressed as a range of values but generally a single amount is adopted.
 
-NOTES:
-- formal, not ad-hoc process
-  - Can take valuation to the bank, etc.
-- real property, land, building, attachments
+> NOTES:
+> - formal, not ad-hoc process
+>   - Can take valuation to the bank, etc.
+> - real property, land, building, attachments
+> 
 
 - Why are valuations important? 
   - **Buying or selling a property**: The value of a property is a crucial factor in determining the purchase price or selling price.
@@ -19,14 +19,14 @@ NOTES:
   - **Insurance**: The value of a property is a key factor in determining the amount of insurance coverage needed.
   - **Annual Reporting**: Valuations are used in both private and public sectors for their financial reports.
 
-NOTES:
-- process of getting data is slow
-- Lenders want security
-  - have ratios with respect to value: LMI
-  - LMI: you default on your loan and there is a shortfall purchasing back the property, insurance company will pay the difference
-- Valuation used for divorce settlements, statutory purpose (resumed by the government)
-- Insurance for building; value the building for insurance
-  - If you over or under-insure your property, you are penalised
+> NOTES:
+> - process of getting data is slow
+> - Lenders want security
+>   - have ratios with respect to value: LMI
+>   - LMI: you default on your loan and there is a shortfall purchasing back the property, insurance company will pay the difference
+> - Valuation used for divorce settlements, statutory purpose (resumed by the government)
+> - Insurance for building; value the building for insurance
+>   - If you over or under-insure your property, you are penalised
 
 
 ### Role of the property Valuer
@@ -40,9 +40,9 @@ NOTES:
   - Now degree qualifications and minimum two years experience required
   - Specialisation of valuers (ie rural, mining, specialist retail, plant and machinery)
 
-NOTE:
-- In QLD, cannot provide a valuation report unless you are a registered valuer
-- Have specialisations - residential commercial, etc.
+> NOTE:
+> - In QLD, cannot provide a valuation report unless you are a registered valuer
+> - Have specialisations - residential commercial, etc.
 
 ### The property Valuer
 - The Property Valuer will receive instructions to undertake a particular type of valuation of a property.
@@ -52,15 +52,15 @@ NOTE:
 - It is an opinion given by a suitably qualified expert about something that possibly hasn’t happened and may never happen (ie a market value assessment of a property that hasn’t sold and may never sell).
 - Property Valuers are engaged not only because the client wants a reliable assessment of value for their personal reasons but also because they want to have recourse to the Property Valuer’s Professional Indemnity insurance should something go wrong.
 
-NOTE:
-- historic valuation, valuation at a particular point in the past for tax purposes, e.g.
-- CANNOT future-date a property valuation (and put their name on it, etc.)
-- Just an opinion - rarely will you see a valuer value a property more than what is it worth (when getting valued after a sale)
-- Professional indemnity insurance - sue if the valuation was wrong
-  - Banks will be happy to take an AI generated value of the property
-  - Potential for days to be numbered; simple valuations could be automated - residential for example
-- Certificate of valuation
-  - generic limitations added to the valuation; no contamination e.g. (not going to do tests for contamination)
+> NOTE:
+> - historic valuation, valuation at a particular point in the past for tax purposes, e.g.
+> - CANNOT future-date a property valuation (and put their name on it, etc.)
+> - Just an opinion - rarely will you see a valuer value a property more than what is it worth (when getting valued after a sale)
+> - Professional indemnity insurance - sue if the valuation was wrong
+>   - Banks will be happy to take an AI generated value of the property
+>   - Potential for days to be numbered; simple valuations could be automated - residential for example
+> - Certificate of valuation
+>   - generic limitations added to the valuation; no contamination e.g. (not going to do tests for contamination)
 
 
 ### Valuation report
@@ -79,8 +79,8 @@ NOTE:
     - site amenity and services 
     - encumbrances (ie easements, registered leases)
 
-NOTE:
-- all information on the valuation should be outlined
+> NOTE:
+> - all information on the valuation should be outlined
 
 
 ### Different types of valuations
@@ -92,13 +92,13 @@ NOTE:
   - Betterment is “the capitalised value of urban externalities (amenity, access to services, etc.) and (unpriced) social infrastructure”.  
   - Blight can also impact property and is created by infrastructure development and planning policy decisions. It occurs where these activities diminish land value. 
 
-NOTES:
-- more land the more the property is worth
-  - reasons why the size of land is not the determining factor of its value
-  - local land has a lot more infrastructure associated with it
-  - the more infrastructure that benefits the land will directly effect the property value
-- Betterment - capitalised value of externalities, social infrastructure
-- Blight - big roads, sewerage where activities diminish land value
+> NOTES:
+> - more land the more the property is worth
+>   - reasons why the size of land is not the determining factor of its value
+>   - local land has a lot more infrastructure associated with it
+>   - the more infrastructure that benefits the land will directly effect the property value
+> - Betterment - capitalised value of externalities, social infrastructure
+> - Blight - big roads, sewerage where activities diminish land value
 
 
 ### What do we mean by value?
@@ -136,10 +136,10 @@ International Valuation Standards effective 31 January 2022 defines different ty
 - Existing Use Value
   - Current use/existing use is the current way an asset, liability, or group of assets and/or liabilities is used. The current use may be, but is not necessarily, also the highest and best use.
 
-NOTES:
-- fair market value: how much would a willing buyer and willing seller
-  - both have sufficient time and money to complete the transaction
-- Existing use value; current use is its highest and best use
+> NOTES:
+> - fair market value: how much would a willing buyer and willing seller
+>   - both have sufficient time and money to complete the transaction
+> - Existing use value; current use is its highest and best use
 
 ### Types of real estate valuations
 - Market Valuation
@@ -231,14 +231,14 @@ NOTE:
 - Like with Like, Apples with Apples 
 - Perfect World Scenario – Real challenge is adjustments for items that are not comparable (no two properties the same)
 
-NOTES:
-- social and property infrastructure
-- need to make adjustments
-  - size, shape, configuration, time between sales
-- make massive adjustments to bring to subject property, this ceases to be a valid valuation method
-- directly comparable sale you choose to ignore - doesn't satisfy the 'test' of sale
-  - e.g. adjoining sale (pay a premium to the sale)
-  - someone defaulting on their mortgage 
+> NOTES:
+> - social and property infrastructure
+> - need to make adjustments
+>   - size, shape, configuration, time between sales
+> - make massive adjustments to bring to subject property, this ceases to be a valid valuation method
+> - directly comparable sale you choose to ignore - doesn't satisfy the 'test' of sale
+>   - e.g. adjoining sale (pay a premium to the sale)
+>   - someone defaulting on their mortgage 
 
 ### Summation method
 - Collation of value through the addition of constituent parts or components of a property.
@@ -253,9 +253,9 @@ NOTES:
 - Land component treated as if it was vacant
 - Building and improvements is their added value to the land (can be challenging to assess accurately – depreciated replacement cost)
 
-NOTES:
-- try and get the building almost for free if you can
-  - disconnect between the value of the land and improved form
+> NOTES:
+> - try and get the building almost for free if you can
+>   - disconnect between the value of the land and improved form
 
 ### Before and After
 - Used to assess compensation as result of compulsory acquisition, easement or encumbrance
@@ -367,10 +367,10 @@ $$\frac{1}{0.08} = 12.5 \; \; \text{years purchased}$$
 
 
 ### Outgoings
-- Outgoings are the expenses incurred in operating an income producing property. They are limited to non-capital items.Typically, they would include:
+- Outgoings are the expenses incurred in operating an income producing property. They are limited to non-capital items. Typically, they would include:
   - Repairs and Maintenance
   - Rates, Land Taxes, Fire Brigade Levy
-  - Water & Sewerage, Gas, Oil and Power charges
+  - Water & Sewerage, Gas, Oil and Power charges  
   - Security
   - Gardening & Landscaping
   - Cleaning, Waste Removal & Pest Control
