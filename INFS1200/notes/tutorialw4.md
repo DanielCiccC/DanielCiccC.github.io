@@ -18,7 +18,7 @@ Syntax pointers:
 
 ### A.1
 
-![alt text](image-5.png)
+![alt text](assets\IMG55.PNG)
 
 >
 >
@@ -28,7 +28,7 @@ Syntax pointers:
 
 ### B.2
 
-![alt text](image-7.png)
+![alt text](assets\IMG56.PNG)
 
 >
 >
@@ -38,7 +38,7 @@ Syntax pointers:
 
 ### C.1
 
-![alt text](image-8.png)
+![alt text](assets\IMG57.PNG)
 
 >
 >
@@ -47,7 +47,7 @@ Syntax pointers:
 
 
 ### Section D: Analysis and Application
-![alt text](image-9.png)
+![alt text](assets\IMG58.PNG)
 
 **D.1 Which of the following statement(s) is correct based on the ER diagram?**
 - A) All Parts stored in the system will have a BatchNo.
@@ -58,7 +58,7 @@ Syntax pointers:
 
 **D.2 Consider the following addition to the ER diagram: What would be the correct relational mapping for METALPART?**
 
-![alt text](image-10.png)
+![alt text](assets\IMG59.PNG)
 
 ```
 A) METALPART[partNo]
