@@ -24,8 +24,8 @@ $$S^{a}(\pounds / SFr) = S^{a}( \pounds / \$  ) \times S^{a}(\$/SFr)$$
 ![Alt text](assets\IMG88.PNG)
 
 ### Forward market
-- Contracting today for the furture pruchase or sale of foreign exchange
-- $F_{N}(j/k)$, the price of one unit of currency 4k$ in terms of currency $j$ for delivery in $N$ months
+- Contracting today for the future purchase or sale of foreign exchange
+- $F_{N}(j/k)$, the price of one unit of currency $k$ in terms of currency $j$ for delivery in $N$ months
 - under certain conditions the forward exchange rate is an unbiased predictor of the expected spot exchange rate $N$ months into the future. 
   - Trading at a premium to the dollar in American terms, we can say the markets expect the US dollar to *depreciate* relative to the Swiss franc
   - When the dollar is trading at a *discount* to the Swiss franc, we can say the market expects the Swiss franc to appreciate, or become more valuable, relative to the dollar. It costs fewer francs to buy a dollar forward.

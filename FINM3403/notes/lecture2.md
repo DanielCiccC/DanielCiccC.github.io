@@ -1,12 +1,12 @@
 # Lecture 2
 
-### International Montary System
+### International Monetary System
 - The international Monetary System is a set of rules that governs international payments
 - Historical Overview of exchange rate mechanisms
     - Classical Gold Standard: 1875 – 1914
-      - Fixed exchange rate system. Every single country would decide what the value of their currncy was worth compared to gold.
+      - Fixed exchange rate system. Every single country would decide what the value of their currency was worth compared to gold.
       - Worked for a long period of time - exchange rates were fairly stable
-      - Not too much gold discovery, but around 1911 huge amoutns fo gold discovery and gold inflation became a problem
+      - Not too much gold discovery, but around 1911 huge amounts fo gold discovery and gold inflation became a problem
     - Bretton Woods System: 1945 – 1972
     - Floating Exchange Rate Regime: 1973 – Present
       - market flows determine the value of one currency to another
@@ -62,16 +62,13 @@ Since 1982, Hong Kong dollar has remained a very stable exchange rate
 | ![Alt text](assets\IMG50.PNG) | ![Alt text](assets\IMG51.PNG)
 
 ### Advantages of a Fixed ER
-1. Reduce transaction costs and exchange rate risk which can
-discourage trade and investment
-2. Provide a credible nominal anchor for monetary policy (importing
-credibility)
+1. Reduce transaction costs and exchange rate risk which can discourage trade and investment
+2. Provide a credible nominal anchor for monetary policy (importing credibility)
 3. Transparency of the Regime
 
 ### Advantages of a Float
 1. Ability to pursue an independent monetary policy
-2. Ability to use monetary policy to respond to recessionary
-effects on the economy
+2. Ability to use monetary policy to respond to recessionary effects on the economy
 
 ### Attributes of the "ideal currency
 - Exchange rate stability
@@ -90,10 +87,14 @@ A country must give up one of the three goals:
 ### The Balance of Payments (BOP)
 - The BOP is a statistical record of the flow of all of the payments between the residents of a country and the rest of the world in a given year.
     - Multinational businesses use various BOP measures to gauge the growth and health of specific types of trade or financial transactions by country and regions of the world against the home country
-    - Monetary and fiscal policy must take the BOP into account at the national level---the BOP gives indications of the demand and supply of a country’s currency.
+    - Monetary and fiscal policy must take the BOP into account at the national level - the BOP gives indications of the demand and supply of a country’s currency.
   - statistical record of the inflows and outflows of cash from the country (where and what was it used for)
   - Used to gauge the health of the country
   - Government spending relative to its revenue, etc.
+
+>  For  example,  an  overall  BOP  deficit  indicates  that  a  country  is  borrowing  from 
+overseas and running down its net asset position.  
+>  A country running a CA surplus  is accumulating claims on foreigners and building up a positive net foreign asset position.
 
 ![Alt text](assets\IMG53.PNG)
 
@@ -113,8 +114,7 @@ A country must give up one of the three goals:
 
 ### Current account
 
-- It is record of a country’s trade in goods and services
-and of unilateral transfers.
+- It is record of a country’s trade in goods and services and of unilateral transfers.
 - It is divided into several sub-categories:
     - Merchandise Trade: physical goods like beef, cars etc.
     - Services: tourism, education, shipping and finance etc.
@@ -122,6 +122,8 @@ and of unilateral transfers.
     - Primary Income (“investment income”): interest income, dividends etc.
     - Secondary Income (“unilateral transfers”): Foreign aid, pensions to retired people abroad, wages repatriated etc.
 - The sum of the sub-categories = CA balance
+
+> Note: a	country	must finance	its	current	account	deficit	either	by	borrowing	from	foreigners	or	by	drawing	down on	its	previously	accumulated	foreign	wealth,	a	current	account	deficit	represents	a	reduction in	 the	 country’s	 net	 foreign	 wealth
   
 ![Alt text](assets\IMG54.PNG)
 
@@ -146,6 +148,7 @@ KA = Capital Inflow (cr) – Capital outflow (dr)
 - The two main categories:
   - Portfolio investment
   - Direct investment (takeover or acquiring a substantial portion of a foreign company, i.e., ˃ 10%)
+  - > Sales of assets are recorded as credits, and result in *inflows* to the KA account. Purchases (imports) of foreign assets are recorded as debits and lead to *capital outflow*.
 - KA balance = Sum of portfolio investment and direct investment + 
   - Any returns on investment from international trades are accounted in the financial account
   - Accurate to keep track of the transactions in the financial account
@@ -186,7 +189,7 @@ This will hold approximately for floating rate countries.
 - CA balance relative to the GDP
 
 Forms:
-- Y = National **Income**
+- Y = **National Income**
 - $C + I + G$ = Domestic Residents **Spending** / Absorption
 - CA = excess of spending over income earned (Income – Spending)
 - CA Deficit → $CA < 0$ → Borrowing from Abroad to finance domestic spending
@@ -217,7 +220,7 @@ reflected as a financial account surplus for that country.
 
 - Government budget deficits and current account deficits:
   - National spending (NS) = Household (HH) spending + Private investment (PI) + Govt. spending
-    - What hosueholds spend, what investment companies spend and what governmnet spends
+    - What households spend, what investment companies spend and what government spends
   - HH spending = National Income – Private Savings – Taxes
   - So, 
 

@@ -24,84 +24,84 @@
 
 </header>
 <main>
-<h1 dir="auto" id="module-2-er-to-relation-mapping">Module 2: ER to relation Mapping</h1>
-<p dir="auto"><img src="image-2.png" alt="alt text" data-src="image-2.png"></p>
-<h2 dir="auto" id="steps-for-mapping">Steps for mapping</h2>
-<h3 dir="auto" id="1-regular-entity">1. Regular Entity</h3>
-<p dir="auto">For each entity type</p>
-<ol dir="auto">
-<li dir="auto">Create a relation</li>
-<li dir="auto">Choose a key as the primary key</li>
-<li dir="auto">Include all simple attributes (e.g., a3 and a4) which arenot composite (e.g.,a2), derived or multivalued (e.g., a5)</li>
+<h1 id="module-2-er-to-relation-mapping">Module 2: ER to relation Mapping</h1>
+<p><img src="assets%5CIMG45.PNG" alt="alt text"></p>
+<h2 id="steps-for-mapping">Steps for mapping</h2>
+<h3 id="1-regular-entity">1. Regular Entity</h3>
+<p>For each entity type</p>
+<ol>
+<li>Create a relation</li>
+<li>Choose a key as the primary key</li>
+<li>Include all simple attributes (e.g., a3 and a4) which arenot composite (e.g.,a2), derived or multivalued (e.g., a5)</li>
 </ol>
-<p dir="auto"><img src="image-3.png" alt="alt text" data-src="image-3.png"></p>
-<h3 dir="auto" id="2-weak-entity">2. Weak Entity</h3>
-<p dir="auto">For each weak entity type</p>
-<ol dir="auto">
-<li dir="auto">Create a relation</li>
-<li dir="auto">Set its primary key as the combination of the primary keys of owner
+<p><img src="assets%5CIMG46.PNG" alt="alt text"></p>
+<h3 id="2-weak-entity">2. Weak Entity</h3>
+<p>For each weak entity type</p>
+<ol>
+<li>Create a relation</li>
+<li>Set its primary key as the combination of the primary keys of owner
 entities and its own partial key.</li>
-<li dir="auto">Include a foreign key from the relation to the primary key of the relation of its owner entity types.</li>
-<li dir="auto">Include all simple attributes which are not composite, derived or multivalued.</li>
+<li>Include a foreign key from the relation to the primary key of the relation of its owner entity types.</li>
+<li>Include all simple attributes which are not composite, derived or multivalued.</li>
 </ol>
-<p dir="auto"><img src="image-4.png" alt="alt text" data-src="image-4.png"></p>
-<h3 dir="auto" id="3-binary-11-relationship">3. Binary 1:1 Relationship</h3>
-<p dir="auto">For each binary 1:1 relationship type</p>
-<ol dir="auto">
-<li dir="auto">Choose one of the participating entity types (preference is given to entity types with total participation)</li>
-<li dir="auto">Include a foreign key from the chosen entity type back to the primary keys of the relation of the other entity type.</li>
-<li dir="auto">Include all the simple attributes of the relationship type to the relation of the chosen entity type.</li>
+<p><img src="assets%5CIMG47.PNG" alt="alt text"></p>
+<h3 id="3-binary-11-relationship">3. Binary 1:1 Relationship</h3>
+<p>For each binary 1:1 relationship type</p>
+<ol>
+<li>Choose one of the participating entity types (preference is given to entity types with total participation)</li>
+<li>Include a foreign key from the chosen entity type back to the primary keys of the relation of the other entity type.</li>
+<li>Include all the simple attributes of the relationship type to the relation of the chosen entity type.</li>
 </ol>
-<p dir="auto"><img src="image-5.png" alt="alt text" data-src="image-5.png"></p>
-<h3 dir="auto" id="step-4-binary-1n-relationship">Step 4. Binary 1:N Relationship</h3>
-<p dir="auto">For each (non-weak) binary 1:N relationship type</p>
-<ol dir="auto">
-<li dir="auto">Identify the participating entity type at the N-side of the relationship type</li>
-<li dir="auto">Include a foreign key to the entity type on the N-side. This foreign key should be the primary key of the entity type on the 1-side.</li>
-<li dir="auto">Include any simple attributes of the relationship type as attributes of the relation of the N side.</li>
+<p><img src="assets%5CIMG48.PNG" alt="alt text"></p>
+<h3 id="step-4-binary-1n-relationship">Step 4. Binary 1:N Relationship</h3>
+<p>For each (non-weak) binary 1:N relationship type</p>
+<ol>
+<li>Identify the participating entity type at the N-side of the relationship type</li>
+<li>Include a foreign key to the entity type on the N-side. This foreign key should be the primary key of the entity type on the 1-side.</li>
+<li>Include any simple attributes of the relationship type as attributes of the relation of the N side.</li>
 </ol>
-<p dir="auto"><img src="image-7.png" alt="alt text" data-src="image-7.png"></p>
-<h3 dir="auto" id="step-5-binary-mn-relationship">Step 5. Binary M:N Relationship</h3>
-<p dir="auto">For each binary M:N relationship type</p>
-<ol dir="auto">
-<li dir="auto">Create a new relation</li>
-<li dir="auto">Include foreign keys from relation to the primary key of the participating
+<p><img src="assets%5CIMG49.PNG" alt="alt text"></p>
+<h3 id="step-5-binary-mn-relationship">Step 5. Binary M:N Relationship</h3>
+<p>For each binary M:N relationship type</p>
+<ol>
+<li>Create a new relation</li>
+<li>Include foreign keys from relation to the primary key of the participating
 entity types</li>
-<li dir="auto">The combination of foreign keys will form the primary key of R</li>
-<li dir="auto">R can have its own attributes that contribute to the primary key</li>
-<li dir="auto">Include any simple attributes of R as attributes of the new relation
-<img src="image-8.png" alt="alt text" data-src="image-8.png"></li>
+<li>The combination of foreign keys will form the primary key of R</li>
+<li>R can have its own attributes that contribute to the primary key</li>
+<li>Include any simple attributes of R as attributes of the new relation
+<img src="assets%5CIMG50.PNG" alt="alt text"></li>
 </ol>
-<h3 dir="auto" id="step-6-multivalued-attributes">Step 6: Multivalued Attributes</h3>
-<p dir="auto">For each multivalued attribute:</p>
-<ol dir="auto">
-<li dir="auto">Create a new relation.</li>
-<li dir="auto">Include a foreign key from the relation to the primary key of the associated entity type.</li>
-<li dir="auto">The primary key is the combination of the multivalued attributes and the primary key of its associated entity type.</li>
-<li dir="auto">If the multivalued attribute is composite, include its simple components.</li>
+<h3 id="step-6-multivalued-attributes">Step 6: Multivalued Attributes</h3>
+<p>For each multivalued attribute:</p>
+<ol>
+<li>Create a new relation.</li>
+<li>Include a foreign key from the relation to the primary key of the associated entity type.</li>
+<li>The primary key is the combination of the multivalued attributes and the primary key of its associated entity type.</li>
+<li>If the multivalued attribute is composite, include its simple components.</li>
 </ol>
-<p dir="auto"><img src="image-9.png" alt="alt text" data-src="image-9.png"></p>
-<h3 dir="auto" id="step-7-n-ary-relationships">Step 7: N-ary Relationships</h3>
-<p dir="auto">For each N-ary relationship type</p>
-<ol dir="auto">
-<li dir="auto">Create a new relation</li>
-<li dir="auto">Include foreign keys from the relation to the primary key of the participating entity types</li>
-<li dir="auto">The combination of foreign keys from entity types with many cardinality will form the primary key</li>
-<li dir="auto">R can have its own attributes that contribute to the primary key</li>
-<li dir="auto">Include any simple attributes of R as attributes of the new relation</li>
+<p><img src="assets%5CIMG51.PNG" alt="alt text"></p>
+<h3 id="step-7-n-ary-relationships">Step 7: N-ary Relationships</h3>
+<p>For each N-ary relationship type</p>
+<ol>
+<li>Create a new relation</li>
+<li>Include foreign keys from the relation to the primary key of the participating entity types</li>
+<li>The combination of foreign keys from entity types with many cardinality will form the primary key</li>
+<li>R can have its own attributes that contribute to the primary key</li>
+<li>Include any simple attributes of R as attributes of the new relation</li>
 </ol>
-<p dir="auto"><img src="image-10.png" alt="alt text" data-src="image-10.png"></p>
-<p dir="auto"><img src="image-11.png" alt="alt text" data-src="image-11.png"></p>
-<h3 dir="auto" id="step-8-super-and-subclasses-mapping">Step 8: Super and Subclasses Mapping</h3>
-<p dir="auto">The following method works for total/partial and disjoint/verlapping subclasses.
+<p><img src="assets%5CIMG52.PNG" alt="alt text"></p>
+<p><img src="assets%5CIMG53.PNG" alt="alt text"></p>
+<h3 id="step-8-super-and-subclasses-mapping">Step 8: Super and Subclasses Mapping</h3>
+<p>The following method works for total/partial and disjoint/verlapping subclasses.
 For each subclass entity type</p>
-<ol dir="auto">
-<li dir="auto">Create a relation</li>
-<li dir="auto">The primary key of each of the subclasses is the primary key of the superclass.</li>
-<li dir="auto">Include a foreign key from the relation to the primary key of the relation of its superclass entity type.</li>
-<li dir="auto">Include all simple attributes which are not composite, derived or multivalued.</li>
+<ol>
+<li>Create a relation</li>
+<li>The primary key of each of the subclasses is the primary key of the superclass.</li>
+<li>Include a foreign key from the relation to the primary key of the relation of its superclass entity type.</li>
+<li>Include all simple attributes which are not composite, derived or multivalued.</li>
 </ol>
-<p dir="auto"><img src="image-12.png" alt="alt text" data-src="image-12.png"></p>
+<p><img src="assets%5CIMG54.PNG" alt="alt text"></p>
 
 </main>
 </body>

@@ -66,7 +66,7 @@ $$\text{USDCHF} \; \; \; .8505-0.8507*$$
 USD - base currency
 CHF - Quote currency
 
-$\text{USDCHF}_{bid} = 0.8505$ - the rate at which the bank woll buy USD (base currency) in exchange for CHF (gives customer swiss francs)
+$\text{USDCHF}_{bid} = 0.8505$ - the rate at which the bank will buy USD (base currency) in exchange for CHF (gives customer swiss francs)
 
 $\text{USDCHF}_{ask} = 0.8507$ - the rate at which the bank will sell USD (base currency) for CHF (receives swiss francs from customer)
 
