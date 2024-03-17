@@ -31,7 +31,7 @@ $$S^{a}(\pounds / SFr) = S^{a}( \pounds / \$  ) \times S^{a}(\$/SFr)$$
   - When the dollar is trading at a *discount* to the Swiss franc, we can say the market expects the Swiss franc to appreciate, or become more valuable, relative to the dollar. It costs fewer francs to buy a dollar forward.
 
 ### Forward premium
-- Express the premium or discount as an annualised precentage deviation from the spot rate
+- Express the premium or discount as an annualised percentage deviation from the spot rate
 
 - There are three ways to express forward rates:
   - Via points to be added or subtracted from spot rate [known as swap points]
@@ -53,11 +53,10 @@ $$f_{N,j} = \frac{0.00903 - 0.00897}{0.00897} \times \frac{360}{91} = 0.0265$$
 three-month forward premium is 0.0265 
 
 ### Forward point transaction
- forward rates might bedisplayed as:
+ forward rates might be displayed as:
 
 ![Alt text](assets\IMG89.PNG)
 
 - When the second known pair is smaller than the first, the dealer 'knows' the forward points are subtracted from the spot bid and ask price
 - 
 ![Alt text](assets\IMG90.PNG)
-

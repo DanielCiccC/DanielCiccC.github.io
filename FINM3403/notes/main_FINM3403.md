@@ -1,3 +1,9 @@
 # FINM3403 content
 
-All my notes from the beginning of lectures; Since these are moreso informational they will be complete. My project and codebase will be referenced elsewhere.
+
+**Lecture** | **Lecture revision** 
+|---|---| 
+[Lecture 1](lecture1.html)   | [Lecture 1, revised](revisionLecture1.html)
+| [Lecture 2](lecture2.html) |
+ [Lecture 3](lecture3.html)  |
+ [Lecture 4](Lecture4.html)  |
