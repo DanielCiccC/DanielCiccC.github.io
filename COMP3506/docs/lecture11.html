@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
-<meta name="description" content="undefined - microjam page">
+<meta name="description" content="lecture11 - microjam page">
 
 
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
 
-<title>undefined</title>
+<title>lecture11</title>
 </head>
 <body id="top">
 <header>
@@ -163,8 +163,8 @@ encode each character</li>
 </thead>
 <tbody dir="auto">
 <tr dir="auto">
-<td><img src="assets\IMG158.PNG" alt="Alt text" data-src="assets%5CIMG158.PNG"></td>
-<td><img src="assets\IMG159.PNG" alt="Alt text" data-src="assets%5CIMG159.PNG"></td>
+<td><img src="assets\IMG158.PNG" alt="Alt text" data-src="assets/IMG158.PNG"></td>
+<td><img src="assets\IMG159.PNG" alt="Alt text" data-src="assets/IMG159.PNG"></td>
 </tr>
 </tbody>
 </table>
@@ -190,7 +190,7 @@ encode each character</li>
 <p dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">T_{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> encodes X into 23 bits</p>
 </li>
 </ul>
-<p dir="auto"><img src="assets\IMG160.PNG" alt="Alt text" data-src="assets%5CIMG160.PNG"></p>
+<p dir="auto"><img src="assets\IMG160.PNG" alt="Alt text" data-src="assets/IMG160.PNG"></p>
 <h3 dir="auto" id="huffman-coding">Huffman Coding</h3>
 <ul dir="auto">
 <li dir="auto">We want to find an optimal prefix-free coding scheme</li>
@@ -221,7 +221,7 @@ while PQ.size() &gt; 1 do
     (f, T) = PQ.removeMin()
 return T
 </div></code></code></pre>
-<p dir="auto"><img src="assets\IMG161.PNG" alt="Alt text" data-src="assets%5CIMG161.PNG"></p>
+<p dir="auto"><img src="assets\IMG161.PNG" alt="Alt text" data-src="assets/IMG161.PNG"></p>
 <h3 dir="auto" id="analysis-of-huffmans-algorithm">Analysis of Huffman’s Algorithm</h3>
 <p dir="auto">Assuming that</p>
 <ul dir="auto">
@@ -233,10 +233,10 @@ return T
 <h2 dir="auto" id="real-huffman-coding">Real Huffman coding</h2>
 <p dir="auto">In practice, we don’t actually care about the codewords in the first instance – <em>we actually want to compute the set of codeword lengths</em> (how many bits to assign to each codeword)</p>
 <h4 dir="auto" id="huffmans-example">Huffman's example</h4>
-<p dir="auto"><img src="assets\IMG162.PNG" alt="Alt text" data-src="assets%5CIMG162.PNG"></p>
+<p dir="auto"><img src="assets\IMG162.PNG" alt="Alt text" data-src="assets/IMG162.PNG"></p>
 <p dir="auto">Assign codewords by the branch direction of the tree: “If we go left, assign 0, else assign 1”
 But we can do better (where better does not mean a better code, but more beautiful, elegant, and less overhead when transmitting the codebook)</p>
-<p dir="auto"><img src="assets\IMG163.PNG" alt="Alt text" data-src="assets%5CIMG163.PNG"></p>
+<p dir="auto"><img src="assets\IMG163.PNG" alt="Alt text" data-src="assets/IMG163.PNG"></p>
 <p dir="auto"><strong>Canonical codes</strong></p>
 <ul dir="auto">
 <li dir="auto">chop off the lest significant bit (LSB)</li>
@@ -247,7 +247,7 @@ Suppose we pass the symbols to the decoder in lexicographical order.
 If we sort the codewords first by their length and then lexicographically,
 all we need to provide the <strong>decoder is the list of codeword lengths!</strong></p>
 <p dir="auto">Sort them within their bit length buckets</p>
-<p dir="auto"><img src="assets\IMG164.PNG" alt="Alt text" data-src="assets%5CIMG164.PNG"></p>
+<p dir="auto"><img src="assets\IMG164.PNG" alt="Alt text" data-src="assets/IMG164.PNG"></p>
 <h3 dir="auto" id="how-to-transmit-the-codebook">How to transmit the codebook?</h3>
 <ul dir="auto">
 <li dir="auto">Transmit symbols in decreasing order of bitlength, recording the number of symbols in each bitlength group</li>
@@ -315,7 +315,7 @@ all we need to provide the <strong>decoder is the list of codeword lengths!</str
 <h3 dir="auto" id="lz77-example">LZ77 example</h3>
 <ul dir="auto">
 <li dir="auto">What I 'mismatched' was an A
-<img src="assets\IMG165.PNG" alt="Alt text" data-src="assets%5CIMG165.PNG"></li>
+<img src="assets\IMG165.PNG" alt="Alt text" data-src="assets/IMG165.PNG"></li>
 </ul>
 <h3 dir="auto" id="lz77-decoding-example">LZ77 decoding example</h3>
 <ul dir="auto">
@@ -327,7 +327,7 @@ At decoding time you will see this: (3, 5, X)
 How can I decode 5 elements when I only go back by
 an offset of 3?</li>
 </ul>
-<p dir="auto"><img src="assets\IMG166.PNG" alt="Alt text" data-src="assets%5CIMG166.PNG"></p>
+<p dir="auto"><img src="assets\IMG166.PNG" alt="Alt text" data-src="assets/IMG166.PNG"></p>
 <h3 dir="auto" id="what-about-huffman">What about Huffman?</h3>
 <ul dir="auto">
 <li dir="auto">We can use the output of LZ as input to

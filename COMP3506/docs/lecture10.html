@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
-<meta name="description" content="undefined - microjam page">
+<meta name="description" content="lecture10 - microjam page">
 
 
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
 
-<title>undefined</title>
+<title>lecture10</title>
 </head>
 <body id="top">
 <header>
@@ -85,7 +85,7 @@ for each possible shift of P relative to T</li>
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="assets\IMG138.PNG" alt="Alt text" data-src="assets%5CIMG138.PNG"></p>
+<p dir="auto"><img src="assets\IMG138.PNG" alt="Alt text" data-src="assets/IMG138.PNG"></p>
 <h3 dir="auto" id="can-we-do-better">Can we do better?</h3>
 <ul dir="auto">
 <li dir="auto"><strong>Boyer-Moore</strong> pattern matching algorithm</li>
@@ -102,7 +102,7 @@ approach by using two heuristics
 <li dir="auto">Compare P with a subsequence of T moving
 backwards</li>
 </ul>
-<p dir="auto"><img src="assets\IMG139.PNG" alt="Alt text" data-src="assets%5CIMG139.PNG"></p>
+<p dir="auto"><img src="assets\IMG139.PNG" alt="Alt text" data-src="assets/IMG139.PNG"></p>
 <h3 dir="auto" id="boyer-moore-character-jump-heuristic">Boyer-Moore: Character-Jump Heuristic</h3>
 <ul dir="auto">
 <li dir="auto">
@@ -110,19 +110,19 @@ backwards</li>
 <ul dir="auto">
 <li dir="auto">if P contains c, shift P to align the last occurrence of c in
 P with T[i]
-<img src="assets\IMG140.PNG" alt="Alt text" data-src="assets%5CIMG140.PNG"></li>
+<img src="assets\IMG140.PNG" alt="Alt text" data-src="assets/IMG140.PNG"></li>
 </ul>
 </li>
 <li dir="auto">
 <p dir="auto">Else, shift P to align P[0] with T[i + 1]</p>
 </li>
 </ul>
-<p dir="auto"><img src="assets\IMG141.PNG" alt="Alt text" data-src="assets%5CIMG141.PNG"></p>
+<p dir="auto"><img src="assets\IMG141.PNG" alt="Alt text" data-src="assets/IMG141.PNG"></p>
 <h3 dir="auto" id="example">Example</h3>
 <ul dir="auto">
 <li dir="auto">at the end, mismatches on a h and realigns</li>
 </ul>
-<p dir="auto"><img src="assets\IMG142.PNG" alt="Alt text" data-src="assets%5CIMG142.PNG"></p>
+<p dir="auto"><img src="assets\IMG142.PNG" alt="Alt text" data-src="assets/IMG142.PNG"></p>
 <h3 dir="auto" id="terminology-used-further">Terminology (used further)</h3>
 <table dir="auto">
 <thead dir="auto">
@@ -235,7 +235,7 @@ repeat
 <li dir="auto">Boyer-Moore’s algorithm is <em>significantly</em> faster than the brute-force algorithm</li>
 </ul>
 <h4 dir="auto" id="worst-case-example">Worst case example</h4>
-<p dir="auto"><img src="assets\IMG144.PNG" alt="Alt text" data-src="assets%5CIMG144.PNG"></p>
+<p dir="auto"><img src="assets\IMG144.PNG" alt="Alt text" data-src="assets/IMG144.PNG"></p>
 <h3 dir="auto" id="knuth-morris-pratt-kmp-algorithm">Knuth-Morris-Pratt (KMP) Algorithm</h3>
 <ul dir="auto">
 <li dir="auto">Compares the pattern to the text left-to-right
@@ -251,7 +251,7 @@ repeat
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="assets\IMG145.PNG" alt="Alt text" data-src="assets%5CIMG145.PNG"></p>
+<p dir="auto"><img src="assets\IMG145.PNG" alt="Alt text" data-src="assets/IMG145.PNG"></p>
 <h3 dir="auto" id="kmp-failure-function">KMP failure function</h3>
 <ul dir="auto">
 <li dir="auto">KMP algorithm preprocesses the pattern</li>
@@ -322,7 +322,7 @@ else
 return  -1 { no match }
 </div></code></code></pre>
 <h3 dir="auto" id="example-1">Example</h3>
-<p dir="auto"><img src="assets\IMG146.PNG" alt="Alt text" data-src="assets%5CIMG146.PNG"></p>
+<p dir="auto"><img src="assets\IMG146.PNG" alt="Alt text" data-src="assets/IMG146.PNG"></p>
 <h2 dir="auto" id="tries---retrieval-tries">Tries - Retrieval Tries</h2>
 <h3 dir="auto" id="preprocessing-steps">Preprocessing steps</h3>
 <ul dir="auto">
@@ -339,11 +339,11 @@ return  -1 { no match }
 </ul>
 <p dir="auto">Standard trie for the set of strings
 S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
-<p dir="auto"><img src="assets\IMG147.PNG" alt="Alt text" data-src="assets%5CIMG147.PNG"></p>
+<p dir="auto"><img src="assets\IMG147.PNG" alt="Alt text" data-src="assets/IMG147.PNG"></p>
 <ul dir="auto">
 <li dir="auto">sometimes represented as a special symbol to denote that a word ends on an internal node</li>
 </ul>
-<p dir="auto"><img src="assets\IMG148.PNG" alt="Alt text" data-src="assets%5CIMG148.PNG"></p>
+<p dir="auto"><img src="assets\IMG148.PNG" alt="Alt text" data-src="assets/IMG148.PNG"></p>
 <h3 dir="auto" id="analysis-of-standard-tries">Analysis of standard tries</h3>
 <ul dir="auto">
 <li dir="auto"><code>n</code> total size of the strings in S</li>
@@ -358,8 +358,8 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
 <li dir="auto">Each leaf is associated w/ one particular word</li>
 <li dir="auto">Leaf stores indices where associated word begins (“see” starts at index 0 &amp; 24, leaf for “see” stores those indices)</li>
 </ul>
-<p dir="auto"><img src="assets\IMG149.PNG" alt="Alt text" data-src="assets%5CIMG149.PNG"></p>
-<p dir="auto"><img src="assets\IMG150.PNG" alt="Alt text" data-src="assets%5CIMG150.PNG"></p>
+<p dir="auto"><img src="assets\IMG149.PNG" alt="Alt text" data-src="assets/IMG149.PNG"></p>
+<p dir="auto"><img src="assets\IMG150.PNG" alt="Alt text" data-src="assets/IMG150.PNG"></p>
 <h3 dir="auto" id="compressed-tries">Compressed Tries</h3>
 <ul dir="auto">
 <li dir="auto">
@@ -375,7 +375,7 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="assets\IMG151.PNG" alt="Alt text" data-src="assets%5CIMG151.PNG"></p>
+<p dir="auto"><img src="assets\IMG151.PNG" alt="Alt text" data-src="assets/IMG151.PNG"></p>
 <ul dir="auto">
 <li dir="auto">What is the maximum number of nodes in a compressed trie storing s words?
 <ul dir="auto">
@@ -431,8 +431,8 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
 </thead>
 <tbody dir="auto">
 <tr dir="auto">
-<td><img src="assets\IMG152.PNG" alt="Alt text" data-src="assets%5CIMG152.PNG"></td>
-<td><img src="assets\IMG153.PNG" alt="Alt text" data-src="assets%5CIMG153.PNG"></td>
+<td><img src="assets\IMG152.PNG" alt="Alt text" data-src="assets/IMG152.PNG"></td>
+<td><img src="assets\IMG153.PNG" alt="Alt text" data-src="assets/IMG153.PNG"></td>
 </tr>
 </tbody>
 </table>
@@ -442,12 +442,12 @@ S = { bear, bell, bid, bull, buy, sell, stock, stop }</p>
 <li dir="auto">Suffix tree of a string <code>T</code> is the compressed trie of all
 the suffixes of <code>T</code></li>
 </ul>
-<p dir="auto"><img src="assets\IMG154.PNG" alt="Alt text" data-src="assets%5CIMG154.PNG"></p>
+<p dir="auto"><img src="assets\IMG154.PNG" alt="Alt text" data-src="assets/IMG154.PNG"></p>
 <ul dir="auto">
 <li dir="auto"><code>n</code> suffixes for a string of length n</li>
 </ul>
 <h3 dir="auto" id="suffix-tree-compact-rep">Suffix Tree: Compact Rep.</h3>
-<p dir="auto"><img src="assets\IMG155.PNG" alt="Alt text" data-src="assets%5CIMG155.PNG"></p>
+<p dir="auto"><img src="assets\IMG155.PNG" alt="Alt text" data-src="assets/IMG155.PNG"></p>
 <h3 dir="auto" id="suffix-tree-pattern-matching">Suffix Tree Pattern Matching</h3>
 <ul dir="auto">
 <li dir="auto">Maintain, at each node, the number of
@@ -519,9 +519,9 @@ Even though space consumption is <code>O(t)</code> where <code>t = |T|</code> (l
 <p dir="auto">The resultant indexes are the suffix array!</p>
 </li>
 </ul>
-<p dir="auto"><img src="assets\IMG156.PNG" alt="Alt text" data-src="assets%5CIMG156.PNG"></p>
+<p dir="auto"><img src="assets\IMG156.PNG" alt="Alt text" data-src="assets/IMG156.PNG"></p>
 <p dir="auto">Does the string “bana” occur in T ? Binary Search the SA!</p>
-<p dir="auto"><img src="assets\IMG157.PNG" alt="Alt text" data-src="assets%5CIMG157.PNG"></p>
+<p dir="auto"><img src="assets\IMG157.PNG" alt="Alt text" data-src="assets/IMG157.PNG"></p>
 <ul dir="auto">
 <li dir="auto">MIGHT NEED LOWER BOUNDING</li>
 </ul>
