@@ -29,6 +29,8 @@ else
     echo "No modified .html files since the last commit."
 fi
 
+python image_syntax.py
+
 
 # git stuff
 MESSAGE=$(git ls-files -domz | xargs -0 echo The following have been changed: )

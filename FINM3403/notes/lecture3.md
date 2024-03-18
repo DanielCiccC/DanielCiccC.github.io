@@ -8,7 +8,7 @@ deal with these fundamental issues:
   - What, at least theoretically, is the “proper” exchange rate?
     - given the interest rate and inflation at a point in time
 - Our approach to answering these questions and more is to describe the economic fundamentals of international finance, known as parity conditions.
-  - Use back on the envelope conditions to find where teh exchange rate shp=ould be heading
+  - Use back on the envelope conditions to find where the exchange rate shp=ould be heading
 
 ### Parity conditions
 - Parity Conditions provide an intuitive explanation of the movement of prices and interest rates in different markets in relation to exchange rates. 
@@ -87,18 +87,25 @@ PI: Price-Index basket of goods at time $t$
 
 ### Relative PPP
 - Relative PPP claims that exchange rate movements should exactly offset any inflation differential between two countries:
-    - compare inflation between two countries and predict the exchage rate
-    - Country with the higher inflation rate should decline against the country with the lower inflation rate
+    - compare inflation between two countries and predict the exchange rate
+    - <u> Country with the higher inflation rate should decline against the country with the lower inflation rate </u>
 
 $\pi$ : the inflation rate of country A, B
 
-![Alt text](assets\IMG65.PNG)
+**Relative PPP**:
+
+$$\frac{S^{A/B}_{t+1}}{S^{A/B}_{t}} = \frac{1+\pi_{A}}{1+\pi_{B}}$$
+
+$$\therefore \frac{S^{A/B}_{t+1}-S^{A/B}_{t}}{S^{A/B}_{t}} = \frac{\pi_{A}-\pi_{B}}{1+\pi_{B}} $$
+
 
 
 ### Relative PPP
  Given inflation rates of 1.9% and 3% in Australia and the UK respectively, what is the prediction of PPP with regards to $A/GBP exchange rate?
 
-![Alt text](assets\IMG66.PNG)
+
+$$\frac{S_{t}-S_{t-1}}{S_{t-1}}=\frac{\pi_{A} - \pi_{B}}{1+\pi_{B}} = \frac{0.019-0.03}{1+0.03} = -0.010678 = -1.07\%$$
+
 
 - General implication of relative PP is that countries with high rates of inflation will see their currencies depreciate against those with low rates of inflation
 
@@ -117,30 +124,41 @@ $\pi$ : the inflation rate of country A, B
 
 - Suppose the ¥/$ spot exchange rate and expected inflation for Japan and Australia are:
 
-![Alt text](assets\IMG68.PNG)
+$$S_{\yen/\$, t_{0}}=\yen87.86 ;$$
+$$\pi_{AUS} = 1.9\%$$
+$$\pi_{Japan} = 1\%$$
 
 - What is the expected ¥/$ exchange rate if relative PPP holds?
 
-![Alt text](assets\IMG69.PNG)
+$$S_{\yen/\$, t_{1}} = S_{\yen/\$, t_{0}} \cdot (\frac{1 + \pi_{\yen}}{1+\pi_{\$}}) = (87.86)\cdot (\frac{1.01}{1.019}) = 87.08 \;\yen/\$$$
 
 ### The Real Exchange Rate
 - The real exchange rate measures deviations from PPP. 
   - That is, changes in the spot exchange rate that do not reflect differences in inflation rates between the two currencies in question.
 
-![Alt text](assets\IMG70.PNG)
+**Real Exchange Rate**
+$$E = \frac{S^{Actual}_{t+1}}{S^{PPP}_{t+1}}$$
+
+$$E = \text{1 + \% over-under valuation of denominator currency}$$
+
 
 ### Real Exchange Rate
 - Appreciation in the real exchange rate measures deviations from PPP.  
   - When E = 1, the denominator currency is valued correctly. *The competitiveness of this country is unaltered.*
   - When E < 1, the denominator currency is undervalued. Products from the other country seem expensive relative to the base year.  That is, the *competitiveness of the denominator country improves.*
-  - When E > 1, the denominator currency is overvalued.Products from the other country seem cheap relative to the base year.  That is, the *competitiveness of the denominator country deteriorates.*
+  - When E > 1, the denominator currency is overvalued. Products from the other country seem cheap relative to the base year.  That is, the *competitiveness of the denominator country deteriorates.*
 
 
 ## Interest Rate Parity
 
 - Interest rate parity (IRP) is an arbitrage condition that provides the linkage between the foreign exchange markets and the international money markets.
 
-![Alt text](assets\IMG71.PNG)
+$$\frac{F^{A/B}_{t, t+1}}{S^{A/B}_{t}} = \frac{1+i_{A}}{1+i_{B}}$$
+
+$$\therefore \frac{F^{A/B}_{t, t+1}}{S^{A/B}_{t}} - 1 = \frac{1 + i_{A}}{1 + i_{B}} - 1$$
+AND
+$$\frac{F^{A/B}_{t, t+1} - S^{A/B}_{t}}{S^{A/B}_{t}} = \frac{i_{A} - i_{B}}{1+i_{B}}$$
+
 
 - How does the market arrive at the bid forward exchange rates?
   - need current spot exchange rate, plus interest MM interest rate
@@ -156,15 +174,15 @@ the money market for 3 months. The options are
   - Invest in foreign currency denominated securities
 -  The returns on an Australian investment is given by
 
-![Alt text](assets\IMG72.PNG)
+$$\$A(1+ \frac{i_{\$ A}}{4})$$
 
 - The return on foreign investment is given by
 
-![Alt text](assets\IMG73.PNG)
+$$\frac{1}{S_{\$/CHF}}(1+ \frac{i_{CHF}}{4}) \cdot F_{3(\$ / CHF)}$$
 
 - Gattinara Corp will be indifferent between the two investment opportunities if
 
-![Alt text](assets\IMG74.PNG)
+$$ \$A(1+ \frac{i_{\$ A}}{4}) = \frac{1}{S_{\$/CHF}}(1+ \frac{i_{CHF}}{4}) \cdot F_{3(\$ / CHF)}$$
 
 
 - Basic idea: Two alternative ways to transform from currency A at time 0 to currency B at time 1 should earn the same return.
@@ -186,7 +204,7 @@ arbitrage (CIA) and occurs whenever IRP does NOT hold. CIA can involve the follo
   - Invest the foreign currency in an interest-bearing instrument; and then
   - Sign a forward contract to “lock in” a future exchange rate at which to convert the foreign currency proceeds back to the domestic currency.
 
-### Exmaple 2
+### Example 2
 - The annual interest rate in the AUS and UK are 5% and 8% respectively. The current spot rate is $1.50/£ and the 1 year forward rate is $1.48/£. Can arbitrage profits be made?
 
 ![Alt text](assets\IMG76.PNG)
@@ -206,8 +224,9 @@ in Australia causes dollar interest rates to rise.
 ### The Fisher Effect
 
 - The Fisher effect (also called Fisher-closed) postulated by Irving Fisher states:
+$$(1+i) = (1+r) \cdot (1+\pi)$$
+$$i = r + \pi + r\pi$$
 
-![Alt text](assets\IMG78.PNG)
 
 This relation is often presented as a linear approximation stating that the nominal interest rate (i) is equal to a real interest rate (r) plus expected inflation ($\pi$)
 
@@ -232,9 +251,9 @@ Japan, the Fisher Effect would be stated as:
 
 ### Uncovered Interest Rate Parity
 
-• Suppose you forecast the spot rate next year to remain unchanged at 120 ¥/$
-• Even though you cannot make a riskless profit through CIA, given your estimation of the future spot rate, you can enter into an uncovered interest “arbitrage”
-• In an uncovered position, rather than locking in a forward rate today, you take your chances and hope you’re right about your assessment of the future spot rate
+- Suppose you forecast the spot rate next year to remain unchanged at 120 ¥/$
+- Even though you cannot make a risk-less profit through CIA, given your estimation of the future spot rate, you can enter into an uncovered interest “arbitrage”
+- In an uncovered position, rather than locking in a forward rate today, you take your chances and hope you’re right about your assessment of the future spot rate
 
 ![Alt text](assets\IMG84.PNG)
 
@@ -245,7 +264,7 @@ Japan, the Fisher Effect would be stated as:
   - Some forecasters believe that for the major floating currencies, foreign exchange markets are “efficient” and forward exchange rates are unbiased predictors of future exchange rates.
   - The forward exchange hypothesis states that the forward exchange rate, quoted at time t for delivery at time t+1, is equal to the expected value of the spot exchange rate at time t+1.
 
-![Alt text](assets\IMG86.PNG)
+$$F_{t, t+1} = E_{t}(S_{t+1})$$
 
 - The Forward rate is said to be an unbiased predictor. Unbiased 
 prediction means that the forward rate will, on average, 
@@ -255,7 +274,7 @@ error is zero.
 
 ### All parities example
 
-• Suppose expected inflation in Japan is 1% and expected inflation in the U.S. is 5%. The current spot exchange rate is ¥104.00/$ and the one-year forward rate is ¥100.00/$.
-• See that all of our parity conditions predict that the ¥ will appreciate 4% relative to the $ over the next year.
+- Suppose expected inflation in Japan is 1% and expected inflation in the U.S. is 5%. The current spot exchange rate is ¥104.00/$ and the one-year forward rate is ¥100.00/$.
+- See that all of our parity conditions predict that the ¥ will appreciate 4% relative to the $ over the next year.
 
 ![Alt text](assets\IMG87.PNG)
