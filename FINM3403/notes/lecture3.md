@@ -96,6 +96,8 @@ $\pi$ : the inflation rate of country A, B
 
 $$\frac{S^{A/B}_{t+1}}{S^{A/B}_{t}} = \frac{1+\pi_{A}}{1+\pi_{B}}$$
 
+**Exchange rate differential = inflation rate differential**
+
 $$\therefore \frac{S^{A/B}_{t+1}-S^{A/B}_{t}}{S^{A/B}_{t}} = \frac{\pi_{A}-\pi_{B}}{1+\pi_{B}} $$
 
 
@@ -107,7 +109,7 @@ $$\therefore \frac{S^{A/B}_{t+1}-S^{A/B}_{t}}{S^{A/B}_{t}} = \frac{\pi_{A}-\pi_{
 $$\frac{S_{t}-S_{t-1}}{S_{t-1}}=\frac{\pi_{A} - \pi_{B}}{1+\pi_{B}} = \frac{0.019-0.03}{1+0.03} = -0.010678 = -1.07\%$$
 
 
-- General implication of relative PP is that countries with high rates of inflation will see their currencies depreciate against those with low rates of inflation
+- General implication of relative PPP is that countries with high rates of inflation will see their currencies depreciate against those with low rates of inflation
 
 
 ![Alt text](assets\IMG67.PNG)
@@ -151,19 +153,20 @@ $$E = \text{1 + \% over-under valuation of denominator currency}$$
 
 ## Interest Rate Parity
 
-- Interest rate parity (IRP) is an arbitrage condition that provides the linkage between the foreign exchange markets and the international money markets.
+- Interest rate parity (IRP) is an arbitrage condition that provides the **linkage between the foreign exchange markets and the international money markets.**
 
 $$\frac{F^{A/B}_{t, t+1}}{S^{A/B}_{t}} = \frac{1+i_{A}}{1+i_{B}}$$
-
-$$\therefore \frac{F^{A/B}_{t, t+1}}{S^{A/B}_{t}} - 1 = \frac{1 + i_{A}}{1 + i_{B}} - 1$$
 AND
-$$\frac{F^{A/B}_{t, t+1} - S^{A/B}_{t}}{S^{A/B}_{t}} = \frac{i_{A} - i_{B}}{1+i_{B}}$$
+$$\frac{F^{A/B}_{t, t+1}}{S^{A/B}_{t}} - 1 = \frac{1 + i_{A}}{1 + i_{B}} - 1$$
+
+**percentage forward premium = interest rate differential**
+$$\therefore  \frac{F^{A/B}_{t, t+1} - S^{A/B}_{t}}{S^{A/B}_{t}} = \frac{i_{A} - i_{B}}{1+i_{B}}$$
 
 
 - How does the market arrive at the bid forward exchange rates?
   - need current spot exchange rate, plus interest MM interest rate
   - subtract 1 from both sides, you have the percentage forward differential - way of presenting the forward rates
-  - RHS - inflation differential
+  - <u>RHS - inflation differential</u>
 
 - In general, the currency trading at a forward premium (discount) is the one from the country with the lower (higher) interest rate.
 
@@ -183,7 +186,6 @@ $$\frac{1}{S_{\$/CHF}}(1+ \frac{i_{CHF}}{4}) \cdot F_{3(\$ / CHF)}$$
 - Gattinara Corp will be indifferent between the two investment opportunities if
 
 $$ \$A(1+ \frac{i_{\$ A}}{4}) = \frac{1}{S_{\$/CHF}}(1+ \frac{i_{CHF}}{4}) \cdot F_{3(\$ / CHF)}$$
-
 
 - Basic idea: Two alternative ways to transform from currency A at time 0 to currency B at time 1 should earn the same return.
 - Thus, an AUS investor with $1 million to invest should be indifferent between holding dollar-denominated securities for 90 days earning 8.00% per annum and holding Swiss franc-denominated securities of similar risk and maturity earning 4.00% per annum, when “cover” against currency risk is obtained with a forward contract.
@@ -209,15 +211,17 @@ arbitrage (CIA) and occurs whenever IRP does NOT hold. CIA can involve the follo
 
 ![Alt text](assets\IMG76.PNG)
 
+
 ### Covered Interest Arbitrage
 
 - Covered interest arbitrage (CIA) should continue until interest rate parity is re-established, because the arbitrageurs are able to earn risk-free profits by repeating the cycle.
 - But their actions nudge the foreign exchange and money markets back toward equilibrium:
 
-1. Purchase of Pounds in the spot market and sale of  pounds in the forward market narrow the premium on forward pounds.
-2. The demand for pound-denominated securities causes the 
-pound interest rates to fall, while the higher level of borrowing 
-in Australia causes dollar interest rates to rise.
+1. Purchase of Pounds in the spot market and sale of pounds in the forward market narrow the premium on forward pounds.
+2. The **demand for pound-denominated securities causes the pound interest rates to fall**, **while the higher level of borrowing in Australia causes dollar interest rates to rise.**
+
+> - forward rates will changes, and interest rate will; push back to the parity condition 
+
 
 ![Alt text](assets\IMG77.PNG)
 
@@ -226,6 +230,12 @@ in Australia causes dollar interest rates to rise.
 - The Fisher effect (also called Fisher-closed) postulated by Irving Fisher states:
 $$(1+i) = (1+r) \cdot (1+\pi)$$
 $$i = r + \pi + r\pi$$
+
+$\pi$ - inflation
+
+$r$ - real interest rate
+
+$i$ - nominal interest rate
 
 
 This relation is often presented as a linear approximation stating that the nominal interest rate (i) is equal to a real interest rate (r) plus expected inflation ($\pi$)
@@ -241,6 +251,9 @@ Japan, the Fisher Effect would be stated as:
 
 - The International Fisher Effect (also called Fisher-open or Uncovered Interest rate parity condition) states that the spot exchange rate should change to adjust for differences in interest rates between two countries:
 
+> - Expected future spot rate
+> - assume the real interest rate should be the same between two countries
+
 ![Alt text](assets\IMG80.PNG)
 
 ![Alt text](assets\IMG81.PNG)
@@ -249,28 +262,29 @@ Japan, the Fisher Effect would be stated as:
 
 ![Alt text](assets\IMG83.PNG)
 
+> - want to forecast the exchange rate, look at the interest rates
+> - IRP forward rates, spot rates and interest rates
+
 ### Uncovered Interest Rate Parity
 
 - Suppose you forecast the spot rate next year to remain unchanged at 120 ¥/$
 - Even though you cannot make a risk-less profit through CIA, given your estimation of the future spot rate, you can enter into an uncovered interest “arbitrage”
 - In an uncovered position, rather than locking in a forward rate today, you take your chances and hope you’re right about your assessment of the future spot rate
 
+> - Predicted spot rate of ¥/$ is higher than the relative interest rates, therefore borrow yen
+
 ![Alt text](assets\IMG84.PNG)
 
 ![Alt text](assets\IMG85.PNG)
 
-
-- The Forward Rate as an Unbiased Predictor of the Future Spot Rate
-  - Some forecasters believe that for the major floating currencies, foreign exchange markets are “efficient” and forward exchange rates are unbiased predictors of future exchange rates.
-  - The forward exchange hypothesis states that the forward exchange rate, quoted at time t for delivery at time t+1, is equal to the expected value of the spot exchange rate at time t+1.
+### Forward Exchange Expectations
+- **The Forward Rate as an Unbiased Predictor of the Future Spot Rate**
+  - Some forecasters believe that for the major floating currencies, foreign exchange markets are “efficient” and forward exchange rates are <u>unbiased</u> predictors of future exchange rates.
+  - The **forward exchange hypothesis** states that the forward exchange rate, quoted at time t for delivery at time t+1, is equal to the expected value of the spot exchange rate at time t+1.
 
 $$F_{t, t+1} = E_{t}(S_{t+1})$$
 
-- The Forward rate is said to be an unbiased predictor. Unbiased 
-prediction means that the forward rate will, on average, 
-overestimate and underestimate the actual future spot rate in 
-equal frequency and degree. It implies that the expected forecast 
-error is zero.
+- The Forward rate is said to be an unbiased predictor. Unbiased prediction means that the forward rate will, on average, overestimate and underestimate the actual future spot rate in equal frequency and degree. It implies that the expected forecast error is zero.
 
 ### All parities example
 

@@ -24,45 +24,45 @@
 
 </header>
 <main>
-<h1 id="tutorial-week-4-22-mapping">Tutorial week 4, 2.2: Mapping</h1>
-<p><strong>Please download <em>File 2.2. Mapping - Worksheet.pdf</em> from module 2 for todays lesson.</strong></p>
-<p>Syntax pointers:</p>
-<p><strong>For a relation</strong></p>
-<ul>
-<li>Entity, followed by attributes
-<ul>
-<li>first attribute should be primary key</li>
-<li>primary key must be underlined</li>
+<h1 dir="auto" id="tutorial-week-4-22-mapping">Tutorial week 4, 2.2: Mapping</h1>
+<p dir="auto"><strong>Please download <em>File 2.2. Mapping - Worksheet.pdf</em> from module 2 for todays lesson.</strong></p>
+<p dir="auto">Syntax pointers:</p>
+<p dir="auto"><strong>For a relation</strong></p>
+<ul dir="auto">
+<li dir="auto">Entity, followed by attributes
+<ul dir="auto">
+<li dir="auto">first attribute should be primary key</li>
+<li dir="auto">primary key must be underlined</li>
 </ul>
 </li>
-<li>foreign key references should follow immediately after the relation</li>
+<li dir="auto">foreign key references should follow immediately after the relation</li>
 </ul>
-<blockquote>
-<h4 id="example">Example</h4>
-<p>Customer [<u> ID </u>, Name, Address, email, phone, receiptID]</p>
-<p>Customer.receiptID references Receipt.ID</p>
+<blockquote dir="auto">
+<h4 dir="auto" id="example">Example</h4>
+<p dir="auto">Customer [<u> ID </u>, Name, Address, email, phone, receiptID]</p>
+<p dir="auto">Customer.receiptID references Receipt.ID</p>
 </blockquote>
-<h3 id="a1">A.1</h3>
-<p><img src="assets/IMG55.PNG" alt="alt text"></p>
-<blockquote></blockquote>
-<h3 id="b2">B.2</h3>
-<p><img src="assets/IMG56.PNG" alt="alt text"></p>
-<blockquote></blockquote>
-<h3 id="c1">C.1</h3>
-<p><img src="assets/IMG57.PNG" alt="alt text"></p>
-<blockquote></blockquote>
-<h3 id="section-d-analysis-and-application">Section D: Analysis and Application</h3>
-<p><img src="assets/IMG58.PNG" alt="alt text"></p>
-<p><strong>D.1 Which of the following statement(s) is correct based on the ER diagram?</strong></p>
-<ul>
-<li>A) All Parts stored in the system will have a BatchNo.</li>
-<li>B) A Part may be a ManufacturedPart or a PurchasedPart or neither.</li>
-<li>C) If a Part is already a ManufacturedPart then it cannot be a PurchasedPart.</li>
-<li>D) A Part must be a ManufacturedPart or a PurchasedPart or both</li>
+<h3 dir="auto" id="a1">A.1</h3>
+<p dir="auto"><img src="assets\IMG55.PNG" alt="alt text" data-src="assets/IMG55.PNG"></p>
+<blockquote dir="auto"></blockquote>
+<h3 dir="auto" id="b2">B.2</h3>
+<p dir="auto"><img src="assets\IMG56.PNG" alt="alt text" data-src="assets/IMG56.PNG"></p>
+<blockquote dir="auto"></blockquote>
+<h3 dir="auto" id="c1">C.1</h3>
+<p dir="auto"><img src="assets\IMG57.PNG" alt="alt text" data-src="assets/IMG57.PNG"></p>
+<blockquote dir="auto"></blockquote>
+<h3 dir="auto" id="section-d-analysis-and-application">Section D: Analysis and Application</h3>
+<p dir="auto"><img src="assets\IMG58.PNG" alt="alt text" data-src="assets/IMG58.PNG"></p>
+<p dir="auto"><strong>D.1 Which of the following statement(s) is correct based on the ER diagram?</strong></p>
+<ul dir="auto">
+<li dir="auto">A) All Parts stored in the system will have a BatchNo.</li>
+<li dir="auto">B) A Part may be a ManufacturedPart or a PurchasedPart or neither.</li>
+<li dir="auto">C) If a Part is already a ManufacturedPart then it cannot be a PurchasedPart.</li>
+<li dir="auto">D) A Part must be a ManufacturedPart or a PurchasedPart or both</li>
 </ul>
-<p><strong>D.2 Consider the following addition to the ER diagram: What would be the correct relational mapping for METALPART?</strong></p>
-<p><img src="assets/IMG59.PNG" alt="alt text"></p>
-<pre><code>A) METALPART[partNo]
+<p dir="auto"><strong>D.2 Consider the following addition to the ER diagram: What would be the correct relational mapping for METALPART?</strong></p>
+<p dir="auto"><img src="assets\IMG59.PNG" alt="alt text" data-src="assets/IMG59.PNG"></p>
+<pre><code dir="auto">A) METALPART[partNo]
 METALPART.partNo references Part.partNo
 
 B) METALPART[partNo, batchNo, manufactureDate, drawingNo]

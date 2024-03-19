@@ -177,7 +177,11 @@ $$\frac{Euro/U\$}{C/U\$} = EURO 1.5044/C\$$$
 ![Alt text](assets\IMG10.PNG)
 
 ### Forward premium/Discount
-- Forward premium (discount) exists when a currency purchases more (less) of the 2nd currency in the future than it does presently.
+- A forward premium exists when a currency purchases more of the second currency than it does previously
+  - <u> This implies that the base currency appreciates </u>
+- A forward discount exists when a currency purchases less of the second currency than it does previously
+  - <u> This implies that the base currency depreciates</u>
+
 ![Alt text](assets\IMG7.PNG)
 
 ### % change in exchange rates
