@@ -100,7 +100,9 @@ $$\frac{S^{A/B}_{t+1}}{S^{A/B}_{t}} = \frac{1+\pi_{A}}{1+\pi_{B}}$$
 
 $$\therefore \frac{S^{A/B}_{t+1}-S^{A/B}_{t}}{S^{A/B}_{t}} = \frac{\pi_{A}-\pi_{B}}{1+\pi_{B}} $$
 
+**Approximate inflation rate differential**
 
+$$\pi_{A}-\pi_{B}$$
 
 ### Relative PPP
  Given inflation rates of 1.9% and 3% in Australia and the UK respectively, what is the prediction of PPP with regards to $A/GBP exchange rate?

@@ -61,16 +61,16 @@ Direct quotation
 
 
 0.8000 - 0.8050 GBP/USD - London
-1/1.2500 = 0.88888 > 0.8050
+1.2422-1.2500 USD/GBP
 -- sell USD here
 ```
 
 + buy GBP in london
-  + 1M * 0.8 = 800,000
+  + 1M * 0.8 = 800,000 GBP
 + sell pound in NY
   + 800,000 * 1/ 0.8000 = $1M
 
-13. The \$ / DM exchange rate is DM1 = $.35 and the DM/FF exchange rate is FF1 = DM.31. What is the FF /$ exchange rate?
+13. The \$ / DM exchange rate is DM1 =\$.35 and the DM/FF exchange rate is FF1 = DM.31. What is the FF/\$ exchange rate?
 - (a) 3.226 French francs per dollar
 - (b) 1.129 French francs per dollar
 - (c) 0.886 French francs per dollar
@@ -83,8 +83,8 @@ Direct quotation
 - (a) 4.17% premium
 - (b) 18.46% discount
 - (c) 11.00% discount
-- (d) 12.36% premium
-$$ \frac{F_{\$/JPY}-S_{\$/JPY}}{S_{\$/JPY}} = [\frac{1+ i(\$)}{1+i(Yen)}] - 1 = [\frac{1+8.5\%}{1+6\%}]-1 = 12.36%$$
+- **(d) 12.36% premium**
+$$ \frac{F_{\$/JPY}-S_{\$/JPY}}{S_{\$/JPY}} = [\frac{1+ i(\$)}{1+i(Yen)}] - 1 = [\frac{1+8.5\%}{1+6\%}]^{5}-1 = 12.36%$$
 
 $$FV = PV(1+r)^{n}$$
 
