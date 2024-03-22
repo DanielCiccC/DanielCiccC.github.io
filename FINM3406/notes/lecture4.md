@@ -309,7 +309,7 @@ NOTE:
 
 > Notes:
 > - Common in rural valuations
->   - care about how many cows you can have oon your farm
+>   - care about how many cows you can have on your farm
 > - valuation based upon production capability
 >   - aged care facilities, beds are licenced by the government
 >   - child care centres based upon number of licences in the building

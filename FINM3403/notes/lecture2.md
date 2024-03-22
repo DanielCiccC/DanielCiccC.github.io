@@ -31,10 +31,13 @@ Free floating system
 ### Currency Board: Hong Kong
 - Central bank of hong Kong stands to buy any Forex to maintain their price
 - defend their par value
+
 ![Alt text](assets\IMG44.PNG)
 
 
 Since 1982, Hong Kong dollar has remained a very stable exchange rate
+
+
 ![Alt text](assets\IMG45.PNG)
 
 ### Fixed exchange rate system

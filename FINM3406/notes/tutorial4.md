@@ -3,13 +3,13 @@
 
 ### What is real estate valuation and why is it important?
 - Real estate valuation is the process of determining the market value of a property
-- A valuation represents the "opinion" of a qualified proeprty valuer about what a property is worth based upon the type of valuation and instructions given
+- A valuation represents the "opinion" of a qualified property valuer about what a property is worth based upon the type of valuation and instructions given
 - Valuations are important for property owners, buyers, lenders and investors to understand the value of a property
 - It affects decisions about buying, selling, financing and investing in real estate.
 
-NOTE:
-- size depending, location are factors for property valuation
-- 
+> NOTE:
+> - size depending, location are factors for property valuation
+
 
 ### Q2. How is market value for real estate defined
 - Market value is the estimated amount that a property would sell for in an open and competitive real estate market
@@ -46,7 +46,7 @@ NOTE:
   - Discounted cash flows method
 
 
-### Q5: How does the sale comparison approach to real estate valuation works and what types of properties is it typically used for>
+### Q5: How does the sale comparison approach to real estate valuation works and what types of properties is it typically used for?
 - The sale comparison or direct comparisons or market comparison approach real estate valuation
   - Works by comparing the subject property to recently sold properties that are similar in location, size condition and other key factors
   - Typically used for residential properties that are not valued based upon their income producing potential
@@ -67,7 +67,7 @@ NOTE:
   - Plus the estimated current market rent of any space vacant at the time
   - The passing rent may not not be the same as current market rent - especially when leases have been in place for some time
 - Effective Gross Income
-  - The anticipated income from all operations of real property adjusted fo vacancy and credit losses
+  - The anticipated income from all operations of real property adjusted for vacancy and credit losses
   - A credit loss would be represent by a tenant in default of rent payment
 - Net Operating Income
   - the actual or anticipated net income remaining after deducting all operating expenses from effective gross income
@@ -80,7 +80,7 @@ Market value = NOI / Cap rate
 
 
 ### Q8 common challenges that arise during the real estate valuation process
-- incomplete and inaccurate days
+- incomplete and inaccurate data
 - subjective judgments about property condition or quality
 - changes in market conditions over time
 

@@ -82,3 +82,15 @@ $$ CA = \text{Savings - Investment} = \text{Net foreign investment}$$
 > 
 > - If Australia is running of CA surplus and its domestic residents are NOT acquiring foreign assets, then it must be that the RBA is acquiring foreign assets (i.e., there is a drawing down of the central bank’s reserve holdings)
 > - If the BOP is negative, then ORT is positive with the RBA selling FOREX reserves and buying domestic currency.
+
+
+CA and KA balances
+
+**Credit (+)** | **Debit (-)** | **Account**
+| --- | --- | ---
+Export of goods and services | Import of goods and services | CA
+Income received (dividends or interest) | Income paid | CA
+Unilateral transfer received | Unilateral transfer paid | CA
+Increasing domestic asset owned by foreigner | Increasing foreign assets owned by home residents (giving out a loan, e.g.) | KA
+Decreasing foreign assets owned by home residents | Increasing foreign assets owned by homes residents | KA
+Increase in liabilities (to foreign country) | Decrease in liabilities (to foreign country) | KA

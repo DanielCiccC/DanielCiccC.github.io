@@ -3,10 +3,10 @@
 ### Spot market
 The	spot market	involves almost	immediate purchase or sale of foreign exchange
  Quoted in direct or indirect terms
- - Direct: Home currency per unit of foreign currency (FC)AUD)
+ - Direct: Home currency per unit of foreign currency (FC)
  - Indirect: Foreign currency (FC) per unit of Home currency
 
-$S(j/k)$ will refere ot the price of one unit of currency $k$ in terms of currency $j$.
+$S(j/k)$ will refer to the price of one unit of currency $k$ in terms of currency $j$.
 
 **Cross-exchange rate** is an exchange between a currency pair where neither currency is the U.S. dollar
 
@@ -60,3 +60,10 @@ three-month forward premium is 0.0265
 - When the second known pair is smaller than the first, the dealer 'knows' the forward points are subtracted from the spot bid and ask price
 - 
 ![Alt text](assets\IMG90.PNG)
+
+
+### Over/under valuation:
+
+| **Expected vs actual** | **Outcome** | **Reason** | Arbitrage profit
+| --- | --- | --- | ---
+Expected exchange rate > actual exchange rate | - base currency is undervalued <br> - Quotation currency is over-valued | - You could be potentially earning more of the quotation currency given 1 unit of BC | - Buy the undervalued base currency <br> - Borrow/Sell the overvalued quotation currency 

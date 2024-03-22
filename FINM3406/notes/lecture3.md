@@ -49,7 +49,7 @@
   - Diversification is key for the protection against unsystematic risk 
 
 ### Property Risk
-﻿
+
 - Risks that affect the property investment but not the market as a whole. May damage location, buildings and tenants.
 
 Risks:
@@ -142,8 +142,7 @@ Gearing | 0% to 30% for ‘Core’ Funds e.g. Target gearing of 15% to 25% with 
   - Predominantly AU superannuation funds or foreign pension and sovereign wealth funds
   - May include Ultra High Net Worth Individuals
 
-- Each trust tends to have a specific strategy or mandate to invest within a 
-particular sub sector of the real estate market and takes two forms:
+- Each trust tends to have a specific strategy or mandate to invest within a particular sub sector of the real estate market and takes two forms:
   - Open-ended vehicles:
     - No fixed life, target ‘core’ real estate assets across industrial, retail and office sectors
   - Closed-end fixed-life vehicles:
@@ -402,10 +401,10 @@ portfolio.
   - Given two assets offer the same expected return, investors will prefer the less risky one 
   - Investors will accept increased risk if compensated by higher expected returns
 
-NOTE:
-- balancing real estate portfolios
-- assets with different risks and returns, when aggregating them you are overall mitigating aggregate risk
-- By balancing multiple assets with different risk profiles, you overall have a better risk portfolio and better risk management
+> NOTE:
+> - balancing real estate portfolios
+> - assets with different risks and returns, when aggregating them you are overall mitigating aggregate risk
+> - By balancing multiple assets with different risk profiles, you overall have a better risk portfolio and better risk management
 
 
 ### Asset Returns
@@ -513,16 +512,15 @@ Typical Expression of Interest process (can be over 12 months)
  - Initial Pricing of Asset based on Financial Pack - Budget, Outgoings recovery model, Tenancy Schedule 
  - Initial review of documents provided in data room
  - Multiple pricing scenarios and sensitivity analysis
-   - not uncommon to pay $50-150 for an unsuccessful property purchase
+   - not uncommon to pay $50-150K for an unsuccessful property purchase
 2. Engage Consultants
  - Usually only applicable in complicated transactions such as large scale retail for a market / trade area analysis
-   s
 3. First Round Bids
   - Submission of First Round Bids to Agents
   - Includes price and terms
     - i.e. $80,500,000, subject to FIRB Approval, subject to Board 
 Approval, 60 day settlement, subject to Due Diligence period of 4 weeks etc etc
-- NOTE: look at them, how compliant are they to community objective, etc. Aligns to policy objective to what the seller has
+- NOTE: look at them, how compliant are they to community objective, etc. Aligns to policy objective to what the seller has outlined
 4. Second Round Bids
   - Shortlisted parties (usually 3) are invited to provide a second round bid
   - Usually a higher/ more competitive bid based on sensitivity analysis, market assessment undertaken throughout first round bids and assumption clarification

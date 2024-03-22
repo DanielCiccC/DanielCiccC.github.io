@@ -18,15 +18,13 @@ Thinking about real estate and a difference framework
   - Took land where they saw fit. Planted a flag and called it a colony
   - Any indigenous legal system was completely replaced.
   - Historical quirk - the way in which nations expanded their territory. If you had a war with a country and won in, there were rules that applied as to how the laws changed. It mattered how you acquired territory as to the laws that prevailed.
-  - when NSW was colonised
 - Capt. Phillip became governor of New South Wales, (NSW) (which at that time included Queensland and Victoria) and established a settlement.
   
 ![Alt text](assets\IMG2.PNG)
 
 
 - Under English law, following the Norman invasion of 1066, all property was vested in the Crown.
-- Under the feudal system all lend was held from Crown various forms of service were required of the lords who 
-occupied the land these included military, spiritual and socage (payment) and system of Subinfeudation. 
+- Under the feudal system all lend was held from Crown various forms of service were required of the lords who occupied the land these included military, spiritual and socage (payment) and system of Subinfeudation. 
   - provide crops, food, labour and military support
   - Or socage (payment) to the king
 - The Statute of Quia Emptores 1290 ended Subinfeudation as land owners were able to alienate by substitute without consent of the overlord, thus forming the basis upon which all estates in land are based. 
@@ -53,7 +51,7 @@ Each state has their own property law frameworks
 All land is held by way of grant from the Crown (or in modern language from the State)
   - Crown gives you the land but still has the right to take it back
 
-- Doctrine of Estates (temporal)
+- Doctrine of Estates (temporal) (estates in possession)
 
 All land tenure gives the owner the right of possession for specific 
 duration (an estate can be a future interest – ie vested vs contingent)
@@ -161,7 +159,7 @@ Rights and Obligations under Leasehold Tenure
 
 - International law of the 18th century recognised four ways of acquiring sovereignty over a new territory: by conquest, cession, occupation or annexation. Settlement in 1788 was regarded as being akin to occupation of uninhabited lands (not really true though).
 - In 1992 the High Court decision in Mabo v Queensland rejected the view that sovereignty conferred absolute beneficial ownership of all land on the Crown and held the Crown acquired only a radical title to all land.
-  - NOTE: rights it  give are the rights that existed before colonisation
+  - NOTE: rights it give are the rights that existed before colonisation
   - continual connection with the culture, show what the culture was.
     - not transferable, 
 
@@ -190,7 +188,9 @@ Rights and Obligations under Leasehold Tenure
 - Indirect property investment provides greater liquidity than direct property investment, as shares in a REIT or mutual fund can be easily bought and sold on a stock exchange
 
 ## CORPORATE REAL ESTATE & INVESTMENT REAL ESTATE
+**Corporate Property**
 - Business space, corporate statement. Just need to make as much money as possible
+
 ![Alt text](assets\IMG4.PNG)
 
 ### Real Estate – Space Market
@@ -221,9 +221,9 @@ The capital and space markets are driven by different factors but are linked by 
 ![Alt text](assets\IMG5.PNG)
 
 Three key features of income producing (investment) properties:
-1.Location
-2.Buildings
-3.Tenants
+1. Location
+2. Buildings
+3. Tenants
 
 ### Location
 - At the city or regional level, the elements of the location to investigate are the strength of the economic base and demographic features

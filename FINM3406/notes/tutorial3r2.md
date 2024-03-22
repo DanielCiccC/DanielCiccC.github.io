@@ -35,4 +35,19 @@ less - net assets is 491.2 compared to market cap 344M
 
 ### What are your general observations about REP as a form of property investment?
 
+- Why is the market cap lrss than the value of the assets
+- What has the price per share/unit performance looked like over the last year  (i.e. high of 0.98 and low of 0.66)
+- How liquid is the investment 
 
+
+## Activity 2
+### In your opinion (without thinking about property rights, just your gut feeling), who do you think is in the right and who is in the wrong? Why?
+
+
+
+### How would you think about this dispute in relation to concept of property as a "bundle of rights" and does that change your thinking about who is right and who is wrong?
+
+
+### What does a dispute like this mean for real estate in general as an investment asset class? 
+- UNits and apartments are slightly different to other freehold property such as a house and land in that they have a Body Corporate structure which owns the property and sets rules that apply to ownership of units in that building
+- Historic attempts to make rules to ban smoking on private balconies by body corp has been thrown out by courts (as smoking is not illegal and it has been seen as an overreach by the body corporate is taking away the rights of the owner)
