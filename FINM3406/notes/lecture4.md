@@ -447,7 +447,7 @@ $$ i = \frac{NI}{CV} $$
 > Parking          |\$180,000 (50 carparks x \$300 pcm x12 months) 
 > Naming Rights    |           $10,000
 > Signage Rights   |           $15,000 
-> Potential Gross Income|     $1,955,000
+> **Potential Gross Income**|     $1,955,000
 > Less Vacancy Allowance|           $87,500  (5% of rent)
 > Effective Gross Income|      $1,867,500
 > Less Outgoings       |  $500,000  ($100/m2 x 5,000m2)

@@ -53,8 +53,7 @@ All land is held by way of grant from the Crown (or in modern language from the 
 
 - Doctrine of Estates (temporal) (estates in possession)
 
-All land tenure gives the owner the right of possession for specific 
-duration (an estate can be a future interest – ie vested vs contingent)
+All land tenure gives the owner the right of possession for specific duration (an estate can be a future interest – ie vested vs contingent)
   - Freehold – uncertain duration
     - Fee simple (akin to absolute ownership)
     - Fee tail (historical – inheritance limited to certain descendants)
