@@ -66,4 +66,4 @@ three-month forward premium is 0.0265
 
 | **Expected vs actual** | **Outcome** | **Reason** | Arbitrage profit
 | --- | --- | --- | ---
-Expected exchange rate > actual exchange rate | - base currency is undervalued <br> - Quotation currency is over-valued | - You could be potentially earning more of the quotation currency given 1 unit of BC | - Buy the undervalued base currency <br> - Borrow/Sell the overvalued quotation currency 
+Expected exchange rate (QC/BC) > actual exchange rate | - base currency is undervalued <br> - Quotation currency is over-valued | - You could be potentially earning more of the quotation currency given 1 unit of BC | - Buy the undervalued base currency <br> - Borrow/Sell the overvalued quotation currency 

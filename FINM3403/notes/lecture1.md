@@ -78,7 +78,7 @@ base currency (the first currency in the pair), and quote currency (the second).
   - American & European terms are direct and indirect quotes relative to the US dollar (USD). The quote in the previous slide is in European terms.
 
 -  Note that in all cases, the reciprocal of a direct quote is an indirect quote and vice-versa.
--  
+
 
 ### Example, AUDCHF
 $$\text{AUDCHF} \; \; \; .5699-0.5700*$$
@@ -88,7 +88,7 @@ If AUD is local currency, this would be an indirect quote
 
 - Cross-rate is an exchange rate that does NOT involve the USD
 -  Explain the following quotes:
--  $\text{AUDCHF}_{bid} = 0.5699$ the amount of AUD the **bank** would buy from you in excahnge for 1 CHF
+-  $\text{AUDCHF}_{bid} = 0.5699$ the amount of AUD the **bank** would buy from you in exchange for 1 CHF
 -  $\text{AUDCHF}_{ask} = 0.5700$ the amount of AUD the **bank** would sell to you in exchange for 1 CHF
 
 - Bid and Ask prices mixed with alternative quotations methods can lead to confusion. Try to remember:
