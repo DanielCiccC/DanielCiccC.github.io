@@ -474,7 +474,7 @@ $$r_{p}=(w_{1}r_{1})+(w_{2}r_{2})+...$$
 
 ![alt text](assets\IMG14.PNG)
 
-### Acquisition and Disposal process
+## Acquisition and Disposal process
 - Direct or indirect ownership decision
 - Timing – what stage of the property cycle do you buy into?
 - Asset physical characteristics

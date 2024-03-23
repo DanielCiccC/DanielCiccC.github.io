@@ -91,6 +91,6 @@ CA and KA balances
 Export of goods and services | Import of goods and services | CA
 Income received (dividends or interest) | Income paid | CA
 Unilateral transfer received | Unilateral transfer paid | CA
-Increasing domestic asset owned by foreigner | Increasing foreign assets owned by home residents (giving out a loan, e.g.) | KA
-Decreasing foreign assets owned by home residents | Increasing foreign assets owned by homes residents | KA
+Increasing domestic asset owned by foreigner | Decreasing domestic assets owned by foreigners  | KA
+Decreasing foreign assets owned by home residents | Increasing foreign assets owned by home residents (giving out a loan, e.g.) | KA
 Increase in liabilities (to foreign country) | Decrease in liabilities (to foreign country) | KA

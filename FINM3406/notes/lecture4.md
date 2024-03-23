@@ -343,8 +343,7 @@ property held freehold in fee simple which are considered to be enjoyed in perpe
 - Note the Cap Rate is a market derived discount rate BUT is different from discount rate applied in a Discount Cash Flow.
 
 ### Capitalisation Rate – Years Purchase
-- An alternate way of explaining the relationship between net income and 
-property value is the number of years needed to buy the property. 
+- An alternate way of explaining the relationship between net income and property value is the number of years needed to buy the property. 
 - Years Purchase is the reciprocal of the capitalisation rate:
 
 $$\frac{1}{\text{Capitalisation Rate}} = \text{Years Purchase}$$
