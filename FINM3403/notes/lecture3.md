@@ -8,7 +8,7 @@ deal with these fundamental issues:
   - What, at least theoretically, is the “proper” exchange rate?
     - given the interest rate and inflation at a point in time
 - Our approach to answering these questions and more is to describe the economic fundamentals of international finance, known as parity conditions.
-  - Use back on the envelope conditions to find where the exchange rate shp=ould be heading
+  - Use back on the envelope conditions to find where the exchange rate should be heading
 
 ### Parity conditions
 - Parity Conditions provide an intuitive explanation of the movement of prices and interest rates in different markets in relation to exchange rates. 
