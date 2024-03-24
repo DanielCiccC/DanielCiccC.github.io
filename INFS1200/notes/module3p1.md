@@ -90,7 +90,7 @@ Selection (WHERE clause)
 | All  | ``=``, ``<>`` | ``ID <> 324``, ``price = 42.30``
 | All | ``<``, ``>`` | ``ID > 324``, ``price < 42.30``
 | NVARCHAR() only | ``=`` | ``name = 'Mary'`` will select all the tuples with exactly the name 'Mary'
-| NVARCHAR() | ``LIKE``, ``NOT LIKE`` | ``name LIKE '%Mary%'`` will select all the tuples substrings containing the name 'Mary', such as 'Mary-Ann' or 'Maryam' e.g.
+| NVARCHAR() only | ``LIKE``, ``NOT LIKE`` | ``name LIKE '%Mary%'`` will select all the tuples substrings containing the name 'Mary', such as 'Mary-Ann' or 'Maryam' e.g.
 | All | ``IN`` | ``name IN ('Mary', 'John', 'Steve')`` acts as a ternary OR operation
 | All | ``BETWEEN`` | ``salary BETWEEN 10000 AND 30000``
 | All | ``IS`` | ``name IS NULL`` acts as a ternary OR operation

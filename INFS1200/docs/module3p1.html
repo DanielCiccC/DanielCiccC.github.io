@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
-<meta name="description" content="undefined - microjam page">
+<meta name="description" content="module3p1 - microjam page">
 
 
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
 
-<title>undefined</title>
+<title>module3p1</title>
 </head>
 <body id="top">
 <header>
@@ -56,12 +56,12 @@ file structures and access paths (indexes)</li>
 <tr dir="auto">
 <td>CREATE TABLE</td>
 <td>- statement creates a new relation, by specifying its <strong>name</strong>, <strong>attributes</strong> and <strong>constraints</strong>. <br> - The key, entity and referential integrity constraints are specified within the statement after the attributes have been declared.</td>
-<td><img src="image-1.png" alt="alt text" data-src="image-1.png"></td>
+<td><img src="assets\IMG60.PNG" alt="alt text" data-src="assets/IMG60.PNG"></td>
 </tr>
 <tr dir="auto">
 <td>ALTER TABLE</td>
 <td>- The definition of a table created using the CREATE TABLE command can be changed using the ALTER TABLE command.</td>
-<td><img src="image-2.png" alt="alt text" data-src="image-2.png"></td>
+<td><img src="assets\IMG61.PNG" alt="alt text" data-src="assets/IMG61.PNG"></td>
 </tr>
 </tbody>
 </table>
@@ -125,22 +125,22 @@ CASCADE <span class="hljs-comment">-- delete all the tuples which refer to it</s
 <tr dir="auto">
 <td><a href="https://www.w3schools.com/sql/sql_insert.asp">INSERT</a></td>
 <td>New tuples may be inserted. <br> <br> - Not all the attributes in the table have to be listed. <br> - Values are listed in the <em>same order</em> as the attributes were specified in the CREATE TABLE command</td>
-<td><img src="image-4.png" alt="alt text" data-src="image-4.png"></td>
+<td><img src="assets\IMG62.PNG" alt="alt text" data-src="assets/IMG62.PNG"></td>
 </tr>
 <tr dir="auto">
 <td><a href="https://www.w3schools.com/sql/sql_delete.asp">DELETE</a></td>
 <td>used to remove existing tuples from a relation. <br> <br> - A single DELETE statement may delete zero, one, several or all tuples from a table <br> - Tuples are explicitly deleted from a single table</td>
-<td><img src="image-5.png" alt="alt text" data-src="image-5.png"></td>
+<td><img src="assets\IMG63.PNG" alt="alt text" data-src="assets/IMG63.PNG"></td>
 </tr>
 <tr dir="auto">
 <td><a href="https://www.w3schools.com/sql/sql_update.asp">UPDATE</a></td>
 <td>Used to modify attribute values of one or more selected tuples in a relation. <br> - Tuples are selected for update from a single table. <br> - Updating a primary key value may propagate to other tables</td>
-<td><img src="image-6.png" alt="alt text" data-src="image-6.png"></td>
+<td><img src="assets\IMG64.PNG" alt="alt text" data-src="assets/IMG64.PNG"></td>
 </tr>
 <tr dir="auto">
 <td><a href="https://www.w3schools.com/sql/sql_select.asp">SELECT</a></td>
 <td>Attributes of specific tuples, entire tuples or even entire relations may be retrieved <br> <br> In the SELECT statement, users specify what the result of the query should be, and the DBMS decides the operations and order of  execution, thus SQL queries are declarative</td>
-<td><img src="image-7.png" alt="alt text" data-src="image-7.png"></td>
+<td><img src="assets\IMG65.PNG" alt="alt text" data-src="assets/IMG65.PNG"></td>
 </tr>
 </tbody>
 </table>
@@ -194,7 +194,7 @@ Selection (WHERE clause)</p>
 <td><code>name = 'Mary'</code> will select all the tuples with exactly the name 'Mary'</td>
 </tr>
 <tr dir="auto">
-<td>NVARCHAR()</td>
+<td>NVARCHAR() only</td>
 <td><code>LIKE</code>, <code>NOT LIKE</code></td>
 <td><code>name LIKE '%Mary%'</code> will select all the tuples substrings containing the name 'Mary', such as 'Mary-Ann' or 'Maryam' e.g.</td>
 </tr>
