@@ -94,3 +94,5 @@ Selection (WHERE clause)
 | All | ``IN`` | ``name IN ('Mary', 'John', 'Steve')`` acts as a ternary OR operation
 | All | ``BETWEEN`` | ``salary BETWEEN 10000 AND 30000``
 | All | ``IS`` | ``name IS NULL`` acts as a ternary OR operation
+
+
