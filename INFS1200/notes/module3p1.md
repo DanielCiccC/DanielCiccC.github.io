@@ -5,7 +5,7 @@
 **Data Definition Language (DDL)**
 - Statements to define the database schema
 **Data Manipulation Language (DML)**
-- Statements to manipulate the Data
+- Statements to manipulate the
 **Data Control Language (DCL)**
 - Statements to specify transaction control, semantic integrity 
 (triggers and assertions), authorization and management of privileges
@@ -94,5 +94,3 @@ Selection (WHERE clause)
 | All | ``IN`` | ``name IN ('Mary', 'John', 'Steve')`` acts as a ternary OR operation
 | All | ``BETWEEN`` | ``salary BETWEEN 10000 AND 30000``
 | All | ``IS`` | ``name IS NULL`` acts as a ternary OR operation
-
-

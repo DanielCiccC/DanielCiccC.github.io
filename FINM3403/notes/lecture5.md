@@ -236,3 +236,69 @@ capital needs of foreign affiliates
 - Currency Risk Sharing
 - Cross-hedging
 - Currency diversification
+
+> Risk risk sharing - share the risk of unanticipated interest rate changes.
+> - If the exchange rate reaches the agreed band when a second contract may come into place
+> - Cross-hedging - use a second currency to hedge as long as the secondary currency is highly correlated
+>   - use forward contracts in that instance
+> - Currency Diversification
+>   - maintain so many currencies that their contracts will cancel out interest rate risk
+> - Leading and lagging
+
+### Why Hedge❖ Hedging is the taking of a position, either acquiring 
+- Hedging is the taking of a position, either acquiring a cash flow or an asset or a contract (including a forward contract) that will rise (fall) in value and offset a drop (rise) in value of an existing position. 
+- Hedging, therefore, protects the owner of the existing asset from loss (but it also eliminates any gain resulting from changes in exchange rates on the value of the exposure).  
+
+
+## Impact on Hedging on E(Cash flows)
+
+![alt text](assets\IMG106.PNG)
+
+Hedging reduces the variability of expected cash flows about the mean of the distribution.
+This reduction of distribution variance is a reduction of risk.
+> protect yourself by minimising the risk of extreme movements in exchange rates
+
+### Adjusted NPV View of the World
+- Reducing the uncertainty of future cash flows by 
+hedging is problematic
+
+![alt text](assets\IMG107.PNG)
+
+- If goal is to maximize shareholder value, then hedging 
+only makes sense if it INCREASES equity value
+
+> Adjusted NPV - add/subtract of the project's cash flow
+> - figure out what the value of the transaction will be
+> - In a world with taxes of frictions, you only participate in hedging if it increases the NPV of the transaction
+
+### Views of Hedging
+Is the reduction of variability of cash flows then sufficient 
+reason for currency risk management? 
+- Opponents of currency hedging commonly make the following arguments:
+  - Stockholders are much more capable of diversifying currency risk than the management of the firm. 
+  - Currency risk management does not add value to the firm, and it incurs costs (i.e., it is costly).
+  - Hedging might benefit corporate management more than shareholders. 
+  - Management’s motivation to reduce variability is sometimes driven by accounting reasons.
+
+> - Only risk that matters is idiosyncratic risk
+> - if the risk is systematic, it makes a lot of sense
+> - Hedging is expensive; margin calls etc.
+> - Argument is that investors should be hedging themselves
+> - If you don't hedge, potential to make huge losses
+>   - obvious when you make a loss - have to question the management's motivations
+
+
+### Proponents of Hedging
+- Proponents for currency hedging argue: 
+1. Risk Profile of Investments (Agency Costs)
+- Shareholders hold an option on the value of the firm and would prefer riskier projects.  
+  - Since, riskier projects reduce the value of bondholders’ claims, bondholders are likely to require compensation in the form of a higher returns.
+  -  If shareholders can credibly commit not to unduly increase risks, a lower cost of debt financing could result.
+- Additional sources of agency costs come from managers’ preference for less risky projects (job security).
+
+![alt text](assets\IMG108.PNG)
+
+> Agency costs will drive the decision
+> - transaction costs argument; cheaper for large investment company to hedge than retail investor
+
+
