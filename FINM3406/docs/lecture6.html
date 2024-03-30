@@ -1,0 +1,904 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-6---real-estate-financial-modelling">Lecture 6 - Real Estate Financial Modelling</h1>
+<h3 dir="auto" id="objectives">Objectives</h3>
+<ul dir="auto">
+<li dir="auto">Know when and how to use discounting and compounding calculations to assess the financial performance of real estate assets</li>
+<li dir="auto">Be able to prepare a basic DCF model for real estate assets that derives NPV &amp; IRR</li>
+<li dir="auto">Understand the application of the DCF model in analysing the financial performance of real estate assets and challenges associated with this model</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">When to use them and how you use them to assess financial assets</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="financial-modelling-mathematics">Financial Modelling Mathematics</h2>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Application</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Compounding</strong></th>
+<th><strong>Discounting</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>FV of $1</td>
+<td>Capital sum</td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><msup><mi>i</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">1+i^{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span class="mord mathnormal">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>PV of $1</td>
+<td>Capital sum</td>
+<td>Reciprocal of FV of $1</td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">(1+i)^{-n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0213em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span> or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">1/(1+i)^{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1/</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td>FV of $1pp</td>
+<td>Cash flow</td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mi>n</mi></msup><mtext>–</mtext><mn>1</mn><mo stretchy="false">]</mo><mi mathvariant="normal">/</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">[(1 + i)^{n} – 1]/i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mord">–1</span><span class="mclose">]</span><span class="mord">/</span><span class="mord mathnormal">i</span></span></span></span></td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>Sinking Fund Factor</td>
+<td>Cash flow</td>
+<td>Reciprocal of FV of $1pp</td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mi>n</mi></msup><mtext>–</mtext><mn>1</mn><mo stretchy="false">]</mo><mi mathvariant="normal">/</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">[(1 + i)^{n} – 1]/i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mord">–1</span><span class="mclose">]</span><span class="mord">/</span><span class="mord mathnormal">i</span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td>PV of $1pp</td>
+<td>Cash Flow</td>
+<td></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>−</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mi>n</mi></mrow></msup><mo stretchy="false">]</mo><mi mathvariant="normal">/</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">[1-(1+i)^{-n}]/i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0213em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mclose">]</span><span class="mord">/</span><span class="mord mathnormal">i</span></span></span></span></td>
+</tr>
+<tr dir="auto">
+<td>Mortgage Factor</td>
+<td>Cash Flow</td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi mathvariant="normal">/</mi><mo stretchy="false">[</mo><mn>1</mn><mo>−</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mi>n</mi></mrow></msup><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">i/[1-(1+i)^{-n}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mord">/</span><span class="mopen">[</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0213em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="compounding-vs-discounting">Compounding vs discounting</h3>
+<p dir="auto"><img src="image-13.png" alt="alt text" data-src="image-13.png"></p>
+<h3 dir="auto" id="1-the-future-value-of-1-fv">1) The future value of $1 (FV)</h3>
+<p dir="auto">Definition: The amount to which $1 will grow at a given rate of interest for a given period of time.</p>
+<ul dir="auto">
+<li dir="auto">This is derived using the basic compound interest formula</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>F</mi><mi>V</mi><mo>=</mo><mi>P</mi><mi>V</mi><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">FV = PV(1 + i)^{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">The formula will provide a factor for the compounding of one unit (or $1).</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Look at valuation of property, look at trends
+<ul dir="auto">
+<li dir="auto">'Am I likely to see this trend in the future?'</li>
+</ul>
+</li>
+<li dir="auto">Annual compound rate in terms of land value</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="2-the-present-value-of-1-pv">2) The Present Value of $1 (PV)</h3>
+<ul dir="auto">
+<li dir="auto">Definition: The amount that needs to be invested now,  at a given rate of interest, to grow to $1 at the end of a given period of time.</li>
+<li dir="auto">This is simply the reciprocal of compound interest.</li>
+<li dir="auto">It is the process of discounting a sum of money receivable in the future.</li>
+<li dir="auto">Due to the TVM (time value of money), the present value will almost always be less than the future value.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">How much do you need to invest today (at a given rate of interest) given the value in the future?</li>
+</ul>
+</blockquote>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mi>n</mi></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex"> PV = \frac{1}{(1+i)^{n}} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2574em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p dir="auto">PV = Present Value
+i = Discount rate
+N = number of periods</p>
+<p dir="auto">E.g. If we are discounting a specific amount, say $814.45, at a discount rate of 5% to be received in 10 years, then the calculation would be:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mn>814.45</mn><mo>×</mo><mfrac><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>0.05</mn><msup><mo stretchy="false">)</mo><mn>10</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">PV = 814.45 \times \frac{1}{(1+0.05)^{10}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">814.45</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.2574em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.05</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mfrac><mn>814.45</mn><mn>1.628894627</mn></mfrac></mrow><annotation encoding="application/x-tex"> PV = \frac{814.45}{1.628894627}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1.628894627</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">814.45</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mi mathvariant="normal">$</mi><mn>500</mn></mrow><annotation encoding="application/x-tex">PV = \$500 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">$500</span></span></span></span></span></p>
+<h3 dir="auto" id="3-the-future-value-of-1-per-period-pp">3) the Future Value of $1 per Period (PP)</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Definition: The amount to which a series of equal payments invested at regular intervals will grow to at a given interest rate over a given number of time periods. Assume the payments are made at the end of each period.</p>
+</li>
+<li dir="auto">
+<p dir="auto">This is also known as the FUTURE VALUE of an ANNUITY.</p>
+</li>
+<li dir="auto">
+<p dir="auto">An annuity is any sequence of equal periodic payments (with payments made at the end of the period in the example).</p>
+</li>
+</ul>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Period</strong></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Deposit</td>
+<td>0</td>
+<td>$1</td>
+<td>$1</td>
+<td>$1</td>
+<td>$1</td>
+</tr>
+</tbody>
+</table>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Example: What amount will a deposit of $1 at the end of
+each year over six years grow to at 12% per annum.</p>
+</li>
+<li dir="auto">
+<p dir="auto">We can calculate each of the future values separately using the FV formula, and aggregating the individual FV’s.</p>
+</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">[</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mi>n</mi></msup><mtext>–</mtext><mn>1</mn><mo stretchy="false">]</mo><mi mathvariant="normal">/</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">[(1 + i)^{n} – 1]/i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mord">–1</span><span class="mclose">]</span><span class="mord">/</span><span class="mord mathnormal">i</span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">[</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>0.12</mn><msup><mo stretchy="false">)</mo><mn>6</mn></msup><mtext>–</mtext><mn>1</mn><mo stretchy="false">]</mo><mi mathvariant="normal">/</mi><mn>0.12</mn></mrow><annotation encoding="application/x-tex">[(1 + 0.12)^{6} – 1]/0.12</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord">0.12</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span><span class="mord">–1</span><span class="mclose">]</span><span class="mord">/0.12</span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">$</mi><mn>8.115</mn></mrow><annotation encoding="application/x-tex">\$8.115
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">$8.115</span></span></span></span></span></p>
+<h3 dir="auto" id="4-the-annual-sinking-fund-factor">4) The Annual Sinking Fund Factor</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Definition: The amount that must be invested periodically (an annuity) to grow to a specific future  value at the end of a given period  of time at a given rate of compound interest.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Important role to ensure funds available for future projects</p>
+</li>
+<li dir="auto">
+<p dir="auto">This is the reciprocal of the FV of $1 pp formula. ie;</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>S</mi><mi>F</mi><mo>=</mo><mfrac><mi>i</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">ASF= \frac{i}{(1+i)^{n}-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.13889em;">SF</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2725em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3365em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+</li>
+<li dir="auto">
+<p dir="auto">This provides the factor that will grow to an amount of $1 at the end of the required period.</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">invest periodically to have an amount in the future</li>
+<li dir="auto">If you own a building, the base components - frame, structure last a long time
+<ul dir="auto">
+<li dir="auto">fixtures may not last as long</li>
+</ul>
+</li>
+<li dir="auto">need to figure how much money you need to spend and when for major capital repairs
+Sinking fund</li>
+<li dir="auto">part of body corporate fees, accrue funds for any major repairs
+<ul dir="auto">
+<li dir="auto">well-managed fund will put away (with interest) to be able to pay massive bills</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto">Example: $100,000 will be needed by the Body Corporate in 10 years time to replace the lift in an apartment block. It is expected that a fixed compound rate of 7.5% can be arranged. How much should the Body Corporate invest each year to ensure that sufficient funds will be available at the required time?</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>S</mi><mi>F</mi><mo>=</mo><mfrac><mi>i</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">ASF= \frac{i}{(1+i)^{n}-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.13889em;">SF</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2725em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3365em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>S</mi><mi>F</mi><mo>=</mo><mfrac><mn>0.075</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>0.075</mn><msup><mo stretchy="false">)</mo><mn>10</mn></msup><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">ASF= \frac{0.075}{(1+0.075)^{10}-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.13889em;">SF</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2574em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.075</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0.075</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>S</mi><mi>F</mi><mo>=</mo><mfrac><mn>0.075</mn><mrow><mn>2.06103</mn><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">ASF= \frac{0.075}{2.06103-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.13889em;">SF</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0908em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2.06103</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0.075</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>S</mi><mi>F</mi><mo>=</mo><mn>0.07069</mn></mrow><annotation encoding="application/x-tex">ASF= 0.07069</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.13889em;">SF</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.07069</span></span></span></span></span></p>
+</math>
+<p dir="auto">This is the ASF factor for $1, therefore to generate $100,000 in 10 years time, the annual amount to be invested will be $7,069.00.  ($100,000 x 0.07069)</p>
+<h3 dir="auto" id="5-the-present-value-of-1-per-period">5) The Present Value of $1 Per Period</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Definition: The present value of the right to receive an income of  $1 at the end of each year for a given number of years, discounted at a given rate of compound interest.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Here we are interested in the Present Value of each of a series of equal instalments over the given period of time.</p>
+</li>
+<li dir="auto">
+<p dir="auto">As for the formula for the FV of $1 per period, we can solve for the PV of each instalment, however, a simpler solution is to develop a formula that aggregates all of the PV’s.</p>
+</li>
+<li dir="auto">
+<p dir="auto">The discounting of a regular flow of payments (pv of $ per period)</p>
+</li>
+<li dir="auto">
+<p dir="auto">What is the PV of $1 pa discounted  at 10% over 5yrs?</p>
+</li>
+</ul>
+<p dir="auto"><img src="image-14.png" alt="alt text" data-src="image-14.png"></p>
+<p dir="auto">This cash flow can be present valued by the following formula:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>−</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mi>n</mi></mrow></msup></mrow><mi>i</mi></mfrac></mrow><annotation encoding="application/x-tex">PV = \frac{1-(1+i)^{-n}}{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1343em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4483em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">i</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>Years</th>
+<th>PV $1 @ 10.00%</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>5</td>
+<td>3.79</td>
+</tr>
+<tr dir="auto">
+<td>10</td>
+<td>6.105</td>
+</tr>
+<tr dir="auto">
+<td>50</td>
+<td>9.92</td>
+</tr>
+<tr dir="auto">
+<td>75</td>
+<td>9.992</td>
+</tr>
+<tr dir="auto">
+<td>100</td>
+<td>9.999</td>
+</tr>
+</tbody>
+</table>
+<p dir="auto"><strong>The Capitalisation Method</strong></p>
+<ul dir="auto">
+<li dir="auto">Income producing properties assessed based on the present value current and future income.</li>
+<li dir="auto">Capitalisation rates are deduced from market evidence.</li>
+<li dir="auto">Capitalisation method assumes
+<ul dir="auto">
+<li dir="auto">income consistent in perpetuity</li>
+<li dir="auto">risk profile of income remains constant</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><strong>Determinants of cap rates</strong></p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">opportunity cost of capital</p>
+</li>
+<li dir="auto">
+<p dir="auto">risk perceptions and preferences among investors considering space and capital market</p>
+</li>
+<li dir="auto">
+<p dir="auto">growth expectations</p>
+<ul dir="auto">
+<li dir="auto">rental cash flows</li>
+<li dir="auto">
+<blockquote dir="auto">
+<p dir="auto">good cash flow growths? Sustainable income?</p>
+</blockquote>
+</li>
+<li dir="auto">reversion price (capital gains)</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="6-mortgage-factor">6) Mortgage Factor</h3>
+<ul dir="auto">
+<li dir="auto">What is the repayment of $200,000 loan to be spread in equal instalments annually in arrears over 5 years assuming  an interest of 8% per annum (interest compounded annually)?</li>
+</ul>
+<p dir="auto">Instalment = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>200</mn><mo separator="true">,</mo><mn>000</mn><mo>∗</mo><mi>i</mi><mi mathvariant="normal">/</mi><mo stretchy="false">[</mo><mn>1</mn><mtext>–</mtext><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mi>n</mi></mrow></msup><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">200,000 	* i/[1 – (1 + i)^{-n}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">200</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">000</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mord">/</span><span class="mopen">[</span><span class="mord">1–</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0213em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mn>0.08</mn><mrow><mn>1</mn><mo>−</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>0.08</mn><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mn>5</mn></mrow></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{0.08}{1-(1+0.08)^{-5}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.2574em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.08</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0.08</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p dir="auto">Instalment = $50091.29</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">How much you have to pay in an amortising loan to repay principle over a period of time</li>
+<li dir="auto">What is the ratio of the total amount of money you pay to the principle?
+In this example,</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="discounted-cash-flows">DISCOUNTED CASH FLOWS</h2>
+<h3 dir="auto" id="discounted-cash-flow-dcf-analysis">Discounted Cash Flow (DCF) analysis</h3>
+<ul dir="auto">
+<li dir="auto">Discounted cash flow (DCF) analysis applied to commercial property
+The Direct Capitalisation method which has been covered in detail is the traditional tool for the Valuation of investment properties. You should all by now be totally conversant with the formula</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>C</mi><mi>V</mi><mo>=</mo><mfrac><mrow><mi>N</mi><mi>I</mi></mrow><mi>i</mi></mfrac></mrow><annotation encoding="application/x-tex">CV = \frac{NI}{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">i</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">This method relies on current and historical data.  However, investors typically look to the future to assess potential returns and the associated risks.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Traditional evaluation tool for investment properties</p>
+</blockquote>
+<h3 dir="auto" id="implicit-v-explicit-risk-assumptions">Implicit v Explicit Risk Assumptions</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">The Discounted Cash Flow (DCF) Method is an alternative approach to the valuation of investment class properties.  In many respects it is essentially the same as Direct Capitalisation, but a major difference is that all assumptions made in the DCF model are explicit and readily capable of being altered.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Therefore the DCF method lends itself to “sensitivity analyses”, under which key variables are changed to assess the impact on the outcome.  In this way, the results can be said to be more or less sensitive to specific key variables. This is also known as a “what if” analysis.</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Cap method is primary</li>
+<li dir="auto">DCF in income producing properties
+Main difference</li>
+<li dir="auto">all assumptions in bundled discount rate into an implict figure</li>
+<li dir="auto">can perform a sensitivity analysis in a DCF, change key assumptions</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="which-cashflows">Which cashflows?</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">DCF looks at current and future cash flows (positive and negative) and brings then back to a present value. This requires projections of future incomes and costs which are influenced by many factors.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Economic performance (national, regional &amp; local)</p>
+</li>
+<li dir="auto">
+<p dir="auto">Interest Rates</p>
+</li>
+<li dir="auto">
+<p dir="auto">Business/economic/property cycles</p>
+</li>
+<li dir="auto">
+<p dir="auto">Supply and Demand</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Projection of future income</li>
+<li dir="auto">Projection of future costs</li>
+<li dir="auto">Assumptions on supply and demand</li>
+<li dir="auto">macroeconomic performance
+Lost of factors which will influence projections and income for cash flows</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Both Direct Capitalisation and DCF are focused on accurately
+establishing a net income figure and converting that to a capital sum.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Where Direct Capitalisation uses a market derived Cap Rate with implicit growth and risk assumptions, DCF employs a discount rate which incorporates the investor’s required rate of return with all cash flow assumptions being explicit.</p>
+</li>
+</ul>
+<h3 dir="auto" id="dcf-model">DCF Model</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">But first, we need to spend some time to build our DCF model. The major elements of the DCF model are:</p>
+</li>
+<li dir="auto">
+<p dir="auto">Cash Flows (positive and negative)</p>
+</li>
+<li dir="auto">
+<p dir="auto">Escalation Factors</p>
+</li>
+<li dir="auto">
+<p dir="auto">The Holding Period</p>
+</li>
+<li dir="auto">
+<p dir="auto">A Terminal Value, and</p>
+</li>
+<li dir="auto">
+<p dir="auto">The Discount Rate</p>
+</li>
+<li dir="auto">
+<p dir="auto">Measuring Financial Performance</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Escalation factors - how much does your income and expenses escalate?</li>
+<li dir="auto">Lease mechanism the same for simplicity - indexed to the same percentage
+<ul dir="auto">
+<li dir="auto">consumer price index, evaluation at market</li>
+</ul>
+</li>
+<li dir="auto">negative cash flows and costs</li>
+<li dir="auto">referential to market? Need to figure out market
+Holding period</li>
+<li dir="auto">model cash flows for a period of time
+<ul dir="auto">
+<li dir="auto">Best way of doing this to adopt a period which is generic for that type of period</li>
+<li dir="auto">adopt a 10 year holding period if other people hold for 10 years, e.g.</li>
+<li dir="auto">DCF &amp; holding period - if something major has happened before the holding or after the holding, it can skew your modelling</li>
+<li dir="auto">might want to reconsider duration of holding period</li>
+<li dir="auto">massive losses on capital improvements in last years, might want to increase investment horizon</li>
+<li dir="auto">overall, referable to the sector, or major capital improvements
+Terminal Value</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="cashflows">Cashflows</h3>
+<ul dir="auto">
+<li dir="auto">Cash flows are based on current amounts which are then escalated at specific rates over the study period (holding period) of the investment.</li>
+<li dir="auto">They can be positive or negative depending on the type of cash flow.  Income from all sources is positive and can include rent, outgoings recovery, parking fees, naming/signage rights, electricity profit, proceeds of sale, etc.</li>
+<li dir="auto">Negative cash flows, opex, vacancy allowances, Incentives (depending on type), agency letting fees, purchase and selling costs, etc.</li>
+<li dir="auto">The timing of these cash flows is critical to the result of the analysis.  Matters to be considered include the “rest  periods” (eg., yearly, quarterly, monthly rests, etc) and</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Rest period</p>
+<ul dir="auto">
+<li dir="auto">yearly, quarterly, monthly
+<ul dir="auto">
+<li dir="auto">a commercial property with 40 tenants and all paid monthly &amp; 10 year investment horizon
+<ul dir="auto">
+<li dir="auto">4800 separate incomes over the life of the spreadsheet</li>
+<li dir="auto">can simplify and look at this yearly</li>
+<li dir="auto">can look monthly, quarterly yearly</li>
+</ul>
+</li>
+<li dir="auto">Quarterly or yearly is completely acceptable</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Whether the cash flows fall at the beginning, end or middle of the period. We must also remember at this stage that the current period is by convention Period “0”.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Let us start with a very simple cash flow model. Assume we are evaluating an office building with a gross rent of $100pa and outgoings of $30pa.</p>
+</li>
+</ul>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Items</strong></th>
+<th>0</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Gross Rental Income</td>
+<td>100</td>
+</tr>
+<tr dir="auto">
+<td>Outgoings</td>
+<td>30</td>
+</tr>
+<tr dir="auto">
+<td>Net Income</td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="escalation-factors">Escalation Factors</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Escalation factors are the specific rates at which the various cash flows will be projected over the study period.  Different cash flows will grow at differing rates over time.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Forecasting of rental rates is particularly difficult and relies heavily on the skill and expertise of the analyst.</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">In above case, no escalation factor
+Assume you got the $70 at the end of the year, but had to pay $30 upfront</p>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Rental rates are heavily influenced by the demand and supply characteristics of their own specific market sector.</li>
+<li dir="auto">Property cycles are generally different for the various property sectors (ie. commercial office, industrial, retail, residential, tourism, etc) and also for different regions for specific sectors (ie. commercial office in Brisbane, Sydney, Melbourne, etc and Brisbane CBD, Fringe, Qld regional, etc).</li>
+<li dir="auto">Costs such as maintenance and other outgoings items tend to follow general inflationary trends and therefore the CPI index is a suitable escalator for such cash flows.</li>
+</ul>
+<p dir="auto">We can now return to our simple cash flow model, starting with projections of rental growth and CPI over a study period of 5 years.</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Period</strong></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Rental Growth</td>
+<td></td>
+<td>2.0%</td>
+<td>5.0%</td>
+<td>7.0%</td>
+<td>2.0%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+</tr>
+<tr dir="auto">
+<td>CPI</td>
+<td>0</td>
+<td>\2.5%</td>
+<td>2.7%</td>
+<td>3.0%</td>
+<td>2.4%</td>
+<td>2.2%</td>
+<td>0.0%</td>
+</tr>
+</tbody>
+</table>
+<blockquote dir="auto">
+<p dir="auto">positive cash flow different ot negative cash flows (rental growth vs CPI)</p>
+</blockquote>
+<p dir="auto">Apply escalation rate to our cash flows:</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Period</strong></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Gross Rent</td>
+<td>100</td>
+<td>102</td>
+<td>107.10</td>
+<td>114.60</td>
+<td>116.89</td>
+<td>116.9</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>Outgoings</td>
+<td>30</td>
+<td>30.75</td>
+<td>31.58</td>
+<td>32.53</td>
+<td>33.31</td>
+<td>34.04</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>Net Income</td>
+<td>70</td>
+<td>72.15</td>
+<td>75.52</td>
+<td>72.08</td>
+<td>83.58</td>
+<td>82.86</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="holding-period">Holding Period</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Unlike Direct Capitalisation which employs a Cap Rate to capitalise a net income figure in perpetuity, DCF utilises a specific holding period tailored to the time that the investor intends to keep the investment before selling it, or disposing of it in another manner (eg. redevelopment).</p>
+</li>
+<li dir="auto">
+<p dir="auto">This holding period is also known as the Investment Horizon</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">DCF uses a specific holding period, works out the cash flows over that period (holding period) known as the investment horizon</p>
+</blockquote>
+<h3 dir="auto" id="terminal-value">Terminal Value</h3>
+<ul dir="auto">
+<li dir="auto">We will shortly see that the asset is hypothetically “sold” at the end of the holding period.  This will also explain why we have added an additional year (year being the first period, then year 6 in the model must be outside the holding period).</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Basic static capitalisation</p>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">In order to “close off” the cash flow series, the model requires that a terminal value is added in the final period.  This terminal value represents a hypothetical sale at the end of the investment holding period.</li>
+<li dir="auto">This is a proxy for the value that the asset still has at the end of the study period, and without including this asset value, the DCF will be incomplete.</li>
+<li dir="auto">Note that Direct Capitalisation assumes the asset is held in perpetuity and therefore does not need to include a terminal value.</li>
+<li dir="auto">We use the Direct Capitalisation method to establish the terminal value.</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>C</mi><mi>V</mi><mo>=</mo><mfrac><mrow><mi>N</mi><mi>I</mi></mrow><mi>i</mi></mfrac></mrow><annotation encoding="application/x-tex">CV = \frac{NI}{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">i</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p dir="auto">Where CV is the terminal value.</p>
+<blockquote dir="auto">
+<p dir="auto">capitalisation to determine net terminal value
+Make assumptions - building will be more obselete, allow higher vacancy, figure out what the market value is in the future
+have to pick a yield - have to decide and make assuptions based to the property, market in future, etc.</p>
+</blockquote>
+<h3 dir="auto" id="terminal-value-1">Terminal Value</h3>
+<ul dir="auto">
+<li dir="auto">Adding a terminal value to our model.  Assume a current cap rate of say, 8.5% and therefore a softer terminal yield of say, 9.5% for our model.</li>
+</ul>
+<p dir="auto">Year 6 net income is:</p>
+<ul dir="auto">
+<li dir="auto">Gross Rental =	$116.89</li>
+<li dir="auto">Outgoings 	= $34.04</li>
+<li dir="auto">Net Income	= $82.85</li>
+</ul>
+<p dir="auto">Therefore</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>C</mi><mi>V</mi><mo>=</mo><mfrac><mn>82.85</mn><mn>0.095</mn></mfrac></mrow><annotation encoding="application/x-tex"> CV = \frac{82.85}{0.095} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0.095</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">82.85</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>=</mo><mi mathvariant="normal">$</mi><mn>872.10</mn></mrow><annotation encoding="application/x-tex">= \$872.10
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">$872.10</span></span></span></span></span></p>
+<h3 dir="auto" id="cashflows-including-terminal-value">Cashflows including terminal value</h3>
+<ul dir="auto">
+<li dir="auto">Our model now looks like this this, and only lacks a discount rate to complete it.</li>
+</ul>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Period</strong></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Gross Rent</td>
+<td>100</td>
+<td>102</td>
+<td>107.10</td>
+<td>114.60</td>
+<td>116.89</td>
+<td>116.9</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>Outgoings</td>
+<td>30</td>
+<td>30.75</td>
+<td>31.58</td>
+<td>32.53</td>
+<td>33.31</td>
+<td>34.04</td>
+<td></td>
+</tr>
+<tr dir="auto">
+<td>Net Income</td>
+<td>70</td>
+<td>72.15</td>
+<td>75.52</td>
+<td>72.08</td>
+<td><strong>955.68</strong></td>
+<td>82.86</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul dir="auto">
+<li dir="auto">adding terminal value to the property</li>
+</ul>
+<h3 dir="auto" id="discount-rate">Discount rate</h3>
+<ul dir="auto">
+<li dir="auto">We now move on to the final and possibly most critical of the elements of DCF, the discount rate.</li>
+<li dir="auto">The discount rate is employed to bring a future amount, or a future series of cash flows to a present value.</li>
+<li dir="auto">Therefore, the cash flows in our simple model can also be “discounted”  back to a present value.</li>
+</ul>
+<p dir="auto">But how do we establish the discount rate?</p>
+<blockquote dir="auto">
+<p dir="auto">Each one of the years of income, need to discount it back</p>
+<ul dir="auto">
+<li dir="auto">PV of future amount, apply to each year incomes</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">“When valuing property the discount rate may be regarded as comprising two portions, namely, a risk -free rate component reflecting the minimum level of return required as compared to minimal risk investment such as Government long term bonds, and a risk premium reflecting the additional level of return required to offset the inherent risks of property investment… There are several ways in which the discount rate may be calculated, including:</p>
+</li>
+<li dir="auto">
+<p dir="auto">Risk-free Rate + Risk Premium</p>
+</li>
+<li dir="auto">
+<p dir="auto">Weighted Average Cost of Capital</p>
+</li>
+<li dir="auto">
+<p dir="auto">Client’s Input</p>
+</li>
+<li dir="auto">
+<p dir="auto">Analysis of Sales Evidence.”</p>
+</li>
+</ul>
+<p dir="auto">API Practice Standard – “Discounted Cash Flows”</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Risk free plus risk premium component
+<ul dir="auto">
+<li dir="auto">WACC</li>
+<li dir="auto">Have a client tell you the preferred discount rate</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><strong>From the preceding definitions, we can glean the following:</strong></p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">The discount rate as applied in the property industry is the return required by the investor (the probable purchaser of the property). It incorporates opportunity cost (the return that the investor could have received on an alternative investment) inflation and risk.  In selecting a discount rate, due consideration should be given to property market forces, particularly:</p>
+<ul dir="auto">
+<li dir="auto">Property characteristics of the subject property</li>
+<li dir="auto">Tenants Covenant</li>
+<li dir="auto">Prevailing and likely future property market conditions</li>
+<li dir="auto">General economic conditions.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Return the investor requires for that property</p>
+</blockquote>
+<p dir="auto">We can also say that the main methods of structuring the discount rate are:</p>
+<p dir="auto">Risk-free rate (10 year Commonwealth Bond rate used as a proxy) plus a risk premium
+Opportunity Cost plus inflation plus risk
+Analysis of comparable sales evidence (not easy)
+Survey of market sentiment
+WACC (Weighted Average Cost of Capital) – used by the finance industry Client specific.</p>
+<blockquote dir="auto">
+<p dir="auto">Easiest way</p>
+<ul dir="auto">
+<li dir="auto">risk free + risk premium</li>
+<li dir="auto">If you can find WACC, use that as well</li>
+<li dir="auto">Enough industry reports that outline a range of discount rates</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">For our purposes, it is easy to establish discount rates referable to The Risk-free rate (10 year bonds) plus a risk premium.</li>
+<li dir="auto">The risk premium will be dependent on property specific risk factors such as the age and quality of the property and Tenant’s Covenant.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Look at the challeges associated with maintaining the income stream
+uncertain and challenging - risk is much higher</p>
+</blockquote>
+<h3 dir="auto" id="financial-performance">Financial Performance</h3>
+<p dir="auto">**Financial Performance-Net Present Value (NPV) **</p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">We should be aware by now of discounting and the term Present Value. We must now introduce a variation on the PV concept, the Net  Present Value (NPV).</p>
+</li>
+<li dir="auto">
+<p dir="auto">The NPV is the sum of all cash flows in a DCF model discounted by the required rate of return.  It  is the difference between the present value of all positive and negative cash flows or capital sums included in a DCF model.</p>
+</li>
+<li dir="auto">
+<p dir="auto">The NPV can be a positive or negative outcome itself, but generally, in a feasibility study, when an NPV is positive, the investment proposal is acceptable and when negative it is not (or it may be marginal)</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Model and all of the income and expedntiures will be,</p>
+<ul dir="auto">
+<li dir="auto">work out the financial performance, sum of all cash flows of the DCF model</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="npv-calculation">NPV calculation</h3>
+<p dir="auto">A – Using the Financial Calculator
+Discount each individual cash flow from the series  using:</p>
+<ul dir="auto">
+<li dir="auto">FV = 70 (first cash flow, the second etc)</li>
+<li dir="auto">I = 6</li>
+<li dir="auto">N	 = 1, 2, 3, 4, 5</li>
+<li dir="auto">PV = ?</li>
+</ul>
+<p dir="auto">Follow this through for all the cash flows, increasing the “n” by 1 each time.  You should end up with:</p>
+<ul dir="auto">
+<li dir="auto">70.00 = 66.03</li>
+<li dir="auto">71.25 = 63.41</li>
+<li dir="auto">75.25 = 63.41</li>
+<li dir="auto">82.07 = 65.01</li>
+<li dir="auto">955.68 = 714.14</li>
+<li dir="auto">Total (NPV) = 971.77</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Using the model before with the 5 years of various cash flows,</p>
+</blockquote>
+<p dir="auto"><img src="image-15.png" alt="alt text" data-src="image-15.png"></p>
+<h3 dir="auto" id="timing-of-cashflows">Timing of Cashflows</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Timing of Cash Flows (Beginning or End of Period):</p>
+</li>
+<li dir="auto">
+<p dir="auto">You will have noted that in the previous NPV calculations, we have discounted the year 1 cash flow.  This is legitimate provided that the cash flows have been received (or assumed) at the end of the period.</p>
+</li>
+<li dir="auto">
+<p dir="auto">With annual “rests”, and monthly rental payments, it is a moot point as to whether cash flows should be deemed to be at the beginning or end of the period.</p>
+</li>
+<li dir="auto">
+<p dir="auto">When using the NPV formula in Excel, be aware if the first period is to be discounted.  For this reason, the NPV‘s calculated in the simple model have been based on the end of period “rests”.</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">When looking at rest periods and p.a. interest rate</p>
+</blockquote>
+<h3 dir="auto" id="cap-rate-vs-discount-rate">Cap rate vs Discount rate</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">The Cap Rate vs the Discount Rate</p>
+</li>
+<li dir="auto">
+<p dir="auto">By now we should be starting to see that the cap rate and discount rate are two completely separate concepts, and must NEVER be interchanged.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Even though the cap rate is a type of discount rate it is a simple multiplier derived from comparable market sales,</p>
+</li>
+<li dir="auto">
+<p dir="auto">However the DCF the discount rate is the investor’s target rate of return for a specific investment vehicle. The discount rate may also be derived from market evidence by the valuer when performing a valuation using DCF, but in this case it is reversing the DCF process to ascertain the discount rate employed.</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Two separate concepts</p>
+<ul dir="auto">
+<li dir="auto">cap rate 'all risks rate'</li>
+<li dir="auto">DCF is discounting a cash flow of a particular investment vehicle</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="applications-for-dcf-model">Applications for DCF model</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">For Valuations:
+The NPV is the valuation figure. Acquisition costs must be deducted.</p>
+</li>
+<li dir="auto">
+<p dir="auto">For Feasibility Studies:<br>
+A project can be assessed using DCF by determining whether all the projected costs and benefits discounted at the target rate of return(hurdle rate) result in a positive NPV.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Internal Rate of Return (IRR):
+The IRR is the discount rate at that point where the present values of all positive and negative cash flows result in a zero NPV. The IRR needs both a positive and negative cash flow to function and must include all acquisition costs as well as net disposal proceeds.</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Are you getting a sufficient return to justify the investment?</p>
+<ul dir="auto">
+<li dir="auto">PV of all positive and negative cashflows that result in a 0 or positive NPV</li>
+</ul>
+</blockquote>
+<p dir="auto"><strong>Sensitivity Analyses</strong></p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">DCF analyses readily lends itself to the “what if” process, where key variables/assumptions can be changed to see if the outcome (NPV or IRR) has been radically altered.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Different variables will have different impacts under the assumptions made, and by undertaking a sensitivity analysis, the risks inherent in the project can be quantified to some degree.</p>
+</li>
+<li dir="auto">
+<p dir="auto">One important aspect (and criticism of DCF) is that, due to the discounting process, cash flows later in the time series have a much lesser impact on the NPV or IRR. Terminal values come into this category.</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">What if?  scenarios</p>
+<ul dir="auto">
+<li dir="auto">delay refurbishment, improvements etc.</li>
+<li dir="auto">change inputs and assumptions</li>
+</ul>
+</blockquote>
+
+</main>
+</body>
+</html>
