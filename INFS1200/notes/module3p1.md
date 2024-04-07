@@ -85,11 +85,13 @@ Selection (WHERE clause)
 - Select tuples from given collection of tuples.
 - \<search condition\> is a conditional (Boolean) expression that identifies the tuples to be retrieved by the query.
 
+### Complete WHERE condition clauses
+
 **WHERE condition type** | **Operand**|  **Example** 
 | --- | --- | ---
 | All  | ``=``, ``<>`` | ``ID <> 324``, ``price = 42.30``
 | All | ``<``, ``>`` | ``ID > 324``, ``price < 42.30``
-| NVARCHAR() only | ``=`` | ``name = 'Mary'`` will select all the tuples with exactly the name 'Mary'
+| All | ``=`` | ``name = 'Mary'``, ``ID = 23406``
 | NVARCHAR() only | ``LIKE``, ``NOT LIKE`` | ``name LIKE '%Mary%'`` will select all the tuples substrings containing the name 'Mary', such as 'Mary-Ann' or 'Maryam' e.g.
 | All | ``IN`` | ``name IN ('Mary', 'John', 'Steve')`` acts as a ternary OR operation
 | All | ``BETWEEN`` | ``salary BETWEEN 10000 AND 30000``

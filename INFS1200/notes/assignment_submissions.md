@@ -1,0 +1,13 @@
+
+- 0.5 for Sales Agent
+- 0.5 for Customer
+- 1.0 for Contact (weak) including weak entity relationship 
+  - OR 0.5 understanding of weak entity but errors made
+- 0.5 for relationship between Agent and Contact
+  - OR 0.25 Understanding of relationships but between incorrect entities
+- 0.5 Correct use of notation
+  - Even if cardinality isn't correct
+  - Even if styling guide isn't perfect
+  - 
+  - If no cardinality provided, then no mark
+  - If they get attributes wrong on multiple entities, no mark
