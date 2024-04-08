@@ -24,9 +24,9 @@
 
 </header>
 <main>
-<h1 dir="auto" id="sql---continued">SQL - Continued</h1>
-<h2 dir="auto" id="recap---last-lecture---select">Recap - last lecture - SELECT</h2>
-<h3 dir="auto" id="basic-syntax">Basic Syntax</h3>
+<h1 dir="auto" id="sql---continued-1">SQL - Continued</h1>
+<h2 dir="auto" id="recap---last-lecture---select-1">Recap - last lecture - SELECT</h2>
+<h3 dir="auto" id="basic-syntax-1">Basic Syntax</h3>
 <pre><code class="code-line language-SQL" dir="auto"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">&lt;</span>attribute list<span class="hljs-operator">&gt;</span> 
 <span class="hljs-keyword">FROM</span> <span class="hljs-operator">&lt;</span><span class="hljs-keyword">table</span> list<span class="hljs-operator">&gt;</span>
 [<span class="hljs-keyword">WHERE</span> <span class="hljs-operator">&lt;</span><span class="hljs-keyword">condition</span><span class="hljs-operator">&gt;</span>];
@@ -51,7 +51,7 @@ Selection (WHERE clause)</p>
 <li dir="auto">Select tuples from given collection of tuples.</li>
 <li dir="auto">&lt;search condition&gt; is a conditional (Boolean) expression that identifies the tuples to be retrieved by the query.</li>
 </ul>
-<h3 dir="auto" id="complete-where-condition-clauses">Complete WHERE condition clauses</h3>
+<h3 dir="auto" id="complete-where-condition-clauses-1">Complete WHERE condition clauses</h3>
 <table dir="auto">
 <thead dir="auto">
 <tr dir="auto">
@@ -98,7 +98,7 @@ Selection (WHERE clause)</p>
 </tr>
 </tbody>
 </table>
-<h2 dir="auto" id="aggregation-and-grouping">Aggregation and grouping</h2>
+<h2 dir="auto" id="aggregation-and-grouping-2">Aggregation and grouping</h2>
 <p dir="auto">Aggregates are functions that produce summary values from a set of tuples.</p>
 <table dir="auto">
 <thead dir="auto">
@@ -122,7 +122,7 @@ Selection (WHERE clause)</p>
 </tr>
 </tbody>
 </table>
-<h3 dir="auto" id="a-couple-examples">A couple examples:</h3>
+<h3 dir="auto" id="a-couple-examples-1">A couple examples:</h3>
 <pre><code class="code-line language-SQL" dir="auto"><span class="hljs-comment">-- Select the average salaries and combined employee salaries</span>
 <span class="hljs-keyword">SELECT</span>  <span class="hljs-built_in">AVG</span>(salary), <span class="hljs-built_in">SUM</span>(salary)
 <span class="hljs-keyword">FROM</span>  Employee;
@@ -132,7 +132,7 @@ Selection (WHERE clause)</p>
 <span class="hljs-keyword">FROM</span>  Employee
 <span class="hljs-keyword">WHERE</span>  dNum <span class="hljs-operator">=</span> <span class="hljs-number">5</span>;
 </code></pre>
-<h3 dir="auto" id="aggregation-and-grouping-1">Aggregation and Grouping</h3>
+<h3 dir="auto" id="aggregation-and-grouping-3">Aggregation and Grouping</h3>
 <p dir="auto">aggregation functions are often needed to be applied to
 groups of rows within a table
 • e.g., find the total number of employees in each department.
@@ -149,7 +149,7 @@ groups of rows within a table
 <p dir="auto">Important!</p>
 <p dir="auto">When GROUP BY is used in an SQL statement, any attribute which appears in the SELECT clause <strong>must also appear in the GROUP BY clause or be in an aggregation function.</strong></p>
 </blockquote>
-<p dir="auto"><img src="image-7.png" alt="alt text" data-src="image-7.png"></p>
+<p dir="auto"><img src="assets\IMG66.PNG" alt="alt text" data-src="assets/IMG66.PNG"></p>
 <pre><code class="code-line language-SQL" dir="auto"><span class="hljs-comment">-- Find the average capacity of each container type</span>
 <span class="hljs-keyword">SELECT</span>  ContainerType, <span class="hljs-built_in">AVG</span>(Capacity)
 <span class="hljs-keyword">FROM</span>  CONTAINERS
@@ -169,7 +169,7 @@ If an item doesn't fit into one of these categories, SQL gets confused because i
 <span class="hljs-keyword">WHERE</span>  salary <span class="hljs-operator">&gt;</span> <span class="hljs-number">40000</span>
 <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span>  dNum;
 </code></pre>
-<h3 dir="auto" id="conditions-on-groups">Conditions on Groups</h3>
+<h3 dir="auto" id="conditions-on-groups-1">Conditions on Groups</h3>
 <ul dir="auto">
 <li dir="auto">Conditions can be imposed <strong>on the selection of groups</strong> to be included in
 the query result</li>
@@ -182,10 +182,10 @@ specify these conditions, similar to the <code>WHERE</code> clause</li>
 <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span>   dNum
 <span class="hljs-keyword">HAVING</span>  <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>) <span class="hljs-operator">&gt;</span> <span class="hljs-number">2</span>;
 </code></pre>
-<h2 dir="auto" id="multiple-relation-sql-queries">Multiple relation sql queries</h2>
+<h2 dir="auto" id="multiple-relation-sql-queries-1">Multiple relation sql queries</h2>
 <p dir="auto">A few weeks ago we had an Example ER model like this:</p>
 <p dir="auto">Focus on <code>EMPLOYEE</code> and <code>DEPARTMENT</code>, and the <code>MANAGES</code> relationship</p>
-<p dir="auto"><img src="image-6.png" alt="alt text" data-src="image-6.png"></p>
+<p dir="auto"><img src="assets\IMG67.PNG" alt="alt text" data-src="assets/IMG67.PNG"></p>
 <p dir="auto">There two relationships were mapped as such:</p>
 <ul dir="auto">
 <li dir="auto">EMPLOYEE {<u>SSN</u>, Address, Fname, MIt, Lname, Sex, Salary, DOB, SupervisorSSN}</li>
@@ -200,11 +200,11 @@ specify these conditions, similar to the <code>WHERE</code> clause</li>
 <li dir="auto">for every Department, there is exactly one Employee that manages it</li>
 </ul>
 <p dir="auto">How Can I connect both of these relations (tables) into one long table so that I can see the department and its respective Employee?</p>
-<h2 dir="auto" id="joins-in-sql">JOINS in SQL</h2>
+<h2 dir="auto" id="joins-in-sql-1">JOINS in SQL</h2>
 <ul dir="auto">
 <li dir="auto">A join is used to combine related tuples from two relations into a single tuple in a new (result) relation</li>
 </ul>
-<h3 dir="auto" id="equi-joins-in-sql---examples">Equi-joins in SQL - Examples</h3>
+<h3 dir="auto" id="equi-joins-in-sql---examples-1">Equi-joins in SQL - Examples</h3>
 <pre><code class="code-line language-SQL" dir="auto"><span class="hljs-comment">-- Equi-join using WHERE</span>
 <span class="hljs-keyword">SELECT</span> E.name, D.dName
 <span class="hljs-keyword">FROM</span> Department <span class="hljs-keyword">AS</span> D, Employee <span class="hljs-keyword">AS</span> E
