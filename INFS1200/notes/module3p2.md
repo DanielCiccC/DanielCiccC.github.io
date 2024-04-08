@@ -83,18 +83,20 @@ FROM <table list>
 > 
 > When GROUP BY is used in an SQL statement, any attribute which appears in the SELECT clause **must also appear in the GROUP BY clause or be in an aggregation function.**
 
+![alt text](assets\IMG66.PNG)
+
 ```SQL
--- Count the number of employees in each department
-SELECT  dNum, COUNT(*)
-FROM  Employee
-GROUP BY  dNum;
+-- Find the average capacity of each container type
+SELECT  ContainerType, AVG(Capacity)
+FROM  CONTAINERS
+GROUP BY ContainerType;
 ```
 
-> Think of the ``GROUP BY`` clause as a way to organize your data into groups, like putting items into different boxes based on their category. When you use GROUP BY, SQL wants to make sure that each item (or attribute) you select in your SELECT clause either:
+> Think of the ``GROUP BY`` clause as a way to organise your data into groups. When you use GROUP BY, SQL wants to make sure that each item (or attribute) you select in your SELECT clause either:
 >
-> 1. Belongs to the same category (group) as specified in the GROUP BY clause, or
+> 1. Belongs to the same category (group) **as specified in the GROUP BY clause**
 > 2. You're doing something special with it, like counting how many items are in each category (e.g. ``COUNT``).
-> If an item doesn't fit into one of these categories, SQL gets confused because it doesn't know how to group or aggregate that item, and it asks you to either specify the category (by including it in the ``GROUP BY`` clause) or explain what you want to do with it (by using an aggregation function)
+> If an item doesn't fit into one of these categories, SQL gets confused because it doesn't know how to group or aggregate that item, and it asks you to either specify the category (by including it in the ``GROUP BY`` clause) or explain what you want to do with it (by using an aggregation function). **Else, you have to omit it from the query**
 
 
 
@@ -122,9 +124,42 @@ HAVING  COUNT(*) > 2;
 
 ## Multiple relation sql queries
 
-A few week ago we had this:
+A few weeks ago we had an Example ER model like this:
 
-- S : Employee
-- T : Employee details
+Focus on ``EMPLOYEE`` and ``DEPARTMENT``, and the ``MANAGES`` relationship
 
-![alt text](assets\IMG49.PNG)
+
+![alt text](assets\IMG67.PNG)
+
+There two relationships were mapped as such:
+
+
+- EMPLOYEE {<u>SSN</u>, Address, Fname, MIt, Lname, Sex, Salary, DOB, SupervisorSSN}
+- DEPARTMENT {<u>DNumber</u>, DName, ManagementStartDate, mgrSSN}
+  - DEPARTMENT mgrSSN references EMPLOYEE.SSN
+
+I know:
+  - for every Department, there is exactly one Employee that manages it
+
+How Can I connect both of these relations (tables) into one long table so that I can see the department and its respective Employee?
+
+## JOINS in SQL
+- A join is used to combine related tuples from two relations into a single tuple in a new (result) relation
+
+
+### Equi-joins in SQL - Examples
+
+```SQL
+-- Equi-join using WHERE
+SELECT E.name, D.dName
+FROM Department AS D, Employee AS E
+WHERE D.mgrSSN = E.ssn;
+
+-- Equi-join using JOIN
+SELECT E.name, D.dName
+FROM  Department AS D
+JOIN Employee AS E
+ON  D.mgrSSN = E.ssn
+```
+
+**I think JOIN is better, let me tell you why**
