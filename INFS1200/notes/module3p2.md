@@ -46,7 +46,7 @@ Aggregates are functions that produce summary values from a set of tuples.
 **Aggregate fn** | **Description**
 | --- | ---
 | **COUNT** |  Counts the number of tuples that the query returns
-| **SUM/SVG** | Calculates the sum/average of a set of numeric values
+| **SUM/AVG** | Calculates the sum/average of a set of numeric values
 | **MAX/MIN** | Returns the maximum/minimum value from a set of values which have a *total ordering*. Note that the domain of values can be non-numeric
 
 ### A couple examples:
