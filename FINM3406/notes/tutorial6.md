@@ -1,0 +1,16 @@
+# Tutorial 6
+
+**Activity One**
+- Use the term and reversion method prepare a spreadsheet that calculates the price you should pay for the following property:
+- A commercial property subject to a 10 year lease with 2 years expired, producing an income of $80,000 pa on a net basis fixed for 3 years (the next rent review is to market and is in three years time). Current open market rental would produce an income of $100,000 pa. The market capitalisation rate to be applied to the net cash flow is 10%.
+
+**Activity Two**
+- You decide to purchase of an industrial property that has four tenants, with remaining leases terms ranging from 2 to 5 years. The property has a purchase price of $5 million, and the costs of acquisition for stamp duty, legals and other fees is 4% of the purchase price.
+- Each of the four leases is rented at current market rates and each lease returns a net rent of $100,000pa with annual rental increases of 4% (payable in arrears). Outgoings for the property are a total of $150,000 per annum of which $100,000 are recovered from the tenants as part of their net leases.
+- One lease expires in two years, one expires in three years, one in four years and one in five years. Your trusted property consultant has advised you that they do not expect the current tenants to renew their leases and it will take 6 months for you to find a new tenant to take over each of the spaces once they are vacant.
+The building is starting to show its age and needs $250,000 of capital expenditure spent to undertake repairs in two years’ time to ensure that future rents from tenants do not reduce.
+- You intend to hold the property for seven years and inflation is expected to average at 3% per annum over the next eight years.
+- You have also been advised by your property consultant to expect the capitalisation rate for an industrial property like this to be 8% when you sell the property at the end of your holding period.
+- You plan to finance the acquisition of this property with 100% equity (so you do not need to consider the cost of debt financing when analysing the performance of this asset – we will consider that later in the semester).
+- Assuming a discount rate of 9%, prepare a DCF spreadsheet that calculates the net present value (NPV) of the property and its internal rate of return (IRR).
+- You should include all relevant cash flows, including the initial investment, NOI, cap-ex, and proceeds from the sale. Do not take into account for any tax implications, such as depreciation and capital gains tax.
