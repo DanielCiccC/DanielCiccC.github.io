@@ -56,8 +56,6 @@ FROM  Department AS D
 JOIN Employee AS E ON  D.mgrSSN = E.ssn
 ```
 
-I think the second is better - let me show you why
-
 
 ### Theta join 
 
@@ -70,7 +68,7 @@ $$ \theta \in \{ =, \ne,  <, >, \ge, \le \}$$
 ### INNER and OUTER joins
 
 - **Inner Join:** A tuple is included in the result relation only if matching tuples exist in both relations. By default, just using the JOIN key word will specify INNER JOIN
-> - Why do we not do this?
+> - We should still aim to write INNER JOIN instead of JOIN even though the functuonality is the same. Why?
 
 
 - **Outer Join:** includes the result of the inner join plus unmatched rows in one or both tables can be returned.
@@ -102,14 +100,14 @@ $$ \theta \in \{ =, \ne,  <, >, \ge, \le \}$$
 
 ![alt text](assets\IMG71.PNG)
 
-
+### Use of ALL
 Each *automatically eliminates duplicates*; 
 - To retain all duplicates use the corresponding multiset versions:
-  - union all, intersect all and except all.
+  - UNION ``ALL``, INTERSECT ``ALL`` and EXCEPT ``ALL``.
 
 ### UNION
 
--Produces a relation that includes all tuples that appear only in R1, or only in R2, or in both R1 and R2.
+- Produces a relation that includes all tuples that appear only in R1, **or** only in R2, **or in both R1 and R2**.
 
 ```SQL
 SELECT  starID
@@ -130,7 +128,7 @@ WHERE year = 1974
 - Produces a relation that includes the tuples that 
 appear in both R1 and R2.
 
-Example: Find IDs of MovieStars who’ve been in a movie in 1944 and 1974.
+Example: Find IDs of MovieStars who’ve been in a movie in 1944 **and** 1974.
 
 ```SQL
 SELECT  starID
@@ -149,7 +147,7 @@ WHERE year = 1974
 ### Difference - EXCEPT/MINUS
 - (also referred to as MINUS) produces a relation that includes all the tuples that appear in R1, but do not appear in R2.
 
-Example: Find IDs of stars who have been in a movie in 1944 but not in 1974.
+Example: Find IDs of stars who have been in a movie in 1944 **but not** in 1974.
 
 ```SQL
 SELECT   starID
