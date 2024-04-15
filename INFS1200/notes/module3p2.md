@@ -124,42 +124,5 @@ HAVING  COUNT(*) > 2;
 
 ## Multiple relation sql queries
 
-A few weeks ago we had an Example ER model like this:
-
-Focus on ``EMPLOYEE`` and ``DEPARTMENT``, and the ``MANAGES`` relationship
-
-
-![alt text](assets\IMG67.PNG)
-
-There two relationships were mapped as such:
-
-
-- EMPLOYEE {<u>SSN</u>, Address, Fname, MIt, Lname, Sex, Salary, DOB, SupervisorSSN}
-- DEPARTMENT {<u>DNumber</u>, DName, ManagementStartDate, mgrSSN}
-  - DEPARTMENT mgrSSN references EMPLOYEE.SSN
-
-I know:
-  - for every Department, there is exactly one Employee that manages it
-
-How Can I connect both of these relations (tables) into one long table so that I can see the department and its respective Employee?
-
-## JOINS in SQL
-- A join is used to combine related tuples from two relations into a single tuple in a new (result) relation
-
-
-### Equi-joins in SQL - Examples
-
-```SQL
--- Equi-join using WHERE
-SELECT E.name, D.dName
-FROM Department AS D, Employee AS E
-WHERE D.mgrSSN = E.ssn;
-
--- Equi-join using JOIN
-SELECT E.name, D.dName
-FROM  Department AS D
-JOIN Employee AS E
-ON  D.mgrSSN = E.ssn
-```
 
 **I think JOIN is better, let me tell you why**
