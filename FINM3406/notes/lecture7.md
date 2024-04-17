@@ -108,7 +108,7 @@ Aims to complement the service offerings within the Princess Alexandra Hospital 
 imaging, pharmacy, pathology, radiology, and day surgery. 
 - Ground level, with retail and an ancillary café along Ipswich Road 
 - Dedicated pedestrian entrance and vehicle access from the Cornwall Street frontage 
-- Carparking areas within a basement level comprising 200 spaces across 4 basement levels. 
+- Car parking areas within a basement level comprising 200 spaces across 4 basement levels. 
 
 > ground could have retail, cafe etc.
 
@@ -140,7 +140,7 @@ Designation (application MID-0823-0715) has been provided along with the followi
 >  - Architectural plans has net lettable area
 >  - rate p sqm and apply a rate per square meter by gross area
 >   - have different rates for carpark, vs area for day surgery, etc.
->   - Not doing quantity surverying, rate per square meter is adequate
+>   - Not doing quantity surveying, rate per square meter is adequate
 >   - building a retail shop or office will cost less than a hospital - level of specification is greater
 >   - When looking at rate per square meter for hospital rates, else adjust and spell as an assumption
 >
