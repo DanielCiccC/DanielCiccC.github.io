@@ -373,3 +373,5 @@ market) on the World market portfolio.
 2. Next, estimate the difference between the two costs of equity capital for Nestlé (domestic CAPM – world CAPM) 
 
 ![alt text](assets\IMG142.PNG)
+
+![alt text](assets\IMG143.PNG)
