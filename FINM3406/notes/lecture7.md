@@ -147,3 +147,45 @@ Designation (application MID-0823-0715) has been provided along with the followi
 >  Attachment L - Protected Matters Report
 >  - generally under state laws
 >  - Federal government created environmental conventions
+
+### Resources
+- Financial press – lots of articles about Build to Rent
+- Industry Publications (eg Colliers report, API guidelines)
+- Construction cost databases – Cordells, Rawlinson's (check UQ database)
+- Academic journal articles – REIT sector very mature in USA 
+- Australian Bureau of Statistics – demographic info
+- Property sales and leasing info – realcommercial.com.au and rpdata (check UQ library)
+- Queensland and Federal Government – health care statistics
+- IBISWORLD reports
+- Online feasibility studies – EstateMaster by Argus (probably not needed for this but might be helpful)
+
+> Reports done by real estate firms
+> Good be good reports in Europe/US
+> - need to justify a pretty intuitive observation
+>
+> Need to understand demographic
+> - Are their competitors, what is the demographic of the target healthcare 
+> - is it overserviced in this location?
+> - Is it the right size
+> - how big is the catchment area? How far would people travel?
+> - Are you about to build a project that no-one wants?
+>
+> Modelling - use an excel spreadsheet
+> - statemaster, is overkill
+>
+> Academic articles
+> - look at articles about healthcare REITS
+
+Parking
+> - free parking vs paid parking
+
+Rates, land tax
+- costs while in development
+- How long does it take to build?
+- risks - builders are going broke - delayed timelines
+- Are you going to be fully tennanted when you finish development?
+
+e.g.
+- 2 months to demo, 22 months to build, two year to be fully let, sell after 8 years & discount cash flow to determine NPV
+- Rates, land tax, insurances
+  - not going to 
