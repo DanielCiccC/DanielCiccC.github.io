@@ -13,7 +13,7 @@ def process_markdown_files(directory):
                 md_content = md_file.read()
 
             # Use a regular expression to find image references in markdown
-            img_references = re.findall(r'image-\d+\.png', md_content)
+            img_references = re.findall(r'\[(.*?)\]\((image-\d+\.png)\)', md_content)
 
             number = 0
             try:

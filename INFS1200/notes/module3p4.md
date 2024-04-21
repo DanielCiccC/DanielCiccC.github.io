@@ -43,11 +43,11 @@ its evaluation
 
 **STEP 1:**
 
-![alt text](image-15.png)
+![alt text](assets\IMG82.PNG)
 
 **STEP 2:**
 
-![alt text](image-16.png)
+![alt text](assets\IMG83.PNG)
 
 
 
@@ -62,11 +62,11 @@ its evaluation
 **STEP 1:**
 
 
-![alt text](image-19.png)
+![alt text](assets\IMG84.PNG)
 
 **STEP 2:**
 
-![alt text](image-18.png)
+![alt text](assets\IMG85.PNG)
 
 
 ## Views
