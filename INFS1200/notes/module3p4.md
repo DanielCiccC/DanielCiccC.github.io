@@ -43,11 +43,12 @@ its evaluation
 
 **STEP 1:**
 
-<img src="image-15.png" alt="drawing" width="600"/>
+![alt text](image-15.png)
 
 **STEP 2:**
 
-<img src="image-16.png" alt="drawing" width="600"/>
+![alt text](image-16.png)
+
 
 
 ### Double negation
@@ -60,11 +61,12 @@ its evaluation
 
 **STEP 1:**
 
-<img src="image-19.png" alt="drawing" width="600"/>
+
+![alt text](image-19.png)
 
 **STEP 2:**
 
-<img src="image-18.png" alt="drawing" width="600"/>
+![alt text](image-18.png)
 
 
 ## Views
