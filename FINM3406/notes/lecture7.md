@@ -160,7 +160,8 @@ Designation (application MID-0823-0715) has been provided along with the followi
 - Online feasibility studies – EstateMaster by Argus (probably not needed for this but might be helpful)
 
 > Reports done by real estate firms
-> Good be good reports in Europe/US
+> 
+> good reports in Europe/US
 > - need to justify a pretty intuitive observation
 >
 > Need to understand demographic
