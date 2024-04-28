@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="module-4-database-design-theory-and-normalisation">Module 4: Database design theory and normalisation</h1>
+<p dir="auto"><img src="assets\IMG86.PNG" alt="alt text" data-src="assets/IMG86.PNG"></p>
+<h2 dir="auto" id="design-guidelines">Design Guidelines</h2>
+<h3 dir="auto" id="informal-measures-of-relational-database-schema-quality-and-design-guidelines">Informal measures of relational database schema quality and design guidelines</h3>
+<ol dir="auto">
+<li dir="auto">Making sure that the semantics of the attributes is clear in the
+schema.</li>
+<li dir="auto">Reducing the redundant values in tuples.</li>
+<li dir="auto">Reducing the null values in tuples.</li>
+<li dir="auto">Disallowing the possibility of generating spurious tuples.</li>
+</ol>
+<h3 dir="auto" id="formal-design-guidelines">Formal Design guidelines</h3>
+<p dir="auto"><strong>Guideline 1: Design each relation so that it is easy to explain its meaning</strong></p>
+<ul dir="auto">
+<li dir="auto">Using meaningful names</li>
+<li dir="auto">Do not combine attributes from multiple entity types and relationship types into a single relation</li>
+</ul>
+<p dir="auto"><img src="image-1.png" alt="alt text" data-src="image-1.png"></p>
+<p dir="auto"><strong>Redundant values in Tuples</strong></p>
+<ul dir="auto">
+<li dir="auto">Design goal is to minimise the storage space that base relations occupy.</li>
+<li dir="auto">In addition, an incorrect grouping may cause update anomalies which may result in inconsistent data or even loss of data.</li>
+</ul>
+<h4 dir="auto" id="example-given-in-lectures">Example given in lectures</h4>
+<ul dir="auto">
+<li dir="auto">A company where an employee’s salary directly corresponds to the level or position, they hold. For example, a manager has a fixed salary of $700,000 and a developer has a fixed salary of $60,000.
+<ul dir="auto">
+<li dir="auto">I.e. <em>The level of the employee implies the salary of the employee</em></li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="image-3.png" alt="alt text" data-src="image-3.png"></p>
+<p dir="auto"><strong>Modification Anomalies</strong></p>
+<ul dir="auto">
+<li dir="auto">Updating the Salary of one developer, makes the “Developer” salary
+inconsistent.
+<strong>Deletion Anomalies</strong></li>
+<li dir="auto">By deleting ”Charlie” we no longer store the salary of “Administration” Staff.
+<strong>Insertion Anomalies</strong></li>
+<li dir="auto">We cannot store the salary of a “Cook” if no employee has that position.</li>
+<li dir="auto">Inserting a new row with a different Salary for a  developer, makes the “Developer” salary inconsistent.</li>
+</ul>
+<p dir="auto"><strong>Guideline 2: Design the base relation schema so that no insertion, deletion, or modification anomalies occur in the relations</strong></p>
+<ul dir="auto">
+<li dir="auto">If any do occur, ensure that all applications that access the database
+update the relations in such a way as to not compromise the integrity
+of the database</li>
+</ul>
+<p dir="auto"><strong>Guideline 3: As far as possible, avoid placing attributes in a base relation whose values may be null</strong></p>
+<ul dir="auto">
+<li dir="auto">Null values waste storage space, introduce ambiguity, and cannot be
+used for comparison</li>
+<li dir="auto">If nulls are unavoidable, make sure that they apply in exceptional
+cases only in the relation</li>
+</ul>
+<h3 dir="auto" id="decomposing-and-joining-a-relation">Decomposing and joining a relation</h3>
+<p dir="auto"><strong>Decomposition</strong></p>
+<ul dir="auto">
+<li dir="auto">A decomposition of R replaces R by two or more relations
+such that:
+<ul dir="auto">
+<li dir="auto">Each new relation contains a subset of the attributes of R (and no attributes not appearing in R)</li>
+<li dir="auto">Every attribute of R appears in at least one new relation.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="image-4.png" alt="alt text" data-src="image-4.png"></p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Before</strong></th>
+<th><strong>After</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="image-5.png" alt="alt text" data-src="image-5.png"></td>
+<td><img src="image-6.png" alt="alt text" data-src="image-6.png"></td>
+</tr>
+</tbody>
+</table>
+<p dir="auto"><strong>Join operation</strong></p>
+<p dir="auto">Definition: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mn>1</mn><mo>⋈</mo><mi>R</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">R1 \bowtie R2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6883em;vertical-align:-0.005em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⋈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord">2</span></span></span></span>  is the natural join of the two relations</p>
+<ul dir="auto">
+<li dir="auto">Each tuple of R1 is concatenated with every tuple in R2
+having the same values on the common attributes</li>
+</ul>
+<p dir="auto"><img src="image-7.png" alt="alt text" data-src="image-7.png"></p>
+<p dir="auto"><strong>Lossy Join operation</strong>
+The word loss in lossless refers to loss of information, not loss of tuples</p>
+<ul dir="auto">
+<li dir="auto">Maybe a better term here is “addition of spurious information”</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Why is this a lossy join?</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="image-8.png" alt="alt text" data-src="image-8.png"></p>
+<h2 dir="auto" id="functional-dependencies">Functional dependencies</h2>
+<p dir="auto">Databases allow you to say that one attribute determines another
+through a functional dependency</p>
+<p dir="auto"><strong>Example above:</strong></p>
+<ul dir="auto">
+<li dir="auto">Assume level determines salary but not id. We say that there is a
+functional dependency from level to salary (i.e., if we know an
+employee's level, we can find their salary )</li>
+</ul>
+<h3 dir="auto" id="formal-definition">Formal Definition</h3>
+<p dir="auto">A functional dependency (FD) $X \rightarrow Y $ holds on relation R if for every
+legal instance of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> such as <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>, for all tuples t1, t2:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>if</mtext><mtext>  </mtext><mtext>  </mtext><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo><mo>=</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo><mo>→</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo><mo>=</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex"> \text{if} \; \; t_{1}[X] = t_{2}[X] \rightarrow t_{1}[Y] = t_{2}[Y]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">if</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mclose">]</span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">Which means given two tuples in r, if their X values agree, then their Y
+values must also agree</li>
+<li dir="auto">Example: level <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> salary (i.e., if two employees have the same level,
+then they must have the same salary)</li>
+</ul>
+<h3 dir="auto" id="keys">Keys</h3>
+<p dir="auto">A key is a minimal set of attributes that uniquely identify a relation</p>
+<ul dir="auto">
+<li dir="auto">i.e., a key is a minimal set of attributes that functionally determines all the attributes in the relation
+A superkey for a relation uniquely identifies the relation</li>
+</ul>
+<p dir="auto"><img src="image-9.png" alt="alt text" data-src="image-9.png"></p>
+<ul dir="auto">
+<li dir="auto">Example key:  {<u>ID</u>}</li>
+<li dir="auto">Example superkey: {<u>ID</u>, level}</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">They have added the level to the field list - since it still uniquely identifies the relation, it is a superkey</p>
+</blockquote>
+<h3 dir="auto" id="implicit-and-explicit-fds">Implicit and Explicit FD's</h3>
+<p dir="auto">Given a set of (explicit) functional dependencies, we can determine
+implicit ones</p>
+<ul dir="auto">
+<li dir="auto">Explicit FDs: ID <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> level,  level <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> salary</li>
+<li dir="auto">Implicit FD: ID <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> salary</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">NOTE: this example above is called a transitive dependency, we will learn more about this next week!</p>
+</blockquote>
+<p dir="auto"><strong>Many implicit FDs can be derived</strong></p>
+<p dir="auto"><img src="image-10.png" alt="alt text" data-src="image-10.png"></p>
+
+</main>
+</body>
+</html>
