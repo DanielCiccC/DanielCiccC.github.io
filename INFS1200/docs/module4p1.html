@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
-<meta name="description" content="undefined - microjam page">
+<meta name="description" content="module4p1 - microjam page">
 
 
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
 
-<title>undefined</title>
+<title>module4p1</title>
 </head>
 <body id="top">
 <header>
@@ -41,7 +41,7 @@ schema.</li>
 <li dir="auto">Using meaningful names</li>
 <li dir="auto">Do not combine attributes from multiple entity types and relationship types into a single relation</li>
 </ul>
-<p dir="auto"><img src="image-1.png" alt="alt text" data-src="image-1.png"></p>
+<p dir="auto"><img src="assets\IMG87.PNG" alt="alt text" data-src="assets/IMG87.PNG"></p>
 <p dir="auto"><strong>Redundant values in Tuples</strong></p>
 <ul dir="auto">
 <li dir="auto">Design goal is to minimise the storage space that base relations occupy.</li>
@@ -55,7 +55,7 @@ schema.</li>
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="image-3.png" alt="alt text" data-src="image-3.png"></p>
+<p dir="auto"><img src="assets\IMG88.PNG" alt="alt text" data-src="assets/IMG88.PNG"></p>
 <p dir="auto"><strong>Modification Anomalies</strong></p>
 <ul dir="auto">
 <li dir="auto">Updating the Salary of one developer, makes the “Developer” salary
@@ -90,7 +90,7 @@ such that:
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="image-4.png" alt="alt text" data-src="image-4.png"></p>
+<p dir="auto"><img src="assets\IMG89.PNG" alt="alt text" data-src="assets/IMG89.PNG"></p>
 <table dir="auto">
 <thead dir="auto">
 <tr dir="auto">
@@ -100,8 +100,8 @@ such that:
 </thead>
 <tbody dir="auto">
 <tr dir="auto">
-<td><img src="image-5.png" alt="alt text" data-src="image-5.png"></td>
-<td><img src="image-6.png" alt="alt text" data-src="image-6.png"></td>
+<td><img src="assets\IMG90.PNG" alt="alt text" data-src="assets/IMG90.PNG"></td>
+<td><img src="assets\IMG91.PNG" alt="alt text" data-src="assets/IMG91.PNG"></td>
 </tr>
 </tbody>
 </table>
@@ -111,7 +111,7 @@ such that:
 <li dir="auto">Each tuple of R1 is concatenated with every tuple in R2
 having the same values on the common attributes</li>
 </ul>
-<p dir="auto"><img src="image-7.png" alt="alt text" data-src="image-7.png"></p>
+<p dir="auto"><img src="assets\IMG92.PNG" alt="alt text" data-src="assets/IMG92.PNG"></p>
 <p dir="auto"><strong>Lossy Join operation</strong>
 The word loss in lossless refers to loss of information, not loss of tuples</p>
 <ul dir="auto">
@@ -122,7 +122,7 @@ The word loss in lossless refers to loss of information, not loss of tuples</p>
 <li dir="auto">Why is this a lossy join?</li>
 </ul>
 </blockquote>
-<p dir="auto"><img src="image-8.png" alt="alt text" data-src="image-8.png"></p>
+<p dir="auto"><img src="assets\IMG93.PNG" alt="alt text" data-src="assets/IMG93.PNG"></p>
 <h2 dir="auto" id="functional-dependencies">Functional dependencies</h2>
 <p dir="auto">Databases allow you to say that one attribute determines another
 through a functional dependency</p>
@@ -149,7 +149,7 @@ then they must have the same salary)</li>
 <li dir="auto">i.e., a key is a minimal set of attributes that functionally determines all the attributes in the relation
 A superkey for a relation uniquely identifies the relation</li>
 </ul>
-<p dir="auto"><img src="image-9.png" alt="alt text" data-src="image-9.png"></p>
+<p dir="auto"><img src="assets\IMG94.PNG" alt="alt text" data-src="assets/IMG94.PNG"></p>
 <ul dir="auto">
 <li dir="auto">Example key:  {<u>ID</u>}</li>
 <li dir="auto">Example superkey: {<u>ID</u>, level}</li>
@@ -168,7 +168,41 @@ implicit ones</p>
 <p dir="auto">NOTE: this example above is called a transitive dependency, we will learn more about this next week!</p>
 </blockquote>
 <p dir="auto"><strong>Many implicit FDs can be derived</strong></p>
-<p dir="auto"><img src="image-10.png" alt="alt text" data-src="image-10.png"></p>
+<p dir="auto"><img src="assets\IMG95.PNG" alt="alt text" data-src="assets/IMG95.PNG"></p>
+<h3 dir="auto" id="closure-of-x">Closure of X</h3>
+<p dir="auto">Closure of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>X</mi><mo lspace="0em" rspace="0em">+</mo></msup></mrow><annotation encoding="application/x-tex">X^{+}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7713em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">+</span></span></span></span></span></span></span></span></span></span></span></span> is the set of attributes determined by X under F.</p>
+<p dir="auto"><img src="image-1.png" alt="alt text" data-src="image-1.png"></p>
+<blockquote dir="auto">
+<p dir="auto">Will do will this to prove superkeys, or find candidate keys</p>
+</blockquote>
+<h3 dir="auto" id="a-note-about-finding-keys">A note about finding keys</h3>
+<p dir="auto">Tips for finding keys:</p>
+<ol dir="auto">
+<li dir="auto">If an attribute does not appear on the RHS of any FDs in F, a
+key must contain that attribute</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">e.g., D would be part of any key</li>
+</ul>
+<ol start="2" dir="auto">
+<li dir="auto">If a subset S is a key, there is no need to test any superset
+of S</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">e.g., given {E, D} is key no need to check {E, D, A}</li>
+</ul>
+<ol start="3" dir="auto">
+<li dir="auto">One relation can have multiple keys of different length</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">e.g., both {A, B, D} and {E, D} are keys</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">More on this in the tutorial</p>
+</blockquote>
+<h3 dir="auto" id="youtube-videos-which-will-help">YouTube videos which will help:</h3>
+<p dir="auto"><a href="https://www.youtube.com/watch?v=YQt_kz3JgXI">Finding a candidate key, simple</a></p>
+<p dir="auto"><a href="https://www.youtube.com/watch?v=9fuJUQJd-A8&amp;t=384s">Finding a candidate key, more difficult</a></p>
 
 </main>
 </body>

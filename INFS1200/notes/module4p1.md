@@ -123,3 +123,30 @@ implicit ones
 **Many implicit FDs can be derived**
 
 ![alt text](assets\IMG95.PNG)
+
+### Closure of X
+Closure of $X$ or $X^{+}$ is the set of attributes determined by X under F. 
+
+![alt text](assets\IMG96.PNG)
+
+> Will do will this to prove superkeys, or find candidate keys
+
+### A note about finding keys
+
+Tips for finding keys:
+1. If an attribute does not appear on the RHS of any FDs in F, a 
+key must contain that attribute
+ - e.g., D would be part of any key
+2. If a subset S is a key, there is no need to test any superset 
+of S
+ - e.g., given {E, D} is key no need to check {E, D, A}
+3. One relation can have multiple keys of different length
+ - e.g., both {A, B, D} and {E, D} are keys
+
+> More on this in the tutorial
+
+### YouTube videos which will help:
+
+[Finding a candidate key, simple](https://www.youtube.com/watch?v=YQt_kz3JgXI)
+
+[Finding a candidate key, more difficult](https://www.youtube.com/watch?v=9fuJUQJd-A8&t=384s)
