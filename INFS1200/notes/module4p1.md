@@ -90,7 +90,7 @@ functional dependency from level to salary (i.e., if we know an
 employee's level, we can find their salary )
 
 ### Formal Definition
-A functional dependency (FD) $X \rightarrow Y $ holds on relation R if for every 
+A functional dependency (FD) $X \rightarrow Y$ holds on relation R if for every 
 legal instance of $R$ such as $r$, for all tuples t1, t2:
 
 $$ \text{if} \; \; t_{1}[X] = t_{2}[X] \rightarrow t_{1}[Y] = t_{2}[Y]$$
