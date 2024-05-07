@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="normalisation">Normalisation</h1>
+<h3 dir="auto" id="key-concepts">Key concepts</h3>
+<p dir="auto"><strong>Superkey</strong>: a set of attributes such that no two tuples have the same values
+for these attributes</p>
+<ul dir="auto">
+<li dir="auto">That is, its closure contains all attributes in the relation</li>
+</ul>
+<p dir="auto"><strong>(Candidate) key:</strong> a minimal superkey where non of the attributes can be
+removed to create another superkey.</p>
+<ul dir="auto">
+<li dir="auto">Minimal ≠ shortest</li>
+<li dir="auto">There can be many candidate keys for one relation</li>
+<li dir="auto">Any superkey must contain at least one candidate key</li>
+</ul>
+<p dir="auto"><strong>Primary key:</strong> one of the selected candidate keys</p>
+<ul dir="auto">
+<li dir="auto">There can be only one primary key for a relation</li>
+</ul>
+<p dir="auto"><strong>Prime attribute:</strong> an attribute in any candidate key</p>
+<ul dir="auto">
+<li dir="auto">Not necessarily a member of the primary key!</li>
+</ul>
+<p dir="auto"><strong>Non-prime attribute:</strong> An attribute that is not a member of any candidate key</p>
+<h3 dir="auto" id="normalization-the-process-of-identifying-redundancy-from-data">Normalization: the process of identifying redundancy from data</h3>
+<p dir="auto">Normalization is a process that aims at achieving better designed relational database schemas using</p>
+<ul dir="auto">
+<li dir="auto">Functional Dependencies</li>
+<li dir="auto">Primary Keys
+The normalization process takes a relational schema through a series of tests to certify whether it satisfies certain conditions</li>
+<li dir="auto">The schemas that satisfy certain conditions are said to be in a given Normal Form</li>
+<li dir="auto">Unsatisfactory schemas are decomposed by breaking up their attributes into smaller relations that possess desirable properties (e.g., no anomalies)</li>
+</ul>
+<p dir="auto">Normalisation Overview</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Form</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><strong>1NF</strong></td>
+<td><strong>Outcome</strong>: Identifying non-atomic values from relations. <br> <strong>Test</strong>: Relation should have no multivalued attributes or nested relations.</td>
+</tr>
+<tr dir="auto">
+<td><strong>2NF</strong></td>
+<td><strong>Outcome</strong>: Identifying partial dependencies, which helps remove some anomalies. <strong>Test</strong>: LHS of any non-trivial FD in F+ is not a proper subset of a candidate key, or RHS is a prime attribute</td>
+</tr>
+<tr dir="auto">
+<td><strong>3NF</strong></td>
+<td><strong>Outcome</strong>: Identifying partial and transitive dependencies, which helps remove most anomalies <strong>Test</strong>: LHS of any non-trivial FD in F+ is a superkey, or RHS is a prime attribute.</td>
+</tr>
+<tr dir="auto">
+<td><strong>BCNF</strong></td>
+<td><strong>Outcome</strong>: Identifying all anomalies at the cost of not preserving all FDs<strong>Test</strong>: LHS of any non-trivial FD in F+ is a superkey.</td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="1nf">1NF</h3>
+<ul dir="auto">
+<li dir="auto">The value of an attribute is a single value from the domain of that attribute</li>
+<li dir="auto">1NF disallows having a set of values, a tuple of values (nested attributes), or a combination of both</li>
+</ul>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Non-1NF relations</strong></th>
+<th><strong>Normalised to 1NF</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="image-1.png" alt="alt text" data-src="image-1.png"></td>
+<td><img src="image-2.png" alt="alt text" data-src="image-2.png"></td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="2nf">2NF</h3>
+<p dir="auto">A relation schema R is in 2NF if every non-prime attribute A in R is fully functionally dependent on the primary key of R.</p>
+<ul dir="auto">
+<li dir="auto">2NF can be said informally to have no partial dependency</li>
+</ul>
+<p dir="auto"><img src="image-3.png" alt="alt text" data-src="image-3.png"></p>
+<p dir="auto"><strong>More Formally</strong></p>
+<p dir="auto"><img src="image-4.png" alt="alt text" data-src="image-4.png"></p>
+<h3 dir="auto" id="3nf">3NF</h3>
+<p dir="auto"><img src="image-5.png" alt="alt text" data-src="image-5.png"></p>
+<p dir="auto"><img src="image-6.png" alt="alt text" data-src="image-6.png"></p>
+<p dir="auto">In other words, a relation is in 3NF iff for any non-trivial FD X <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> A, where A is a non-prime attribute, X must be a superkey</p>
+<h3 dir="auto" id="bcnf-boyce-codd-normal-form">BCNF (Boyce-Codd Normal Form)</h3>
+<p dir="auto"><img src="image-7.png" alt="alt text" data-src="image-7.png"></p>
+<p dir="auto"><strong>Informally</strong>: Whenever a set of attributes of R determine another attribute, it should determine all the attributes of R.</p>
+<p dir="auto"><img src="image-8.png" alt="alt text" data-src="image-8.png"></p>
+<h2 dir="auto" id="relational-database-schema-design">Relational Database Schema Design</h2>
+<p dir="auto"><img src="image-9.png" alt="alt text" data-src="image-9.png"></p>
+<h3 dir="auto" id="bcnf-synthesis">BCNF synthesis</h3>
+<p dir="auto"><img src="image-10.png" alt="alt text" data-src="image-10.png"></p>
+<h3 dir="auto" id="3nf-synthesis">3NF synthesis</h3>
+<p dir="auto"><img src="image-11.png" alt="alt text" data-src="image-11.png"></p>
+<p dir="auto"><strong>Finding minimal cover:</strong>
+<img src="image-12.png" alt="alt text" data-src="image-12.png"></p>
+<p dir="auto"><img src="image-13.png" alt="alt text" data-src="image-13.png"></p>
+<p dir="auto"><strong>Synthesis</strong>
+<img src="image-14.png" alt="alt text" data-src="image-14.png"></p>
+
+</main>
+</body>
+</html>
