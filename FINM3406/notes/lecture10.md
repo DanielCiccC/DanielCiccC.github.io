@@ -75,7 +75,7 @@ Medical Rents
 Build cost
 - Sprinklers and basements have large impacts on the build cost
 
-**Return on development costs** - typically 20%
+**Return on total development costs** - typically 20%
 
 **Passing yield** - 4.79% cap rate
 - medical asset in Ipswitch actively advertised for 8%
