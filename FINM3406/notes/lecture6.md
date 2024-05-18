@@ -369,6 +369,7 @@ API Practice Standard – “Discounted Cash Flows”
 >   - WACC
 >   - Have a client tell you the preferred discount rate
 
+
 **From the preceding definitions, we can glean the following:**
 
 - The discount rate as applied in the property industry is the return required by the investor (the probable purchaser of the property). It incorporates opportunity cost (the return that the investor could have received on an alternative investment) inflation and risk.  In selecting a discount rate, due consideration should be given to property market forces, particularly:

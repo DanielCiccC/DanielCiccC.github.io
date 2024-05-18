@@ -104,8 +104,7 @@ Ministerial Infrastructure Designation has been fully approved.
 
 Annerley Health Hub
 Aims to complement the service offerings within the Princess Alexandra Hospital precinct comprising: 
-- 6 storey building that Area that will cater for a range of allied health services including general practice, diagnostic 
-imaging, pharmacy, pathology, radiology, and day surgery. 
+- 6 storey building that Area that will cater for a range of allied health services including general practice, diagnostic imaging, pharmacy, pathology, radiology, and day surgery. 
 - Ground level, with retail and an ancillary café along Ipswich Road 
 - Dedicated pedestrian entrance and vehicle access from the Cornwall Street frontage 
 - Car parking areas within a basement level comprising 200 spaces across 4 basement levels. 

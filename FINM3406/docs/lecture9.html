@@ -1,0 +1,686 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-9-mortgages">Lecture 9: Mortgages</h1>
+<blockquote dir="auto">
+<p dir="auto">Mortgage Mathematics - IMPORTANT</p>
+</blockquote>
+<h3 dir="auto" id="objectives">Objectives:</h3>
+<ul dir="auto">
+<li dir="auto">Understand to legal and histrocial context of mortgages in Queensland and the role they play in real estate finance</li>
+<li dir="auto">Understand the role of mortgages as part of collateralised debt obligations and how this influenced the GFC</li>
+<li dir="auto">Be able to explain and apply the different types of mortgage repayment structures</li>
+</ul>
+<h2 dir="auto" id="what-is-a-mortgage">What is a mortgage?</h2>
+<ul dir="auto">
+<li dir="auto">Term mortgage comes from old Norse French “mort” meaning death and “gage” referring to a “pledge.</li>
+<li dir="auto">A mortgage is taken over a property as security for a loan. A mortgage is a contractual arrangement where one party (the mortgagor) provides property as security for a loan provided by the other party (the mortgagee). When the debt is repaid, the mortgage expires.</li>
+<li dir="auto">The offer of property as a security becomes an interest in the land for the lender.  The land becomes encumbered by the mortgage – historically mortgagee held the physical Certificate of Title to effectively stop any sale without the debt being paid off.</li>
+<li dir="auto">Like leases it creates both contractual rights (rights in personam) and property rights (rights in rem).</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Taken out over a particular property
+<ul dir="auto">
+<li dir="auto">Used as a form of security that is granted by somebody</li>
+</ul>
+</li>
+<li dir="auto">Securitise a loan that has nothing to do with the security
+<ul dir="auto">
+<li dir="auto">mortgagor just needs to have some sort of security</li>
+</ul>
+</li>
+<li dir="auto">Offer property as security, mortgagor has interest in the land</li>
+</ul>
+<p dir="auto">Historically, proof of title was handed over to mortgagee as security</p>
+<ul dir="auto">
+<li dir="auto">only stopped about 25 years ago - banks held a vault with property titles</li>
+<li dir="auto">Title used to be handed over physically at the same of property - hence 'conveyancing' the property over to another party</li>
+</ul>
+<p dir="auto">Not just a contractual right</p>
+</blockquote>
+<h3 dir="auto" id="overview-of-mortgages-in-queensland">Overview of Mortgages in Queensland</h3>
+<ul dir="auto">
+<li dir="auto">A mortgage is a legal agreement between a borrower and a lender in which the borrower
+pledges property as security for a loan.</li>
+<li dir="auto">In Queensland, mortgages are governed by the Part 7 of the Property Law Act 1974
+(currently a Property Law Bill 2023 is before parliament – will update but not fundamentally
+alter rules)</li>
+<li dir="auto">A mortgagee (the lender) has the right to take possession of or sell the property if the
+borrower defaults on the loan.</li>
+<li dir="auto">Mortgages must be registered on the title of the property to be enforceable against third
+parties. Otherwise just contractual remedies for lender against borrower.</li>
+</ul>
+<h3 dir="auto" id="registered-mortgages">Registered Mortgages</h3>
+<ul dir="auto">
+<li dir="auto">A registered mortgage is a legal interest in the property that is recognized by law and is
+registered on the property's title.</li>
+<li dir="auto">A registered mortgage gives the mortgagee the right to take possession of or sell the property
+if the borrower defaults on the loan.</li>
+<li dir="auto">If a mortgage is not registered, it may not be enforceable against third parties, and the
+mortgagee may not have the legal right to take possession of or sell the property in the event
+of default.</li>
+<li dir="auto">It's important for both borrowers and lenders to ensure that a mortgage is properly registered
+on the title of the property in order to ensure that the rights and obligations under the
+mortgage are legally binding and enforceable.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">If you as a borrower don't pay the loan, lender has a right to take possession of the property</p>
+<ul dir="auto">
+<li dir="auto">mortgagees can take possession of the property if you are doing something that destroys it's value</li>
+<li dir="auto">taking possession to everything - to rents maintenance, insurance, everything on the land, etc.</li>
+</ul>
+<p dir="auto">If mortgagee can't enforce payment of rent (after the possession), e.g. if the mortgage is not registered.</p>
+</blockquote>
+<h3 dir="auto" id="equity-of-redemption">Equity of Redemption</h3>
+<ul dir="auto">
+<li dir="auto">The equity of redemption is the borrower's right to redeem the property by paying the
+outstanding debt before the mortgagee exercises their power of sale.</li>
+<li dir="auto">The equity of redemption is a fundamental principle of mortgages in Queensland.</li>
+<li dir="auto">The mortgagee must provide the borrower with notice before exercising their power of sale.</li>
+<li dir="auto">The borrower has the right to challenge the mortgagee's decision to exercise their power of
+sale in court.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Can't destroy the equity of the property when exercising their power of sale</p>
+</blockquote>
+<h3 dir="auto" id="power-of-sale">Power of Sale</h3>
+<ul dir="auto">
+<li dir="auto">The power of sale is the mortgagee’s right sell the property in the event of default.</li>
+<li dir="auto">Mortgagee in Possession – can lead to a sale or can result in mortgagee operating the property.</li>
+<li dir="auto">The mortgagee must strictly comply with certain requirements before exercising their power of sale, such as providing notice to the borrower – opportunity to remedy etc.</li>
+<li dir="auto">If the sale of the property does not cover the outstanding debt, the borrower may still be liable for the remaining amount.</li>
+<li dir="auto">If the sale generates more than the outstanding debt, the mortgagor will receive the difference (after mortgagee’s costs).</li>
+</ul>
+<h3 dir="auto" id="mortgagee-in-possession">Mortgagee in Possession</h3>
+<ul dir="auto">
+<li dir="auto">If the rent received from taking possession of a property is more than the mortgage
+payments, the mortgagee may be able to keep the difference as income. However, the
+mortgagee must still comply with the terms of the mortgage and act in good faith towards the
+borrower.</li>
+<li dir="auto">Under the Property Law Act 1974 in Queensland, if a mortgagee takes possession of a
+property and generates income from it, they must apply the income towards the following in
+the following order of priority:</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">Any expenses associated with managing the property, such as repairs, maintenance, and insurance.</li>
+<li dir="auto">The mortgage payments owed by the borrower.</li>
+<li dir="auto">Any other amounts owed by the borrower under the mortgage or related agreements.</li>
+</ol>
+<blockquote dir="auto">
+<p dir="auto">Have to maintain property and receive any surplus from rent, etc</p>
+</blockquote>
+<h2 dir="auto" id="current-issues-and-trends">Current issues and trends</h2>
+<p dir="auto"><img src="image-2.png" alt="alt text" data-src="image-2.png"></p>
+<blockquote dir="auto">
+<p dir="auto">Interest rates are low, but the amount you have to borrow vs disposable income is very high</p>
+<ul dir="auto">
+<li dir="auto">More and more expensive to have a mortgage than it used to be</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="mortgages-from-an-investment-perspective">Mortgages from an Investment Perspective</h3>
+<ul dir="auto">
+<li dir="auto">Broadly, mortgages are divided into residential mortgages and commercial mortgages.</li>
+</ul>
+<p dir="auto">Differ in several respects:</p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Individual residential loans are much smaller amounts on average, but much more numerous than commercial loans</p>
+</li>
+<li dir="auto">
+<p dir="auto">Residential owner-occupied properties generate no income, so the lender depends on the individual borrower’s income to service the loan, while commercial loans can be serviced by the income produced by the property securing the debt.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Resi borrowers are not financial or business professionals and are only in the market for a loan on occasion, commercial borrowers are typically commercial or financial entities staffed by professionals with much greater financial expertise.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Commercial properties tend to be more unique, while single-family homes tend to be more
+homogenous</p>
+</li>
+<li dir="auto">
+<p dir="auto">Social and political concerns, and the resulting government involvement, are much greater
+regarding residential loans than commercial loans, including different statutory and common
+laws governing foreclosure and bankruptcy for residential versus commercial loans</p>
+</li>
+<li dir="auto">
+<p dir="auto">Residential mortgage business has become more of a “mass production” fairly standardised
+industry.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Commercial mortgages remains more of a “custom shop” where individual loans are crafted
+and negotiated.</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">legitimate investment tool</p>
+<ul dir="auto">
+<li dir="auto">residential loans are small but lots of them</li>
+<li dir="auto">If borrowing sits within trend range</li>
+</ul>
+<p dir="auto">Valuers are engaged to find LTV is adequate</p>
+<ul dir="auto">
+<li dir="auto">Extent to which the government wants to play in this space will change investment in property</li>
+<li dir="auto">legislation changes rights of sale, can materialise into a riskier investment</li>
+<li dir="auto">E.g. government makes it harder to evict you out of your house, riskier investment</li>
+</ul>
+<p dir="auto">Bundling a bunch of mortgages together</p>
+<ul dir="auto">
+<li dir="auto">residential mortgages make sense, all pretty generic</li>
+<li dir="auto">Commercial properties are a lot more difficult, loan terms can be a lot more different</li>
+<li dir="auto">Bank to bank will be different</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="calculating-loan-payments-and-balances">Calculating Loan Payments and Balances</h3>
+<p dir="auto">There are Four Basic Rules for calculating loan payments and balances:</p>
+<ul dir="auto">
+<li dir="auto">Rule 1: The interest owed in each period equals the applicable interest rate times the outstanding
+principal balance at the end of the previous period.</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>I</mi><mi>N</mi><msub><mi>T</mi><mi>t</mi></msub><mo>=</mo><mo stretchy="false">(</mo><mi>O</mi><mi>L</mi><msub><mi>B</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><msub><mo stretchy="false">)</mo><mrow><mi>r</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">INT_{t} = (OLB_{t-1})_{rt}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal">L</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">Rule 2:  The principal amortised (paid down) in each payment equals the total payment (net of
+expenses and penalties) minus the interest owed:</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>M</mi><mi>O</mi><mi>R</mi><msub><mi>T</mi><mi>t</mi></msub><mo>=</mo><mi>P</mi><mi>M</mi><msub><mi>T</mi><mi>t</mi></msub><mo>−</mo><mi>I</mi><mi>N</mi><msub><mi>T</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">AMORT_{t} = PMT_{t}-INT_{t}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">MOR</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">PM</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">Rule 3: The outstanding principal balance after each payment equals the previous outstanding principal balance minus the principal paid down in the payment:</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>O</mi><mi>L</mi><msub><mi>B</mi><mi>t</mi></msub><mo>=</mo><mi>O</mi><mi>L</mi><msub><mi>B</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><mi>A</mi><mi>M</mi><mi>O</mi><mi>R</mi><msub><mi>T</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">OLB_{t}=OLB_{t-1}-AMORT_{t}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal">L</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal">L</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">MOR</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">Rule 4:  The initial outstanding principal balance equals the initial contract principal specified in the
+loan agreement:</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>O</mi><mi>L</mi><msub><mi>B</mi><mn>0</mn></msub><mo>=</mo><mi>L</mi></mrow><annotation encoding="application/x-tex">OLB_{0} = L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal">L</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span></span></p>
+</math>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">How much you have to pay, how much you have to pay back at any period of time</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="image-3.png" alt="alt text" data-src="image-3.png"></p>
+<blockquote dir="auto">
+<p dir="auto">need to work out frequency of payments, frequency of payments, e.g.</p>
+</blockquote>
+<h3 dir="auto" id="applying-the-rules-to-design-loans">Applying the Rules to Design Loans</h3>
+<ul dir="auto">
+<li dir="auto">There are a number of loan types which the Four Rules can be
+applied to:</li>
+<li dir="auto">Interest-only loan</li>
+<li dir="auto">Constant Amortization Mortgage (CAM)</li>
+<li dir="auto">Graduated Payment Mortgage (GPM)</li>
+<li dir="auto">Adjustable Rate Mortgage (ARM)</li>
+</ul>
+<h3 dir="auto" id="1-interest-only-loan">1. Interest Only Loan</h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mi>M</mi><msub><mi>T</mi><mi>t</mi></msub><mo>=</mo><mi>I</mi><mi>N</mi><msub><mi>T</mi><mi>t</mi></msub><mo>=</mo><mi>O</mi><mi>L</mi><msub><mi>B</mi><mi>t</mi></msub><mo>×</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">PMT_{t} = INT_{t} = OLB_{t} \times i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">PM</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal">L</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span></span></p>
+</math>
+<p dir="auto">or equivalently, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>L</mi><msub><mi>B</mi><mi>t</mi></msub><mo>=</mo><mi>L</mi><mo separator="true">,</mo><mi>A</mi><mi>M</mi><mi>O</mi><mi>R</mi><msub><mi>T</mi><mi>t</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">OLB_{t} = L, AMORT_{t} = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal">L</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">L</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">MOR</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> for all <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span></p>
+<ul dir="auto">
+<li dir="auto">Oldest and most basic of loan payments.</li>
+<li dir="auto">In interest only loan, no amortization of principal
+<ul dir="auto">
+<li dir="auto">Outstanding loan balance remains constant throughout the life of the loan</li>
+<li dir="auto">Entire original principal must be paid back to the borrower in a lump sum (balloon) at the loan’s maturity date.</li>
+<li dir="auto">Regular loan payments consist purely of interest</li>
+<li dir="auto">If interest rate is fixed, loan payments will remain constant</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">consistent, every month and payment</p>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Normally, a relatively short term maturity 4 to 5 yrs, so best is used to finance property investments with correspondingly short holding periods (or re-finance during longer holding periods).</p>
+</li>
+<li dir="auto">
+<p dir="auto">Used extensively for taxation purposes.</p>
+</li>
+<li dir="auto">
+<p dir="auto">The repayment spike at the end of the loan confronts the borrower with the need to either refinance the loan or sell the property when the loan matures.</p>
+<ul dir="auto">
+<li dir="auto">Can cause problems if either the property or the debt market is not favourable at that time.</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Classical payment pattern of long-term corporate and government bonds and is not unusual in commercial mortgages.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Has advantage to the borrower of regular payments that are less than those of equivalent amortising loan.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Because principal is not paid down, maximises the total dollar magnitude of interest paid over the lifetimes of the loan, compared to other amortizing loans.</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">good for taxation purposes, all interest payments are tax deductable</p>
+</blockquote>
+<p dir="auto"><img src="image-4.png" alt="alt text" data-src="image-4.png"></p>
+<h3 dir="auto" id="interest-only-mortgages">Interest Only Mortgages</h3>
+<p dir="auto"><strong>Key Advantages</strong></p>
+<ul dir="auto">
+<li dir="auto">Low payments (compared to principal &amp; interest)</li>
+<li dir="auto">Payments are entirely tax deductible</li>
+<li dir="auto">PMTs always the same (easy to budget/administer) for fixed rate loans.</li>
+<li dir="auto">Payments do not vary with maturity.</li>
+<li dir="auto">Very Simple, easy to understand loan</li>
+</ul>
+<p dir="auto"><strong>Key Disadvantages</strong></p>
+<ul dir="auto">
+<li dir="auto">Big ‘balloon’ payment (refinancing risk amplified because term of loan is
+generally short)</li>
+<li dir="auto">OLB never decreased (therefore Interest payments never decrease)</li>
+<li dir="auto">Can have slightly higher interest rates than amortising loans</li>
+<li dir="auto">Lack of principal pay down can increase default risk</li>
+<li dir="auto">Builds equity slower than with amortising loan structures</li>
+<li dir="auto">The predominant loan type for investment properties – commercial
+and residential.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">interest payments never decrease</li>
+<li dir="auto">banks will make you pay slightly more</li>
+</ul>
+<p dir="auto"><img src="image-5.png" alt="alt text" data-src="image-5.png"></p>
+</blockquote>
+<h3 dir="auto" id="constant-amortisation-mortgage-cam">Constant-Amortisation Mortgage (CAM)</h3>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mi>M</mi><mi>O</mi><mi>R</mi><msub><mi>T</mi><mi>t</mi></msub><mo>=</mo><mi>L</mi><mi mathvariant="normal">/</mi><mi>N</mi></mrow><annotation encoding="application/x-tex">AMORT_{t} = L/N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.00773em;">MOR</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">Simplest way to solve the problem of the repayment spike at the end of the interest-only mortgage is to pay down a constant amount of principal in each loan payment.</li>
+<li dir="auto">Such loans used for a time in the 1930s when interest-only loans were causing havoc during the Great Depression and when persistent deflation resulted in declining rent and land values.</li>
+<li dir="auto">Characterised by a declining payment pattern.  As the loan balance is reduced by a constant amount each period, the interest owed falls by a constant amount as well.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Paying the principle down, along with interest</p>
+<ul dir="auto">
+<li dir="auto">pay back some of the principle, what of the payment equal interest?
+<img src="image-6.png" alt="alt text" data-src="image-6.png">
+Every month your principle deducted is the same
+means that your payment is varied</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Payments on a CAM are computed by dividing the initial principal by the number of payments to compute the amortisation amount per period, and then applying rule 2 to compute the total payment due each period as the sum of the amortisation and the interest computed based on rule 1.</li>
+<li dir="auto">Capital Sum (Principal paid back incrementally)</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto"><img src="image-7.png" alt="alt text" data-src="image-7.png">
+<img src="image-8.png" alt="alt text" data-src="image-8.png"></p>
+</blockquote>
+<p dir="auto"><strong>Key Advantages</strong></p>
+<ul dir="auto">
+<li dir="auto">Results in a quicker reduction in the outstanding balance
+<ul dir="auto">
+<li dir="auto">Suits borrowers who dislike bearing debts</li>
+</ul>
+</li>
+<li dir="auto">Quicker recovery of interest for lenders</li>
+<li dir="auto">Allows for tax shield at the beginning of the loan because of the
+higher amount of interest.</li>
+</ul>
+<p dir="auto"><strong>Key Disadvantages</strong></p>
+<ul dir="auto">
+<li dir="auto">Difficult for borrowers to manage because this method requires larger payments at
+the onset of the loan
+<ul dir="auto">
+<li dir="auto">Borrowers incomes that tend to increase over the years</li>
+<li dir="auto">High initial payments does not match the likely income generation of the property</li>
+</ul>
+</li>
+<li dir="auto">Change in payment contributions may make it difficult to manage budgets</li>
+<li dir="auto">In an economy free of persistent deflation, declining payment pattern is undesirable.
+<ul dir="auto">
+<li dir="auto">From mortgage investors, CAM likely requires an inconvenient reinvestment of
+capital each period as the mortgage is amortised.</li>
+</ul>
+</li>
+<li dir="auto">Not widely used today</li>
+</ul>
+<h3 dir="auto" id="fully-amortising-mortgages">Fully Amortising Mortgages</h3>
+<ul dir="auto">
+<li dir="auto">Fully amortising means the regular PMTs will fully repay the loan by the
+end of the term.</li>
+<li dir="auto">Each payment comprises the interest accrued since the last PMT + a portion
+of the remaining principal balance.</li>
+<li dir="auto">PMT is constant over loan term (at fixed i), but the proportion of the
+principal (PPMT) &amp; interest (IPMT) components of PMT alter over time</li>
+<li dir="auto">Loan terms of between 15 &amp; 30 years common</li>
+</ul>
+<p dir="auto">EXAM - IMPORTANT</p>
+<blockquote dir="auto">
+<p dir="auto">consistent way of receiving funding from an amortising bank</p>
+<p dir="auto"><img src="image-9.png" alt="alt text" data-src="image-9.png"></p>
+<p dir="auto"><img src="image-10.png" alt="alt text" data-src="image-10.png"></p>
+</blockquote>
+<h3 dir="auto" id="fully-amortising-mortgages-1">Fully Amortising Mortgages</h3>
+<p dir="auto"><strong>Key Advantages</strong></p>
+<ul dir="auto">
+<li dir="auto">Build equity faster (than interest only loan)</li>
+<li dir="auto">No balloon Pmt (no refinancing stress if loan runs full term &amp; reduced refinancing stress if doesn’t run full term)</li>
+<li dir="auto">Longer loan term can reduce financial risk</li>
+<li dir="auto">Can have slightly lower interest rates than interest only loans</li>
+<li dir="auto">Principal pay down can decrease default risk over time.</li>
+<li dir="auto">Low Pmts possible with long amortisation periods.</li>
+<li dir="auto">If on a fixed rate, Pmts constant so easy to budget/administer.</li>
+<li dir="auto">Flexibility allows trade-offs e.g. between Pmts &amp; terms, etc</li>
+</ul>
+<p dir="auto"><strong>Key Disadvantages</strong></p>
+<ul dir="auto">
+<li dir="auto">Higher payment than interest only, particularly shorter term loans, hence reduced cashflow</li>
+<li dir="auto">Principle component of payment is not tax deductible</li>
+</ul>
+<p dir="auto"><strong>Are the predominant loan type for owner occupier home loans.</strong></p>
+<blockquote dir="auto">
+<p dir="auto">Initial stages feel like you're treading water</p>
+</blockquote>
+<h3 dir="auto" id="adjustable-rate-mortgages-arm">Adjustable Rate Mortgages (ARM)</h3>
+<ul dir="auto">
+<li dir="auto">Another way to improve affordability for a borrower is to allow
+the contract interest rate in the loan to adjust periodically to
+changes in the interest rates prevailing in the debt market.</li>
+<li dir="auto">Reduces interest rate risk for the lender, making a lower interest
+rate possible.</li>
+<li dir="auto">Interest rates applicable over the life of an ARM are likely to
+vary up an down over time</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Changes interest rate in your calculator</p>
+<ul dir="auto">
+<li dir="auto">When you borrow money from the bank and it is variable</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Reduce the initial interest rates for long-term mortgages during times when a steeply upward-sloping yield curve is prevailing in the bond market.
+<ul dir="auto">
+<li dir="auto">Short-term bonds are priced with a lower yield than long term bonds</li>
+<li dir="auto">Tends to occur when inflation is expected to increase in the long term, or when
+short-term real interest rates are temporarily depressed due to stimulative government policy</li>
+</ul>
+</li>
+<li dir="auto">ARM may be a long term mortgage, it is like a chain of short-term fixed rate loans linked together because the interest rate can be adjusted at relatively short intervals.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto"><img src="image-11.png" alt="alt text" data-src="image-11.png"></p>
+<p dir="auto"><img src="image-12.png" alt="alt text" data-src="image-12.png"></p>
+</blockquote>
+<h2 dir="auto" id="mortgage-backed-securities">Mortgage Backed Securities</h2>
+<h3 dir="auto" id="commercial-mortgage-backed-securities">Commercial Mortgage Backed Securities</h3>
+<ul dir="auto">
+<li dir="auto">Commercial Mortgage Backed Securities (CMBS) refers to commercial mortgages that are pooled together and sold to investors.</li>
+<li dir="auto">Process is known as securitisation</li>
+<li dir="auto">During 1990s and until 2008 CMBS provided new &amp; efficient form of debt
+capital for real estate</li>
+<li dir="auto">Improved liquidity and transparency of commercial real estate &amp;
+integration into other capital markets</li>
+</ul>
+<h3 dir="auto" id="cbms">CBMS</h3>
+<ul dir="auto">
+<li dir="auto">CMBS are financial instruments (bonds) backed by pools of commercial mortgages</li>
+<li dir="auto">CMBS securities provide claims to components of the cash flow coming from underlying mortgages (borrowers pay principal and interest)</li>
+<li dir="auto">Mortgage loans on individual commercial properties originated by lenders in the primary
+market are pooled together</li>
+<li dir="auto">Pool of loans are transferred to a trust – issue and sell classes of bonds to investors.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Pool together a bunch of mortgages, sell as an investment</p>
+<ul dir="auto">
+<li dir="auto">Way a bank can get more capital, and provide more mortgages</li>
+<li dir="auto">Financial instrument, integrates real estate into capital markets</li>
+</ul>
+<p dir="auto">Claim from the CMBS to cash flows</p>
+<ul dir="auto">
+<li dir="auto">transferred to a trust, paid in interest</li>
+<li dir="auto">Have their own value and market, which may be completed disassociated with the underlying value of the assets</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Many Australian listed and unlisted property trusts raised debt in this form in the early and mid-2000s</li>
+<li dir="auto">The CMBS were backed by mortgages over several properties of one trust.</li>
+<li dir="auto">Provide institutions investors returns based on loan payments and payment of capital at maturity.</li>
+<li dir="auto">Until 2007 CMBS with AAA Rating were the norm for raising debt at a lower cost than banks.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Another indirect way of interacting with sector</p>
+<ul dir="auto">
+<li dir="auto">Given really high credit ratings</li>
+<li dir="auto">Able to access debt at rates better than going to the bank for the underlying security</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="key-features-of-mortgage-backed-securities">Key Features of Mortgage Backed Securities</h3>
+<ol dir="auto">
+<li dir="auto">Securitisation: process of pooling mortgages</li>
+<li dir="auto">Tranching: separation of securities into classes</li>
+<li dir="auto">Bond Credit Rating: the riskiness of an investment</li>
+<li dir="auto">Other: Loan maturity, waterfall (tiering of creditor payment
+priority)</li>
+</ol>
+<h3 dir="auto" id="1-securitisation-the-principle">1. Securitisation: The Principle</h3>
+<ul dir="auto">
+<li dir="auto">Loans earn interest but..
+<ul dir="auto">
+<li dir="auto">Are illiquid (maturity mismatch, interest rate risk…)</li>
+</ul>
+</li>
+<li dir="auto">Securitisation: bundle loans to standardised sizes and risk and sell the claims:
+<ul dir="auto">
+<li dir="auto">Immediate cash-inflow for the bank</li>
+<li dir="auto">Bank provides the service of collecting and passing through the loan
+cash flows</li>
+<li dir="auto">Default risk (by large) with the buyer</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Lent the money and have interest payments coming back</p>
+<ul dir="auto">
+<li dir="auto">Get the capital back</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Combining similar loans in a portfolio</li>
+<li dir="auto">Creating credit-enhanced claims against the cashflows of this portfolio (waterfall creditor priority)</li>
+<li dir="auto">Sell these claims to investors</li>
+</ul>
+<p dir="auto"><img src="image-13.png" alt="alt text" data-src="image-13.png"></p>
+<p dir="auto"><img src="image-14.png" alt="alt text" data-src="image-14.png"></p>
+<p dir="auto"><img src="image-15.png" alt="alt text" data-src="image-15.png"></p>
+<h3 dir="auto" id="2-value-creation-tranching">2. Value Creation: Tranching</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Different classes of securities are known as tranches</p>
+</li>
+<li dir="auto">
+<p dir="auto">Each tranche is characterised by its priority of claim on the mortgage pool’s
+cash flows</p>
+</li>
+<li dir="auto">
+<p dir="auto">Bond rating agencies assign a credit quality rating to each bond class.</p>
+</li>
+<li dir="auto">
+<p dir="auto">AAA Rating – Highest-quality, low risk, investment grade</p>
+</li>
+<li dir="auto">
+<p dir="auto">Two dimensions of cash flow claim priority:</p>
+<ul dir="auto">
+<li dir="auto">Credit losses</li>
+<li dir="auto">Loan retirement (maturity)</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Credit losses: default risk in securities</p>
+</li>
+<li dir="auto">
+<p dir="auto">Loan Retirement/ Maturity: duration and interest rate risk</p>
+</li>
+</ul>
+<h3 dir="auto" id="3-bond-credit-rating">3. Bond Credit Rating</h3>
+<ul dir="auto">
+<li dir="auto">Liquid public market in CMBS requirements:
+<ul dir="auto">
+<li dir="auto">Passive investors to feel confident in default risk regardless of their real
+estate knowledge</li>
+<li dir="auto">Otherwise investors would not place their capital or;</li>
+<li dir="auto">require such high yields securitisation would be unprofitable or
+uncompetitive</li>
+</ul>
+</li>
+<li dir="auto">Bond rating agencies provide a credit rating for CMBS securities</li>
+</ul>
+<h3 dir="auto" id="collateralised-debt-obligations">Collateralised Debt Obligations</h3>
+<ul dir="auto">
+<li dir="auto">Collateralized debt obligations (CDO’s)</li>
+<li dir="auto">Developed in the boom of 2006-07</li>
+<li dir="auto">Lower rated CMBS were re-securitised into a second (or third) layer
+of pooling and tranching and securities issuance</li>
+<li dir="auto">Proved disastrous in financial crisis of 2008-09</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">sub prime mortgages
+securitised together, given a lower risk rating</li>
+<li dir="auto">when they defaulted, it snowballed</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="the-giant-pool-of-money-review">The Giant Pool of Money Review</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Global Pool of Money increased from $36 trillion to $70 trillion in short period of
+time (2000 – 2006)</p>
+</li>
+<li dir="auto">
+<p dir="auto">Led by emerging economies – China, India, Abu Dhabi, Saudi Arabia</p>
+</li>
+<li dir="auto">
+<p dir="auto">Alan Greenspan – not raising Fed rate</p>
+</li>
+<li dir="auto">
+<p dir="auto">New loans now available in the mortgage market:</p>
+<ul dir="auto">
+<li dir="auto">Stated income, verified asset</li>
+<li dir="auto">Stated income, stated asset</li>
+<li dir="auto">No income, no asset (NINA)</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Investors trust credit rating agencies:</p>
+<ul dir="auto">
+<li dir="auto">Moody’s, Standard &amp; Poor’s, Fitch</li>
+<li dir="auto">Rating agencies using incorrect data</li>
+<li dir="auto">Assumed foreclosure rate of below 2% with worst-case scenario of 8% - 12%</li>
+<li dir="auto">Historical data now irrelevant because of new mortgage types</li>
+<li dir="auto">Foreclosure rate to go to 50%</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">“Money good” investments created by pooling thousands of risky
+mortgages</p>
+</li>
+</ul>
+<h3 dir="auto" id="global-financial-crisis">Global Financial Crisis</h3>
+<ul dir="auto">
+<li dir="auto">What is the source of the GFC?
+<ul dir="auto">
+<li dir="auto">Step One: The Boom years</li>
+<li dir="auto">Step Two: The Rotten Apple</li>
+<li dir="auto">Step Three: Debt Deflation</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Debt was easy to obtain</p>
+<ul dir="auto">
+<li dir="auto">Collateralised their debts</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="gfc-step-1-the-boom-years">GFC Step 1: The Boom Years</h3>
+<ul dir="auto">
+<li dir="auto">Securitisation took off</li>
+<li dir="auto">Banks and ratings agencies profited form securitisation</li>
+<li dir="auto">Homebuyers got easier access to loans (subprime)</li>
+<li dir="auto">House prices increased substantially</li>
+<li dir="auto">Low interest rates
+<ul dir="auto">
+<li dir="auto">Increase in adjustable rate mortgages</li>
+</ul>
+</li>
+<li dir="auto">Homeowners used increase collateral for more loans</li>
+</ul>
+<h3 dir="auto" id="gfc-step-2-the-rotten-apple">GFC Step 2: The Rotten Apple</h3>
+<ul dir="auto">
+<li dir="auto">Homebuyers’ moral hazard
+<ul dir="auto">
+<li dir="auto">100% debt finance + walk away policy =  free game</li>
+<li dir="auto">If house prices increase you win</li>
+<li dir="auto">If house prices go down the bank loses</li>
+</ul>
+</li>
+<li dir="auto">Bank’s moral hazard
+<ul dir="auto">
+<li dir="auto">If loans are on the balance sheet the bank can lose</li>
+</ul>
+</li>
+<li dir="auto">Rating agencies moral hazard / blind eye (?)
+<ul dir="auto">
+<li dir="auto">Bank pay for the rating; have to keep them happy</li>
+<li dir="auto">Rising house prices ‘hide the defaults’</li>
+</ul>
+</li>
+<li dir="auto">MBS buyer blind eye / herd behaviour (?)
+<ul dir="auto">
+<li dir="auto">Portfolio managers “have” to join the high return /”low” risk party</li>
+<li dir="auto">If the party is busted they can claim: “everybody did it too”</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="gfc-step-3-debt-deflation">GFC Step 3: Debt Deflation</h3>
+<ul dir="auto">
+<li dir="auto">Non-recourse loans
+<ul dir="auto">
+<li dir="auto">The bank can either have the house or what’s left on the mortgage -
+not both</li>
+<li dir="auto">You can turn over the key and walk away free and clear</li>
+<li dir="auto">The bank cannot come after you to collect the rest of the money owed</li>
+</ul>
+</li>
+<li dir="auto">Say your house is underwater – you owe more on your mortgage than what your house is worth.. What would you do..?</li>
+</ul>
+<h3 dir="auto" id="is-there-another-gfc-coming">Is there another GFC coming?</h3>
+<ul dir="auto">
+<li dir="auto">Years of cheap capital – central banks printing money and low cash rates</li>
+<li dir="auto">War in Ukraine and Covid – supply side issues results in large i inflation</li>
+<li dir="auto">US Fed (plus Reserve Bank of Australia and other central banks) increased cash rate (large comparative percentage rise over short period)</li>
+<li dir="auto">Silicon Valley Bank bankruptcy – role of social media</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">People collateralising their loans don't to their due diligence properly</p>
+</blockquote>
+
+</main>
+</body>
+</html>
