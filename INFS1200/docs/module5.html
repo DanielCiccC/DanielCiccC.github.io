@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
-<meta name="description" content="undefined - microjam page">
+<meta name="description" content="module5 - microjam page">
 
 
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
 
-<title>undefined</title>
+<title>module5</title>
 </head>
 <body id="top">
 <header>
@@ -25,7 +25,7 @@
 </header>
 <main>
 <h1 dir="auto" id="module-5-database-security">Module 5: Database Security</h1>
-<p dir="auto"><img src="image-1.png" alt="alt text" data-src="image-1.png"></p>
+<p dir="auto"><img src="assets\IMG111.PNG" alt="alt text" data-src="assets/IMG111.PNG"></p>
 <h3 dir="auto" id="access-control-mechanisms">Access control mechanisms</h3>
 <p dir="auto">Database access control is a method of allowing access to sensitive data only to users who are authorised to access such data and to restrict access to unauthorized persons. It includes two main
 components:</p>
@@ -71,7 +71,7 @@ execute the transaction they are attempting.</li>
 </ul>
 <h3 dir="auto" id="discretionary-access-control">Discretionary Access Control</h3>
 <p dir="auto">Based on Granting and Revoking privileges</p>
-<p dir="auto"><img src="image-2.png" alt="alt text" data-src="image-2.png"></p>
+<p dir="auto"><img src="assets\IMG112.PNG" alt="alt text" data-src="assets/IMG112.PNG"></p>
 <p dir="auto"><strong>Account level</strong>: privileges specified for each account, independent of relations in the account</p>
 <ul dir="auto">
 <li dir="auto">Create schema, create table, create view; alter/drop tables; modify
@@ -99,7 +99,7 @@ execute the transaction they are attempting.</li>
 <p dir="auto">Owners can grant (select, modification and references) privileges to other users on any owned relation</p>
 </li>
 </ul>
-<p dir="auto"><img src="image-3.png" alt="alt text" data-src="image-3.png"></p>
+<p dir="auto"><img src="assets\IMG113.PNG" alt="alt text" data-src="assets/IMG113.PNG"></p>
 <h3 dir="auto" id="mandatory-access-control-mac">Mandatory Access Control (MAC)</h3>
 <ul dir="auto">
 <li dir="auto">Classify data and users into various security classes</li>
@@ -116,7 +116,7 @@ execute the transaction they are attempting.</li>
 </ul>
 </li>
 </ul>
-<p dir="auto"><img src="image-4.png" alt="alt text" data-src="image-4.png"></p>
+<p dir="auto"><img src="assets\IMG114.PNG" alt="alt text" data-src="assets/IMG114.PNG"></p>
 <p dir="auto"><strong>Simple Security Property</strong></p>
 <ul dir="auto">
 <li dir="auto">A subject can’t read information from an object that has a higher sensitivity label than the subject</li>
@@ -127,7 +127,7 @@ execute the transaction they are attempting.</li>
 <ul dir="auto">
 <li dir="auto">Database user Cody with access level Unclassified cannot view Smith’s salary which requires Confidential level access</li>
 </ul>
-<p dir="auto"><img src="image-5.png" alt="alt text" data-src="image-5.png"></p>
+<p dir="auto"><img src="assets\IMG115.PNG" alt="alt text" data-src="assets/IMG115.PNG"></p>
 </blockquote>
 <ul dir="auto">
 <li dir="auto">A subject can’t write information to an object that has a lower
@@ -141,13 +141,13 @@ classifications</li>
 <ul dir="auto">
 <li dir="auto">Database user Tanya with access level Secret cannot insert a new tuple with information about Smith with Confidential level access</li>
 </ul>
-<p dir="auto"><img src="image-6.png" alt="alt text" data-src="image-6.png"></p>
+<p dir="auto"><img src="assets\IMG116.PNG" alt="alt text" data-src="assets/IMG116.PNG"></p>
 </blockquote>
 <h3 dir="auto" id="sql-injection">SQL Injection</h3>
 <ul dir="auto">
 <li dir="auto">The client’s input is directly used in the SQL query</li>
 <li dir="auto">The SQL query needs to return a tuple in the User table for the client to be authenticated
-<img src="image-7.png" alt="alt text" data-src="image-7.png"></li>
+<img src="assets\IMG117.PNG" alt="alt text" data-src="assets/IMG117.PNG"></li>
 </ul>
 <h3 dir="auto" id="protection-techniques">Protection Techniques</h3>
 <p dir="auto">SQL injection attacks can occur when SQL statements are used in programs</p>
