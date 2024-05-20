@@ -45,7 +45,7 @@ Based on Granting and Revoking privileges
 - Create schema, create table, create view; alter/drop tables; modify 
 (insert, delete, update tuples) and select privileges
 
-### **Relation level**: 
+**Relation level**: 
 privileges for each relation or view
 - Can be specified at attribute level too
 - Select (retrieval or read) privilege 
@@ -92,6 +92,20 @@ classifications
 >
 > ![alt text](assets\IMG116.PNG)
 
+**Inference attacks and polyinstantiation**
+- Suppose a user with security clearance C tries to update the value of JobPerformance for Smith from NULL to ‘Excellent’ in (b)
+```SQL
+UPDATE EMPLOYEE
+SET JobPerformance = ‘Excellent’
+WHERE Name = ‘Smith’;
+```
+
+- System should not reject it otherwise user could infer  that some nonnull value exists
+This is an example of inferring information through a covert channel
+- Solution is *polyinstantiation*
+
+![alt text](assets\IMG118.PNG)
+
 ### SQL Injection
 
 - The client’s input is directly used in the SQL query
@@ -111,4 +125,3 @@ SQL injection attacks can occur when SQL statements are used in programs
 
 **Function security**
 - Standard and custom functions should be restricted
-
