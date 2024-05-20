@@ -94,6 +94,7 @@ classifications
 
 **Inference attacks and polyinstantiation**
 - Suppose a user with security clearance C tries to update the value of JobPerformance for Smith from NULL to ‘Excellent’ in (b)
+
 ```SQL
 UPDATE EMPLOYEE
 SET JobPerformance = ‘Excellent’
