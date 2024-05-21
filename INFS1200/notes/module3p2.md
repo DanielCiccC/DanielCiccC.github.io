@@ -121,8 +121,3 @@ FROM  Employee
 GROUP BY   dNum
 HAVING  COUNT(*) > 2;
 ```
-
-## Multiple relation sql queries
-
-
-**I think JOIN is better, let me tell you why**

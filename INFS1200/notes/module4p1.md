@@ -1,4 +1,4 @@
-# Module 4: Database design theory and normalisation
+# Module 4: Database design theory and Normalisation
 
 ![alt text](assets\IMG86.PNG)
 

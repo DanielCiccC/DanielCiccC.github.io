@@ -1,4 +1,4 @@
-# Module 2: ER to relation Mapping
+# Module 2: ER to Relation Mapping
 
 ![alt text](assets\IMG45.PNG)
 
@@ -84,4 +84,3 @@ For each subclass entity type
 
 
 ![alt text](assets\IMG54.PNG)
-
