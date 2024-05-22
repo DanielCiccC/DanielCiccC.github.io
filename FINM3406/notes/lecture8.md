@@ -573,5 +573,3 @@ years.
   - Work that has effectively been an improvements; and / or
   - Has increased the value of the asset; and / or
   - Expenditures to reduce the likelihood of further repair
-
-![alt text](assets\IMG37.PNG)
