@@ -67,3 +67,9 @@ three-month forward premium is 0.0265
 | **Expected vs actual** | **Outcome** | **Reason** | Arbitrage profit
 | --- | --- | --- | ---
 Expected exchange rate (QC/BC) > actual exchange rate | - base currency is undervalued <br> - Quotation currency is over-valued | - You could be potentially earning more of the quotation currency given 1 unit of BC | - Buy the undervalued base currency <br> - Borrow/Sell the overvalued quotation currency 
+
+### Triangular arbitrage
+- Think of it in terms of the base currency. I.e., if the investment is in terms of $1M AUD, convert the cross rates to have an AUD base currency
+  - Between the synthetic cross rate and the actual cross rate
+- You will want to transact the most expensive cross rate first. Because the rates are in BC of the investment, you would multiple by the first investment, and divide by the second.
+

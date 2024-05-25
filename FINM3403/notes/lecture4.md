@@ -9,10 +9,10 @@
   - Futures: A contract to buy or sell a commodity at a point in the future. Changes in prices in the commodity are settled daily.
   - Swaps: A contract in which two parties exchange cashflows from different financial instruments.
 
-- Derives its value from some underlying assets
-- Commodities, financial assets, weather and currency derivatives etc.
-- minimise the risk of home currency depreciating against foreign currency
-- Swaps are typically long contracts (5-10 years)
+> - Derives its value from some underlying assets
+> - Commodities, financial assets, weather and currency derivatives > etc.
+> - minimise the risk of home currency depreciating against foreign > currency
+> - Swaps are typically long contracts (5-10 years)
 
 ### Futures and Forwards
 Currency forward and futures contracts both represent an obligation to buy or sell a certain amount of a specified currency some time in the future at an exchange rate determined now.
@@ -39,7 +39,7 @@ NOTES:
 - FC - foreign currency
 - when you buy a futures contract, you have to open a margin account (collateral). They will tell you what the minimal amount in the margin
 - In the case of a forward contract is unregulated - counterparty risk.
-  - with future contracts, counterparty risk is 0. Dealing with the clearing house. Changes are reflected on a daily basis
+  - with future contracts, counterparty risk is 0. Dealing with the clearinghouse. Changes are reflected on a daily basis
 - Forward contract: Deposit might be required if you have no standing relationship with the bank 
 - Almost never take delivery of the future contract - just to hedge against moving price
 
@@ -70,11 +70,11 @@ $S_{T}$: spot rate at expiration
 $F_{T}$: Futures rate at expiration
 
 The trouble with forwards:
+
 ![alt text](assets\IMG94.PNG)
 
-- buyer of the contract of the upwards sloping line
-- Temptation (if you are seller) if the price increases is very low. Contracts are rewritten every day
-- 
+> - buyer of the contract of the upwards sloping line
+> - Temptation (if you are seller) if the price increases is very low. Contracts are rewritten every day
 
 
 ### Options contracts
@@ -188,4 +188,3 @@ NOTES:
 NOTE:
 - OTC market, will not know who is the counterparty
 - swap bank is a broker or a dealer
-

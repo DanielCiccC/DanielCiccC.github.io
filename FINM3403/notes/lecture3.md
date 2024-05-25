@@ -118,10 +118,9 @@ $$\frac{S_{t}-S_{t-1}}{S_{t-1}}=\frac{\pi_{A} - \pi_{B}}{1+\pi_{B}} = \frac{0.01
 
 ### Applications of relative PPP
 
-- Applications of Relative PPP:
 1. Forecasting future spot exchange rates.
 2. Calculating appreciation in “real” exchange rates. This will provide a measure of how expensive a country’s goods have become (relative to another country’s).
-    - more expensive relative to another country creates challenges - more competition, etc.
+    - More expensive relative to another country creates challenges - more competition, etc.
 
 
 ### Forecasting Future Spot rates
@@ -220,7 +219,7 @@ arbitrage (CIA) and occurs whenever IRP does NOT hold. CIA can involve the follo
 - But their actions nudge the foreign exchange and money markets back toward equilibrium:
 
 1. Purchase of Pounds in the spot market and sale of pounds in the forward market narrow the premium on forward pounds.
-2. The **demand for pound-denominated securities causes the pound interest rates to fall**, **while the higher level of borrowing in Australia causes dollar interest rates to rise.**
+2. **The demand for pound-denominated securities causes the pound interest rates to fall**, **while the higher level of borrowing in Australia causes dollar interest rates to rise.**
 
 > - forward rates will changes, and interest rate will; push back to the parity condition 
 
@@ -251,7 +250,7 @@ Japan, the Fisher Effect would be stated as:
 
 ### The International Fisher Effect
 
-- The International Fisher Effect (also called Fisher-open or Uncovered Interest rate parity condition) states that the spot exchange rate should change to adjust for differences in interest rates between two countries:
+- The International Fisher Effect (also called Fisher-open or Uncovered Interest rate parity condition) states that the spot exchange rate should change to adjust for differences in nominal interest rates between two countries:
 
 > - Expected future spot rate
 > - assume the real interest rate should be the same between two countries

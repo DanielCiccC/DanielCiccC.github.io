@@ -143,11 +143,12 @@ increasing its net foreign debts by the amount of the
 deficit 
 - borrow from the rest of the world to be able to consume
 
-### The Financial Account
+### The Financial Account 
 
-- It includes all short- and long-term financial transactions pertaining to both international trade and flows associated with portfolio shifts (stocks, bonds etc.) 
+- It includes all short and long-term financial transactions pertaining to both international trade and flows associated with portfolio shifts (stocks, bonds etc.) 
   
 KA = Capital Inflow (cr) – Capital outflow (dr)
+
 - The two main categories:
   - Portfolio investment
   - Direct investment (takeover or acquiring a substantial portion of a foreign company, i.e., ˃ 10%)
