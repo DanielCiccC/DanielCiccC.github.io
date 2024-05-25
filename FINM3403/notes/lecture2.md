@@ -15,7 +15,7 @@
       - late 90's got rid of various European currencies
 - The system, or regime, is classified as either a fixed, floating, or managed exchange rate regime
     - The rate at which the currency is fixed, or pegged, is frequently referred to as its par value
-      - fixed against anochor currency
+      - fixed against another currency
     - If the government doesn’t interfere in the valuation of its currency, the currency is classified as floating or flexible
         - market value will determine what a currency is compared to a floating currency
 

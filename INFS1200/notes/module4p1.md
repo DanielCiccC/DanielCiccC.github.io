@@ -150,3 +150,37 @@ of S
 [Finding a candidate key, simple](https://www.youtube.com/watch?v=YQt_kz3JgXI)
 
 [Finding a candidate key, more difficult](https://www.youtube.com/watch?v=9fuJUQJd-A8&t=384s)
+
+
+### Forward Quote rates
+
+- Forward transactions require delivery at a future date of a specified amount of one currency for a specified amount of another currency.
+
+- If F > S then the currency in the denominator (base currency) is trading at a premium
+  - E.g. One AUD buys more USD in the forward market than the in the spot market 
+  - If ascending between bid/offer forward points then forward price will be higher than the current spot price
+- If F < S then the currency in the denominator (base currency) is trading at a discount*
+  - E.g. One AUD buys less USD in the forward market than the in the spot market
+  - If descending between bid/offer forward points then forward price will be lower than the current spot price
+  - If F = S then market is relatively flat
+
+
+**Swap rates**
+- A point (pip) is the last digit of a quotation
+  - A point (pip) is equal to 0.0001 (1/100 th of 1%) for most currencies.
+  - The Japanese yen is the exception. It is quoted only to two decimal places; A point, in this case, is 1/100.
+
+- #### When the Bid Points > Ask Points, there is a forward discount, you subtract the points from the spot rate to get the outright forward quote
+- #### If the Bid Points < Ask Points, there is a forward premium, and you add the points to the spot rate to get the outright forward quote
+
+### Forward discount/premium
+
+- Forward premium exists when a currency purchases more of the 2nd currency in the future than it does presently.  
+- Forward discount exists when a currency purchases less of the 2nd currency in the future than it does presently.
+
+
+$$p= \frac{forward-spot}{spot} \cdot \frac{360}{N}$$
+
+- p > (<) 0 is the annualized percentage premium (discount) of the denominator currency
+- N – maturity of the forward contract (or number of days forward)
+
