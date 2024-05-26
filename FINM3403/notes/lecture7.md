@@ -21,7 +21,7 @@ investors to buy and hold its securities.
 - A national capital market is **segmented** if the required rate of return on securities in that market differs from that for securities of comparable expected return traded on other national securities markets (e.g., New York and London).
 
 > Most countries have restrictions on who can buy and hold currency
-> - If you are going to investing in those stocks, how do you calculate the Cost of Capital (appropraite discount rate)
+> - If you are going to investing in those stocks, how do you calculate the Cost of Capital (appropriate discount rate)
 
 ### Causes of Segmentation
 - Market segmentation is a financial market 
@@ -221,7 +221,9 @@ E.g., Dividend withholding taxes on non-resident investors in Australia is
 
 ### Corruption
 - Illegitimate payments and favors outside the rule of law
-- Corruption occurs to some extent in all countries, but large differences across countries exist "There is no end in sight to the misuse of power by those in public office - and corruption levels are perceived to be as high as ever in both the developed and developing worlds" - Peter Eigen, Chairman of Transparency International, speaking at the launch of the Corruption Perceptions Index. 
+- Corruption occurs to some extent in all countries, but large differences across countries exist 
+
+"There is no end in sight to the misuse of power by those in public office - and corruption levels are perceived to be as high as ever in both the developed and developing worlds" - Peter Eigen, Chairman of Transparency International, speaking at the launch of the Corruption Perceptions Index. 
 
 ![alt text](assets\IMG134.PNG)
 
@@ -247,8 +249,7 @@ Political Risk
 >  - South Africa, Chile
 >   - political risk tends not to manifest normally, obvious in recessions
 
-- Expropriation is defined as official government 
-seizure of private property.
+- Expropriation is defined as official government seizure of private property.
   - It is recognized by international law as the right of any sovereign state, provided the expropriated owners are given:
     - prompt compensation 
     - at fair market value 

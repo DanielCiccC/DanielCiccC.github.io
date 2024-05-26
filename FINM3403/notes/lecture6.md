@@ -19,7 +19,7 @@
 > - need to determine the impacts exchange rates will have on revenues and costs
 > - economic value is discounted sum of future cash flows
 
-### Real exchange rate recap:
+### Real exchange Rate Recap:
 
 ![alt text](assets\IMG109.PNG)
 
@@ -208,11 +208,11 @@ produce automobiles for sale there.
 
 **Particulars** | HC Strengthens | HC weakens
 | --- | --- | ---
-Direct Exposure ||
+**Direct Exposure** ||
 Sales abroad      |Unfavourable |Favourable
 Source abroad |Favourable|Unfavourable
 Profits abroad| Unfavourable | Favourable
-Indirect Exposure | |
+**Indirect Exposure** | |
 Competitor sources abroad |Unfavourable | Favourable
 Supplier sources abroad | Favourable | Unfavourable
 
@@ -252,8 +252,7 @@ Supplier sources abroad | Favourable | Unfavourable
   
 ![alt text](assets\IMG123.PNG)
 
-- It measures the marginal impact on firm value by an unexpected change in the 
-(AUD/FC) real exchange rate.
+- It measures the marginal impact on firm value by an unexpected change in the (AUD/FC) real exchange rate.
   - This can also be written as
 
 ![alt text](assets\IMG124.PNG)
