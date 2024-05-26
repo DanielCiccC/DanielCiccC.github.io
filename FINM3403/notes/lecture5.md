@@ -229,15 +229,14 @@ receivable offsets the loan)
 ### Alternate Hedging strategies
 
 - Risk Shifting
-- Leading and Lagging – used to manage net working 
-capital needs of foreign affiliates
+- Leading and Lagging – used to manage net working capital needs of foreign affiliates
   - Leading is to accelerate timing of receivables/payables denominated in depreciating currency
   - Lagging is to delay timing of receivables/payables denominated in depreciating currency
 - Currency Risk Sharing
 - Cross-hedging
 - Currency diversification
 
-> Risk risk sharing - share the risk of unanticipated interest rate changes.
+> Risk sharing - share the risk of unanticipated interest rate changes.
 > - If the exchange rate reaches the agreed band when a second contract may come into place
 > - Cross-hedging - use a second currency to hedge as long as the secondary currency is highly correlated
 >   - use forward contracts in that instance
@@ -245,7 +244,7 @@ capital needs of foreign affiliates
 >   - maintain so many currencies that their contracts will cancel out interest rate risk
 > - Leading and lagging
 
-### Why Hedge❖ Hedging is the taking of a position, either acquiring 
+### Why Hedge
 - Hedging is the taking of a position, either acquiring a cash flow or an asset or a contract (including a forward contract) that will rise (fall) in value and offset a drop (rise) in value of an existing position. 
 - Hedging, therefore, protects the owner of the existing asset from loss (but it also eliminates any gain resulting from changes in exchange rates on the value of the exposure).  
 
@@ -301,4 +300,7 @@ reason for currency risk management?
 > Agency costs will drive the decision
 > - transaction costs argument; cheaper for large investment company to hedge than retail investor
 
-
+2. Reduction of risk in future cash flows reduces the likelihood that the firm’s cash flows will fall below a necessary minimum (and put the firm in financial distress).
+3. Reduction of risk in future cash flows improves the planning capability of the firm.
+  - If the firm can more accurately predict future cash flows, it may be able to undertake specific investments or activities that it might otherwise not consider.  
+4. Individuals and corporations do not have same access to hedging instruments or same cost.
