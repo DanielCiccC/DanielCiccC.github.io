@@ -22,3 +22,28 @@ Quotation: | American terms (USD/FC) | American (USD/FC) or European (FC/USD)
 | Security against default | Clearing houses stand behind traders | Assets of bank
 | Required collateral | Margin requirements ("Performance bond") | Deposit required if not standing relations with bank
 | Cash flows | Occur daily because of "market-to-market" feature | No cash flows until forward contract matures
+
+### Options contracts
+
+Options contracts give the option holder the right, but not the obligation to buy or sell a specified amount of the underlying asset (currency; stock) at a pre-determined price (exercise or strike price).
+
+### Basics of Options
+'The right, but not the obligation'
+
+- Types of Options
+  - Call: gives the holder the right to buy
+  - Put: gives the holder the right to sell
+- An **American option**  gives the buyer the right to exercise the option at any time between the date of writing and the expiration or maturity date. 
+  - American option will always be more expensive than an equivalent European option (of the same terms)
+- A **European option** can be exercised only on the expiration date, not before. 
+- The **exercise or strike price (X)**, which is the exchange rate at which foreign currency can be purchased (call) or sold (put). 
+- The **premium**, cost, price, or value of the option itself (paid in advance by the buyer to the seller).
+- The underlying or actual spot exchange rate in the market. 
+
+### Value of a call option at Expiration
+
+![alt text](assets\IMG96.PNG)
+
+### Value of the put option at Expiration
+
+![alt text](assets\IMG97.PNG)

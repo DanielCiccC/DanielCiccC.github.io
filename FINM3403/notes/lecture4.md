@@ -92,9 +92,9 @@ Underlying security
 - The security to which this option applies 
   - stock of apple, currencies, etc.
 Call option
-- Grants the hodler the right but not the obligation to buy the security at the strike price
+- Grants the holder the right but not the obligation to buy the security at the strike price
 Expiration
-- The point after which the option may no longer be used or exercised. Monthly option on a stcoker typically expire the third Friday of the month
+- The point after which the option may no longer be used or exercised. Monthly option on a stock typically expire the third Friday of the month
 
 ### Put Options
 Put option
@@ -109,9 +109,7 @@ Put option
 - Types of Options
   - Call: gives the holder the right to buy
   - Put: gives the holder the right to sell
-- An **American option**  gives the buyer the right to exercise the 
-option at any time between the date of writing and the expiration or 
-maturity date. 
+- An **American option**  gives the buyer the right to exercise the option at any time between the date of writing and the expiration or maturity date. 
   - American option will always be more expensive than an equivalent European option (of the same terms)
 - A **European option** can be exercised only on the expiration date, 
 not before. 
