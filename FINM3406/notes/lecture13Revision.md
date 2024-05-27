@@ -96,12 +96,12 @@ compliance
 >   - size of transaction compared to real estate
 >   - regulatory environment, massive amount of regulatory control and compliance
 >     - air conditioning, controls and measures etc.
->     - lot of controls you dont have when buying futures
+>     - lot of controls you don't have when buying futures
 >   - uniqueness, gold commodity exactly the same, real estate is never exactly unique
 > - Timeline for doing real estate transactions is really long
 > - analyse a lot of properties before deciding on one
 >   - a lot of money and time before approvals
-> - Wasting asset, subject to depreciation an obsolescence
+> - Wasting asset, subject to depreciation and obsolescence
 > - Limited liquidity, shares in small cap company might be similar
 > - engagement of good and bad managers
 >   - long WALE, tenancy mix and how long the tenants are staying come down to management
