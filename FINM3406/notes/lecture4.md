@@ -314,7 +314,7 @@ NOTE:
 >   - aged care facilities, beds are licenced by the government
 >   - child care centres based upon number of licences in the building
 
-## Capitalisation method
+### Capitalisation method
 - This valuation method is used for investment class properties
 - This method has been widely accepted as being suitable for the estimation of Market Value. 
 - Under this method, the Future Sustainable Annual Net Income of the subject property is converted to a capital sum (or value) by a market derived multiplier.  
