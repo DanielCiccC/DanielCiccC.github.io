@@ -1,4 +1,4 @@
-# Lecture 10: international diversification
+# Lecture 10: International diversification
 
 
 ### Why Invest Overseas?

@@ -1,4 +1,4 @@
-# Lecture 7: International Capital Budgeting
+# Lecture 8: International Capital Budgeting
 
 ### Issues
 - How do we decide whether a firm should proceed with foreign project(s)? 
@@ -86,7 +86,7 @@ equity financed by unlevering.
 
 ### Stage 2: PV of Tax Shields
 - The expected tax saving is $\tau_{c}r_{c}D$ where $\tau_{c}$ is the corporate tax rate
-  - D is the amount of borrowing is expected to remain table
+  - D is the amount of borrowing is expected to remain stable
 
 ![alt text](assets\IMG146.PNG)
 
@@ -293,4 +293,3 @@ satisfy International Fisher Effect.
   - depends on whether a company's risk is diversifed or not.
 
 > Not in textbook - don't observe the COC, needs to be estimated
-
