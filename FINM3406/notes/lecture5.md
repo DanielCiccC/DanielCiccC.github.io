@@ -45,7 +45,7 @@ There are several methods available for the valuation of varying incomes:
 - This method calculates the “loss” of income before market rates are achieved and deducts the value so derived from full market value. 
 
 ### Term & Reversion
-- Consider a relatively long lease term in a commercial class income producing property.  The rental rates may well have been market based at the start of the lease, but over time have drifted to levels above or below market rates. This could easily happen where under the lease the rents are to be reviewed to a non -market based formula, ie to a set percentage rate or to CPI.        
+- Consider a relatively long lease term in a commercial class income producing property.  The rental rates may well have been market based at the start of the lease, but over time have drifted to levels above or below market rates. This could easily happen where under the lease the rents are to be reviewed to a non-market based formula, ie to a set percentage rate or to CPI.        
 - This creates a problem when we need to value the freehold interest in the property.  Remember, the freehold value of the property is based on the right to receive income from that property.  
 
 ![alt text](assets\IMG16.PNG)

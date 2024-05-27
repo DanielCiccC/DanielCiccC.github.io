@@ -93,6 +93,33 @@ For example, using the same figures as previously:
 
 $$\frac{1}{0.08} = 12.5 \; \; \text{years purchased}$$
 
+
+### Property Income
+- **Gross Rent:** 
+  - The annual rent, usually paid on a monthly in advance basis, as set out in the Schedule to the lease. The gross rent is *inclusive of outgoings*.
+- **Net Rent:**
+  - The gross rent payable less outgoings incurred.  The lessee is required to pay an additional sum for outgoings as specified in the lease document.
+
+### Net vs Gross Rent
+
+Particulars | Amount
+| --- | ---
+**Net Rental:**    | Annual Cost
+1,000m 2  at $250m 2    | = $250,000
+<u> Outgoings:</u> |
+1,000m 2  at $100m 2   | = $100,000
+Sub Total    | = $350,000 (or $350m 2 )
+<u>Plus Car Parking:</u> |
+10 bays at $300pcm x 12 | =  $36,000
+<u>Total Cost per annum</u> | =  $386,000
+| --- | ---
+**Gross Rental:** |
+1,000m2 at $350m 2   | = $350,000
+Plus Car Parking:  | = $36,000
+<u>Total Cost per annum</u> | = $386,000
+
+
+
 ### Shortcomings of the Capitalisation Method
 
 - **Data Errors:** 
@@ -111,4 +138,4 @@ $$\frac{1}{0.08} = 12.5 \; \; \text{years purchased}$$
   - The component risks would include the “risk free rate”, inflation, anticipated interest rate movements, rental rate movements, vacancies, building expense variations, obsolescence, terminal value risk, etc.  
 
 - Despite its shortcomings, the Capitalisation method is widely used in the property industry, either as a primary or secondary valuation methodology. 
-- It is not universally popular however, as one unkind commentator observed:
+- It is not universally popular however, as one unkind commentator observed
