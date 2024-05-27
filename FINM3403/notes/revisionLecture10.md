@@ -41,3 +41,22 @@ where
 
 ![alt text](assets\IMG181.PNG)
 
+### Adding up volatilities
+- As shown in the previous slide, the volatility of currency returns affects the volatility of USD return on a foreign equity (last column). But volatilities of FC market returns & currency returns are not additive. Why?
+
+![alt text](assets\IMG182.PNG)
+
+$$cov(x, y) = \rho_{x,y} \sigma_{x} \sigma_{y}$$
+
+
+If correlation ($\rho$) = 1, the volatility of the dollar return is the sum 
+of the foreign equity volatility and currency return volatility. 
+
+![alt text](assets\IMG183.PNG)
+
+### Key results of portfolio theory
+- The extent to which risk is reduced by portfolio diversification depends on the correlation of assets in the portfolio.
+- As the number of assets increases, portfolio variance becomes more dependent on the covariances (or correlations) and less dependent on variances.
+- The risk of an asset when held in a large portfolio depends on its return covariance (or correlation) with other assets in the portfolio.
+
+
