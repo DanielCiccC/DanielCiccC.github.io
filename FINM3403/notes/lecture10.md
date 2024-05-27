@@ -187,12 +187,12 @@ How would US investors fare from investing globally?
 
 ### Does Diversification work elsewhere
 
-❑ Comparing Sharpe ratios for domestic versus global investment for 32 countries
-• Compare Sharpe ratios for various strategies – local vs global. 
-• Bars below zero (8 countries) – better off investing in the domestic market. Mostly had high local 
+- Comparing Sharpe ratios for domestic versus global investment for 32 countries
+  - Compare Sharpe ratios for various strategies – local vs global. 
+  - Bars below zero (8 countries) – better off investing in the domestic market. Mostly had high local 
 returns combined with below average risk. 
-• Positive values – gains from global diversification.
-• Across all countries, the SD of unhedged global portfolio below SD of domestic portfolio.
+  - Positive values – gains from global diversification.
+  - Across all countries, the SD of unhedged global portfolio below SD of domestic portfolio.
 
 > - Aus market account for 2% global market cap
 >   - invest locally, forfeit global investments
@@ -234,7 +234,7 @@ eToro etc. make this feasible.
 
 
 ### Why List (or Cross-List) on Foreign Exchanges?
- Reasons to List (i.e. a solo listing) or Cross-List
+Reasons to List (i.e. a solo listing) or Cross-List
 - Lowering of cost of capital
   - Improve liquidity
   - “Bond” to a better regulatory environment
