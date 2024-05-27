@@ -92,3 +92,23 @@ $$\frac{1}{\text{Capitalisation Rate}} = \text{Years Purchase}$$
 For example, using the same figures as previously:
 
 $$\frac{1}{0.08} = 12.5 \; \; \text{years purchased}$$
+
+### Shortcomings of the Capitalisation Method
+
+- **Data Errors:** 
+  - This has been an application of the Capitalisation Method at its most basic level. In the real world, there is obviously a lot more data collection, analysis and adjustment to the numbers that needs to be effected. 
+  - In short, this method is simple to apply but is highly sensitive to data errors. Not only is there the difficulty of locating recently sold comparable properties, but there is the added problem of assessing their net annual income and an applicable cap rate, as much of this information is confidential.
+
+- **Reliability of Information:**
+  - The valuer must invest considerable time and effort in reviewing the financial facts applicable to the subject property.  The most reliable information sources will be from other assignments undertaken by valuer and colleagues, and this may be limited in scope. 
+  - The valuer must therefore network with others in the industries and hope for a sharing of information. Even then, the available data may come from buildings with differences in age, condition, location, materials, quality of services and finishes, lease structures and management quality, to name a few.    
+
+- **The Assumption of Sustainable Net Income:** 
+  - The conventional practice is to estimate what a stabilised net annual income for the subject property will be. This assumes that this income level will “settle down” in perpetuity.  
+- **Selection of the Cap Rate:**
+  - A minor error in establishing the Cap Rate will have a major impact on the estimated property value.  
+  - The Cap Rate is often referred to as an “All Risk Yield” because it incorporates allowances for every source of risk to which the investment is perceived to be exposed.  
+  - The component risks would include the “risk free rate”, inflation, anticipated interest rate movements, rental rate movements, vacancies, building expense variations, obsolescence, terminal value risk, etc.  
+
+- Despite its shortcomings, the Capitalisation method is widely used in the property industry, either as a primary or secondary valuation methodology. 
+- It is not universally popular however, as one unkind commentator observed:

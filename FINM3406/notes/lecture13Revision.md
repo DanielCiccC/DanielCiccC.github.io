@@ -269,6 +269,7 @@ achieved and deducts the value so derived from full market value.
 - Especially up-front
 - Assimilate multiple inputs
 - Importance of networks
+
 **Rational**
 - Often pain-staking
 - Multiple constraints to be satisfied
