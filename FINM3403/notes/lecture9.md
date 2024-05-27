@@ -158,7 +158,7 @@ holders as well as the quality of their enforcement.
   - Shareholder Rights (Anti-director Rights)
     - Shareholders exercise their power by voting (for directors and on major corporate decisions). Thus, this measure will capture how strongly the legal system favors minority shareholders against either managers or dominant shareholders in the corporate decision-making process.
   - Creditor Rights
-    - More complex to determine because there are many kinds of creditors (junior, senior, secured, unsecured). The erspective of the senior, secured creditor assumed here.
+    - More complex to determine because there are many kinds of creditors (junior, senior, secured, unsecured). The perspective of the senior, secured creditor assumed here.
     - Also, need to assess rights in both liquidation as well as in reorganization. 
 
 > How well are the laws enforced, and what laws are in place?
@@ -270,7 +270,6 @@ generally, across legal origins. Find that:
 - Corruption
 - Risk of Expropriation
 - Repudiation of Contracts by Government
-.
 -  Also, include a measure of the quality of accounting standards
 
 > Corruption, risk of expropriation

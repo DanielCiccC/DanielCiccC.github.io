@@ -11,3 +11,6 @@
  [Lecture 6](lecture6.html)  | [Lecture 6, revised](revisionLecture6.html)
  [Lecture 7](lecture7.html)  | [Lecture 7, revised](revisionLecture7.html)
  [Lecture 8](lecture8.html)  | [Lecture 8, revised](revisionLecture8.html)
+ [Lecture 9](lecture9.html)  | [Lecture 9, revised](revisionLecture9.html)
+ [Lecture 10](lecture10.html)  | [Lecture 10, revised](revisionLecture10.html)
+ [Lecture 11](lecture11.html)  | [Lecture 11, revised](revisionLecture11.html) 
