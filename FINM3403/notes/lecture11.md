@@ -156,7 +156,7 @@ income, no matter in which country it was earned.
 taxable event occurred.
 - Foreign tax credits
 - Allocation of Debt (or Earnings Stripping)
-- 
+
 
 > Territorial Taxation system
 > - Australia has a taxable income, pay only on the income you have earned here
@@ -230,8 +230,6 @@ have those affiliates pay low transfer prices.
 >
 > Operating in a low tax environment, want to maximise income in a low tax environment
 > - charge subsidiary for the goods and services it sells 
-
-###Transfer Pricing (2)
 
 - The pricing of goods, services and technology transferred enter directly into the cost of goods sold component of the subsidiary’s income statement.
 - The price should be one that a willing seller would charge a willing unrelated buyer.
