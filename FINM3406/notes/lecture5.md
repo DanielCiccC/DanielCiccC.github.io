@@ -102,7 +102,7 @@ Add Term and Reversionary Values to arrive at the property value.
 - Capital Value  = $103,084 (term) + $496,125 (reversion)
   - = $599,209 (Adopt $600,000)
 
-###Hard Core, or Layer Method
+### Hard Core, or Layer Method
 - Income under this method is treated in horizontal slices.  The passing income is the “core” income which is the most secure.  Rental increases achieved after future rent reviews are then additional slices (ie 2 nd  slice, 3 rd  slice, top slice) added later and are considered to be less secure income sources.
 - Each slice is valued in perpetuity, with later slices being discounted to a present value. 
 - This method is useful when the property being valued has multiple tenancies.   

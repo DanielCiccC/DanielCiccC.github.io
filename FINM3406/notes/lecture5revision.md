@@ -66,3 +66,43 @@ Add Term and Reversionary Values to arrive at the property value.
 - Capital Value  = $103,084 (term) + $496,125 (reversion)
   - = $599,209 (Adopt $600,000)
 
+### Hard Core, or Layer Method
+- Income under this method is treated in horizontal slices.  The passing income is the “core” income which is the most secure.  Rental increases achieved after future rent reviews are then additional slices (ie 2 nd  slice, 3 rd  slice, top slice) added later and are considered to be less secure income sources.
+- Each slice is valued in perpetuity, with later slices being discounted to a present value. 
+- This method is useful when the property being valued has multiple tenancies.   
+
+![alt text](assets\IMG17.PNG)
+
+
+**Example**
+
+- 15 year structured lease at the following rental rates:
+  - 1st  5 years:  \$100,000 pa
+  - 2nd  5 years:  \$150,000 pa
+  - 3rd  5 years:  \$200,000 pa
+  - then reversion (at year 15) to Full Market Rental at \$250,000 pa 
+- We should be able to value this income flow using the Hard Core method at a Cap Rate of 10%.
+- We need to capitalise each layer in perpetuity, then bring each to a Present Value and aggregate to obtain the total value.
+
+<u> First step </u>
+
+Layer and formula | Cost
+| --- | ---
+Layer 1 | 
+ CV  = NI x YP | =  $100,000 x 10  =  $1,000,000
+Layer 2 |
+  CV = NI x YP  | =  $50,000 x 10 =  $500,000
+Layer 3 |
+  CV = Ni x YP  | =  $50,000 x 10 =  $500,000
+Layer 4 |
+  CV = NI x YP  | =  $50,000 X 10 =  $500,000 
+
+<u> Second step </u> - Bring each of the future values back to a present value using the PV of \$1 formula, or by calculator:**
+
+ Layer  | FV        | Period   |      PV
+| --- | --- | --- | ---
+Layer 1 | 0         |          |  $1,000,000
+Layer 2 |  $500,000 |  5 yrs   |  $310,460
+Layer 3 |  $500,000 |  10yrs   |  $192,772
+Layer 4 |  $500,000 |  15 yrs  |  $119,696     
+TOTAL VALUE |       |          |  $1,622,928
