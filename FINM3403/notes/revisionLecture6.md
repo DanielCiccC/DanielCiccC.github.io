@@ -12,8 +12,6 @@ $$s_{t+1}=s_{t}\cdot \frac{1+\pi _{\$}}{1+\pi _{\pounds}}=1.30\cdot \frac{1.04}{
 
 $$E_{t+1} = \frac{\$1.2519/\pounds}{\frac{\$15600}{\pounds 129600}} = 1.04$$
 
-![alt text](assets\IMG111.PNG)
-
 - Notice, the real exchange rate has not changed. This is because *relative PPP holds*. This keeps deviations from absolute PPP constant.
 
 ### Real exchange rate change
