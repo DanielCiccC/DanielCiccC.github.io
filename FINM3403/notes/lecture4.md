@@ -150,9 +150,9 @@ advance by the buyer to the seller).
 
 ### Factors that Affect Options Prices
 
-- current exchange rate (S) – as S $\uparrow$s, Call price s and Put price s
-- strike price (X) – as X s, Call price s and Put price s 
-- time to expiration (T) – as T s, the value s
+- current exchange rate (S) – as S $\uparrow$s, Call price $\uparrow$s and Put price $\downarrow$s
+- strike price (X) – as X $\uparrow$s, Call price $\downarrow$s and Put price $\uparrow$s 
+- time to expiration (T) – as T $\uparrow$s, the value $\uparrow$s
 - volatility of the exchange rate ($\sigma$) –the higher the $\sigma$ of the exchange rate, the greater the value
 - interest rates (iA and iB).
 
