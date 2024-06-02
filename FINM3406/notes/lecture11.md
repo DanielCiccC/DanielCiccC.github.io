@@ -49,8 +49,7 @@
   - contribute to the best utilisation of assets in the delivery of services to the community in line with corporate plans and service delivery strategies. 
   - ensure ongoing compatibility between the composition of an asset portfolio and the changing environment within which it operates.
 - It is an ongoing management process. 
-  - The development of asset strategies through analysis and direction-setting processes provides a basis for compiling asset strategic plans, and disposal, capital, maintenance and management-in-use programs 
-formalised through the annual budget process.
+  - The development of asset strategies through analysis and direction-setting processes provides a basis for compiling asset strategic plans, and disposal, capital, maintenance and management-in-use programs formalised through the annual budget process.
 
 > corporate real estate get early into the lifecycle of buildings
 > - Facilities management - it has been built, occupied and need to be maintained
@@ -235,7 +234,7 @@ Property constraints
 > And then you audit what's externally available.
 > You then decide what your solution is.
 > What are your options?
-> Am I to buy list sell?
+> Am I to buy, list, sell?
 > Am I to expand?
 > Am I to contract?
 > You evaluate them mathematically financially, and then you select
@@ -272,7 +271,7 @@ its objectives, and how the assets are managed, include:
   - Image
   - Accommodation Strategy.
 
-> Leave vs license
+> Lease vs license
 > - Ownership, right to use and subject to any capital movements
 > - Lease, right to occupy in return for a payment
 >
@@ -300,6 +299,17 @@ its objectives, and how the assets are managed, include:
 >
 > - Not sure between the two, do an NPV calculation
 >   - if you are not capital constrained, find which one does better
+
+### CRE Strategic Framework
+**There are Two Decisions Involved: Investing & Financing**
+- Financial management is comprised of two distinct decisions
+  - Investing decision
+    - What assets should we acquire?
+    - Risk v return
+  - Financing decision
+    - How should we pay for the assets?
+    - Financing cost, capital structure considerations
+- Overall objective is to maximize net present value
 
 ### Cash Flows
 - Ownership has three cash flows
@@ -353,7 +363,7 @@ its objectives, and how the assets are managed, include:
 ![alt text](assets\IMG71.PNG)
 
 > Big chunk of debt in asset ownership on books
-> - People lease becuase they don't want to show debt on balance sheet
+> - People lease because they don't want to show debt on balance sheet
 > - New accounting standard - leases treated as a liability now
 > - Diminishes the attractiveness of leases
 >   - Cannot hide the obligation now

@@ -380,6 +380,7 @@ Uncertainty in:
 - Very basic metric 
 - Doesn’t take into consideration discounting or time value of money
 - Its simplicity makes it popular
+
 The equity multiple is arrived at as follows: 
   EM = Er/Ei 
 where: 
@@ -411,7 +412,7 @@ $$LR = \frac{V}{E} = \frac{L + E}{E}$$
 - Rule 3:  The outstanding principal balance after each payment equals the previous outstanding principal balance minus the principal paid down in the payment
 - Rule 4:  The initial outstanding principal balance equals the initial contract principal specified in the loan agreement
 
-> Possible Exam question?
+> Possible Exam question
 > - need to be able to apply them practically
 
 ![alt text](assets\IMG109.PNG)
@@ -468,10 +469,10 @@ priority)
 - Lease / Own Strategies
 - Business Criticality - Portfolio Approach
 - Core Accommodation.
-– Long lease – own
+  - Long lease - own
 - Flexible Accommodation
-– Lease – medium to short term
-– Serviced - Licensed
+  - Lease - medium to short term
+  - Serviced - Licensed
 
 
 ![alt text](assets\IMG111.PNG)
@@ -489,7 +490,7 @@ What factors should I consider?
 We spoke through them.
 You know, you have a portfolio approach.
 You have a accommodation approach, you know?
-Is it co to your business?
+Is it core to your business?
 You know, if it's a long-term requirement, do you lease
 it?
 Do you own it?
@@ -524,15 +525,15 @@ bit more complicated.
 > not sure if holding for long enough or predictable enough
 
 
-• There are Two Decisions Involved: Investing & Financing
-• Financial management is comprised of two distinct decisions
-– Investing decision
-• What assets should we acquire?
-• Risk v return
-– Financing decision
-• How should we pay for the assets?
-• Financing cost, capital structure considerations
-• Overall objective is to maximize net present value
+**There are Two Decisions Involved: Investing & Financing**
+- Financial management is comprised of two distinct decisions
+  - Investing decision
+    - What assets should we acquire?
+    - Risk v return
+  - Financing decision
+    - How should we pay for the assets?
+    - Financing cost, capital structure considerations
+- Overall objective is to maximize net present value
 
 > Not constrained by the capital to fund it or buy it,
 > - How do I maximise the NPV for the business

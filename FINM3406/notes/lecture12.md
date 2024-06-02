@@ -45,7 +45,7 @@ and accountability.
 > - Ensure decisions are made in a rigourous and controlled manner
 > - Something that investors would like to know about
 
-###Why ESG matters to real estate finance?
+### Why ESG matters to real estate finance?
 **Risk Management:** 
 - ESG factors can help assess and manage risks associated with real estate investments. 
 - Evaluating environmental risks, such as climate change impacts or regulatory changes, social risks like community relations, and governance risks like ethical practices can contribute to better risk mitigation strategies and long-term resilience.
@@ -53,10 +53,10 @@ and accountability.
 > - Potentially contributing to environmental impact by development of property
 
 **Investor Behaviour:** 
-– Institutional investors, including pension funds and asset managers, 
+- Institutional investors, including pension funds and asset managers, 
 are placing greater emphasis on ESG criteria when making 
 investment decisions. 
-– Real estate developers and owners who prioritize ESG practices can 
+- Real estate developers and owners who prioritize ESG practices can 
 attract capital from investors seeking sustainable and socially 
 responsible investments.
 
@@ -148,10 +148,11 @@ needs.’
 
 2020 Renewable Energy Targets
 - Australia 20%
-- NFEE (National Framework For Energy Efficiency)
+
+**NFEE (National Framework For Energy Efficiency)**
 - unlocking the significant but un-tapped economic potential associated with the increased uptake of energy efficient technologies
 
-- Jevons’ Paradox - improvements in efficiency of resource use can lead to increased consumption of that resource
+Jevons’ Paradox - improvements in efficiency of resource use can lead to increased consumption of that resource
 - Efficiency gains: Technological advancements and efficiency improvements make the use of resources more efficient.
 - Rebound effect: Instead of reducing resource consumption, increased efficiency often leads to increased overall usage of the resource.
 - Example: Energy Efficiency
@@ -240,7 +241,7 @@ needs.’
 
 ![alt text](assets\IMG97.PNG)
 
-> - NABERS building in Sydney vs Tasmania, different factoring assessment facotring in
+> - NABERS building in Sydney vs Tasmania, different factoring assessment factoring in
 
 ![alt text](assets\IMG98.PNG)
 
@@ -350,5 +351,3 @@ will facilitate the specification and delivery of obligations of building owner 
 
 > - Add all these things into a regular lease, is now a green lease
 > - Will add costs and administration burden
-
-

@@ -323,6 +323,7 @@ Uncertainty in:
 #### Dwellings
 - 5-8 years
 - Activity upturns of 50-80%
+
 #### Offices
 - up to 15 years
 - Activity by 400% during upturn
@@ -382,8 +383,7 @@ Uncertainty in:
 ## Hypothetical Development Model
 
 ### Hypothetical Development Equation
-- “Value of Finished Product” = land value + dev costs + finance 
-  - costs + profit
+- “Value of Finished Product” = land value + dev costs + finance costs + profit
 - Value of Land = Value of Finished Product that is Gross Realisation – (dev costs + finance costs + profit)
 
 > How you much pay for a land that has a simple development opportunity
@@ -578,7 +578,7 @@ Interest Rate Applicable? | 6%
 - Making future predictions which are subject to external influences
 
 > need to check that we can afford the asking price of the land
-> - realistic tool to deteremine land value
+> - realistic tool to determine land value
 >
 > Disadvantages
 > - hard to define through market analysis what the costs might be

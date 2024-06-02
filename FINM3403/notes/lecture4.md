@@ -98,7 +98,7 @@ Expiration
 
 ### Put Options
 Put option
-- Grants the hodler the right, but not the obligation to sell the security at the strike price
+- Grants the holder the right, but not the obligation to sell the security at the strike price
 
 ***June 2024 109 put options on the Euro***
 

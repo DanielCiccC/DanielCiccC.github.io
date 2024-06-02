@@ -53,7 +53,7 @@ on the title of the property in order to ensure that the rights and obligations 
 mortgage are legally binding and enforceable.
 
 > If you as a borrower don't pay the loan, lender has a right to take possession of the property
-> - mortgagees can take possession of the property if you are doing something that destroys it's value
+> - mortgagees can take possession of the property if you are doing something that destroys its value
 > - taking possession to everything - to rents maintenance, insurance, everything on the land, etc.
 >
 > If mortgagee can't enforce payment of rent (after the possession), e.g. if the mortgage is not registered.
@@ -136,7 +136,7 @@ There are Four Basic Rules for calculating loan payments and balances:
 - Rule 1: The interest owed in each period equals the applicable interest rate times the outstanding 
 principal balance at the end of the previous period.
 
-$$INT_{t} = (OLB_{t-1})_{rt}$$
+$$INT_{t} = (OLB_{t-1}) \cdot rt$$
 
 
 - Rule 2:  The principal amortised (paid down) in each payment equals the total payment (net of 
@@ -329,8 +329,7 @@ integration into other capital markets
 ### CBMS
 - CMBS are financial instruments (bonds) backed by pools of commercial mortgages
 - CMBS securities provide claims to components of the cash flow coming from underlying mortgages (borrowers pay principal and interest)
-- Mortgage loans on individual commercial properties originated by lenders in the primary 
-market are pooled together 
+- Mortgage loans on individual commercial properties originated by lenders in the primary market are pooled together 
 - Pool of loans are transferred to a trust – issue and sell classes of bonds to investors.
 
 > Pool together a bunch of mortgages, sell as an investment
@@ -381,8 +380,7 @@ cash flows
 
 ### 2. Value Creation: Tranching
 - Different classes of securities are known as tranches
-- Each tranche is characterised by its priority of claim on the mortgage pool’s 
-cash flows
+- Each tranche is characterised by its priority of claim on the mortgage pool’s cash flows
 - Bond rating agencies assign a credit quality rating to each bond class.
 - AAA Rating – Highest-quality, low risk, investment grade 
 
@@ -394,8 +392,7 @@ cash flows
 
 ### 3. Bond Credit Rating
 - Liquid public market in CMBS requirements:
-  - Passive investors to feel confident in default risk regardless of their real 
-estate knowledge
+  - Passive investors to feel confident in default risk regardless of their real estate knowledge
   - Otherwise investors would not place their capital or;
   - require such high yields securitisation would be unprofitable or 
 uncompetitive
@@ -430,6 +427,15 @@ time (2000 – 2006)
   - Foreclosure rate to go to 50%
 - “Money good” investments created by pooling thousands of risky 
 mortgages
+
+- Collateralised debt obligations (CDO’s)
+  - Pool of MBS tranches, pools of pools
+  - Toxic Waste
+  - Low-rated, high risk tranches, bundle together, re-tranche which creates a new AAA rated bond
+- How do CDO’s get re-rated?
+- Popularity of MBS drove investors to want more securities
+  - More interesting mortgage products came to market
+  - House prices booming   - some markets seeing doubling in house prices in as short as 12 months
 
 ### Global Financial Crisis 
 - What is the source of the GFC?

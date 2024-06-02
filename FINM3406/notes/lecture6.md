@@ -169,6 +169,7 @@ Instalment = $50091.29
 
 ### Discounted Cash Flow (DCF) analysis
 - Discounted cash flow (DCF) analysis applied to commercial property 
+
 The Direct Capitalisation method which has been covered in detail is the traditional tool for the Valuation of investment properties. You should all by now be totally conversant with the formula 
 
 $$CV = \frac{NI}{i}$$ 
@@ -401,7 +402,7 @@ WACC (Weighted Average Cost of Capital) – used by the finance industry Client 
 > uncertain and challenging - risk is much higher
 
 ### Financial Performance
-**Financial Performance-Net Present Value (NPV) **
+**Financial Performance-Net Present Value (NPV)**
 
 - We should be aware by now of discounting and the term Present Value. We must now introduce a variation on the PV concept, the Net  Present Value (NPV).
 

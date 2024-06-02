@@ -141,7 +141,7 @@ manufactures and sells PCs in the UK.
 
 **Case 1** | **Case 2** | **Case 3**
 | --- | --- | --- |
-![alt text](assets\IMG120.PNG) | ![alt text](assets\IMG121.PNG)
+![alt text](assets\IMG120.PNG) | ![alt text](assets\IMG121.PNG) | 
 | Assumes only the price of imported input changes. (Albion does not pass-through any of this higher cost. Thus, profit margins fall.) As the £ depreciates (\$1.40/ £), the input cost of imported Intel chips increases resulting in lower £ profits, and the £ operating cash flows are worth fewer \$s. | Assumes price of imported input AND selling price increase. Assumes Albion will sell the same number of units after passing on all (and then some) of the higher cost. Thus, assumes demand is highly inelastic. | Assumes selling price and local costs increase by 8% (local inflation rate). Also assumes demand is elastic. Sales fall by 10,000 units at the higher selling price. <br> Input costs have gone up, unit sales have fallen, and the £ operating cash flows are worth fewer $s. 
 
 
