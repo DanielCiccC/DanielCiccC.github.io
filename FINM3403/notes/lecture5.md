@@ -105,9 +105,8 @@ month].
      
 - Currency option hedge
   - A way to hedge contingent exposure
-- Money Market hedge: Taking a money market 
-position to hedge future receivables/payables
-         
+- Money Market hedge: Taking a money market position to hedge future receivables/payables
+         The annual interest rate in the AUS and UK are 5% and 8% respectively. The current spot rate is $1.50/£ and the 1 year forward rate is $1.48/£. Can arbitrage profits be made?
 - Structuring the Hedge 
   - exporters (sell FOREX, buy AUD) - receivables
   - importers (buy FOREX, sell AUD) - payables

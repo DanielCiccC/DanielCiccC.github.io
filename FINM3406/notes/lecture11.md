@@ -64,6 +64,7 @@
 - Business Objectives
 
 IMPORTANT:
+
 ![alt text](assets\IMG49.PNG)
 
 > Once you have a business, you should have an IT, HR strategy, etc
