@@ -15,4 +15,4 @@
 [Lecture 10](lecture10.html) |
 [Lecture 11](lecture11.html) |
 [Lecture 12](lecture12.html) |
-[Lecture 13](lecture13Revision.html) |
+[Revision Lecture 13](lecture13Revision.html) |
