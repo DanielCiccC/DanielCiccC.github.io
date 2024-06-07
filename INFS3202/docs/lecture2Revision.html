@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-2-revision">Lecture 2 Revision</h1>
+<h1 dir="auto" id="creating-and-deploying-web-applications">Creating and Deploying Web Applications</h1>
+<h3 dir="auto" id="html-recap">HTML recap</h3>
+<ul dir="auto">
+<li dir="auto">Common tags
+<ul dir="auto">
+<li dir="auto">Headings</li>
+<li dir="auto">Paragraphs</li>
+<li dir="auto">Lists (ordered and unordered)</li>
+<li dir="auto">Images</li>
+<li dir="auto">Tables</li>
+</ul>
+</li>
+</ul>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Sample HTML Pag Structure<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Heading 1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Welcome<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> to <span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p dir="auto">HTML Tables:</p>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Table of Harry Potter Books:<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Table of Harry Potter Books:<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">border</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Description<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Harry Potter and the Philosopher&#x27;s Stone<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Harry discovers he is a wizard and attends Hogwarts for the first time.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Harry Potter and the Chamber of Secrets<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Harry returns to Hogwarts and investigates a series of mysterious petrifications.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Harry Potter and the Prisoner of Azkaban<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Harry learns about his family&#x27;s past and encounters a dangerous escaped prisoner.<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3 dir="auto" id="cascading-style-sheets-css---why-cascading">Cascading Style Sheets (CSS) - why cascading?</h3>
+<ul dir="auto">
+<li dir="auto">This cascading mechanism allows
+multiple style sheets to influence
+the look of a document, with a
+well-defined order of precedence
+determining how conflicts are
+resolved.</li>
+</ul>
+<h3 dir="auto" id="links---the-a-href-tag">Links - The &lt;a href&gt; tag</h3>
+<ul dir="auto">
+<li dir="auto">The &lt;a&gt; tag, also known as the anchor tag, is used in HTML to
+create hyperlinks that navigate to other web pages or resources.</li>
+<li dir="auto">The href attribute within the &lt;a&gt; tag specifies the destination
+URL that the link points to.</li>
+<li dir="auto">The href value can be an absolute URL, a relative URL, or a URL
+fragment (used for scrolling to specific sections within the same
+page).</li>
+<li dir="auto">Absolute URL: A complete web address, including the protocol
+(e.g., http://, https://), domain, and path.
+Example: &lt;a href=&quot;<a href="https://www.example.com">https://www.example.com</a>&quot;&gt;Visit &lt;/a&gt;</li>
+<li dir="auto">Relative URL: A partial web address that is relative to the current
+page's location. Relative URLs are often used for links within the
+same website.
+Example: &lt;a href=&quot;about/index.html&quot;&gt;Learn More&lt;/a&gt;</li>
+<li dir="auto">The target attribute can be used to control how the linked content
+is displayed when clicked eg _blank opens the link in a new tab
+or window.</li>
+<li dir="auto">The &lt;a&gt; tag can be used to create text links, image links, or any
+content that can be clicked to navigate.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">absolute URL includes the protocol</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="forms">Forms</h3>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Blog Post Form:<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;style.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Write a Blog Post<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/submit-blog&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Title:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;title&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;title&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;blog&quot;</span>&gt;</span>Blog Content:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;blog&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;blog&quot;</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">&quot;50&quot;</span> <span class="hljs-attr">required</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p dir="auto">In html:</p>
+<div  dir="auto" ></div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Post Form:</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Write a Blog Post</h1>
+  <form action="/submit-blog" method="post">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+    </div>
+    <div>
+      <label for="blog">Blog Content:</label>
+      <textarea id="blog" name="blog" rows="10" cols="50" required></textarea>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</html>
+<ul dir="auto">
+<li dir="auto">Each of elements can be included
+within a &lt;form&gt; element</li>
+<li dir="auto">Use the action and method attributes
+of the &lt;form&gt; element to specify where
+and how the form data should be
+submitted</li>
+<li dir="auto">&lt;input&gt; is a single line text field</li>
+<li dir="auto">&lt;textarea&gt; is a multiline text field</li>
+<li dir="auto">&lt;button&gt; is a button and with the type
+attribute set to ‘submit’ will send the
+values entered into the form to the
+action path of the form</li>
+</ul>
+<h3 dir="auto" id="form---method-get-vs-post">Form - method Get vs Post</h3>
+<p dir="auto"><strong>GET Method</strong></p>
+<ul dir="auto">
+<li dir="auto">Data Appended to URL: Sends data in the URL itself, as key-value pairs in the query string.</li>
+<li dir="auto">Read Operations: Typically used for retrieving data, not modifying it.</li>
+<li dir="auto">Limited Data Size: Length restrictions due to URL length limitations (usually up to 2048
+characters).</li>
+</ul>
+<p dir="auto"><strong>POST Method</strong></p>
+<ul dir="auto">
+<li dir="auto">Data in Body: Sends data in the <em>request body</em>, allowing for larger and more complex
+payloads. No inherent size limitation like with GET.</li>
+<li dir="auto">Write Operations: Typically used for sending data to be processed or stored on the server.</li>
+<li dir="auto">Encoding: GET uses URL encoding, whereas POST allows for multiple data types
+(e.g., application/json, multipart/form-data).</li>
+</ul>
+<p dir="auto"><img src="image-1.png" alt="alt text" data-src="image-1.png"></p>
+<h3 dir="auto" id="php-%E2%80%93-forms-%E2%80%93-get-vs-post">PHP – Forms – Get vs Post</h3>
+<p dir="auto"><img src="image-2.png" alt="alt text" data-src="image-2.png"></p>
+<h3 dir="auto" id="when-to-use-get">When to use Get</h3>
+<ul dir="auto">
+<li dir="auto">When to use the method=“get”</li>
+<li dir="auto">This method <strong>should not be used when sending passwords</strong> or other sensitive information!</li>
+<li dir="auto">This method is <strong>not suitable for very large variable values</strong>.</li>
+<li dir="auto">This method is case insensitive (all characters in lower case).</li>
+<li dir="auto">This can be useful for example where you want to be able to bookmark a page with specific
+query string values.</li>
+</ul>
+<h3 dir="auto" id="uqcloud-and-nginx-web-server">UQCloud and NGINX Web Server</h3>
+<p dir="auto">The basic elements of a web server includes</p>
+<ul dir="auto">
+<li dir="auto">Hardware</li>
+<li dir="auto">operating system</li>
+<li dir="auto">http server
+The addition of a database and scripting language extend a server’s capabilities</li>
+</ul>
+<p dir="auto"><img src="image-3.png" alt="alt text" data-src="image-3.png"></p>
+
+</main>
+</body>
+</html>
