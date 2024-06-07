@@ -56,7 +56,7 @@ Compulsory Acquisition)
 > - barrier to climate and modifier of climate
 > - not subjected to temperature changes
 > - Privacy
-> - Communicating an aesthetic and appeal
+> - Communicating an aesthetic appeal
 
 
 ### Real estate market characteristics

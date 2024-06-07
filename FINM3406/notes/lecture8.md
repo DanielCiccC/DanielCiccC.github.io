@@ -441,9 +441,9 @@ divided by the value at the beginning of the period.
   - What is the Initial Yield?
   - What is the Cash on Cash Yield? 
 
-> TVR = 80%
-> initial yield = passing rent/capital value = 3/40
-> cash on cash yield = (760) / 8000 = 9.5%
+> - TVR = 80%
+> - initial yield = passing rent/capital value = 3/40
+> - cash on cash yield = (760) / 8000 = 9.5%
 
 ### Mechanics of Leverage
 - Analogy between financial and physical leverage proves helpful. 

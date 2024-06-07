@@ -46,12 +46,12 @@ Each state has their own property law frameworks
 
 ### Doctrine of Tenure, Estates & Waste
 
-- Doctrine of Tenure (spatial)
+**Doctrine of Tenure (spatial)**
   
 All land is held by way of grant from the Crown (or in modern language from the State)
   - Crown gives you the land but still has the right to take it back
 
-- Doctrine of Estates (temporal) (estates in possession)
+**Doctrine of Estates (temporal) (estates in possession)**
 
 All land tenure gives the owner the right of possession for specific duration (an estate can be a future interest – ie vested vs contingent)
   - Freehold – uncertain duration
@@ -70,7 +70,7 @@ All land tenure gives the owner the right of possession for specific duration (a
         - Interest that is linked to the death of a person
     - Leasehold: for a certain duration, for a defined period. If the interest of the land is for a certain duration, 
 
-- Doctrine of Waste
+**Doctrine of Waste**
   
 Owners of limited estates (ie less than fee-simple) are limited in their use of the land (ie cant do things to degrade its value) to protect future interests
 - NOTES: e.g. a life estate, person living cannot put a bulldozer through it
