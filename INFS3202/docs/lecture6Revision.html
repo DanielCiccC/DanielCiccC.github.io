@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-6">Lecture 6</h1>
+<h1 dir="auto" id="mvc-%E2%80%93-advanced-codeigniter">MVC – Advanced CodeIgniter</h1>
+<h3 dir="auto" id="caching">Caching</h3>
+<ul dir="auto">
+<li dir="auto">Caching is a technique used to store copies of files or data results in a temporary storage location
+(cache), so future requests for those files or data can be served faster.</li>
+<li dir="auto">In web development, caching can refer to storing parts of web pages or views, database query results, or
+even computational results to improve performance and reduce the load on the system.</li>
+</ul>
+<p dir="auto"><strong>Why Do We Need It?</strong></p>
+<ul dir="auto">
+<li dir="auto">Performance Enhancement:
+<ul dir="auto">
+<li dir="auto">By reducing the need to perform time-consuming operations (like database queries or complex calculations) for every request, caching significantly speeds up the response time of applications.</li>
+</ul>
+</li>
+<li dir="auto">Reduced Load:
+<ul dir="auto">
+<li dir="auto">It decreases the load on the server, as cached content is served directly without going through the entire application logic or database querying process again.</li>
+</ul>
+</li>
+<li dir="auto">Improved User Experience:
+<ul dir="auto">
+<li dir="auto">Faster response times contribute to a smoother and more responsive user experience.</li>
+</ul>
+</li>
+<li dir="auto">Scalability:
+<ul dir="auto">
+<li dir="auto">Caching helps in scaling applications by managing resource utilization more efficiently, allowing the system to handle more users without requiring proportional increases in hardware or processing power.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">using up server resources</p>
+</li>
+<li dir="auto">
+<p dir="auto">Sometimes it might not be worth it to rerun queries and regenerate page</p>
+</li>
+<li dir="auto">
+<p dir="auto">Person editing blog page e.g. once a week, might not need to regenerate page every min</p>
+</li>
+<li dir="auto">
+<p dir="auto">Cache a page, and can just retrieve it</p>
+</li>
+<li dir="auto">
+<p dir="auto">Faster, reduce the load on the server, and can scale the servers</p>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="what-type-of-caching-does-codeigniter-support">What type of Caching does CodeIgniter Support?</h3>
+<p dir="auto">CodeIgniter provides a simple yet flexible caching mechanism that supports different types of
+caching:</p>
+<ul dir="auto">
+<li dir="auto">Page Caching:
+This method caches the entire output of a page. When a request is made, CodeIgniter checks
+if a cached version of the page exists and serves it directly, bypassing the normal system
+execution.</li>
+<li dir="auto">Querystring Caching:
+Uses the combination of variables in the URL querystring and saves versions to the cache.</li>
+</ul>
+<h3 dir="auto" id="cache-config">Cache Config</h3>
+<ul dir="auto">
+<li dir="auto">Location of Cache Settings:
+The primary configuration file for cache settings in CodeIgniter is located at
+app/Config/Cache.php. Specify the default cache handler eg file or redis etc.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">In codeigniter, a cache file directory
+<ul dir="auto">
+<li dir="auto">HTML is rendered and saved</li>
+</ul>
+</li>
+<li dir="auto">memcache, redis and filetype e.g.</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="where-is-the-cached-file-stored">Where is the cached file stored?</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Cached files are saved in the writable/cache folder</p>
+</li>
+<li dir="auto">
+<p dir="auto">Get cache information</p>
+<ul dir="auto">
+<li dir="auto"><code>php spark cache:info</code></li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Clear cache</p>
+<ul dir="auto">
+<li dir="auto"><code>php spark cache:clear</code></li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="file-uploads">File uploads</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">File uploads are a critical component of many web applications, from social media platforms where users share images and videos, to business applications that handle documents, spreadsheets, and other business-critical files.</p>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>Personalization</strong>: Allows users to upload avatars, backgrounds, or other personal images,
+enhancing their engagement and personal connection to the application.</p>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>Content Sharing</strong>: Enables users to share content, such as photos, videos, and
+documents, facilitating collaboration and interaction within the application.</p>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>Dynamic Content</strong>: File uploads are essential for content management systems (CMS),
+enabling administrators and users to update website content, including text, images, and
+videos.</p>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>Data Import</strong>: Enables efficient data import processes, allowing users to upload files
+containing bulk data, which can be processed and integrated into the application's
+database.</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">upload images and share them, e.g.</li>
+<li dir="auto">upload their own image or avatar</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="processing-a-file-upload">Processing a File Upload</h3>
+<p dir="auto"><strong>Create Routes</strong></p>
+<ul dir="auto">
+<li dir="auto">Same /uploads route will handle get and post</li>
+<li dir="auto">Get will display the upload form</li>
+<li dir="auto">Post will accept the posted file</li>
+</ul>
+<p dir="auto"><img src="assets\IMG38.PNG" alt="alt text" data-src="assets%5CIMG38.PNG"></p>
+<p dir="auto"><strong>Create the View</strong></p>
+<ul dir="auto">
+<li dir="auto">Use the DropZone Javascript Library</li>
+<li dir="auto">A CSRF must be included
+in the form to make sure the
+form post is from the same
+server.</li>
+</ul>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>View</strong></th>
+<th><strong>Code</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="assets\IMG39.PNG" alt="alt text" data-src="assets%5CIMG39.PNG"></td>
+<td><img src="assets\IMG40.PNG" alt="alt text" data-src="assets%5CIMG40.PNG"></td>
+</tr>
+</tbody>
+</table>
+<p dir="auto"><strong>Create the Controller</strong></p>
+<ul dir="auto">
+<li dir="auto">The file is saved to /writable/uploads with a random filename</li>
+<li dir="auto">A JSON response needs to be returned</li>
+<li dir="auto">You will need to manage where uploads are stored for your users and how to secure access</li>
+</ul>
+<p dir="auto"><img src="assets\IMG41.PNG" alt="alt text" data-src="assets%5CIMG41.PNG"></p>
+
+</main>
+</body>
+</html>
