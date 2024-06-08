@@ -188,7 +188,7 @@ payloads. No inherent size limitation like with GET.
 query string values.
 
 
-### UQCloud and NGINX Web Server
+## UQCloud and NGINX Web Server
 
 The basic elements of a web server includes 
 - Hardware
@@ -198,3 +198,74 @@ The addition of a database and scripting language extend a server’s capabiliti
 
 ![alt text](assets\IMG29.PNG)
 
+### Operating system
+A operating system is what allows you to interact with the applications and hardware that make up your computer. It facilitates resource 
+allocation to your applications, and communication between hardware and software. 
+Typically, operating systems for servers fall under three categories: 
+
+- Linux based
+- Windows based
+- and Mac based
+
+Top five open source web server
+- Apache HTTP Server
+- NGINX
+- Apache Tomcat
+- Node.js
+- Lighttpd
+
+### Connecting to your student zone
+
+**SSH**
+- All zones may be accessed for administration purposes through the commandline, though SSH access uses UQ 
+usernames and passwords.
+
+**SFTP**
+- With a UQ user account, you can also access your zone over SFTP using a client such as WinSCP or FileZilla to upload 
+or download files.
+
+### NGINX Web server – Basic config file
+
+```
+http {
+    server {
+        listen 80; # Listen on port 80 for HTTP requests
+        server_name example.com; # Replace with your domain name or use localhost
+
+        # Document root where the files are located
+        root /var/www/html/htdocs;
+
+        # Default file to serve
+        index index.html index.htm;
+
+        # Serve files
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
+}
+```
+
+- root /var/www/html/htdocs;: 
+  - The root directive specifies the directory where Nginx should look for the files to serve.
+- index index.html index.htm;: 
+  - This specifies the default files that Nginx should look for when a directory is requested.
+- After you change the configuration run:
+
+```
+$ sudo systemctl reload nginx
+```
+### HTTP Status Codes
+
+HTTP status codes are standardized responses that a web server sends to your browser to indicate 
+the outcome of a requested action.
+
+**Code** | **Description**
+| --- | ---
+200 Ok | The request has succeeded. The meaning of the success depends on the HTTP method used.
+201 Created | The request has been fulfilled, resulting in the creation of a new resource.
+400 Bad Request | The server cannot process the request due to a client error (e.g., malformed request syntax).
+401 Unauthorized | The request requires user authentication.
+404 Not Found | The server has not found anything matching the Request-URI.
+408 Request Timeout | The client did not produce a request within the time that the server was prepared to wait.
+500 Internal Server Error | The server encountered an unexpected condition which prevented it from fulfilling the request. Usually a server-side setup issue or server-side coding error. 
