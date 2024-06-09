@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="lecture3Revision - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>lecture3Revision</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-3-revision">Lecture 3 revision</h1>
+<h1 dir="auto" id="mvc-%E2%80%93-controllers-and-views">MVC – Controllers and Views</h1>
+<h3 dir="auto" id="3-layer-architecture">3-layer architecture</h3>
+<ul dir="auto">
+<li dir="auto">The 3-Layer Architecture is a
+software design pattern that divides
+applications into three main
+categories or layers:
+<ul dir="auto">
+<li dir="auto">Presentation</li>
+<li dir="auto">Business Logic (or Application Layer)</li>
+<li dir="auto">Data Layer</li>
+</ul>
+</li>
+<li dir="auto">This architecture aims to separate the user interface, the business logic, and the data storage, which
+promotes a clean separation of concerns.</li>
+</ul>
+<h3 dir="auto" id="mvc--3-layer-architecture">MVC + 3-layer architecture</h3>
+<p dir="auto"><img src="assets\IMG30.PNG" alt="alt text" data-src="assets/IMG30.PNG"></p>
+<ul dir="auto">
+<li dir="auto">The MVC pattern is a specialized form of 3-layer architecture, making it highly relevant to modern web development practices</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">separate out what we are building into three separate layers</li>
+<li dir="auto">MVC allows us to use REST
+<ul dir="auto">
+<li dir="auto">REST - representation state controllers</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto">Model–view–controller (MVC) - a software architectural pattern, that separates an application's data, user
+interface, and control flow into three components:</p>
+<ul dir="auto">
+<li dir="auto">Model:
+<ul dir="auto">
+<li dir="auto">Represents the data.</li>
+<li dir="auto">The model is often connected to a database and is responsible for retrieving and storing data.</li>
+</ul>
+</li>
+<li dir="auto">View:
+<ul dir="auto">
+<li dir="auto">Represents the user interface of an application,</li>
+<li dir="auto">is responsible for displaying data and getting user input.</li>
+<li dir="auto">HTML, CSS, and JavaScript.</li>
+</ul>
+</li>
+<li dir="auto">Controller:
+<ul dir="auto">
+<li dir="auto">Manages the flow of data between the model and the view,</li>
+<li dir="auto">is responsible for processing user input and directing the application’s behaviour.</li>
+<li dir="auto">includes code that implements business rules and other functionality.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Model uses ORM a lot of the time</li>
+<li dir="auto">model connects to the database is retrieves and stores the data</li>
+</ul>
+<p dir="auto">View</p>
+<ul dir="auto">
+<li dir="auto">HTML, CSS, javascript</li>
+<li dir="auto">user interface of an application</li>
+</ul>
+<p dir="auto">Controller</p>
+<ul dir="auto">
+<li dir="auto">Flow of data between the model and the view</li>
+<li dir="auto">business rules, processing</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="benefits-of-mvc">Benefits of MVC</h3>
+<ul dir="auto">
+<li dir="auto">Simplifies Complex Applications:
+<ul dir="auto">
+<li dir="auto">By separating the application into three components, developers can focus on one aspect without affecting others.</li>
+</ul>
+</li>
+<li dir="auto">Facilitates Parallel Development:
+<ul dir="auto">
+<li dir="auto">Different developers can work on the Model, View, and Controller simultaneously.</li>
+</ul>
+</li>
+<li dir="auto">Easy to Modify or Scale:
+<ul dir="auto">
+<li dir="auto">Changes to the business logic or user interface can be made with minimal impact on the other components.</li>
+</ul>
+</li>
+<li dir="auto">Supports Reusability:
+<ul dir="auto">
+<li dir="auto">Components can be reused across different parts of the application or in different applications.</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="convention-vs-configuration">Convention vs Configuration</h3>
+<p dir="auto">Convention vs. Configuration is a design philosophy that:</p>
+<ul dir="auto">
+<li dir="auto">impacts how software frameworks are structured  (i.e. where files are located)</li>
+<li dir="auto">how they expect developers to interact with them</li>
+<li dir="auto">It's a trade-off between the ease of following predefined paths and files (convention) or the flexibility to define everything explicitly (configuration).</li>
+<li dir="auto">Important advice:
+<ul dir="auto">
+<li dir="auto">Web frameworks (CodeIgniter, Django, Ruby on Rails, Flask, Next,JS) come with a predefined folder structure</li>
+<li dir="auto">Learn what the structure is and where files go</li>
+<li dir="auto">This will improve your productivity!</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">tools that you run from the command line that will do this for you</p>
+<ul dir="auto">
+<li dir="auto">CLI builds whole project scaffold for you</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="why-choose-codeigniter">Why Choose CodeIgniter</h3>
+<ul dir="auto">
+<li dir="auto">Simplicity and Efficiency:
+<ul dir="auto">
+<li dir="auto">Ideal for developers who need a straightforward and rapid development process without the bulkiness of larger frameworks.</li>
+</ul>
+</li>
+<li dir="auto">Flexibility:
+<ul dir="auto">
+<li dir="auto">Unlike some frameworks that enforce strict project environments, CodeIgniter provides the flexibility to organize files and structure the application as desired.</li>
+</ul>
+</li>
+<li dir="auto">Documentation &amp; Support:
+<ul dir="auto">
+<li dir="auto">Excellent documentation and community support make it accessible for beginners and efficient for experienced developers.</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="codeigniter-models">Codeigniter Models</h3>
+<ul dir="auto">
+<li dir="auto">The CodeIgniter's Model offers convenient features and additional functionality to make working with a single
+table in the database easier.
+<ul dir="auto">
+<li dir="auto">automatic database connection;</li>
+<li dir="auto">basic Create Read Update Delete methods;</li>
+<li dir="auto">in-model validation;</li>
+<li dir="auto">automatic pagination;</li>
+<li dir="auto">and more</li>
+</ul>
+</li>
+<li dir="auto">Models in CodeIgniter 4 are stored in the app/Models directory</li>
+<li dir="auto">Use Spark to create a new model file e.g.
+php spark make:model Customers</li>
+<li dir="auto">A new file called Customers.php is placed in app/Models</li>
+<li dir="auto">To access models within your classes, you can create a new
+instance or use the model() helper function.</li>
+</ul>
+<h3 dir="auto" id="raw-sql--querybuilder-class">Raw SQL &amp; QueryBuilder Class</h3>
+<ul dir="auto">
+<li dir="auto">Builder can help you generate the raw SQL scripts, which will be sent to query().</li>
+<li dir="auto">To load the Query Builder, use the table() method on the database connection.</li>
+<li dir="auto">It's important to note that the Query Builder needs to be explicitly loaded if you require.</li>
+<li dir="auto">Get Data(i.e. SELECT *): $builder-&gt;get()</li>
+</ul>
+<p dir="auto"><img src="assets\IMG31.PNG" alt="alt text" data-src="assets/IMG31.PNG"></p>
+
+</main>
+</body>
+</html>

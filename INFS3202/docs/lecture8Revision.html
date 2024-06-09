@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="lecture8Revision - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>lecture8Revision</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-8-revision">Lecture 8 Revision</h1>
+<h1 dir="auto" id="restful-apis-and-javascript">RESTful API’s and JavaScript</h1>
+<h3 dir="auto" id="javascript-object-notation-json">JavaScript Object Notation (JSON)</h3>
+<ul dir="auto">
+<li dir="auto">JSON is a lightweight data interchange format that's easy for humans to read and write and easy for machines to parse and generate.</li>
+<li dir="auto">The structure of JSON includes two types of structures:</li>
+<li dir="auto">a collection of key/value pairs and an ordered list of values (array)</li>
+<li dir="auto">The JSON format is text only and can be easily sent to and from a server (post to an API and get from an API)</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">represent an object</p>
+<ul dir="auto">
+<li dir="auto">left, defining fields/keys</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">All keys and string values are written in double quotes</li>
+<li dir="auto">A colon separates each key from its value.</li>
+<li dir="auto">The entire set of key/value pairs is enclosed in curly braces {}.</li>
+</ul>
+<p dir="auto"><strong>JSON can be nested</strong></p>
+<p dir="auto"><img src="assets\IMG44.PNG" alt="alt text" data-src="assets/IMG44.PNG"></p>
+<h2 dir="auto" id="restful-apis">RESTFul API’s</h2>
+<ul dir="auto">
+<li dir="auto">API (Application Programming Interface):
+<ul dir="auto">
+<li dir="auto">A set of rules and protocols for building and interacting with software applications.</li>
+</ul>
+</li>
+<li dir="auto">Bridge for Communication:
+<ul dir="auto">
+<li dir="auto">APIs allow different software systems to communicate with each other without needing to know how they’re implemented.</li>
+</ul>
+</li>
+<li dir="auto">Automation and Efficiency:
+<ul dir="auto">
+<li dir="auto">APIs allow routine tasks to be handled automatically without human intervention, increasing efficiency.</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="how-are-apis-used-in-web-development">How are API’s used in Web Development?</h3>
+<ul dir="auto">
+<li dir="auto">Backend Connectivity:
+<ul dir="auto">
+<li dir="auto">APIs serve as the backend framework for the web app, connecting the user interface to server-side databases and processes. This enables the application to retrieve and store data dynamically.</li>
+</ul>
+</li>
+<li dir="auto">Data Services:
+<ul dir="auto">
+<li dir="auto">APIs provide web applications with dynamic access to external data services, such as weather updates, stock prices, or geographic information.</li>
+</ul>
+</li>
+<li dir="auto">Dynamic Content Loading:
+<ul dir="auto">
+<li dir="auto">APIs allow web applications to load content dynamically without the need to reload the entire page. This is often seen in social media feeds, where new content is seamlessly loaded as the user scrolls.</li>
+</ul>
+</li>
+<li dir="auto">Expose your Apps Functionality to Other Sites:
+<ul dir="auto">
+<li dir="auto">Just as you use API’s from other sites, you too can make available services for other to use.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">want to build a better UI</li>
+<li dir="auto">data services, have other people use your API</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="what-is-a-restful-api">What is a RESTful API?</h3>
+<ul dir="auto">
+<li dir="auto"><em>Representational State Transfer</em></li>
+<li dir="auto">Architectural style for distributed systems</li>
+</ul>
+<p dir="auto"><strong>Stateless Communication</strong></p>
+<ul dir="auto">
+<li dir="auto">Each request from a client contains all the information needed for processing</li>
+</ul>
+<p dir="auto"><strong>Resource-Based</strong></p>
+<ul dir="auto">
+<li dir="auto">Resources are identified by URLs</li>
+<li dir="auto">Once you know the resource name the process of listing, creating, editing and deleting is the same</li>
+</ul>
+<p dir="auto"><strong>HTTP Methods</strong></p>
+<ul dir="auto">
+<li dir="auto">GET, POST, PUT, DELETE</li>
+</ul>
+<h3 dir="auto" id="crud-with-restful">CRUD with RESTful</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">You can perform CRUD (Create, Read, Update, Delete) operations on a resource (eg Item) using various HTTP methods.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Listing Items (GET)</p>
+<ul dir="auto">
+<li dir="auto"><a href="https://url/api/item">https://url/api/item</a></li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Reading an Item by id (GET)</p>
+<ul dir="auto">
+<li dir="auto"><a href="https://url/api/item/4">https://url/api/item/4</a></li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Create an Item (POST) to <a href="https://url/api/item">https://url/api/item</a></p>
+</li>
+<li dir="auto">
+<p dir="auto">Edit an Item (PUT) to <a href="https://url/api/item/4">https://url/api/item/4</a></p>
+</li>
+<li dir="auto">
+<p dir="auto">Delete an Item (DELETE) to <a href="https://url/api/item/4">https://url/api/item/4</a></p>
+</li>
+</ul>
+<h3 dir="auto" id="javascript-recap">Javascript recap</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>Building Block</th>
+<th>JavaScript Example</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>Variable Assignment</td>
+<td>const y = 2; //Declare a constact <br> let x = 5; // Block scoped variable that can be changed</td>
+</tr>
+<tr dir="auto">
+<td>String</td>
+<td>let myString = &quot;Hello, world!&quot;;</td>
+</tr>
+<tr dir="auto">
+<td>Integer</td>
+<td>let myInt = 10;</td>
+</tr>
+<tr dir="auto">
+<td>Float</td>
+<td>let myFloat = 20.5;</td>
+</tr>
+<tr dir="auto">
+<td>Boolean</td>
+<td>let myBool = true;</td>
+</tr>
+<tr dir="auto">
+<td>Array/List</td>
+<td>let myList = [1, 2, 3, 4, 5];</td>
+</tr>
+<tr dir="auto">
+<td>Object</td>
+<td>let myObject = {'key1': 'value1', 'key2': 'value2’};</td>
+</tr>
+<tr dir="auto">
+<td>Conditional (if)</td>
+<td>if (x &gt; 5) { console.log(&quot;x is greater than 5&quot;); }</td>
+</tr>
+<tr dir="auto">
+<td>Conditional (if-else)</td>
+<td>if (x &gt; 5) { console.log(&quot;x is greater than 5&quot;); } <br> else { console.log(&quot;x is less than or equal to 5&quot;); }</td>
+</tr>
+<tr dir="auto">
+<td>Conditional (if-else if-else)</td>
+<td>if (x &gt; 5) { console.log(&quot;x is greater than 5&quot;); } <br> else if (x == 5) { console.log(&quot;x is equal to 5&quot;); } <br> else { console.log(&quot;x is less than 5&quot;); }</td>
+</tr>
+<tr dir="auto">
+<td>Functions</td>
+<td>function myFunction() { console.log(&quot;This is a function&quot;); } <br>let square = x =&gt; x * x; <br> let add = (a, b) =&gt; a + b; <br> let getObject = () =&gt; ({ name: &quot;John&quot;, age: 30 }); <br> console.log(getObject()); // Output: { name: &quot;John&quot;, age: 30 } <br> function createGreeting(name) { <br> return <code>Hello, my name is ${name}.</code>; <br> } <br> const greeting = createGreeting(&quot;Alice&quot;); <br> console.log(greeting);</td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="adding-a-list-example-1">Adding a list (example 1)</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Code</strong></th>
+<th><strong>Page</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="assets\IMG45.PNG" alt="alt text" data-src="assets/IMG45.PNG"></td>
+<td><img src="assets\IMG46.PNG" alt="alt text" data-src="assets/IMG46.PNG"></td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="how-it-works">How it works:</h3>
+<p dir="auto"><strong>HTML Structure:</strong>
+The page includes a button labeled &quot;Add New Item&quot;
+and an unordered list (&lt;ul&gt;) with an initial list item.</p>
+<p dir="auto"><strong>JavaScript Logic:</strong>
+When the button is clicked, the JavaScript code
+executes:</p>
+<ul dir="auto">
+<li dir="auto">It creates a new &lt;li&gt; element.</li>
+<li dir="auto">It sets the text of the new list item to &quot;New Item&quot;
+followed by the number, which is determined by
+the number of existing children in the list plus one.</li>
+<li dir="auto">It then appends this new list item to the existing list
+(&lt;ul&gt;).</li>
+</ul>
+<h3 dir="auto" id="adding-a-list-example-2">Adding a list (example 2)</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Code</strong></th>
+<th><strong>Page</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="assets\IMG47.PNG" alt="alt text" data-src="assets/IMG47.PNG"></td>
+<td><img src="assets\IMG48.PNG" alt="alt text" data-src="assets/IMG48.PNG"></td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="how-this-works">How This Works:</h3>
+<p dir="auto"><strong>HTML Structure</strong>:
+The page includes a button and
+a table with headers. Below the table, there's a
+&lt;template&gt; tag containing a template for the table
+rows.</p>
+<p dir="auto"><strong>Template Tag</strong> : Inside the &lt;template&gt; tag, there’s
+a predefined table row (&lt;tr&gt;) with two cells (&lt;td&gt;).
+This row will not be displayed on the page until it is
+instantiated by JavaScript.</p>
+<ul dir="auto">
+<li dir="auto"><strong>JavaScript Functionality</strong>:
+<ul dir="auto">
+<li dir="auto">The function <code>addRow()</code> is triggered when the user clicks the &quot;Add New Row&quot; button. This function retrieves the template's content and clones it.</li>
+<li dir="auto">It modifies the text content of the table cells to include dynamic data based on how many rows are currently in the table. Finally, the cloned and updated template content is appended to the existing table.</li>
+</ul>
+</li>
+</ul>
+<h2 dir="auto" id="fetch-api">Fetch API</h2>
+<p dir="auto"><img src="assets\IMG49.PNG" alt="alt text" data-src="assets/IMG49.PNG"></p>
+<ul dir="auto">
+<li dir="auto">Returns a Promise (which you can think of like a real promise) – at some point it will resolve
+for a success or reject if there is an error</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Will fulfil the promise if something is returned</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Also used to send (post) data back to an API endpoint</li>
+<li dir="auto">An example would be to post data from a form and use an API to save the data</li>
+</ul>
+<p dir="auto"><img src="assets\IMG50.PNG" alt="alt text" data-src="assets/IMG50.PNG"></p>
+<h3 dir="auto" id="todo-list-app">Todo List app</h3>
+<ul dir="auto">
+<li dir="auto">Create a template</li>
+</ul>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;itemTemplate&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list-group-item&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-check&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-check-input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-check-label&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-control d-none&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-group btn-group-sm float-end&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-secondary edit-btn&quot;</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-danger delete-btn&quot;</span>&gt;</span>Delete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<ul dir="auto">
+<li dir="auto">Add event listener to add more items</li>
+</ul>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+    <span class="hljs-keyword">const</span> todoForm = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;todoForm&#x27;</span>);
+    <span class="hljs-keyword">const</span> newItem = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;newItem&#x27;</span>);
+    <span class="hljs-keyword">const</span> todoList = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;todoList&#x27;</span>);
+    <span class="hljs-keyword">const</span> itemTemplate = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;itemTemplate&#x27;</span>);
+
+    <span class="hljs-comment">// Fetch and render existing items</span>
+    <span class="hljs-title function_">fetch</span>(<span class="hljs-string">&#x27;&lt;?= base_url(&quot;item&quot;); ?&gt;/&#x27;</span>)
+        .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.<span class="hljs-title function_">json</span>())
+        .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">items</span> =&gt;</span> {
+            items.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> {
+                <span class="hljs-keyword">const</span> li = <span class="hljs-title function_">createListItem</span>(item);
+                todoList.<span class="hljs-title function_">appendChild</span>(li);
+            });
+        });
+ 
+
+<span class="hljs-comment">// Create list item from template</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">createListItem</span>(<span class="hljs-params">item</span>) {
+    <span class="hljs-keyword">const</span> li = itemTemplate.<span class="hljs-property">content</span>.<span class="hljs-property">firstElementChild</span>.<span class="hljs-title function_">cloneNode</span>(<span class="hljs-literal">true</span>);
+    li.<span class="hljs-property">dataset</span>.<span class="hljs-property">id</span> = item.<span class="hljs-property">id</span>;
+    <span class="hljs-keyword">const</span> checkbox = li.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;.form-check-input&#x27;</span>);
+    checkbox.<span class="hljs-property">checked</span> = item.<span class="hljs-property">completed</span> === <span class="hljs-string">&#x27;1&#x27;</span>; <span class="hljs-comment">// Check the checkbox if completed is &#x27;1&#x27;</span>
+    <span class="hljs-keyword">const</span> label = li.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;.form-check-label&#x27;</span>);
+    label.<span class="hljs-property">textContent</span> = item.<span class="hljs-property">item</span>;
+    <span class="hljs-keyword">return</span> li;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>       
+</code></pre>
+<ul dir="auto">
+<li dir="auto">additional functionality</li>
+</ul>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+<span class="hljs-comment">// Handle item editing</span>
+todoList.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;keypress&#x27;</span>, <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
+    <span class="hljs-keyword">if</span> (event.<span class="hljs-property">key</span> === <span class="hljs-string">&#x27;Enter&#x27;</span>) {
+        <span class="hljs-keyword">const</span> li = event.<span class="hljs-property">target</span>.<span class="hljs-title function_">closest</span>(<span class="hljs-string">&#x27;li&#x27;</span>);
+        <span class="hljs-keyword">const</span> label = li.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;.form-check-label&#x27;</span>);
+        <span class="hljs-keyword">const</span> input = li.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;input[type=&quot;text&quot;]&#x27;</span>);
+        <span class="hljs-keyword">const</span> id = li.<span class="hljs-property">dataset</span>.<span class="hljs-property">id</span>;
+        <span class="hljs-keyword">const</span> item = input.<span class="hljs-property">value</span>;
+
+        <span class="hljs-title function_">fetch</span>(<span class="hljs-string">`&lt;?= base_url(&quot;item&quot;); ?&gt;/<span class="hljs-subst">${id}</span>`</span>, {
+            <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;PUT&#x27;</span>,
+            <span class="hljs-attr">headers</span>: { <span class="hljs-string">&#x27;Content-Type&#x27;</span>: <span class="hljs-string">&#x27;application/json&#x27;</span> },
+            <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>({ item })
+        })
+        .<span class="hljs-title function_">then</span>(<span class="hljs-function">() =&gt;</span> {
+            label.<span class="hljs-property">textContent</span> = item;
+            label.<span class="hljs-property">classList</span>.<span class="hljs-title function_">remove</span>(<span class="hljs-string">&#x27;d-none&#x27;</span>);
+            input.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;d-none&#x27;</span>);
+        });
+    }
+});
+
+<span class="hljs-comment">// Handle item actions</span>
+todoList.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> li = event.<span class="hljs-property">target</span>.<span class="hljs-title function_">closest</span>(<span class="hljs-string">&#x27;li&#x27;</span>);
+    <span class="hljs-keyword">const</span> checkbox = li.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;.form-check-input&#x27;</span>);
+    <span class="hljs-keyword">const</span> label = li.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;.form-check-label&#x27;</span>);
+    <span class="hljs-keyword">const</span> input = li.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;input[type=&quot;text&quot;]&#x27;</span>);
+    <span class="hljs-keyword">const</span> editBtn = li.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;.edit-btn&#x27;</span>);
+    <span class="hljs-keyword">const</span> deleteBtn = li.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&#x27;.delete-btn&#x27;</span>);
+    <span class="hljs-keyword">const</span> id = li.<span class="hljs-property">dataset</span>.<span class="hljs-property">id</span>;
+
+    <span class="hljs-keyword">if</span> (event.<span class="hljs-property">target</span> === checkbox) {
+        <span class="hljs-keyword">const</span> completed = checkbox.<span class="hljs-property">checked</span>;
+        <span class="hljs-title function_">fetch</span>(<span class="hljs-string">`&lt;?= base_url(&quot;item&quot;); ?&gt;/<span class="hljs-subst">${id}</span>`</span>, {
+            <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;PUT&#x27;</span>,
+            <span class="hljs-attr">headers</span>: { <span class="hljs-string">&#x27;Content-Type&#x27;</span>: <span class="hljs-string">&#x27;application/json&#x27;</span> },
+            <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>({ completed })
+        });
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (event.<span class="hljs-property">target</span> === editBtn) {
+        label.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;d-none&#x27;</span>);
+        input.<span class="hljs-property">classList</span>.<span class="hljs-title function_">remove</span>(<span class="hljs-string">&#x27;d-none&#x27;</span>);
+        input.<span class="hljs-property">value</span> = label.<span class="hljs-property">textContent</span>;
+        input.<span class="hljs-title function_">focus</span>();
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (event.<span class="hljs-property">target</span> === deleteBtn) {
+        <span class="hljs-title function_">fetch</span>(<span class="hljs-string">`&lt;?= base_url(&quot;item&quot;); ?&gt;/<span class="hljs-subst">${id}</span>`</span>, { <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;DELETE&#x27;</span> })
+            .<span class="hljs-title function_">then</span>(<span class="hljs-function">() =&gt;</span> li.<span class="hljs-title function_">remove</span>());
+    }
+});
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>      
+</code></pre>
+
+</main>
+</body>
+</html>

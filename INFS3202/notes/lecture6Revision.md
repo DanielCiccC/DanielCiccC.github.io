@@ -95,3 +95,110 @@ server.
 
 ![alt text](assets\IMG41.PNG)
 
+### Creating a View Cell
+- A view cell is a re-usable code fragment/component that can take 
+parameters and render HTML
+- Very useful for re-usable elements eg Latest News, Ad’s or Alerts
+- Create a View cell
+- ``php spark make:cell AlertMessageCell``
+
+> Take some parameters, and render some HTML back
+> - one file for the parameters, one file for the alert message
+
+### What is Composer?
+- You currently use composer to create a new CodeIgniter Project.
+Composer is also a Package Manager
+-** Manage Packages**: Composer allows you to declare the libraries your project depends on 
+and manages (installs/updates) them for you.
+- **CLI Tool**: Composer operates through a command-line interface, making it accessible for 
+automation and integration with development, testing, and deployment workflows.
+- **composer.lock**: When you install dependencies, Composer creates a composer.lock file, locking your project to specific versions of packages. This ensures that all team members and production environments use the same versions, leading to consistent environments and avoiding "works on my machine" issues.
+- **Update Control**: You can update dependencies individually or collectively to newer versions as needed, according to the constraints defined in composer.json, while composer.lock ensures that these updates are tracked and consistent across all environments.
+
+> Only used composer to start codeigniter project
+> - allow you to manage packages
+> - composer.lock file, way to lock your environment and versions of things
+> - gitignore, none of the install packages are added to git
+> - git clone will not install, composer install will.
+
+## Sessions
+
+Sessions are a fundamental aspect of web development, enabling 
+web applications to store and access user data across multiple 
+requests.
+
+- **User Data Storage:**
+  - Sessions provide a way to persist user data across multiple web pages or requests. Unlike cookies, session data is stored on the server.
+- **Unique Identifiers:**
+  - Each user is identified through a unique session ID, typically sent to the user's browser via a cookie. This ID is then used to retrieve session data on subsequent requests.
+
+### Why Use Sessions?
+- **State Management:**
+  - HTTP is a stateless protocol, meaning it doesn't retain information between requests. Sessions enable a stateful experience, allowing applications to "remember" user actions and preferences.
+
+
+> store and access data across multiple requests to website
+> - store user data, has unique session ID
+> - make http requests is a stateless protocol
+>   - stateless, does depend on previous communications
+
+### Sessions in Codeigniter
+
+**Framework Integration:**
+- CodeIgniter's Session Library provides a more robust and flexible way to handle session data compared to native PHP sessions. 
+- It supports various storage drivers (files, database, Redis, Memcached)  for session data.
+
+**Key Features**
+- Flashdata: Special session data that is only available for the next server request, and is automatically deleted afterwards. Ideal for one-time messages, like form submission success or error messages.
+- Tempdata: Similar to flashdata, but allows for specifying a time limit (in seconds) for how long the data should be available in the session.
+- Regeneration of Session ID: CodeIgniter automatically regenerates the session ID periodically to prevent session fixation attacks.
+- Session data is simply an array associated with a particular session ID (cookie).
+
+> - Flash data
+> - Tempdata 
+>   - Usually associated with a cookie on the user's computer
+
+### Login Example using Sessions 
+
+**Routes** | **Controllers**
+| --- | ---
+| ![alt text](assets\IMG42.PNG) | ![alt text](assets\IMG43.PNG)
+
+
+### Authentication vs Authorisation
+- Authentication and authorization are fundamental security processes in the context of web and application development. 
+- While they are closely related and often used together, they serve 
+distinct purposes.
+
+- **Authentication** is about verifying identity (who you are), while authorization is 
+about granting access to resources (what you are allowed to do).
+- Authentication always *precedes* authorization. A system must first recognize 
+who you are before it can determine what you are allowed to access.
+- **Authorization** is managed through settings, configurations, or roles defining 
+access levels and permissions.
+
+### Authentication
+- Identity Verification: 
+  - Authentication is the process of verifying who a user is. It involves confirming the identity of a user attempting to access a system or application.
+- Credential Check: 
+  - Typically involves validating user credentials against a database or through other means.  Common methods include usernames and passwords, biometric verification, OTPs (One-Time Passwords), or security tokens.
+- First Step in Security Process: 
+  - Authentication is the initial step in the security process, determining whether a user is who  they claim to be before granting access to a system.
+- Examples: 
+  - Logging into a web application, entering a PIN at an ATM, or using a fingerprint to unlock a smartphone.
+
+> - knowing who the user is
+
+### Authorisation
+- Access Control: 
+  - Authorization occurs after authentication and determines what resources a user is allowed to access and what operations they are permitted to perform.
+- Role-Based Access: 
+  - Often implemented using roles assigned to authenticated users, which dictate access levels or permissions within a system or application.
+- Policy Enforcement: 
+  - Involves enforcing policies that control access to resources based on roles, clearance levels, 
+or other attributes associated with the authenticated user.
+- Examples: 
+  - A user (authenticated) is allowed to view a document but not edit it (authorization), or an employee (authenticated) can access employee-only areas within a company’s website (authorization).
+
+> - what you can do on the site
+

@@ -213,7 +213,7 @@ payloads. No inherent size limitation like with GET.</li>
 <li dir="auto">This can be useful for example where you want to be able to bookmark a page with specific
 query string values.</li>
 </ul>
-<h3 dir="auto" id="uqcloud-and-nginx-web-server">UQCloud and NGINX Web Server</h3>
+<h2 dir="auto" id="uqcloud-and-nginx-web-server">UQCloud and NGINX Web Server</h2>
 <p dir="auto">The basic elements of a web server includes</p>
 <ul dir="auto">
 <li dir="auto">Hardware</li>
@@ -222,6 +222,109 @@ query string values.</li>
 The addition of a database and scripting language extend a server’s capabilities</li>
 </ul>
 <p dir="auto"><img src="assets\IMG29.PNG" alt="alt text" data-src="assets/IMG29.PNG"></p>
+<h3 dir="auto" id="operating-system">Operating system</h3>
+<p dir="auto">A operating system is what allows you to interact with the applications and hardware that make up your computer. It facilitates resource
+allocation to your applications, and communication between hardware and software.
+Typically, operating systems for servers fall under three categories:</p>
+<ul dir="auto">
+<li dir="auto">Linux based</li>
+<li dir="auto">Windows based</li>
+<li dir="auto">and Mac based</li>
+</ul>
+<p dir="auto">Top five open source web server</p>
+<ul dir="auto">
+<li dir="auto">Apache HTTP Server</li>
+<li dir="auto">NGINX</li>
+<li dir="auto">Apache Tomcat</li>
+<li dir="auto">Node.js</li>
+<li dir="auto">Lighttpd</li>
+</ul>
+<h3 dir="auto" id="connecting-to-your-student-zone">Connecting to your student zone</h3>
+<p dir="auto"><strong>SSH</strong></p>
+<ul dir="auto">
+<li dir="auto">All zones may be accessed for administration purposes through the commandline, though SSH access uses UQ
+usernames and passwords.</li>
+</ul>
+<p dir="auto"><strong>SFTP</strong></p>
+<ul dir="auto">
+<li dir="auto">With a UQ user account, you can also access your zone over SFTP using a client such as WinSCP or FileZilla to upload
+or download files.</li>
+</ul>
+<h3 dir="auto" id="nginx-web-server-%E2%80%93-basic-config-file">NGINX Web server – Basic config file</h3>
+<pre><code dir="auto">http {
+    server {
+        listen 80; # Listen on port 80 for HTTP requests
+        server_name example.com; # Replace with your domain name or use localhost
+
+        # Document root where the files are located
+        root /var/www/html/htdocs;
+
+        # Default file to serve
+        index index.html index.htm;
+
+        # Serve files
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
+}
+</code></pre>
+<ul dir="auto">
+<li dir="auto">root /var/www/html/htdocs;:
+<ul dir="auto">
+<li dir="auto">The root directive specifies the directory where Nginx should look for the files to serve.</li>
+</ul>
+</li>
+<li dir="auto">index index.html index.htm;:
+<ul dir="auto">
+<li dir="auto">This specifies the default files that Nginx should look for when a directory is requested.</li>
+</ul>
+</li>
+<li dir="auto">After you change the configuration run:</li>
+</ul>
+<pre><code dir="auto">$ sudo systemctl reload nginx
+</code></pre>
+<h3 dir="auto" id="http-status-codes">HTTP Status Codes</h3>
+<p dir="auto">HTTP status codes are standardized responses that a web server sends to your browser to indicate
+the outcome of a requested action.</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Code</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td>200 Ok</td>
+<td>The request has succeeded. The meaning of the success depends on the HTTP method used.</td>
+</tr>
+<tr dir="auto">
+<td>201 Created</td>
+<td>The request has been fulfilled, resulting in the creation of a new resource.</td>
+</tr>
+<tr dir="auto">
+<td>400 Bad Request</td>
+<td>The server cannot process the request due to a client error (e.g., malformed request syntax).</td>
+</tr>
+<tr dir="auto">
+<td>401 Unauthorized</td>
+<td>The request requires user authentication.</td>
+</tr>
+<tr dir="auto">
+<td>404 Not Found</td>
+<td>The server has not found anything matching the Request-URI.</td>
+</tr>
+<tr dir="auto">
+<td>408 Request Timeout</td>
+<td>The client did not produce a request within the time that the server was prepared to wait.</td>
+</tr>
+<tr dir="auto">
+<td>500 Internal Server Error</td>
+<td>The server encountered an unexpected condition which prevented it from fulfilling the request. Usually a server-side setup issue or server-side coding error.</td>
+</tr>
+</tbody>
+</table>
 
 </main>
 </body>

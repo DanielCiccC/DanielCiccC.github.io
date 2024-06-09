@@ -72,7 +72,7 @@ accessed by the Project Assessment Item and the Code Review.
 - HTML tags e.g. Form, a, img, link, table, p, etc 
 - How to build a web application given requirements/features?
 - All of the topics covered in Lectures and Labs
-- Except Week 7 Gen AI Prompting and AWS Guest Lecture (but some of the AWS Lab definitions are important) 22
+  - Except Week 7 Gen AI Prompting and AWS Guest Lecture (but some of the AWS Lab definitions are important)
 
 > what does nginx config look like
 > - concepts of an MVC frameworks

@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="lecture4Revision - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>lecture4Revision</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h3 dir="auto" id="what-is-a-relational-database-server">What is a Relational Database Server?</h3>
+<ul dir="auto">
+<li dir="auto">Stores Data Efficiently:
+<ul dir="auto">
+<li dir="auto">A database organizes and stores data in a manner that makes it easily accessible and manageable. Indexes data so that results are returned fast.</li>
+</ul>
+</li>
+<li dir="auto">Multiple Related Tables:
+<ul dir="auto">
+<li dir="auto">It can consist of several related tables, allowing for the organization of different types of information in a structured way.</li>
+</ul>
+</li>
+<li dir="auto">Scales with Needs:
+<ul dir="auto">
+<li dir="auto">Databases are designed to scale, meaning they can handle an increasing amount of work or data as the need grows.</li>
+</ul>
+</li>
+<li dir="auto">Search, Add, Update via SQL:
+<ul dir="auto">
+<li dir="auto">Utilizes Structured Query Language (SQL) for searching, adding, and updating data, providing a powerful tool for managing the database.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Structured</li>
+<li dir="auto">building something that has to scale</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="what-database-servers-are-available">What Database Servers are Available?</h3>
+<ul dir="auto">
+<li dir="auto"><strong>SQLite:</strong> A lightweight database filesystem database. Ideal for development,
+small applications, and situations where simplicity and minimal setup are
+advantageous.</li>
+<li dir="auto"><strong>MySQL:</strong> A popular open-source relational database management system known
+for its reliability and ease of use. It's widely used for web applications and
+supports a variety of programming languages.</li>
+<li dir="auto"><strong>PostgreSQL:</strong> An advanced open-source relational database system, offering
+strong compliance to SQL standards, and known for its robustness, scalability,
+and support for advanced data types and functionalities.</li>
+<li dir="auto"><strong>MS SQL Server:</strong> A comprehensive, enterprise-level database management
+system developed by Microsoft. Known for its high performance, robust security
+features, data integration, and analysis tools.</li>
+<li dir="auto"><strong>Oracle Database:</strong> A comprehensive, enterprise-grade database solution that
+provides robust support for large-scale databases, complex applications, and
+data warehousing needs. Known for its performance, security, and scalability.</li>
+<li dir="auto"><strong>Local and UQCloud Options:</strong> SQLite can be used locally, providing an easy-to-
+manage database environment without the need for a server. Both MySQL and
+PostgreSQL are available on UQCloud.</li>
+</ul>
+<h3 dir="auto" id="why-are-databases-essential-for-web-development">Why are databases Essential for Web Development?</h3>
+<ul dir="auto">
+<li dir="auto">Data Management:
+<ul dir="auto">
+<li dir="auto">Databases provide a structured and efficient way to store, manage, and retrieve data, which is crucial for dynamic websites and applications.</li>
+</ul>
+</li>
+<li dir="auto">User Interaction:
+<ul dir="auto">
+<li dir="auto">They enable personalized user experiences by storing user preferences, orders, and account information, enhancing engagement and satisfaction.</li>
+</ul>
+</li>
+<li dir="auto">Scalability:
+<ul dir="auto">
+<li dir="auto">Databases can handle increasing amounts of data and user requests, allowing websites to grow and accommodate more traffic seamlessly.</li>
+</ul>
+</li>
+<li dir="auto">Data Integrity:
+<ul dir="auto">
+<li dir="auto">Ensure consistency and accuracy of the data through constraints, transactions, and relational database design, minimizing errors and data duplication.</li>
+</ul>
+</li>
+<li dir="auto">Security:
+<ul dir="auto">
+<li dir="auto">Databases offer robust security features to protect sensitive information, such as user data and financial transactions, from unauthorized access and breaches.</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="structured-query-language">Structured Query Language</h3>
+<ul dir="auto">
+<li dir="auto"><strong>Data Definition Language (DDL)</strong> - Defines and modifies a schema e.g. CREATE / DROP /<br>
+ALTER table; does not manipulate data</li>
+<li dir="auto"><strong>Data Manipulation Language (DML)</strong> - Language used to retrieve (SELECT), add (INSERT),
+modify (UPDATE) and DELETE data</li>
+<li dir="auto"><strong>Data Control Language (DCL) statements</strong>. Used for providing  (GRANT) / withdrawing
+(REVOKE) access privileges</li>
+<li dir="auto"><strong>Transaction Control Language (TCL)</strong> statements are used to manage the changes made
+by DML statements. It allows statements to be grouped together into logical transactions.
+Example: COMMIT, ROLLBACK, etc.</li>
+</ul>
+<h3 dir="auto" id="deleting-data">Deleting Data</h3>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> customers
+<span class="hljs-keyword">WHERE</span> name<span class="hljs-operator">=</span>‘Mary’
+</code></pre>
+<h3 dir="auto" id="updating-records-in-a-table">Updating Records in a Table</h3>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">UPDATE</span> StudentRecord
+<span class="hljs-keyword">SET</span> Name<span class="hljs-operator">=</span>‘Jack’
+<span class="hljs-keyword">WHERE</span> studentID <span class="hljs-operator">=</span> <span class="hljs-number">1234</span>
+</code></pre>
+<h3 dir="auto" id="codeigniter---with-data-access">Codeigniter - with Data Access</h3>
+<ul dir="auto">
+<li dir="auto">Using a Web Framework should make your life as a developer easier</li>
+<li dir="auto">A Framework will include a number of abstractions to help you write code to interact with a database</li>
+<li dir="auto">CodeIgniter 4 has numerous features:</li>
+<li dir="auto">Central config file (.env) to store database connections</li>
+<li dir="auto">Migrations to help you create tables and have database version control</li>
+<li dir="auto">Models to simplify reading, inserting, updating and deleting content from a database table (just use simple objects instead of using SQL)</li>
+<li dir="auto">The Spark command line to help you create Migration files and new model files.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">simplify development</li>
+<li dir="auto">deal with extractions</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="what-is-a-migration">What is a Migration?</h3>
+<ul dir="auto">
+<li dir="auto"><strong>Versioned Database Schemas:</strong>
+<ul dir="auto">
+<li dir="auto">Migrations in CodeIgniter 4 provide a method for version controlling your database schema. This allows for easy management of database changes over time.</li>
+</ul>
+</li>
+<li dir="auto"><strong>Automated Database Changes:</strong>
+<ul dir="auto">
+<li dir="auto">They automate the process of applying database changes, such as creating or altering tables, adding indexes, and more, ensuring consistency across different environments.</li>
+</ul>
+</li>
+<li dir="auto"><strong>Simplifies Development and Deployment Workflow:</strong>
+<ul dir="auto">
+<li dir="auto">Migrations simplify the development workflow by allowing team members to share and apply database changes in a controlled and systematic manner. Easy to deploy the schema of a database</li>
+</ul>
+</li>
+<li dir="auto"><strong>Programmatic Schema Manipulation</strong>:
+<ul dir="auto">
+<li dir="auto">Migrations are PHP classes that contain methods to programmatically execute database operations, giving developers a powerful tool to manipulate the schema.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Use the features in Codeigniter</p>
+</li>
+<li dir="auto">
+<p dir="auto">Web development frameworks come with migrations</p>
+</li>
+<li dir="auto">
+<p dir="auto">create code to describe the changes to the schema</p>
+</li>
+<li dir="auto">
+<p dir="auto">files are versioned and can be stored in file versioning applications (git, etc.)</p>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="codeigniter---spark">Codeigniter - Spark</h3>
+<ul dir="auto">
+<li dir="auto">Running database migrations and seeders to manage database schema and initial data setup</li>
+<li dir="auto">Starting a development web server</li>
+<li dir="auto">Generating boilerplate code (new files) for new controllers, models, and other components.</li>
+</ul>
+<h3 dir="auto" id="create-a-migration">Create a Migration</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Use the spark make:migration
+command</p>
+</li>
+<li dir="auto">
+<p dir="auto"><code>php spark make:migration create_customers_table</code></p>
+</li>
+<li dir="auto">
+<p dir="auto"><code>php spark make:migration create_orders_table</code></p>
+</li>
+<li dir="auto">
+<p dir="auto">This will create a new file in the app/Databases/Migrations folder</p>
+<ul dir="auto">
+<li dir="auto">The file will have a data time stamp and be versioned</li>
+<li dir="auto">You need to add the fields that need to be created in the table
+<ul dir="auto">
+<li dir="auto">The up() method defines the schema for creating the tables.</li>
+<li dir="auto">The down() method defines the schema for dropping the tables.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="how-does-this-help-developer-workflow">How does this help developer workflow?</h3>
+<ul dir="auto">
+<li dir="auto">A few scenarios
+<ul dir="auto">
+<li dir="auto">You develop locally and then deploy to production:</li>
+<li dir="auto">You can just run the migration when you deploy and update your application</li>
+</ul>
+</li>
+<li dir="auto">You have multiple developers
+<ul dir="auto">
+<li dir="auto">When a database change is made, the code for the change is committed to the code repository</li>
+<li dir="auto">Other developers can then run the migration to update their local databases</li>
+</ul>
+</li>
+<li dir="auto">You release open source software
+<ul dir="auto">
+<li dir="auto">The same migration code and create SQL create and modify statements for multiple databases</li>
+<li dir="auto">Each developer that downloads your software can choose their own database server
+(e.g. Postgres) and not worry about conflicts</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">scripting specific way to manage table changes</li>
+</ul>
+</blockquote>
+
+</main>
+</body>
+</html>

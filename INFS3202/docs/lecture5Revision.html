@@ -57,6 +57,114 @@
 </li>
 </ul>
 </blockquote>
+<h2 dir="auto" id="create-read-update-delete-crud">Create Read Update Delete (CRUD)</h2>
+<ul dir="auto">
+<li dir="auto">Definition of CRUD:
+<ul dir="auto">
+<li dir="auto">CRUD stands for Create, Read, Update, and Delete.  These are the four basic functions of persistent storage.</li>
+</ul>
+</li>
+<li dir="auto">Foundation of User Interfaces:
+<ul dir="auto">
+<li dir="auto">CRUD operations form the foundation of user interfaces in many applications, enabling users to interact directly with data.</li>
+</ul>
+</li>
+<li dir="auto">Ubiquity in Web Applications:
+<ul dir="auto">
+<li dir="auto">Almost every web application has a backend database and uses CRUD operations to interact with the data.</li>
+</ul>
+</li>
+<li dir="auto">APIs and CRUD:
+<ul dir="auto">
+<li dir="auto">Many RESTful APIs are designed around CRUD operations, mapping HTTP methods (POST, GET, PUT/PATCH, DELETE) to CRUD functionalities.</li>
+</ul>
+</li>
+<li dir="auto">Database Operations:
+<ul dir="auto">
+<li dir="auto">At the database level, CRUD corresponds to SQL commands INSERT, SELECT, UPDATE, and DELETE, respectively.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Design User interfaces to build things</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="eg-customer-app">E.g. Customer app</h3>
+<p dir="auto">Need an:</p>
+<ul dir="auto">
+<li dir="auto">Add button that displays an Add form</li>
+<li dir="auto">Edit button in each row</li>
+<li dir="auto">Delete button in each row</li>
+<li dir="auto">Display the status of the last operation</li>
+</ul>
+<p dir="auto"><strong>Example</strong></p>
+<p dir="auto"><img src="assets\IMG34.PNG" alt="alt text" data-src="assets/IMG34.PNG"></p>
+<h3 dir="auto" id="designing-a-database">Designing a Database</h3>
+<ul dir="auto">
+<li dir="auto">Each table must represent a single subject</li>
+<li dir="auto">No data item will be unnecessarily stored in more than one table, i.e., No data redundancy</li>
+<li dir="auto">All non-key attributes in a table are dependent on the primary key</li>
+<li dir="auto">Each table is void of insertion, update, deletion anomalies</li>
+<li dir="auto">Objective of normalisation is to ensure that all tables are in at least 3 rd  Normal Form (3NF)</li>
+</ul>
+<h3 dir="auto" id="first-normal-form">First Normal Form</h3>
+<ul dir="auto">
+<li dir="auto">To achieve 1NF, we need to ensure that each column contains atomic values and there are no repeating groups.</li>
+<li dir="auto">In this case, we can split the table into two separate tables: &quot;Students&quot; and &quot;Enrollments&quot;.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG35.PNG" alt="alt text" data-src="assets/IMG35.PNG"></p>
+<h3 dir="auto" id="second-normal-form">Second Normal Form</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">To achieve 2NF, we need to ensure that all non-key columns depend on the entire primary key.</p>
+</li>
+<li dir="auto">
+<p dir="auto">In the &quot;Enrollments&quot; table, the primary key is a combination of &quot;StudentID&quot; and &quot;CourseID&quot;.</p>
+</li>
+<li dir="auto">
+<p dir="auto">However, the course details (CourseName, CourseCredits, InstructorName) depend only on the &quot;CourseID&quot;.</p>
+</li>
+<li dir="auto">
+<p dir="auto">To resolve this, we can split the &quot;Enrollments&quot; table further into &quot;Enrollments&quot; and &quot;Courses&quot; tables.</p>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>remove partial dependencies</strong></p>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG36.PNG" alt="alt text" data-src="assets/IMG36.PNG"></p>
+<h3 dir="auto" id="third-normal-form">Third normal form</h3>
+<ul dir="auto">
+<li dir="auto">To achieve 3NF, we need to ensure that there are no transitive dependencies.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG37.PNG" alt="alt text" data-src="assets/IMG37.PNG"></p>
+<p dir="auto">Normalisation Overview</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Form</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><strong>1NF</strong></td>
+<td><strong>Outcome</strong>: Identifying non-atomic values from relations. <br> <strong>Test</strong>: Relation should have no multivalued attributes or nested relations.</td>
+</tr>
+<tr dir="auto">
+<td><strong>2NF</strong></td>
+<td><strong>Outcome</strong>: Identifying partial dependencies, which helps remove some anomalies. <strong>Test</strong>: LHS of any non-trivial FD in F+ is not a proper subset of a candidate key, or RHS is a prime attribute</td>
+</tr>
+<tr dir="auto">
+<td><strong>3NF</strong></td>
+<td><strong>Outcome</strong>: Identifying partial and transitive dependencies, which helps remove most anomalies <strong>Test</strong>: LHS of any non-trivial FD in F+ is a superkey, or RHS is a prime attribute.</td>
+</tr>
+<tr dir="auto">
+<td><strong>BCNF</strong></td>
+<td><strong>Outcome</strong>: Identifying all anomalies at the cost of not preserving all FDs<strong>Test</strong>: LHS of any non-trivial FD in F+ is a superkey.</td>
+</tr>
+</tbody>
+</table>
 
 </main>
 </body>
