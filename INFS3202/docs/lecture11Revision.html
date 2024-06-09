@@ -1,0 +1,444 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-11-revision">Lecture 11 Revision</h1>
+<h1 dir="auto" id="web-security">Web Security</h1>
+<h2 dir="auto" id="what-is-web-security">What is Web Security?</h2>
+<p dir="auto">Web security encompasses the strategies, protocols, and tools designed to
+protect websites, web applications, and users from threats on the internet.</p>
+<p dir="auto"><strong>Definition:</strong></p>
+<ul dir="auto">
+<li dir="auto">Protecting web servers, web applications, and user data from attacks such as hacking, malware, and
+breaches.
+<strong>Objective:</strong></li>
+<li dir="auto">Ensure data integrity, confidentiality, and availability across web environments.</li>
+<li dir="auto"></li>
+</ul>
+<p dir="auto"><strong>Challenges:</strong></p>
+<ul dir="auto">
+<li dir="auto">Dealing with threats like SQL injection, XSS (Cross-Site Scripting), and DDoS (Distributed Denial of
+Service) attacks.</li>
+</ul>
+<p dir="auto"><strong>Importance:</strong></p>
+<ul dir="auto">
+<li dir="auto">Vital for safeguarding sensitive information, maintaining user trust, and complying with regulations.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Strategies, internal protocols</p>
+<ul dir="auto">
+<li dir="auto">tools</li>
+<li dir="auto">trying to protect your server from other users who are trying to hack it</li>
+<li dir="auto">ensure data integrity</li>
+<li dir="auto">sensitive data confidential</li>
+</ul>
+<p dir="auto">Keep your users trust</p>
+<ul dir="auto">
+<li dir="auto">comply with regulations</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="optus-data-breach-in-2022">OPTUS Data Breach in 2022</h3>
+<blockquote dir="auto">
+<p dir="auto">Large telecom company</p>
+<ul dir="auto">
+<li dir="auto">in 2022, had a big data breach</li>
+<li dir="auto">current and former customer involved in data breach</li>
+<li dir="auto">driver's license, home address, name, etc.</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">The Optus data breach of September 2022, occurred through an unprotected and publically
+exposed API. This API didn’t require user authentication before facilitating a connection. A lack
+of an authentication policy meant anyone that discovered the API on the internet could connect
+to it without submitting a username or password.</li>
+<li dir="auto">The API exposed sensitive private data
+e.g. Drivers License, Medicare number, etc</li>
+<li dir="auto">The URL to the API had a auto-increment client number
+It was easy to automate calls to the API to get the data from another user
+e.g. <a href="https://somedomain.com/getuserdetails?user_id=10">https://somedomain.com/getuserdetails?user_id=10</a>
+From: <a href="https://www.upguard.com/blog/how-did-the-optus-data-breach-happen">https://www.upguard.com/blog/how-did-the-optus-data-breach-happen</a></li>
+<li dir="auto">Authentication and Authorization are very important across all URL and APIs</li>
+<li dir="auto">Secure all Routes by default, have well defined authorization and open only as needed making
+sure to test that the data make available is not sensitive.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Was not SQL injection or Cross-site scripting</p>
+<ul dir="auto">
+<li dir="auto">optus has an API, which their mobile services were calling</li>
+<li dir="auto">API was available on the internet, and did not</li>
+<li dir="auto">API call could get back distinct user's details
+<ul dir="auto">
+<li dir="auto">authorisation was not even in place</li>
+<li dir="auto">routes by default are requiring authentication</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="sql-injection">SQL injection</h2>
+<ul dir="auto">
+<li dir="auto">SQL injection typically happens when a web application requests user input,
+such as a username or user ID. If the input provided is an SQL statement or
+part of an SQL statement instead of legitimate data, the application may
+execute this statement on the database without realizing its malicious intent.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">SQL is a text stream to a database</li>
+<li dir="auto">update, insert, view data</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG56.PNG" alt="alt text" data-src="assets/IMG56.PNG"></p>
+<ul dir="auto">
+<li dir="auto">An attacker can inject SQL control characters and command keywords
+(e.g.,single quote (‘), double quote (“), equal (=), comment (- -), etc.) to change
+the query structure.</li>
+</ul>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">WHERE</span> name<span class="hljs-operator">=</span>‘Charles’ <span class="hljs-keyword">AND</span> passwd<span class="hljs-operator">=</span>‘topsecret’
+</code></pre>
+<p dir="auto">Attack - use <code>Charles </code></p>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">WHERE</span> name<span class="hljs-operator">=</span>‘Charles’  <span class="hljs-comment">-- ‘ AND passwd=‘ ’</span>
+</code></pre>
+<p dir="auto">-- : the remainder of the statement is to be treated as a comment and not executed</p>
+<h3 dir="auto" id="retrieving-hidden-data">Retrieving Hidden Data</h3>
+<ul dir="auto">
+<li dir="auto">URL</li>
+</ul>
+<p dir="auto"><a href="https://somesite.com/products?category=handbags">https://somesite.com/products?category=handbags</a></p>
+<ul dir="auto">
+<li dir="auto">Category is included in a Query checking if released is 1</li>
+</ul>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> products <span class="hljs-keyword">WHERE</span> category <span class="hljs-operator">=</span> ‘handbags<span class="hljs-string">&#x27; AND released = 1
+</span></code></pre>
+<ul dir="auto">
+<li dir="auto">URL with SQL Comment</li>
+</ul>
+<p dir="auto"><a href="https://somesite.com/products?category=handbags">https://somesite.com/products?category=handbags</a>' --</p>
+<ul dir="auto">
+<li dir="auto">Resulting Query will return all items</li>
+</ul>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> products <span class="hljs-keyword">WHERE</span> category <span class="hljs-operator">=</span> ‘handbags’<span class="hljs-comment">--’ AND released = 1</span>
+</code></pre>
+<ul dir="auto">
+<li dir="auto">URL</li>
+</ul>
+<p dir="auto"><a href="https://somesite.com/products?category=handbags">https://somesite.com/products?category=handbags</a></p>
+<ul dir="auto">
+<li dir="auto">Category is included in a Query checking if released is 1
+SELECT * FROM products WHERE category = ‘handbags' AND released = 1</li>
+<li dir="auto">URL with SQL Comment</li>
+</ul>
+<pre><code class="code-line language-sql" dir="auto">https:<span class="hljs-operator">/</span><span class="hljs-operator">/</span>somesite.com<span class="hljs-operator">/</span>products?category<span class="hljs-operator">=</span>handbags<span class="hljs-string">&#x27;+OR+1=1--
+</span></code></pre>
+<ul dir="auto">
+<li dir="auto">Resulting Query will return all items</li>
+</ul>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> products <span class="hljs-keyword">WHERE</span> category <span class="hljs-operator">=</span> ‘handbags<span class="hljs-string">&#x27; OR 1=1--&#x27;</span> <span class="hljs-keyword">AND</span> released <span class="hljs-operator">=</span> <span class="hljs-number">1</span>
+</code></pre>
+<ul dir="auto">
+<li dir="auto">Category is included in a Query checking if released is 1</li>
+</ul>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> products <span class="hljs-keyword">WHERE</span> category <span class="hljs-operator">=</span> ‘handbags<span class="hljs-string">&#x27; AND released = 1
+</span></code></pre>
+<ul dir="auto">
+<li dir="auto">URL with SQL Comment</li>
+</ul>
+<pre><code class="code-line language-sql" dir="auto">https:<span class="hljs-operator">/</span><span class="hljs-operator">/</span>somesite.com<span class="hljs-operator">/</span>products?category<span class="hljs-operator">=</span>handbags’;<span class="hljs-keyword">delete</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> users <span class="hljs-comment">--</span>
+</code></pre>
+<ul dir="auto">
+<li dir="auto">Delete Query will be executed on users table.</li>
+<li dir="auto">Update queries as well a unions with other tables can be returned</li>
+</ul>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">WHERE</span> name<span class="hljs-operator">=</span>‘Charles’ <span class="hljs-keyword">AND</span> passwd<span class="hljs-operator">=</span>‘topsecret’
+</code></pre>
+<blockquote dir="auto">
+<p dir="auto">close the query off, and add authorisation DML</p>
+</blockquote>
+<pre><code class="code-line language-sql" dir="auto">Charles’; <span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> groupMembership (userID, <span class="hljs-keyword">group</span>) 
+<span class="hljs-keyword">VALUES</span> (<span class="hljs-keyword">SELECT</span> userID <span class="hljs-keyword">FROM</span> users
+<span class="hljs-keyword">WHERE</span> userName<span class="hljs-operator">=</span>‘Charles<span class="hljs-string">&#x27;, &#x27;</span>Administrator<span class="hljs-string">&#x27;); --
+</span></code></pre>
+<h3 dir="auto" id="sql-injection-vulnerability">SQL injection vulnerability</h3>
+<p dir="auto"><img src="assets\IMG57.PNG" alt="alt text" data-src="assets/IMG57.PNG"></p>
+<h3 dir="auto" id="prepared-statements-in-php">Prepared Statements in PHP</h3>
+<ul dir="auto">
+<li dir="auto">This version of the code uses a prepared statement, which separates the data (user input) from the code (SQL query), thus preventing SQL injection.</li>
+<li dir="auto">The bind_param function binds the user input to a placeholder in the SQL query (?), specifying &quot;s&quot; to treat it as a string.</li>
+<li dir="auto">This ensures that the input is handled safely, regardless of its content.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG58.PNG" alt="alt text" data-src="assets/IMG58.PNG"></p>
+<blockquote dir="auto">
+<p dir="auto">bind a variable to prevent SQL injection</p>
+</blockquote>
+<h3 dir="auto" id="sql-injection-in-codeigniter">SQL injection in Codeigniter</h3>
+<ul dir="auto">
+<li dir="auto">If you must create SQL directly and concatenate with variable that may come from a url querystring or user input then escape the values.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG59.PNG" alt="alt text" data-src="assets/IMG59.PNG"></p>
+<h2 dir="auto" id="cross-site-scripting">Cross-site Scripting</h2>
+<p dir="auto"><strong>What is XSS?</strong></p>
+<ul dir="auto">
+<li dir="auto">Injection security attack</li>
+<li dir="auto">An attacker injects malicious client-side scripts into the content from trusted websites.</li>
+</ul>
+<p dir="auto"><strong>When does it occur?</strong></p>
+<ul dir="auto">
+<li dir="auto">An attacker injects malicious scripts into the web pages, which will be viewed by other users.</li>
+<li dir="auto">Malicious scripts are eventually executed by your Web browsers!</li>
+<li dir="auto">Most likely this is Javascript code.</li>
+</ul>
+<p dir="auto"><strong>How serious is it?</strong></p>
+<ul dir="auto">
+<li dir="auto">It has been estimated that approximately 65% of websites are vulnerable to an XSS attack in
+some form.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG60.PNG" alt="alt text" data-src="assets/IMG60.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Sites that are a blog or a forum</li>
+<li dir="auto">freetext field e.g.</li>
+<li dir="auto">some of the scripts between script tags could be malicious
+<ul dir="auto">
+<li dir="auto">Stored in you system in some way</li>
+<li dir="auto">Will be able to do a range of thing, looking at cookies, etc.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="reflected-xss">Reflected XSS</h3>
+<ul dir="auto">
+<li dir="auto">Occurs when user input, such as search terms or other data, is immediately used
+by web pages without proper sanitization and reflected back to the user.</li>
+</ul>
+<p dir="auto"><strong>Example:</strong>
+A user might enter a script into a search box that is immediately displayed on the
+result page without filtering, like so:</p>
+<p dir="auto"><img src="assets\IMG61.PNG" alt="alt text" data-src="assets/IMG61.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">By nature of the get request</li>
+<li dir="auto">Enter data (a search page, e.g.)
+<ul dir="auto">
+<li dir="auto">normally sends a get request, appends the query in the query strong</li>
+<li dir="auto">pull out the query string and show it on the webpage</li>
+<li dir="auto">alter the particular search query</li>
+<li dir="auto">Sharing of a URL, can see what the user sees next</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="stored-xss">Stored XSS</h3>
+<p dir="auto">Occurs when malicious scripts are permanently stored on target servers, such as
+in a database, message forum, visitor log, comment field, etc., and then later
+served to other users.</p>
+<p dir="auto"><img src="assets\IMG62.PNG" alt="alt text" data-src="assets/IMG62.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">anybody has access, when they are writing in a forum e.g.</li>
+<li dir="auto">add a script that is eventually sent to users</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="dom-based-xss">DOM-based XSS</h3>
+<p dir="auto">Occurs when a script takes data from the client side, such as the URL, and
+processes it in a way that executes script without proper sanitization.</p>
+<p dir="auto"><strong>Example</strong>: Using URL parameters to modify the DOM:</p>
+<p dir="auto">In this case, the JavaScript will execute the script content of the name parameter as it is directly included in
+the DOM.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">javascript is able to lookup things on the current page</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG63.PNG" alt="alt text" data-src="assets/IMG63.PNG"></p>
+<h3 dir="auto" id="preventing-xss">Preventing XSS</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Strip HTML tags and JS before storing</p>
+</li>
+<li dir="auto">
+<p dir="auto">Escape all user entered data eg <?= esc($userEnteredData) ?></p>
+</li>
+<li dir="auto">
+<p dir="auto">esc(): This is a function call. In the context of many PHP frameworks, including CodeIgniter, esc() is a function used for escaping output to prevent Cross-Site Scripting (XSS) attacks. It performs character escaping suitable for HTML output, similar to PHP's native htmlspecialchars() function.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Apply the esc() function to this name to escape any special HTML characters (like &lt;, &gt;, &quot;, ', and &amp;). This conversion prevents potentially malicious scripts embedded in the user data from executing in the browser, thus thwarting XSS attacks.</p>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG64.PNG" alt="alt text" data-src="assets/IMG64.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">display and not execute within the browser</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="example-xss-in-a-learning-management-system">Example XSS in a Learning Management System</h3>
+<ul dir="auto">
+<li dir="auto">Students reported getting blocked by their virus protection when they visited course content</li>
+<li dir="auto">The site editor’s laptop was infected and everything they edited on the web was inserting the Trojan javascript</li>
+</ul>
+<p dir="auto"><img src="assets\IMG65.PNG" alt="alt text" data-src="assets/IMG65.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Trojan on the course site</li>
+<li dir="auto">computer was infected with malware of developer</li>
+<li dir="auto">malware would automatically inject javascript before sending data, etc.</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="cross-origin-resource-sharing-cors">Cross-Origin Resource Sharing (CORS)</h2>
+<p dir="auto">CORS, or Cross-Origin Resource Sharing, is a security feature implemented by web browsers to manage how resources on a web page can be requested from another domain outside the domain from which the first resource was served.</p>
+<ul dir="auto">
+<li dir="auto">It is a set of HTTP headers that define whether browsers permit web applications
+running at one origin to access resources from a different origin.</li>
+</ul>
+<p dir="auto">Origin Concept:
+An origin is defined by the scheme (protocol), host (domain), and port of a URL. For instance, the origin of <a href="https://example.com:443">https://example.com:443</a> is different from <a href="https://example.com:8443">https://example.com:8443</a> because they have different ports.</p>
+<p dir="auto"><strong>Same-Origin Policy:</strong>
+Browsers implement a same-origin policy by default. This policy restricts how a document or script loaded from one origin can interact with resources from another origin. Its primary purpose is to prevent malicious websites from interacting with other sites on which the user might be authenticated (like banking sites).</p>
+<p dir="auto"><strong>Cross-Origin Requests:</strong>
+When a script tries to request resources from a different origin (cross-origin), the browser blocks the request unless the server on the other end allows it explicitly.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">can't load from the same domain but other ports
+<ul dir="auto">
+<li dir="auto">loading on port 443, can't load on same domain but other ports</li>
+</ul>
+</li>
+<li dir="auto">all scripts/images have to come from the same domain/origin</li>
+<li dir="auto">both servers need to be able to allow it</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="cors-example">CORS Example</h3>
+<p dir="auto"><a href="https://reflectoring.io/complete-guide-to-cors/">https://reflectoring.io/complete-guide-to-cors/</a></p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Most likely currently experienced if you are developing locally can calling an API
+eg Locally developing React or Vue.js frontend</p>
+</li>
+<li dir="auto">
+<p dir="auto">Calling an API on your UQCloud Zone using FetchAPI</p>
+</li>
+<li dir="auto">
+<p dir="auto">Setting CORS headers in CodeIgniter
+<a href="https://gist.github.com/kenjis/e757d2b4193b6843724e447e6eaa1254">https://gist.github.com/kenjis/e757d2b4193b6843724e447e6eaa1254</a></p>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">localhost on port 5000 e.g.</li>
+<li dir="auto">hit another API on a different port e.g., comes with an error</li>
+<li dir="auto">particular domain name, run a webpage</li>
+<li dir="auto">do a javaScript fetch from teh same origin, will be able to fufil it</li>
+<li dir="auto">Cross domain request will be excluded
+<ul dir="auto">
+<li dir="auto">Disabling CORS (default )</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="why-is-cors-important">Why is CORS important</h3>
+<ul dir="auto">
+<li dir="auto">The victim visits evilwebsite.com while logged into goodwebsite.com.</li>
+<li dir="auto">Evilwebsite.com loads a malicious script onto the victim’s computer that interacts with goodwebsite.com.</li>
+<li dir="auto">Unaware, the victim runs the malicious script, which then makes a cross-origin request to goodwebsite.com. In this scenario, assume the request aims to access credentials needed for a sensitive action, like revealing the user's password.</li>
+<li dir="auto">Upon receiving this cross-origin request, goodwebsite.com checks the CORS header to determine whether to allow the data transfer. In this case, let's assume that CORS is configured to permit requests with credentials (Access-Control-Allow-Credentials: true).</li>
+<li dir="auto">The request passes validation, and consequently, the data is transmitted from the victim’s browser back to evilwebsite.com.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">able to do a call (fetch API) to another domain</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="cross-site-request-forgery-csrf">Cross Site Request Forgery (CSRF)</h2>
+<ul dir="auto">
+<li dir="auto">Cross-Site Request Forgery (CSRF or XSRF) is a type of security vulnerability
+typically found in web applications. It allows an attacker to induce users to
+perform actions that they do not intend to do while they are authenticated. This
+vulnerability exploits the trust that a site has in the user's browser.</li>
+<li dir="auto">The danger of CSRF lies in exploiting the trust that a web application has in the
+user's browser. An attacker can manipulate a user’s browser to perform
+unwanted actions on a web application where they are authenticated. This can
+lead to unauthorized changes or transactions, data theft, and account
+compromise.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">forms, and posts back to a server</li>
+<li dir="auto">how do we know that a form can't be replicated to another site?
+<ul dir="auto">
+<li dir="auto">inadvertently gain access to another site</li>
+</ul>
+</li>
+<li dir="auto">How do we trust that the data from a form is coming from the right place?</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="csrf---example">CSRF - Example</h3>
+<p dir="auto">Here’s a step-by-step breakdown of a typical CSRF attack:</p>
+<ol dir="auto">
+<li dir="auto">User Login: The user logs into a website, www.example.com, which authenticates the user
+and stores a session cookie on their browser.</li>
+<li dir="auto">Malicious Request: The user, without logging out from www.example.com, visits a malicious
+website, www.evil.com. This site executes a harmful action by requesting www.example.com
+to perform a specific task (e.g., changing the user's email address or transferring funds).</li>
+<li dir="auto">Browser Submits Request: The user’s browser automatically includes cookies pertaining to
+www.example.com with the request. If the session is still active, the server at
+www.example.com might execute the request without any additional verification.</li>
+<li dir="auto">Action Executed: Without the user’s consent, the action is carried out as if the user had
+intended it.</li>
+</ol>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Browser automatically includes cookies</li>
+<li dir="auto">User might be consenting accidentally</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="csrf-prevention-in-codeigniter">CSRF Prevention in CodeIgniter</h3>
+<p dir="auto"><img src="assets\IMG66.PNG" alt="alt text" data-src="assets/IMG66.PNG"></p>
+<p dir="auto"><img src="assets\IMG67.PNG" alt="alt text" data-src="assets/IMG67.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">CSRF included in input</li>
+<li dir="auto">Enable the CSRF inside the <code>app/Config/Filters.php</code>
+<ul dir="auto">
+<li dir="auto">can exempt against a particular request</li>
+</ul>
+</li>
+<li dir="auto">can put the CSRF token inside the API request</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="open-web-applications-security-project">Open Web Applications Security Project</h3>
+<ul dir="auto">
+<li dir="auto">OWASP is an online community (<a href="https://owasp.org/">https://owasp.org/</a>) that produces freely-available articles, methodologies,
+documentation, tools, and technologies in the field of web application security.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG68.PNG" alt="alt text" data-src="assets/IMG68.PNG"></p>
+<p dir="auto"><img src="assets\IMG69.PNG" alt="alt text" data-src="assets/IMG69.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">proper testing in a development environment</li>
+</ul>
+</blockquote>
+
+</main>
+</body>
+</html>
