@@ -268,4 +268,4 @@ the outcome of a requested action.
 401 Unauthorized | The request requires user authentication.
 404 Not Found | The server has not found anything matching the Request-URI.
 408 Request Timeout | The client did not produce a request within the time that the server was prepared to wait.
-500 Internal Server Error | The server encountered an unexpected condition which prevented it from fulfilling the request. Usually a server-side setup issue or server-side coding error. 
+500 Internal Server Error | The server encountered an unexpected condition which prevented it from fulfilling the request. Usually a server-side setup issue or server-side coding error.   
