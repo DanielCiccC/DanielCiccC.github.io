@@ -33,9 +33,9 @@ python image_syntax.py
 
 
 # git stuff
-MESSAGE=$(git ls-files -domz | xargs -0 echo The following have been changed: )
+# MESSAGE=$(git ls-files -domz | xargs -0 echo The following have been changed: )
 git add .
-git commit -m "$MESSAGE"
+git commit -m "Changes"
 git push
 
 echo "Build Complete"
