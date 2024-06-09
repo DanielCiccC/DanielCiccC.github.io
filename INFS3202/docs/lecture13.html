@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="relational-vs-nosqll-databases">Relational vs NoSQLL Databases</h1>
+<h3 dir="auto" id="relational-databases">Relational Databases</h3>
+<ul dir="auto">
+<li dir="auto">Structured Data:
+<ul dir="auto">
+<li dir="auto">Relational databases use SQL for defining and manipulating data.</li>
+</ul>
+</li>
+<li dir="auto">Table-based:
+<ul dir="auto">
+<li dir="auto">Data is stored in tables consisting of rows and columns.</li>
+</ul>
+</li>
+<li dir="auto">Relational:
+<ul dir="auto">
+<li dir="auto">SQL databases use relationships (foreign keys) to connect data across tables.</li>
+</ul>
+</li>
+<li dir="auto">ACID Compliance:
+<ul dir="auto">
+<li dir="auto">SQL databases follow the ACID (Atomicity, Consistency, Isolation, Durability) properties for transaction management.</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="nosql-databases">NoSQL Databases</h3>
+<ul dir="auto">
+<li dir="auto">Schema-less:
+<ul dir="auto">
+<li dir="auto">No predefined schema, allowing for flexible data models.</li>
+</ul>
+</li>
+<li dir="auto">Distributed Architecture:
+<ul dir="auto">
+<li dir="auto">Designed for horizontal scaling and distributed data storage.</li>
+</ul>
+</li>
+<li dir="auto">Variety of Data Models:
+<ul dir="auto">
+<li dir="auto">Supports multiple data models, including document, key-value,
+column-family, and graph.</li>
+</ul>
+</li>
+<li dir="auto">Eventual Consistency:
+<ul dir="auto">
+<li dir="auto">Some NoSQL databases prioritize availability over immediate consistency i.e. Basically Available, Soft state, Eventual consistency (BASE).</li>
+</ul>
+</li>
+<li dir="auto">Designed for Big Data:
+<ul dir="auto">
+<li dir="auto">Handles large volumes of unstructured or semi-structured data.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Don't promise ACID</p>
+<ul dir="auto">
+<li dir="auto">priortise availability</li>
+<li dir="auto">Eventual consistency</li>
+<li dir="auto">Initial driver for NoSQL was because of semi-structured data that could be growing, and big data</li>
+</ul>
+</blockquote>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">2014 eye-opening moment, financial transactions were targeted</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG20.PNG" alt="alt text" data-src="assets/IMG20.PNG"></p>
+<blockquote dir="auto">
+<p dir="auto">Difficult query languages</p>
+</blockquote>
+<h3 dir="auto" id="both-mysql-and-postgres-support-json">Both MySQL and Postgres Support JSON</h3>
+<ul dir="auto">
+<li dir="auto">Both MySQL and PostgreSQL offer robust support for JSON data,
+allowing for flexible and efficient storage, querying, and manipulation of
+JSON documents.</li>
+<li dir="auto">MySQL provides a native JSON data type with functions for JSON
+manipulation and indexing support via generated columns.</li>
+<li dir="auto">PostgreSQL offers both JSON and JSONB data types, with JSONB
+providing superior indexing and querying capabilities.</li>
+<li dir="auto">This allows us to combine relational databases with json (document
+storage) powerful for handling semi-structured data.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Still have relational databases</p>
+<ul dir="auto">
+<li dir="auto">flexibility of JSON format</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="query-optimisation">Query Optimisation</h3>
+<ul dir="auto">
+<li dir="auto">Identify Slow Queries: Use database performance monitoring tools to identify slow-running queries. Common tools include EXPLAIN (MySQL, PostgreSQL) to analyze query execution plans.</li>
+<li dir="auto">Check Existing Indexes: Review existing indexes to ensure they are being used effectively. Sometimes, an index might be present but not utilized by the query optimizer.</li>
+<li dir="auto">Create Indexes on Frequently Queried Columns: Index columns that are frequently used in WHERE clauses, JOIN conditions, and ORDER BY clauses to speed up query performance.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Run query EXPLAIN
+<ul dir="auto">
+<li dir="auto">check indexing of your data</li>
+<li dir="auto">Don't want every field in the table to be indexed</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+</main>
+</body>
+</html>

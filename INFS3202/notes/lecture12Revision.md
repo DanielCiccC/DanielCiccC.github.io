@@ -245,6 +245,128 @@ necessary dependencies and build scripts, without requiring manual configuration
 >   - create components in sub-folders
 > - when it compiles, to HTMl and javascript
 > - all of this will run inside the browser
+>
+> When you do the build, will output one HTML files and one JavaScript file
+> - and will download incrementally based on what you will need
+> - compresses and minimises
+> 
 
 ## Next.JS
+
+> React style of code which will run on the server
+> - Can't connect to a database, e.g., credentials will be exposed
+> - benefits of server-side, have database
+>
+> JavaScript that runs on the server
+> - server side - integrate other functionality - expose API's
+
+
+### Using create-next-app
+
+- Install Node.js https://nodejs.org/en
+- Create a new react client side application:
+- ``npx create-next-app@latest``
+
+![alt text](assets\IMG81.PNG)
+
+> - layout.js and page.js
+
+- We will use Prisma as our ORM and Bootstrap for CSS
+  - ``npm install @prisma/client bootstrap``
+- Initialise Prisma
+  - ``npx prisma init``
+
+> - Prisma, a way to create models
+> - just defining a structure
+>   - what is teh ID field, etc
+
+### Create the schema
+
+![alt text](assets\IMG82.PNG)
+
+### Generate the Prisma Client
+
+- Run this command to create the client
+  - ``npx prisma generate``
+
+Prisma Client is an auto-generated and type-safe query builder for Node.js
+- Auto-generated: Prisma Client is automatically generated based on your Prisma schema file (schema.prisma). It provides an intuitive and type-safe API for querying and modifying your database.
+- Query builder: Prisma Client provides a fluent and expressive query builder API. It allows you to construct complex database queries using a chain of methods, making your code more readable and maintainable.
+- CRUD operations: Prisma Client supports all the common CRUD (Create, Read, Update, Delete) operations. It provides methods like create, findUnique, findMany, update, delete, etc., to perform these operations on your database entities.
+
+### Create the database table (Similar to Migrations)
+
+- Run this command to create the client
+    - ``npx prisma migrate dev --name init``
+
+**Command** | **Output (SQL)**
+| --- | --- |
+![alt text](assets\IMG83.PNG) | ![alt text](assets\IMG84.PNG)
+
+
+> Querybuilder and 
+> - prismaclient to interact with the database
+>   - give me the ORM, for CRUD operations
+>
+> Run migrate function
+> - have a migrations folder, based on date and time generates the code to generate the table for us
+
+### Page-based Routing
+
+- Include a folder within app and it becomes the route
+- Must have page.js within the folder
+
+![alt text](assets\IMG85.PNG)
+
+> normally always seen a routes file
+> - New Idea: people make folders, and the names of the folders becomes the path to the app
+> - page.js is the file that is loaded in that directory
+>   - e.g. settings inside the dashboard folder, subdirectory in dashboard
+
+### Dynamic Page based Routing
+
+![alt text](assets\IMG86.PNG)
+
+> Want ID at the end of the route to load something
+> - using square braces, can be a dynamic variable
+> - still make the folders, use square braces for a dynamic variable
+> 
+> Edit/something
+> - navigates to page edit/[slug]
+>  - passes in dynamic variable into page
+
+
+
+### Run Next.js Dev Server
+
+- Run the dev server
+- npm run dev
+
+Should run on port 3000 unless that is being used. It will then increment the port number eg 3001
+
+![alt text](assets\IMG87.PNG)
+
+> load the initial page, load new and 
+
+### Layout
+
+![alt text](assets\IMG88.PNG)
+
+### Client-side and Server-side Code
+
+![alt text](assets\IMG89.PNG)
+
+> API, edit a page or update a page
+> - allow me to run it on the server
+> - edit page, want that to run on the client, call and run fetchAPI
+> - fetchAPI will fetch from the server
+
+## Other Frameworks
+
+### Flask
+- Very concise syntax
+- Uses decorators in Python to define Routes
+- Need to install your own ORM eg SQL Alchemy
+
+![alt text](assets\IMG90.PNG)
 
