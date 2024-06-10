@@ -4,15 +4,12 @@
 
 ### 3-layer architecture
 
-- The 3-Layer Architecture is a 
-software design pattern that divides 
-applications into three main 
+- The 3-Layer Architecture is a software design pattern that divides applications into three main 
 categories or layers: 
   - Presentation
   - Business Logic (or Application Layer)
   - Data Layer
-- This architecture aims to separate the user interface, the business logic, and the data storage, which 
-promotes a clean separation of concerns.
+- This architecture aims to separate the user interface, the business logic, and the data storage, which promotes a clean separation of concerns.
 
 ### MVC + 3-layer architecture
 
@@ -106,4 +103,3 @@ instance or use the model() helper function.
 - Get Data(i.e. SELECT *): $builder->get()
 
 ![alt text](assets\IMG31.PNG)
-

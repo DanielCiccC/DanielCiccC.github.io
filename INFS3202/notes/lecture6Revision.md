@@ -2,10 +2,8 @@
 # MVC – Advanced CodeIgniter
 
 ### Caching
-- Caching is a technique used to store copies of files or data results in a temporary storage location 
-(cache), so future requests for those files or data can be served faster. 
-- In web development, caching can refer to storing parts of web pages or views, database query results, or 
-even computational results to improve performance and reduce the load on the system.
+- Caching is a technique used to store copies of files or data results in a temporary storage location (cache), so future requests for those files or data can be served faster. 
+- In web development, caching can refer to storing parts of web pages or views, database query results, or even computational results to improve performance and reduce the load on the system.
 
 **Why Do We Need It?**
 - Performance Enhancement:
@@ -28,11 +26,9 @@ even computational results to improve performance and reduce the load on the sys
 CodeIgniter provides a simple yet flexible caching mechanism that supports different types of 
 caching:
 - Page Caching:
-This method caches the entire output of a page. When a request is made, CodeIgniter checks 
-if a cached version of the page exists and serves it directly, bypassing the normal system 
-execution.
+  - This method caches the entire output of a page. When a request is made, CodeIgniter checks if a cached version of the page exists and serves it directly, bypassing the normal system execution.
 - Querystring Caching:
-Uses the combination of variables in the URL querystring and saves versions to the cache.
+  - Uses the combination of variables in the URL querystring and saves versions to the cache.
 
 ### Cache Config
 - Location of Cache Settings:
@@ -123,9 +119,7 @@ automation and integration with development, testing, and deployment workflows.
 
 ## Sessions
 
-Sessions are a fundamental aspect of web development, enabling 
-web applications to store and access user data across multiple 
-requests.
+Sessions are a fundamental aspect of web development, enabling web applications to store and access user data across multiple requests.
 
 - **User Data Storage:**
   - Sessions provide a way to persist user data across multiple web pages or requests. Unlike cookies, session data is stored on the server.

@@ -230,8 +230,7 @@ Top five open source web server
 ### Connecting to your student zone
 
 **SSH**
-- All zones may be accessed for administration purposes through the commandline, though SSH access uses UQ 
-usernames and passwords.
+- All zones may be accessed for administration purposes through the commandline, though SSH access uses UQ usernames and passwords.
 
 **SFTP**
 - With a UQ user account, you can also access your zone over SFTP using a client such as WinSCP or FileZilla to upload 

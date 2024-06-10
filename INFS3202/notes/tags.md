@@ -134,3 +134,24 @@ The `<link>` tag defines the relationship between the current document and an ex
   <link rel="stylesheet" href="styles.css">
 </head>
 ```
+
+---
+
+### `<main>`
+
+---
+
+### `<footer>`
+
+---
+
+### `<html>`
+
+---
+
+### `<section>`
+
+---
+
+### `<label>`
+

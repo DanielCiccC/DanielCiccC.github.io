@@ -282,7 +282,7 @@ necessary dependencies and build scripts, without requiring manual configuration
 
 > - Prisma, a way to create models
 > - just defining a structure
->   - what is teh ID field, etc
+>   - what is the ID field, etc
 
 ### Create the schema
 
@@ -294,9 +294,9 @@ necessary dependencies and build scripts, without requiring manual configuration
   - ``npx prisma generate``
 
 Prisma Client is an auto-generated and type-safe query builder for Node.js
-- Auto-generated: Prisma Client is automatically generated based on your Prisma schema file (schema.prisma). It provides an intuitive and type-safe API for querying and modifying your database.
-- Query builder: Prisma Client provides a fluent and expressive query builder API. It allows you to construct complex database queries using a chain of methods, making your code more readable and maintainable.
-- CRUD operations: Prisma Client supports all the common CRUD (Create, Read, Update, Delete) operations. It provides methods like create, findUnique, findMany, update, delete, etc., to perform these operations on your database entities.
+- **Auto-generated**: Prisma Client is automatically generated based on your Prisma schema file (schema.prisma). It provides an intuitive and type-safe API for querying and modifying your database.
+- **Query builder**: Prisma Client provides a fluent and expressive query builder API. It allows you to construct complex database queries using a chain of methods, making your code more readable and maintainable.
+- **CRUD operations**: Prisma Client supports all the common CRUD (Create, Read, Update, Delete) operations. It provides methods like create, findUnique, findMany, update, delete, etc., to perform these operations on your database entities.
 
 ### Create the database table (Similar to Migrations)
 

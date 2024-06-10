@@ -38,8 +38,7 @@ the emergence of blogs, forums, social media, and other platforms for shared kno
 
 ### Domain-name service (DNS)
 - Function: DNS acts like the internet's phonebook. It translates human-friendly domain names 
-(like www.example.com) into IP addresses (like 192.0.2.1) that computers use to identify each other on 
-the network.
+(like www.example.com) into IP addresses (like 192.0.2.1) that computers use to identify each other on the network.
 - Process: When you type a website address in your browser, a DNS query is performed. This query 
 travels through a network of DNS servers to find the IP address associated with the domain name.
 - Hierarchy: The DNS system is hierarchical, consisting of different levels of DNS servers, including root, 
@@ -55,14 +54,10 @@ Usage:
 
 
 ### The HyperText Transfer Protocol (HTTP/S)
-- Function: HTTP is the protocol used for transferring web pages on the internet. It defines how 
-messages are formatted and transmitted, and how web servers and browsers should respond to various 
-commands.
+- Function: HTTP is the protocol used for transferring web pages on the internet. It defines how messages are formatted and transmitted, and how web servers and browsers should respond to various commands.
 - Communication: HTTP operates as a request-response protocol between a client (the web browser) 
-and a server. The client sends an HTTP request to the server, and the server responds with an HTTP 
-response, delivering web content.
-- Stateless Protocol: HTTP is stateless, meaning it doesn't retain information between request-response 
-sessions. This simplicity allows for faster communication but necessitates additional protocols (like 
+and a server. The client sends an HTTP request to the server, and the server responds with an HTTP response, delivering web content.
+- Stateless Protocol: HTTP is stateless, meaning it doesn't retain information between request-response sessions. This simplicity allows for faster communication but necessitates additional protocols (like 
 cookies) for managing state information.
 - HTTPS: HTTPS is the secure version of HTTP, the protocol over which data is sent between your 
 browser and the website that you are connected to. It means all communications between your browser 
@@ -78,17 +73,13 @@ and the website are encrypted.
 >   - find references and pull stylesheet, files, images etc also.
 
 ### How does a Webserver Work
-A web server is both hardware and software that uses HTTP (HyperText Transfer Protocol) and other protocols to 
-respond to client requests made over the World Wide Web. The hardware aspect is the physical server that stores the 
-web server software and the website's component files. The software aspect is the server software that understands 
-and responds to client requests.
-
+A web server is both hardware and software that uses HTTP (HyperText Transfer Protocol) and other protocols to respond to client requests made over the World Wide Web. The hardware aspect is the physical server that stores the web server software and the website's component files. The software aspect is the server software that understands and responds to client requests.
 
 ### Key Functions of a Web Server
-- Hosting Website Files: The web server stores the files that make up all websites, including HTML files, CSS files, JavaScript files, and images. When a user wants to visit a website, their browser sends a request to the web server hosting the site's files.
-- Processing Requests: When the web server receives a request from a client's browser, it interprets the request, finds the requested resources (web pages, images, etc.), and sends them back to the client's browser.
-- Serving Pages: The web server sends the requested web pages to the client's browser via HTTP. If the requested resource is not available or cannot be served for some reason, the server returns an error message (e.g., "404 Not Found").
-- Dynamic Content Generation: Modern web servers can also generate dynamic content. They use server-side scripts and databases to create customized responses based on the user's request or session information. This allows for personalized pages that reflect user preferences or real-time data.
+- **Hosting Website Files**: The web server stores the files that make up all websites, including HTML files, CSS files, JavaScript files, and images. When a user wants to visit a website, their browser sends a request to the web server hosting the site's files.
+- **Processing Requests**: When the web server receives a request from a client's browser, it interprets the request, finds the requested resources (web pages, images, etc.), and sends them back to the client's browser.
+- **Serving Pages**: The web server sends the requested web pages to the client's browser via HTTP. If the requested resource is not available or cannot be served for some reason, the server returns an error message (e.g., "404 Not Found").
+- **Dynamic Content Generation**: Modern web servers can also generate dynamic content. They use server-side scripts and databases to create customized responses based on the user's request or session information. This allows for personalized pages that reflect user preferences or real-time data.
 
 ### Web Browsers
 A client side software to request, receive and process web pages from a Web server

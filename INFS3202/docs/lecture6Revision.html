@@ -28,10 +28,8 @@
 <h1 dir="auto" id="mvc-%E2%80%93-advanced-codeigniter">MVC – Advanced CodeIgniter</h1>
 <h3 dir="auto" id="caching">Caching</h3>
 <ul dir="auto">
-<li dir="auto">Caching is a technique used to store copies of files or data results in a temporary storage location
-(cache), so future requests for those files or data can be served faster.</li>
-<li dir="auto">In web development, caching can refer to storing parts of web pages or views, database query results, or
-even computational results to improve performance and reduce the load on the system.</li>
+<li dir="auto">Caching is a technique used to store copies of files or data results in a temporary storage location (cache), so future requests for those files or data can be served faster.</li>
+<li dir="auto">In web development, caching can refer to storing parts of web pages or views, database query results, or even computational results to improve performance and reduce the load on the system.</li>
 </ul>
 <p dir="auto"><strong>Why Do We Need It?</strong></p>
 <ul dir="auto">
@@ -80,11 +78,15 @@ even computational results to improve performance and reduce the load on the sys
 caching:</p>
 <ul dir="auto">
 <li dir="auto">Page Caching:
-This method caches the entire output of a page. When a request is made, CodeIgniter checks
-if a cached version of the page exists and serves it directly, bypassing the normal system
-execution.</li>
+<ul dir="auto">
+<li dir="auto">This method caches the entire output of a page. When a request is made, CodeIgniter checks if a cached version of the page exists and serves it directly, bypassing the normal system execution.</li>
+</ul>
+</li>
 <li dir="auto">Querystring Caching:
-Uses the combination of variables in the URL querystring and saves versions to the cache.</li>
+<ul dir="auto">
+<li dir="auto">Uses the combination of variables in the URL querystring and saves versions to the cache.</li>
+</ul>
+</li>
 </ul>
 <h3 dir="auto" id="cache-config">Cache Config</h3>
 <ul dir="auto">
@@ -187,6 +189,190 @@ server.</li>
 <li dir="auto">You will need to manage where uploads are stored for your users and how to secure access</li>
 </ul>
 <p dir="auto"><img src="assets\IMG41.PNG" alt="alt text" data-src="assets/IMG41.PNG"></p>
+<h3 dir="auto" id="creating-a-view-cell">Creating a View Cell</h3>
+<ul dir="auto">
+<li dir="auto">A view cell is a re-usable code fragment/component that can take
+parameters and render HTML</li>
+<li dir="auto">Very useful for re-usable elements eg Latest News, Ad’s or Alerts</li>
+<li dir="auto">Create a View cell</li>
+<li dir="auto"><code>php spark make:cell AlertMessageCell</code></li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Take some parameters, and render some HTML back</p>
+<ul dir="auto">
+<li dir="auto">one file for the parameters, one file for the alert message</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="what-is-composer">What is Composer?</h3>
+<ul dir="auto">
+<li dir="auto">You currently use composer to create a new CodeIgniter Project.
+Composer is also a Package Manager
+-** Manage Packages**: Composer allows you to declare the libraries your project depends on
+and manages (installs/updates) them for you.</li>
+<li dir="auto"><strong>CLI Tool</strong>: Composer operates through a command-line interface, making it accessible for
+automation and integration with development, testing, and deployment workflows.</li>
+<li dir="auto"><strong>composer.lock</strong>: When you install dependencies, Composer creates a composer.lock file, locking your project to specific versions of packages. This ensures that all team members and production environments use the same versions, leading to consistent environments and avoiding &quot;works on my machine&quot; issues.</li>
+<li dir="auto"><strong>Update Control</strong>: You can update dependencies individually or collectively to newer versions as needed, according to the constraints defined in composer.json, while composer.lock ensures that these updates are tracked and consistent across all environments.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Only used composer to start codeigniter project</p>
+<ul dir="auto">
+<li dir="auto">allow you to manage packages</li>
+<li dir="auto">composer.lock file, way to lock your environment and versions of things</li>
+<li dir="auto">gitignore, none of the install packages are added to git</li>
+<li dir="auto">git clone will not install, composer install will.</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="sessions">Sessions</h2>
+<p dir="auto">Sessions are a fundamental aspect of web development, enabling web applications to store and access user data across multiple requests.</p>
+<ul dir="auto">
+<li dir="auto"><strong>User Data Storage:</strong>
+<ul dir="auto">
+<li dir="auto">Sessions provide a way to persist user data across multiple web pages or requests. Unlike cookies, session data is stored on the server.</li>
+</ul>
+</li>
+<li dir="auto"><strong>Unique Identifiers:</strong>
+<ul dir="auto">
+<li dir="auto">Each user is identified through a unique session ID, typically sent to the user's browser via a cookie. This ID is then used to retrieve session data on subsequent requests.</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="why-use-sessions">Why Use Sessions?</h3>
+<ul dir="auto">
+<li dir="auto"><strong>State Management:</strong>
+<ul dir="auto">
+<li dir="auto">HTTP is a stateless protocol, meaning it doesn't retain information between requests. Sessions enable a stateful experience, allowing applications to &quot;remember&quot; user actions and preferences.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">store and access data across multiple requests to website</p>
+<ul dir="auto">
+<li dir="auto">store user data, has unique session ID</li>
+<li dir="auto">make http requests is a stateless protocol
+<ul dir="auto">
+<li dir="auto">stateless, does depend on previous communications</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="sessions-in-codeigniter">Sessions in Codeigniter</h3>
+<p dir="auto"><strong>Framework Integration:</strong></p>
+<ul dir="auto">
+<li dir="auto">CodeIgniter's Session Library provides a more robust and flexible way to handle session data compared to native PHP sessions.</li>
+<li dir="auto">It supports various storage drivers (files, database, Redis, Memcached)  for session data.</li>
+</ul>
+<p dir="auto"><strong>Key Features</strong></p>
+<ul dir="auto">
+<li dir="auto"><strong>Flashdata</strong>: Special session data that is only available for the next server request, and is automatically deleted afterwards. Ideal for one-time messages, like form submission success or error messages.</li>
+<li dir="auto"><strong>Tempdata</strong>: Similar to flashdata, but allows for specifying a time limit (in seconds) for how long the data should be available in the session.</li>
+<li dir="auto"><strong>Regeneration of Session ID</strong>: CodeIgniter automatically regenerates the session ID periodically to prevent session fixation attacks.</li>
+<li dir="auto">Session data is simply an array associated with a particular session ID (cookie).</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Flash data</li>
+<li dir="auto">Tempdata
+<ul dir="auto">
+<li dir="auto">Usually associated with a cookie on the user's computer</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="login-example-using-sessions">Login Example using Sessions</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th><strong>Routes</strong></th>
+<th><strong>Controllers</strong></th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="assets\IMG42.PNG" alt="alt text" data-src="assets/IMG42.PNG"></td>
+<td><img src="assets\IMG43.PNG" alt="alt text" data-src="assets/IMG43.PNG"></td>
+</tr>
+</tbody>
+</table>
+<h3 dir="auto" id="authentication-vs-authorisation">Authentication vs Authorisation</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Authentication and authorization are fundamental security processes in the context of web and application development.</p>
+</li>
+<li dir="auto">
+<p dir="auto">While they are closely related and often used together, they serve
+distinct purposes.</p>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>Authentication</strong> is about verifying identity (who you are), while authorization is
+about granting access to resources (what you are allowed to do).</p>
+</li>
+<li dir="auto">
+<p dir="auto">Authentication always <em>precedes</em> authorization. A system must first recognize
+who you are before it can determine what you are allowed to access.</p>
+</li>
+<li dir="auto">
+<p dir="auto"><strong>Authorization</strong> is managed through settings, configurations, or roles defining
+access levels and permissions.</p>
+</li>
+</ul>
+<h3 dir="auto" id="authentication">Authentication</h3>
+<ul dir="auto">
+<li dir="auto">Identity Verification:
+<ul dir="auto">
+<li dir="auto">Authentication is the process of verifying who a user is. It involves confirming the identity of a user attempting to access a system or application.</li>
+</ul>
+</li>
+<li dir="auto">Credential Check:
+<ul dir="auto">
+<li dir="auto">Typically involves validating user credentials against a database or through other means.  Common methods include usernames and passwords, biometric verification, OTPs (One-Time Passwords), or security tokens.</li>
+</ul>
+</li>
+<li dir="auto">First Step in Security Process:
+<ul dir="auto">
+<li dir="auto">Authentication is the initial step in the security process, determining whether a user is who  they claim to be before granting access to a system.</li>
+</ul>
+</li>
+<li dir="auto">Examples:
+<ul dir="auto">
+<li dir="auto">Logging into a web application, entering a PIN at an ATM, or using a fingerprint to unlock a smartphone.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">knowing who the user is</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="authorisation">Authorisation</h3>
+<ul dir="auto">
+<li dir="auto">Access Control:
+<ul dir="auto">
+<li dir="auto">Authorization occurs after authentication and determines what resources a user is allowed to access and what operations they are permitted to perform.</li>
+</ul>
+</li>
+<li dir="auto">Role-Based Access:
+<ul dir="auto">
+<li dir="auto">Often implemented using roles assigned to authenticated users, which dictate access levels or permissions within a system or application.</li>
+</ul>
+</li>
+<li dir="auto">Policy Enforcement:
+<ul dir="auto">
+<li dir="auto">Involves enforcing policies that control access to resources based on roles, clearance levels,
+or other attributes associated with the authenticated user.</li>
+</ul>
+</li>
+<li dir="auto">Examples:
+<ul dir="auto">
+<li dir="auto">A user (authenticated) is allowed to view a document but not edit it (authorization), or an employee (authenticated) can access employee-only areas within a company’s website (authorization).</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">what you can do on the site</li>
+</ul>
+</blockquote>
 
 </main>
 </body>
