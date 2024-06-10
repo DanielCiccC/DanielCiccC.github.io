@@ -6,8 +6,7 @@
 Web accessibility means ensuring websites, tools, and technologies are designed and 
 developed so that all people, including those with disabilities, can use them.
 
-**Inclusivity**: About providing equal access and opportunities to everyone, regardless of their 
-ability. This includes people with impairments like visual, auditory, physical, speech, cognitive, and neurological disabilities.
+**Inclusivity**: About providing equal access and opportunities to everyone, regardless of their ability. This includes people with impairments like visual, auditory, physical, speech, cognitive, and neurological disabilities.
 
 
 Key Benefits:
@@ -62,15 +61,10 @@ structure and usability.
 
 ### Web Content Accessibility Guidelines (WCAG)
 
-- WCAG provides a set of recommendations for making web 
-content more accessible to people with disabilities.
-- Developed by the Web Accessibility Initiative (WAI) of the World 
-Wide Web Consortium (W3C), the main international standards 
-organization for the Internet.
-- Widely adopted as the standard for web accessibility by 
-organizations and governments worldwide.
-- Forms the basis for many national laws governing digital 
-accessibility.
+- WCAG provides a set of recommendations for making web content more accessible to people with disabilities.
+- Developed by the Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C), the main international standards organization for the Internet.
+- Widely adopted as the standard for web accessibility by organizations and governments worldwide.
+- Forms the basis for many national laws governing digital accessibility.
 
 > - Have an initiative called www initiative
 > - legislation refers to these guideline often
@@ -107,8 +101,7 @@ of user agents, including assistive technologies.
 
 ### ARIA
 
-- ARIA helps make web content and web applications more accessible to people with disabilities, 
-especially when traditional HTML falls short.
+- ARIA helps make web content and web applications more accessible to people with disabilities, especially when traditional HTML falls short.
 - Bridge Gaps: It provides additional semantics that can be used by assistive technologies like screen readers.
 
 **Core Features of ARIA:**
@@ -117,8 +110,7 @@ especially when traditional HTML falls short.
 
 **When to Use ARIA:**
 - Enhancement, Not Replacement: Use ARIA to enhance elements, not to replace basic HTML functionalities. Start with semantic HTML, then add ARIA for additional details if needed.
-- Complex Widgets: For interactive controls or complex widgets that HTML cannot define alone, uch 
-as sliders, drag-and-drop functionalities, or modal dialogs.
+- Complex Widgets: For interactive controls or complex widgets that HTML cannot define alone, such as sliders, drag-and-drop functionalities, or modal dialogs.
 
 
 ### Basic Accessibility Features - Part 1
@@ -178,17 +170,13 @@ as sliders, drag-and-drop functionalities, or modal dialogs.
 
 Responsive design is crucial for a variety of reasons, many of which center on delivering a 
 seamless and effective user experience across different devices and screen sizes.
+
 **User Experience**
-- Adaptability: Users access websites from a multitude of devices with varying screen sizes. A 
-responsive design ensures a consistent look and feel.
-- Ease of Use: Navigation and site interaction are straightforward regardless of whether a user 
-is on a desktop computer, tablet, or mobile phone.
+- Adaptability: Users access websites from a multitude of devices with varying screen sizes. A responsive design ensures a consistent look and feel.
+- Ease of Use: Navigation and site interaction are straightforward regardless of whether a user is on a desktop computer, tablet, or mobile phone.
 **Increased Reach**
-- Mobile Users: With the increasing number of people using mobile devices to access the 
-internet, having a mobile-responsive site can significantly widen your audience.
-- Social Sharing: Content shared on social media is often viewed on mobile devices. 
-Responsive design ensures that your pages look good wherever they're viewed, making 
-users more likely to share.
+- Mobile Users: With the increasing number of people using mobile devices to access the internet, having a mobile-responsive site can significantly widen your audience.
+- Social Sharing: Content shared on social media is often viewed on mobile devices. Responsive design ensures that your pages look good wherever they're viewed, making users more likely to share.
 
 > Without CSS, wouldn't know how to create responsive design
 >
@@ -233,6 +221,8 @@ experience to users, using modern web technologies such as HTML, CSS, and JavaSc
 PWAs are designed to work seamlessly across various devices, including desktops, laptops, 
 mobile phones, and tablets.
 
+- **Native Def'n** - Native is a development option to develop natively using vendor provided libraries and toolkits.
+
 **Key Characteristics:**
 - **Responsive**: PWAs adapt to different screen sizes and devices, providing an optimal user experience.
 - **Fast and Reliable:** PWAs use modern web technologies to provide fast and reliable performance, even on low-end devices.
@@ -263,6 +253,7 @@ mobile phones, and tablets.
 ### Dog Breeds PWA
 
 **Manifest**
+
 ![alt text](assets\IMG55.PNG)
 
 ### What is a Service Worker?

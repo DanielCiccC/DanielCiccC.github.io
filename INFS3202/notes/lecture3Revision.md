@@ -103,3 +103,6 @@ instance or use the model() helper function.
 - Get Data(i.e. SELECT *): $builder->get()
 
 ![alt text](assets\IMG31.PNG)
+
+## Using GenAI
+

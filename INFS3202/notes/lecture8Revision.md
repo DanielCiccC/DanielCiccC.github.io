@@ -122,10 +122,22 @@ The page includes a button and a table with headers. Below the table, there's a 
 
 ## Fetch API
 
-![alt text](assets\IMG49.PNG)
+```javascript
+fetch('<?= base_url("item"); ?>/')
+    .then(response => response.json())
+    .then(items => {
+        items.forEach(item => {
+            const li = createListItem(item);
+            todoList.appendChild(li);
+        });
+    });
+```
 
-- Returns a Promise (which you can think of like a real promise) – at some point it will resolve 
-for a success or reject if there is an error
+- Returns a Promise (which you can think of like a real promise) – at some point it will resolve for a success or reject if there is an error
+
+**Two ways to handle**
+- Promise chaining with `.then()` functions
+- using `await` e.g. `const response = await fetch('https://dog.ceo/api/breeds/list/all');`
 
 > - Will fulfil the promise if something is returned
 
