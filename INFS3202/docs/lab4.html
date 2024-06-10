@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lab-4---forms">Lab 4 - Forms</h1>
+<p dir="auto">Ensure that both the search input field and the Search button are enclosed within <code>&lt;form&gt;</code> tags, setting the form’s method to GET to facilitate easy retrieval of query parameters. The type of the Search button must be set to Submit as the button needs to send the form data to the server.</p>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row mb-4&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-md-6 mb-3 mb-lg-0&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;get&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;&lt;?= base_url(&#x27;admin/&#x27;); ?&gt;&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;input-group&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-control&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Enter your search...&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;search&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-md-6 text-md-end&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&lt;?= base_url(&#x27;addedit/&#x27;);?&gt;&quot;</span>&gt;</span>Add User<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<ul dir="auto">
+<li dir="auto">When the form method is set to <code>GET</code>, the form data is encoded into the URL, appended as query parameters. This behavior has several advantages:
+<ul dir="auto">
+<li dir="auto"><strong>Bookmarkability</strong>: Users can bookmark specific searches for quick access in the future.</li>
+<li dir="auto"><strong>Shareability</strong>: It’s easy to share URLs with specific query parameters, facilitating collaboration or support scenarios.</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="implement-the-addedit-functionality">Implement the Add/Edit Functionality</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">In the interest of efficiency and minimizing redundancy, we aim to streamline the user management process by utilizing a single form and controller method for both adding and editing users.</p>
+<ul dir="auto">
+<li dir="auto">Configure a grouped route that responds to both <code>GET</code> and <code>POST</code> requests</li>
+</ul>
+</li>
+</ul>
+<pre><code class="code-line language-php" dir="auto">
+<span class="hljs-keyword">use</span> <span class="hljs-title">CodeIgniter</span>\<span class="hljs-title">Router</span>\<span class="hljs-title">RouteCollection</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@var</span> RouteCollection $routes
+ */</span>
+
+<span class="hljs-variable">$routes</span>-&gt;<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/&#x27;</span>, <span class="hljs-string">&#x27;ResumeController::index&#x27;</span>);
+
+<span class="hljs-comment">// Routes for admin</span>
+<span class="hljs-variable">$routes</span>-&gt;<span class="hljs-title function_ invoke__">group</span>(<span class="hljs-string">&#x27;admin&#x27;</span>, function(<span class="hljs-variable">$routes</span>) {
+    <span class="hljs-variable">$routes</span>-&gt;<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/&#x27;</span>, <span class="hljs-string">&#x27;ResumeController::admin&#x27;</span>);
+    <span class="hljs-variable">$routes</span>-&gt;<span class="hljs-keyword">match</span>([<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;post&#x27;</span>], <span class="hljs-string">&#x27;addedit&#x27;</span>, <span class="hljs-string">&#x27;ResumeController::addedit&#x27;</span>);
+    <span class="hljs-variable">$routes</span>-&gt;<span class="hljs-keyword">match</span>([<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;post&#x27;</span>], <span class="hljs-string">&#x27;addedit/(:num)&#x27;</span>, <span class="hljs-string">&#x27;ResumeController::addedit/$1&#x27;</span>);
+    <span class="hljs-variable">$routes</span>-&gt;<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;delete/(:num)&#x27;</span>, <span class="hljs-string">&#x27;ResumeController::delete/$1&#x27;</span>);
+});
+
+<span class="hljs-variable">$routes</span>-&gt;<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/resume/(:num)&#x27;</span>, <span class="hljs-string">&#x27;ResumeController::resume/$1&#x27;</span>);
+</code></pre>
+<h3 dir="auto" id="flashdata">FlashData</h3>
+
+</main>
+</body>
+</html>

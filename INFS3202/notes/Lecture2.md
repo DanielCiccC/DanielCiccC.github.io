@@ -194,7 +194,7 @@ Information sent from a form with the GET method is visible to everyone (it will
 #### Function in PHP
 
 • A function will be executed by a call to the function.
-• The PHP script defines a function showName that takes two parameters, $given_name and $family_name, and echoes them with a space in between and an exclamation mark, followed by a break (``<br>``).
+• The PHP script defines a function showName that takes two parameters, \$given_name and $family_name, and echoes them with a space in between and an exclamation mark, followed by a break (``<br>``).
 
 ![Alt text](assets\IMG13.PNG)
 

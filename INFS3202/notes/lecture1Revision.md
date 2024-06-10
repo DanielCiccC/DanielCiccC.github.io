@@ -104,14 +104,13 @@ Browser hosts are diversified too
 - Tag syntax to structure documents
 - Definition: The standard markup language for documents designed to be displayed in a web browser. It 
 can be assisted by technologies such as CSS and JavaScript.
-- Components: Consists of elements represented by tags (like <html>, <head>, <body>, <p>, <div>, 
+- Components: Consists of elements represented by tags (like ``<html>``, ``<head>``, `<body>`, `<p>`, `<div>`, 
 etc.) that structure and define the content of web pages.
 - Role: Serves as the skeleton of web applications, outlining the structure and content (text, images, 
 videos).
-- Links (Hyperlinks): Defined with the <a> tag, links connect one web page to another, enabling the 
+- Links (Hyperlinks): Defined with the `<a>` tag, links connect one web page to another, enabling the 
 navigational structure that is fundamental to the web's interconnectedness.
-- Forms: Utilize the <form> tag along with input fields (<input>, <textarea>, etc.) to collect user data. 
-Forms are crucial for user interactions, from search queries to login processes.
+- Forms: Utilize the ``<form>`` tag along with input fields (`<input>`, `<textarea>`, etc.) to collect user data. Forms are crucial for user interactions, from search queries to login processes.
 
 ### Cascading Style Sheets (CSS)
 - Definition: 
@@ -172,5 +171,3 @@ code.
 - **Testability**: The decoupling of components in MVC makes it easier to write automated tests for 
 individual parts of the codebase (unit testing), ensuring that parts of the application are working as 
 expected independently of each other.
-
-

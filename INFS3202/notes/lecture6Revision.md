@@ -149,9 +149,9 @@ requests.
 - It supports various storage drivers (files, database, Redis, Memcached)  for session data.
 
 **Key Features**
-- Flashdata: Special session data that is only available for the next server request, and is automatically deleted afterwards. Ideal for one-time messages, like form submission success or error messages.
-- Tempdata: Similar to flashdata, but allows for specifying a time limit (in seconds) for how long the data should be available in the session.
-- Regeneration of Session ID: CodeIgniter automatically regenerates the session ID periodically to prevent session fixation attacks.
+- **Flashdata**: Special session data that is only available for the next server request, and is automatically deleted afterwards. Ideal for one-time messages, like form submission success or error messages.
+- **Tempdata**: Similar to flashdata, but allows for specifying a time limit (in seconds) for how long the data should be available in the session.
+- **Regeneration of Session ID**: CodeIgniter automatically regenerates the session ID periodically to prevent session fixation attacks.
 - Session data is simply an array associated with a particular session ID (cookie).
 
 > - Flash data
@@ -201,4 +201,3 @@ or other attributes associated with the authenticated user.
   - A user (authenticated) is allowed to view a document but not edit it (authorization), or an employee (authenticated) can access employee-only areas within a company’s website (authorization).
 
 > - what you can do on the site
-

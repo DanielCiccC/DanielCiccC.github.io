@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lab-3---migrations-1">Lab 3 - Migrations</h1>
+<h3 dir="auto" id="what-is-a-migration-1">What is a migration</h3>
+<ul dir="auto">
+<li dir="auto">A migration in CodeIgniter (and many other web development frameworks like Ruby on Rails and Django) is essentially a version-controlled script that allows developers to define database schemas or make changes to an existing database. Migrations manage the evolution of a database schema over time in a systematic and controlled manner. Instead of manually creating tables or altering them through a GUI or command line, migrations let you automate this process with PHP code.</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">Create a migration file
+<ul dir="auto">
+<li dir="auto"><code>php spark make:migration create_users_table</code></li>
+</ul>
+</li>
+<li dir="auto">Define a Database Table in Migration File
+<ul dir="auto">
+<li dir="auto">Inside the migration file, you will find two methods: public function <code>up()</code> and public function <code>down()</code>. Use these methods to define the database changes you wish to make and how to revert them, respectively.</li>
+</ul>
+</li>
+<li dir="auto">Run the migration
+<ul dir="auto">
+<li dir="auto"><code>php spark migrate</code></li>
+</ul>
+</li>
+<li dir="auto">View the Database Table in PHPMyAdmin</li>
+</ol>
+<h3 dir="auto" id="create-the-model-1">Create the Model</h3>
+<pre><code class="code-line language-bash" dir="auto">php spark make:model UserModel --suffix
+</code></pre>
+
+</main>
+</body>
+</html>

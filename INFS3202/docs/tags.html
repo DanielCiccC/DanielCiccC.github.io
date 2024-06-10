@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="html-tags">HTML tags</h1>
+<p dir="auto">Form, a, img, link, table, p,</p>
+<h3 dir="auto" id="form"><code>&lt;form&gt;</code></h3>
+<ul dir="auto">
+<li dir="auto">An HTML form is used to collect user input. The user input is most often sent to a server for processing.</li>
+<li dir="auto"></li>
+</ul>
+<p dir="auto"><strong>Attributes</strong></p>
+<ul dir="auto">
+<li dir="auto"><code>method</code> - can be sent with <code>&quot;get&quot;</code> or <code>&quot;post&quot;</code></li>
+<li dir="auto"><code>action</code> - page specified to send the data</li>
+<li dir="auto"><code>target</code> - The target attribute can be used to control how the linked content is displayed when clicked eg _blank opens the link in a new tab or window.</li>
+</ul>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;get&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;&lt;?= base_url(&#x27;admin/&#x27;); ?&gt;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;input-group&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-control&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Enter your search...&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;search&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p dir="auto"><strong>Elements used inside forms</strong></p>
+<ul dir="auto">
+<li dir="auto"><code>&lt;input&gt;</code> is a single line text field</li>
+<li dir="auto"><code>&lt;textarea&gt;</code> is a multiline text field</li>
+<li dir="auto"><code>&lt;button&gt;</code> is a button and with the type attribute set to ‘submit’ will send the values entered into the form to the action path of the form</li>
+</ul>
+<hr dir="auto">
+<h3 dir="auto" id="a"><code>&lt;a&gt;</code></h3>
+<p dir="auto">The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another.</p>
+<p dir="auto">The href value can be an absolute URL, a relative URL, or a URL fragment (used for scrolling to specific sections within the same page).</p>
+<ul dir="auto">
+<li dir="auto"><strong>Absolute URL:</strong> A complete web address, including the protocol
+(e.g., http://, https://), domain, and path.</li>
+</ul>
+<pre><code class="code-line language-html" dir="auto"> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.example.com&quot;</span>&gt;</span>Visit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<ul dir="auto">
+<li dir="auto"><strong>Relative URL:</strong> A partial web address that is relative to the current
+page's location. Relative URLs are often used for links within the
+same website.</li>
+</ul>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;about/index.html&quot;</span>&gt;</span>Learn More<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<hr dir="auto">
+<h3 dir="auto" id="img"><code>&lt;img&gt;</code></h3>
+<p dir="auto">The <code>&lt;img&gt;</code> tag is used to embed an image in an HTML page.</p>
+<ul dir="auto">
+<li dir="auto">Images are not technically inserted into a web page; images are linked to web pages. The <code>&lt;img&gt;</code> tag creates a holding space for the referenced image.</li>
+</ul>
+<p dir="auto"><strong>attributes</strong></p>
+<ul dir="auto">
+<li dir="auto"><code>alt</code> - alternate text for an image</li>
+<li dir="auto"><code>src</code> - Specifies the path to the image</li>
+</ul>
+<p dir="auto"><strong>Usage</strong></p>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;img_girl.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Girl in a jacket&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;500&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;600&quot;</span>&gt;</span>
+</code></pre>
+<hr dir="auto">
+<h3 dir="auto" id="ul-and-ol"><code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code></h3>
+<p dir="auto"><strong>Usage</strong></p>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">start</span>=<span class="hljs-string">&quot;50&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Coffee<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Tea<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Milk<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Coffee<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Tea<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Milk<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p dir="auto"><strong>Rendered</strong></p>
+<div  dir="auto" ></div>
+<ol start="50">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+<div  dir="auto" ></div>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+<hr dir="auto">
+<h3 dir="auto" id="table"><code>&lt;table&gt;</code></h3>
+<ul dir="auto">
+<li dir="auto"><code>&lt;tr&gt;</code> defines a table row</li>
+<li dir="auto"><code>&lt;th&gt;</code> element defines a table header</li>
+<li dir="auto"><code>&lt;td&gt;</code> element defines a table cell</li>
+</ul>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Month<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Savings<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>January<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>$100<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<p dir="auto"><strong>Rendered</strong></p>
+<div  dir="auto" ></div>
+<table>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+<hr dir="auto">
+<h3 dir="auto" id="link"><code>&lt;link&gt;</code></h3>
+<p dir="auto">The <code>&lt;link&gt;</code> tag defines the relationship between the current document and an external resource.</p>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;styles.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+</code></pre>
+
+</main>
+</body>
+</html>

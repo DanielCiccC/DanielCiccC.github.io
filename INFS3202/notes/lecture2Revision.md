@@ -13,7 +13,7 @@
 ```html
 <html>
 <head>
-  <title>Sample HTML Pag Structure</title>
+  <title>Sample HTML Page Structure</title>
 </head>
 <body>
 
@@ -24,6 +24,7 @@
 </body>
 </html>
 ```
+
 
 HTML Tables:
 ```html
@@ -59,6 +60,30 @@ HTML Tables:
 </body>
 </html>
 ```
+### the table from above 
+
+<table border="1">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Harry Potter and the Philosopher's Stone</td>
+        <td>Harry discovers he is a wizard and attends Hogwarts for the first time.</td>
+      </tr>
+      <tr>
+        <td>Harry Potter and the Chamber of Secrets</td>
+        <td>Harry returns to Hogwarts and investigates a series of mysterious petrifications.</td>
+      </tr>
+      <tr>
+        <td>Harry Potter and the Prisoner of Azkaban</td>
+        <td>Harry learns about his family's past and encounters a dangerous escaped prisoner.</td>
+      </tr>
+    </tbody>
+  </table>
 
 ### Cascading Style Sheets (CSS) - why cascading?
 - This cascading mechanism allows 
@@ -119,45 +144,33 @@ content that can be clicked to navigate.
 </body>
 </html>
 ```
-In html:
+### In html:
 
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Blog Post Form:</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Write a Blog Post</h1>
-  <form action="/submit-blog" method="post">
-    <div>
-      <label for="title">Title:</label>
-      <input type="text" id="title" name="title" required>
-    </div>
-    <div>
-      <label for="blog">Blog Content:</label>
-      <textarea id="blog" name="blog" rows="10" cols="50" required></textarea>
-    </div>
-    <div>
-      <button type="submit">Submit</button>
-    </div>
-  </form>
-</body>
-</html>
+---
 
-- Each of elements can be included 
-within a \<form> element
-- Use the action and method attributes 
-of the \<form> element to specify where 
-and how the form data should be 
-submitted
-- \<input> is a single line text field
-- \<textarea> is a multiline text field
-- \<button> is a button and with the type 
-attribute set to ‘submit’ will send the 
-values entered into the form to the 
-action path of the form
+<h1>Write a Blog Post</h1>
+<form action="/submit-blog" method="post">
+<div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+</div>
+<div>
+    <label for="blog">Blog Content:</label>
+    <textarea id="blog" name="blog" rows="10" cols="50" required></textarea>
+</div>
+<div>
+    <button type="submit">Submit</button>
+</div>
+</form>
+
+---
+
+- Each of elements can be included within a ``<form>`` element
+- Use the action and method attributes of the ``<form>`` element to specify where and how the form data should be submitted
+- ``<input>`` is a single line text field
+- ``<textarea>`` is a multiline text field
+- ``<button>`` is a button and with the type attribute set to ‘submit’ will send the values entered into the form to the action path of the form
 
 ### Form - method Get vs Post
 
@@ -268,4 +281,4 @@ the outcome of a requested action.
 401 Unauthorized | The request requires user authentication.
 404 Not Found | The server has not found anything matching the Request-URI.
 408 Request Timeout | The client did not produce a request within the time that the server was prepared to wait.
-500 Internal Server Error | The server encountered an unexpected condition which prevented it from fulfilling the request. Usually a server-side setup issue or server-side coding error.   
+500 Internal Server Error | The server encountered an unexpected condition which prevented it from fulfilling the request. Usually a server-side setup issue or server-side coding error.

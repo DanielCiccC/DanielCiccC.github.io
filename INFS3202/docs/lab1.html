@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lab-1-important-concepts">Lab 1 Important concepts</h1>
+<h3 dir="auto" id="ssh">SSH</h3>
+<ul dir="auto">
+<li dir="auto">SSH, or Secure Shell, also known as Secure Socket Shell, is a protocol that facilitates a secure connection to a remote computer or server through a text-based interface</li>
+<li dir="auto">Upon establishing a secure SSH connection, a shell session is initiated, allowing the manipulation of the server through commands issued via the client on the local machine</li>
+</ul>
+<p dir="auto">Login to UQCloud through SSH: (using PuTTY)</p>
+<p dir="auto">locate hostname</p>
+<pre><code dir="auto">infs3202-xxxxx.zones.eait.uq.edu.au
+</code></pre>
+<p dir="auto">Through Powershell:</p>
+<pre><code dir="auto">ssh studentusername@infs3202-yourcode.zones.eait.uq.edu.au
+</code></pre>
+<p dir="auto">Connection type SSH</p>
+<h3 dir="auto" id="file-management-on-the-uqcloud-zone">File Management on the UQCloud zone</h3>
+<p dir="auto"><strong>File Transfer Protocol (FTP)</strong></p>
+<ul dir="auto">
+<li dir="auto">Standard network protocol used for transferring files from one host to another over a TCP-based network, such as the internet</li>
+<li dir="auto">It utilizes a client-server model, where the FTP client initiates a connection to the FTP server and requests the transfer of one or more files</li>
+</ul>
+<p dir="auto"><strong>Secure File Transfer Protocol (SFTP)</strong></p>
+<ul dir="auto">
+<li dir="auto">SFTP is based on the SSH protocol and is designed to be a more secure alternative to FTP.</li>
+<li dir="auto">It encrypts all the data in transit, including authentication credentials and the actual data being transferred, ensuring that it cannot be intercepted or modified by unauthorized third parties.</li>
+</ul>
+<p dir="auto">The UQCloud zone webserver employs SFTP as its data transfer protocol. Therefore, in order to manage files on the UQzone, either FileZilla or WinSCP can be used.</p>
+<h2 dir="auto" id="nginx">Nginx</h2>
+<h3 dir="auto" id="configuration-file">Configuration file</h3>
+<p dir="auto">Can use <code>nano</code> as in-terminal text editor:</p>
+<pre><code class="code-line language-bash" dir="auto">nano /etc/nginx/sites-enabled/https-site
+</code></pre>
+
+</main>
+</body>
+</html>

@@ -113,15 +113,9 @@ the number of existing children in the list plus one.
 
 ### How This Works:
 **HTML Structure**: 
-The page includes a button and 
-a table with headers. Below the table, there's a 
-\<template> tag containing a template for the table 
-rows.
+The page includes a button and a table with headers. Below the table, there's a \<template> tag containing a template for the table rows.
 
-**Template Tag** : Inside the \<template> tag, there’s 
-a predefined table row (\<tr>) with two cells (\<td>). 
-This row will not be displayed on the page until it is 
-instantiated by JavaScript.
+**Template Tag** : Inside the \<template> tag, there’s a predefined table row (\<tr>) with two cells (\<td>). This row will not be displayed on the page until it is instantiated by JavaScript.
 - **JavaScript Functionality**:
   - The function ``addRow()`` is triggered when the user clicks the "Add New Row" button. This function retrieves the template's content and clones it.
   - It modifies the text content of the table cells to include dynamic data based on how many rows are currently in the table. Finally, the cloned and updated template content is appended to the existing table.
@@ -146,18 +140,18 @@ for a success or reject if there is an error
 
 ```html
 <template id="itemTemplate">
-        <li class="list-group-item">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox">
-                <label class="form-check-label"></label>
-                <input type="text" class="form-control d-none">
-            </div>
-            <div class="btn-group btn-group-sm float-end">
-                <button type="button" class="btn btn-secondary edit-btn">Edit</button>
-                <button type="button" class="btn btn-danger delete-btn">Delete</button>
-            </div>
-        </li>
-    </template>
+    <li class="list-group-item">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label"></label>
+            <input type="text" class="form-control d-none">
+        </div>
+        <div class="btn-group btn-group-sm float-end">
+            <button type="button" class="btn btn-secondary edit-btn">Edit</button>
+            <button type="button" class="btn btn-danger delete-btn">Delete</button>
+        </div>
+    </li>
+</template>
 ```
 
 - Add event listener to add more items

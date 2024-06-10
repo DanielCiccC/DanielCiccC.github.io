@@ -138,6 +138,10 @@ migration. Django can convert a model into the migration file.
 
 ### Base Templates
 
+**Base Template** | **Section**
+| --- | --- |
+![alt text](assets\IMG91.PNG) | ![alt text](assets\IMG92.PNG)
+
 - We can embed Python within HTML. 
 - This uses Jinja Templating
 - We can also define blocks
@@ -369,4 +373,3 @@ Should run on port 3000 unless that is being used. It will then increment the po
 - Need to install your own ORM eg SQL Alchemy
 
 ![alt text](assets\IMG90.PNG)
-

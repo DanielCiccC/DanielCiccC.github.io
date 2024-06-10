@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lab-7---restful-apis">Lab 7 - RESTful API's</h1>
+<h3 dir="auto" id="why-restful-was-developed">Why RESTful was Developed:</h3>
+<ul dir="auto">
+<li dir="auto">REST was developed to provide a simpler, more cohesive approach to designing network applications while reducing the complexity of communication between client and server.</li>
+<li dir="auto">It emphasizes scalability, generality of interfaces, and independent deployment of components. This approach allows developers to build reliable, performant, and scalable web services.</li>
+</ul>
+<h3 dir="auto" id="json">JSON</h3>
+<ul dir="auto">
+<li dir="auto">JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate. RESTful APIs commonly use JSON to format the data being sent and received</li>
+</ul>
+<p dir="auto"><strong>JSON Objects</strong>
+Objects are enclosed in curly braces <code>{}</code></p>
+<pre><code class="code-line language-json" dir="auto"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;firstName&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Mary&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;lastName&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Wise&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;isStudent&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<p dir="auto">A JSON list is an ordered collection of values, which are enclosed in square brackets <code>[]</code></p>
+<pre><code class="code-line language-json" dir="auto"><span class="hljs-punctuation">[</span>
+  <span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;firstName&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;John&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;lastName&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Doe&quot;</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;firstName&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Jane&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;lastName&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Smith&quot;</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;firstName&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Wei&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;lastName&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Chen&quot;</span><span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">]</span>
+</code></pre>
+<h3 dir="auto" id="fetchapi">fetchAPI</h3>
+<p dir="auto">The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses.</p>
+<ul dir="auto">
+<li dir="auto">One of the key features of the Fetch API is that it uses <em>Promises</em>, which enables a simpler and cleaner way to handle asynchronous operations compared to callbacks.</li>
+</ul>
+<p dir="auto"><strong>Here’s a basic breakdown of how to use the Fetch API:</strong></p>
+<ul dir="auto">
+<li dir="auto"><strong>Making Requests:</strong> You use the fetch() function, which accepts the URL of the resource you want to fetch and an optional configuration object where you can specify the method, headers, body, and other settings.</li>
+<li dir="auto"><strong>Handling Responses:</strong> The fetch() function returns a Promise that resolves with the Response object once the request completes. The Response object does not directly contain the actual body but provides methods to handle it, such as json(), text(), or blob().</li>
+<li dir="auto"><strong>Error Handling</strong>: If the request fails due to network issues, fetch() rejects the Promise. It’s important to note that HTTP error statuses (like 404 or 500) do not cause the Promise to be rejected. You must check the ok status or the status code to handle such errors.</li>
+</ul>
+<p dir="auto">const educationData = {
+institution: 'MIT',
+studyType: 'BSc',
+area: 'Computer Science',
+startDate: '2019-08',
+endDate: '2023-05'
+};</p>
+<p dir="auto">const apiUrl = '<a href="https://example.com/api/education">https://example.com/api/education</a>';</p>
+<pre><code class="code-line language-javaScript" dir="auto"><span class="hljs-title function_">fetch</span>(apiUrl, {
+  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;POST&#x27;</span>,  <span class="hljs-comment">// or &#x27;PUT&#x27; if updating</span>
+  <span class="hljs-attr">headers</span>: {
+    <span class="hljs-string">&#x27;Content-Type&#x27;</span>: <span class="hljs-string">&#x27;application/json&#x27;</span>
+  },
+  <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(educationData)
+})
+.<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> {
+  <span class="hljs-keyword">if</span> (!response.<span class="hljs-property">ok</span>) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">&#x27;Network response was not ok&#x27;</span>);
+  }
+  <span class="hljs-keyword">return</span> response.<span class="hljs-title function_">json</span>();  <span class="hljs-comment">// Parse JSON response into native JavaScript objects</span>
+})
+.<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Success:&#x27;</span>, data);
+  <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;Education added successfully!&#x27;</span>);
+})
+.<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">&#x27;Error:&#x27;</span>, error);
+  <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;Error adding education.&#x27;</span>);
+});
+</code></pre>
+<h3 dir="auto" id="template-template-tag">Template <code>&lt;template&gt;</code> tag</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">The HTML <code>&lt;template&gt;</code> tag is a mechanism for holding client-side content that you don’t want to be rendered when the page loads.</p>
+<ul dir="auto">
+<li dir="auto"><strong>Non-rendering</strong>: Content inside a <code>&lt;template&gt;</code> tag is not displayed on the page when it loads. The content can contain any HTML, including images, tables, and other resources that are parsed but not rendered.</li>
+<li dir="auto"><strong>Reusable</strong>: The content can be cloned and inserted in the document multiple times using JavaScript. This avoids redundancy in HTML code and allows for dynamic generation of content based on user actions or data received from the server.</li>
+<li dir="auto"><strong>Efficiency</strong>: Since the content is only parsed and not rendered, it can improve the page’s load time and performance by not processing content until necessary.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><strong>HTML</strong></p>
+<pre><code class="code-line language-html" dir="auto"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;userFormTemplate&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;user-form&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>Name:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<p dir="auto"><strong>JavaScript</strong></p>
+<pre><code class="code-line language-javaScript" dir="auto"><span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;addFormBtn&#x27;</span>).<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> template = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;userFormTemplate&#x27;</span>);
+  <span class="hljs-keyword">const</span> clone = template.<span class="hljs-property">content</span>.<span class="hljs-title function_">cloneNode</span>(<span class="hljs-literal">true</span>); <span class="hljs-comment">// Deep clone the template content</span>
+  <span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-title function_">appendChild</span>(clone); <span class="hljs-comment">// Append the cloned content to the body</span>
+});
+</code></pre>
+
+</main>
+</body>
+</html>
