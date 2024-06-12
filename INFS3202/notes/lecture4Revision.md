@@ -1,3 +1,5 @@
+# Lecture 4 Revision
+# MVC – Databases and CI Models
 
 ### What is a Relational Database Server?
 - Stores Data Efficiently: 
@@ -74,10 +76,10 @@ WHERE studentID = 1234
 - Using a Web Framework should make your life as a developer easier
 - A Framework will include a number of abstractions to help you write code to interact with a database
 - CodeIgniter 4 has numerous features:
-- Central config file (.env) to store database connections
-- Migrations to help you create tables and have database version control
-- Models to simplify reading, inserting, updating and deleting content from a database table (just use simple objects instead of using SQL)
-- The Spark command line to help you create Migration files and new model files.
+  - Central config file (.env) to store database connections
+  - Migrations to help you create tables and have database version control
+  - Models to simplify reading, inserting, updating and deleting content from a database table (just use simple objects instead of using SQL)
+  - The Spark command line to help you create Migration files and new model files.
 
 > - simplify development
 > - deal with extractions
@@ -99,6 +101,7 @@ WHERE studentID = 1234
 > - files are versioned and can be stored in file versioning applications (git, etc.)
 
 ### Codeigniter - Spark
+“spark” is a command-line tool that facilitates the development and management of CodeIgniter applications.
 
 - Running database migrations and seeders to manage database schema and initial data setup
 - Starting a development web server
@@ -116,6 +119,72 @@ command
   - You need to add the fields that need to be created in the table
     - The up() method defines the schema for creating the tables.
     - The down() method defines the schema for dropping the tables.
+
+**Example Migration**
+```php
+class CreateCustomersTable extends Migration
+{
+    public function up()
+    {
+        $this->forge->addField([
+            'id' => [
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => true,
+                'auto_increment' => true,
+            ],
+            'name' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
+            'email' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->createTable('customers');
+    }
+
+    public function down()
+    {
+        $this->forge->dropTable('customers');
+    }
+}
+```
+
+### Raw SQL and QueryBuilder Class
+
+**Raw SQL**
+- We can use `query()` function to pass in real SQL scripts as a parameter.
+- Builder can help you generate the raw SQL scripts, which will be sent to query().
+- To load the Query Builder, use the table() method on the database connection. 
+- It's important to note that the Query Builder needs to be explicitly loaded if you require.
+- Get Data(i.e. SELECT *): \$builder->get()
+
+```php
+$db = db_connect();
+$db->query('SELECT * FROM STUDENTS')
+```
+**QueryBuilder**
+- CodeIgniter Model has one instance of the Query Builder for that model’s database connection. You can get access to the shared instance of the Query Builder any time you need it:
+```php
+$builder = $userModel->builder();
+```
+- Once you get the Query Builder instance, you can call methods of the Query Builder. However, since Query Builder is not a Model, you cannot call methods of the Model.
+```php
+$customerBuilder = $userModel->builder('customers');
+```
+- You can also use Query Builder methods and the Model’s CRUD methods in the same chained call, allowing for very elegant use:
+```php
+$users = $userModel->where('status','active')
+    ->orderBy('last_login', 'asc')
+    ->findall();
+```
+
+### Codeigniter Database Access 
+
+![alt text](assets\IMG96.PNG)
 
 ### How does this help developer workflow?
 

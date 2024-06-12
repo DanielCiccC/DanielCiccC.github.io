@@ -294,15 +294,8 @@ https://gist.github.com/kenjis/e757d2b4193b6843724e447e6eaa1254
 > - able to do a call (fetch API) to another domain
 
 ## Cross Site Request Forgery (CSRF)
-- Cross-Site Request Forgery (CSRF or XSRF) is a type of security vulnerability 
-typically found in web applications. It allows an attacker to induce users to 
-perform actions that they do not intend to do while they are authenticated. This 
-vulnerability exploits the trust that a site has in the user's browser.
-- The danger of CSRF lies in exploiting the trust that a web application has in the 
-user's browser. An attacker can manipulate a user’s browser to perform 
-unwanted actions on a web application where they are authenticated. This can 
-lead to unauthorized changes or transactions, data theft, and account 
-compromise.
+- Cross-Site Request Forgery (CSRF or XSRF) is a type of security vulnerability typically found in web applications. It allows an attacker to induce users to perform actions that they do not intend to do while they are authenticated. This vulnerability exploits the trust that a site has in the user's browser.
+- The danger of CSRF lies in exploiting the trust that a web application has in the user's browser. An attacker can manipulate a user’s browser to perform unwanted actions on a web application where they are authenticated. This can lead to unauthorized changes or transactions, data theft, and account compromise.
 
 > - forms, and posts back to a server
 > - how do we know that a form can't be replicated to another site?
@@ -312,16 +305,10 @@ compromise.
 ### CSRF - Example
 
 Here’s a step-by-step breakdown of a typical CSRF attack:
-1. User Login: The user logs into a website, www.example.com, which authenticates the user 
-and stores a session cookie on their browser.
-2. Malicious Request: The user, without logging out from www.example.com, visits a malicious 
-website, www.evil.com. This site executes a harmful action by requesting www.example.com
-to perform a specific task (e.g., changing the user's email address or transferring funds).
-3. Browser Submits Request: The user’s browser automatically includes cookies pertaining to 
-www.example.com with the request. If the session is still active, the server at 
-www.example.com might execute the request without any additional verification.
-4. Action Executed: Without the user’s consent, the action is carried out as if the user had 
-intended it.
+1. User Login: The user logs into a website, www.example.com, which authenticates the user and stores a session cookie on their browser.
+2. Malicious Request: The user, without logging out from www.example.com, visits a malicious website, www.evil.com. This site executes a harmful action by requesting www.example.com to perform a specific task (e.g., changing the user's email address or transferring funds).
+3. Browser Submits Request: The user’s browser automatically includes cookies pertaining to www.example.com with the request. If the session is still active, the server at www.example.com might execute the request without any additional verification.
+4. Action Executed: Without the user’s consent, the action is carried out as if the user had intended it.
 
 > - Browser automatically includes cookies
 > - User might be consenting accidentally

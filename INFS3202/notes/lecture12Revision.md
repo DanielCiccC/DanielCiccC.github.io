@@ -178,10 +178,8 @@ Django has a full Object Relational Mapper
 - Create a new react client side application:
 - ``npx create-react-app simple-app --use-npm``
 - What does create-react-app do?
-- A command-line tool developed by Meta (Facebook) that sets up a new React project with a recommended file structure and 
-configuration. 
-- It simplifies the process of starting a React application by automatically setting up a development environment, including the 
-necessary dependencies and build scripts, without requiring manual configuration.
+- A command-line tool developed by Meta (Facebook) that sets up a new React project with a recommended file structure and configuration. 
+- It simplifies the process of starting a React application by automatically setting up a development environment, including the necessary dependencies and build scripts, without requiring manual configuration.
 
 > - Client-side framework
 >   - open source project by meta
@@ -258,11 +256,22 @@ necessary dependencies and build scripts, without requiring manual configuration
 ## Next.JS
 
 > React style of code which will run on the server
+> - advantages/disadvantages on server
+>
+> Running completely client side, can't connect to a database on the server
+> - can't send over credentials directly
+>
+> Server-side, interact with database, persist locally.
+> 
 > - Can't connect to a database, e.g., credentials will be exposed
 > - benefits of server-side, have database
 >
-> JavaScript that runs on the server
-> - server side - integrate other functionality - expose API's
+> Server-side completely, have to reload each time
+>
+> Javascript that runs on the server
+> - choose to run them on server or client
+> - on server side, integrate other functionality, expose API and interact with database
+> - new ideas also
 
 
 ### Using create-next-app
@@ -273,13 +282,16 @@ necessary dependencies and build scripts, without requiring manual configuration
 
 ![alt text](assets\IMG81.PNG)
 
-> - layout.js and page.js
+> - layout.js and page.js are starting files, no app.js
+
+### Install dependencies
 
 - We will use Prisma as our ORM and Bootstrap for CSS
   - ``npm install @prisma/client bootstrap``
 - Initialise Prisma
   - ``npx prisma init``
 
+> Out the box, no way to connect with a database
 > - Prisma, a way to create models
 > - just defining a structure
 >   - what is the ID field, etc
@@ -373,3 +385,8 @@ Should run on port 3000 unless that is being used. It will then increment the po
 - Need to install your own ORM eg SQL Alchemy
 
 ![alt text](assets\IMG90.PNG)
+
+
+# Lecture 12; main points from other frameworks
+
+- Convention vs configuration
