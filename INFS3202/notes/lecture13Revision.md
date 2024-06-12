@@ -19,7 +19,7 @@
   - Supports multiple data models, including document, key-value, 
 column-family, and graph.
 - Eventual Consistency: 
-  - Some NoSQL databases prioritize availability over immediate consistency i.e. Basically Available, Soft state, Eventual consistency (BASE).
+  - Some NoSQL databases prioritize availability over immediate consistency i.e. *Basically Available, Soft state, Eventual consistency (BASE).*
 - Designed for Big Data: 
   - Handles large volumes of unstructured or semi-structured data.
 

@@ -289,8 +289,15 @@ or download files.</li>
 <li dir="auto">This specifies the default files that Nginx should look for when a directory is requested.</li>
 </ul>
 </li>
-<li dir="auto">After you change the configuration run:</li>
 </ul>
+<pre><code dir="auto">location / {
+    try_files $uri $uri/ =404;
+}
+</code></pre>
+<ul dir="auto">
+<li dir="auto">The location directive is used to match specific request patterns and apply configurations to them. It can be used to serve files, proxy requests, apply different root directories, etc.</li>
+</ul>
+<p dir="auto">After you change the configuration run:</p>
 <pre><code dir="auto">$ sudo systemctl reload nginx
 </code></pre>
 <h3 dir="auto" id="http-status-codes">HTTP Status Codes</h3>

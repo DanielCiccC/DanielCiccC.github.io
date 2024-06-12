@@ -45,7 +45,7 @@
 
 ### What is a RESTful API?
 - *Representational State Transfer*
-- Architectural style for distributed systems
+- Architectural style for designing networked applications
 
 **Stateless Communication**
 - Each request from a client contains all the information needed for processing

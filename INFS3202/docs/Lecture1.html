@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-1">Lecture 1</h1>
+<p dir="auto">What will we learn:</p>
+<ul dir="auto">
+<li dir="auto">Foundational web technologies HTML and CSS</li>
+<li dir="auto">Server-side web development using PHP and the CodeIgniter MVC Framework</li>
+<li dir="auto">Designing databases for Web applications (including for searching)</li>
+<li dir="auto">Designing web UI’s using CSS and HTML Forms</li>
+<li dir="auto">Incorporating GenAI into Web applications</li>
+<li dir="auto">Deploying Web Applications (via Nginx Web server and AWS)</li>
+</ul>
+<h3 dir="auto" id="domain-name-service">Domain name service</h3>
+<ul dir="auto">
+<li dir="auto">Function: DNS acts like the internet's phonebook. It translates human-friendly domain names (like www.example.com) into IP addresses (like 192.0.2.1) that computers use to identify each other on the network.</li>
+<li dir="auto">Process: When you type a website address in your browser, a DNS query is performed. This query travels through a network of DNS servers to find the IP address associated with the domain name.</li>
+<li dir="auto">Hierarchy: The DNS system is hierarchical, consisting of different levels of DNS servers, including root, top-level domain (TLD), and authoritative name servers, ensuring efficient and distributed resolution of domain names to IP addresses.</li>
+<li dir="auto">To access a website, your browser first uses DNS to resolve the site's domain name to an IP address.</li>
+<li dir="auto">Then, it uses HTTP to send a request to the server at that IP address to fetch and display the web page.</li>
+</ul>
+<p dir="auto">Easier to link to different information</p>
+<h3 dir="auto" id="the-hypertext-transfer-protocol-https">The HyperText Transfer Protocol (HTTP/S)</h3>
+<ul dir="auto">
+<li dir="auto"><strong>Function:</strong> HTTP is the protocol used for transferring web pages on the internet. It defines how messages are formatted and transmitted, and how web servers and browsers should respond to various commands.</li>
+<li dir="auto"><strong>Communication</strong>: HTTP operates as a request-response protocol between a client (the web browser) and a server. The client sends an HTTP request to the server, and the server responds with an HTTP response, delivering web content.</li>
+<li dir="auto"><strong>Stateless Protocol:</strong> HTTP is stateless, meaning it doesn't retain information between request-response sessions. This simplicity allows for faster communication but necessitates additional protocols (like cookies) for managing state information.</li>
+<li dir="auto"><strong>HTTPS:</strong> HTTPS is the secure version of HTTP, the protocol over which data is sent between your browser and the website that you are connected to. It means all communications between your browser and the website are encrypted.</li>
+</ul>
+<h3 dir="auto" id="example-url">Example URL</h3>
+<p dir="auto"><img src="assets\IMG1.PNG" alt="Alt text" data-src="assets/IMG1.PNG"></p>
+<h3 dir="auto" id="model-view-controller-%E2%80%93-architectural-pattern">Model View Controller – Architectural Pattern</h3>
+<p dir="auto"><img src="assets\IMG2.PNG" alt="Alt text" data-src="assets/IMG2.PNG"></p>
+<ul dir="auto">
+<li dir="auto">Model (ExampleModel.php):
+Handles database operations.</li>
+<li dir="auto">View (example_view.php):
+Contains the HTML and JavaScript that will be sent to the
+browser.</li>
+<li dir="auto">Controller (ExampleController.php):
+Fetches data from the Model and passes it to the View.</li>
+</ul>
+
+</main>
+</body>
+</html>

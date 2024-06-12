@@ -245,7 +245,9 @@ the DOM.
 > - malware would automatically inject javascript before sending data, etc.
 
 ## Cross-Origin Resource Sharing (CORS)
-CORS, or Cross-Origin Resource Sharing, is a security feature implemented by web browsers to manage how resources on a web page can be requested from another domain outside the domain from which the first resource was served. 
+<!-- CORS, or Cross-Origin Resource Sharing, is a security feature implemented by web browsers to manage how resources on a web page can be requested from another domain outside the domain from which the first resource was served.  -->
+
+**Cross-Origin Resource Sharing (CORS)** is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
 
 - It is a set of HTTP headers that define whether browsers permit web applications 
 running at one origin to access resources from a different origin.

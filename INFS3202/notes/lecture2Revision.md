@@ -263,7 +263,15 @@ http {
   - The root directive specifies the directory where Nginx should look for the files to serve.
 - index index.html index.htm;: 
   - This specifies the default files that Nginx should look for when a directory is requested.
-- After you change the configuration run:
+
+```
+location / {
+    try_files $uri $uri/ =404;
+}
+```
+- The location directive is used to match specific request patterns and apply configurations to them. It can be used to serve files, proxy requests, apply different root directories, etc.
+
+After you change the configuration run:
 
 ```
 $ sudo systemctl reload nginx

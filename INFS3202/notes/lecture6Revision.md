@@ -25,9 +25,9 @@
 ### What type of Caching does CodeIgniter Support?
 CodeIgniter provides a simple yet flexible caching mechanism that supports different types of 
 caching:
-- Page Caching:
+- **Page Caching:**
   - This method caches the entire output of a page. When a request is made, CodeIgniter checks if a cached version of the page exists and serves it directly, bypassing the normal system execution.
-- Querystring Caching:
+- **Querystring Caching:**
   - Uses the combination of variables in the URL querystring and saves versions to the cache.
 
 ### Cache Config
@@ -102,9 +102,8 @@ parameters and render HTML
 > - one file for the parameters, one file for the alert message
 
 ### What is Composer?
-- You currently use composer to create a new CodeIgniter Project.
-Composer is also a Package Manager
--** Manage Packages**: Composer allows you to declare the libraries your project depends on 
+- You currently use composer to create a new CodeIgniter Project. Composer is also a Package Manager
+- **Manage Packages**: Composer allows you to declare the libraries your project depends on 
 and manages (installs/updates) them for you.
 - **CLI Tool**: Composer operates through a command-line interface, making it accessible for 
 automation and integration with development, testing, and deployment workflows.
@@ -122,7 +121,7 @@ automation and integration with development, testing, and deployment workflows.
 Sessions are a fundamental aspect of web development, enabling web applications to store and access user data across multiple requests.
 
 - **User Data Storage:**
-  - Sessions provide a way to persist user data across multiple web pages or requests. Unlike cookies, session data is stored on the server.
+  - Sessions provide a way to persist user data across multiple web pages or requests. Unlike cookies, *session data is stored on the server*.
 - **Unique Identifiers:**
   - Each user is identified through a unique session ID, typically sent to the user's browser via a cookie. This ID is then used to retrieve session data on subsequent requests.
 
@@ -181,7 +180,6 @@ access levels and permissions.
 - Examples: 
   - Logging into a web application, entering a PIN at an ATM, or using a fingerprint to unlock a smartphone.
 
-> - knowing who the user is
 
 ### Authorisation
 - Access Control: 

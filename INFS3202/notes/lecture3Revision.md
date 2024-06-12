@@ -106,3 +106,47 @@ instance or use the model() helper function.
 
 ## Using GenAI
 
+![alt text](assets\IMG93.PNG)
+
+### Permissibility
+- At University
+  - Courses and assessment items have different requirements
+- At Work
+  - Projects will have different Intellectual Property and Privacy requirements
+
+> **Permissibility**
+> - am I allowed to use it?
+>
+> **Suitability**
+> - Is it suitable for this particular purpose?
+>
+> **Privacy**
+> - Am I copying and pasting something that is private or has got client details or personal details that I don't want to share with external providers
+> 
+> **Accountability**
+> - It's gonna involve testing the code to making sure it works in all situations, that it doesn't necessarily have any security vulnerabilities.
+
+
+![alt text](assets\IMG94.PNG)
+
+> ### ChatGPT issues
+> - hallucinate results
+> - has human biases inside of it
+>
+
+![alt text](assets\IMG95.PNG)
+
+> - reading and checking
+> - how much should be what your doing, versus what the system is doing?
+>   - what if you don't have access to these models?
+
+### Self-reliance
+
+- What if you don’t have access, or it is not allowed where you work or on a specific project?
+- At University, GenAI can be allowed in Assessments but you may still have an exam?
+- As a University trained professional in IT or Computer Science you need a higher level of skills:
+  - Design
+  - Implementation 
+  - Debugging
+
+> Outputs into bigger projects

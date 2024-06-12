@@ -55,6 +55,131 @@
 <p dir="auto">Can use <code>nano</code> as in-terminal text editor:</p>
 <pre><code class="code-line language-bash" dir="auto">nano /etc/nginx/sites-enabled/https-site
 </code></pre>
+<pre><code dir="auto">http {
+    server {
+        listen 80; # Listen on port 80 for HTTP requests
+        server_name example.com; # Replace with your domain name or use localhost
+
+        # Document root where the files are located
+        root /var/www/html/htdocs;
+
+        # Default file to serve
+        index index.html index.htm;
+
+        # Serve files
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
+}
+</code></pre>
+<h3 dir="auto" id="serving-files-with-nginx">Serving files with Nginx</h3>
+<p dir="auto">By placing an HTML file in the <code>htdocs</code> folder (or the specified root directory), you can view it by navigating to the corresponding URL. If you create a file named index.html within that directory, it would be served as the default page when accessing the root URL of your server.</p>
+<ul dir="auto">
+<li dir="auto">A file located at <code>/var/www/htdocs/about/index.html</code> can be accessed at <a href="https://yourdomain.com/about/">https://yourdomain.com/about/</a>.</li>
+<li dir="auto">A file located at <code>/var/www/htdocs/products/widget.html</code> can be accessed at <a href="https://yourdomain.com/products/widget.html">https://yourdomain.com/products/widget.html</a>.</li>
+</ul>
+<p dir="auto">also included this:</p>
+<pre><code dir="auto">location /resumebuilder {
+    alias /var/www/resumebuilder/public/;
+    try_files $uri $uri/ @resumebuilder;
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $request_filename;
+    }
+}
+
+location @resumebuilder {
+    rewrite /resumebuilder/(.*)$ /resumebuilder/index.php?/$1 last;
+}
+</code></pre>
+<ul dir="auto">
+<li dir="auto">location /resumebuilder { ... }:
+<ul dir="auto">
+<li dir="auto">This block matches any request starting with /resumebuilder.</li>
+</ul>
+</li>
+<li dir="auto"><code>alias /var/www/resumebuilder/public/;:</code>
+<ul dir="auto">
+<li dir="auto">This means that for any request matching /resumebuilder, the part /resumebuilder is replaced with /var/www/resumebuilder/public.</li>
+</ul>
+</li>
+</ul>
+<h2 dir="auto" id="important-linux-commands">Important linux commands</h2>
+<p dir="auto"><code>ssh</code>:</p>
+<ul dir="auto">
+<li dir="auto">connects to secure shell of another server</li>
+</ul>
+<p dir="auto">Example</p>
+<pre><code class="code-line language-bash" dir="auto">ssh studentusername@infs3202-yourcode.zones.eait.uq.edu.au
+</code></pre>
+<p dir="auto"><code>nano</code>:</p>
+<ul dir="auto">
+<li dir="auto">A text editor that runs in browser</li>
+<li dir="auto">usage: <code>nano &lt;filename&gt;</code></li>
+</ul>
+<pre><code class="code-line language-bash" dir="auto">nano /etc/nginx/sites-enabled/https-site
+</code></pre>
+<p dir="auto"><code>sudo</code></p>
+<ul dir="auto">
+<li dir="auto">stands for 'system user do'</li>
+<li dir="auto">allows you to perform commands as a different user (superuser as default)</li>
+</ul>
+<pre><code class="code-line language-bash" dir="auto">sudo systemctl start code-server@USERNAME
+</code></pre>
+<p dir="auto"><code>curl</code></p>
+<ul dir="auto">
+<li dir="auto">command line tool that developers use to transfer data to and from a server</li>
+</ul>
+<pre><code class="code-line language-bash" dir="auto">curl http://example.com
+</code></pre>
+<p dir="auto"><code>chmod</code></p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">allows an administrator to set or modify a files permissions</p>
+</li>
+<li dir="auto">
+<p dir="auto">The characters are indicators for the presence or absence of one of the permissions. They are either a dash (-) or a letter. If the character is a dash, it means that permission is not granted. If the character is an r, w, or an x, that permission has been granted.</p>
+<ul dir="auto">
+<li dir="auto">r: Read permissions. The file can be opened, and its content viewed.</li>
+<li dir="auto">w: Write permissions. The file can be edited, modified, and deleted.</li>
+<li dir="auto">x: Execute permissions. If the file is a script or a program, it can be run (executed).
+Groups:</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">u: User, meaning the owner of the file.</p>
+</li>
+<li dir="auto">
+<p dir="auto">g: Group, meaning members of the group the file belongs to.</p>
+</li>
+<li dir="auto">
+<p dir="auto">o: Others, meaning people not governed by the u and g permissions.</p>
+</li>
+<li dir="auto">
+<p dir="auto">a: All, meaning all of the above.</p>
+</li>
+<li dir="auto">
+<p dir="auto"><code>-R</code> - recursive</p>
+</li>
+</ul>
+<pre><code class="code-line language-bash" dir="auto">sudo <span class="hljs-built_in">chmod</span> -R 777 /var/www/resumebuilder
+</code></pre>
+<p dir="auto"><code>cd</code></p>
+<ul dir="auto">
+<li dir="auto">change directory</li>
+</ul>
+<pre><code class="code-line language-bash" dir="auto"><span class="hljs-built_in">cd</span> &lt;directory&gt;
+</code></pre>
+<p dir="auto"><code>mv</code></p>
+<ul dir="auto">
+<li dir="auto">move file(s)</li>
+<li dir="auto">file path needs to end in a /</li>
+</ul>
+<pre><code class="code-line language-bash" dir="auto"><span class="hljs-built_in">mv</span> [options(s)] [source_file_name(s)] [Destination_file_name or destination file path]
+</code></pre>
 
 </main>
 </body>
