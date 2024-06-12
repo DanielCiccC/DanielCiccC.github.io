@@ -9,6 +9,7 @@ All my notes from the beginning of lectures; Since these are moreso informationa
 [Lecture 2](Lecture2.html) | [Lecture 2 Revision](lecture2Revision.html) | 
 [Lecture 3](Lecture3.html) | [Lecture 3 Revision](lecture3Revision.html) | 
 |  | [Lecture 4 Revision](lecture4Revision.html) | [Lab 4](lab4.html)
+|  | [Lecture 5 Revision](lecture5Revision.html) | 
 |  | [Lecture 6 Revision](lecture6Revision.html) | 
 |  | [Lecture 7 Revision](lecture7Revision.html) | 
 |  | [Lecture 8 Revision](lecture8Revision.html) | [Lab 7](lab7.html)
