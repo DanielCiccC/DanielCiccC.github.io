@@ -58,11 +58,6 @@ world” or “Universe of Discourse”.'</li>
 <td><img src="assets\IMG2.PNG" alt="Alt text" data-src="assets/IMG2.PNG"></td>
 </tr>
 <tr dir="auto">
-<td>Key Attributes</td>
-<td>All entity types have at least one key (or uniqueness) constraint. The key must hold for every possible extension of the entity type (see super/subclasses in later slides). Represented as an udnerlined attribute</td>
-<td><img src="assets\IMG3.PNG" alt="Alt text" data-src="assets/IMG3.PNG"></td>
-</tr>
-<tr dir="auto">
 <td>Simple Attributes</td>
 <td></td>
 <td><img src="assets\IMG4.PNG" alt="Alt text" data-src="assets/IMG4.PNG"></td>
@@ -74,11 +69,11 @@ world” or “Universe of Discourse”.'</li>
 </tr>
 <tr dir="auto">
 <td>Composite Key attribute (Several Attribute Keys)</td>
-<td>A composite key is combination of simple attributes which make up the composite key that must be unique.</td>
+<td>a composite key attribute is also a unique identifiers for each entity instance. <br> It is the <strong>combination</strong> of simple attributes which make up the composite key which must be unique</td>
 <td><img src="assets\IMG6.PNG" alt="Alt text" data-src="assets/IMG6.PNG"></td>
 </tr>
 <tr dir="auto">
-<td>Multivalued attrbutes</td>
+<td>Multivalued attributed</td>
 <td>Multivalued attributes are shown with double-lined ovals and can have multiple values (e.g., one person can hold multiple degrees)</td>
 <td><img src="assets\IMG7.PNG" alt="Alt text" data-src="assets/IMG7.PNG"></td>
 </tr>
@@ -98,7 +93,7 @@ world” or “Universe of Discourse”.'</li>
 <p dir="auto"><strong>Value sets of attributes</strong></p>
 <p dir="auto">Value sets specify the set of values that may be assigned to a particular attribute of an entity</p>
 <ul dir="auto">
-<li dir="auto">E.g.  employeeAge: integers between 21 &amp; 65</li>
+<li dir="auto">E.g. employeeAge: integers between 21 &amp; 65</li>
 <li dir="auto">A particular entity may not have an applicable value for an attribute. A null value may be used for representing this.</li>
 </ul>
 <p dir="auto"><strong>Entity Set</strong></p>
@@ -184,7 +179,7 @@ world” or “Universe of Discourse”.'</li>
 </tbody>
 </table>
 <h4 dir="auto" id="participation-constraints">Participation constraints</h4>
-<p dir="auto"><strong>Existance Dependency</strong></p>
+<p dir="auto"><strong>Existence Dependency</strong></p>
 <p dir="auto">Existence dependency indicates whether the existence of an entity depends on its relationship to another entity.</p>
 <p dir="auto">Example: Every employee must work for a department. Employee is <em>existentially dependent</em> on Department via the WORKSFOR relationship type.</p>
 <p dir="auto"><img src="assets\IMG21.PNG" alt="Alt text" data-src="assets/IMG21.PNG"></p>

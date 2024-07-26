@@ -21,11 +21,10 @@ An entity is essentially a physical or conceptual object which has data associat
 | Type | Description | Representation
 | --- | --- | --- |
 | Entity | An entity type provides a format for the data which needs to be recorded to represent a particular entity. The entity type is described by its name and attributes. Represented as a rectangular box | ![Alt text](assets\IMG2.PNG) | 
-| Key Attributes| All entity types have at least one key (or uniqueness) constraint. The key must hold for every possible extension of the entity type (see super/subclasses in later slides). Represented as an udnerlined attribute | ![Alt text](assets\IMG3.PNG)
 | Simple Attributes | | ![Alt text](assets\IMG4.PNG)
 | Composite attributes |Composite attributes can be divided into smaller parts which represent simple attributes with independent meaning.| ![Alt text](assets\IMG5.PNG)
-|Composite Key attribute (Several Attribute Keys)| A composite key is combination of simple attributes which make up the composite key that must be unique. |![Alt text](assets\IMG6.PNG)
-| Multivalued attrbutes |  Multivalued attributes are shown with double-lined ovals and can have multiple values (e.g., one person can hold multiple degrees) | ![Alt text](assets\IMG7.PNG)
+| Composite Key attribute (Several Attribute Keys)| a composite key attribute is also a unique identifiers for each entity instance. <br> It is the **combination** of simple attributes which make up the composite key which must be unique |![Alt text](assets\IMG6.PNG)
+| Multivalued attributed |  Multivalued attributes are shown with double-lined ovals and can have multiple values (e.g., one person can hold multiple degrees) | ![Alt text](assets\IMG7.PNG)
 |Derived Attributes|In some cases, attribute values can be derived from related attribute values (e.g., age can be derived from BirthDate).| ![Alt text](assets\IMG8.PNG)
 |Weak Entities| Entity types that do not have key attributes of their own are called weak entities. | ![Alt text](assets\IMG9.PNG)
 
@@ -33,7 +32,7 @@ An entity is essentially a physical or conceptual object which has data associat
 **Value sets of attributes**
 
 Value sets specify the set of values that may be assigned to a particular attribute of an entity 
- - E.g.  employeeAge: integers between 21 & 65
+ - E.g. employeeAge: integers between 21 & 65
  - A particular entity may not have an applicable value for an attribute. A null value may be used for representing this.
 
 **Entity Set**
@@ -73,7 +72,7 @@ Example | Cardinality | representation |
 
 #### Participation constraints
 
-**Existance Dependency**
+**Existence Dependency**
 
 Existence dependency indicates whether the existence of an entity depends on its relationship to another entity.
 
