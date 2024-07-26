@@ -1,14 +1,18 @@
-# Week 2 Summary - ER Model
+# Module 0 - Introduction   
+
+<!-- A database is a collection of related data or 
+known facts that:
+- represents some aspect of the real world, sometimes called the mini-world or the **universe of discourse (UoD)**.
+- is a **logically coherent** collection of data with some **inherent meaning**. 
+- is designed, built, and populated with data for a specific purpose for an intended group of users and some preconceived applications.
+- can be of any **size** and **complexity**.
+- may be generated and maintained manually or it may be computerized. -->
 
 ### What is a Database Management System (DBMS)?
-a software system that facilitates the processes of:
-- Defining a database includes specifying the types, structures, and
-constraints for the data
-- Constructing the database is the process of storing the data on some
-storage medium that is controlled by the DBMS.
-- Manipulating a database includes functions such as querying the
-database to retrieve specific data, updating the database to reflect
-changes in the miniworld, and generating reports from the data.
+A software system that facilitates the processes of:
+- Defining a database includes specifying the types, structures, and constraints for the data
+- Constructing the database is the process of storing the data on some storage medium that is controlled by the DBMS.
+- Manipulating a database includes functions such as querying the database to retrieve specific data, updating the database to reflect changes in the miniworld, and generating reports from the data.
 - Sharing a database allows multiple users and programs to access the
 database simultaneously. 
 
@@ -21,6 +25,9 @@ through application programs
 
 ![Alt text](assets\IMG1.PNG)
 
+### UoD
+
+
 ### Features of a DBMS:
 - Data Integrity Maintenance
     - DBMS has the capability to define and enforce integrity constraints
@@ -29,9 +36,9 @@ through application programs
 
 ```SQL
 SELECT * 
-FROM ProductVersionDefition
+FROM ProductVersion
 WHERE 1=1
-AND CODE LIKE '%Marine%'
+AND CODE LIKE '%MotorMachine%'
 AND isLatest = 1
 ```
 - Security Management
@@ -51,7 +58,7 @@ GO
 CREATE TRIGGER [IncrementPolicyVersionId]...
 ```
 
-### Three schema architecture
+## Three schema architecture - see also [Javapoint.com](https://www.javatpoint.com/dbms-three-schema-architecture)
 - External Level: provides access to particular parts of the database to users
 - Conceptual Level: describes the structure of the whole database for a community of users.
 - Internal Level: describes the physical storage structure of the database

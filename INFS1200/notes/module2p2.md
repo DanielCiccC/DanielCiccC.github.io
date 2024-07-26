@@ -75,7 +75,7 @@ For each N-ary relationship type
 ![alt text](assets\IMG53.PNG)
 
 ### Step 8: Super and Subclasses Mapping
-The following method works for total/partial and disjoint/verlapping subclasses.
+The following method works for total/partial and disjoint/overlapping subclasses.
 For each subclass entity type
 1. Create a relation
 2. The primary key of each of the subclasses is the primary key of the superclass.
