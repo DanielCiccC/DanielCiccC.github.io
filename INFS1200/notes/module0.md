@@ -1,12 +1,11 @@
 # Module 0 - Introduction   
 
-<!-- A database is a collection of related data or 
+## What is a database?
+A database is a collection of related data or 
 known facts that:
 - represents some aspect of the real world, sometimes called the mini-world or the **universe of discourse (UoD)**.
 - is a **logically coherent** collection of data with some **inherent meaning**. 
 - is designed, built, and populated with data for a specific purpose for an intended group of users and some preconceived applications.
-- can be of any **size** and **complexity**.
-- may be generated and maintained manually or it may be computerized. -->
 
 ### What is a Database Management System (DBMS)?
 A software system that facilitates the processes of:
@@ -42,8 +41,7 @@ AND CODE LIKE '%MotorMachine%'
 AND isLatest = 1
 ```
 - Security Management
-  - DBMSs provide various measures for securing databases against a
-variety of threats.
+  - DBMS's provide various measures for securing databases against a variety of threats.
 - Concurrency Control   
   - DBMS utilises control protocols to handle concurrent access to data
 files that guarantee serialisability (think like google docs)
