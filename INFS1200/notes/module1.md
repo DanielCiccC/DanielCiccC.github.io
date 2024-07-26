@@ -21,6 +21,7 @@ An entity is essentially a physical or conceptual object which has data associat
 | Type | Description | Representation
 | --- | --- | --- |
 | Entity | An entity type provides a format for the data which needs to be recorded to represent a particular entity. The entity type is described by its name and attributes. Represented as a rectangular box | ![Alt text](assets\IMG2.PNG) | 
+| Key Attributes| All entity types have at least one key (or uniqueness) constraint. The key must hold for every possible extension of the entity type (see super/subclasses in later slides). Represented as an underlined attribute | ![Alt text](assets\IMG3.PNG)
 | Simple Attributes | | ![Alt text](assets\IMG4.PNG)
 | Composite attributes |Composite attributes can be divided into smaller parts which represent simple attributes with independent meaning.| ![Alt text](assets\IMG5.PNG)
 | Composite Key attribute (Several Attribute Keys)| a composite key attribute is also a unique identifiers for each entity instance. <br> It is the **combination** of simple attributes which make up the composite key which must be unique |![Alt text](assets\IMG6.PNG)
