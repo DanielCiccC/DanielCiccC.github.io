@@ -27,9 +27,9 @@ Trading Hours: | Most trading during exchange hours | Open somewhere around the 
 | Contract maturity | Fixed delivery dates: 3rd Wed. of March, June Sept or Dec. | Fixed maturities (1, 3, 6 or 12 months) or can be tailored to specifications
 Quotation: | American terms (USD/FC) | American (USD/FC) or European (FC/USD)
 | Settlement | Delivery of underlying fx is feasible, but almost never occurs. Position closed out by taking an offsetting position | Delivery of foreign exchange normally takes place
-| Security against default | Clearning houses stand behind traders | Assets of bank
+| Security against default | clearing houses stand behind traders | Assets of bank
 | Required collateral | Margin requirements ("Performance bond") | Deposit required if not standing relations with bank
-| Cash flows | Occur daily because of "market-to-market" feature | No cash flows until forward contract matures
+| Cash flows | Occur daily because of "marked-to-market" feature | No cash flows until forward contract matures
 
 
 NOTES:
@@ -159,7 +159,7 @@ advance by the buyer to the seller).
 ### Swaps
 - A swap is a contractual agreement to exchange periodic cash flows between two parties.
 - Single currency interest rate swap
-  - One counterparty exchanges the interest payments of a floating-rate debt obligation for the fixed-rate interest payments of the other counterparty.  Both debt obligations are denominated in the same currency.
+  - One counterparty exchanges the interest payments of a floating-rate debt obligation for the fixed-rate interest payments of the other counterparty. Both debt obligations are denominated in the same currency.
 - Cross-currency interest rate swap
   - One counterparty exchanges the debt service obligations of a bond denominated in one currency for the debt service obligations of the other counterparty denominated in another currency.
 

@@ -1,0 +1,404 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-1---introduction-to-derivative-markets">Lecture 1 - Introduction to derivative markets</h1>
+<h2 dir="auto" id="derivatives">Derivatives</h2>
+<ul dir="auto">
+<li dir="auto">main instruments that are traded</li>
+<li dir="auto">sophisticated and complex</li>
+</ul>
+<h3 dir="auto" id="derivative-securities-facilitate-the-management-of-risks-that-arise-when">Derivative securities facilitate the management of risks that arise when:</h3>
+<ul dir="auto">
+<li dir="auto">The financial system performs its core function of transferring savings and investment funds to long-term investments in real assets.</li>
+<li dir="auto">Businesses simply go about their usual day-to-day trading activities.</li>
+</ul>
+<p dir="auto"><img src="image.png" alt="alt text" data-src="image.png"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Transfers money through the economy</li>
+<li dir="auto">Make investments in real assets in the economy</li>
+<li dir="auto">Has a large impact on what products and services are sold in the economy</li>
+<li dir="auto">Banks funnel money into businesses that produce economic growth - if they produce value and consumers purchase from them</li>
+</ul>
+<h3 dir="auto" id="in-the-process-of-the-main-function-of-the-financial-system">In the process of the main function of the financial system:</h3>
+<ul dir="auto">
+<li dir="auto">Apple has to pay wages in Chinese yuan - products/services exposed to risks, exchange rate risks, interest rate risk</li>
+</ul>
+<p dir="auto">Derivative securities can offload risk to other player's, whose job is to manage those risks</p>
+<ul dir="auto">
+<li dir="auto">reallocation of risks through the economy</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="vanilla-derivatives-and-payoffs">Vanilla derivatives and payoffs</h3>
+<p dir="auto">A derivative security is a contract between two or more counter-parties specifying one or more future transactions that are dependent on (are “derived” from) other underlying assets.</p>
+<ul dir="auto">
+<li dir="auto"><strong>Futures and forwards</strong>: Contracts obligating the parties to trade the underlying asset for an agreed price on a future date.</li>
+<li dir="auto"><strong>Options</strong>: Contracts giving one party the right but not the obligation to trade the underlying asset for an agreed price in the future.</li>
+<li dir="auto"><strong>Swaps</strong>: Contracts involving the exchange or “swapping” of future cashflow obligations or risk exposures between the parties.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Some sort of contract at trade in financial markets (counterparties)</p>
+<ul dir="auto">
+<li dir="auto">payoff depends on some kind of underlying assets - underlying events</li>
+<li dir="auto">events can even be weather, or similar to betting events</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="image-1.png" alt="alt text" data-src="image-1.png"></p>
+<blockquote dir="auto">
+<p dir="auto">forward commitments</p>
+<ul dir="auto">
+<li dir="auto">each side of the party that they have to honor</li>
+</ul>
+<p dir="auto">contingent claims</p>
+<ul dir="auto">
+<li dir="auto">whether there is some sort of claim in the contract is contingent on the outcome of the event</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Derivative securities can be negotiated directly between parties
+OTC, or standardised contracts traded on trading venues:</li>
+<li dir="auto">Traditional exchanges, multilateral trading facilities (MTF) in
+Europe, and alternative trading systems (ATS) in the US.</li>
+<li dir="auto">Underlying assets include physical assets, fi nancial securities or
+instruments, fi nancial market indices or other variables, currencies,
+commodities, energy, other derivatives, etc.</li>
+<li dir="auto">The underlying assets can be physically deliverable in the contract,
+or the derivative security can be cash settled with no physical
+delivery of the underlying asset ever taking place.
+We now give a brief description of the above basic classes of derivatives:
+futures/forwards, options and swaps.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">OTC:</p>
+<ul dir="auto">
+<li dir="auto">Individual financial institutions negotiating directly with very little regulation</li>
+<li dir="auto">no centralised trading facility</li>
+</ul>
+<p dir="auto">Can be physically delivered:</p>
+<ul dir="auto">
+<li dir="auto">e.g. buy 20 tonnes of wheat</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="futures-and-forwards">Futures and forwards</h2>
+<p dir="auto"><code>Defn</code>
+Futures and forwards are contracts obligating two parties to trade
+an agreed quantity of the underlying asset for an agreed contract
+price K on an agreed future date T (the maturity date).</p>
+<p dir="auto">The basic diff erence between futures and forward contracts is:</p>
+<ul dir="auto">
+<li dir="auto">Futures are standardised contracts traded on trading venues.</li>
+<li dir="auto">Forwards are negotiated between the parties in OTC markets.</li>
+</ul>
+<p dir="auto">The party agreeing to <em>buy</em> the underlying asset is said to be taking a <strong>long</strong>
+position. The party agreeing to <em>sell</em> the underlying is said to be <strong>short</strong>.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">futures, trading on exchanges</li>
+<li dir="auto">forward contract, negotiated directly between OTC markets</li>
+</ul>
+</blockquote>
+<p dir="auto">At maturity T, the long party buys the underlying asset for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span>. If <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>T</mi></msub><mo>&gt;</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">S_{T} &gt; K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> at maturity, then the long party has benefited by the amount <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>T</mi></msub><mo>−</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">S_{T} − K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span>.</p>
+<p dir="auto">But if <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>T</mi></msub><mo>&lt;</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">S_{T} &lt; K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> at maturity then the short party, who sells the underlying asset for K, has benefi ted by the amount <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>−</mo><msub><mi>S</mi><mi>T</mi></msub></mrow><annotation encoding="application/x-tex">K − S_{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+<ul dir="auto">
+<li dir="auto">Hence, the payoffs to the long and short parties are:</li>
+</ul>
+<p dir="auto">long payoff = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>T</mi></msub><mo>−</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">S_{T} − K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> and short payoff= <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>−</mo><msub><mi>S</mi><mi>T</mi></msub></mrow><annotation encoding="application/x-tex">K − S_{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> .
+We plot these payoff s graphically as follows:</p>
+<p dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>T</mi></msub></mrow><annotation encoding="application/x-tex">S_{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> : spot price at time T
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span>: Contract price</p>
+<p dir="auto"><img src="image-2.png" alt="alt text" data-src="image-2.png"></p>
+<h2 dir="auto" id="options">Options</h2>
+<p dir="auto">There’s two basic types of option contracts, namely call and put options:</p>
+<p dir="auto">The <em>holder</em> of a European <strong>call</strong> option has the <em>right but not the obligation to buy</em> an agreed quantity of the underlying asset for an agreed strike price K on an agreed future date T (expiry).</p>
+<p dir="auto">The <em>holder</em> of a European <strong>put</strong> option has the <em>right but not the obligation to sell</em> an agreed quantity of the underlying asset for an agreed strike price K on an agreed future date T (expiry).</p>
+<p dir="auto">Note that an American option gives the holder these rights to exercise an option at any point up and including the expiry date T.</p>
+<ul dir="auto">
+<li dir="auto">The holder of an option is also called the taker, and is said to be <strong>long</strong>.</li>
+<li dir="auto">The other party to the contract is called the writer and said to be <strong>short.</strong></li>
+</ul>
+<p dir="auto">The writer has “no rights” and is “at the mercy” of the holder if the holder decides to exercise the option at expiry (European options)</p>
+<p dir="auto">or anytime up to and including expiry (American options):</p>
+<ul dir="auto">
+<li dir="auto">Call option: The writer must sell the underlying asset if the taker exercises their right to buy it.</li>
+<li dir="auto">Put option: The writer must buy the underlying asset if the taker exercises their right to sell it.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">write or sell an option: choose whether the option gets sold or not.</p>
+</blockquote>
+<h3 dir="auto" id="expiry---call">Expiry - call</h3>
+<p dir="auto">At expiry <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>, the call option holder has the right but not the obligation to buy the underlying asset for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span>. If <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>T</mi></msub><mo>&gt;</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">S_{T} &gt; K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> at expiry, then the holder has benefited by the amount <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>T</mi></msub><mo>−</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">S_{T} − K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> and will exercise the option. But since the holder has no obligation to exercise the option, if <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>T</mi></msub><mo>&lt;</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">S_{T} &lt; K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> at expiry, then the holder doesn’t exercise it and simply lets it expire worthless.</p>
+<ul dir="auto">
+<li dir="auto">Hence, the European <strong>call holder’s payoff</strong> at expiry is call holder payoff = <code>max</code><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo separator="true">,</mo><msub><mi>S</mi><mi>T</mi></msub><mo>−</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">{0, S_{T} − K}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span></span>.</li>
+</ul>
+<p dir="auto">The call writer’s payoff is the negative of this.</p>
+<p dir="auto"><img src="image-3.png" alt="alt text" data-src="image-3.png"></p>
+<h3 dir="auto" id="expiry---put">Expiry - put</h3>
+<p dir="auto">At expiry <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>, the put option holder has the right but not the obligation to sell the underlying asset for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span>. If <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>T</mi></msub><mo>&lt;</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">S_{T} &lt; K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> at expiry, then the holder has benefited by the amount <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>−</mo><msub><mi>S</mi><mi>T</mi></msub></mrow><annotation encoding="application/x-tex">K − S_{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and will exercise the option. But since the holder has no obligation to exercise the option, if <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>T</mi></msub><mo>&gt;</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">S_{T} &gt; K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> at expiry, then the holder doesn’t exercise it and simply lets it expire worthless.</p>
+<ul dir="auto">
+<li dir="auto">Hence, the European <strong>put holder’s payoff</strong> at expiry is put holder payoff = max <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mi>K</mi><mo>−</mo><msub><mi>S</mi><mi>T</mi></msub></mrow><annotation encoding="application/x-tex">{0, K − S_{T} }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>.</li>
+</ul>
+<p dir="auto">The put writer’s payoff is the negative of this.</p>
+<h2 dir="auto" id="swaps">Swaps</h2>
+<p dir="auto">Swaps come in “all shapes and sizes” and in this course we focus on:</p>
+<ul dir="auto">
+<li dir="auto">Interest rate swaps.</li>
+<li dir="auto">Foreign exchange (FX) swaps.</li>
+<li dir="auto">Currency swaps.</li>
+<li dir="auto">Credit default swaps.</li>
+<li dir="auto">Possibly some others, time permitting.</li>
+</ul>
+<h3 dir="auto" id="interest-rate-swaps">Interest rate swaps</h3>
+<p dir="auto">A plain vanilla fixed-for-floating interest rate swap involves two parties swapping their existing loan payment obligations:</p>
+<ul dir="auto">
+<li dir="auto">One party swaps fixed-rate payments with floating-rate payments.
+<ul dir="auto">
+<li dir="auto">They have an existing fixed-rate loan but want to pay floating.</li>
+</ul>
+</li>
+<li dir="auto">The other swaps floating-rate payments with fixed-rate payments.
+<ul dir="auto">
+<li dir="auto">They have an existing floating-rate loan but want to pay fixed.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Hence, interest rate swaps can help businesses manage interest rate risk. Also, they enable a business to borrow at terms most favourable to them and then swap their loan to their desired interest rate exposure, thus helping the business to reduce borrowing costs.</p>
+<blockquote dir="auto">
+<p dir="auto">fixed a floating rate loan for a fixed rate loan</p>
+<ul dir="auto">
+<li dir="auto">biggest financial market on the planet</li>
+<li dir="auto">also OTC
+<ul dir="auto">
+<li dir="auto">can manage interest rate risk</li>
+<li dir="auto">saves them from re-negotiating a loan</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto">The mechanics of a fi xed-for-fl oating swap can be described as follows:</p>
+<ul dir="auto">
+<li dir="auto">The parties continue to pay off their original loans as per normal.</li>
+<li dir="auto">On each loan payment date:</li>
+<li dir="auto">The parties calculate their new desired and contracted loan payments, as negotiated and agreed between them in the swap.</li>
+<li dir="auto">One party exchanges a net amount to the other so that this exchange combined with their original loan payment results in them achieving their overall desired loan payment exposure as agreed in the swap.</li>
+</ul>
+<p dir="auto">Note that interest rate swaps are overwhelmingly traded OTC.</p>
+<h3 dir="auto" id="fx-swaps">FX swaps</h3>
+<p dir="auto">A foreign exchange (FX) swap is an agreement to exchange one currency for another at an agreed rate on an agreed date and to re-exchange those two currencies at a later date at an agreed rate.</p>
+<ul dir="auto">
+<li dir="auto">They are typically used for exchange rate risk management. So in a FX swap you simultaneously agree to two transactions, namely an initial transaction and then a reversing transaction at a later date.</li>
+<li dir="auto">The initial transaction can be spot or on a future date.</li>
+<li dir="auto">If it’s spot then they’re typically called a spot-forward FX swap.</li>
+</ul>
+<p dir="auto">FX swaps are negotiated and arranged OTC.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Very popular also</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="currency-swaps">Currency swaps</h3>
+<p dir="auto">A currency swap is an agreement between two parties to swap interest payments on a loan made in one currency for interest payments on a loan made in another currency.</p>
+<ul dir="auto">
+<li dir="auto">Hence, each party has an existing loan in their respective currency, but now wants to make their loan payments in the other’s currency. A currency swap may also involve the parties exchanging the loan principal, which is then exchanged back at the swap’s maturity date.</li>
+<li dir="auto">This is effectively a FX swap feature added to the currency swap.</li>
+</ul>
+<p dir="auto">Again, only a net amount is transferred on each loan payment date:</p>
+<p dir="auto">The mechanics of a currency swap can be described as follows:</p>
+<ul dir="auto">
+<li dir="auto">The parties continue to pay off their original loans in their original currencies as per normal.</li>
+<li dir="auto">On each loan payment date:
+<ul dir="auto">
+<li dir="auto">The parties calculate their new loan payments in their desired currencies, as agreed in the currency swap.</li>
+<li dir="auto">One party exchanges a net amount to the other which combined with their original loan payment results in them achieving their overall desired loan payment exposure in their desired currency.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Swap their loan repayment obligations</p>
+<ul dir="auto">
+<li dir="auto">Might involve swapping the initial loan amount</li>
+<li dir="auto">don't want to make the payment and loan in another currency, swap the loan altogether</li>
+<li dir="auto">both countries meet at loan payment dates</li>
+</ul>
+<p dir="auto">E.g. country in australia</p>
+<ul dir="auto">
+<li dir="auto">Want to borrow money in australia (easier) and then diversify and swap for a Chinese loan</li>
+</ul>
+</blockquote>
+<p dir="auto">Not only can currency swaps contain a FX swap feature, but they can also contain a fixed-for-floating interest rate swap feature:</p>
+<ul dir="auto">
+<li dir="auto">One party has borrowed at a fixed rate in one currency but now wants to now pay their loan at a floating rate in the other currency!</li>
+<li dir="auto">The other has borrowed at a floating rate in their currency but now wants to pay off their loan at a fixed rate in the other currency!
+This is termed a fixed-for-floating currency swap , and I think you get the idea of what fixed-for-fixed or floating-for-floating currency swaps are.</li>
+</ul>
+<h2 dir="auto" id="credit-default-swaps">Credit default swaps</h2>
+<p dir="auto">A credit default swap is effectively an insurance contract between two parties in which one party purchases protection for a defined period of time from another party against losses from the occurrence of some credit event, usually default of a third party called the reference entity.</p>
+<ul dir="auto">
+<li dir="auto">The buyer pays the seller regular premiums, and in return receives a payout from the seller if the reference entity defaults.
+<ul dir="auto">
+<li dir="auto">Hence, credit default swaps help businesses manage credit risk, but they’re also used for speculation and arbitrage.</li>
+</ul>
+</li>
+<li dir="auto">They are negotiated and arranged OTC.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">default on loan,</p>
+<ul dir="auto">
+<li dir="auto">manage counterparty risk with credit default swaps</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="relative-market-sizes">Relative market sizes</h3>
+<p dir="auto"><img src="image-4.png" alt="alt text" data-src="image-4.png"></p>
+<blockquote dir="auto">
+<p dir="auto">exchange relative to OTC</p>
+</blockquote>
+<p dir="auto"><img src="image-5.png" alt="alt text" data-src="image-5.png"></p>
+<blockquote dir="auto">
+<p dir="auto">Figure: Notional value outstanding of exchange vs OTC FX plus interest rate
+derivatives (source: BIS).</p>
+<ul dir="auto">
+<li dir="auto">OTC markets have amounts open to maturity</li>
+<li dir="auto">exchange markets are closed fart more frequently</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="breakdown-data">Breakdown data</h3>
+<ul dir="auto">
+<li dir="auto">see slides</li>
+</ul>
+<h3 dir="auto" id="exchanges">Exchanges</h3>
+<p dir="auto"><img src="image-6.png" alt="alt text" data-src="image-6.png"></p>
+<blockquote dir="auto">
+<p dir="auto">This growth is particularly due to the National Stock Exchange of India.</p>
+</blockquote>
+<h3 dir="auto" id="otc-markets">OTC markets</h3>
+<p dir="auto"><img src="image-7.png" alt="alt text" data-src="image-7.png"></p>
+<p dir="auto">From all these graphs we can draw the following conclusions:</p>
+<ul dir="auto">
+<li dir="auto">Interest rate and FX forwards and swaps dominate OTC markets.</li>
+<li dir="auto">Share and share index options dominate exchange-traded markets.</li>
+</ul>
+<p dir="auto">We focus on these in FINM3405 Derivatives and Risk Management.</p>
+<h2 dir="auto" id="uses-and-market-participants">Uses and market participants</h2>
+<p dir="auto">Derivative securities have a number of different uses, and in general
+financial markets have a lot of “moving parts” with different players and
+participants all all doing different things:</p>
+<ul dir="auto">
+<li dir="auto">Trading, speculation and arbitrage.</li>
+<li dir="auto">Risk management or hedging.</li>
+<li dir="auto">Market making.</li>
+<li dir="auto">Regulators and other industry bodies and associations.</li>
+</ul>
+<h3 dir="auto" id="traders-and-speculation">Traders and speculation</h3>
+<p dir="auto">We saw above the different payoff s depending on the movement in the
+underlying asset from taking long and short positions in futures and
+options. Derivatives can be more efficient and cost effective means by
+which to speculate on movements in the underlying asset than trading
+the asset itself. Of course there’s a huge variety of trading strategies that
+various market participants employ to make a profit by trading
+derivatives. Derivatives also introduce other variables and factors that
+can be speculated on, over and above the movement in the underlying
+asset, including time, volatility, interest rates, credit conditions and
+spreads, market liquidity, weather, political events, you name it! Then
+you have the whole world of quant/algo/HFT/arbitrage/automated/etc
+trading, which nowadays is often very machine learning and AI driven.</p>
+<blockquote dir="auto">
+<p dir="auto">give you exposure to underlying asset, time to expire, underlying security, interest rates, credit spreads</p>
+</blockquote>
+<h3 dir="auto" id="risk-management-and-hedging">Risk management and hedging</h3>
+<p dir="auto">This course focuses on introducing derivative securities in the context of
+risk management. As mentioned at the start of this lecture, businesses,
+governments, financial institutions, etc, are naturally exposed to a variety
+of financial risks just by going about their usual daily business, including:</p>
+<ul dir="auto">
+<li dir="auto">Credit/default and counterparty risk.</li>
+<li dir="auto">Market risks including adverse movements in interest rates, exchange rates, commodity prices, equity/share prices, etc.</li>
+<li dir="auto">Government/political/sovereign risk, uncertainty and instability, including changing regulations, elections and military conflict.</li>
+</ul>
+<p dir="auto">In this course we present a number of basic techniques to manage some
+of these financial risks using the derivative securities we cover.</p>
+<h3 dir="auto" id="market-makers">Market makers</h3>
+<p dir="auto">Trading venues have contracts with companies called <strong>market makers</strong> to
+provide liquidity in markets. Market makers, and dealers in OTC markets,
+perform this liquidity function by continuously providing bid and ask
+quotes in the market for other participants to trade at, thereby taking
+one side of the transaction. Market makers typically earn a profit from
+the bid-ask spread they quote, but they also engage in speculation and
+proprietary trading, particular algo/automated/computerised. Some large
+market makers include Susquehanna, Optiver, Jane Street, Citadel, DRW,
+IG Markets, IMC, Flow Traders, etc; working for them is very lucrative</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">provide bid and offer quotes in the market</li>
+<li dir="auto">trade options in the market, e.g.</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="present-value-law-of-finance">Present value: Law of finance</h3>
+<p dir="auto">Law of finance: The value of an asset is the present value of its
+expected future cashflows.</p>
+<p dir="auto">There is really no other concept more important than present value.
+When we value derivative securities, we spend quite a bit of time
+constructing their future cashflows or payoffs and discounting them back
+to the present in order to calculate their price. Note that for some
+derivatives such as options, this involves some subtleties and
+mathematical complexities, and the law of finance becomes what is
+known as the risk-neutral approach to derivative security pricing.</p>
+<h3 dir="auto" id="arbitrage-law-of-one-price">Arbitrage: Law of one price</h3>
+<p dir="auto">The other central technique used and assumption typically relied upon to
+price derivative securities is that of no arbitrage. A very common
+approach or technique used in derivative security valuation is to construct
+a portfolio of more basic securities (such as stocks, bank accounts, simple
+forwards and futures, etc) which replicates the derivative’s future
+cashflow structure or payoff. The assumption of no arbitrage leads to the:
+Law of one price: Securities or portfolios with the same future
+cashflow structure or payoff must have the same price.
+If the law of one price is violated, then an arbitrage opportunity exists in
+financial markets, which is assumed to be immediately exploited and
+traded away. But what do we precisely mean by the concept of arbitrage?</p>
+<blockquote dir="auto">
+<p dir="auto">If you can set up two different portfolios that have the exact same payoff in the future, they must have the same price now or else as an arbitrage opportunity.</p>
+</blockquote>
+<p dir="auto">An arbitrage opportunity can be defined in various equivalent ways, and
+the following two alternative definitions will suffice for this course:</p>
+<ol dir="auto">
+<li dir="auto">An arbitrage opportunity is a scenario that has no initial, upfront
+cashflow or exchange of money, no risk of future loss (negative
+cashflow), but a chance of a future profit (positive cashflow).
+▶ Keep investing at 0 cost with the possibility of a future profit.</li>
+<li dir="auto">Alternatively, an arbitrage opportunity is a scenario of two different
+portfolios or financial securities having the same future cashflow
+structure or payoff, but different prices.
+▶ Long the cheap and short the expensive security/portfolio.
+Neither of these scenarios can last long in efficient financial markets.</li>
+</ol>
+<blockquote dir="auto">
+<p dir="auto">current cashflows,
+The other idea of arbitrage and arbitrage is a situation in which you have no upfront upfront payment.
+You have no risk or loss of loss in the future, but you have a chance of a positive gain of making a profit.
+That's an arbitrage, too. So I know in finance that you would you would have heard the definition definition of an arbitrage of trading simultaneously to different securities for a different price and immediately getting a profit.</p>
+</blockquote>
+
+</main>
+</body>
+</html>
