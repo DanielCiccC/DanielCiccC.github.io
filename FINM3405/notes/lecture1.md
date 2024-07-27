@@ -34,7 +34,7 @@ A derivative security is a contract between two or more counter-parties specifyi
 > - payoff depends on some kind of underlying assets - underlying events
 > - events can even be weather, or similar to betting events
 
-![alt text](image-1.png)
+![alt text](assets\IMG1.PNG)
 
 > forward commitments
 > - each side of the party that they have to honor
@@ -93,7 +93,7 @@ We plot these payoff s graphically as follows:
 $S_{T}$ : spot price at time T
 $K$: Contract price
 
-![alt text](image-2.png)
+![alt text](assets\IMG2.PNG)
 
 ## Options
 
@@ -125,7 +125,7 @@ At expiry $T$, the call option holder has the right but not the obligation to bu
 
 The call writer’s payoff is the negative of this.
 
-![alt text](image-3.png)
+![alt text](assets\IMG3.PNG)
 
 ### Expiry - put
 
@@ -226,12 +226,12 @@ A credit default swap is effectively an insurance contract between two parties i
 
 ### Relative market sizes
 
-![alt text](image-4.png)
+![alt text](assets\IMG4.PNG)
 
 > exchange relative to OTC
 
 
-![alt text](image-5.png)
+![alt text](assets\IMG5.PNG)
 
 > Figure: Notional value outstanding of exchange vs OTC FX plus interest rate
 derivatives (source: BIS).
@@ -244,13 +244,13 @@ derivatives (source: BIS).
 
 ### Exchanges
 
-![alt text](image-6.png)
+![alt text](assets\IMG6.PNG)
 
 > This growth is particularly due to the National Stock Exchange of India.
 
 ### OTC markets
 
-![alt text](image-7.png)
+![alt text](assets\IMG7.PNG)
 
 From all these graphs we can draw the following conclusions:
 - Interest rate and FX forwards and swaps dominate OTC markets.
