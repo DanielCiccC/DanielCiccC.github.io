@@ -9,7 +9,7 @@
 - The financial system performs its core function of transferring savings and investment funds to long-term investments in real assets.
 - Businesses simply go about their usual day-to-day trading activities.
 
-![alt text](image.png)
+![alt text](assets\IMG8.PNG)
 
 > - Transfers money through the economy
 > - Make investments in real assets in the economy
