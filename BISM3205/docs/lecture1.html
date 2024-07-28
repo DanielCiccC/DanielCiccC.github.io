@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
-<meta name="description" content="undefined - microjam page">
+<meta name="description" content="lecture1 - microjam page">
 
 
 
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
 
-<title>undefined</title>
+<title>lecture1</title>
 </head>
 <body id="top">
 <header>
@@ -25,6 +25,205 @@
 </header>
 <main>
 <h1 dir="auto" id="lecture-1">Lecture 1</h1>
+<h3 dir="auto" id="what-is-information-security">What is Information Security?</h3>
+<p dir="auto">&quot;A well-informed sense of assurance that the information risks and controls are in balance.”
+Jim Anderson, Inovant* (2002)</p>
+<p dir="auto">What does this mean?</p>
+<ul dir="auto">
+<li dir="auto">well-informed sense of assurance = we have an opinion that‘s based on evidence;</li>
+<li dir="auto">information risks = risk is normally associated with the prospect or the possibility of loss;</li>
+<li dir="auto">controls = anything that reduces risk: business policy, training/education or technology;</li>
+<li dir="auto">in balance = are both the same ($ gain/loss).</li>
+</ul>
+<p dir="auto">Security professionals must review the origins of this field to understand its impact on our
+understanding of information security today - let's do this now</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">if the information is not important, then the controls will be weak
+<ul dir="auto">
+<li dir="auto">both have to be in balance</li>
+</ul>
+</li>
+<li dir="auto">risks and controls are in balance</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="the-1960s-70s-and-80s-%E2%80%93-what-was-the-communication-model">The 1960s, 70s and 80s – what was the communication model?</h3>
+<p dir="auto">Communications – based on ‘circuit switched’ telephony:</p>
+<ul dir="auto">
+<li dir="auto">Very old technology – lots of problems – not at all versatile or ‘fault tolerant’</li>
+<li dir="auto">Many countries wanted improvement – the US commissioned a research project (effectively ARPANET).</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">communication performed by operators</p>
+<ul dir="auto">
+<li dir="auto">A to B, had to go through switches
+<img src="image.png" alt="alt text" data-src="image.png"></li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="history-of-information-security---1960s-70s-and-80s">History of information security - 1960s, 70s and 80s</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Advanced Research Project Agency (ARPA) began to examine feasibility of redundant networked communications (to improve the existing ‘circuit switched’ model).</p>
+</li>
+<li dir="auto">
+<p dir="auto">ARPANET initially connected four independent network nodes situated at UCLA, SRI, UCSB,</p>
+</li>
+<li dir="auto">
+<p dir="auto">ARPANET – international in 1973 with connections to London and Norway.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Further expansion across the US in 1982 – the foundations of the Internet had been set up!</p>
+</li>
+<li dir="auto">
+<p dir="auto">ARPANET moved ‘circuit switched’ telephony into ‘packet switched’ data communications.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Some of the main benefits:</p>
+<ul dir="auto">
+<li dir="auto">No single defined physical path between sender – receiver</li>
+<li dir="auto">Packets travel independently – no interdependence</li>
+<li dir="auto">Supports ‘store and forward transmission’ – much greater versatility</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG1.PNG" alt="alt text" data-src="assets/IMG1.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">circuit switched network (plugs) to packet switched
+<ul dir="auto">
+<li dir="auto">divide long string of data into packets, order them and travel independently to the destination</li>
+<li dir="auto">all back together, will receive the file at destination</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="analogue-to-digital">Analogue to Digital</h3>
+<p dir="auto">How long is the voltage kept high to signal a “1” in digital
+communication?</p>
+<ul dir="auto">
+<li dir="auto">Depends on the data rate, at 1Mbps 1µs.
+<ul dir="auto">
+<li dir="auto">1,000,000 bits per seconds</li>
+<li dir="auto">1 microsecond per bit</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG2.PNG" alt="alt text" data-src="assets/IMG2.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">5v on and off with digital</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="package-switching-router">Package switching router</h3>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>package-switching router</th>
+<th>network gear in riser</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="assets\IMG3.PNG" alt="alt text" data-src="assets/IMG3.PNG"></td>
+<td><img src="assets\IMG4.PNG" alt="alt text" data-src="assets/IMG4.PNG"></td>
+</tr>
+</tbody>
+</table>
+<blockquote dir="auto">
+<p dir="auto">each riser, a patch panel</p>
+<ul dir="auto">
+<li dir="auto">each cable goes to a particular port in the router</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="network-fibre-optics-cable">Network fibre optics cable</h3>
+<ul dir="auto">
+<li dir="auto">Information sent via fiber optic cables is much more difficult to intercept because light can’t be read in the same way signals sent via copper cabling can be.</li>
+</ul>
+<h3 dir="auto" id="network-devices">Network devices</h3>
+<ul dir="auto">
+<li dir="auto"><strong>Router</strong> –  A hub is a basically multi-port repeater. A hub connects multiple wires coming from different branches, for example, the connector in star topology which connects different stations. Hubs cannot filter data, so data packets are sent to all connected devices. Also, they do not have the intelligence to find out the best path for data packets which leads to inefficiencies and wastage.</li>
+<li dir="auto"><strong>Bridge</strong> – A bridge operates at the data link layer. A bridge is a repeater, with the add-on functionality of filtering content by reading the MAC addresses of the source and destination. It has a single input and single output port, thus making it a 2-port device.</li>
+<li dir="auto"><strong>Switch</strong> – A switch is a data link layer device. The switch can perform error checking before forwarding data, which makes it very efficient as it does not forward packets that have errors and forward good packets selectively to the correct port only.</li>
+<li dir="auto"><strong>Router</strong> – A router is a device like a switch that routes data packets based on their IP addresses. The router is mainly a Network Layer device. Routers normally connect LANs and WANs.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG5.PNG" alt="alt text" data-src="assets/IMG5.PNG"></p>
+<h3 dir="auto" id="1990s-to-present-time">1990's to present time</h3>
+<ul dir="auto">
+<li dir="auto">Networks of computers became more common; so too did the need to interconnect networks (Internet). Initially based on de facto standards.</li>
+<li dir="auto">In early Internet deployments, <strong>security was treated as a low priority.</strong></li>
+<li dir="auto">The Internet brings millions of unsecured computer networks into continuous communication with each other.</li>
+<li dir="auto">Ability to secure a computer’s data influenced by the security of every computer to which it is connected.</li>
+<li dir="auto">Growing threat of cyber attacks has increased the need for improved securityExample: the advent of the “Web” and “executable content”</li>
+<li dir="auto">From late 1990s, we started to ‘add on’ security to our existing software architecture.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">need a lock on network equipment</p>
+<ul dir="auto">
+<li dir="auto">security was patched on later as an afterthought</li>
+<li dir="auto">transmit executables; and could run the file program</li>
+</ul>
+</blockquote>
+<p dir="auto">Why did we look at computer network cables &amp; devices?</p>
+<ul dir="auto">
+<li dir="auto">Network security encompasses all the steps
+taken to protect the integrity of a computer
+network and the data within it. Network security
+is important because it keeps sensitive data
+safe from cyber attacks and ensures the
+network is usable and trustworthy.</li>
+<li dir="auto">Many of the devices in a computer network are
+susceptible to potential attacks.</li>
+<li dir="auto">Network security involves the use of a variety of
+software and hardware tools such as <strong>Firewalls</strong>,
+<strong>Intrusion detection systems (IDS)</strong> and
+<strong>Intrusion prevention systems (IPS)</strong> to protect
+the integrity of a computer network and the data
+within it.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">need firewalls and intrusion detection system</p>
+</blockquote>
+<h3 dir="auto" id="defining-security">Defining security</h3>
+<p dir="auto"><em><strong>“The quality or state of being secure - to be free from danger”</strong></em></p>
+<p dir="auto">A successful organization should have multiple layers of security in place:</p>
+<ol dir="auto">
+<li dir="auto">Physical: This involves securing the physical infrastructure and assets of an organization, such as buildings, servers, and other
+equipment, from theft, damage, and unauthorized access.</li>
+<li dir="auto">Personnel: This includes implementing policies and procedures to ensure that employees and contractors are aware of their
+security responsibilities and are trained to respond to security incidents.</li>
+<li dir="auto">Operations: This involves the day-to-day procedures and controls that are put in place to protect the organization’s data and IT
+infrastructure, such as regular system backups, patch management, and incident response.</li>
+<li dir="auto">Communications: This layer focuses on securing all forms of communication (emails, phone calls, video conferences, etc.) to
+prevent eavesdropping, interception, or disruption.</li>
+<li dir="auto">Network: This involves protecting the organization’s network infrastructure from threats such as malware, hacking, and denial-of-
+service attacks, often through the use of firewalls, intrusion detection systems, and secure network architectures.</li>
+<li dir="auto">Information: This layer focuses on protecting the confidentiality, integrity, and availability of the organization’s data, both in transit
+and at rest, through measures such as encryption, access controls, and data loss prevention strategies.</li>
+</ol>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Personnel need to be trained
+<ul dir="auto">
+<li dir="auto">aware of security procedures</li>
+</ul>
+</li>
+<li dir="auto">Operations, controls put into place, backup, etc. Software needs to be patched</li>
+<li dir="auto">Communications - needs to fix software across all forms of communication</li>
+<li dir="auto">Network - DOS attacks</li>
+<li dir="auto">Information - in transit - going over the network - at rest, in a database</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">“The protection of information and its critical elements, including systems and hardware that use, store, and transmit that information” (CNSS*)</li>
+</ul>
+<p dir="auto">How do we achieve information security?</p>
+<ul dir="auto">
+<li dir="auto">Policy, awareness, training, education, technology C.I.A. triangle (Basis for CNSS model of Information Security)</li>
+<li dir="auto">Was a standard based on Confidentiality, Integrity, and Availability</li>
+<li dir="auto">Now expanded into a more comprehensive list of critical characteristics of information</li>
+</ul>
+<h3 dir="auto" id="key-information-security-concepts">Key information security concepts</h3>
+<p dir="auto"><img src="assets\IMG6.PNG" alt="alt text" data-src="assets/IMG6.PNG"></p>
 
 </main>
 </body>
