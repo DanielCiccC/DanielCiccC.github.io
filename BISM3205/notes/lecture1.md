@@ -149,4 +149,100 @@ How do we achieve information security?
 
 ![alt text](assets\IMG6.PNG)
 
+> threat agent - agent that applied a threat to your organisation
+
+### Information security characteristics (quality of service)
+
+![alt text](assets\IMG7.PNG)
+
+> Non-repudiation
+> - must have in place, cannot deny that was not sent by the user
+> - must be able to rely on contracts and similar
+>
+> Authenticity
+> - they are who they say they are
+>
+> Confidentiality
+> - not disclosed to anyone else
+>
+> Integrity
+> - content of the email cannot be changed in transit
+> - must ensure the message is not altered on the way to the receiver
+>
+> Availability
+> - IT must make sure the information is available when/where it is needed
+
+CNSS Security Model
+(U.S. Committee on National Security Systems - CNSS)
+
+![alt text](assets\IMG8.PNG)
+
+> Three labels on the axes:
+> - storage, processing and transmission:
+>   - operation
+>
+> Controls:
+> - policy (how it is done)
+> - technology (intrusion detection, firewall etc.)
+>
+> Characteristics
+> - confidentiality, Integrity, availability
+
+![alt text](assets\IMG9.PNG)
+
+> examples of taking the framework and enforcing policies
+
+
+### Balancing information security and access
+- Impossible to obtain perfect security – it is a process, not an absolute.
+- Security is a balance between protection and availability.
+- To achieve balance, the level of security must allow reasonable access, but protect against threats.
+
+### Security Professionals in the organisation
+
+**Information security implementation is initiated by upper management (top-down)**
+- Issue policy, procedures, and processes – describe policy process.
+- Ensure adequate resourcing for security process and allocation of roles.
+- Dictate goals and expected outcomes of project
+- Determine accountability for each required action.
+- The most successful involve formal development strategy referred to as systems development life cycle.
+
+> - need senior management on side
+
+
+**Chief information officer (CIO)**
+- The CIO is primarily responsible for advising 
+the chief executive officer, president, or 
+company owner on the strategic planning that 
+affects the management of information in the 
+organisation.
+
+**Chief information security officer (CISO)**
+- The individual primarily responsible for the assessment, 
+management, and implementation of securing the 
+information in the organization. The CISO may also be 
+referred to as the manager for security, the security 
+administrator, or a similar title.
+
+![alt text](assets\IMG10.PNG)
+
+### Information security project team
+
+![alt text](assets\IMG11.PNG)
+
+> - policies - your password should be x characters long, etc.
+
+
+### Data Responsibilities
+
+![alt text](assets\IMG12.PNG)
+
+Data custodians are responsible for the information and the systems 
+that process, transmit, and store it. Depending on the size of the 
+organization, this may be a dedicated position, such as the CISO, or it 
+may be an additional responsibility of a systems administrator or other 
+technology manager. The duties of a data custodian often include 
+overseeing data storage and backups, implementing the specific 
+procedures and policies laid out in the security policies and plans
+
 
