@@ -23,8 +23,8 @@ An entity is essentially a physical or conceptual object which has data associat
 | Entity | An entity type provides a format for the data which needs to be recorded to represent a particular entity. The entity type is described by its name and attributes. Represented as a rectangular box | ![Alt text](assets\IMG2.PNG) | 
 | Key Attributes| All entity types have at least one key (or uniqueness) constraint. The key must hold for every possible extension of the entity type (see super/subclasses in later slides). Represented as an underlined attribute | ![Alt text](assets\IMG3.PNG)
 | Simple Attributes | | ![Alt text](assets\IMG4.PNG)
-| Composite attributes |Composite attributes can be divided into smaller parts which represent simple attributes with independent meaning.| ![Alt text](assets\IMG5.PNG)
-| Composite Key attribute (Several Attribute Keys)| a composite key attribute is also a unique identifiers for each entity instance. <br> It is the **combination** of simple attributes which make up the composite key which must be unique |![Alt text](assets\IMG6.PNG)
+| Composite attributes | Composite attributes can be divided into smaller parts which represent simple attributes with independent meaning.| ![Alt text](assets\IMG5.PNG)
+| Composite Key attribute (Several Attribute Keys)| A composite key attribute is also a unique identifiers for each entity instance. <br> It is the **combination** of simple attributes which make up the composite key which must be unique |![Alt text](assets\IMG6.PNG)
 | Multivalued attributed |  Multivalued attributes are shown with double-lined ovals and can have multiple values (e.g., one person can hold multiple degrees) | ![Alt text](assets\IMG7.PNG)
 |Derived Attributes|In some cases, attribute values can be derived from related attribute values (e.g., age can be derived from BirthDate).| ![Alt text](assets\IMG8.PNG)
 |Weak Entities| Entity types that do not have key attributes of their own are called weak entities. | ![Alt text](assets\IMG9.PNG)
@@ -51,12 +51,12 @@ A **relationship type** defines the relationship.
 - A relationship type may have descriptive attributes.
 - A relationship type may have key attributes
 
-| Relationship concept | Desciption | graphical representation
+| Relationship concept | Description | graphical representation
 | --- | --- | --- |
 | Relationship | In the ER model, relationships are represented using a diamond that is connected to the associated entity types. A relationship type may have descriptive attributes. A relationship type may have key attributes | ![Alt text](assets\IMG11.PNG)
 | Relationship Degree | The degree of a relationship type is the number of participating entity types. 2 Entities: Binary relationship. 3 entities: Ternary relationship. n entities: n-ary relationship (3 + entities) |  ![Alt text](assets\IMG12.PNG)  ![Alt text](assets\IMG13.PNG)
 | Entity Roles | The role name signifies the role that a participating entity from the entity type plays in each relationship instance. That is to say, *it explains what the relationship means.* | *WorksOn* ![Alt text](assets\IMG14.PNG)
-|Recursive Relatiuonships| Same entity types can participate more than once in the same relationship type under different “roles”. | ![Alt text](assets\IMG15.PNG) 
+|Recursive Relationships| Same entity types can participate more than once in the same relationship type under different “roles”. | ![Alt text](assets\IMG15.PNG) 
 | Relationship set | The collection of all relationships of a particular relationship type in the database at any point in time is referred to as a relationship set | ![Alt text](assets\IMG16.PNG)
 
 ### Relationship Constraints
