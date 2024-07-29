@@ -7,13 +7,13 @@ known facts that:
 - is a **logically coherent** collection of data with some **inherent meaning**. 
 - is designed, built, and populated with data for a specific purpose for an intended group of users and some preconceived applications.
 
-### What is a Database Management System (DBMS)?
+<!-- ### What is a Database Management System (DBMS)?
 A software system that facilitates the processes of:
 - Defining a database includes specifying the types, structures, and constraints for the data
 - Constructing the database is the process of storing the data on some storage medium that is controlled by the DBMS.
 - Manipulating a database includes functions such as querying the database to retrieve specific data, updating the database to reflect changes in the miniworld, and generating reports from the data.
 - Sharing a database allows multiple users and programs to access the
-database simultaneously. 
+database simultaneously.  -->
 
 ### Components
 From bottom to top:
@@ -23,9 +23,6 @@ From bottom to top:
 through application programs
 
 ![Alt text](assets\IMG1.PNG)
-
-### UoD
-
 
 ### Features of a DBMS:
 - Data Integrity Maintenance
@@ -61,9 +58,11 @@ CREATE TRIGGER [IncrementPolicyVersionId]...
 - Conceptual Level: describes the structure of the whole database for a community of users.
 - Internal Level: describes the physical storage structure of the database
 
+![alt text](assets\IMG119.PNG)
+
 ---
 
 **Logical Data Independence:** Ability to change the conceptual schema without changing external views or applications
-
+> To Add/Modify/Delete a new attribute, entity or relationship is possible without a rewrite of existing application programs 
 **Physical Data Independence:** Ability to modify physical schema w/o changing conceptual schema
 > E.g. Move our physical database somewhere else (move onto cloud or another data warehouse), without changing our conceptual level schema
