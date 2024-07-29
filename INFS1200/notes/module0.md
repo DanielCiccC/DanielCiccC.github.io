@@ -64,5 +64,7 @@ CREATE TRIGGER [IncrementPolicyVersionId]...
 
 **Logical Data Independence:** Ability to change the conceptual schema without changing external views or applications
 > To Add/Modify/Delete a new attribute, entity or relationship is possible without a rewrite of existing application programs 
+
+
 **Physical Data Independence:** Ability to modify physical schema w/o changing conceptual schema
 > E.g. Move our physical database somewhere else (move onto cloud or another data warehouse), without changing our conceptual level schema
