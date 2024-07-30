@@ -9,5 +9,6 @@
 From another perspective:
 - The role of these markets is the reallocation of risks from parties who are not specialists at managing them, to other parties who are willing to take them on board and are specialists in managing them.
 
-### 3) What is the main diff erence between forwards/futures and options?
-
+### 3) What is the main difference between forwards/futures and options?
+- Options effectively give one party, the holder or taker, the choice of whether to enforce the agreement or not.
+- A call option gives the holder the *right* the obligation to buy the underlying asset
