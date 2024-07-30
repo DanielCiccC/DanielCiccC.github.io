@@ -7,4 +7,7 @@
 - Derivative security markets evolved to enable business/government etc. to reduce financial and other risks that arise in their usual core business activities
 
 From another perspective:
-- The role of these markets is the reallocation of risks from parties who are not specialists at managing them
+- The role of these markets is the reallocation of risks from parties who are not specialists at managing them, to other parties who are willing to take them on board and are specialists in managing them.
+
+### 3) What is the main diff erence between forwards/futures and options?
+
