@@ -11,4 +11,23 @@ From another perspective:
 
 ### 3) What is the main difference between forwards/futures and options?
 - Options effectively give one party, the holder or taker, the choice of whether to enforce the agreement or not.
-- A call option gives the holder the *right* the obligation to buy the underlying asset
+- A call option gives the holder the *right* and not the obligation to buy the underlying asset for the agreed strike price ON (European) or anytime up (American) to the expiry date
+- a put option gives the right but not the obligation to sell the asset
+
+> Forwards/futures - obligation
+> options - right, not obligation
+
+### 4) How do you use futures and options to speculate on an expected increase in the price of the underlying asset over the short term? What about a decrease? Plot the payoff diagrams from your strategies.
+
+- long on futures/forwards: payoff = $S_{T} - K$
+- buy a call option: payoff = $\text{max}(0, S_{T} - k)$
+
+$S_{T}$, spot price at time T
+$k$, contract price
+
+![alt text](assets\IMG2.PNG)
+
+### b) decrease 
+
+- short on futures/forwards: payoff = $K - S_{T}$
+- buy a put option: payoff = $\text{max}(0, K - S_{T})$

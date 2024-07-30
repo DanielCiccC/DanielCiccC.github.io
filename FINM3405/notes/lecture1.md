@@ -70,7 +70,7 @@ Futures and forwards are contracts obligating two parties to trade
 an agreed quantity of the underlying asset for an agreed contract
 price K on an agreed future date T (the maturity date).
 
-The basic diff erence between futures and forward contracts is:
+The basic difference between futures and forward contracts is:
 - Futures are standardised contracts traded on trading venues.
 - Forwards are negotiated between the parties in OTC markets.
 
