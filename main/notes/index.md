@@ -12,6 +12,10 @@ Welcome! You'll find some of my notes to courses (starting the second semester o
 
 #### [INFS3202](INFS3202/docs/main_INFS3202.html)
 
+#### [FINM3405](FINM3405/docs/FINM3405.html)
+
+#### [FINM3407](FINM3407/docs/FINM3407.html)
+
 <!-- #### [INFS1200 tutoring](INFS1200_TUTORING/docs/INFS1200.html) -->
 
 
