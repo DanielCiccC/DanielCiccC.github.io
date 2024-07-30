@@ -21,7 +21,7 @@
 - In the most fundamental sense, the theory of rational choice specifies what types of preferences are considered to  be rational in neoclassical economics 
 
 **What is Preference?**
-= > Preference is a relation that ranks alternatives (typically, consumption bundles) according to their desirability
+- Preference is a relation that ranks alternatives (typically, consumption bundles) according to their desirability
 
 > you can rank all your options 
 > - use preference to understand how to make decisions
