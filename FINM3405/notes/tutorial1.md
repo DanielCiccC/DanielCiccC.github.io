@@ -41,4 +41,11 @@ $k$, contract price
 Assumptions
 - 1 futures contract is over 1 unit of the ETF, and hedging dates is exactly the maturity date of the contract.
 - $K = 50$
-- 
+
+Our position is going to be:
+- ETF holding + short futures contract
+- payoff: $(S_{T}) + (K - S_{T}) = K$
+
+-- ADD IMAGE
+
+**C) One could possibly use the ASX SPI200 index or ASX mini SPI 200 index futures, or even LEPOS over the individual ETF if one exists**
