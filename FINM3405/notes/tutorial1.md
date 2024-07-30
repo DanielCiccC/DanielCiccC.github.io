@@ -27,7 +27,18 @@ $k$, contract price
 
 ![alt text](assets\IMG2.PNG)
 
-### b) decrease 
+### b) decrease in the price of the underlying asset
 
 - short on futures/forwards: payoff = $K - S_{T}$
 - buy a put option: payoff = $\text{max}(0, K - S_{T})$
+
+> Note: does not incorporate option premium
+
+### (5) Suppose you hold a S&P/ASX200 index ETF and you’re worried about the falling over the short term, but you don’t want to sell your holding.
+
+- To manage the risk of a market fall, you short short future markets
+
+Assumptions
+- 1 futures contract is over 1 unit of the ETF, and hedging dates is exactly the maturity date of the contract.
+- $K = 50$
+- 
