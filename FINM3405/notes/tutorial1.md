@@ -1,5 +1,6 @@
 # Tutorial 1
 
+## Question 1
 ### 1) What is a derivative security
 - An agreement between two or more parties to undertake financial transactions in the future dependent on (or derived) from other future events.
 
@@ -46,6 +47,16 @@ Our position is going to be:
 - ETF holding + short futures contract
 - payoff: $(S_{T}) + (K - S_{T}) = K$
 
--- ADD IMAGE
+![alt text](assets\IMG9.PNG)
 
 **C) One could possibly use the ASX SPI200 index or ASX mini SPI 200 index futures, or even LEPOS over the individual ETF if one exists**
+
+## Question 2
+**What are the diff erences between OTC markets and trading venues? What is a trading venue? What is a multilateral trading facility (MTF) and what are some examples? What is an alternative trading system (ATS) and what are some examples? How do they compare to traditional exchanges? What is a central counterparty clearing house (CCP) and what are some examples?**
+
+OTC markets (Have a read in textbook or solutions) (Not very important, will touch on more during sem). 
+
+## Question 3. 
+- Interest rates (Short answer) (Not very important, will touch on more during sem) 
+
+## Question 4 onwards (Non Examinable). 
