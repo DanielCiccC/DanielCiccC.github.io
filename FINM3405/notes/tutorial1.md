@@ -33,7 +33,7 @@ $k$, contract price
 - short on futures/forwards: payoff = $K - S_{T}$
 - buy a put option: payoff = $\text{max}(0, K - S_{T})$
 
-> Note: does not incorporate option premium
+> Note: does not incorporate optitudoron premium
 
 ### (5) Suppose you hold a S&P/ASX200 index ETF and you’re worried about the falling over the short term, but you don’t want to sell your holding.
 
