@@ -27,7 +27,6 @@ An entity is essentially a physical or conceptual object which has data associat
 | Composite Key attribute (Several Attribute Keys)| A composite key attribute is also a unique identifiers for each entity instance. <br> It is the **combination** of simple attributes which make up the composite key which must be unique |![Alt text](assets\IMG6.PNG)
 | Multivalued attributed |  Multivalued attributes are shown with double-lined ovals and can have multiple values (e.g., one person can hold multiple degrees) | ![Alt text](assets\IMG7.PNG)
 |Derived Attributes|In some cases, attribute values can be derived from related attribute values (e.g., age can be derived from BirthDate).| ![Alt text](assets\IMG8.PNG)
-|Weak Entities| Entity types that do not have key attributes of their own are called weak entities. | ![Alt text](assets\IMG9.PNG)
 
 ### Entity Concepts
 **Value sets of attributes**
@@ -77,7 +76,7 @@ Example | Cardinality | representation |
 
 Existence dependency indicates whether the existence of an entity depends on its relationship to another entity.
 
-Example: Every employee must work for a department. Employee is *existentially dependent* on Department via the WORKSFOR relationship type.
+> Example: Every employee must work for a department. Employee is *existentially dependent* on Department via the WORKSFOR relationship type.
 
 ![Alt text](assets\IMG21.PNG)
 
