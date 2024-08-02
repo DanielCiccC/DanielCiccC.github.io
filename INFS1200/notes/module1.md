@@ -113,6 +113,7 @@ into a superclass
 
 #### Constraints
 Specialisation may be:
+
 ![Alt text](assets\IMG24.PNG)
 
 ### Notation Guide
