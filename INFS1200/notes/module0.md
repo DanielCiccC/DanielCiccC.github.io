@@ -68,3 +68,7 @@ CREATE TRIGGER [IncrementPolicyVersionId]...
 
 **Physical Data Independence:** Ability to modify physical schema w/o changing conceptual schema
 > E.g. Move our physical database somewhere else (move onto cloud or another data warehouse), without changing our conceptual level schema
+
+
+> Still confused?
+> - It may be instructive to view the Three-Schema Architecture as a model rather than as a hard and fast rule. In such as way, data independence is an objective to be achieved, rather than something that does work.

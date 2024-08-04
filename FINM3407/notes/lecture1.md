@@ -86,7 +86,6 @@ Assume if it’s rainy and cold, the ice cream truck makes no profit
   - Expected outcome = 250 (0.5x500)
 - P3(0.7,800,1000)
   - Expected outcome = 860
-  - 
 
 **An ordering of P1 vs. P2 and P1 vs. P3:**
 
@@ -104,10 +103,12 @@ Prospects:
 - P4(0.5, 1000, 500)  Exp outcome = 750
 - P5(0.6, 1200, 300) Exp outcome = 840
 
-For P4: U(P4) = 0.5 * 1000 0.5  + 0.5 * 500 0.5  = 26.99
-For P5: U(P5) = 0.6 * 1200 0.5  + 0.4 * 300 0.5  = 27.71
+Utility:
+- For P4: $U(P4) = (0.5 * 1000)^{0.5}  + (0.5 * 500)^{0.5}  = 26.99$
+- For P5: $U(P5) = (0.6 * 1200)^{0.5}  + (0.4 * 300)^{0.5}  = 27.71$
 
-So P5  ≻  P4
+So:
+P5 ≻ P4
 
 Based on assumptions such as ordering and transitivity (and others), it can be shown that when such choices over risky prospects are to be made, people should act as if they are maximising expected utility:
 
