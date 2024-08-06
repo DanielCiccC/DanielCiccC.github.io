@@ -239,3 +239,100 @@ Steps:
 
 ![alt text](assets\IMG11.PNG)
 
+![alt text](assets\IMG12.PNG)
+
+
+**Frames**
+- Essential condition for a theory of choice is principle of invariance: Different representations of same problem should yield same preference.
+
+
+### Mental accounting
+Related to prospect theory and frames.
+- Accounting is process of categorizing money, spending and financial events.
+- Mental accounting is a description of way people intuitively do these things, and how it 
+impacts financial decision-making.
+- Often tendency to use mental accounting leads to odd and suboptimal decisions.
+
+Mental Accounting: This is a concept where people treat money differently 
+depending on where it comes from, where it is kept, or how it is spent. 
+For example, people may view a tax refund as a "bonus" or "windfall" and may be more 
+inclined to spend it on a luxury or save it, rather than using it to pay off debts.
+
+> - In your mind, create different accounts for money
+
+### Prospect theory, mental accounting and prior outcomes
+Problem with prospect theory is that it was set up to deal with one-shot gamble – but what if there have been prior gains or losses?
+- Do we go back to zero (segregation), or move along curve (integration)?
+
+**Integration or segregation**
+1. Segregation:  This  refers  to  the  idea  that 
+each  new  gamble  is  evaluated  in  isolation, 
+starting  from  the  reference  point  of  zero  (as  if 
+we "reset" after each gamble). The idea is that 
+people  have  short  memories,  or  they  "start 
+fresh" with each new gamble.
+2. Integration:  This  suggests  that  people  keep 
+track  of  their  gains  and  losses  over  time  and 
+use  this  cumulative  total  as  their  reference 
+point. In this case, prior outcomes influence the 
+valuation of current prospects.
+
+![alt text](assets\IMG13.PNG)
+
+
+> - prior gains/losses effects
+> One game, start at 0
+> - previous game or loss - fresh start or affected?
+>  - segregated or integrated
+>
+> Segregated
+> - value each game in isolation
+
+
+### Silver lining effect:
+- They tend to mentally combine wins but separate losses to make them feel less impactful.
+
+### House money effect:
+- People tend to be more willing to gamble with money that they have won (house money) than with their initial stake or with money won in earlier rounds of betting.
+
+Which of these approach individuals take can depend on the specific context and individual 
+psychological factors
+
+> - House money effect - you win, more likely to gamble more
+>   - also more risk-seeking
+
+### Theater ticket problems
+1. Imagine you have decided to see a play where admission is $10.  As you enter theatre 
+you discover that you have lost a $10 bill.  Would you still pay $10 for a ticket to the play?
+2. Imagine that you have decided to see a play and paid the admission price of $10 per 
+ticket. As you enter the theatre you discover that you have lost the ticket. The seat was 
+not marked, and the ticket cannot be recovered.  Would you pay $10 for another ticket?
+
+
+Nothing is really different about the problems, however:
+- Of respondents given first question, 88% said they would buy a ticket.  
+- Of respondents given second question, 54% said they would not buy a ticket.
+
+In 2nd question, integration is more likely because both lost ticket and new ticket would be from **same “account.”**
+- Integration might suggest that $20 is too much for the ticket.
+
+Example of how integration + mental accounting affect decision-making process
+
+### Opening and Closing accounts
+
+Once an “account” is closed, you go back to zero.
+Evidence that people avoid closing accounts at a loss:
+- Selling a stock at a loss is painful: disposition effect (to be discussed).
+
+Managers do the same thing as well. 
+- Companies rarely have low negative earnings but often have low positive earnings:
+  - They manage earnings by either pushing things to a low positive,
+  - Or they “take a bath” and move to a high negative.
+
+> - When firms went IPO, price of stock should increase
+>   - price set by agency
+>   - normally agents undervalue the company
+>
+> Managers try and move the books a little and try to have a positive earnings
+> - if they can't push the books, have a really bad year for bigger positives in the future
+> 
