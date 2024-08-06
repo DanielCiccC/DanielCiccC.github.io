@@ -61,5 +61,23 @@ long payoff = $(S_{T} − K)m$
 $$= 10(S_{T} - 367.3)\cdot 100$$
 
 ### Q3. 
+-- You profit from going long at $k=367.3_{HKD}$ and the close out by going short at $K_{t} = 500$
+
 Payoff:
-$$= 10(500 - 367.3)\cdot 100 = $$
+$$= 10(500 - 367.3)\cdot 100 = 132,700_{HKD}$$
+(About $25,964 AUD)
+
+### Q3 - Currencies
+**1.**
+
+> - No different to the above
+
+- 1 contract is worth 0.1 bitcoin, you would short 100 (10/0.1) at the price in September
+
+**2.**
+
+- In this case you go long 100 December contract for $K = \$69,600$
+
+**3.**
+>- think it is going to fall - take a short position on the 10 bitcoin
+- To hedge against Elon, we short 100 september contracts for $K = \$68,910 \; \; \text{USD}$
