@@ -16,3 +16,23 @@ To manage this risk they would go long on the same number of contracts as you wo
 
 ### Q3.
 > August, September and October prices are far lower
+
+$$K_{Aug} = 558.76$$
+$$K_{Sep} = 558.72$$
+$$K_{Oct} = 560.64$$
+
+short payoff= $K − S_{T}$
+
+- $m$ = 1000
+- $h$ = 1000
+
+August payoff:
+$$1000(558.76-575)\cdot 1000 = -16, 240,000$$
+Sep Payoff
+$$1000(558.72-600)\cdot 1000 = -42, 280,000$$
+Sep payoff
+$$100 \cdot (560.64 - 625) \cdot 1000 = -64, 360, 000$$$
+
+- These amounts represent how much money you missed out on buy locking in the gold price via futures contract
+- The gold price went up which would have benefitted us
+
