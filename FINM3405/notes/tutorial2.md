@@ -41,3 +41,14 @@ $$100 \cdot (560.64 - 625) \cdot 1000 = -64, 360, 000$$$
 ### Equities Question 2
 > - look at last traded value
 > - contract multiplier is 100 (100 shares per contract)
+
+
+- You own 10,000 tencent shares, and 1 futures contract is over $m=100$ shares
+- We would short $h=100$ september contracts
+
+Payoff of combined position (portfolio and futures position)
+
+$$= 10,000\cdot S_{T} + h(K-S_{T})m$$
+$$= 10,000 \cdot S_{T} + 10,000(K-S_{T})$$
+$$= 10,000S_{T} + 10,000K -10,000S{T}$$
+$$=10,000K = 10,000\cdot 357.5 = 3,575,000HKD$$
