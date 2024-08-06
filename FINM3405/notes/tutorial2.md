@@ -35,4 +35,9 @@ $$100 \cdot (560.64 - 625) \cdot 1000 = -64, 360, 000$$$
 
 - These amounts represent how much money you missed out on buy locking in the gold price via futures contract
 - The gold price went up which would have benefitted us
+- You're not particularly happy about it, and all you can say to your board is 'what if gold went down?'
 
+
+### Equities Question 2
+> - look at last traded value
+> - contract multiplier is 100 (100 shares per contract)
