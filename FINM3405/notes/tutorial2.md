@@ -28,9 +28,9 @@ short payoff= $K − S_{T}$
 
 August payoff:
 $$1000(558.76-575)\cdot 1000 = -16, 240,000$$
-Sep Payoff
+Sep Payoff:
 $$1000(558.72-600)\cdot 1000 = -42, 280,000$$
-Sep payoff
+Aug payoff:
 $$100 \cdot (560.64 - 625) \cdot 1000 = -64, 360, 000$$$
 
 - These amounts represent how much money you missed out on buy locking in the gold price via futures contract
@@ -50,5 +50,16 @@ Payoff of combined position (portfolio and futures position)
 
 $$= 10,000\cdot S_{T} + h(K-S_{T})m$$
 $$= 10,000 \cdot S_{T} + 10,000(K-S_{T})$$
-$$= 10,000S_{T} + 10,000K -10,000S{T}$$
-$$=10,000K = 10,000\cdot 357.5 = 3,575,000HKD$$
+$$= 10,000S_{T} + 10,000K -10,000S_{T}$$
+$$=10,000K = 10,000\cdot 357.5 = 3,575,000_{HKD}$$
+
+### Q2.
+- You go long on futures
+
+long payoff = $(S_{T} − K)m$
+
+$$= 10(S_{T} - 367.3)\cdot 100$$
+
+### Q3. 
+Payoff:
+$$= 10(500 - 367.3)\cdot 100 = $$
