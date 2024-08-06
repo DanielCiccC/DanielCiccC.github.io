@@ -14,4 +14,5 @@ You are exposed to spot gold prices falling over teh next few months. To manage 
 Chinese buyers are exposed to the risk of the spot gold prices increasing.
 To manage this risk they would go long on the same number of contracts as you would go shorted.
 
+### Q3.
 
