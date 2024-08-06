@@ -41,3 +41,49 @@ Normally, *insurance* is a hedge against a *low-probability large loss*
 - The advisor might also prepare clients for the *inevitability of market downturns* to help them *avoid panic selling* due to loss aversion
 
 > - Dollar cost averaging: by investing in smaller set amounts over time, will buy both when prices are low and high. Smoothes out average purchase price. Can be especially powerful in recessions and bear markets.
+
+
+---
+- missing questions on ipad
+---
+
+### Q10. 
+- Payment decoupling is encouraged with fixe prix
+- You only face the loss of money once rather than multiple times
+
+## Agency Theory
+
+### Q11.
+
+Shareholders can do the following:
+1. Ensure that employees are paid with company stock and/or stock options
+2. Ensure that underperforming managers are fired
+3. Write several contracts that ensure that the interest of the managers and shareholders are closely aligned
+4. Set up a monitoring mechanism (such as boards) to ensure that managers work in the best interest of the shareholders
+
+
+> - Performance based pay: Tie a significant portion of executive compensation to the company's growth, profitability, or total shreholder return (TSR)
+> Transparency clause: Ensure transparency in financial reporting
+
+### Q12
+- separation between management and ownership
+  - issues that arise from the separation
+- One the one hand, managers do not usually have direct ownership, manage and control the firm
+- On the other hand, the shareholder, who are the owners, are not involved in the management of the firm
+- This creates a clear conflict of interest between the investors and shareholder of the firm
+
+### Q13
+
+- Main roles of the board is to monitor the management to reduce agency costs and to ensure that the managers work in the best interest of the shareholders
+2. Board also provides guidance and support to the CEO and the management of the firm
+3. Role in setting the main vision and strategy of the company. REsponsible for approving and keeping track of the firm's strategy as well as annual budgets and investment programs established in the action plan prepared by the executive officers
+
+### Q16
+Two counterarguments:
+ 1. there is no reason to expect a simple relation between ownership and performance. Many dimensions to corporate governance system
+ 2. Some studies have shown a non-linear relationship between firm valuation and ownership, specififcaly that increasing ownership is good at first, but that in a certain range, managers can use their ownership level to partially block efforts to constrain them
+    - increasing ownership can reduce performance
+
+### Q17
+- Ignore the shareholder, which will result in either the shareholder going away or launching a proxy fight
+- Negotiate with the dissident shareholder to come to a solution on which 
