@@ -81,3 +81,11 @@ $$= 10(500 - 367.3)\cdot 100 = 132,700_{HKD}$$
 **3.**
 >- think it is going to fall - take a short position on the 10 bitcoin
 - To hedge against Elon, we short 100 september contracts for $K = \$68,910 \; \; \text{USD}$
+
+### Q6.
+> - interest rate goes down, am going to get a lower yield
+
+- You are exposed to the risk of interest rates decreasing, resulting in a lower investment yield on your money
+  - (the interest your getting paid will be less)
+
+- FV of a 90 bank bill is always $1m

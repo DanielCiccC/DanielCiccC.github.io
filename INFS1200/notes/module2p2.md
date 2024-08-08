@@ -8,7 +8,7 @@
 For each entity type
 1. Create a relation
 2. Choose a key as the primary key
-3. Include all simple attributes (e.g., a3 and a4) which arenot composite (e.g.,a2), derived or multivalued (e.g., a5)
+3. Include all simple attributes (e.g., a3 and a4) which are not composite (e.g.,a2), derived or multivalued (e.g., a5)
 
 
 ![alt text](assets\IMG46.PNG)

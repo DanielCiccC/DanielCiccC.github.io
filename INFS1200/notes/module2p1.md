@@ -35,7 +35,7 @@ Relations have specific properties, based on the mathematical set theory
 attributes $A_{1}, A_{2}, ..., A_{n}$
 - Integer n is termed “degree of the relation” 
 - A relation schema of degree 5
-  - Employee [ <ins>id</ins>, name, sex, salary, department]
+  - Employee [<ins>id</ins>, name, sex, salary, department]
 #### Relation Instance
 - A relation instance r of the relation schema $R$, denoted by $r(R)$, is a set 
 of n-tuples $r = t_{1}, t_{2}, ..., t_{m}$
