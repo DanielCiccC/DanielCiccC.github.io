@@ -336,3 +336,46 @@ across to 27002)
 
 ![alt text](assets\IMG40.PNG)
 
+![alt text](assets\IMG41.PNG)
+
+> Provides us with the security blueprint that we can implement
+> - standard so that we don't forget this
+
+### Variations on ISO2700x for the medical sector (IS)
+- There is also an ISO standard (27799) variant on the ISO 27002 for the medical sector ‘Health informatics - Information security management in health using ISO/IEC 27002 
+(https://www.iso.org/standard/62777.html)
+- It applies to health information in all its aspects, whatever form the information takes (words and numbers, sound recordings, drawings, video, and medical images), whatever means are used to store it (printing or writing on paper or storage electronically), and whatever means are used to transmit it (by hand, through fax, over computer networks, or by post), as the information is always appropriately protected.
+- By implementing ISO 27799:2016, healthcare organisations and other custodians of health information will be able to ensure a minimum requisite level of security that is appropriate to their organisation's circumstances and that will maintain the confidentiality, integrity and availability of personal health information in their care.
+
+> - Medical data, security standards need to be higher
+> - tips and hints on how you can secure your medical instrument
+>   - they get forgotten about when software upgrades happen
+>
+> Zero-day hacks available on websites
+
+### NIST security models (very important also)
+
+- Documents available from Computer Security Resource Center of the National Institute of
+Standards and Technology (NIST)
+  - SP 800‐12, The Computer Security Handbook
+  - SP 800‐14, Generally Accepted Principles and Practices for Securing IT Systems
+  - SP 800‐18, The Guide for Developing Security Plans for IT Systems
+  - SP 800‐26, Security Self‐Assessment Guide for Information Technology Systems
+  - SP 800‐30 (Revision 1), Risk Management Guide for Information Technology Systems
+- All these standards are freely available (in PDF) from https://www.nist.gov/
+… and there are many more standards for IS security (https://csrc.nist.gov)!
+
+> - Comparable to ISO
+
+### Design of security Architecture
+
+Once we have decided to use a particular standard, we have to set the foundation of the security framework
+
+**Levels of controls**
+- Management controls cover security processes designed by strategic planners and performed by security 
+administration
+- Operational controls deal with operational functionality of security in organisation (personnel/physical security,
+education, equipment maintenance)
+- Technical controls address technical implementations related to designing and implementing security
+
+![alt text](assets\IMG42.PNG)

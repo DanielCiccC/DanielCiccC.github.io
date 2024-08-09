@@ -21,7 +21,8 @@ Relations have specific properties, based on the mathematical set theory
 |**Component type** | **Example and description**
 | --- | ---
 | **Domain Types** | A domain D is a set of atomic values. An atomic value is indivisible (as far as the relational data model is concerned) <br> <br> Examples: <br> <br> - Integers <br> - Numbers and currency <br> - Fixed or variable length character strings <br> - Date, timestamp <br> - Sub-range from a data type  <br>  - e.g.,1 £ grade £ 7 <br> - Enumerated data type  <br> - e.g.  Gender in {‘Male’, ‘Female’, ‘Other’} <br> - Australian telephone numbers <br> - Format: the digits “61” followed by 9 digits 0 - 9 <br> - Car registration numbers <br>  - Format: 6 characters (either alpha or digits but no ‘Q’s allowed)
-|**Attributes** | Each attribute $A$ is the name of a role played by some domain $D$ in the relation named $R$. <br> The number of attributes in a relation $R$ is called the degree of $R$ <br> <br>  Example: salary is an attribute name <br> ![alt text](assets\IMG31.PNG)
+|**Attributes** | Each attribute $A$ is the name of a role played by some domain $D$ in the relation named $R$. <br>  <br>  Example: salary is an attribute name <br> ![alt text](assets\IMG31.PNG)
+|**Degree** | The number of attributes in a relation $R$ is called the degree of $R$ <br> Example - Exmployee relation of degree 4 <br>  ![alt text](assets\IMG31.PNG)
 |**Tuples** | Each tuple t is an ordered list of n values: <br>$t = <v_{1}, v_{2}, ... v_{n}>$ <br> where each value $v_{i}(1\le i \le n)$ is an element of the corresponding domain of attribute A i or a special value called “NULL”
 
 ### Domain attribute restrictions:
@@ -113,3 +114,26 @@ Enforcement of integrity constraints ensures that the database remains consisten
 Changes to the database such as **insert**, **modification** and **deletion** must not violate integrity constraints (leave the database in an inconsistent state).
 
 If a database update is submitted to the DBMS that would violate integrity, **it must be rejected**.
+
+### The Transaction Concept
+A transaction is an executing program that includes some database
+operations, such as reading from the database, or applying insertions,
+deletions, or updates to the database.
+At the end of the transaction, it must leave the database in a valid or
+consistent state that satisfies all the constraints specified on the
+database schema.
+
+
+![alt text](assets\IMG120.PNG)
+
+**Issues**
+
+![alt text](assets\IMG121.PNG)
+
+
+- Constraint 1: Every department should have at least one employee.
+- Constraint 2: Every employee must work for a department.
+
+**Problem**: Cannot create a new department since it has no employees.
+
+**Solution**: Use a transaction to insert information about a new department and its employee at the same time.
