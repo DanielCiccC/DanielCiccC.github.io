@@ -353,4 +353,169 @@ period $[T_{1}, T_{2}]$ embedded in the reference rate’s yield curve.
 ![alt text](assets\IMG37.PNG)
 
 > - should be 90 not 30 in the denominator
-> 
+
+## Optimal Hedging
+
+Last week we presented “perfect” hedging scenarios in which the:
+- Underlying asset of a futures/forward contract is precisely the asset we want to hedge an exposure to,
+- Number of assets we held was divisible by the contract multiplier m, enabling us to use an integer number of contracts.
+- Contract maturity date is precisely our desired hedging date.
+
+Perfect hedging scenarios are rare in practice:
+
+> So far presented unrealistic hedging
+> - Large diversified share portfolio, there is no futures contract that can perfectly hedge
+> - not exactly over the asset that we hold
+> - contract multiplier might not be divisible
+> - date might not be the exact maturity date
+> - Use some sort of futures contract
+>   - not sure if contract will materialise on maturity date
+
+### Example
+- An Australian wheat farmer may want to hedge their exposure to their wheat price, but there may be no contracts over the exact type or grade/quality of their wheat.
+- You hold a fairly diversified equities portfolio of USA stocks, but its composition and weights do not exactly match those of the S&P500 or NASDAQ indices, etc.
+- You might want to hedge on a date falling in a month not covered by a say quarterly contract maturity date cycle.
+
+### Basis Risk
+We saw above that the contract price K is usually different to the spot price S of the underlying asset. Our pricing equations, such as
+
+$$K=Se^{(r+s-q)T}$$
+
+for commodity futures, tell us that the diff erence between K and S,
+which we call the basis, is due to the cost of carry r + s − q.
+- As the cost of carry changes over time, the basis changes,
+introducing basis risk: K may not be perfectly correlated with S.
+
+**Remark**
+The situation is even more complicated if the asset we hold and
+want to hedge is not the same as the contract’s underlying asset.
+
+> - interest rates, storage costs change every day
+> - difference between contract price and spot price
+>   - when we do perfect hedging
+
+The time t basis B t is the difference between K t and S t , namely:
+
+$$B_{t} = K_{t}-S_{t}$$
+
+Note that the basis approaches 0 over time, and $K_{T}=S_{T}$ at maturity.
+
+![alt text](assets\IMG38.PNG)
+
+> hedging with a different maturity date, don't know what the basis is going to be
+> - basis risk
+
+### Optimal hedging
+Optimal hedging basically means minimising basis risk. Suppose:
+- We hold Q units in an asset at time $t = 0$.
+  - Its price at time $t$ is denoted by $A_{T}$.
+- We want to sell our holding at time t.
+  - We want to hedge our exposure to a fall in the asset price.
+- There is a futures contract maturing at time T, with t < T.
+  - The underlying asset of the futures contract S may not necessarily be the same as the asset A we hold.
+- We short h units of the futures contract at time $t = 0$ for K.
+- We sell our asset holding and close out the futures position at time t.
+How many contracts h should we short?
+
+> - minimise basis risk
+> - Hypothetical time t=0
+> - exposed to the price of the asset falling
+>   - asset to short to hedge this risk
+>   - may not necessaily be on the same date 
+> - We still sell the contract, even if they might not be exactly the same (but are correlated)
+>   - probably use the contract to hedge exposure
+>   - given all uncertainties (basis risk)
+
+### Optimal hedging
+
+At time t, the liquidation value (net cashfl ow) of our position is
+
+$$L_{t}=QA_{t}+h(K-K_{t})m$$
+
+- Q is the number of units we hold in our asset.
+- A t is the time t price of our asset (we let A = A 0 ).
+- h is the number of futures contracts we shorted.
+- K is the contract price at time t = 0 when we went short.
+- K t is the contract price at time t when we went long to close out.
+- m is the futures contract multiplier.
+
+> - sell our asset holding at $t$
+>
+> We were holding Q units, and going to sell at $A_{t}$
+> - total amount from liquidating everything, closing out our holdings
+> - $QA_{t}$ when we sell our asset
+> - $h(K-K{t})m$ when we liquidate our hedged position
+>
+> In perfect hedging, lock in perfect liquidation value
+> - Liquidation value is certain
+> - Asset we hold is the asset in the contract
+> - $t=0$ when we establish our hedge, dont know our asset price at $t$
+> - minimise the variance/volatility on the liquidation day
+>
+> Perfect hedging, lock in liquidation value
+> - optimal - minimise risk/volatility
+> - Get as much certainty as possible in liquidation value
+
+In an imperfect hedging scenario, in which there is basis risk, we
+choose $h$ that minimises the variance in the liquidation value $L_{t}$.
+
+Then h is called the minimum variance or optimal hedge quantity.
+- At time $t = 0$, $A_{t}$ and $K_{t}$ are unknown, thus random variables.
+
+We use the following notation:
+
+![alt text](assets\IMG39.PNG)
+
+> $A_{t}$ and $K_{t}$ are unknown and not necessarily correlated
+
+
+We can prove that the optimal or minimum variance hedge quantity $h$, which minimises the variance in the above liquidation value, or equivalently minimises basis risk, is given by
+
+$$h=\rho \frac{\sigma_{A_{t}}Q}{\sigma _{K{t}}m}$$
+
+**Remark**
+The number $\frac{\sigma_{A_{t}}Q}{\sigma _{K{t}}m}$ is called the minimum variance or optimal hedge ratio.
+
+> - proportion of futures contracts to 1 futures contract
+> - Can calculate them with historical data
+
+![alt text](assets\IMG40.PNG)
+
+> - two sample data sets of price increments
+> - calculate the variance, and the correlation between the two
+> - optimal hedge quantity given by the expression
+
+Also, suppose that in the above we used daily returns (A n − A n−1 )/A n−1
+and (K n − K n−1 )/K n−1 to calculate ¯σ A , ¯σ K and ¯ρ.
+
+- Then the optimal hedge quantity is given by
+
+![alt text](assets\IMG41.PNG)
+
+> - optimal standard deviation of standard returns of contract price
+> - Sample correlation of daily returns
+> - Still the hedge ratio, multiplied by the asset value of the face value of the asset
+>
+> - V could represent a portfolio value
+
+**Example**
+You hold Q = 4, 600 Tesla shares and are worried that Tesla has
+been very volatile lately and will fall back to its recent lows.
+
+![alt text](assets\IMG42.PNG)
+
+Suppose you’re not aware of any individual share futures on Tesla, so you decide that the “next best thing” is MICRO NYSE FANG+ Index Futures, since the NYSE FANG+ Index contains only 10 stocks and surely they must all be fairly positively correlated.
+
+> - FAANG+ index is fairly correlated with tesla
+
+![alt text](assets\IMG43.PNG)
+
+![alt text](assets\IMG44.PNG)
+
+**Example 2**
+
+![alt text](assets\IMG45.PNG)
+
+![alt text](assets\IMG46.PNG)
+
+![alt text](assets\IMG47.PNG)
