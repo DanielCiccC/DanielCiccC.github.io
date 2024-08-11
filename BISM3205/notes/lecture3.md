@@ -379,3 +379,220 @@ education, equipment maintenance)
 - Technical controls address technical implementations related to designing and implementing security
 
 ![alt text](assets\IMG42.PNG)
+
+> - spheres of use (LHS) and spheres of protection (RHS)
+>
+> Information sits in the middle
+> - systems embedded in networks, embedded in the internet
+
+### Design of security architecture (continued)
+- Defense in depth
+  - Implementation of security in layers
+  - Requires that organisations establish multiple layers of security controls and safeguards
+- Security perimeter
+  - Border of security protecting internal systems from outside threats
+  - Does not protect against internal attacks from employee threats or on-site physical threats
+
+**Diagrams and concepts explored later in course – introduced here**
+- Firewall: device that selectively discriminates against information flowing in or out of organisation
+- DMZs: no ‐ man’s land between inside and outside networks where some place Web servers
+- Proxy servers: performs actions on behalf of another system
+- Intrusion detection systems (IDSs): An effort to detect unauthorized activity within inner network,
+or on individual machines, organisation may wish to implement an IDS
+
+> Defense in depth:
+> - several layers of security - not just a lock on the front door, login/password
+> - applied to networks
+> 
+> ![alt text](assets\IMG43.PNG)
+>
+> - piece of network in between, 
+> - protective area
+> - website will sit in the DMZ
+> - Want to access company data, have to go through a proxy server
+> email will go thru proxy server
+
+
+![alt text](assets\IMG44.PNG)
+
+> - internet, wild west
+> - DMZ - proxy server and firewall
+> - data server when you are working within the company
+> - VPN
+>   - VPN server in the DMZ that will create a secure encrypted tunnel to act as a computed on a trusted network
+
+## Part 2: Three Lines of Defense vs. Five Lines of Assurance 
+
+- Sometimes they are legislated
+
+
+> Why do we care about governance frameworks?
+> - I dont care, I don't have money or time
+>
+> They are legislated
+> - it is the law
+> - Authority (APRA) makes sure there is compliance
+
+### 3LoD for Cyber Security
+
+![alt text](assets\IMG45.PNG)
+
+First LoD is the function that owns and manages
+risk. Within the first LoD, businesses can set up 
+control functions (e.g., IT control, which reports to 
+the IT department) to faciliate the management of 
+risk. 
+
+Second LoD is the independent 
+control function (e.g., IT risk, IT 
+compliance) that oversees risk and 
+monitors the first LoD controls. 
+They can challenge the 
+effectiveness of controls and 
+management of risk across the 
+organisation. 
+
+Third LoD is internal audit, which provides 
+independent assurance. It provides the well-
+informed sense of assurance that the risks and 
+controls are in balance. It provides evidence, that 
+risks and controls are in balance. They evaluate 
+how effective the other two lines of defense are. 
+How effective are our controls, how effective is our 
+risk management.
+
+> First line of defense
+> - the function that owns and manages the risk
+> - IT control, reporting to IT department
+>
+> Second line of defense
+> - independent control function
+> - challenge the effectiveness and controls across the organisation
+>
+> Third line
+> - internal audit checking at regular intervals
+
+### Owners and key activities of the First Line of Defense
+
+- Operational managers that own and manage risks and controls
+- Implement corrective actions to address process and control deficiencies
+*Common first line of defense activities:*
+- Administer security procedures, training, and testing
+- Maintain secure device configurations, up-to-date software, and security patches
+- Deploy intrusion detection systems and conduct penetration testing
+- Securely configure the network to adequately manage and protect network traffic flow
+- Inventory information assets, technology devices, and related software
+- Deploy data protection and loss prevention programs with related monitoring
+- Restrict least-privilege access roles
+- Encrypt data where feasible
+- Implement vulnerability management with internal and external scans
+- Recruit and retain certified IT, IT risk, and information security talent
+
+
+### Owners and key activities of the Second Line of Defense
+- IT risk management and IT compliance functions
+- Play key role in an organisation‘s security posture and program design
+- Responsible for:
+  - Cybersecurity-related risk assessment and alignment with organisation‘s risk appetite
+  - Monitoring risks and changes to laws and regulations
+  - Collaborating with the first-line functions to ensure appropriate control design
+
+> - controls are covering the risk
+> - risk that is not covered is the residual risk
+>   - large risk appetite, residual risk will be bigger
+>   - very risky to do something, but very beneficial
+>   - risk a lot for a big benefit
+
+
+*Common Second Line of Defense Activities:*
+- Design cybersecurity policies, training, and testing
+- Conduct cyber risk assessments
+- Gather cyber threat intelligence
+- Classify data and design least-privilege access roles
+- Monitor incidents, key risk indicators, and remediation
+- Recruit and retain certified IT risk talent
+- Assess relationships with third parties, suppliers, and service providers
+- Plan/test business continuity and participate in disaster recovery exercises
+
+> Have a procedure, somebody has to do it
+> - cyberthreat intelligence
+
+
+### Owners and Key Activities of the Third Line of Defense
+- Internal audit function assesses whether IT governance supports organisation‘s strategies and objectives
+- Coordinates with second LoD, particularly cybersecurity function
+- Can be consulted regarding:
+  - The relationship between cybersecurity and organisational risk
+  - Prioritizing responses and control activities
+  - Auditing for cybersecurity risk mitigation across all relevant facets (e.g., privileged access)
+  - Assurance in remediation activities
+  - Raising risk awareness and coordinating with cybersecurity risk management
+  - Validating that cybersecurity provisions are included in the organisation‘s business continuity plans
+
+> EY, KPMG etc. do internal audits
+> - remediation, come into check you have followed process correctly
+
+### Common Third Line of Defense Activities
+- Provide independent ongoing evaluations of preventive/detective measures related to cybersecurity
+- Evaluate IT assets of users with privileged access for standard security configurations
+- Track diligence of remediation
+- Conduct cyber risk assessments of service organisations, third parties, and suppliers
+
+### General 3LoD
+
+![alt text](assets\IMG46.PNG)
+
+Problem: Senior management and board of directors are not considered to be a part of a defense line
+
+> Come up with 5 lines of assurance model
+
+### Overview of Five Lines of Assurance Model (5LoA)
+
+![alt text](assets\IMG47.PNG)
+
+> defense has changed to 'assurance'
+> - defense has a negative stereotype
+>   - often seen as the office of 'no'
+>
+>  Board also has the responsibility of assessing the risk status
+
+### Overview of Five Lines of Assurance Model (5LoA)
+- The word "defense" has a sort of negative feel to it. Risk managers are often seen as the "office of 
+no" but risk avoidance as we will see is only one form of treating risk
+- So moving away from this negative stereotype the people who promoted this model, wanted the risk 
+management unit to be seen as a function that has potential to help management to increase the 
+certainty that key objectives in an organisations will be obtained, while still operating within an 
+acceptable level of risk. So here it is about assurance, about value-creation objectives rather than 
+preventing value erosion
+- How to make sure value is created with appropriate risk levels rather than focusing on avoiding risks 
+at all costs
+So, the 5LoA model significantly elevates two roles. The role of CEOs and the 
+role of the Boards of Directors in risk governance - the C-Suite (everyone with a 
+C or Chief in the title, e.g. CIO, CISO, CRO etc.
+
+### Core Elements of 5LoA
+- Uses an "objectives register" as a foundation (see figure below)
+- Clear accountability on who is responsible for reporting on residual risk status
+- Risk assessment rigour and independent assurance requirements defined by C-suite and the board
+
+![alt text](assets\IMG48.PNG)
+
+> - some companies use a risk register
+
+
+### Core elements of 4LoA
+Active board/senior management involvement and clarity around 
+their responsibility as the “ultimate line of defence“
+
+- Requires the full range of risk treatments* be identified and 
+assessed not just “internal controls“
+
+![alt text](assets\IMG49.PNG)
+
+> - put the penalty is they don't perform
+
+- Primary focus is on the acceptability of residual risk status
+- Specific consideration whether risk treatments are optimized
+
+![alt text](assets\IMG50.PNG)
+

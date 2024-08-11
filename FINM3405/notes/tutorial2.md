@@ -88,4 +88,4 @@ $$= 10(500 - 367.3)\cdot 100 = 132,700_{HKD}$$
 - You are exposed to the risk of interest rates decreasing, resulting in a lower investment yield on your money
   - (the interest your getting paid will be less)
 
-- FV of a 90 bank bill is always $1m
+- FV of a 90 bank bill is always $1m 
