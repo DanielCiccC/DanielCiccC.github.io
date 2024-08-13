@@ -89,3 +89,17 @@ $$= 10(500 - 367.3)\cdot 100 = 132,700_{HKD}$$
   - (the interest your getting paid will be less)
 
 - FV of a 90 bank bill is always $1m 
+
+$$F=1,000,000$$
+
+- To manage this risk you enter into $h=3$ BAB futures at the fixed rate receiver
+- Effectively locking in the interest rate on investing in BABs with a face value of \$5,000,000 in December
+
+**Payoff**
+- The face value of 1 BAB futures is $F=1,000,000$, so we're entering $h=5$ as fixed rate receiver
+
+$100$ = last trade
+
+$100-95.6 = 4.4%$
+
+The last traded December BAB futures price was 95.6, $\therefore$ a fixed rate of $K=4.4%$
