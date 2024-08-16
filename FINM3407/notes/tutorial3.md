@@ -131,3 +131,8 @@ market manipulation, and reducing information asymmetry. However, over-regulatio
 
 ### Q17 
 - on iPad
+
+- Conservatism, people are slow to update their beliefs and underreact
+- Regret avoidance, want to decrease their potential losses in the future. Reluctant to bear loss
+- Mental accounting - people will value their money for different aims, differently
+- Disposition effect - do not want to realise their losses. 

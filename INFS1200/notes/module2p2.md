@@ -84,3 +84,13 @@ For each subclass entity type
 
 
 ![alt text](assets\IMG54.PNG)
+
+### Sparse Relationships
+Note: 1:1 and 1:N relationships can be mapped in the same way as M:N
+Advantageous when the relationship is sparse as it reduces the number 
+of “NULLs” that appear as foreign key values.
+
+![alt text](assets\IMG122.PNG)
+
+> - IF it is sparse, there are a lot of NULLs
+> - instead of generating all these NULLs, we can introduce a new *Relation* to capture the relationship between *1:1*, *1:N* or *N:1* relationships.

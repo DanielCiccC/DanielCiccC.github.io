@@ -102,6 +102,17 @@ For each subclass entity type</p>
 <li dir="auto">Include all simple attributes which are not composite, derived or multivalued.</li>
 </ol>
 <p dir="auto"><img src="assets\IMG54.PNG" alt="alt text" data-src="assets/IMG54.PNG"></p>
+<h3 dir="auto" id="sparse-relationships">Sparse Relationships</h3>
+<p dir="auto">Note: 1:1 and 1:N relationships can be mapped in the same way as M:N
+Advantageous when the relationship is sparse as it reduces the number
+of “NULLs” that appear as foreign key values.</p>
+<p dir="auto"><img src="image-2.png" alt="alt text" data-src="image-2.png"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">IF it is sparse, there are a lot of NULLs</li>
+<li dir="auto">instead of generating all these NULLs, we can introduce a new <em>Relation</em> to capture the relationship between <em>1:1</em>, <em>1:N</em> or <em>N:1</em> relationships.</li>
+</ul>
+</blockquote>
 
 </main>
 </body>
