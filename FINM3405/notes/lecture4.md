@@ -162,5 +162,295 @@ And out of the very large volume of equity derivatives trading worldwide from th
 ![alt text](assets\IMG53.PNG)
 
 > It goes without saying that equity index options dwarf everything else.
+
+### Share and ETF options
+
+Starting with individual share and ETF options, most trading by volume is in the USA (NASDAQ, CBOE, NYSE, MIAX, ISX combined).
+
+![alt text](assets\IMG54.PNG)
+
+> And the heaviest share options trading is in Apple and Tesla:
+
+
+**Contracts and product specifications**
+- Symbol, 
+- Underlying asset (normally 100 shares) $m=100$
+- Strike prices go up in discrete increments
+  - A lot of options contracts (maturing 1 month, 3 months, etc)
+  - At the money stock prices are usually listed first
+- Expiration date
+- Expiration month
+- Expiry dates available on the exchange
+- Most share options are American
+  - Also offer European individual share options
+  - Short party can only earn the premium
+  - Go short an option, loss if potentially quite huge, will have a daily margin mechanism
+
+**Options on ASX**
+- American and European
+- Exercise style
+- Exercise price
+  - If your option is physically in the money, may have to provide the shares (long/put) have to physically provide the shares
+
+> Individual share options
+> - typically American
+
+## Index options
+
+![alt text](assets\IMG55.PNG)
+
+> Turning to index options, it has taken off worldwide:
+
+![alt text](assets\IMG56.PNG)
+
+> - bunch of retail everyday investor trading small amounts
+> - American is bigger in terms of the size of the contract
+
+**Share index contract specifications**
+- Contract type, European,
+- CBOE S&P500 Index options:
+  - American contracts, very common
+- Cash settled, not physically settled
+
+
+## Currency Options
+Turning to currency options, they previously didn’t but now do have
+roughly the same trading volume as currency futures:
+- always cash settled
+- 
+![alt text](assets\IMG57.PNG)
+
+> ASSIGNMENT
+> - what contracts were available to him, payoffs available, etc.
+
+### Pricing relationships and Bounds
+That’s enough for looking at the major exchange traded options contracts worldwide. Note that, as we also know, OTC markets are huge and options contracts traded on them tend to be less standardised, with
+more complex and exotic options being traded. We cover some of these exotic options later in the course.
+- We now turn to option pricing bounds and put-call parity.
+
+### Put-call Parity
+
+Developing mathematical models for pricing options (calculating the fair value of the option premium), such as the Black-Scholes option pricing model, is a major part of the theory and practice of options.
+- We cover the basics in later lecture notes, starting next week with the celebrated Black-Scholes option pricing model.
+  - But before covering formal option pricing models, we can use no arbitrage arguments to show that there are pricing relations and bounds that at least plain vanilla options prices must adhere to and satisfy.
+- We start with the (possibly already familiar) put-call parity relation.
+
+> - Basic arbitrage arguments
+>   - certain relationships that need to hold
+>   - options premiums at need to hold
+> - Use certain pricing bounds to guide where you are going
+
+Put-call parity gives a strict relation that must hold, due to no arbitrage
+arguments, between the prices P and C of European put and call options
+over the same underlying asset and with the same strike K and expiry T:
+
+Form a portfolio long 1 European call and short 1 European put,
+both with the same underlying, strike and expiry.
+
+This portfolio’s current price is C − P and its payoff at expiry is
+
+$$\text{portfolio payoff} = \underbrace{\max\{0, S_T - K\}}_{\text{long call}} - \underbrace{\max\{0, K - S_T\}}_{\text{short put}}$$
+$$= S_T - K$$
+
+
+This is easy to show:
+- If $S_{T} > K$ then the payoff is $S_{T} − K − 0 = S_{T} − K$.
+- If $S_{T} < K$ then the payoff is $0 − (K − S_{T} ) = S_{T} − K$.
+- Finally, if $S_{T} = K$ then the payoff is $0 − 0 = 0 = S_{T} − K$.
+
+But $S_{T} −K$ is precisely the payoff of a long futures contract position over the underlying with contract price K and maturity date $T$.
+
+So the value $C − P$ of this portfolio long 1 call and short 1 put must equal the value of a long futures position with price $K$.
+- Since their payoff s are equal, or else there is an arbitrage opportunity.
+
+
+- Let $X=Se^{rT}$ be the theoretically correct futures contract price.
+- If we’re long at K we could go short to close out the position at X.
+- The value of this long futures contract position is
+
+
+$$v^{long}=e^{-rT}(X-K)$$
+
+
+So put-call parity is $C − P = e^{−rT}(X − K)$, which we rearrange to
+
+$$C − P = S − e^{−rT}K$$
+
+noting that $e^{−rT} X = e^{−rT} Se^{rT} = S$.
+
+> - Theoretically exit out of the contract $X$
+> Put call parity
+> - price of a long call and a short put option must equal the value of a long futures contract
+
+
+**Remark** Put-call parity is also useful for equity options, in which we
+assume a continuously compounded annual dividend yield $q$.
+- Here, the theoretically correct futures price is $X = Se^{(r−q)T}$ so put-call parity 
+$$C − P = e −rT (X − K)$$
+
+becomes
+$$C − P = e^{−qT}S − e^{−rT}K$$
+
+Note also that we tend to use continuous compounding for options.
+
+## Option pricing bounds
+
+We now present pricing bounds that option prices must adhere to.
+- If they don’t satisfy these bounds then arbitrage opportunities exist.
+
+First note that American options are worth at least as much as European
+options over the same underlying and with the same strike and expiry:
+
+$$0 ≤ C_{Eu} ≤ C_{Am}$$
+and 
+$$0 ≤ P_{Eu} ≤ P_{Am}$$
+
+because American options can be exercised any time up to and including
+expiry, but European options can only be exercised at expiry.
+
+- American options provide more flexibility and opportunity to profit.
+
+> - over the same underlying asset, same strike price, etc.
+
+And American options are worth at least their intrinsic (exercise) value:
+
+$$\max{0, S − K} ≤ C_{Am}$$
+and 
+$$\max{0, K − S} ≤ P_{Am}$$
+(lower pricing bounds) because they can be exercised immediately
+
+> - At any point in time you can exercise and realise that in an American Options
+>   - At least as much as the actual payoff
+
+Also, American calls can never be worth more than the underlying, and
+American puts can never be worth more than the strike:
+
+$$C_{Am} ≤ S$$
+and 
+$$P_{Am} ≤ K$$
+
+(upper pricing bounds). Proving this is left as a tutorial exercise.
+
+Combining the lower and upper bounds from the previous two slides leads
+to the important pricing bounds for American options:
+
+$$ \max (0, S − K) ≤ C^{Am} ≤ S \: \: \text{and} \: \: \max (0, K − S) ≤ P^{Am} ≤ K$$
+
+**European options**
+
+Turning to European options, we can tighten an upper bound for puts to
+
+$$0 \le P^{Eu} \le Ke^{-rT}$$
+
+because a European put can only be exercised at expiry, where it is known with certainty that their maximum payoff at expiry is $K$.
+
+**Remark**
+From this, deep in-the-money European puts can have negative time value (their premium can be less than their intrinsic value).
+- Their maximum payoff is $K$. So if they’re already deep in the money, not much more payoff can be realised at expiry, but the underlying asset could still move unfavourably.
+
+
+> - If you hold a European put option deep in the money (price of the asset is really low)
+>   - European option, have to wait to expiry, could ruin payoff
 >
-> 
+> Options trader, deep in the money very likely it gets exercised
+> - Trade options and short, have to be careful in situations where people exercise
+>
+> Writing a naked option - writing an option with no asset
+>  - opposite to being totally covered
+
+
+Furthermore, we can use put-call parity
+
+$$C^{Eu} - P^{Eu} = e^{-qT}S-e^{-rT}K$$
+
+> - basic put call parity relation
+
+to derive further lower bounds on European options.
+- Since option prices are nonnegative, for European calls we get
+
+$$\max(0, e^{-qT}S-e^{-rT}K) \le C^{Eu} \le S$$
+
+> - have upper pricing bounds, $\le$ the stock price
+> - Lower pricing bound, if we remove $-P^{Eu}$ which must have a positive premium, then removing it from the above equation would mean $e^{-qT}S-e^{-rT}K$ must be less than $C^{Eu}$    
+
+and for European puts we get
+
+$$\max(0, e^{-rT}K - e^{-qT}S) \le P^{Eu} \le Ke^{-rT}$$
+
+> - similar reasoning to above.
+
+## No dividends: No early exercise of American calls
+We actually have everything needed to show that early exercise is never
+optimal for an American call option on a non-dividend-paying stock:
+
+- Under no dividends, so $q = 0$, from above we start with
+
+$$\max (0, S − e^{−rT}K) ≤ C^{Eu} ≤ C^{Am}$$
+
+- If $r > 0$ then $e^{−rT} K < K$ and we get a strict inequality
+
+$$\max(0, S − K) < \max (0, S − e^{−rT}K) ≤ C^{-rT} ≤ C^{Am}$$
+
+But $\max(0, S − K)$ is just the call’s intrinsic value. So if there’s no dividends, call options will always have strictly *positive time value*.
+
+
+> - no value in early exercising a call option on a non-dividend option paying stock
+> - Actual price of an American option
+> - worth exercising if the theoretical price equals its intrinsic value
+>   - always be valued greater than the payoff
+
+- Under no dividends you never exercise an American call early.
+  - The early exercise feature of American calls is worthless.
+- So the American and European call prices are equal: $C^{v} = C^{Am}$.
+- And the pricing bounds for European and American calls combine:
+
+$$\max(0, S-e^{-rT}K) \le C^{Eu} \le S$$
+
+> - option of a non-dividend paying asset, lower bound is the same
+
+**Remark** If there is dividends, it may be optimal to exercise an American call on the day before the ex-dividend date. In any case early exercise may be optimal for deep in the money American puts.
+
+
+## Summary of pricing bounds
+
+$$ \max (0, S − K) ≤ C^{Am} ≤ S $$
+$$\max (0, K − S) ≤ P^{Am} ≤ K$$
+
+European:
+$$\max(0, e^{-qT}S-e^{-rT}K) \le C^{Eu} \le S$$
+$$\max(0, e^{-rT}K - e^{-qT}S) \le P^{Eu} \le Ke^{-rT}$$
+
+Call options on non-dividend paying underlying:
+
+$$\max(0, S - e^{-rT}K) \le C^{Eu} = C^{Am} \le S$$
+
+
+## Time value
+- And what exactly is time value?
+From above, we noticed that call options on non-dividend-paying stocks
+have a premium that is strictly larger than the option’s intrinsic value.
+- We define an option’s time value as the difference between the
+option premium and its intrinsic value:
+
+$$time value = premium − intrinsic value$$
+
+A better way to think of it is that the option’s premium is made up of
+the option’s intrinsic value plus the option’s time value:
+
+$$\text{premium = intrinsic value + time value}$$
+
+> - options are worth more than their intrinsic value
+>   - fair bit of time to expiry
+>   - can still move in a direction that favours you
+>   - can move in opposite direction, but loss is capped
+
+- Intrinsic value: Represents the option’s payoff if the option expired at that moment in time - the exercise value.
+- Time value: Represents the possibility that the price of an option’s underlying will move favourably for the option holder before expiry.
+
+![alt text](assets\IMG58.PNG)
+
+> - value of the premium of the call option is a small curve
+>  - positive time value
+> - given a fixed strike price
+>
+> European put option deep in the money, can have a negative time value
