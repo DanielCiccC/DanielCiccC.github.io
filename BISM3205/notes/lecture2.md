@@ -140,14 +140,14 @@ Information Security Statistics & Phishing
 
 ![alt text](assets\IMG15.PNG)
 
-# Threat #5: Denial of Service
+### Threat #5: Denial of Service
 
 - Denial ‐ of ‐ service (DoS): attacker sends large number of connection or information requests to a target
   - Target system cannot handle successfully along with other, legitimate service requests
   - May result in system crash or inability to perform ordinary functions
 - Distributed denial ‐ of ‐ service (DDoS): coordinated stream of requests is launched against target from many locations (zombies or bots – compromised machines) simultaneously
 
-# Threat #6: Deliberate Software Attacks
+### Threat #6: Deliberate Software Attacks
 - Malicious software (malware) designed to damage, destroy, or deny service to target systems
 - Includes the following malware attack vectors:
   - Viruses & Worms (self-replicating)
@@ -163,7 +163,7 @@ Information Security Statistics & Phishing
 > - worm hoaxes
 >   - 'click here to remove the virus' actually gives you a virus
 
-# Malware Control Strategy
+### Malware Control Strategy
 
 ![alt text](assets\IMG16.PNG)
 
@@ -488,4 +488,4 @@ What’s different to previous laws?
 - Telecommunications Act 1997: only permits to intercept or access communications and data under certain circumstance.
 - Identity and Disrupt Bill 2021: unprecedented interception or “hacking” powers (access can be gained to encrypted data which could be copied, deleted, modified, and analysed even before its relevance can be determined).
 
---- REST NOT EXAMINABLE`
+--- REST NOT EXAMINABLE
