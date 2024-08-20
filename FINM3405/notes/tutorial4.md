@@ -9,4 +9,8 @@ The payoff to the taker/holder of an option is non-negative, so this party can p
 - Calls: when $S_{T} > K$
 - Put: when $S_{T} < K$
 
+- An option is in-the-money (ITM) if the spot price of the underlying asset is currently "in the holders favour", meaning that it is greater than the strike price in the case of a call, and less than the strike price in the case of a put.
 
+- An option is at-the-money (ATM) is the spot price of the underlying asset is equal to the strike price. 
+
+- An option is out-of-the-money (OTM) 
