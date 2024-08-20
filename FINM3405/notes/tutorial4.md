@@ -20,4 +20,16 @@ The payoff to the taker/holder of an option is non-negative, so this party can p
 
 - Naked means writing them with "Nothing backing them". Contrasting this with covered options:
 
-- A covered call -> involved writing call options over an asset that you already hold to a $FV$ of $F=hkm$ not exceeding the total value of the asset $V=QS$ of your asset
+- A covered call -> involved writing call options over an asset that you already hold to a $FV$ of $F=hkm$ not exceeding the total value of the asset $V=QS$ of your asset holding.
+  - So, if you were exercised in a call option and had to sell the underlying asset to the holder, you have the holding in the underlying asset to cover this.
+- A covered put involves writing put options to $F=hkm$ no exceeding a total amount of cash you have on hand available to cover having to buy the underlying asset if you get exercise
+
+- $h$: no. contracts
+- $k$: strike price
+- $m$: contract multiplier
+- $S$: Spot price
+- $Q$: The number of units of the asset we hold
+
+### Q1 7. What is the intrinsic value and time value of an option?
+
+An options intrinsic value 
