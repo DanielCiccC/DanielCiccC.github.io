@@ -18,7 +18,7 @@ For each entity type
 For each weak entity type
 1. Create a relation
 2. Set its primary key as the combination of the primary keys of owner
-entities and its own partial key.
+entitie**s** and its own partial key.
 3. Include a foreign key from the relation to the primary key of the relation of its owner entity types.
 4. Include all simple attributes which are not composite, derived or multivalued.
 

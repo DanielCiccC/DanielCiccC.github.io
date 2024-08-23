@@ -324,4 +324,36 @@ The ideas of risk-neutral pricing and geometric Brownian motion are central to a
 - We touch on the very basics as a starting point into more advanced quantitative finance.
 - We will also use both concepts for pricing options via Monte Carlo simulation in a few weeks time.
 
+> - Risk-neutral approach
+>   - Present some exotic options, priced with Monte Carlo techniques
+
+
+It’s important to note that the Black-Scholes model is derived under a
+large list of assumptions. Some of these include what might be called the
+“usual assumptions” in financial theory and modelling:
+- Constant risk-free rate r and volatility σ over life of option.
+- No restrictions on borrowing and lending.
+- Borrowing and lending rates are equal.
+- No transaction costs like brokerage, bid-ask spreads, taxes, etc.
+- Assets are infinitely divisible (can buy “1.0346” units).
+- No restrictions on short selling.
+- Trading is continuous (at infinitesimally small time intervals).
+- There are no arbitrage opportunities in markets.
+
+> - Standard market modelling - Black Scholes
+>   - usual assumptions you come across in classical theory
+>   - Assumptions around people's behaviour
+>   - Borrowing and lending rates equal, etc.
+
+We’re not so much interested in them as we are in the assumption on the
+stochastic or random process followed by the underlying asset.
+- This assumption basically characterises the Black-Scholes framework
+and tells us the correct interpretation of the volatility parameter σ.
+In the risk-neutral pricing approach, we can prove that the underlying
+asset follows **geometric Brownian motion (GBM)**
+
+$$S_{t} = Se^{(r-\frac{1}{2} \sigma ^{2})t + \sigma \sqrt{t} Z} \: \: \text{for} \: \: 0 \le t \le T$$
+
+> - Assumptions of the underlying asset
+> - Underlying assets returns are normally distributed
 
