@@ -1,0 +1,656 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-4-and-5-2">Lecture 4 and 5</h1>
+<p dir="auto">In the realm of cybersecurity, Governance, Risk Management, and Compliance (GRC) serves as a fundamental
+framework. It guides organizations in implementing robust security measures by integrating critical elements:</p>
+<ul dir="auto">
+<li dir="auto"><strong>Governance</strong>: This encompasses policies, rules, and frameworks that align with business goals. It defines
+responsibilities for key stakeholders, such as the board of directors and senior management. Good corporate
+governance includes ethics, accountability, transparent information sharing, conflict resolution policies, and
+resource management.</li>
+<li dir="auto"><strong>Risk Management</strong>: Businesses face various risks—financial, legal, strategic, and security-related. Proper risk
+management involves identifying these risks and finding ways to mitigate them. For instance, risk assessments
+help uncover security vulnerabilities in computer systems.</li>
+<li dir="auto"><strong>Compliance</strong>: Compliance involves adhering to rules, laws, and regulations. It applies to both external
+regulations set by industry bodies and internal corporate policies.</li>
+</ul>
+<p dir="auto"><strong>Why is GRC important?</strong> Implementing GRC programs allows businesses to make better decisions in a risk-
+aware environment. An effective GRC strategy helps stakeholders set policies, comply with regulations, and
+align the entire company around shared values and actions. Benefits include data-driven decision-making and
+responsible operations.</p>
+<p dir="auto"><strong>Imagine your next professional interview, you have a business degree and the committee asks you:</strong>
+<strong>“How would you approach risk management?”</strong></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">How would you appraoch risk management iff someone approached you in an interview</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="introduction-e28093-overview-1-2">Introduction – Overview (1)</h3>
+<p dir="auto">Organisations must design and create safe environments in which business processes and procedures can
+function.</p>
+<p dir="auto"><strong>Risk management</strong>: process of identifying and controlling risks facing an organisation – comprises three
+major undertakings:</p>
+<ol dir="auto">
+<li dir="auto"><strong>Risk identification</strong>: process of examining an organisation’s current IT security situation</li>
+<li dir="auto"><strong>Risk assessment</strong>: determining the extent to which the assets are exposed or at risk</li>
+<li dir="auto"><strong>Risk control</strong>: applying controls to reduce risks to an organisation’s data and information systems</li>
+</ol>
+<p dir="auto"><img src="assets\IMG51.PNG" alt="alt text" data-src="assets/IMG51.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Identify assets, laborious process
+<ul dir="auto">
+<li dir="auto">computers, databases, servers, people</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Identify threats</p>
+<ul dir="auto">
+<li dir="auto">What are the attack vectors?</li>
+<li dir="auto">large spreadsheets and/or specialised software</li>
+</ul>
+<p dir="auto">Assess the risk</p>
+<ul dir="auto">
+<li dir="auto">is the impact little or big?</li>
+<li dir="auto">Likelihood can be put into a risk matrix</li>
+<li dir="auto">Frequency and the impact (severity)</li>
+</ul>
+<p dir="auto">Develop mitigation strategies</p>
+<ul dir="auto">
+<li dir="auto">Identify which risk is most important</li>
+</ul>
+<p dir="auto">Implement controls</p>
+<ul dir="auto">
+<li dir="auto">business constantly changing, have to develop mitigation strategies</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Know yourself: identify, examine, and understand the information and systems currently in place</li>
+<li dir="auto">Know the ‘threats’: identify, examine, and understand the threats facing the organisation</li>
+<li dir="auto">Responsibility of each community of interest within an organisation to manage the risks that are encountered</li>
+</ul>
+<p dir="auto"><img src="assets\IMG52.PNG" alt="alt text" data-src="assets/IMG52.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">In general a process business people can perform</li>
+<li dir="auto">Work with IT people, because the controls will be IT controls</li>
+</ul>
+<p dir="auto">Risk Identification</p>
+<ul dir="auto">
+<li dir="auto">Classify, value them, prioritise them, etc.</li>
+<li dir="auto">might need to work with other peopemin the team</li>
+</ul>
+<p dir="auto">Risk Assessment</p>
+<ul dir="auto">
+<li dir="auto">determine the loss frequency and severity (impact)</li>
+<li dir="auto">Create a risk matrix, which will calculate the risk
+<ul dir="auto">
+<li dir="auto">Prioritise the risk the assets to the highest risk needed to be fixed first</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Risk Control</p>
+<ul dir="auto">
+<li dir="auto">Document if a part of the asset cannot be protected</li>
+<li dir="auto">monitor</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="risk-management-discussion-point-2">Risk management discussion point!</h3>
+<ul dir="auto">
+<li dir="auto">Organisation must define level of risk it can live with (most probably it will never be zero) – Why?</li>
+<li dir="auto">Risk appetite (aka risk tolerance): Defines quantity and nature of risk that organisations are willing to
+accept as trade-offs between perfect security and unlimited accessibility</li>
+<li dir="auto">Residual risk: Risk that has not been completely removed, shifted, or planned for</li>
+</ul>
+<p dir="auto"><img src="assets\IMG53.PNG" alt="alt text" data-src="assets/IMG53.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Residual risk, that the company is comfortable with</li>
+<li dir="auto">cost too much, not important enough etc.</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="risk-identification-we-now-discuss-the-overall-process-2">Risk identification (we now discuss the overall process)</h3>
+<ul dir="auto">
+<li dir="auto">Risk management involves identifying, classifying, and prioritising an organisation’s assets</li>
+<li dir="auto">In risk management, the principle of mutually exclusive and collectively exhaustive (MECE) is
+often applied. This principle ensures that all possible risks are identified (collectively exhaustive)
+and that there is no overlap between the risks (mutually exclusive)</li>
+<li dir="auto">A threat assessment process identifies and quantifies the risks facing each asset</li>
+<li dir="auto">Components of risk identification
+<ul dir="auto">
+<li dir="auto">People</li>
+<li dir="auto">Procedures</li>
+<li dir="auto">Data</li>
+<li dir="auto">Software</li>
+<li dir="auto">Hardware</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">MECE, only cover the asset once even if used throughout the organisation</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="risk-identification-e28093-a-project-management-approach-2">Risk identification – a &quot;project management&quot; approach</h3>
+<p dir="auto"><img src="assets\IMG54.PNG" alt="alt text" data-src="assets/IMG54.PNG"></p>
+<ul dir="auto">
+<li dir="auto">First step in the Risk Identification process is to follow your project management principles</li>
+<li dir="auto">Begin by organising a team with representation across all affected groups</li>
+<li dir="auto">The process must then be planned out
+<ul dir="auto">
+<li dir="auto">Periodic deliverables</li>
+<li dir="auto">Reviews</li>
+<li dir="auto">Presentations to management</li>
+</ul>
+</li>
+<li dir="auto">Tasks laid out, assignments made and timetables discussed</li>
+<li dir="auto">Iterative process!</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Put a team together
+<ul dir="auto">
+<li dir="auto">Project controls implemented</li>
+<li dir="auto">Whatever you do is sanctioned by management</li>
+</ul>
+</li>
+<li dir="auto">At milestones, present what you have done to management
+<ul dir="auto">
+<li dir="auto">Back arrows indicate an iterative process</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Iterative process; begins with identification of assets, including all elements of an organisation’s system</li>
+<li dir="auto">Assets are then classified and categorized</li>
+</ul>
+<p dir="auto"><img src="assets\IMG55.PNG" alt="alt text" data-src="assets/IMG55.PNG"></p>
+<h3 dir="auto" id="1-people-procedures-and-data-asset-identification-2">1. People, procedures, and data asset identification</h3>
+<ul dir="auto">
+<li dir="auto">Human resources, documentation, and data information assets are more difficult to identify</li>
+<li dir="auto">Important asset attributes:
+<ul dir="auto">
+<li dir="auto">People: position name/number/ID; supervisor; security clearance level; special skills</li>
+<li dir="auto">Procedures: description; intended purpose; what elements it is tied to; storage location for reference; storage location for update</li>
+<li dir="auto">Data: classification; owner/creator/ manager; data structure size; data structure used; online/offline; location; backup procedures employed</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">People is more difficult
+<ul dir="auto">
+<li dir="auto">Logging in, changing password (procedures)</li>
+<li dir="auto">Data that the company owns
+<ul dir="auto">
+<li dir="auto">Where is it kept, backup procedures in place</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="2-hardware-software-and-network-asset-identification-2">2. Hardware, software, and network asset identification</h3>
+<ul dir="auto">
+<li dir="auto">What information attributes to track depends on:
+<ul dir="auto">
+<li dir="auto">Needs of organisation/risk management efforts</li>
+<li dir="auto">Preferences/needs of the security and information technology communities</li>
+</ul>
+</li>
+<li dir="auto">Asset attributes to be considered are: name; IP address; element type; serial number; manufacturer name; model/part number; software version; physical or logical location; controlling entity</li>
+<li dir="auto">Automated tools can identify system elements for hardware, software, and network components</li>
+</ul>
+<h3 dir="auto" id="information-asset-valuation-2">Information asset valuation</h3>
+<p dir="auto">So we‘ve succeeded in identifying and we‘re confident we‘ve identified a comprehensive, mutually exlusive list of assets across the various functional areas. Now we have to value each of those assets.</p>
+<p dir="auto">Questions below (and others) help develop criteria for asset valuation</p>
+<p dir="auto">Which information asset:</p>
+<ul dir="auto">
+<li dir="auto">Is most critical to organisation’s success?</li>
+<li dir="auto">Generates the most revenue/profitability?</li>
+<li dir="auto">Would be most expensive to replace or protect?</li>
+<li dir="auto">Would be the most embarrassing or cause greatest liability if revealed?</li>
+</ul>
+<p dir="auto"><img src="assets\IMG56.PNG" alt="alt text" data-src="assets/IMG56.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">DMZ - demilitarised zone</li>
+<li dir="auto">Between the internet and highly secured network</li>
+</ul>
+</blockquote>
+<p dir="auto">Information asset prioritisation (most likely to have multiple valuation criteria – why? Who makes these criteria?)</p>
+<ul dir="auto">
+<li dir="auto">Create weighting for each category based on the answers to questions</li>
+<li dir="auto">Calculate relative importance of each asset using weighted factor analysis</li>
+<li dir="auto">List the assets in order of importance using a weighted factor analysis worksheet</li>
+</ul>
+<p dir="auto"><img src="assets\IMG57.PNG" alt="alt text" data-src="assets/IMG57.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">asset is likely to be attacked
+<ul dir="auto">
+<li dir="auto">give it high weighting
+The values that the project team, using senior management policy, have allocated to the asset.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="next-step-is-identifying-and-prioritising-threats-2">Next step is: Identifying and prioritising threats</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Realistic threats need investigation; unimportant threats are set aside</p>
+</li>
+<li dir="auto">
+<p dir="auto">Threat assessment:</p>
+<ul dir="auto">
+<li dir="auto">Which threats present danger to assets?</li>
+<li dir="auto">Which threats represent the most danger to information?</li>
+<li dir="auto">How much would it cost to recover from attack?</li>
+<li dir="auto">Which threat requires greatest expenditure to prevent?</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG58.PNG" alt="alt text" data-src="assets/IMG58.PNG"></p>
+<h3 dir="auto" id="then-we-need-to-analyse-our-vulnerabilities-and-prioritise-them-vulnerability-analysis-2">Then we need to analyse our vulnerabilities and prioritise them: Vulnerability analysis</h3>
+<ul dir="auto">
+<li dir="auto">Vulnerabilities: specific avenues threat agents can exploit to attack an information asset.</li>
+<li dir="auto">Examine how each threat could be perpetrated and list organisation’s assets and
+vulnerabilities.</li>
+<li dir="auto">Process works best when people with diverse backgrounds within organisation work
+iteratively in a series of brainstorming sessions.</li>
+<li dir="auto">How can we prioritise vulnerabilites?</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Need people with backgrounds in the area where the assets are used</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="prioritising-vulnerabilities-2">Prioritising vulnerabilities</h3>
+<ul dir="auto">
+<li dir="auto">The Common Vulnerability Scoring System (CVSS) is a free, open industry standard for assessing the severity of computer system security vulnerabilities.</li>
+<li dir="auto">CVSS aims to assign severity scores to vulnerabilities, allowing flexibility for responders to prioritize responses and resources according to threat.</li>
+<li dir="auto">Scores are calculated based on a formula that depends on several metrics that approximate ease of exploit and the impact of exploit.</li>
+<li dir="auto">Scores range from 0 to 10, with 10 being the most severe.</li>
+<li dir="auto">Some of the metrics are described in overview below:</li>
+<li dir="auto">The CVSS describes 6 base metrics: <strong>attack vector</strong> (how exploited), <strong>attack complexity</strong> (easy or difficult), <strong>authentication</strong> (the levels of authentication for the exploit), <strong>confidentiality</strong> (impact on confidentiality of data), <strong>integrity</strong> (of system), <strong>availability</strong> (of system).</li>
+<li dir="auto">These six metrics are then used to produce a CVSS vector for the vulnerability.</li>
+</ul>
+<p dir="auto">CVSS v4.0: <a href="https://www.first.org/cvss/v4.0/specification-document">https://www.first.org/cvss/v4.0/specification-document</a></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Have a vulnerability score calculator</li>
+<li dir="auto">Standard scoring system for vulnerabilities</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG59.PNG" alt="alt text" data-src="assets/IMG59.PNG"></p>
+<h3 dir="auto" id="tva-worksheet-a-simple-summary-2">TVA worksheet (a simple summary)</h3>
+<p dir="auto">At end of risk identification process,
+there should be two lists:</p>
+<ul dir="auto">
+<li dir="auto">list of assets and their vulnerabilities.</li>
+<li dir="auto">List of threats facing the organisation
+Combination of these two lists into a Threats ‐ Vulnerabilities ‐ Assets (TVA) worksheet</li>
+</ul>
+<p dir="auto"><img src="assets\IMG60.PNG" alt="alt text" data-src="assets/IMG60.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Most important asset at the left</li>
+<li dir="auto">vulnerability in each cell</li>
+<li dir="auto">find measures that reduce the threats</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="risk-assessment-2">Risk Assessment</h2>
+<ul dir="auto">
+<li dir="auto">Risk assessment evaluates the relative risk for each vulnerability</li>
+<li dir="auto">Assigns a risk rating or score to each information asset(a ‘relative’ meaning – not absolute)</li>
+<li dir="auto">We must be CONSISTENT whichever approach we use!</li>
+<li dir="auto">The goal at this point: create a method for evaluating the relative risk of each listed vulnerability</li>
+<li dir="auto">We shall consider several approaches: (text book, NIST, one selected from industry)</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Be consistent with the approach</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="risk-calculation-e28093-a-project-approach-flow-feedback-control-2">Risk calculation – a ‘project’ approach (flow, feedback, control)</h3>
+<p dir="auto">For the purpose of a simplistic relative risk assessment:</p>
+<ul dir="auto">
+<li dir="auto">Risk = Loss frequency * loss magnitude + an element of uncertainty (5-10%)</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Add a 'fudge' factor</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG61.PNG" alt="alt text" data-src="assets/IMG61.PNG"></p>
+<h3 dir="auto" id="calculating-risk-text-book-approach-e28093-page-283-2">Calculating risk (text book approach – page 283)</h3>
+<p dir="auto"><img src="assets\IMG62.PNG" alt="alt text" data-src="assets/IMG62.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Loss - loss magnitude (asset value) * probable loss (how much will you lose)</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="step-1-loss-frequency-2">Step 1: Loss frequency</h3>
+<p dir="auto">First, we need to determine how probable it is that an attack is successful.</p>
+<p dir="auto"><strong>Loss frequency</strong> describes an assessment of the likelihood of an attack combined with expected probability of success given the current level of controls in place</p>
+<ul dir="auto">
+<li dir="auto">Likelihood: Use external references for values that have been reviewed/adjusted for your circumstances AND ‘risk actuals’ of your organisation; value subject to uncertainty
+<ul dir="auto">
+<li dir="auto">Assign numeric value to likelihood, typically annual value</li>
+<li dir="auto">Targeted by hackers once every five years – annualized likelihood of attack: 1/5, 20 percent</li>
+<li dir="auto">Web defacement two times each year – annualized likelihood of attack 200 percent</li>
+<li dir="auto">See next slide also</li>
+</ul>
+</li>
+<li dir="auto">Success probability: Estimate a quantitative value (e.g., 10 percent) for the likelihood of a successful attack; value subject to uncertainty.  This also involves consideration of the current level of protection – this further complicates the calculation.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Come back to a common base line for each asset</li>
+<li dir="auto">how many times per year expressed as a %</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">The probability that a specific vulnerability will be the object of a successful attack</li>
+<li dir="auto">NIST SP 800‐30: Assign numeric value: number between 0.1 (low) and 1.0 (high), or a number between 1 and 100</li>
+<li dir="auto">Zero not used since vulnerabilities with zero likelihood are removed from asset/vulnerability list</li>
+<li dir="auto">Use selected rating model (whichever is selected) consistently</li>
+<li dir="auto">Use external references for values that have been reviewed/adjusted for your circumstances – remember our reference to ‘risk actuals’ Likelihood (part of step 1)</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">NIST SP = National Institute of Standards and Technology , SP = Special Publications (on Blackboard)</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="step-2-loss-magnitude-2">Step 2: Loss Magnitude</h3>
+<p dir="auto">We need to determine how much of an information asset could be lost in a successful attack</p>
+<p dir="auto"><strong>Loss magnitude</strong> (sometimes asset exposure)</p>
+<p dir="auto">Combines two components: (1) the value of information asset with (2) the percentage of asset lost in the
+event of a successful attack</p>
+<p dir="auto">Difficulties involve:</p>
+<ul dir="auto">
+<li dir="auto">Valuing an information asset (e.g. a database server for sales transactions from customers and one for
+employee salary)</li>
+<li dir="auto">Estimating the percentage of information asset lost during best ‐ case, worst ‐ case, and most likely scenarios</li>
+</ul>
+<p dir="auto">Clearly this step is also subject to possible error/uncertainty</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Don't put the dollar value of how much this thing costs
+<ul dir="auto">
+<li dir="auto">How much value it is to the company</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><strong>Example in textbook</strong></p>
+<p dir="auto">Information asset A is on online e ‐ commerce database. 10% chance of attack this year (1 attack every 10
+years). 50% chance of success based on current asset vulnerabilities and protection mechanisms. Asset
+value is 50 (how is this derived) and 100% of the asset would be compromised by a successful attack.
+Assumption: data 90% accurate.</p>
+<p dir="auto"><img src="assets\IMG63.PNG" alt="alt text" data-src="assets/IMG63.PNG"></p>
+<p dir="auto">Information asset B is an internal personnel database behind a firewall. 1% chance of attack this year.  10%
+chance of success based on current asset vulnerabilities and protection mechanisms.  Asset value is 25 on a
+scale of 1 to 100 and 50% of the asset would be compromised by a successful attack. Assumption: data 90%
+accurate.</p>
+<p dir="auto"><img src="assets\IMG64.PNG" alt="alt text" data-src="assets/IMG64.PNG"></p>
+<h3 dir="auto" id="risk-assessment-2---nist-2">Risk Assessment (2) - NIST</h3>
+<ul dir="auto">
+<li dir="auto">NIST SP (Special Publication) 800 ‐ 30 r1 (on Blackboard)</li>
+<li dir="auto">Definitive document for RISK ASSESSMENT</li>
+<li dir="auto">RISK = LIKELIHOOD * LEVEL OF IMPACT (appendix I)</li>
+<li dir="auto">SP800 ‐ 30 contains qualitative and quantitative strategies</li>
+<li dir="auto">SP800 ‐ 30 is on Blackboard (week 4 material)</li>
+<li dir="auto">How can risk be ‘so simply’ described (in contrast with the text book)?</li>
+</ul>
+<h3 dir="auto" id="risk-assessment-3-e28093-another-approach-2">Risk assessment (3) – another approach</h3>
+<ul dir="auto">
+<li dir="auto">For the purpose of relative risk assessment:
+<ul dir="auto">
+<li dir="auto">Risk EQUALS</li>
+<li dir="auto">Likelihood of vulnerability occurrence</li>
+<li dir="auto">TIMES value (or impact)</li>
+<li dir="auto">MINUS percentage risk already controlled</li>
+<li dir="auto">PLUS an element of uncertainty</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG65.PNG" alt="alt text" data-src="assets/IMG65.PNG"></p>
+<h2 dir="auto" id="vulnerability-discovery-and-recording-2">Vulnerability Discovery and Recording</h2>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Reports it to the company</li>
+<li dir="auto">Vulnerability code starting with 'CVE-...'</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="identify-possible-controls-2">Identify possible controls</h2>
+<ul dir="auto">
+<li dir="auto">For each threat and associated vulnerabilities that have residual risk, create preliminary list of
+control ideas</li>
+<li dir="auto">Residual risk is risk that remains to information asset even after existing control has been
+applied</li>
+<li dir="auto">There are three general categories of controls:
+<ul dir="auto">
+<li dir="auto">Policies</li>
+<li dir="auto">Programs (training, education, security awareness)</li>
+<li dir="auto">Technologies (authentication, PW, 2FA)</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG66.PNG" alt="alt text" data-src="assets/IMG66.PNG"></p>
+<h3 dir="auto" id="documenting-the-results-of-the-risk-assessment-2">Documenting the results of the risk assessment</h3>
+<ul dir="auto">
+<li dir="auto">Final summary comprised in ranked vulnerability risk worksheet</li>
+<li dir="auto">Worksheet details asset, asset impact, vulnerability, vulnerability likelihood, and risk ‐ rating factor.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG67.PNG" alt="alt text" data-src="assets/IMG67.PNG"></p>
+<ul dir="auto">
+<li dir="auto">What is the relative risk of an E-Mail disruption due to hardware failure of a ‘Customer service request (email)’?</li>
+<li dir="auto">Explain the asset values.</li>
+</ul>
+<h3 dir="auto" id="risk-control-strategies-5-of-these-2">Risk control strategies (5 of these)</h3>
+<p dir="auto">Once ranked vulnerability risk worksheet complete, must choose one of five strategies to control each
+risk:</p>
+<ol dir="auto">
+<li dir="auto">Defend</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Attempts to prevent exploitation of the vulnerability</li>
+<li dir="auto">Preferred approach</li>
+<li dir="auto">Accomplished through countering threats, removing asset vulnerabilities, limiting asset access, and
+adding protective safeguards</li>
+<li dir="auto">Three common methods:
+<ul dir="auto">
+<li dir="auto">Application of policy</li>
+<li dir="auto">Training and education</li>
+<li dir="auto">Applying technology</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Training education</li>
+<li dir="auto">Apply technology (cannot change pwd to 12345 e.g.)</li>
+</ul>
+</blockquote>
+<ol start="2" dir="auto">
+<li dir="auto">Transfer</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Control approach that attempts to shift risk to other assets, processes, or organisations</li>
+<li dir="auto">If lacking, organisation should hire individuals/firms that provide security management and administration
+expertise</li>
+<li dir="auto">Organisation may then transfer risk associated with management of complex systems to another organisation
+experienced in dealing with those risks</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Transfer the risk to someone else</li>
+<li dir="auto">Penalise the company if something goes wrong</li>
+</ul>
+</blockquote>
+<ol start="3" dir="auto">
+<li dir="auto">Mitigate</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Attempts to reduce impact of vulnerability exploitation through planning and preparation</li>
+<li dir="auto">Approach includes three types of plans
+<ul dir="auto">
+<li dir="auto">Incident response plan (IRP): define the actions to take while incident is in progress</li>
+<li dir="auto">Disaster recovery plan (DRP): most common mitigation procedure</li>
+<li dir="auto">Business continuity plan (BCP): encompasses continuation of business activities if catastrophic event occurs</li>
+</ul>
+</li>
+</ul>
+<ol start="4" dir="auto">
+<li dir="auto">Accept</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Doing nothing to protect a vulnerability and accepting the outcome of its exploitation</li>
+<li dir="auto">Valid only when the particular function, service, information, or asset does not justify cost of protection</li>
+</ul>
+<ol start="5" dir="auto">
+<li dir="auto">Terminate</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Directs the organisation to avoid those business activities that introduce uncontrollable risks</li>
+<li dir="auto">May seek an alternate mechanism to meet customer needs</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Don't do this anymore</li>
+<li dir="auto">Kill the area of your business because it is too unsecure</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG68.PNG" alt="alt text" data-src="assets/IMG68.PNG"></p>
+<h2 dir="auto" id="selecting-a-risk-control-strategy-2">Selecting a risk control strategy</h2>
+<ul dir="auto">
+<li dir="auto">Level of threat and value of asset play major role in selection of strategy</li>
+<li dir="auto">Rules of thumb on strategy selection can be applied:
+<ul dir="auto">
+<li dir="auto">When a vulnerability exists</li>
+<li dir="auto">When a vulnerability can be exploited</li>
+<li dir="auto"><strong>When attacker’s cost is less than potential gain</strong></li>
+<li dir="auto">When potential loss is substantial</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="justifying-controls-2">Justifying controls</h3>
+<ul dir="auto">
+<li dir="auto">Before implementing one of the control strategies for a specific vulnerability,
+the organisation must explore all consequences of vulnerability to information
+asset.</li>
+<li dir="auto">There are several ways to determine the advantages/disadvantages of a
+specific control:</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">With some sort of analysis, is it worthwhile implementing this control</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="cost-benefit-analysis-2">Cost Benefit Analysis</h3>
+<ul dir="auto">
+<li dir="auto">Sums the benefits of an action THEN subtracts the costs of that action</li>
+<li dir="auto">Formal process to document this is called cost benefit analysis or economic feasibility study</li>
+<li dir="auto">Items that affect cost of a control or safeguard include: cost of development or acquisition;
+training fees; implementation cost; service costs; cost of maintenance</li>
+<li dir="auto">Benefit: value an organisation realises using controls to prevent losses from a vulnerability</li>
+<li dir="auto">Asset valuation: process of assigning financial value or worth to each information asset</li>
+<li dir="auto">Once asset valuation is performed, an organisation can begin to estimate the potential loss that could
+occur from an exploited vulnerability or threat occurrence.</li>
+</ul>
+<p dir="auto">Several questions must be asked:</p>
+<ul dir="auto">
+<li dir="auto">What damage would occur from an exploited vulnerability or threat occurrence</li>
+<li dir="auto">What would it cost to recover from the attack – as well as the financial damage</li>
+<li dir="auto">What is the single loss expectancy (SLE) for each risk?
+<ul dir="auto">
+<li dir="auto">SLE = asset value × exposure factor (EF)</li>
+<li dir="auto">Example: if a Web site has an estimated value of $1 million, and a hacker defacement could damage 10% of
+the Web site, the SLE is $1 million * 0.10.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Once asset valuation is completed, we can calculate how much loss is expected from a single attack and how
+often these attacks occur. We can use the annualized loss expectancy (ALE) for this:</p>
+<p dir="auto">ALE = single loss expectancy (SLE) × annualized rate of occurrence (ARO)</p>
+<p dir="auto">In our previous Web site example, the ARO could be 0.50 ( how often is this?).  This gives us ALE = $100,000 * 0.50 = $50,000</p>
+<p dir="auto">Consequently, this business can expect to lose $50,000 every year – this gives us a basis for expenditure</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Hacker could deface 10% of a website</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">CBA determines if alternative being evaluated is worth cost incurred to control vulnerability
+<ul dir="auto">
+<li dir="auto">CBA  most  easily  calculated  using  Annualized  Loss  Expectancy  (ALE)  from  earlier
+assessments, before implementation of proposed control:</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">CBA = ALE(prior) – ALE(post) – ACS</p>
+<ul dir="auto">
+<li dir="auto">ALE(prior) is annualized loss expectancy of
+risk before implementation of control</li>
+<li dir="auto">ALE(post) is estimated ALE based on control
+being in place for a period of time</li>
+<li dir="auto">ACS is the annualized cost of the safeguard</li>
+</ul>
+<h3 dir="auto" id="evaluation-assessment-and-maintenance-of-risk-controls-2">Evaluation, assessment, and maintenance of risk controls</h3>
+<ul dir="auto">
+<li dir="auto">Selection and implementation of control strategy is not end of process</li>
+<li dir="auto">Strategy and accompanying controls must be monitored/reevaluated on ongoing basis to determine effectiveness and to calculate more accurately the estimated residual risk</li>
+<li dir="auto">Process continues as long as organisation continues to function</li>
+</ul>
+<p dir="auto"><img src="assets\IMG69.PNG" alt="alt text" data-src="assets/IMG69.PNG"></p>
+<h3 dir="auto" id="qualitative-versus-quantitative-risk-control-practices-2">Qualitative versus quantitative risk control practices</h3>
+<ul dir="auto">
+<li dir="auto">Performing the previous steps using actual values or estimates is known as quantitative assessment</li>
+<li dir="auto">Possible to complete steps using evaluation process based on characteristics using non ‐ numerical measures; called qualitative assessment (low, medium, high, very high)</li>
+<li dir="auto">Utilizing scales rather than specific estimates relieves organisation from difficulty of determining exact values</li>
+</ul>
+<p dir="auto"><img src="assets\IMG70.PNG" alt="alt text" data-src="assets/IMG70.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Can also do this with words, low, medium, high</li>
+<li dir="auto">NIST in appendix of likelihood vs impact</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="quantitative-methods-example-2">Quantitative methods: Example</h3>
+<p dir="auto">FAIR (Factor Analysis of Information Risks)</p>
+<p dir="auto"><img src="assets\IMG71.PNG" alt="alt text" data-src="assets/IMG71.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">reduce the risk by making the 'rectangle' smaller</li>
+</ul>
+</blockquote>
+
+</main>
+</body>
+</html>
