@@ -552,7 +552,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <ul dir="auto">
 <li dir="auto">This is the proper interpretation of σ, namely that it’s the “diffusion” parameter in geometric Brownian motion.</li>
 </ul>
-<p dir="auto"><img src="image-1.png" alt="alt text" data-src="image-1.png"></p>
+<p dir="auto"><img src="assets\IMG66.PNG" alt="alt text" data-src="assets/IMG66.PNG"></p>
 <blockquote dir="auto">
 <ul dir="auto">
 <li dir="auto">Black Scholes pricing model assumes that the underlying asset prices returns are normally distributed</li>
@@ -575,7 +575,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 </li>
 </ul>
 </blockquote>
-<p dir="auto"><img src="image-3.png" alt="alt text" data-src="image-3.png"></p>
+<p dir="auto"><img src="assets\IMG67.PNG" alt="alt text" data-src="assets/IMG67.PNG"></p>
 <blockquote dir="auto">
 <ul dir="auto">
 <li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>M</mi></msub></mrow><annotation encoding="application/x-tex">T_{M}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> maturity date</li>
@@ -608,7 +608,7 @@ plt.title (<span class="hljs-string">&quot;N=10 paths of geometric Brownian moti
 <li dir="auto">j step, simulate a draw from a standard normal variable</li>
 </ul>
 </blockquote>
-<p dir="auto"><img src="image-4.png" alt="alt text" data-src="image-4.png"></p>
+<p dir="auto"><img src="assets\IMG68.PNG" alt="alt text" data-src="assets/IMG68.PNG"></p>
 <h3 dir="auto" id="risk-neutral-approach">Risk-Neutral approach</h3>
 <p dir="auto">But what is meant by the “risk-neutral” pricing approach? First note:</p>
 <p dir="auto">Law of finance : The value of an asset is the present value of its
@@ -740,7 +740,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <p dir="auto"><strong>Remark</strong>: We will assume no dividends q since the equations are neater, until right at the end where we mention the impact of dividends.</p>
 <h3 dir="auto" id="delta-%E2%88%86-and-gamma-%CE%B3">Delta ∆ and gamma Γ</h3>
 <p dir="auto">We know that as S increases, calls premiums rise and put premiums fall.</p>
-<p dir="auto"><img src="image-5.png" alt="alt text" data-src="image-5.png"></p>
+<p dir="auto"><img src="assets\IMG69.PNG" alt="alt text" data-src="assets/IMG69.PNG"></p>
 <p dir="auto">We quantify this mathematically with the delta ∆, given by</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mtext>∆</mtext><mi>C</mi></msub><mo>=</mo><mi>N</mi><mo stretchy="false">(</mo><msub><mi>d</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext>and</mtext><mtext> </mtext><mtext> </mtext><msub><mtext>∆</mtext><mi>P</mi></msub><mo>=</mo><mi>N</mi><mo stretchy="false">(</mo><msub><mi>d</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">∆_{C} = N(d_{1}) \: \: \text{and} \: \: ∆_{P} = N(d_{1}) − 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5169em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">and</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></span></p>
 </math>
@@ -787,7 +787,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 </ul>
 </blockquote>
 <hr dir="auto">
-<h2 dir="auto" id="alt-text"><img src="image-7.png" alt="alt text" data-src="image-7.png"></h2>
+<h2 dir="auto" id="alt-text"><img src="assets\IMG70.PNG" alt="alt text" data-src="assets/IMG70.PNG"></h2>
 <blockquote dir="auto">
 <ul dir="auto">
 <li dir="auto">goes up from</li>
@@ -835,7 +835,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>C</mi><mo>≈</mo><msub><mi mathvariant="normal">Δ</mi><mi>c</mi></msub><mi>d</mi><mi>S</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi mathvariant="normal">Γ</mi><mi>d</mi><msup><mi>S</mi><mn>2</mn></msup><mtext> </mtext><mtext> </mtext><mi>a</mi><mi>n</mi><mi>d</mi><mtext> </mtext><mtext> </mtext><mi>d</mi><mi>P</mi><mo>≈</mo><msub><mi mathvariant="normal">Δ</mi><mi>p</mi></msub><mi>d</mi><mi>S</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi mathvariant="normal">Γ</mi><mi>d</mi><msup><mi>S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">dC \approx \Delta _{c} dS + \frac{1}{2}\Gamma dS^{2} \: \: and \: \: dP \approx \Delta _{p} dS + \frac{1}{2}\Gamma dS^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">Γ</span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">an</span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9805em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord">Δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">Γ</span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
 </math>
 <hr dir="auto">
-<p dir="auto"><img src="image-8.png" alt="alt text" data-src="image-8.png"></p>
+<p dir="auto"><img src="assets\IMG71.PNG" alt="alt text" data-src="assets/IMG71.PNG"></p>
 <blockquote dir="auto">
 <ul dir="auto">
 <li dir="auto">Calculate the gamma of the call option as before</li>
@@ -861,9 +861,9 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 </code></pre>
 <h3 dir="auto" id="rho-rho">Rho <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span></span></span></span></h3>
 <p dir="auto">Rho ρ is the change in the premium from a change in r, and is given by</p>
-<p dir="auto"><img src="image-9.png" alt="alt text" data-src="image-9.png"></p>
+<p dir="auto"><img src="assets\IMG72.PNG" alt="alt text" data-src="assets/IMG72.PNG"></p>
 <p dir="auto">Note that:</p>
-<p dir="auto"><img src="image-11.png" alt="alt text" data-src="image-11.png"></p>
+<p dir="auto"><img src="assets\IMG73.PNG" alt="alt text" data-src="assets/IMG73.PNG"></p>
 <p dir="auto">As r increases, call premiums increase but put premiums decrease.</p>
 <ul dir="auto">
 <li dir="auto">An intuitive explanation for this is the present value <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mo>−</mo><mi>r</mi><mi>T</mi></mrow></msup><mi>K</mi></mrow><annotation encoding="application/x-tex">e^{−rT}K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> of the strike that the holder pays in a call, or receives in a put, decreases.</li>
@@ -879,7 +879,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 </blockquote>
 <p dir="auto"><strong>Remark</strong>: ρ is the partial derivative of the premium with respect to r.</p>
 <hr dir="auto">
-<h2 dir="auto" id="alt-text-1"><img src="image-12.png" alt="alt text" data-src="image-12.png"></h2>
+<h2 dir="auto" id="alt-text-1"><img src="assets\IMG74.PNG" alt="alt text" data-src="assets/IMG74.PNG"></h2>
 <h3 dir="auto" id="vega-nu">Vega <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ν</mi></mrow><annotation encoding="application/x-tex">\nu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span></span></span></span></h3>
 <p dir="auto">Vega ν is the change in the premium from a change in σ, and is given by:</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>ν</mi><mo>=</mo><mi>S</mi><mi>f</mi><mo stretchy="false">(</mo><msub><mi>d</mi><mn>1</mn></msub><mo stretchy="false">)</mo><msqrt><mi>T</mi></msqrt></mrow><annotation encoding="application/x-tex">\nu = Sf(d_{1})\sqrt{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2255em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9755em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span><span style="top:-2.9355em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
@@ -910,10 +910,89 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 </ul>
 </blockquote>
 <hr dir="auto">
-<h2 dir="auto" id="alt-text-2"><img src="image-13.png" alt="alt text" data-src="image-13.png"></h2>
+<h2 dir="auto" id="alt-text-2"><img src="assets\IMG75.PNG" alt="alt text" data-src="assets/IMG75.PNG"></h2>
 <h3 dir="auto" id="theta-theta">Theta <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span></h3>
 <p dir="auto">Theta θ is a bit ambiguous. It gives the negative of the change in the premium from a change in T. And the equations are more complex:</p>
-<p dir="auto"><img src="image-14.png" alt="alt text" data-src="image-14.png"></p>
+<p dir="auto"><img src="assets\IMG76.PNG" alt="alt text" data-src="assets/IMG76.PNG"></p>
+<p dir="auto">with f (x) the PDF of a standard normal random variable.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">consider the case of option on income-paying options
+<ul dir="auto">
+<li dir="auto">can be positive or negative, depending on the params in the market at a given point</li>
+</ul>
+</li>
+<li dir="auto">All of the other variables of the option price don't change</li>
+</ul>
+</blockquote>
+<p dir="auto">Remark
+θ is the negative of the partial derivative of the premium with respect to T, telling us the impact of approaching expiry.</p>
+<p dir="auto">However, note that</p>
+<p dir="auto"><img src="assets\IMG77.PNG" alt="alt text" data-src="assets/IMG77.PNG"></p>
+<p dir="auto">On a non-dividend paying asset, call premiums fall as expiry nears.</p>
+<ul dir="auto">
+<li dir="auto">Impact of time on puts is ambiguous: From <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mi>P</mi></msub><mo>=</mo><msub><mi>θ</mi><mi>C</mi></msub><mo>+</mo><mi>r</mi><mi>K</mi><msup><mi>e</mi><mrow><mo>−</mo><mi>r</mi><mi>T</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\theta _{P} = \theta _{C} + rKe^{-rT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8413em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">rK</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span></span> deep
+in-the-money put (large K) premiums may increase as expiry nears.</li>
+<li dir="auto">This relates to something said last week: A deep in-the-money put is already close to its maximum payoff of K, so not much more payoff can be realised at expiry, but there is still a chance of an unfavourable movement in the asset price. But as we approach expiry, there is less chance of an unfavourable movement.</li>
+</ul>
+<p dir="auto">However, there is some rules of thumb relating to time:</p>
+<ul dir="auto">
+<li dir="auto">θ is almost always negative:</li>
+<li dir="auto">So premiums usually fall as expiry approaches.</li>
+<li dir="auto">This is known as time decay.</li>
+<li dir="auto">Time decay works for option writers and against option holders.</li>
+<li dir="auto">θ is most negative for options close to at-the-money.</li>
+<li dir="auto">θ in fact gets more negative for options close to at-the-money as
+expiry approaches: Time decay “speeds up” as expiry approaches.
+These last two points are illustrated in the following fi gures:</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Always assume that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span> is negative for calls and puts</p>
+<ul dir="auto">
+<li dir="auto">Core premium falls no matter what, as you approach expiry, given all other param stay the same</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">non-dividend and dividend paying assets could put premiums</p>
+</li>
+<li dir="auto">
+<p dir="auto">Ignoring small percentage of cases, all other options have negative theta</p>
+<ul dir="auto">
+<li dir="auto">Always assumes your premiums are falling as you approach expiry</li>
+<li dir="auto">Time decay</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Portfolio of long options, portfolio is going down in value as you approach expiry</p>
+<ul dir="auto">
+<li dir="auto">Write an option, receive the premium upfront</li>
+<li dir="auto">Premium time value approaches zero - take advantage of time decay that works for you</li>
+<li dir="auto">More impactful as you approach expiry</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG78.PNG" alt="alt text" data-src="assets/IMG78.PNG"></p>
+<p dir="auto"><img src="assets\IMG79.PNG" alt="alt text" data-src="assets/IMG79.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">options with trading positions close to the money</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG80.PNG" alt="alt text" data-src="assets/IMG80.PNG"></p>
+<hr dir="auto">
+<h2 dir="auto" id="alt-text-3"><img src="assets\IMG81.PNG" alt="alt text" data-src="assets/IMG81.PNG"></h2>
+<h3 dir="auto" id="incorporating-dividends-1">Incorporating dividends</h3>
+<p dir="auto">On a dividend paying asset, all of the above interpretations remain
+unchanged except for θ. From the textbook, the equations become:</p>
+<p dir="auto"><img src="assets\IMG82.PNG" alt="alt text" data-src="assets/IMG82.PNG"></p>
+<p dir="auto">Note that Hull uses the notation N
+′
+(x) for the PDF of a standard normal
+random variable, whereas I’ve been using f (x).</p>
+<p dir="auto"><img src="assets\IMG83.PNG" alt="alt text" data-src="assets/IMG83.PNG"></p>
 
 </main>
 </body>
