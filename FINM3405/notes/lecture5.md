@@ -354,6 +354,364 @@ asset follows **geometric Brownian motion (GBM)**
 
 $$S_{t} = Se^{(r-\frac{1}{2} \sigma ^{2})t + \sigma \sqrt{t} Z} \: \: \text{for} \: \: 0 \le t \le T$$
 
+where Z is a standard normal random variable. This implies that the underlying asset’s returns are normally distributed:
+
 > - Assumptions of the underlying asset
 > - Underlying assets returns are normally distributed
 
+
+Rearranging the above, the asset’s continuously compounded returns
+
+$$r_{t} = \log \frac{S_{t}}{S} = \left( r - \frac{1}{2} \sigma ^{2} \right)t+\sigma \sqrt{t}Z$$
+
+are normally distributed with $\mathbb{E}[r_{t}]=\left( r - \frac{1}{2} \sigma ^{2} \right)t$ and Var$[r_{t}] = \sigma ^{2}t$
+
+- This is the proper interpretation of σ, namely that it’s the “diffusion” parameter in geometric Brownian motion.
+
+![alt text](assets\IMG66.PNG)
+
+> - Black Scholes pricing model assumes that the underlying asset prices returns are normally distributed
+> - Log of the stock price is normally distributed
+>   - Stock price returns are not normally distributed
+
+### Geometric Brownian Motion
+
+In the risk-neutral approach, the underlying asset follows geometric Brownian motion as presented above. We can simulate it as follows:
+
+
+
+> - Monte carlo approach simulates paths under geometric Brownian motion
+>   - Takes the actual payoff of the derivative security on the final date of European options
+>   - Actual price is the average of those payoffs discounted back at the risk free rate
+
+![alt text](assets\IMG67.PNG)
+
+> - $T_{M}$ maturity date
+> - Over each intermediate time interval, simulate geometric brownian motion, calculate what the underlying price of the asset is going to be
+>   - Each step, independently sample another draw from a standard normal random variable
+
+
+Simulating GBM by the above is used in the Monte Carlo simulation
+pricing of options, and we do this later in the course. Here is some
+Python code that simulates and plots geometric Brownian motion paths:
+```python
+import numpy as np
+from scipy . stats import norm
+import matplotlib . pyplot as plt
+S0 =50; r =0.05; T=1; sigma =0.25
+M =1000; dt=T/M; dates =np. linspace (0,T,M+1) # 1000 time steps
+N=10; S=np. zeros ([N,M+1]); S[: ,0]= S0 # 10 paths , each starting at S=50
+for i in range (N):
+for j in range (1,M+1):
+Z=norm.rvs () # simulate outcomes of standard normal random variable
+S[i,j]=S[i,j -1]* np.exp ((r -0.5* sigma **2)*dt+ sigma *np.sqrt(dt)*Z) # GBM
+plt.plot(dates ,S[i ,:])
+plt.title ("N=10 paths of geometric Brownian motion ") # plot
+```
+
+> - N number of simulations (number of paths)
+> - j step, simulate a draw from a standard normal variable
+
+![alt text](assets\IMG68.PNG)
+
+
+### Risk-Neutral approach
+
+But what is meant by the “risk-neutral” pricing approach? First note:
+
+Law of finance : The value of an asset is the present value of its
+expected futures cashflows or payoff.
+
+We can use a lot of complex maths to show that the value of European
+options in the risk-neutral approach is given by the law of finance:
+
+$$C = e^{-rT}\mathbb{E}[\max (0, S_{T}-K)]$$
+And
+$$P = e^{-rT}\mathbb{E}[\max (0, K - S_{T})]$$
+
+where $S_{T}$ is log-normally distributed as specifi ed above.
+
+> - Value of an option is the present value of the expected future payoff
+> - $S_{T}$ is a random variable
+>   - discounted at the present value at the risk free rate
+>   - Don't add a risk premium
+
+So in the risk-neutral pricing approach the value of a European option is
+- the present value of its expected future payoff
+- but discounted at the risk-free rate r.
+
+---
+**Remark**
+
+So in the risk-neutral pricing approach, investors don’t add a risk premium to the discount rate, since it’s just the risk-free rate r.
+- Investors are “neutral” to risk.
+
+We can also rederive the futures/forward pricing formulas again here in the risk-neutral approach:
+
+The payoff of a long futures contract is $S_{T} − K$, so the value of a long futures contract in the risk-neutral approach is
+
+$$V=e^{-rT}\mathbb{E}[S_{T}-K]=e^{-rT}\mathbb{E}[S_{T}]-e^{-rT}K$$
+
+But K is set so these contracts have 0 value: V = 0. In the
+risk-neutral approach, the value of every asset is the present value
+of its expected future payoff , including the underlying asset, so $S = e^{−rT}\mathbb{E}[S_{T}]$. So using this and rearranging the above yields
+
+$$K=e^{rT}S$$
+---
+
+### Variables affecting option prices and the Greeks
+
+We now want to investigate and quantify how each of the input variables $K$, $S$, $r$, $T$, $σ$ and $q$ impact option premiums.
+
+
+> - In the Black Scholes model, a number of parameters that go into the equations
+>   - all parameters that can change - if we change it, how does it impact the Black Scholes option price?
+> - Pricing options of the market, will it make the price go up or down?
+>   - Trading options
+> - Using options so far to speculate movement in the price of the underlying asset
+> - use options to speculate on an increase or decrease, based on interest or volatility in the market
+>   - purchase options based on perceptions in the market
+>
+> If you hold a derivatives portfolio
+> - exposed to underlying assets
+> - exposed to changes in interest rates, changes in time, market volatility perceptions
+>   - If we can quantify the impact, can create hedging strategies to insulate variable you don't want to be exposed to
+
+The Black Scholes mode
+
+$$C = Se^{-qT}\mathcal{N} (d_{1}) − Ke^{−rT}\mathcal{N} (d_{2})$$
+
+$$P =  Ke^{−rT}\mathcal{N} (-d_{2}) - S e^{-qT}\mathcal{N} (-d_{1})$$
+
+Where:
+
+$$d_{1} = \frac{\log \frac{S}{K} + (r - q + \frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}$$
+$$d_{2} = d_{1} - \sigma \sqrt{T}$$
+
+depends on the variables $S$, $K$, $r$, $T$ and $σ$.
+
+- We’re interested in the relation between them and option prices.
+
+We know that call (put) options with a higher strike price K have lower (higher) values, and we’re not so much interested any further in K.
+
+> - want to know how these variables impact on options prices
+> - Don't care about options pricing with changing strike price
+
+We’re interested in the sensitivity of option prices to the other variables
+$S$, $r$, $T$ and $σ$, and we give these sensitivities special Greek names:
+- **Delta ∆** is the sensitivity of the option price to S.
+- **Gamma Γ** is another measure of the relation between prices and S.
+- **Rho ρ** is the sensitivity of the option price to rates r.
+- **Vega ν** is the sensitivity of the option price to volatility σ.
+- **Theta θ** is the sensitivity of the option price to time T.
+
+We cover each of these one-by-one.
+
+**Remark**: We will assume no dividends q since the equations are neater, until right at the end where we mention the impact of dividends.
+
+### Delta ∆ and gamma Γ
+
+We know that as S increases, calls premiums rise and put premiums fall.
+
+![alt text](assets\IMG69.PNG)
+
+We quantify this mathematically with the delta ∆, given by
+
+$$∆_{C} = N(d_{1}) \: \: \text{and} \: \: ∆_{P} = N(d_{1}) − 1$$
+
+Importantly, note the following, which confirms the fi rst line of this slide:
+
+$$ 0 < ∆_{C} < 1 \: \: \text{and} \: \: -1 < ∆_{P} < 0$$
+
+
+> - $\Delta _{C}$ - change in the price of an option premium 
+> - call option delta (how much the option premium changes from a change in the underlying asset)
+> - CDF of normal variable
+>   - As the price of the underlying asset goes up, put premium goes down
+
+**Remark**
+
+∆ is the partial derivative of the premium with respect to S
+
+But think of ∆ as:
+- The change in the premium due to a change in S.
+- In fact, ∆ is the slope of the above payoff diagrams:
+
+From the remark above, we interpret ∆ as the change in the premium due to a change in S, giving us the approximations
+
+$$dC \approx \Delta _{c} dS \: \: \text{and} \: \: dP \approx \Delta _{p} dS $$
+
+where $dC$ and $dP$ are a change in the premium and $dS$ a change in $S$.
+- We calculate the “new” premiums due to a change in S as
+
+$$C_{new} \approx C + dC \: \: \text{and} \: \: P_{new} \approx P+dP $$
+
+**Remark**: These approximations are used later in delta hedging.
+
+> - Will trade a certain quantity of the underlying asset to make their portfolio delta neutral, so that any change in the underlying asset doesn't impact on their actual value in their portfolio
+> - Market makers make money by quoting large spreads
+>   - To hedge the risk of their portfolio, changing from a change in the price of their underlying asset they will remain delta neutral the whole time
+>   - How many units in the underlying asset they have to trade to remain delta neutral
+
+---
+![alt text](assets\IMG70.PNG)
+---
+> - goes up from 
+
+
+From above, the approximation $dC \approx \Delta _{c} dS$ is not perfect, but:
+- We can make it more accurate by also using the gamma Γ given by
+
+$$\Gamma = \frac{f(d_{1})}{S \sigma \sqrt{T}}$$
+
+(same for calls and puts), with:
+
+$$f(x) = \frac{e^{-x^{2} / 2}}{\sqrt{2 \pi}}$$
+
+the PDF of a standard normal random variable
+
+**Remark**: Γ is the 2nd partial derivative of the premium with respect to S.
+
+> - f notation, PDF of the standard normal variable
+
+We make the approximations of dC and dP more accurate by setting
+
+$$dC \approx \Delta _{c} dS + \frac{1}{2}\Gamma dS^{2} \: \: and \: \: dP \approx \Delta _{p} dS + \frac{1}{2}\Gamma dS^{2}$$
+
+---
+![alt text](assets\IMG71.PNG)
+
+> - Calculate the gamma of the call option as before
+> - Include the correction term
+>   - delta - gamma strategy
+
+
+```python 
+1 import numpy as np
+2 from scipy . stats import norm
+3 S = 50; K = 50; r = 0.05; T = 1/2; sigma = 0.25
+4 d1 = (np.log(S/K) + (r + 0.5* sigma **2)*T)/( sigma *np.sqrt(T))
+5 d2 = d1 - sigma *np.sqrt(T)
+6 C = S*norm.cdf(d1) - K*np.exp(-r*T)*norm.cdf(d2)
+7 deltaC = norm.cdf(d1); deltaP = deltaC - 1
+8 gamma = norm.pdf(d1)/(S* sigma *np.sqrt(T)) # norm.pdf () is f()
+9 dS = 2
+10 dC = deltaC *dS + 0.5* gamma *dS **2
+11 dP = deltaP *dS + 0.5* gamma *dS **2
+12 Cnew = C + dC; Pnew = P + dP
+```
+
+### Rho $\rho$
+
+Rho ρ is the change in the premium from a change in r, and is given by
+
+![alt text](assets\IMG72.PNG)
+
+Note that:
+
+![alt text](assets\IMG73.PNG)
+
+As r increases, call premiums increase but put premiums decrease.
+- An intuitive explanation for this is the present value $e^{−rT}K$ of the strike that the holder pays in a call, or receives in a put, decreases.
+
+> - $\rho$ of a call option is positive, meaning an increase in interest rate increases the value of a call option
+>   - Vice versa for puts
+
+**Remark**: ρ is the partial derivative of the premium with respect to r.
+
+---
+![alt text](assets\IMG74.PNG)
+---
+
+### Vega $\nu$
+
+Vega ν is the change in the premium from a change in σ, and is given by:
+
+$$\nu = Sf(d_{1})\sqrt{T}$$
+
+- Same for calls and puts
+
+with f(x) the PDF of a standard normal random variable. Note that
+
+$$0 < \nu$$
+
+As σ increases, option premiums increase.
+
+**Remark**ν is the partial derivative of the premium with respect to σ.
+
+> - As market perceptions of volatility increase, the option premiums increase
+> - All kinds of options strategies that you can put in place
+
+---
+![alt text](assets\IMG75.PNG)
+---
+
+### Theta $\theta$
+Theta θ is a bit ambiguous. It gives the negative of the change in the premium from a change in T. And the equations are more complex:
+
+![alt text](assets\IMG76.PNG)
+
+with f (x) the PDF of a standard normal random variable.
+
+> - consider the case of option on income-paying options
+>   - can be positive or negative, depending on the params in the market at a given point
+> - All of the other variables of the option price don't change
+
+Remark
+θ is the negative of the partial derivative of the premium with respect to T, telling us the impact of approaching expiry.
+
+However, note that
+
+![alt text](assets\IMG77.PNG)
+
+On a non-dividend paying asset, call premiums fall as expiry nears.
+- Impact of time on puts is ambiguous: From $\theta _{P} = \theta _{C} + rKe^{-rT}$ deep
+in-the-money put (large K) premiums may increase as expiry nears.
+- This relates to something said last week: A deep in-the-money put is already close to its maximum payoff of K, so not much more payoff can be realised at expiry, but there is still a chance of an unfavourable movement in the asset price. But as we approach expiry, there is less chance of an unfavourable movement.
+
+However, there is some rules of thumb relating to time:
+- θ is almost always negative:
+- So premiums usually fall as expiry approaches.
+- This is known as time decay.
+- Time decay works for option writers and against option holders.
+- θ is most negative for options close to at-the-money.
+- θ in fact gets more negative for options close to at-the-money as
+expiry approaches: Time decay “speeds up” as expiry approaches.
+These last two points are illustrated in the following fi gures:
+
+> - Always assume that $\theta$ is negative for calls and puts
+>   - Core premium falls no matter what, as you approach expiry, given all other param stay the same
+> - non-dividend and dividend paying assets could put premiums
+> - Ignoring small percentage of cases, all other options have negative theta
+>   - Always assumes your premiums are falling as you approach expiry
+>   - Time decay
+>
+> - Portfolio of long options, portfolio is going down in value as you approach expiry
+>   - Write an option, receive the premium upfront
+>   - Premium time value approaches zero - take advantage of time decay that works for you
+>   - More impactful as you approach expiry
+
+![alt text](assets\IMG78.PNG)
+
+![alt text](assets\IMG79.PNG)
+
+> - options with trading positions close to the money
+
+![alt text](assets\IMG80.PNG)
+
+---
+![alt text](assets\IMG81.PNG)
+---
+
+### Incorporating dividends
+On a dividend paying asset, all of the above interpretations remain
+unchanged except for θ. From the textbook, the equations become:
+
+![alt text](assets\IMG82.PNG)
+
+Note that Hull uses the notation N
+′
+(x) for the PDF of a standard normal
+random variable, whereas I’ve been using f (x).
+
+![alt text](assets\IMG83.PNG)
