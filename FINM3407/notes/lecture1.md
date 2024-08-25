@@ -208,6 +208,7 @@ Which of the following is more likely true:
 
 ### Fear of Regret
 - Make decisions based on minimising the possibility of experiencing regret in the future, even if it means avoiding potential opportunities or taking risks. 
+
 Some examples:
 - You are a conservative investor and always invest in low-beta stocks. Recently, you noticed the “UQ Coin” craze is unfolding in the financial markets, and you saw your friend purchasing UQ Coins as well. You decided to buy some yourself, ignoring potential risks, to avoid the regret of not purchasing it if it runs up further. 
 
