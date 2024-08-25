@@ -427,7 +427,7 @@ The main descriptors are as follows:
   and
   - Manufacturers of electronic equipment and anyone who facilitates the manufacture of electronic equipment used in Australia, e.g. Samsung, Apple.
 
-### TOLAAct - overview - what kind of assistance?
+### TOLA Act - overview - what kind of assistance?
 - Section 317E sets out, in some detail, the types of assistance that may be specified. These types
 include (but not limited to):
 - Providing technical information.

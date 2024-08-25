@@ -709,10 +709,6 @@ unchanged except for θ. From the textbook, the equations become:
 
 ![alt text](assets\IMG82.PNG)
 
-Note that Hull uses the notation N
-′
-(x) for the PDF of a standard normal
-random variable, whereas I’ve been using f (x).
+Note that Hull uses the notation N′(x) for the PDF of a standard normal random variable, whereas I’ve been using f(x).
 
 ![alt text](assets\IMG83.PNG)
-
