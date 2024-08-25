@@ -72,7 +72,7 @@ $$v(x) < -v(-x)$$
 ### Common value functional form of Prospect Theory
 
 **Positive Domain**
-$$v(z) = z \alpha  \; \text{for} \; z≥0, \; \; 0< \alpha <1  $$
+$$v(z) = z^{\alpha}  \; \text{for} \; z≥0, \; \; 0< \alpha <1  $$
 
 - $z$ is change in wealth (horizontal line)
 - Value function (not utility) so $v$ is used.
@@ -131,7 +131,6 @@ $$u(4000) > 2u(2000)$$
 
 > more people chose spin the wheel
 > - overall utility for A should be more than B
-
 
 ### Reconciliation Through Prospect Theory:
 The answer lies in its **nonlinear weighting function**. In  Prospect  Theory,  probabilities  are  not  treated linearly. *Small probabilities* are **overweighted**,  which means they seem larger than they are, and *moderate to  high  probabilities*  are  **underweighted**,  appearing smaller than they are.
