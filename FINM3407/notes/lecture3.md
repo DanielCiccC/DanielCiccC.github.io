@@ -18,10 +18,10 @@
 
 Only new information will move stock prices and this information is equally likely to be good news or bad news
 
-The competition for information makes the capital market informationally efﬁcient.
-- The market processes information quickly and efﬁciently
-  -  Prices reﬂect the information in the market.
-- Market efﬁciency can be categorised:
+The competition for information makes the capital market informationally efficient.
+- The market processes information quickly and efficiently
+  -  Prices reflect the information in the market.
+- Market efficiency can be categorised:
   - The weak form asserts that all information to be derived from past stock prices and trading volume is 
 already reflected in stock prices.
   - The semi strong form claims that all publicly available information is already reflected.
@@ -45,7 +45,7 @@ insider information, is reflected in prices.
 
 
 - But investors underreact to news, e.g., post earnings announcement drift (PEAD).
-- The evidence is against semi-strong form efﬁciency
+- The evidence is against semi-strong form efficiency
 - i.e., Prices do not incorporate all public information quickly enough
 
 
@@ -64,12 +64,10 @@ insider information, is reflected in prices.
 > ![alt text](assets\IMG17.PNG)
 
 ### Strong-form tests
-- Do stock prices fully reﬂect all information including information known only to insiders (directors, 
-management)?
-- If insiders can freely trade on their inside information then we might expect their trading to move 
-price to where it reﬂects that information 
+- Do stock prices fully reflect all information including information known only to insiders (directors, management)?
+- If insiders can freely trade on their inside information then we might expect their trading to move price to where it reflects that information 
 
-Some studies have found insiders time their purchases and sales very proﬁtably on average.
+Some studies have found insiders time their purchases and sales very profitably on average.
 
 ![alt text](assets\IMG18.PNG)
 
@@ -77,9 +75,9 @@ Some studies have found insiders time their purchases and sales very proﬁtably
 > - even insider information should be reflected
 
 
-### Efﬁcient Market Hypothesis - Implications
-- Technical analysis: focuses on stock price patterns and on proxies for buy or sell pressure in the market.
-- Fundamental analysis: focuses on the determinants of the underlying value of the firm, such as current 
+### Efficient Market Hypothesis - Implications
+- **Technical analysis**: focuses on stock price patterns and on proxies for buy or sell pressure in the market.
+- **Fundamental analysis**: focuses on the determinants of the underlying value of the firm, such as current 
 profitability and growth prospects. 
 - Because both types of analysis are based on public information, neither should generate excess profits if 
 markets are operating efficiently. That is, either technical analysis or fundamental analysis is not useful in 
@@ -199,7 +197,7 @@ return horizon than the volatility of returns (short term: less a problem)
 >   - Samples/period, random
 >   - may not necessarily be true
 >
-> Apparent anomalies could be due to methodlogy
+> Apparent anomalies could be due to methodology
 > - How do we test for abnormal returns
 > - To test it, rely on some other asset pricing models
 > - Calculate with CAPM, etc. To test market efficiency, must model it on something else as a proxy which may not be a good model
@@ -219,7 +217,7 @@ abnormal returns
   - Most long-term anomalies tend to disappear with reasonable changes in technique
 
 > - different methods have their own statistical issues
-> - How can you say one is better than the other'
+> - How can you say one is better than the other
 > - Too many variables in the test
 > - In long time horizons, anomalies tend to disappear
 
@@ -267,12 +265,8 @@ Long-term winners vs. losers:
 
 ![alt text](assets\IMG20.PNG)
 
-- In  Table  4.3,  the  returns  from  various  value  investing  (value  stocks  vs.  glamour/growth  stock) 
-approaches (that is, using different price ratios as screens) are shown for the United States, Japan, the 
-United Kingdom, France, and Germany during 1975–1995.1
-- We  see  that  in  all  15  cases  value  stocks  outperformed  glamour  stocks,  where  value/glamour 
-portfolios  were  formed  within  each  country  by  forming  portfolios  from  the  top/bottom  30%  of 
-stocks for each year on the basis of beginning-of-year B/P, E/P, and CF/P.
+- In Table 4.3, the returns from various value investing (value stocks vs. glamour/growth stock) approaches (that is, using different price ratios as screens) are shown for the United States, Japan, the United Kingdom, France, and Germany during 1975–1995.1
+- We see that in all 15 cases value stocks outperformed glamour stocks, where value/glamour portfolios were formed within each country by forming portfolios from the top/bottom 30% of stocks for each year on the basis of beginning-of-year B/P, E/P, and CF/P.
 
 > - Value stocks outperform glamour stocks
 
@@ -280,10 +274,10 @@ stocks for each year on the basis of beginning-of-year B/P, E/P, and CF/P.
 ### Reversal evidence
 
 Figure 4.2, based on five-year formation periods and future returns being tracked five years out, indicates that there are substantial differences.
-The difference between winners and losers is stark, with  past  losers  substantially outperforming past winners. 
+The difference between winners and losers is stark, with past losers substantially outperforming past winners. 
 
 *Also salient from the figure are two other points:*
-1. much of the difference is generated by the strong performance  of  losers  rather  than  the  weak performance of winners;
+1. much of the difference is generated by the strong performance of  losers  rather  than  the  weak performance of winners;
 2. much of the return boost/drop occurs in the month of January
 
 
@@ -328,7 +322,6 @@ Also,  there  is  a relationship between post-earnings announcement drift and mo
 - One of main foundations of EMH is no-arbitrage condition.
 - If there are pricing errors (e.g., caused by irrational investors) smart-money traders arbitrage them away.
 - No free lunches are left on the table!
-
 > - No limits to arbitrage - back to fundamental
 >   - No free lunch setting
 >
@@ -347,3 +340,135 @@ Suppose the following exchange rates are available:
 
 > - british pound is overvalued
 >   - overvalued - sell it
+
+
+### Is Arbitrage Risk-free?
+However, when a mispricing occurs, strategies designed to correct can be risky
+and costly, thereby allowing the mispricing to survive for a long time.
+
+Example: A shares vs. H shares
+
+What hampers arbitrage exploitation?
+1. Fundamental risk
+2. Noise-trader risk
+3. Implementation costs
+
+
+### Fundamental Risk
+
+- If you think a stock is underpriced you can buy it, but:
+  - You might be sideswiped by the market.
+  - Or maybe by the industry.
+  - Plus, there is idiosyncratic risk.
+- Pure arbitrage seeks to eliminate all of these.
+- Problem: you need to find perfect substitutes. Or we can say it is the risk when a perfect 
+substitute is not available.
+- Ex 1: Ford is overpriced. Sell Ford and buy GM? But is GM a perfect substitute for Ford? (next slide)
+- Ex 2: Huaneng power (902) vs. Datang power (991) 
+
+> - Perfect arbitrage should not have any risk
+
+
+- Say Ford is too cheap.
+- You buy Ford.
+  - But market may drop.
+  - Or auto industry may drop.
+- So you buy Ford and short GM.
+  - But Ford itself may falter without industry or market dropping (idiosyncratic risk) .
+- Even you totally manage fundamental risk, there is still noise-trader risk: spread may 
+widen as investors get it even more wrong.
+
+> - Industry may drop
+>   - Long short position to offset this risk (hedge)
+> - didn't hedge unsystematic risk
+
+### 2) Noise Trader risk
+The idea is introduced by De Long et al. (1991) and Shleifer and Vishny (1997). 
+(Noise trader risk is the risk that mispricing being exploited by the arbitrageurs worsen in the short run)
+- It has been shown that noise-trader risk is systematic, which means that it cannot be diversified away.
+- Real world arbitrageurs cannot wait it out because as professional money managers they do not have long horizons – they are usually evaluated at least at once per year.
+
+**== > Three issues:**
+- (1) Principal – Agent Problems (Horizon Mismatch Risk)
+- (2) Creditor Risk (Margin Risk)
+- (3) Short Squeeze Risk
+
+> - If it becomes sentiment, has potential power to move market
+>   - If we have large enough former sentiment, can move the market
+>   - Noise traders can influence the market as well
+>   - Biggest and bullish enough, can be profitable
+>
+> It is the **systematic risk**
+> - Eventually price should still be corrected
+> - Not all investors can wait it out
+>   - Also take leverage, causing creditor risk/margin
+>   - price increase, force managers to buy it back and lose money
+
+### 3) Implementation costs
+- In some cases, horizon is short but short-selling is:
+  - Expensive (commissions, spreads, price impact & fees for shorting stock)
+  - Difficult or even impossible (lack of availability regardless of fees; legal factors: many 
+institutions cannot short)
+Plus there is cost of finding these arbitrage opportunities.
+- Transaction costs: commissions, bid-ask spreads and price impact can make it less 
+attractive to exploit a mispricing.
+- Legal constraints: many pension and mutual fund managers are not allowed for short 
+sales. 
+- Other costs: the cost of finding and learning about a mispricing and the cost of the 
+resource needed to exploit it.
+
+> A lot of resources, time and money
+> - Add on top to why arbitrage is limited
+
+### 3Com and Palm
+- March 2, 2000: 3Com carves out in an IPO 5% of its subsidiary Palm.
+- At same time, 3Com announced that in the near future the remaining 95% of the shares would be distributed to current shareholders (roughly 1.5 of Palm/share of 3Com).
+- Two ways of buying Palm:
+  - Buy Palm directly.
+  - Buy 3Com getting Palm and rest of 3Com business.
+
+- Background: Before 2000, 3Com owned Palm (via an acquisition of U.S. Robotics), a maker of handheld computers. 3Com was being ignored by the stock market during the Internet bubble period, especially compared to those sexy Internet companies.
+- To gain the market recognition, on 12/13/1999, 3Com announced that it would sell a fraction of its stake in Palm to the general public via an IPO.
+- In this transaction (called equity carve-out), 3Com retained ownership of 95% of Palm shares.
+
+> - Palm going public
+> - selling 5% to investors, or get shares through 3Com
+>
+> Buy 3Com, get both
+
+![alt text](assets\IMG201.PNG)
+
+> 3Com's price dropped by 21%
+
+
+- “Smart” investors were limited in their ability to short-sell Palm (as documented in Lamont and Thaler), so it wasn’t their fault.
+- But this cannot explain why anybody would buy Palm instead of 3Com – for this one needs irrationality.
+- In facts 2 things are needed for mispricing to exist:
+  - Irrational investors
+  - Limits to arbitrage (here due to implementation costs)
+- 3Com & Palm case illustrates that mispricing does not imply a free lunch!
+
+> - Both limits to arbitrage we also need irrational investors to have mispricing
+>   - no limits to arbitrageurs, can be corrected straight away 
+> - know 3Com undervalued and Palm overvalued, have limits to perform arbitrage
+>
+
+
+### Conclusion
+
+
+- There  are  investors  who  are  not  fully  rational. Furthermore, investors are deviated from rationality in a systematic and consistent way.
+- The  systematic  and  consistent  irrationality  cause security prices deviated from their fundamental values.
+  - However, arbitrage is risky and therefore is limited and  mispricing  may  be  worsened  before  getting 
+better.
+- Do not jump in the conclusion too early to assume that noise traders are the losers.
+- Noise traders take on more risk and they need not die out and may make more profits.
+
+> - Go is a systematic and inconsistent way
+> - security price will deviate from fundamental value
+> - arbitrage is risky and expensive
+>   - Best price can get worse before it gets better
+> - With that information, noise traders are not always losers - more willing to take risk
+>   - Can outperform professional managers
+
+![alt text](assets\IMG202.PNG)
