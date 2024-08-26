@@ -12,7 +12,7 @@
 - **2** Foundations of Finance II: Asset Pricing, Market Efficiency and Agency Relationships
   - **2.1** Risk and Return Relationship
   - **2.2** CAPM model and Fama and French 
-  - **2.3** Market Efficiency (brief introduction = > more details in Topic 3)
+  - **2.3** Market Efficiency (brief introduction => more details in Topic 3)
   - **2.4** Agency Relationships and Corporate Governance
 
 
@@ -252,7 +252,16 @@ $$ E(r_{e}) = r_{f} + \beta_{e}(E(r_{M})-r_{f})$$
 - An agency problem arises when the agent’s and principal’s incentives are not aligned.
 
 **Agency Cost**
-- Direct costs: expenditures that benefit the managers but not the firms & costs arise from monitoring management actions
+- **Direct costs:** expenditures that benefit the managers but not the firms & costs arise from monitoring management actions
   - Example: the cost of hiring outside auditors, business trips using a private jet instead of commercial flights
-- Indirect costs: results from lost opportunities
+- **Indirect costs:** results from lost opportunities
 Example: managers of a firm that is an acquisition target may resist the takeover attempt because of concern about keeping their jobs, even if the shareholders would benefit from the merger.
+
+**Corporate Governance**
+- The system of controls, regulations, and incentives designed to minimize agency costs between managers and investors and prevent corporate fraud
+- The role of the corporate governance system is to mitigate the conflict of interest that results from the separation of ownership and control without unduly burdening managers with the risk of the firm.
+
+Implements two alternative strategies to mitigate moral hazard: 
+- Monitoring: usually imposed by controls and regulations
+- Incentives: set by contract to reward desirable outcomes (e.g., stock options)
+

@@ -407,15 +407,11 @@ The idea is introduced by De Long et al. (1991) and Shleifer and Vishny (1997).
 ### 3) Implementation costs
 - In some cases, horizon is short but short-selling is:
   - Expensive (commissions, spreads, price impact & fees for shorting stock)
-  - Difficult or even impossible (lack of availability regardless of fees; legal factors: many 
-institutions cannot short)
+  - Difficult or even impossible (lack of availability regardless of fees; legal factors: many institutions cannot short)
 Plus there is cost of finding these arbitrage opportunities.
-- Transaction costs: commissions, bid-ask spreads and price impact can make it less 
-attractive to exploit a mispricing.
-- Legal constraints: many pension and mutual fund managers are not allowed for short 
-sales. 
-- Other costs: the cost of finding and learning about a mispricing and the cost of the 
-resource needed to exploit it.
+- Transaction costs: commissions, bid-ask spreads and price impact can make it less attractive to exploit a mispricing.
+- Legal constraints: many pension and mutual fund managers are not allowed for short sales. 
+- Other costs: the cost of finding and learning about a mispricing and the cost of the resource needed to exploit it.
 
 > A lot of resources, time and money
 > - Add on top to why arbitrage is limited
@@ -455,8 +451,6 @@ resource needed to exploit it.
 
 
 ### Conclusion
-
-
 - There  are  investors  who  are  not  fully  rational. Furthermore, investors are deviated from rationality in a systematic and consistent way.
 - The  systematic  and  consistent  irrationality  cause security prices deviated from their fundamental values.
   - However, arbitrage is risky and therefore is limited and  mispricing  may  be  worsened  before  getting 

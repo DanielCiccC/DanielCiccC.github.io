@@ -128,7 +128,8 @@ Which is more important - 'prices are right' or 'no free lunches'?
   -  Investors **are rational** (rational expectations and expected utility maximization)
   - There is **no limit of arbitrage**
 
-### Rationales Supporting Efficiency
+## 2.1 Rationales Supporting Efficiency
+
 Fama (1998): Two reasons 
 1. Anomalies are chance results 
 - Apparent overreaction to information is about as common as underreaction. 
@@ -214,3 +215,80 @@ Several years later, intermediate-term (3–12 month) momentum was documented by
 They found, for example, that a *long-short zero-cost portfolio formed on the basis of returns over the previous six months earned an average excess return of 0.95% per month over the next six months*.
 
 Also, there is a relationship between post-earnings announcement drift and momentum—though whether momentum disappears after accounting for post-earnings announcement drift is a point of debate.
+
+
+## 2.2 Theoretical challenges and Empirical challenges of Efficient markets
+Market efficiency requires that only one of the following three conditions need hold:
+1. Universal rationality
+2. Uncorrelated errors
+3. Unlimited arbitrage
+
+- One of main foundations of EMH is no-arbitrage condition.
+- If there are pricing errors (e.g., caused by irrational investors) smart-money traders arbitrage them away.
+- No free lunches are left on the table!
+
+### Triangular Arbitrage
+
+Cross rates can be used to check on opportunities for intermarket arbitrage.  
+Suppose the following exchange rates are available: 
+
+- Barclays Bank: Australian dollars per pound sterling:   $A\$1.8410/£$
+- Westpac Bank: Australian dollars per Euro:    $A\$1.2223/€$ 
+- Deutsche Bank: Euro per pound sterling:       $€1.5100/£$ (market)
+
+The synthetic cross-rate between Euro and pound is:
+
+$$\frac{A\$1.8410/\pounds}{A\$1.8410/ €} = € 1.5062/ \pounds $$
+
+![alt text](assets\IMG24.PNG)
+
+However, when a mispricing occurs, strategies designed to correct can be riskyand costly, thereby allowing the mispricing to survive for a long time.
+
+### What hampers arbitrage exploitation?
+
+### 1) Fundamental Risk
+- If you think a stock is underpriced you can buy it, but:
+  - You might be sideswiped by the market.
+  - Or maybe by the industry.
+  - Plus, there is idiosyncratic risk.
+- Pure arbitrage seeks to eliminate all of these.
+- Problem: you need to find perfect substitutes. Or we can say it is the risk when a perfect substitute is not available.
+
+### Sentiment and noise
+- Noise is opinion on value unrelated to fundamental information (i.e., based on misinformation)
+- Sentiment is correlated noise, and has the potential power to move markets.
+- This implies that price movements can be driven by misinformation rather than information.
+1. Noise traders can influence the prices. 
+2. Noise traders can earn more profits than arbitrageurs, when they are are bullish and are willing to take 
+more risk, they create.
+3. Noise traders may not be driven out of the market. 
+4. However, arbitragers have higher expected utility, while noise traders have lower expected utility
+
+
+### 2) Noise Trader risk
+The idea is introduced by De Long et al. (1991) and Shleifer and Vishny (1997). 
+(Noise trader risk is the risk that mispricing being exploited by the arbitrageurs worsen in the short run)
+- It has been shown that noise-trader risk is systematic, which means that it cannot be diversified away.
+- Real world arbitrageurs cannot wait it out because as professional money managers they do not have long horizons – they are usually evaluated at least at once per year.
+
+**==> Three issues:**
+- (1) Principal – Agent Problems (Horizon Mismatch Risk)
+- (2) Creditor Risk (Margin Risk)
+- (3) Short Squeeze Risk
+
+### 3) Implementation costs
+- In some cases, horizon is short but short-selling is:
+  - Expensive (commissions, spreads, price impact & fees for shorting stock)
+  - Difficult or even impossible (lack of availability regardless of fees; legal factors: many institutions cannot short)
+Plus there is cost of finding these arbitrage opportunities.
+- Transaction costs: commissions, bid-ask spreads and price impact can make it less attractive to exploit a mispricing.
+- Legal constraints: many pension and mutual fund managers are not allowed for short sales. 
+- Other costs: the cost of finding and learning about a mispricing and the cost of the resource needed to exploit it.
+
+### 3Com/Plam explanation
+- “Smart” investors were limited in their ability to short-sell Palm (as documented in Lamont and Thaler), so it wasn’t their fault.
+- But this cannot explain why anybody would buy Palm instead of 3Com – for this one needs irrationality.
+- In facts 2 things are needed for mispricing to exist:
+  - **Irrational investors**
+  - **Limits to arbitrage (here due to implementation costs)**
+- 3Com & Palm case illustrates that mispricing does not imply a free lunch!

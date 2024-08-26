@@ -1,7 +1,7 @@
 # Tutorial 2
 
 ### 1.1 Lottery and Insurance
-A lottery risk seeking prospect is a prospect with e *low probability* of a *high payoff* 
+A lottery risk seeking prospect is a prospect with a *low probability* of a *high payoff* 
 Many people buy lottery tickets, even with negative values. These same people buy insurance to proect themselves from risk
 Normally, *insurance* is a hedge against a *low-probability large loss*
 
