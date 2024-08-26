@@ -294,8 +294,7 @@ valuation of current prospects.
 ### House money effect:
 - People tend to be more willing to gamble with money that they have won (house money) than with their initial stake or with money won in earlier rounds of betting.
 
-Which of these approach individuals take can depend on the specific context and individual 
-psychological factors
+Which of these approach individuals take can depend on the specific context and individual psychological factors
 
 > - House money effect - you win, more likely to gamble more
 >   - also more risk-seeking
@@ -303,9 +302,7 @@ psychological factors
 ### Theater ticket problems
 1. Imagine you have decided to see a play where admission is $10.  As you enter theatre 
 you discover that you have lost a $10 bill.  Would you still pay $10 for a ticket to the play?
-2. Imagine that you have decided to see a play and paid the admission price of $10 per 
-ticket. As you enter the theatre you discover that you have lost the ticket. The seat was 
-not marked, and the ticket cannot be recovered.  Would you pay $10 for another ticket?
+2. Imagine that you have decided to see a play and paid the admission price of $10 per ticket. As you enter the theatre you discover that you have lost the ticket. The seat was not marked, and the ticket cannot be recovered.  Would you pay $10 for another ticket?
 
 
 Nothing is really different about the problems, however:

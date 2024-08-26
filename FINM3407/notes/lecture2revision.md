@@ -161,3 +161,29 @@ Related to prospect theory and frames.
 - Mental accounting is a description of way people intuitively do these things, and how it impacts financial decision-making.
 - Often tendency to use mental accounting leads to odd and suboptimal decisions.
 
+### Prospect theory, mental accounting and prior outcomes
+Problem with prospect theory is that it was set up to deal with one-shot gamble – but what if there have been prior gains or losses?
+- Do we go back to zero (segregation), or move along curve (integration)?
+
+**Integration or segregation**
+1. Segregation:  This  refers  to  the  idea  that 
+each  new  gamble  is  evaluated  in  isolation, 
+starting  from  the  reference  point  of  zero  (as  if 
+we "reset" after each gamble). The idea is that 
+people  have  short  memories,  or  they  "start 
+fresh" with each new gamble.
+2. Integration:  This  suggests  that  people  keep 
+track  of  their  gains  and  losses  over  time  and 
+use  this  cumulative  total  as  their  reference 
+point. In this case, prior outcomes influence the 
+valuation of current prospects.
+
+![alt text](assets\IMG13.PNG)
+
+### Silver lining effect:
+- They tend to mentally combine wins but separate losses to make them feel less impactful.
+
+### House money effect:
+- People tend to be more willing to gamble with money that they have won (house money) than with their initial stake or with money won in earlier rounds of betting.
+
+Which of these approach individuals take can depend on the specific context and individual psychological factors
