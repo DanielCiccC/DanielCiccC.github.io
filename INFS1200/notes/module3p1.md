@@ -4,8 +4,10 @@
 
 **Data Definition Language (DDL)**
 - Statements to define the database schema
+
 **Data Manipulation Language (DML)**
 - Statements to manipulate the
+
 **Data Control Language (DCL)**
 - Statements to specify transaction control, semantic integrity 
 (triggers and assertions), authorization and management of privileges

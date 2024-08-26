@@ -28,10 +28,14 @@
 <h3 dir="auto" id="three-types-of-sql-statements">Three Types of SQL Statements:</h3>
 <p dir="auto"><strong>Data Definition Language (DDL)</strong></p>
 <ul dir="auto">
-<li dir="auto">Statements to define the database schema
-<strong>Data Manipulation Language (DML)</strong></li>
-<li dir="auto">Statements to manipulate the
-<strong>Data Control Language (DCL)</strong></li>
+<li dir="auto">Statements to define the database schema</li>
+</ul>
+<p dir="auto"><strong>Data Manipulation Language (DML)</strong></p>
+<ul dir="auto">
+<li dir="auto">Statements to manipulate the</li>
+</ul>
+<p dir="auto"><strong>Data Control Language (DCL)</strong></p>
+<ul dir="auto">
 <li dir="auto">Statements to specify transaction control, semantic integrity
 (triggers and assertions), authorization and management of privileges</li>
 <li dir="auto">Statements for specifying the physical storage parameters such as
@@ -169,6 +173,7 @@ Selection (WHERE clause)</p>
 <li dir="auto">Select tuples from given collection of tuples.</li>
 <li dir="auto">&lt;search condition&gt; is a conditional (Boolean) expression that identifies the tuples to be retrieved by the query.</li>
 </ul>
+<h3 dir="auto" id="complete-where-condition-clauses">Complete WHERE condition clauses</h3>
 <table dir="auto">
 <thead dir="auto">
 <tr dir="auto">
@@ -189,9 +194,9 @@ Selection (WHERE clause)</p>
 <td><code>ID &gt; 324</code>, <code>price &lt; 42.30</code></td>
 </tr>
 <tr dir="auto">
-<td>NVARCHAR() only</td>
+<td>All</td>
 <td><code>=</code></td>
-<td><code>name = 'Mary'</code> will select all the tuples with exactly the name 'Mary'</td>
+<td><code>name = 'Mary'</code>, <code>ID = 23406</code></td>
 </tr>
 <tr dir="auto">
 <td>NVARCHAR() only</td>
