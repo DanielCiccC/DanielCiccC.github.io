@@ -43,6 +43,7 @@ $$U(W) < 0.5 \times U(+\$105) + 0.5 \times U(-\$100)$$
 > Strong aversion to avoid losses
 > - may make the same decision, but for a different reason
 
+**Risk Aversion**
 - Preference for lower levels of risk and uncertainty.
 - Choice of guaranteed outcomes, even if less profitable.
 - Drives decisions towards certainty over uncertainty.
