@@ -64,7 +64,8 @@ Violation  of  EU  theory  because  preferences  are  inconsistent.    The  same
 ### 8*. Consider a person with the following value function under prospect theory: 
  
 $v(w)  = \sqrt{w}$     when w > 0 
-$= -2\sqrt{w}$    when w < 0 
+
+$v(w) = -2\sqrt{w}$    when w < 0 
 
 **a. Is this individual loss-averse?  Explain.**
 
@@ -72,7 +73,21 @@ This person is loss averse.  Losses are felt twice as much as gains of equal mag
 
 **b. Assume that this individual weights values by probabilities, instead of using a prospect theory weighting function.  Which of the following prospects would be preferred?**
 
+![alt text](assets\IMG38.PNG)
 
+### 9*. Now consider a person with the following value function under prospect theory: 
+
+$v(z)  = {z}^{0.8}$     when z $\ge$ 0 
+
+$v(z)  = -3 \cdot {z}^{0.8}$     when z < 0 
+
+![alt text](assets\IMG39.PNG)
+
+**b. Repeat the calculation but using probabilities instead of weights. What does this illustrate?**
+
+![alt text](assets\IMG40.PNG)
+
+Therefore, you would prefer A.  The reason for the switch is that risk seeking is maintained in the domain of losses (implying rejection of losses) if probabilities are used instead of weights.
 
 ### Q10. 
 - Payment decoupling is encouraged with fixe prix
@@ -80,7 +95,7 @@ This person is loss averse.  Losses are felt twice as much as gains of equal mag
 
 ## Agency Theory
 
-### Q11.
+### Q11. Corporate  managers  work  for  the  owners  of  the  corporation.  Consequently, they should make decisions that are in the interests of the owners, rather than their own. What strategies are available to shareholders to help ensure that managers are motivated to act this way? 
 
 Shareholders can do the following:
 1. Ensure that employees are paid with company stock and/or stock options
@@ -92,18 +107,26 @@ Shareholders can do the following:
 > - Performance based pay: Tie a significant portion of executive compensation to the company's growth, profitability, or total shreholder return (TSR)
 > Transparency clause: Ensure transparency in financial reporting
 
-### Q12
+### Q12 What inherent characteristic of corporations creates the need for a system of checks on manager behaviour? 
 - separation between management and ownership
-  - issues that arise from the separation
+  - Issues that arise from the separation
 - One the one hand, managers do not usually have direct ownership, manage and control the firm
 - On the other hand, the shareholder, who are the owners, are not involved in the management of the firm
 - This creates a clear conflict of interest between the investors and shareholder of the firm
 
-### Q13
+### Q13 What is the role of the board of directors in corporate governance? 
 
 - Main roles of the board is to monitor the management to reduce agency costs and to ensure that the managers work in the best interest of the shareholders
 2. Board also provides guidance and support to the CEO and the management of the firm
-3. Role in setting the main vision and strategy of the company. REsponsible for approving and keeping track of the firm's strategy as well as annual budgets and investment programs established in the action plan prepared by the executive officers
+3. Role in setting the main vision and strategy of the company. Responsible for approving and keeping track of the firm's strategy as well as annual budgets and investment programs established in the action plan prepared by the executive officers
+
+### 14. What role do securities analysts play in monitoring? 
+
+Securities analysts produce independent valuations of the firms they cover so that they can make buy and sell recommendations to their clients. They usually collect a great deal of  information  on  the  firm  as  well  as  its  competitors  through  the  company’s  financial statements and filings. They also often ask difficult and probing questions of CEOs and CFOs  during quarterly  earnings  releases.  As  a  result  of  all  this  information  gathering, they are usually in a good position to uncover irregularities in the firm.  
+
+### 15. How are lenders part of corporate governance? 
+
+Lenders are exposed to the firm as creditors and so are motivated to carefully monitor the firm. They often include covenants in their loans that require the company to maintain certain profitability and liquidity levels. Breaking these covenants can be a warning sign of deeper trouble. 
 
 ### Q16
 Two counterarguments:

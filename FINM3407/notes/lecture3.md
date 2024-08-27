@@ -136,8 +136,7 @@ Ross  (2001)  and  Rubinstein  (2001)  point  to  the  inability  of  profession
 trades cancel out each other without affecting prices. (=> irrational random trades)
 1. EMH does not even require noise traders’ uncorrelated actions. EMH depends on arbitrage (Fama, 
 1965 and Friedman, 1953).
-- Even if there are investors with systematic irrationality, rational arbitrageurs can correct the errors of 
-noise traders. This is by far the most important. (=> no risk for arbitrage) 
+- Even if there are investors with systematic irrationality, rational arbitrageurs can correct the errors of noise traders. This is by far the most important. (=> no risk for arbitrage) 
 - The simultaneous buy and sale of the same or essentially similar security in two different markets to 
 take the advantage of different prices. 
 
@@ -290,12 +289,11 @@ The difference between winners and losers is stark, with past losers substantial
 
 ### Momentum evidence
 
-Several  years  later,  intermediate-term  (3–12  month) momentum was documented by Narasimhan Jegadeesh and 
-Sheridan  Titman.  Their  approach  was  similar  to  that  of  De Bondt  and  Thaler  except  that  their  return  intervals  were shorter.  Table  4.4  reproduces  some  key  results  from  their paper. 
+Several years later, intermediate-term (3–12 month) momentum was documented by Narasimhan Jegadeesh and Sheridan Titman. Their approach was similar to that of De Bondt and Thaler except that their return intervals were shorter. Table 4.4 reproduces some key results from their paper. 
 
-They  found,  for  example,  that  a long-short  zero-cost portfolio  formed  on  the  basis  of  returns  over  the  previous six  months  earned  an  average  excess  return  of  0.95%  per month over the next six months.
+They found, for example, that a long-short zero-cost portfolio formed on the basis of returns over the previous six months earned an average excess return of 0.95% per month over the next six months.
 
-Also,  there  is  a relationship between post-earnings announcement drift and momentum—though whether momentum disappears  after  accounting  for  post-earnings announcement drift is a point of debate.
+Also, there is a relationship between post-earnings announcement drift and momentum—though whether momentum disappears after accounting for post-earnings announcement drift is a point of debate.
 
 
 ![alt text](assets\IMG22.PNG)

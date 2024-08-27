@@ -109,11 +109,11 @@ Prospect  theory  assumes  people  maximize  a  “weighted  sum  of  utilities,
 
 $$\max: E(v) = \sum \pi (p_{i}) \times (x_{i}-r)$$
 
-- Where $\pi$is a non-linear weighting function,
+- Where $\pi$ is a non-linear weighting function,
 - $v(x_{i} - r)$ is the value function evaluated with respect to the reference point, $r$ [Change in Wealth]
 
 > - $r$ is your reference point
-> - $p_{i}$ prospect part $i$
+> - $p_{i}$ probability of prospect $i$
 
 
 ### 1.4 Weighting function

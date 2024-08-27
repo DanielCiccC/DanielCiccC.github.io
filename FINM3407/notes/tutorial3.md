@@ -1,6 +1,6 @@
 # Tutorial 3
 
-- Efficient Market Hypothesis
+<!-- - Efficient Market Hypothesis
 > - Assume the market is efficient, 
 >   - 3 forms, weak, semi-strong, strong form
 - Challenges to market efficiency
@@ -11,7 +11,7 @@ Behaviour finance combines cognitive psychological theory with conventional econ
 
 It challenges the traditional views on market efficiency by introducing concepts of cognitive biases that can lead to irrational finance decisions, thus market inefficiencies.
 > Loss aversion - investors lose more than they gain
-> - More types of behavioural finance and how it ties to EMH
+> - More types of behavioural finance and how it ties to EMH -->
 
 ### Q1
 
@@ -24,7 +24,8 @@ It challenges the traditional views on market efficiency by introducing concepts
 > - But an increase in price
 
 **Value and growth stocks**
-- Stock prices for value stocks are **low** relative to accounting measures such as earnings, cash flow, or book value, whereas stock prices for growth (or glamour) stocks are high relative to earnings, cash fow, and book value, at least in part because the market anticipated/predicts high future growth
+- Stock prices for value stocks are **low** relative to accounting measures such as earnings, cash flow, or book value, 
+- Whereas stock prices for growth (or glamour) stocks are high relative to earnings, cash fow, and book value, at least in part because the market anticipated/predicts high future growth
 
 **Fundamental risk and noise-trader risk**
 - Fundamental risk arises because of the potential for *rational revaluation as new information arrives* and
@@ -41,7 +42,7 @@ Stub value is the implied standalone value of the parent company without the sub
 
 ### Q2 (on ipad)
 
--- $\yen$ 2.1439 per $1
+![alt text](assets\IMG41.PNG)
 
 ### Q3 
 
@@ -49,7 +50,7 @@ Stub value is the implied standalone value of the parent company without the sub
 
 If you are managing other people's money, you will often *have more capital* in your control. But you will be subject to *a different sort of wealth control*. Because they have the power to hire and fire, your horizon is of necessity short. In fact, many who are attempting to exploit arbitrage opportunities are subject to this reality. They are managing money for individuals (pooling their money through hedge funds).
 
-### Q4 
+### 4.  *What is data snooping?  What sort of empirical evidence is useful for obviating this critique? 
 
 It is always possible to detect correlations in data merely due to randomness
 - Data snooping is the act of analyzing a dataset to 'death' so as to detect correlations, which are then termed anomalies
@@ -59,7 +60,9 @@ It is always possible to detect correlations in data merely due to randomness
 > - Multiple testing
 > - Selection bias (people you select will be more significant in some hypothesis)
 
-### Q5
+### Q5 *What are the three supports or (conditions) on which market efficiency rests?  Why is it that only one of them is required? 
+
+IMPORTANT
 
 The three supports are (1) investor rationality, (2) uncorrelated errors and (3) unlimited arbitrage. 
 - If the first holds, prices will be on average right and markets will be efficient. 
@@ -69,10 +72,11 @@ The three supports are (1) investor rationality, (2) uncorrelated errors and (3)
 > - unlimited value of arbitrage (3)
 > - If one of the three conditions hold, the 'average price' would be right
 
-### Q6
+### Q6 *Define  market  efficiency.  What  are  the  key  assumptions  of  an  efficient  market hypothesis (EMH)?
+
 Market efficiency is a situation where the prices of securities reflect all available information at any given time. The Efficient Market Hypothesis (EMH) assumes that all investors have costless access to currently available information about the future, they are rational, and they adjust their expectations instantly to reflect new information.
 
-Prices will react instantaneously and without bias to the release of information in such a way that abnormal returns cannot consistently be made. 
+Prices will react **instantaneously** and **without bias** to the release of information in such a way that **abnormal returns cannot consistently be made**. 
 
 > - All information reflected in the current price
 > - cannot create arbitrage - there is no way to 'beat' the market
@@ -82,9 +86,15 @@ EMH assumes that all investors:
 2) They are rational, and
 3) They adjust their expectations instantly to reflect new information
 
-### Q8.
+### 7.  Discuss the different forms of market efficiency. How do they differ from one another? 
+There are three forms of EMH: weak, semi-strong, and strong. 
+- The weak form states that all past prices of a stock are reflected in today's stock price.  
+- The semi-strong form suggests that all public information is calculated into a stock's current share price. 
+- The strong form implies that all information—public and private—is accounted for in a stock's current share price. 
 
-1. Information asymmetry, where one party has more or better information than the other, creating an imbalance in the transaction. For example, a seller might know about an issue with a product that the buyer doesn't.
+### Q8. *Identify some of the main challenges to market efficiency. Give specific examples for each. 
+
+1. **Information asymmetry**, where one party has more or better information than the other, creating an imbalance in the transaction. For example, a seller might know about an issue with a product that the buyer doesn't.
 2. **Behavioral biases** like overconfidence or herd behavior can lead to irrational decisions, causing price distortions. For example, during the dotcom bubble, investors kept buying overpriced tech stocks, leading to a market crash.
 2. **Market manipulation**, such as insider trading or price rigging, also pose challenges. The
 case of Enron is a notable example of market manipulation. 
@@ -92,19 +102,21 @@ case of Enron is a notable example of market manipulation.
 
 ### Q9. Discuss the concept of information asymmetry
 
-Information asymmetry occurs when one party has more or better information than the other.
-This can lead to market inefficiencies as the party with more information can exploit their
-knowledge to gain an unfair advantage. For example, insider trading, where trades are made
-based on non-public material information, directly challenges market efficiency.
+Information asymmetry occurs when one party has more or better information than the other. This can lead to market inefficiencies as the party with more information can exploit their knowledge to gain an unfair advantage. For example, insider trading, where trades are made based on non-public material information, directly challenges market efficiency.
 
 > - trade on information before it is available to the public
 
-### Q10
+### Q10 *What role does irrational behavior play in challenging the Efficient Market Hypothesis? 
 
 Irrational behavior, as explained by behavioral finance, suggests that investors often behave
 irrationally, driven by cognitive biases rather than by objective information. This challenges
 the EMH as it contradicts the assumption of *investor rationality*. Examples of irrational
 behavior include overconfidence, anchoring, and herd behavior
+
+### 11. *What is meant by “behavioral finance”? How does it challenge traditional views on market efficiency? 
+Behavioral finance combines cognitive psychological theory with conventional economics and 
+finance. It challenges the traditional views on market efficiency by introducing concepts of 
+cognitive biases that can lead to irrational financial decisions, thus, market inefficiencies. 
 
 ### Q12
 Market manipulation distorts prices and creates false trading volumes, undermining the
@@ -129,10 +141,14 @@ efficiency
 Regulation helps to maintain market efficiency by ensuring fair trade, preventing
 market manipulation, and reducing information asymmetry. However, over-regulation can pose a challenge to market efficiency as it might stifle innovation and create barriers to entry, which may limit competition and create market distortions.
 
-### Q17 
+### Q16
+
 - on iPad
+
+### Q17
 
 - Conservatism, people are slow to update their beliefs and underreact
 - Regret avoidance, want to decrease their potential losses in the future. Reluctant to bear loss
 - Mental accounting - people will value their money for different aims, differently
 - Disposition effect - do not want to realise their losses. 
+- Representativeness bias - Investors disregard sample size when forming views about the future from the past 
