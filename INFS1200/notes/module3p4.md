@@ -80,4 +80,4 @@ its evaluation
 ## Dropping views
 Dropping a view does not affect any tuples from the underlying relation.
 
-![alt text](assets\IMG81.PNG)
+![alt text](assets\IMG81.PNG)  

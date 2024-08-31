@@ -62,7 +62,7 @@ It is always possible to detect correlations in data merely due to randomness
 
 ### Q5 *What are the three supports or (conditions) on which market efficiency rests?  Why is it that only one of them is required? 
 
-IMPORTANT
+> IMPORTANT
 
 The three supports are (1) investor rationality, (2) uncorrelated errors and (3) unlimited arbitrage. 
 - If the first holds, prices will be on average right and markets will be efficient. 

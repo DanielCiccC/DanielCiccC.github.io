@@ -47,4 +47,3 @@
 - Utility theory - 
     - Risk seekers High risk high return
     - risk averse - diversified portfolio
-

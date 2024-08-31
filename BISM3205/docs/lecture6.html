@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-6">Lecture 6</h1>
+<h3 dir="auto" id="introductions">Introductions</h3>
+<ul dir="auto">
+<li dir="auto">Encryption: converting original message into a form unreadable by unauthorised individuals – a
+confidentiality strategy. Does it physically protect the data from access?</li>
+<li dir="auto">Cryptography: the science of making and using codes to secure transmission of information</li>
+<li dir="auto">Cryptanalysis: process of obtaining original message from encrypted message without knowing
+algorithms</li>
+<li dir="auto">Cryptology: an area of science (mathematics, language theory, engineering); combines cryptography
+and cryptanalysis - the science of encryption</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Hashing - storing passwords, sort it, add to it and store the hash</li>
+<li dir="auto">Hashes are not reversible</li>
+</ul>
+<p dir="auto">Encryption:</p>
+<ul dir="auto">
+<li dir="auto">to some gibberish</li>
+<li dir="auto">can't do anything unless you have the decryption key</li>
+</ul>
+<p dir="auto">Cryptoanalysis</p>
+<ul dir="auto">
+<li dir="auto">'Hacking' to an extent</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Algorithm – a procedural description of an activity</li>
+<li dir="auto">Cipher: an algorithm for performing encryption or decryption</li>
+<li dir="auto">Plain text – the message/data/information we apply the encryption algorithm to</li>
+<li dir="auto">Cipher text – the result after we encrypted the plain text</li>
+<li dir="auto">Key – the mapping instrument used within the cipher</li>
+<li dir="auto">Key space – the complexity of the key</li>
+<li dir="auto">Stream cipher - each plain text bit transformed into cipher bit one bit at a time</li>
+<li dir="auto">Block cipher - message divided into blocks (e.g., sets of 8- or 16-bit blocks) and each is transformed into encrypted block of cipher bits using algorithm and key</li>
+</ul>
+<p dir="auto">Certain encryption approaches can also be used for authentication</p>
+<blockquote dir="auto">
+<p dir="auto">Cipher</p>
+<ul dir="auto">
+<li dir="auto">A word for an algorithm, specifically for encrypting or decrypting</li>
+</ul>
+<p dir="auto">Plain text</p>
+<ul dir="auto">
+<li dir="auto">anything that needs to be encrypted - could be audio, video, etc.</li>
+</ul>
+<p dir="auto">Key space</p>
+<ul dir="auto">
+<li dir="auto">the longer the key space, the better</li>
+</ul>
+<p dir="auto">Stream cipher</p>
+<ul dir="auto">
+<li dir="auto">information coming down the line, encrypt it as it comes down the line</li>
+<li dir="auto">For a whole block of bits, encrypt one at a time</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="some-important-trends-in-cryptography">Some important trends in cryptography</h3>
+<ul dir="auto">
+<li dir="auto">With emergence of technology, need for encryption in information technology environment greatly increased</li>
+<li dir="auto">The Internet (i.e., the original protocols) initially did not have any security focus for transmission of data – we shall talk about this more in a few weeks.</li>
+<li dir="auto">All popular Web browsers and email user agents use built-in encryption features for security (i.e. certain security protocols are built into the user applications).
+<ul dir="auto">
+<li dir="auto">We look at S/MIME (email) and TLS (web) in significant business detail next week</li>
+</ul>
+</li>
+<li dir="auto">Restrictions on the export of cryptosystems began after WWII. (The Clipper chip was a chipset that was developed and promoted by the United States National Security Agency (NSA) as an encryption device (combating “going dark”), with a built-in backdoor, intended to be adopted by telecommunications companies for voice transmission. It was announced in 1993 and by 1996 was entirely defunct).</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">No one thought about encryption (the purpose was for information sharing)</li>
+<li dir="auto">When used for commerce, passwords and other information had to be encrypted</li>
+<li dir="auto">handshake protocol which gives the key, built in to browser</li>
+</ul>
+</blockquote>
+<blockquote dir="auto">
+<p dir="auto">Going dark problem - great for privacy</p>
+<ul dir="auto">
+<li dir="auto">don't know what is going on</li>
+<li dir="auto">NSA introduced clipper chip, with backdoor to decrypt data</li>
+<li dir="auto">Abandoned implementation of clipper chip in 1996</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="cryptography">Cryptography</h3>
+<p dir="auto">Two main paradigms (both heavily used): Private key (symmetric) and Public key (asymmetric)</p>
+<p dir="auto"><img src="assets\IMG72.PNG" alt="alt text" data-src="assets/IMG72.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Public key encryption (also known as asymmetric)</li>
+</ul>
+<p dir="auto">Symmetric key (private key)</p>
+<ul dir="auto">
+<li dir="auto">use the same key used to decrypt and encrypt</li>
+<li dir="auto">has been done for a long time
+<ul dir="auto">
+<li dir="auto">Called private because it has to be kept secret</li>
+</ul>
+</li>
+<li dir="auto">No point in encrypting and sending a private key
+<ul dir="auto">
+<li dir="auto">still implement and is very fast</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Public key (asymmetric encryption)</p>
+<ul dir="auto">
+<li dir="auto">Two different keys</li>
+<li dir="auto">Can generate mathematically
+<ul dir="auto">
+<li dir="auto">Used in connection with each other</li>
+</ul>
+</li>
+<li dir="auto">Each of the keys enables be to encrypt and decrypt the message
+<ul dir="auto">
+<li dir="auto">cannot reverse with the same key</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Take plain text, and encrypt with private key</p>
+<ul dir="auto">
+<li dir="auto">not very valuable</li>
+<li dir="auto">Want to send a message to them, have to encrypt with their public key</li>
+</ul>
+<p dir="auto">Other way around (rightmost)</p>
+<ul dir="auto">
+<li dir="auto">encrypt using private key</li>
+<li dir="auto">can all read my message (not confidential anymore)</li>
+<li dir="auto">Achieve authentication - can only be encrypted with my private key
+<ul dir="auto">
+<li dir="auto">message has not been tampered</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="the-caesar-cipher">The Caesar cipher</h3>
+<p dir="auto">The Caesar cipher (100 BC) is one of the earliest known and simplest ciphers. It is a type of substitution cipher in which each letter in the plaintext is 'shifted' a certain number of places down the alphabet. For example, with a shift of 3, A would be replaced by D, B would become E, and so on.</p>
+<p dir="auto"><img src="assets\IMG73.PNG" alt="alt text" data-src="assets/IMG73.PNG"></p>
+<p dir="auto"><strong>How to create</strong></p>
+<p dir="auto">The basic idea behind a stream cipher is to generate a keystream – a sequence of bits or bytes – that is then combined with the plaintext to produce the ciphertext. The keystream is generated based on an initial key and, often, an additional value called an Initialization Vector (IV).</p>
+<p dir="auto"><img src="assets\IMG74.PNG" alt="alt text" data-src="assets/IMG74.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">have a key, 8 bits</li>
+<li dir="auto">maintain the key in secrecy</li>
+<li dir="auto">initialisation vector
+<ul dir="auto">
+<li dir="auto">make the cipher look different, even if the same image</li>
+</ul>
+</li>
+<li dir="auto">use the XOR function</li>
+</ul>
+<p dir="auto">Perform the XOR cipher a second time</p>
+</blockquote>
+<h3 dir="auto" id="stream-cipher---application">Stream cipher - Application</h3>
+<p dir="auto"><strong>RC4:</strong> One of the most well-known stream ciphers, RC4, was widely used in protocols like SSL/TLS and WEP. However, RC4 is now considered insecure due to several vulnerabilities and should be avoided.</p>
+<p dir="auto"><strong>Salsa20/ChaCha20</strong>: These are modern stream ciphers that are designed to be secure, fast, and efficient. ChaCha20, for example, is used in the HTTPS protocol for securing web traffic.</p>
+<p dir="auto"><img src="assets\IMG75.PNG" alt="alt text" data-src="assets/IMG75.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">checksum (fingerprint function)
+<ul dir="auto">
+<li dir="auto">hash function</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="block-cipher-operates-on-fixed-length-groups-of-bits-called-blocks">Block cipher (operates on fixed length groups of bits called blocks)</h3>
+<p dir="auto">A block cipher is a type of symmetric encryption algorithm that encrypts data in fixed-size blocks, typically 64 or 128 bits at a time. It is one of the fundamental building blocks of modern cryptography, widely used to secure data in various applications, including SSL/TLS for internet security, disk encryption, and more.</p>
+<p dir="auto">Two widely used block cipher algorithms: AES (Advanced Encryption Standard) and DES (Data Encryption
+Standard).</p>
+<p dir="auto"><strong>DES (Data Encryption Standard)</strong></p>
+<p dir="auto">DES is one of the earlier block cipher algorithms developed in the 1970s. It operates on 64-bit blocks and uses a 56-bit key. DES uses a 16-round Feistel structure†, a common design pattern for block ciphers, where each round involves substitution, permutation, and mixing with the key.</p>
+<p dir="auto"><strong>AES (Advanced Encryption Standard)</strong></p>
+<p dir="auto">AES is the current standard for block ciphers, designed to be secure and efficient. It supports key sizes of 128, 192, or 256 bits and operates on 128-bit blocks.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">substitution, permutation, and mixing with the key</li>
+</ul>
+<p dir="auto">AES</p>
+<ul dir="auto">
+<li dir="auto">longer and variable depending on the application</li>
+</ul>
+</blockquote>
+<p dir="auto">AES Encryption Process</p>
+<ol dir="auto">
+<li dir="auto">Key Expansion: The original key is expanded into multiple round keys using a
+key schedule algorithm.</li>
+<li dir="auto">Initial Round:</li>
+<li dir="auto">AddRoundKey: The plaintext block is XORed with the first round key.</li>
+<li dir="auto">Main Rounds (9, 11, or 13 rounds, depending on the key size):</li>
+<li dir="auto">SubBytes: Each byte of the block is replaced with a corresponding
+byte from an S-box (substitution box) for non-linear substitution.</li>
+<li dir="auto">ShiftRows: Rows of the block are shifted cyclically to the left to
+introduce diffusion.</li>
+<li dir="auto">MixColumns: Columns of the block are mixed using linear
+transformation to further spread the plaintext information across the
+block.</li>
+<li dir="auto">AddRoundKey: The block is XORed with a round key derived from the
+original key.</li>
+<li dir="auto">Final Round: The last round omits the MixColumns step and consists of
+SubBytes, ShiftRows, and AddRoundKey operations.
+Decryption Process
+AES decryption is performed using the inverse operations of encryption, with the
+round keys applied in reverse order.</li>
+</ol>
+<p dir="auto"><img src="assets\IMG76.PNG" alt="alt text" data-src="assets/IMG76.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">to decrypt the information, do this in reverse order</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="symmetric-key-algorithms">Symmetric key algorithms</h3>
+<p dir="auto">Symmetric key cryptography is the oldest form but still heavily used. Simple definition:</p>
+<ul dir="auto">
+<li dir="auto">“A single key is used to encrypt and decrypt”
+These two ciphers are the basis for most/all symmetric key ciphers:</li>
+<li dir="auto">Substitution cipher: substitutes or exchanges one value for another</li>
+<li dir="auto">Transposition cipher: rearranging the values within a block based on an established pattern.</li>
+</ul>
+<p dir="auto">Note: We are not discussing the details of the variations on these two ciphers, the Vigenere cipher (1553) or Vernam cipher (1917). However, some interactive tools exist to encrypt and decrypt the Vigenere cipher and others on the Internet:</p>
+<ul dir="auto">
+<li dir="auto"><a href="https://cryptii.com/pipes/vigenere-cipher">https://cryptii.com/pipes/vigenere-cipher</a></li>
+<li dir="auto"><a href="https://www.dcode.fr/vigenere-cipher">https://www.dcode.fr/vigenere-cipher</a></li>
+<li dir="auto"><a href="https://www.guballa.de/vigenere-solver">https://www.guballa.de/vigenere-solver</a></li>
+</ul>
+<h3 dir="auto" id="substitution-example">Substitution Example</h3>
+<p dir="auto">Decrypt the following line of cipher text (a simple substitution cipher with a three character key has been used). Use the underscore character (_) to represent the space character.</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>e</mi><mi>h</mi><mi>t</mi><mi>w</mi><mi>r</mi><mi>m</mi><mi>s</mi><mi>r</mi><mi>o</mi><mi>h</mi><mi>s</mi><mi>r</mi><mi>m</mi><mi>t</mi><mi>n</mi><mi>s</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">ehtwrmsrohsrmtnsy</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">e</span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.02691em;">tw</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">m</span><span class="mord mathnormal">sro</span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.02778em;">sr</span><span class="mord mathnormal">m</span><span class="mord mathnormal">t</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">sy</span></span></span></span></span></p>
+</math>
+<p dir="auto">The key used in the above encryption strategy is
+space =&gt; r
+e =&gt; s
+o =&gt; t</p>
+<p dir="auto">c) The algorithm for the above encryption and decryption strategy
+Starting with the first character, consider each letter of the cipher/plain text in turn. If the letter appears in the key, make the substitution – else leave  the letter unchanged.  Move to the next letter.</p>
+<p dir="auto">Answer: show_me_the_money</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Always need the key and the algorithm</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="cryptanalysis-of-substitution">Cryptanalysis of substitution</h3>
+<p dir="auto">The most frequently occurring letters in the English language, in order of decreasing frequency, are:
+&lt;space&gt;, E, T, A, O, I, N, S, H, R, D, L, U, C, M, F, Y, W, G, P, B, V, K, X, J, Q, Z</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>e</mi><mi>h</mi><mi>t</mi><mi>w</mi><mi>r</mi><mi>m</mi><mi>s</mi><mi>r</mi><mi>o</mi><mi>h</mi><mi>s</mi><mi>r</mi><mi>m</mi><mi>t</mi><mi>n</mi><mi>s</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">ehtwrmsrohsrmtnsy</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">e</span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.02691em;">tw</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">m</span><span class="mord mathnormal">sro</span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.02778em;">sr</span><span class="mord mathnormal">m</span><span class="mord mathnormal">t</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">sy</span></span></span></span></span></p>
+</math>
+<p dir="auto">So cryptoanalysis of the cypher text would quickly see that R is the most commonly occuring character.
+In English language the most commonly occuring character in a block of text is the space.
+So immediately, if we were using cryptanalysis to try and hack, this we would quickly try R being replaced by the space.</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>e</mi><mi>h</mi><mi>t</mi><mi>w</mi><mi>m</mi><mi>s</mi><mi>o</mi><mi>h</mi><mi>s</mi><mi>m</mi><mi>t</mi><mi>n</mi><mi>s</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">ehtw ms ohs mtnsy</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">e</span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.02691em;">tw</span><span class="mord mathnormal">m</span><span class="mord mathnormal">so</span><span class="mord mathnormal">h</span><span class="mord mathnormal">s</span><span class="mord mathnormal">m</span><span class="mord mathnormal">t</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">sy</span></span></span></span></span></p>
+</math>
+<p dir="auto">And immediately we would break the cypher text into words.
+And by simple trial and error approach, we would quickly deduce that {space =&gt; r, e =&gt; s, o =&gt; t} is the
+encryption/decryption key.</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>s</mi><mi>h</mi><mi>o</mi><mi>w</mi><mi>m</mi><mi>e</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>m</mi><mi>o</mi><mi>n</mi><mi>e</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">show me the money</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">h</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">ey</span></span></span></span></span></p>
+</math>
+<p dir="auto">So, the point is that this type of encryption can be vulnerable to what we call frequency distribution in the
+underlying language, that means that cryptanalysis of this cypher text is easily produced.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Each language has their most frequent characters in text</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="transposition-example">Transposition Example</h3>
+<p dir="auto">f) Decrypt the following line of cipher text (a simple transposition cipher with a four character key has been used). The underscore character (_) represents the space character.</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mrow></mrow><mi>i</mi></msub><mi>s</mi><mi>h</mi><mi>e</mi><mi>a</mi><mi>m</mi><msub><mi>n</mi><mi>i</mi></msub><msub><mi>s</mi><mi>n</mi></msub><mi>o</mi><mi>h</mi><mi>j</mi></mrow><annotation encoding="application/x-tex">_isheamn_is_nohj</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span><span class="mord mathnormal">am</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.05724em;">hj</span></span></span></span></span></p>
+</math>
+<p dir="auto">g) The key used in the above encryption strategy is {1234 becomes 4231}
+That is, within each block of four characters, the first and fourth characters are swapped.</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mrow></mrow><mi>i</mi></msub><mi>s</mi><mi>h</mi><mi>e</mi><mi>a</mi><mi>m</mi><msub><mi>n</mi><mi>i</mi></msub><msub><mi>s</mi><mi>n</mi></msub><mi>o</mi><mi>h</mi><mi>j</mi></mrow><annotation encoding="application/x-tex">_ish    eamn    _is_    nohj</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span><span class="mord mathnormal">am</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.05724em;">hj</span></span></span></span></span></p>
+</math>
+<p dir="auto">Is the cipher used above block or stream and is it symmetric or asymmetric?</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>h</mi><mi>i</mi><msub><mi>s</mi><mi>n</mi></msub><mi>a</mi><mi>m</mi><msub><mi>e</mi><mi>i</mi></msub><msub><mi>s</mi><mi>j</mi></msub><mi>o</mi><mi>h</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">his_    name    _is_    john</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9805em;vertical-align:-0.2861em;"></span><span class="mord mathnormal">hi</span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">am</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathnormal">o</span><span class="mord mathnormal">hn</span></span></span></span></span></p>
+</math>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">block versus stream</p>
+<ul dir="auto">
+<li dir="auto">stream,</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Symmetric, same key for encoding and decoding</p>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="cryptographic-algorithms">Cryptographic Algorithms</h3>
+<p dir="auto"><strong>Symmetric encryption</strong>
+Uses same “secret key” (also known as private key) for encoding and decoding</p>
+<ul dir="auto">
+<li dir="auto">Encryption methods can be extremely efficient, requiring minimal processing</li>
+<li dir="auto">Both sender and receiver must possess this key</li>
+<li dir="auto">If either copy of key is compromised, an intermediate can decrypt and read messages</li>
+<li dir="auto">Major difficulty: ‘the key distribution’, how do you get this key secretly to the other party?</li>
+<li dir="auto">This is often done ‘out of band’</li>
+</ul>
+<p dir="auto">Consider how your access to the UQ network was initially set up</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">encryption method can be efficient</li>
+<li dir="auto">sender and receiver must receive this key</li>
+<li dir="auto">key distribution is a problem</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="the-key-distribution-problem">The ‘key distribution’ problem</h3>
+<ul dir="auto">
+<li dir="auto">Simply stated:
+<ul dir="auto">
+<li dir="auto">How to get a key from Bob to Alice – maintaining the secrecy of the key and</li>
+<li dir="auto">ensuring the key is only used by Alice for the appropriate time period</li>
+</ul>
+</li>
+<li dir="auto">Key distribution becomes very much harder as the cryptosystem scales up in size (i.e., more
+participants - one key for each?)</li>
+<li dir="auto">Key distribution is a very significant issue in designing modern security protocols</li>
+</ul>
+<p dir="auto">Consider your access to the UQ computing infrastructure – what is the ‘key’, how is key granting and key
+distribution administered – the significance (difficulty/cost) of ‘out of band’ solutions</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Each person must have a different password</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="symmetric-key-cryptography">Symmetric key cryptography</h3>
+<p dir="auto"><img src="assets\IMG77.PNG" alt="alt text" data-src="assets/IMG77.PNG"></p>
+<h3 dir="auto" id="encrypting-binary-data">Encrypting binary data</h3>
+<ul dir="auto">
+<li dir="auto">All alpha-numeric data (whether stored, processed, transmitted) is represented in binary format (i.e., as a number consisting of digits 0 and 1 only)</li>
+<li dir="auto">This binary data is converted back to the appropriate ‘human type’ when we need it</li>
+<li dir="auto">We already talked about how to convert data like this using the ASCII, extended ASCII, and Unicode tables last week</li>
+<li dir="auto">All encryption/decryption is performed on binary data (not alpha-numeric data). That is, all data (text, numbers, graphics, everything) is represented at the memory/processor level as series of digits 0 and 1</li>
+</ul>
+<p dir="auto"><img src="assets\IMG78.PNG" alt="alt text" data-src="assets/IMG78.PNG"></p>
+<p dir="auto">To encrypt this we select an encryption key that will also be stored in binary format – so we end up with all binary data!</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">binary doesn't know whether it is a 1 or x, e.g.</li>
+<li dir="auto">binary to character text in screen</li>
+<li dir="auto">Use hexadecimal beacuse each four numbers is one hexadecimal number</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="full-ascii-table">Full ASCII Table</h3>
+<p dir="auto"><img src="assets\IMG79.PNG" alt="alt text" data-src="assets/IMG79.PNG"></p>
+<p dir="auto"><img src="assets\IMG80.PNG" alt="alt text" data-src="assets/IMG80.PNG"></p>
+<h3 dir="auto" id="encryption-algorithm">Encryption algorithm</h3>
+<ul dir="auto">
+<li dir="auto">Start with plain text</li>
+<li dir="auto">Generate an ‘encryption key’</li>
+<li dir="auto">Encrypt using XOR, bit shifting, substitution, transposition, modular arithmetic</li>
+<li dir="auto">Very simple, very fast and very efficiently – implemented in hardware, not software</li>
+<li dir="auto">This introduces the concept of algorithm efficiency and effectiveness.</li>
+</ul>
+<h3 dir="auto" id="encrypting-cat-as-vvv">Encrypting CAT as VVV</h3>
+<p dir="auto"><img src="assets\IMG81.PNG" alt="alt text" data-src="assets/IMG81.PNG"></p>
+<h3 dir="auto" id="cipher-strength">Cipher strength</h3>
+<ul dir="auto">
+<li dir="auto">The inherent weaknesses of ‘simple’ substitution and transposition ciphers is that they are open to analysis via frequency and statistical studies</li>
+<li dir="auto">The strength of a cipher (regardless of whether it is symmetric or asymmetric) is dependent upon:
+<ul dir="auto">
+<li dir="auto">Key length (e.g. modern symmetric key is 128 bit)</li>
+<li dir="auto">Algorithm correctness (are there any ‘bugs’ in the algorithm)</li>
+</ul>
+</li>
+<li dir="auto">Perhaps paradoxically, we get ‘more’ algorithm correctness by publicizing the details of the cipher. The best algorithms are public – why? How can this ensure/enhance security?</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Strength comes with the key and how you handle the information with the key</li>
+<li dir="auto">Even with encryption standard, cannot crack it</li>
+</ul>
+</blockquote>
+<p dir="auto">AES, a sample of symmetric encryption, is very strong.
+The use of 128- and 256-bit keys makes it impervious to cracking.
+Contrary to movies and TV, the only way to get unauthorised access to AES encrypted information is to steal or guess the key.</p>
+<p dir="auto">Guessing is impractical due to the number of possible keys.
+A 128-bit key has 2^128 =<br>
+340,282,366,920,938,463,463,374,607,431,768,211,456
+possible keys.</p>
+<p dir="auto">An n-bit key has 2^n possible keys because for each of the n bits, we have 2 options (0 or 1).</p>
+<h3 dir="auto" id="cipherkey-length-strength">Cipher/key-length strength</h3>
+<ul dir="auto">
+<li dir="auto">When using ciphers, the size of the key is very important.
+<ul dir="auto">
+<li dir="auto">Symmetric key and public key systems should be equally secure – they are not equal in computational
+efficiency (i.e. time to encrypt, memory usage, etc.)</li>
+</ul>
+</li>
+<li dir="auto">Strength of many encryption applications and cryptosystems measured by key size
+<ul dir="auto">
+<li dir="auto">E.g., 128 bit length for symmetric, 1024 bit length for asymmetric</li>
+<li dir="auto">Cracking a 128-bit key with modern hardware is going to take around 500 billion years. However, quantum
+computers would be able to do it faster (~185 years atm).</li>
+</ul>
+</li>
+<li dir="auto">For cryptosystems, security of encrypted data is not dependent on keeping the encryption algorithm secret
+<ul dir="auto">
+<li dir="auto">Cryptosystem security depends on keeping some or all of the elements of crypto-variable(s) or key(s)
+secret</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG82.PNG" alt="alt text" data-src="assets/IMG82.PNG"></p>
+<ul dir="auto">
+<li dir="auto">Data Encryption Standard (DES): one of most popular symmetric encryption
+cryptosystems – no longer in use
+<ul dir="auto">
+<li dir="auto">64 ‐ bit block size; multiple ‐ rounds of encryption, 56 ‐ bit key</li>
+<li dir="auto">Published in 1977 – standardized in 1979 as federal standard for encrypting non ‐ classified
+information</li>
+</ul>
+</li>
+<li dir="auto">Remember – the current safe symmetric key length is 128 bits</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">56 bits were too short</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="data-encryption-standard-des">Data Encryption Standard (DES)</h3>
+<p dir="auto">64 bit block size, 56 bit key size (fixed), multiple rounds, key is changed with each round,
+output from one round forms the input to the next – uses SUBSTITUTION and transposition</p>
+<p dir="auto"><img src="assets\IMG83.PNG" alt="alt text" data-src="assets/IMG83.PNG"></p>
+<h3 dir="auto" id="symmetric-key-algorithmns">Symmetric key algorithmns</h3>
+<ul dir="auto">
+<li dir="auto">Triple DES (3DES): created to provide security far beyond DES
+<ul dir="auto">
+<li dir="auto">applies DES three times to each data block (FIPS approved in 1999, withdrawn in 2005) – key length
+168 bits (three 56 bit DES keys) – deprecated by NIST in 2017 (unsafe)</li>
+</ul>
+</li>
+<li dir="auto">Advanced Encryption Standard (AES): developed to replace both DES and 3DES
+<ul dir="auto">
+<li dir="auto">also known by its original (Dutch) name Rijndael Block Cipher.</li>
+<li dir="auto">Rijndael is a grouping of ciphers with different key and block sizes.</li>
+<li dir="auto">For AES, NIST selected three Rijndael members, each with a block size of 128 bits but three different key lengths 128, 192, and 256 bits.</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="summary-symmetric-key-cryptography">Summary: Symmetric Key Cryptography</h3>
+<ul dir="auto">
+<li dir="auto">Cryptography is used to secure most aspects of Internet and Web uses that require it, drawing on extensive set of protocols and tools designed for that purpose</li>
+<li dir="auto">Symmetric key crypto uses one secret key to both encrypt and decrypt a message</li>
+<li dir="auto">Data Encryption Standard (DES): was one of most popular symmetric encryption cryptosystems.
+<ul dir="auto">
+<li dir="auto">64-bit block size; multiple-rounds of encryption, 56-bit key</li>
+<li dir="auto">Adopted by NIST in 1976 as federal standard for encrypting non-classified information</li>
+</ul>
+</li>
+<li dir="auto">Triple DES (3DES): created to provide security beyond DES</li>
+<li dir="auto">Advanced Encryption Standard (AES): developed to replace both DES and 3DES – the main cipher is Rijndael Block Cipher</li>
+<li dir="auto">Current safe symmetric key length is 128 bits</li>
+</ul>
+<h3 dir="auto" id="hashing-cryptographic-hash-functions">Hashing (cryptographic hash functions)</h3>
+<p dir="auto">Generates fixed length fingerprints of arbitrarily large messages.</p>
+<p dir="auto"><img src="assets\IMG84.PNG" alt="alt text" data-src="assets/IMG84.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">take variable length message into a fixed-length hash
+<ul dir="auto">
+<li dir="auto">finger print, hash will be different if only one aspect changes</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="difference-between-hashing-and-encryption">Difference Between Hashing and Encryption</h3>
+<p dir="auto"><img src="assets\IMG85.PNG" alt="alt text" data-src="assets/IMG85.PNG"></p>
+<ul dir="auto">
+<li dir="auto">Hashing is a one-way function that changes a plain text to a unique digest† that is irreversible.</li>
+<li dir="auto">Encryption is a two-way function that includes encryption and decryption.</li>
+</ul>
+<h3 dir="auto" id="hash-functions">Hash functions</h3>
+<ul dir="auto">
+<li dir="auto">Computationally inexpensive mathematical algorithms that generate fixed length message summary/digest to confirm message identity and confirm no content has changed provides integrity control</li>
+<li dir="auto">What is a hash collision? Two different inputs producing same hash – very bad!</li>
+<li dir="auto">Irreversible unique output</li>
+<li dir="auto">Hash algorithms: publicly known functions that create hash value:</li>
+<li dir="auto">SHA group (SHA-1, SHA-256, SHA-384, SHA-512),</li>
+<li dir="auto">MD family (MD2, MD4, MD5, MD6),</li>
+<li dir="auto">RIPEND family, Tiger, Whirlpool, …
+MD4, MD5, SHA-1 are no longer considered secure due to possible hash collisions</li>
+<li dir="auto">Also heavily used with public key cryptography to deliver digital signatures, also used in Blockchain applications</li>
+</ul>
+<p dir="auto"><img src="assets\IMG86.PNG" alt="alt text" data-src="assets/IMG86.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">128 / 2 = 28 hex digits</li>
+<li dir="auto">are not reversible
+<ul dir="auto">
+<li dir="auto">SHA1 is considered insecure due to possible hash collisions</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG87.PNG" alt="alt text" data-src="assets/IMG87.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">SHA256, 256 bits longs</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="summary-hash-functions">Summary: Hash functions</h3>
+<ul dir="auto">
+<li dir="auto">Mathematical algorithms that generate message summary/digest to confirm message identity and confirm
+no content has changed, i.e. provide an integrity control.</li>
+<li dir="auto">One way – unique output (fingerprint) – computationally inexpensive</li>
+<li dir="auto">Hash algorithms: publicly known functions that create hash value – e.g. the SHA and the MD families</li>
+<li dir="auto">Hashing is NOT encryption</li>
+<li dir="auto">Hashing is also heavily used with public key cryptography to deliver digital signatures.</li>
+</ul>
+<h2 dir="auto" id="public-key-cryptography-asymmetric-cryptography-and-digital-signatures">Public key cryptography (asymmetric cryptography) and digital signatures</h2>
+<h3 dir="auto" id="overview">Overview</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Public key crypto - completing the theory discussion of last part – focus public key cryptography</p>
+</li>
+<li dir="auto">
+<p dir="auto">Digital Signatures (this concept builds on the hash strategy)</p>
+</li>
+<li dir="auto">
+<p dir="auto">Next week:</p>
+</li>
+<li dir="auto">
+<p dir="auto">Digital Certificates (for distribution of public keys with trust – a certificate contains a digital signature)</p>
+</li>
+<li dir="auto">
+<p dir="auto">Public Key Infrastructure (PKI) – for distribution of public keys with trust</p>
+</li>
+<li dir="auto">
+<p dir="auto">We look at the two important protocols in business: SSL/TLS, S/MIME</p>
+</li>
+</ul>
+<h3 dir="auto" id="asymmetric-cryptography-%E2%80%93-the-theory">Asymmetric cryptography – the theory</h3>
+<ul dir="auto">
+<li dir="auto">A new approach (from the 70’s – exact date/place unknown)</li>
+<li dir="auto">Two keys – one strictly private, one distributed to the world (public)!
+<ul dir="auto">
+<li dir="auto">Both keys are generated simultaneously and are mathematically related</li>
+<li dir="auto">Either key can encrypt – whichever one is used, the other (matched) key must decrypt
+Example: I have a public key A and a matched private key B. If I generate a message, say M,
+what happens as per the following:</li>
+</ul>
+</li>
+<li dir="auto"><strong>Encrypting with the public key delivers confidentiality (why?)</strong></li>
+<li dir="auto"><strong>Encrypting with the private key delivers authentication (why?)</strong>
+Two types of security: confidentiality and authentication!</li>
+</ul>
+<h3 dir="auto" id="asymmetric-cryptography-%E2%80%93-the-practice-1">Asymmetric cryptography – the practice (1)</h3>
+<p dir="auto"><img src="assets\IMG88.PNG" alt="alt text" data-src="assets/IMG88.PNG"></p>
+<p dir="auto"><img src="assets\IMG89.PNG" alt="alt text" data-src="assets/IMG89.PNG"></p>
+<ol start="2" dir="auto">
+<li dir="auto">Next, Alice creates a sensitive document, encrypts it with Bob’s public key, and sends it to Bob. Once
+she has encrypted this document, Alice cannot decrypt it (why?).</li>
+<li dir="auto">Upon receipt of the encrypted document, Bob uses his private key to decrypt it.</li>
+</ol>
+<p dir="auto"><img src="assets\IMG90.PNG" alt="alt text" data-src="assets/IMG90.PNG"></p>
+<h3 dir="auto" id="digital-signatures-are-using-asymmetric-cryptography">Digital signatures are using asymmetric cryptography</h3>
+<ul dir="auto">
+<li dir="auto">Created in response to rising need to verify the integrity AND authenticity of information transferred via
+electronic systems. It is an electronic/digital verification of the sender/owner of the signature.</li>
+<li dir="auto">Hashing PLUS asymmetric encryption processes are used to create digital signatures</li>
+<li dir="auto">Integrity, authentication and non-repudiation: the process that verifies the message was sent by the
+sender, has not been altered since the signature was added, and thus cannot be refuted/repudiated</li>
+<li dir="auto">Commonly used for software distribution (e.g. updates), financial transactions, important digital
+communications (e.g. email), and other cases where it is vital to detect forgery/unauthorized alterations</li>
+<li dir="auto">Digital Signature Standard (DSS) is the NIST standard for digital signature algorithm usage by federal
+information systems</li>
+</ul>
+<h3 dir="auto" id="how-to-create-a-digital-signature">How to create a digital signature</h3>
+<ul dir="auto">
+<li dir="auto">A digital signature is produced via a two-stage process: (1) hashing, and (2) private key signing (i.e.
+public key encryption).</li>
+<li dir="auto">RSA is a main encryption algorithm in producing digital signatures. The process is shown below. This
+process is supported in law by many countries.</li>
+<li dir="auto">The Electronic Transactions Act was enacted in 1999 and established electronic signatures in
+Australia. Under Australian law, contracts are held enforceable whether it’s verbal, or the parties have
+signed the document with a wet-ink (physical) or electronic signature.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG91.PNG" alt="alt text" data-src="assets/IMG91.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">compare the hash of the message with the hash of the decrypted message</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG92.PNG" alt="alt text" data-src="assets/IMG92.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Digest</li>
+</ul>
+</blockquote>
+<blockquote dir="auto">
+<p dir="auto">Question: how does ‘integrity’, ‘authentication’ and ‘non-repudiation’ apply in the above example? Do we have confidentiality?</p>
+</blockquote>
+
+</main>
+</body>
+</html>
