@@ -373,3 +373,56 @@ We continue with this example to illustrate hedging with an FRA. Note
 that the yield curve was forecasting the spot 9 month Term SOFR rate to
 be k = 4.54385% in 3 months, but it ended up being lower at r = 4.25%
 
+### OTC FRA “perfect hedging”
+
+![alt text](assets\IMG130.PNG)
+
+![alt text](assets\IMG131.PNG)
+
+
+To speculate with FRA, if you expect interest rates to be:
+- Lower than the yield curve is forecasting:
+  - Enter into a FRA as the fixed rate receiver.
+- Higher than the yield curve is forecasting:
+  - Enter into a FRA as the fixed rate payer
+
+## BAB futures
+The ASX’s 90 Day Bank Accepted Bill (BAB) Futures contract is effectively a standardised, ASX traded “FRA” but over the Bank Bill Swap (BBSW) rate, which is the main reference rate in Australia. Also:
+- You can only lock in the BBSW rate for 90 day periods.
+- The BBSW rate’s day count convention divides by 365, the standard day count convention in Australian money markets, so $T = \frac{90}{365}$
+- The face value of 1 contract is F = \$1,000,000 but this refers to the hypothetical cashflow at time $T_ 2 = T_1 + T$, so we use slightly different equations to calculate the values $P_r$ and $P_k$ and hence the net cashflow or payoffs at maturity $T_1$ as we did for FRA:
+
+To calculate the payoffs at contract maturity $T_1$, let:
+- $k$ be the fixed rate agreed to in the BAB futures.
+- $r$ be the spot 90 day BBSW rate at maturity $T_1$.
+
+At k, the amount invested at maturity T 1 to receive F = \$1,000,000 at
+time $T_2$ is 
+
+$$P_k = \frac{F}{1 + k_{\frac{90}{365}}}$$
+
+At $r$, this amount is 
+$$P_r = \frac{F}{1 + r_{\frac{90}{365}}}$$
+
+The payoff $P_r − P_k$ at maturity $T_1$ to the fixed rate receiver is:
+
+$$F \left(  \frac{1}{1+r_\frac{90}{365}} - \frac{1}{1+k_\frac{90}{365}} \right)$$
+
+The payoff to the fi xed rate payer is the negative of this.
+
+**Contract details** | **Trade Price** 
+| --- | ---
+![alt text](assets\IMG132.PNG)  | ![alt text](assets\IMG133.PNG)
+
+Note that BAB futures are quoted as $100 − k \%$, so the last traded
+September contract below has fixed rate $k = 100 − 95.53 = 4.47$%:
+
+
+How would you calculate trading profits/losses in BAB futures?
+
+---
+![alt text](assets\IMG134.PNG)
+
+![alt text](assets\IMG135.PNG)
+
+---
