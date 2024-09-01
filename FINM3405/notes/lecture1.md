@@ -16,10 +16,10 @@
 > - Has a large impact on what products and services are sold in the economy
 > - Banks funnel money into businesses that produce economic growth - if they produce value and consumers purchase from them
 >
-> ### In the process of the main function of the financial system:
+> **In the process of the main function of the financial system:**
 > - Apple has to pay wages in Chinese yuan - products/services exposed to risks, exchange rate risks, interest rate risk
 >
-> Derivative securities can offload risk to other player's, whose job is to manage those risks
+> Derivative securities can offload risk to other players, whose job is to manage those risks
 > - reallocation of risks through the economy
 
 ### Vanilla derivatives and payoffs
@@ -43,18 +43,13 @@ A derivative security is a contract between two or more counter-parties specifyi
 > - whether there is some sort of claim in the contract is contingent on the outcome of the event
 
 
-- Derivative securities can be negotiated directly between parties
-OTC, or standardised contracts traded on trading venues:
-- Traditional exchanges, multilateral trading facilities (MTF) in
-Europe, and alternative trading systems (ATS) in the US.
-- Underlying assets include physical assets, fi nancial securities or
-instruments, fi nancial market indices or other variables, currencies,
-commodities, energy, other derivatives, etc.
-- The underlying assets can be physically deliverable in the contract,
-or the derivative security can be cash settled with no physical
-delivery of the underlying asset ever taking place.
+- Derivative securities can be negotiated directly between parties OTC, or standardised contracts traded on trading venues:
+- Traditional exchanges, multilateral trading facilities (MTF) in Europe, and alternative trading systems (ATS) in the US.
+- Underlying assets include physical assets, financial securities or instruments, financial market indices or other variables, currencies, commodities, energy, other derivatives, etc.
+- The underlying assets can be physically deliverable in the contract, or the derivative security can be cash settled with no physical delivery of the underlying asset ever taking place.
+
 We now give a brief description of the above basic classes of derivatives:
-futures/forwards, options and swaps.
+- futures/forwards, options and swaps.
 
 > OTC:
 > - Individual financial institutions negotiating directly with very little regulation
@@ -161,7 +156,7 @@ Hence, interest rate swaps can help businesses manage interest rate risk. Also, 
 >   - can manage interest rate risk
 >   - saves them from re-negotiating a loan
 
-The mechanics of a fi xed-for-fl oating swap can be described as follows:
+The mechanics of a fixed-for-floating swap can be described as follows:
 
 - The parties continue to pay off their original loans as per normal.
 - On each loan payment date:
@@ -269,18 +264,7 @@ participants all all doing different things:
 - Regulators and other industry bodies and associations.
 
 ### Traders and speculation
-We saw above the different payoff s depending on the movement in the
-underlying asset from taking long and short positions in futures and
-options. Derivatives can be more efficient and cost effective means by
-which to speculate on movements in the underlying asset than trading
-the asset itself. Of course there’s a huge variety of trading strategies that
-various market participants employ to make a profit by trading
-derivatives. Derivatives also introduce other variables and factors that
-can be speculated on, over and above the movement in the underlying
-asset, including time, volatility, interest rates, credit conditions and
-spreads, market liquidity, weather, political events, you name it! Then
-you have the whole world of quant/algo/HFT/arbitrage/automated/etc
-trading, which nowadays is often very machine learning and AI driven.
+We saw above the different payoffs depending on the movement in the underlying asset from taking long and short positions in futures and options. Derivatives can be more efficient and cost effective means by which to speculate on movements in the underlying asset than trading the asset itself. Of course there’s a huge variety of trading strategies that various market participants employ to make a profit by trading derivatives. Derivatives also introduce other variables and factors that can be speculated on, over and above the movement in the underlying asset, including time, volatility, interest rates, credit conditions and spreads, market liquidity, weather, political events, you name it! Then you have the whole world of quant/algo/HFT/arbitrage/automated/etc trading, which nowadays is often very machine learning and AI driven.
 
 > give you exposure to underlying asset, time to expire, underlying security, interest rates, credit spreads
 
@@ -345,11 +329,11 @@ the following two alternative definitions will suffice for this course:
 1. An arbitrage opportunity is a scenario that has no initial, upfront
 cashflow or exchange of money, no risk of future loss (negative
 cashflow), but a chance of a future profit (positive cashflow).
-▶ Keep investing at 0 cost with the possibility of a future profit.
+  - Keep investing at 0 cost with the possibility of a future profit.
 2. Alternatively, an arbitrage opportunity is a scenario of two different
 portfolios or financial securities having the same future cashflow
 structure or payoff, but different prices.
-▶ Long the cheap and short the expensive security/portfolio.
+  - Long the cheap and short the expensive security/portfolio.
 Neither of these scenarios can last long in efficient financial markets.
 
 > current cashflows, 

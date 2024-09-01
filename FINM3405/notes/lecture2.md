@@ -1,6 +1,6 @@
-# Lecture 2
+# Lecture 2 Futures and forwards - Examples and basic concepts
 
-Futures and forwards are contracts between two parties to trade an agreed quantity m of an asset for an agreed contract or forward price K on an agreed future delivery or maturity date T.
+Futures and forwards are contracts between two parties to trade an agreed quantity $m$ of an asset for an agreed contract or forward price $K$ on an agreed future delivery or maturity date $T$.
 
 - Written over all kinds of assets including shares, ETFs, indices, commodities, interest rates, currencies, energy, weather events, etc.
 - Traded all over the world, with forward contracts traded in OTC markets and futures contracts traded on organised exchanges.
@@ -20,20 +20,22 @@ Futures and forwards are contracts between two parties to trade an agreed quanti
 
 
 ### Futures and Forwards
-The payoff s at maturity from 1 contract (over 1 asset) are:
+The payoffs at maturity from 1 contract (over 1 asset) are:
 
 ![alt text](assets\IMG10.PNG)
 
-long payoff = $S_{T} − K$ and short payoff= $K − S_{T}$ .
+long payoff = $S_{T} − K$ and short payoff = $K − S_{T}$ .
 
 > buying assets for K
 > - spot price is higher, can sell at the spot price for higher and make a profit
 
 ### Example
 
-I agree to buy m = 1, 000 Alibaba ADRs (traded on NYSE under the ticker BABA) off you in 3 months for K = $76.50 per ADR.
+I agree to buy $m = 1,000$ Alibaba ADRs (traded on NYSE under the ticker BABA) off you in 3 months for $K = \$76.50$ per ADR.
 
-![alt text](assets\IMG11.PNG)
+|Spot Price | 
+| --- |
+| ![alt text](assets\IMG11.PNG)
 
 If the Alibaba’s share (well, ADR) spot price in 3 months is say:
 - $S_{T} = \$80$, then I’m happy since I’m buying BABA off you for only K = \$76.50 and I can sell it spot for \$80.
@@ -41,12 +43,11 @@ If the Alibaba’s share (well, ADR) spot price in 3 months is say:
 - $S_{T} = \$70$, then I’m regretting our agreement since I could
 have paid \$70 spot. You’re happy with getting K = \$76.50.
 - My payoff is $(S_{T} − K) × m = −\$6, 500$ (your gain).
-In the 2 nd scenario, you hope that I fulfi l my obligations and still
-buy it off you, and this introduces the idea of counterparty risk.
+
+In the 2nd scenario, you hope that I fulfil my obligations and still buy it off you, and this introduces the idea of counterparty risk.
 
 > Counterparty risk is a big thing
 > - hoping that the losing party is going to pay
-
 
 The payoff diagram for my long forward position with you is:
 
@@ -54,7 +55,7 @@ The payoff diagram for my long forward position with you is:
 
 ### Futures and Forwards
 
-The basic diff erence between futures and forward contracts is:
+The basic difference between futures and forward contracts is:
 - Futures are traded on exchanges (and other trading venues).
 - Forwards are negotiated directly between market participants OTC.
 
@@ -79,13 +80,14 @@ This has a number of implications, including:
 
 ![alt text](assets\IMG15.PNG)
 
-These diff erences would seem to entail separate treatments of forwards and futures, but we can show that they can be viewed as equivalent under simplifying assumptions such as frictionless fi nancial markets, constant or deterministic (nonrandom) interest rates, etc.
+These differences would seem to entail separate treatments of forwards and futures, but we can show that they can be viewed as equivalent under simplifying assumptions such as frictionless financial markets, constant or deterministic (nonrandom) interest rates, etc.
 
 - So we treat them identically in these notes.
 
-We use the following notation and terminology throughout these notes:
-
 > - unrestricted borrowing holdings, no fees, etc we can treat them basically the same
+
+### Notation
+We use the following notation and terminology throughout these notes:
 
 - We work on a hypothetical time interval $[0, T]$.
   - Time $t = 0$ is a contract’s initiation date.
@@ -99,9 +101,11 @@ We use the following notation and terminology throughout these notes:
 - $h$ is the number of contracts we enter into.
 
 Note that it’s very important to be clear about exactly what $K_{t}$ is.
-$K_{t}$ is the contract price when initiating a contract at time $t$.
-- Long position at time $t$: Agree buy the asset for $K_{t}$ at maturity $T$.
-- Short position at time $t$: Agree sell the asset for $K_{t}$ at maturity $T$.
+
+- $K_{t}$ is the contract price when initiating a contract at time $t$.
+  - Long position at time $t$: Agree buy the asset for $K_{t}$ at maturity $T$.
+  - Short position at time $t$: Agree sell the asset for $K_{t}$ at maturity $T$.
+
 The futures prices quoted on exchanges, or the forward price negotiated between parties OTC, is the contract price $K_{t}$.
 
 > What is the future price you are trading?
@@ -109,7 +113,7 @@ The futures prices quoted on exchanges, or the forward price negotiated between 
 
 $K_{t}$ varies over time and is the price you trade futures for. Suppose you:
 - Go long $h$ contracts at time $t = 0$ for $K$.
-- Close out your position at time $t > 0$ by shorting $h$ contracts for $K_{t}$ .
+- Close out your position at time $t > 0$ by shorting $h$ contracts for $K_{t}$.
 - The contract prices K and $K_{t}$ will almost certainly be different!
 - You have locked in a payout of $h(K_{t} − K)m$ at the delivery date T. 
 
@@ -118,9 +122,9 @@ Futures trading involves entering into and out of futures contracts over time at
 
 > decided to buy $h \times m$ in your opening position
 > - locking in different prices
-> People typically only trade the futures contract that has the closest maturity date
-> - not exposed to as much basis risk
-> - close out your position as it is nearly due for delivery
+> - People typically only trade the futures contract that has the closest maturity date
+>   - not exposed to as much basis risk
+>   - close out your position as it is nearly due for delivery
 
 ### Margin mechanism
 The futures margin mechanism can be described as follows:

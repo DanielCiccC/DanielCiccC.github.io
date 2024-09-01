@@ -3,7 +3,11 @@
 Welcome to my landing page. My notes are below.
 
 [``whoami``](https://www.linkedin.com/in/daniel-ciccotosto-camp-6a1463b9/) ?
+- Fifth year Commerce/Computer Science student at UQ
+- Applications Developer (Java Springboot & EJB + Angular) @ National Transport Insurance
+- Tutor & Assignment-writer for [**INFS1200**](https://programs-courses.uq.edu.au/course.html?course_code=INFS1200)
 
+This website was compiled using [Markdown+Math by goessner](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath)
 
 **Year** | **Semester** | **Course and Link**
 | --- | --- | --- |
