@@ -4,6 +4,7 @@ Welcome to my landing page. My notes are below.
 
 [``whoami``](https://www.linkedin.com/in/daniel-ciccotosto-camp-6a1463b9/) ?
 
+
 **Year** | **Semester** | **Course and Link**
 | --- | --- | --- |
 2023 | 2| [**DECO3801**](DECO3801/docs/main_DECO3801.html)
@@ -15,4 +16,4 @@ Welcome to my landing page. My notes are below.
 2024 | 2 |  [**FINM3407**](FINM3407/docs/FINM3407.html)
 
 Tutoring notes:
-#### [INFS1200 tutoring](INFS1200_TUTORING/docs/INFS1200.html)
+#### [INFS1200 tutoring](INFS1200/docs/INFS1200.html)
