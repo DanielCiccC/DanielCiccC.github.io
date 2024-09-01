@@ -1,0 +1,616 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-6">Lecture 6</h1>
+<p dir="auto">Last week we presented the basics of the Black-Scholes model for European options on non-income paying assets, income paying assets, and currencies. We also presented the Greeks, which quantify the relation between option premiums and the Black-Scholes model input parameters.</p>
+<p dir="auto">This week we look at delta hedging, which is a common strategy employed by traders and market makers to manage risk and is the starting point for other “Greek neutral” strategies. We then cover the notion of implied volatility and fi nish with using the concepts of the Greeks, delta hedging and implied vols to present some basic trading strategies.</p>
+<ul dir="auto">
+<li dir="auto">Readings: Chapters 12, 15.11, 19.4 and 20 of Hull.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">exam mostly about intuition and finance theories</li>
+<li dir="auto">How money makes make money</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="static-delta-hedging">Static delta hedging</h3>
+<ul dir="auto">
+<li dir="auto">We start off with the basic idea of static delta hedging.
+Recall the basic long call and put option payoff and premium plots:</li>
+</ul>
+<p dir="auto"><img src="assets\IMG84.PNG" alt="alt text" data-src="assets/IMG84.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">trying to hedge the risk of changes in the underlying asset</li>
+<li dir="auto">at the money call option
+<ul dir="auto">
+<li dir="auto">orange is the premium of the option</li>
+<li dir="auto">Using black scholes pricing</li>
+</ul>
+</li>
+<li dir="auto">If the asset price goes up/down</li>
+</ul>
+<p dir="auto">Delta hedging</p>
+<ul dir="auto">
+<li dir="auto">how many units in the stock should I take to hedge this risk?</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="static-delta-hedging-1">Static delta hedging</h3>
+<p dir="auto">An option’s delta is an approximation of the change in the premium due
+to a change dS in the price S of the underlying asset:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>C</mi><mo>≈</mo><mtext>∆</mtext><mi>C</mi><mi>d</mi><mi>S</mi><mtext>  </mtext><mtext>  </mtext><mtext>and</mtext><mtext>  </mtext><mtext>  </mtext><mi>d</mi><mi>P</mi><mo>≈</mo><mtext>∆</mtext><mi>P</mi><mi>d</mi><mi>S</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">dC ≈ ∆ C dS \; \; \text{and} \; \; dP ≈ ∆ P dS.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">∆</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">and</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">∆</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord">.</span></span></span></span></span></p>
+</math>
+<p dir="auto">We use an option’s delta to hedge a position against changes dS in S:</p>
+<p dir="auto"><strong>Delta hedging</strong> involves taking a position in the asset to hedge an
+option position against small movements in the asset’s price.</p>
+<p dir="auto">So, given an option position, we calculate how many units Q in the asset
+we need in order to hedge against small changes dS in the asset price S.</p>
+<ul dir="auto">
+<li dir="auto">Negative Q means a short position in the asset.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Money makers options in the market
+<ul dir="auto">
+<li dir="auto">take an advantage of one of the greeks</li>
+<li dir="auto">closely hedged to changes in price to the underlying asset</li>
+<li dir="auto">only want to be exposed to certain of the other parameters that go in as an input to the Black Shoals</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Delta hedging</p>
+<ul dir="auto">
+<li dir="auto">How many units (what trade in the underlying asset) in order to hedge in changes against the price in the underlying asset</li>
+<li dir="auto">need to hold a negative amount in the underlying asset</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="static-delta-hedging-2">Static delta hedging</h3>
+<p dir="auto">The value of a portfolio of h = 1 call option and Q units in the asset is</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>V</mi><mo>=</mo><mi>Q</mi><mi>S</mi><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">V = QS + C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">QS</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></span></p>
+</math>
+<p dir="auto">The change dV in V due to a change dS in S is given by</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>V</mi><mo>=</mo><mi>Q</mi><mi>d</mi><mi>S</mi><mo>+</mo><mi>d</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">dV = QdS + dC</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>≈</mo><mi>Q</mi><mi>d</mi><mi>S</mi><mo>+</mo><mtext>∆</mtext><mi>C</mi><mi>d</mi><mi>S</mi><mo>=</mo><mo stretchy="false">(</mo><mi>Q</mi><mo>+</mo><mtext>∆</mtext><mi>C</mi><mo stretchy="false">)</mo><mi>d</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">≈ QdS + ∆ C dS = (Q + ∆ C )dS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">∆</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∆</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></span></p>
+</math>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Q units in the underlying asset</li>
+<li dir="auto">how many units of Q so that the change in our portfolio doesn't change</li>
+</ul>
+</blockquote>
+<p dir="auto"><strong>Remark</strong>
+The value of a portfolio of h = 1 put option and Q units in the
+asset is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>Q</mi><mi>S</mi><mo>+</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">V = QS + P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">QS</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> and its change is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>V</mi><mo>≈</mo><mo stretchy="false">(</mo><mi>Q</mi><mo>+</mo><mtext>∆</mtext><mi>P</mi><mo stretchy="false">)</mo><mi>d</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">dV ≈ (Q + ∆ P )dS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∆</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span>.</p>
+<p dir="auto">Delta hedging means choosing Q so that dV = 0.</p>
+<ul dir="auto">
+<li dir="auto">From the relations</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>V</mi><mo>=</mo><mo stretchy="false">(</mo><mi>Q</mi><mo>+</mo><msub><mtext>∆</mtext><mi>C</mi></msub><mo stretchy="false">)</mo><mi>d</mi><mi>S</mi><mtext>  </mtext><mtext>  </mtext><mtext>and</mtext><mtext>  </mtext><mtext>  </mtext><mi>d</mi><mi>V</mi><mo>=</mo><mo stretchy="false">(</mo><mi>Q</mi><mo>+</mo><msub><mtext>∆</mtext><mi>P</mi></msub><mo stretchy="false">)</mo><mi>d</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">dV = (Q + ∆_C )dS \; \; \text{and} \;\; dV = (Q + ∆_P )dS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">and</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></span></p>
+</math>
+<p dir="auto">to set dV = 0 we easily see that Q should be chosen to equal</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>Q</mi><mo>≈</mo><mo>−</mo><mtext>∆</mtext><mi>C</mi><mtext>  </mtext><mtext>  </mtext><mtext>or</mtext><mtext>  </mtext><mtext>  </mtext><mi>Q</mi><mo>≈</mo><mo>−</mo><mtext>∆</mtext><mi>P</mi></mrow><annotation encoding="application/x-tex">Q ≈ −∆ C \; \; \text{or} \;\; Q ≈ −∆ P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">−</span><span class="mord">∆</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">or</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">∆</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span></span></p>
+</math>
+<p dir="auto"><strong>Remark</strong>
+Setting Q to the above so dV = 0 means we’re delta neutral.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">hold a call option and it goes up
+<ul dir="auto">
+<li dir="auto">go short in the asset</li>
+</ul>
+</li>
+<li dir="auto">put option
+<ul dir="auto">
+<li dir="auto">go long in the asset</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG85.PNG" alt="alt text" data-src="assets/IMG85.PNG"></p>
+<p dir="auto">We can generalise delta hedging to a portfolio of h &gt; 1 options:</p>
+<h3 dir="auto" id="static-delta-hedging-3">Static delta hedging</h3>
+<p dir="auto">The value of a portfolio of h calls and Q units in the underlying asset is</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>V</mi><mo>=</mo><mi>Q</mi><mi>S</mi><mo>+</mo><mi>h</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">V = QS + hC</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">QS</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></span></p>
+</math>
+<p dir="auto">and its change in value is</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>V</mi><mo>=</mo><mi>Q</mi><mi>d</mi><mi>S</mi><mo>+</mo><mi>h</mi><mi>d</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">dV = QdS + hdC</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>≈</mo><mi>Q</mi><mi>d</mi><mi>S</mi><mo>+</mo><mi>h</mi><msub><mtext>∆</mtext><mi>C</mi></msub><mi>d</mi><mi>S</mi><mo>=</mo><mo stretchy="false">(</mo><mi>Q</mi><mo>+</mo><mi>h</mi><msub><mtext>∆</mtext><mi>C</mi></msub><mo stretchy="false">)</mo><mi>d</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">≈ QdS + h∆_C dS = (Q + h∆_C )dS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal">h</span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">h</span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></span></p>
+</math>
+<p dir="auto">To be delta neutral, so dV = 0, we set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mo>−</mo><mi>h</mi><msub><mtext>∆</mtext><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">Q = −h∆_C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord">−</span><span class="mord mathnormal">h</span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+<p dir="auto"><strong>Remark</strong>
+The value of a portfolio of h puts and Q assets is V = QS + hP.
+Its change is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>V</mi><mo>≈</mo><mo stretchy="false">(</mo><mi>Q</mi><mo>+</mo><mi>h</mi><msub><mtext>∆</mtext><mi>P</mi></msub><mo stretchy="false">)</mo><mi>d</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">dV ≈ (Q + h∆_P )dS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">h</span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> so we set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mo>−</mo><mi>h</mi><msub><mtext>∆</mtext><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">Q = −h∆_P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord">−</span><span class="mord mathnormal">h</span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> .</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">typically hold more than one option</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG86.PNG" alt="alt text" data-src="assets/IMG86.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Did not make the hedge perfectly
+<ul dir="auto">
+<li dir="auto">ignoring the gamma of the option</li>
+<li dir="auto">Price of an option over a range of asset prices is actually curved</li>
+<li dir="auto">Gamma tells us the curvature</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><strong>Remark</strong></p>
+<p dir="auto">We’re assuming assets are “infinitely divisible”. Options contracts
+are typically over m assets (the multiplier). Then the portfolio
+values are V = QS + hCm or V = QS + hPm with changes</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>V</mi><mo>=</mo><mo stretchy="false">(</mo><mi>Q</mi><mo>+</mo><mi>h</mi><msub><mtext>∆</mtext><mi>C</mi></msub><mi>m</mi><mo stretchy="false">)</mo><mi>d</mi><mi>S</mi><mtext>  </mtext><mtext>  </mtext><mtext>or</mtext><mtext>  </mtext><mtext>  </mtext><mi>d</mi><mi>V</mi><mo>=</mo><mo stretchy="false">(</mo><mi>Q</mi><mo>+</mo><mi>h</mi><msub><mtext>∆</mtext><mi>P</mi></msub><mi>m</mi><mo stretchy="false">)</mo><mi>d</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">dV = (Q + h∆_C m)dS  \; \; \text{or} \;\; dV = (Q + h∆_P m)dS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">h</span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">m</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord text"><span class="mord">or</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">h</span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">m</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span></span></p>
+</math>
+<h3 dir="auto" id="delta-gamma-hedging">Delta-gamma hedging</h3>
+<p dir="auto">Recall from last week that we can make our approximations of the
+changes dC and dP in option premiums due to a change dS in the
+underlying asset price S more accurate by including Γ as follows:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>C</mi><mo>≈</mo><msub><mtext>∆</mtext><mi>C</mi></msub><mi>d</mi><mi>S</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi mathvariant="normal">Γ</mi><mi>d</mi><msup><mi>S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">dC ≈ ∆_C dS + \frac{1}{2}ΓdS^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">Γ</span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mi>P</mi><mo>≈</mo><msub><mtext>∆</mtext><mi>P</mi></msub><mi>d</mi><mi>S</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi mathvariant="normal">Γ</mi><mi>d</mi><msup><mi>S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">dP ≈ ∆_P dS + \frac{1}{2} ΓdS^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">Γ</span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p>
+</math>
+<p dir="auto">We can use delta-gamma hedging to improve the delta hedging of an
+option position by taking a position in the asset and a different option .</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">takes into consideration convexity</li>
+<li dir="auto">delta hedging, position in the option</li>
+<li dir="auto">delta gamma hedging, need a position in the stock and another option</li>
+</ul>
+</blockquote>
+<p dir="auto">Delta-gamma hedging involves taking a position in the asset and
+in another, different option to hedge an existing option position
+against <strong>small movements</strong> in the price of the underlying asset.</p>
+<p dir="auto">So, given a position of h options, for delta-gamma hedging we calculate
+how many units Q in the asset and k in another option we need in order
+to hedge against small changes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span>S in the price <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> of the underlying asset.</p>
+<p dir="auto">The value of a portfolio of Q units in the asset, h units of one option,
+and k units of another, different option is given by</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>V</mi><mo>=</mo><mi>Q</mi><mi>S</mi><mo>+</mo><mi>h</mi><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><mi>k</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">V = QS + hV_1 + kV_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">QS</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal">h</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+</math>
+<p dir="auto">where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">V_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">V_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> are the respective option premiums.</p>
+<p dir="auto">Also let <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>∆</mtext><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">∆_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4511em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">Γ_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> be the delta and gamma of our existing option,
+and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>∆</mtext><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">∆_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4511em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">Γ_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> be the delta and gamma of the new option.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Original option in the portfolio</li>
+</ul>
+</blockquote>
+<p dir="auto">The change in portfolio value approximated by delta-gamma hedging is
+<img src="assets\IMG87.PNG" alt="alt text" data-src="assets/IMG87.PNG"></p>
+<blockquote dir="auto">
+<p dir="auto">NOTE: typo (should be <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">kV_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>)</p>
+</blockquote>
+<p dir="auto">So when setting <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>V</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">dV = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>, for delta-gamma hedging we need to solve</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>Q</mi><mo>+</mo><mi>h</mi><msub><mtext>∆</mtext><mn>1</mn></msub><mo>+</mo><mi>k</mi><msub><mtext>∆</mtext><mn>2</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">Q + h∆_1 + k∆_2 = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal">h</span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord"><span class="mord">∆</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></p>
+</math>
+<p dir="auto">and</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>h</mi><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub><mo>+</mo><mi>k</mi><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">hΓ_1 + kΓ_2 = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal">h</span><span class="mord"><span class="mord">Γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord"><span class="mord">Γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></p>
+</math>
+<p dir="auto"><strong>Remark</strong>
+Solving these equations for Q and k so that dV = 0 means that
+we’re both delta and gamma neutral.</p>
+<p dir="auto">We can show that the solution is</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>Q</mi><mo>=</mo><mo>−</mo><mi>h</mi><mfrac><mrow><msub><mi mathvariant="normal">Δ</mi><mn>1</mn></msub><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub><mo>−</mo><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub></mrow><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">Q = -h \frac{\Delta _1 \Gamma _2 - \Delta _2 \Gamma _1}{\Gamma _2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord">−</span><span class="mord mathnormal">h</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">Γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">Δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord">Γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord">Δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord">Γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p dir="auto">And</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>k</mi><mo>=</mo><mfrac><mrow><mi>Q</mi><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub></mrow><mrow><msub><mi mathvariant="normal">Δ</mi><mn>1</mn></msub><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub><mo>−</mo><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">k = \frac{Q \Gamma _1}{\Delta _1 \Gamma _2 - \Delta _2 \Gamma _1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord">Δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord">Γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord">Δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord">Γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="mord"><span class="mord">Γ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p dir="auto">So to delta-gamma hedge an existing option position, we use the fi rst
+equation to calculate Q and then the second equation to calculate k.</p>
+<ul dir="auto">
+<li dir="auto">Consider the previous example of long h = 1 call:</li>
+</ul>
+<hr dir="auto">
+<p dir="auto"><img src="assets\IMG88.PNG" alt="alt text" data-src="assets/IMG88.PNG"></p>
+<p dir="auto"><img src="assets\IMG89.PNG" alt="alt text" data-src="assets/IMG89.PNG"></p>
+<hr dir="auto">
+<h3 dir="auto" id="dynamic-delta-hedging">Dynamic delta hedging</h3>
+<p dir="auto">So far we’ve been doing “1 period” delta hedging.</p>
+<ul dir="auto">
+<li dir="auto">But when the asset price S changes, so does the option’s delta.</li>
+<li dir="auto">Hence, to stay delta hedged over time, one needs to regularly
+rebalance the holding Q in the underlying asset.</li>
+<li dir="auto">We also rebalance our bank account as we buy and/or sell the asset.</li>
+<li dir="auto">And pay and/or receive interest as appropriate.</li>
+</ul>
+<p dir="auto"><strong>Dynamic delta hedging</strong> involves maintaining a “rolling” delta
+hedge (staying delta neutral) over time via regular rebalancing.</p>
+<p dir="auto">An example best illustrates the idea, in which we use daily rebalancing.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Did an example instantaneously</p>
+</li>
+<li dir="auto">
+<p dir="auto">one period, one point in time hedge</p>
+</li>
+<li dir="auto">
+<p dir="auto">at regular intervals, quickly delta hedge so not exposed to what happens overnight</p>
+<ul dir="auto">
+<li dir="auto">maintaining/rolling regular delta hedging</li>
+<li dir="auto">delta changes after a particular interval</li>
+<li dir="auto">as the price of the options changes, so does your delta</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">At regular points an time, compound forward the interest that we paid for too</p>
+</li>
+</ul>
+</blockquote>
+<hr dir="auto">
+<p dir="auto"><img src="assets\IMG90.PNG" alt="alt text" data-src="assets/IMG90.PNG"></p>
+<p dir="auto"><img src="assets\IMG91.PNG" alt="alt text" data-src="assets/IMG91.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">S, price of the asset at the end of the first day</li>
+<li dir="auto">delta of the option (column 2)</li>
+<li dir="auto">Q how many units in the underlying asset I need to hold</li>
+<li dir="auto">Stock, value of the stock multiplied by the quantity of the units I need to hold in the stock</li>
+<li dir="auto">Bank ac pre-rebalance - how much money we have in the bank account pre-rebalancing</li>
+<li dir="auto">Bank ac post-rebalance - if we continued the delta hedging strategy</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG92.PNG" alt="alt text" data-src="assets/IMG92.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">sell option for 4.05845, considering one less day till expiry
+the cost 29.4853m</li>
+<li dir="auto">earn interest from the first day, from 25.414 to 25.4175</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG93.PNG" alt="alt text" data-src="assets/IMG93.PNG"></p>
+<p dir="auto"><img src="assets\IMG94.PNG" alt="alt text" data-src="assets/IMG94.PNG"></p>
+<p dir="auto"><strong>Remark</strong>
+We can make this delta hedging process more accurate by:</p>
+<ul dir="auto">
+<li dir="auto">Using a shorter time period: Say delta hedging every hour.</li>
+<li dir="auto">Use another option and do dynamic delta-gamma hedging.</li>
+</ul>
+<p dir="auto">Also note that in reality dynamic hedging is not as “neat and clean” as this due to market imperfections such as bid-ask
+spreads, brokerage fees, different borrowing and lending rates, etc.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">rebalancing only every day, not hour, e.g.</li>
+<li dir="auto">hedge an option position to changes in the underlying asset</li>
+<li dir="auto">market imperfections make this a lot less favourable</li>
+</ul>
+</blockquote>
+<hr dir="auto">
+<p dir="auto">Note also that in the above, we assumed that we initially bought the h = 1 call for the theoretically correct Black-Scholes value.</p>
+<p dir="auto">Question: How do market makers make money?</p>
+<p dir="auto">One way market makers make money is by their bid-ask spread and hence
+trading options at a “more favourable” price than the theoretically correct
+price, and then dynamically delta-hedging to “lock in” their profi t.</p>
+<ul dir="auto">
+<li dir="auto">Consider the following example:</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Market makers; make a market for someone to trade at
+<ul dir="auto">
+<li dir="auto">Offer the bid/ask spread</li>
+<li dir="auto">they trade at the favourable side of the spread</li>
+<li dir="auto">make their money by trading at the more favourable price of the bid/ask price</li>
+</ul>
+</li>
+<li dir="auto">Every time someone does a trade, they can lock in their spread</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG95.PNG" alt="alt text" data-src="assets/IMG95.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">ASSIGNMENT NOTE, 1:14:00</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="implied-volatility">Implied volatility</h2>
+<p dir="auto">We now turn to the “mysterious” and “elusive” volatility parameter σ in the Black-Scholes model.</p>
+<p dir="auto">In the Black-Scholes European option pricing model</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>C</mi><mo>=</mo><mi>S</mi><mi mathvariant="script">N</mi><mo stretchy="false">(</mo><msub><mi>d</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>−</mo><mi>K</mi><msup><mi>e</mi><mrow><mo>−</mo><mi>r</mi><mi>T</mi></mrow></msup><mi mathvariant="script">N</mi><mo stretchy="false">(</mo><msub><mi>d</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">C = S\mathcal{N} (d_{1}) − Ke^{−rT}\mathcal{N} (d_{2})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathcal" style="margin-right:0.14736em;">N</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1413em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span><span class="mord mathcal" style="margin-right:0.14736em;">N</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo>=</mo><mi>K</mi><msup><mi>e</mi><mrow><mo>−</mo><mi>r</mi><mi>T</mi></mrow></msup><mi mathvariant="script">N</mi><mo stretchy="false">(</mo><mo>−</mo><msub><mi>d</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>−</mo><mi>S</mi><mi mathvariant="script">N</mi><mo stretchy="false">(</mo><mo>−</mo><msub><mi>d</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P =  Ke^{−rT}\mathcal{N} (-d_{2}) - S\mathcal{N} (-d_{1})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1413em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span><span class="mord mathcal" style="margin-right:0.14736em;">N</span><span class="mopen">(</span><span class="mord">−</span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathcal" style="margin-right:0.14736em;">N</span><span class="mopen">(</span><span class="mord">−</span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+</math>
+<p dir="auto">Where</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>d</mi><mn>2</mn></msub><mo>=</mo><msub><mi>d</mi><mn>1</mn></msub><mo>−</mo><mi>σ</mi><msqrt><mi>T</mi></msqrt></mrow><annotation encoding="application/x-tex">d_{2} = d_{1} - \sigma \sqrt{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.0645em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9755em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span><span style="top:-2.9355em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0645em;"><span></span></span></span></span></span></span></span></span></span></p>
+</math>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>d</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mi>log</mi><mo>⁡</mo><mfrac><mi>S</mi><mi>K</mi></mfrac><mo>+</mo><mo stretchy="false">(</mo><mi>r</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mi>T</mi></mrow><mrow><mi>σ</mi><msqrt><mi>T</mi></msqrt></mrow></mfrac></mrow><annotation encoding="application/x-tex">d_{2} = \frac{\log \frac{S}{K} + (r -\frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.5373em;vertical-align:-0.93em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6073em;"><span style="top:-2.1833em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9267em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span><span style="top:-2.8867em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1133em;"><span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.735em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">K</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">S</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.93em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p dir="auto">the only unobservable parameter is the volatility σ.</p>
+<ul dir="auto">
+<li dir="auto">We’ve been estimating it using historical data but traders use market conventions, their knowledge of the market and even intuition when determining the volatility parameter σ to use for pricing options.</li>
+</ul>
+<p dir="auto">Here, we’re interested in calculating σ from option prices:</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span> is the annualised volatility in the underlying asset</p>
+</li>
+<li dir="auto">
+<p dir="auto">previously lecture, based on historical data</p>
+<ul dir="auto">
+<li dir="auto">not done by traders, use intuition</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">point of the parameter is what traders are forecasting the asset to show over the life of the asset</p>
+</li>
+<li dir="auto">
+<p dir="auto">can work backwards, knowing all the other parameters used to price options</p>
+<ul dir="auto">
+<li dir="auto">determine the implied volatility</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Across the different range of strike prices, higher for options out of the money versus in the money</p>
+</blockquote>
+<p dir="auto">Given observed option prices C or P and observable market vari-
+ables S, K, r and T, an option’s implied volatility is the volatility
+parameter σ that yields Black-Scholes prices equal to C or P.</p>
+<p dir="auto"><img src="assets\IMG96.PNG" alt="alt text" data-src="assets/IMG96.PNG"></p>
+<p dir="auto">The question is: How do we calculate implied vols?</p>
+<p dir="auto">There’s no “nice and neat” equation to calculate implied vols.</p>
+<ul dir="auto">
+<li dir="auto">We have to code numerical (iterative) techniques on computers. I don’t go into the mathematical details but I’ll give you some Python code to calculate implied vols using Newton’s method.</li>
+</ul>
+<hr dir="auto">
+<pre><code class="code-line language-python" dir="auto"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np; <span class="hljs-keyword">from</span> scipy . stats <span class="hljs-keyword">import</span> norm
+<span class="hljs-comment"># function to calculate Black - Scholes option prices</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">black_scholes</span> (S, K, r, T, sigma , q):
+d1 = (np.log(S/K) + (r - q + <span class="hljs-number">0.5</span>* sigma **<span class="hljs-number">2</span>)*T)/( sigma *np.sqrt(T)); d2 = d1 - sigma *np.sqrt(T)
+C = S*np.exp(-q*T)*norm.cdf(d1) - K*np.exp(-r*T)*norm.cdf(d2) <span class="hljs-comment"># call</span>
+P = -S*np.exp(-q*T)*norm.cdf(-d1) + K*np.exp(-r*T)*norm.cdf(-d2) <span class="hljs-comment"># put</span>
+<span class="hljs-keyword">return</span> [C, P]
+<span class="hljs-comment"># function to calculate option vega</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">vega</span>(<span class="hljs-params">S, K, r, T, sigma , q</span>):
+d1 = (np.log(S/K) + (r - q + <span class="hljs-number">0.5</span>* sigma **<span class="hljs-number">2</span>)*T)/( sigma *np.sqrt(T))
+<span class="hljs-keyword">return</span> np.exp(-q*T)*S*norm.pdf(d1)*np.sqrt(T) <span class="hljs-comment"># same for calls and puts</span>
+<span class="hljs-comment"># observed call or put price</span>
+obs = <span class="hljs-number">4.5</span> <span class="hljs-comment"># call price , change for put price</span>
+<span class="hljs-comment"># known / observed / given parameter values</span>
+S = <span class="hljs-number">50</span>; K = <span class="hljs-number">50</span>; r = <span class="hljs-number">0.05</span>; T = <span class="hljs-number">1</span>/<span class="hljs-number">2</span>; q = <span class="hljs-number">0</span>
+<span class="hljs-comment"># Newton ’s method</span>
+sigma = np.sqrt (<span class="hljs-number">2</span>* np.<span class="hljs-built_in">abs</span>(np.log(S/(K*np.exp(-r*T))))/T) <span class="hljs-comment"># initial guess of sigma</span>
+val = black_scholes (S, K, r, T, sigma , q)[<span class="hljs-number">0</span>] <span class="hljs-comment"># call price , change to [1] for puts</span>
+<span class="hljs-keyword">while</span> (<span class="hljs-built_in">abs</span>(val -obs) &gt;<span class="hljs-number">10</span>** -<span class="hljs-number">8</span>):
+v = vega(S, K, r, T, sigma , q)
+sigma = sigma - (val - obs)/v <span class="hljs-comment"># Newton step to update / improve estimate of sigma</span>
+val = black_scholes (S, K, r, T, sigma , q)[<span class="hljs-number">0</span>] <span class="hljs-comment"># call price , change to [1] for puts</span>
+<span class="hljs-built_in">print</span> (<span class="hljs-string">&quot; implied volatility =&quot;</span>, sigma )
+</code></pre>
+<hr dir="auto">
+<p dir="auto">In markets, Black-Scholes implied vols are not constant but display:</p>
+<ul dir="auto">
+<li dir="auto">A volatility smile or smirk over the range of strike prices.</li>
+<li dir="auto">A volatility term structure over the range of expiry dates.
+Lets calculate some implied vols from S&amp;P/ASX 200 Index option quotes.</li>
+</ul>
+<hr dir="auto">
+<p dir="auto"><img src="assets\IMG97.PNG" alt="alt text" data-src="assets/IMG97.PNG"></p>
+<p dir="auto"><img src="assets\IMG98.PNG" alt="alt text" data-src="assets/IMG98.PNG"></p>
+<p dir="auto"><img src="assets\IMG99.PNG" alt="alt text" data-src="assets/IMG99.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Black scholes volatility params</li>
+</ul>
+</blockquote>
+<hr dir="auto">
+<h3 dir="auto" id="vix-index">VIX index</h3>
+<ul dir="auto">
+<li dir="auto">The Cboe VIX Index measures “market wide” implied vols:
+It “is a calculation designed to produce a measure of constant, 30-day
+expected volatility of the U.S. stock market, derived from real-time,
+mid-quote prices of S&amp;P 500 Index (SPX) call and put options.”</li>
+<li dir="auto">See here for a detailed explanation, plus wiki and Investopedia.
+The Cboe VIX index is effectively an average of the implied volatilities of
+a large range of 30 day Cboe S&amp;P 500 Index options.</li>
+<li dir="auto">One can even trade futures and options on the VIX (also see here)!</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">estimates of implied volatilities</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG100.PNG" alt="alt text" data-src="assets/IMG100.PNG"></p>
+<p dir="auto">A value of 17.55 means that average implied vols of 30 day S&amp;P 500 Index options, thus the market’s 30 day volatility expectations, is 17.55%.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">varies everyday, based on sentiment of the market</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG101.PNG" alt="alt text" data-src="assets/IMG101.PNG"></p>
+<p dir="auto">The implied vol of the S&amp;P/ASX 200 Index is quite a bit lower at 11.69 than that of the S&amp;P 500 Index of 17.55, and is roughly “in the middle” of our above S&amp;P/ASX 200 Index option volatility smile and smirk.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">11.69, in the middle from the put/calls volatilities
+<ul dir="auto">
+<li dir="auto">30 day options (puts and calls)</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto">As an observation, the VIX index tends to spike when the market falls:</p>
+<p dir="auto"><img src="assets\IMG102.PNG" alt="alt text" data-src="assets/IMG102.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">spiked massively in COVID</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="trading-strategies">Trading strategies</h2>
+<p dir="auto">We now present some “standard” options trading strategies designed to
+take advantage of movements in the asset price, changes in market
+sentiment and implied vols, and the passage of time:</p>
+<ul dir="auto">
+<li dir="auto">Directional strategies: Speculate on the direction of the price of the underlying asset, similar to taking calls and puts.</li>
+<li dir="auto">Volatility strategies: Speculate on high or low asset volatility, or changes in implied vols, often incorporating delta neutrality.</li>
+<li dir="auto">Time: Strategies that seek to take advantage of time decay, typically assuming low asset volatility and relatively constant implied vols.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Trading strategies, take advantage of</li>
+</ul>
+</blockquote>
+<p dir="auto"><strong>Remark</strong>
+We’ve already present some basic options strategies, including:</p>
+<ul dir="auto">
+<li dir="auto">Taking calls (puts) to speculate on an increase (decrease) in the price of the underlying asset.</li>
+<li dir="auto">Covered calls or a “buy-write” involving writing calls on a portfolio of the underlying asset.</li>
+<li dir="auto">Portfolio insurance, involving taking puts over a portfolio of the asset in order to protect it against market falls.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Portfolio insurance - Bill Ackman</li>
+</ul>
+</blockquote>
+<p dir="auto">It’s common to divide trading strategies into two different classes:</p>
+<ul dir="auto">
+<li dir="auto">Spreads: Positions in the same type (call alone or puts alone) of
+options on an asset, but with different strikes and possibly expiries.
+<ul dir="auto">
+<li dir="auto">Bull and bear spreads.</li>
+<li dir="auto">Backspreads and ratio spreads.</li>
+<li dir="auto">Butterfl y and condor spreads.</li>
+<li dir="auto">Calendar spreads.</li>
+</ul>
+</li>
+<li dir="auto">Combinations: Positions in both puts and calls on an asset.
+<ul dir="auto">
+<li dir="auto">Straddles and strangles.</li>
+<li dir="auto">Butterfl y and condor combinations.</li>
+<li dir="auto">Strips and straps.
+The payoffs of many strategies can be created in different ways, and we
+can create strategies containing both spread and combination positions</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Options portfolio</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG103.PNG" alt="alt text" data-src="assets/IMG103.PNG"></p>
+<h2 dir="auto" id="directional-strategies">Directional strategies</h2>
+<p dir="auto">Directional strategies seek to speculate on a directional change in the price of the asset, but at a lower upfront cost to the basic strategies of taking calls and puts, while still maintaining limited downside risk.</p>
+<ul dir="auto">
+<li dir="auto">However, in lowering the upfront cost relative to taking calls and puts, these strategies sacrifi ce some upside potential, as we will see.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">asset needs to move a lot, a lot of fees associated with it</li>
+<li dir="auto">sell an option slighting out of the stock to reduce fees</li>
+</ul>
+</blockquote>
+<p dir="auto">Suppose we want to speculate on an increase in the asset price:</p>
+<p dir="auto"><img src="assets\IMG104.PNG" alt="alt text" data-src="assets/IMG104.PNG"></p>
+<p dir="auto"><img src="assets\IMG105.PNG" alt="alt text" data-src="assets/IMG105.PNG"></p>
+<p dir="auto"><img src="assets\IMG106.PNG" alt="alt text" data-src="assets/IMG106.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">bull spread doesn't cost us as much initially
+<ul dir="auto">
+<li dir="auto">earn a profit earlier, but payoff gets capped</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><strong>Remark</strong>
+Bull spreads can also be constructed from puts (tutorial question).</p>
+<hr dir="auto">
+<p dir="auto">Now suppose we want to speculate on a decrease in the asset price:</p>
+<p dir="auto"><img src="assets\IMG107.PNG" alt="alt text" data-src="assets/IMG107.PNG"></p>
+<p dir="auto"><img src="assets\IMG108.PNG" alt="alt text" data-src="assets/IMG108.PNG"></p>
+<p dir="auto"><img src="assets\IMG109.PNG" alt="alt text" data-src="assets/IMG109.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">cost us less, start to make a profit sooner</li>
+</ul>
+</blockquote>
+<p dir="auto">The basic strategies of taking calls, as well as bull and bear spreads, seek
+to speculate on the asset price moving in a given direction.</p>
+<ul dir="auto">
+<li dir="auto">But what if we think the asset price will be very volatile but we’re not sure about which direction it will go?</li>
+<li dir="auto">Also, what if we think the asset price will be stable?</li>
+</ul>
+<p dir="auto">How might we trade options given these views or beliefs?</p>
+<h2 dir="auto" id="volatility-strategies">Volatility strategies</h2>
+<p dir="auto">Volatility strategies seek to take advantage of the asset either staying
+stable or displaying high volatility. Another class of volatility strategies
+also seek to take advantage of changing market sentiment and hence
+implied vols, while typically staying delta (and possibly gamma and
+theta) hedged. They’re best described with examples.</p>
+<ul dir="auto">
+<li dir="auto">Suppose we think that the asset price will be volatile:</li>
+</ul>
+<p dir="auto"><img src="assets\IMG110.PNG" alt="alt text" data-src="assets/IMG110.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">orange, value of the put plus the value of the call</li>
+<li dir="auto">payoff, is minus whatever the premium costs</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG111.PNG" alt="alt text" data-src="assets/IMG111.PNG"></p>
+<p dir="auto"><img src="assets\IMG112.PNG" alt="alt text" data-src="assets/IMG112.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Cap the payoff, and shift to reduce the premium</li>
+</ul>
+</blockquote>
+<hr dir="auto">
+<p dir="auto"><img src="assets\IMG113.PNG" alt="alt text" data-src="assets/IMG113.PNG"></p>
+<p dir="auto"><img src="assets\IMG114.PNG" alt="alt text" data-src="assets/IMG114.PNG"></p>
+<p dir="auto"><img src="assets\IMG115.PNG" alt="alt text" data-src="assets/IMG115.PNG"></p>
+<hr dir="auto">
+<p dir="auto">The above strategies are all just speculating on the asset price, as are:</p>
+<p dir="auto"><img src="assets\IMG116.PNG" alt="alt text" data-src="assets/IMG116.PNG"></p>
+
+</main>
+</body>
+</html>
