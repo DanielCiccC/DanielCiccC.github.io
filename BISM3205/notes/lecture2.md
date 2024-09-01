@@ -447,7 +447,7 @@ Australian Criminal Intelligence Commission, the Australian Security Intelligenc
 Australian Secret Intelligence Service, the Australian Signals Directorate, and State and Territory Police 
 forces.
 - **Responsible officer**: ATAR or a TAN may be issued by the head (or delegate) of each agency above.
-ATCN may only be issued by the Attorney-General
+A TCN may only be issued by the Attorney-General
 - b: The use of the powers is connected to the safeguarding of national security or
 (for State/Territory/Commonwealth Police) the enforcing of criminal law so far as it relates to serious 
 Australian or foreign offences (defined as punishable by a maximum term of 3 years imprisonment, 
