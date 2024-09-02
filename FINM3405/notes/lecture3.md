@@ -28,7 +28,8 @@ Pricing a futures or forward contract at time $t$ involves using no-arbitrage ar
 > - Initially bought and closed the position, the value of the position would equal 0 (last term in the equation would cancel out)
 > always imagine time is t=0. Now is the current date, T is the delivery/expiry date, 
 
-**General Notation**
+--- 
+### General Notation
 - We work on a hypothetical time interval $[0, T]$.
   - Time $t = 0$ is the date we enter into a contract.
   - Time $T$ is a contract’s maturity or delivery date.
@@ -39,14 +40,15 @@ Pricing a futures or forward contract at time $t$ involves using no-arbitrage ar
 - $m$ is the number of assets in 1 contract (the multiplier).
 - $h$ is the number of contracts we enter into.
 
-In order to present the basic cost-of-carry arbitrage argument for pricing
-futures and forwards, we use the following additional notation:
+In order to present the basic cost-of-carry arbitrage argument for pricing futures and forwards, we use the following additional notation:
 
 - $I$ is the time $T$ capitalised interest paid on a loan used to buy the underlying asset at time $t = 0$.
 - $J$ is the time $T$ capitalised storage cost of owning and holding the underlying asset from time $t = 0$ to time T.
   - Transport, warehouse storage, insurance, maintenance, etc.
 - $D$ is the time $T$ capitalised dividends or other income or benefits received from owning the asset up to time T.
   - Share dividends, foreign interest, convenience/benefit from holding the asset in stock and/or using or consuming it, etc.
+---
+
 
 > - wheat, corn, some kind of commodity might need to be insured or stored
 >   - need to spend money maintaining the asset
@@ -63,9 +65,10 @@ futures and forwards, we use the following additional notation:
 **Remark:** By “time T capitalised” we mean that any cashflows (loan or coupon payments, storage costs, dividends or other income, etc) received or paid between times $t = 0$ and $T$ are capitalised or compounded forward to time $T$.
 
 $$K = S + I + J − D$$
+
+### Arbitrage: transactions 
 To show why K = S + I + J − D must hold, consider the following arbitrage arguments:
 
----
 Suppose $K > S + I + J − D$ and consider the following short trade:
 Transactions at time t = 0:
 - Borrow $S$ to buy 1 unit of the underlying asset spot.
@@ -103,7 +106,6 @@ is positive to you and negative to the long position.
 
 Also, if $K < S + J + I − D$ and if you currently own the underlying asset, then you can consider taking the following long position:
 
----
 Transactions at time $t = 0$:
 - Sell the asset spot for $S$ and invest the proceeds.
 - Go long to buy back the asset for $K$ at maturity $T$.
@@ -129,7 +131,7 @@ which represents negative value to the short party who would demand this amount 
 
 ### Cost of Carry
 
-We thus get the cost of carry model for pricing forwards and futures:
+We thus get the **cost of carry** model for pricing forwards and futures:
 
 $$K = S + I + J − D$$
 
@@ -151,8 +153,9 @@ $$K = S[1 + (r + s − q)T]$$
 
 and is called spot-forward parity. Under compound interest it becomes
 
+**Simple interest**
 $$K = S(1 + r + s − q)^{T}$$
-or 
+or (**Compound Interest**) 
 $$K = Se^{(r+s−q)T}$$
 
 #### What is the relation between spot S and forward K prices?
@@ -170,8 +173,8 @@ In the case of commodity futures and forwards, we have the:
 - Interest rate $r$ on borrowing and lending.
 - Carrying cost $s$ representing storage and insurance, etc, costs.
 - Convenience yield $q$ representing benefits of owning the asset:
-- Wholesalers maintain adequate stock levels to supply their customers in a timely and reliable manner.
-- Manufacturers maintain adequate stock in order to use/consume and keep their production processes running and not get held up.
+  - Wholesalers maintain adequate stock levels to supply their customers in a timely and reliable manner.
+  - Manufacturers maintain adequate stock in order to use/consume and keep their production processes running and not get held up.
 
 So the cost-of-carry model and spot-forward parity relation is as above.
 
@@ -188,23 +191,11 @@ Gold Futures Quotes | Spot Price | interest rates
 
 > - standard reference risk-free rate
 > - most of the rates are simple interest rates
---- 
 
-**Example**
+![alt text](assets\IMG136.PNG)
 
-Let’s try pricing the October contract. The 3 month and 6 month CME Term SOFA rates of 5.283% and 5.135% are simple interest rates that use the actual/360 day count convention of $T = \frac{d}{360}$,
-where d is the days to maturity, here 90 and 180. CME gold futures mature on the 3rd last business day of October, giving 101 days from now, so we need a 101 day interest rate. I’ll linearly interpolate that the “101 day Term SOFR rate” is 5.265%.
+![alt text](assets\IMG137.PNG)
 
-The gold spot price is $2, 398.84. I calculate that
-
-$$K = S[1 + (r + s − q)T]$$
-
-$$2398.84[1+(0.05265+0-0)\frac{101}{360}]=\$2,434.27$$
-
-noting that the spot/futures/SOFR quote times don’t quite align,
-and I assumed negligible storage costs and convenience yield.
-
-> There are probably some almost negligible storage costs
 ----
 
 ## Equity contract pricing
@@ -225,11 +216,8 @@ Futures Contract | Dividend Yields, average | Spot Price |
 | --- | --- | ---
 Consider the December CME E-mini S&P500 futures contract. <br> <br>  ![alt text](assets\IMG24.PNG) | The dividend yield of the S&P500 index is say 1.3%, and we’ll assume it’s an annual simple interest rate: <br> <br> ![alt text](assets\IMG25.PNG) | ![alt text](assets\IMG26.PNG)
 
-From the above commodity futures example, we’ll linearly interpolate that the 5 month Term SOFA rate is 5.16%. The spot S&P 500 value is 5,505 and there is 153 days until maturity, the Thursday before the 3 rd Friday of December. We calculate that:
+![alt text](assets\IMG138.PNG)
 
-$$K = S[1 + (r -d)T]$$
-
-$$5505[1+(0.0516-0.013)\frac{153}{360}]=5,595.31$$
 ---
 
 ## FX contract pricing
