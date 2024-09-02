@@ -18,8 +18,7 @@ FROM <table list>
 - Distinct: By default, duplicates are not eliminated in SQL relations, 
 which are bags or multisets and not sets. Use of DISTINCT will 
 eliminate duplicates and enforce set semantics.
-- The asterix character (*) acts as a wildcard, selecting all of the 
-columns in the table.
+- The asterix character (*) acts as a wildcard, selecting all of the columns in the table.
 
 **Selection in SQL**
 Selection (WHERE clause) 
@@ -28,19 +27,18 @@ Selection (WHERE clause)
 
 ### Complete WHERE condition clauses
 
-**WHERE condition type** | **Operand**|  **Example** 
-| --- | --- | ---
-| All  | ``=``, ``<>`` | ``ID <> 324``, ``price = 42.30``
-| All | ``<``, ``>`` | ``ID > 324``, ``price < 42.30``
-| All | ``=`` | ``name = 'Mary'``, ``ID = 23406``
-| NVARCHAR() only | ``LIKE``, ``NOT LIKE`` | ``name LIKE '%Mary%'`` will select all the tuples substrings containing the name 'Mary', such as 'Mary-Ann' or 'Maryam' e.g.
-| All | ``IN`` | ``name IN ('Mary', 'John', 'Steve')`` acts as a ternary OR operation
-| All | ``BETWEEN`` | ``salary BETWEEN 10000 AND 30000``
-| All | ``IS`` | ``name IS NULL`` acts as a ternary OR operation
+| **Operand**|  **Example** 
+| --- | --- 
+| ``=``, ``<>`` | ``ID <> 324``, ``price = 42.30``
+| ``<``, ``>`` | ``ID > 324``, ``price < 42.30``
+| ``LIKE``, ``NOT LIKE`` | ``name LIKE '%Mary%'`` will select all the tuples substrings containing the name 'Mary', such as 'Mary-Ann' or 'Maryam' e.g.
+| ``IN`` | ``name IN ('Mary', 'John', 'Steve')`` acts as a ternary OR operation
+| ``BETWEEN`` | ``salary BETWEEN 10000 AND 30000``
+| ``IS`` | ``name IS NULL`` acts as a ternary OR operation
 
 
-## Aggregation and grouping
-
+## ``GROUP BY``
+### Aggregation and grouping
 Aggregates are functions that produce summary values from a set of tuples.
 
 **Aggregate fn** | **Description**
@@ -65,8 +63,8 @@ WHERE  dNum = 5;
 ### Aggregation and Grouping
  aggregation functions are often needed to be applied to 
 groups of rows within a table
-• e.g., find the total number of employees in each department.
-• e.g., find the average salary of employees in each department.
+- e.g., find the total number of employees in each department.
+- e.g., find the average salary of employees in each department.
 
 Solution: use ``GROUP BY``
 
@@ -108,6 +106,7 @@ WHERE  salary > 40000
 GROUP BY  dNum;
 ```
 
+## ``HAVING``
 ### Conditions on Groups
 - Conditions can be imposed **on the selection of groups** to be included in 
 the query result

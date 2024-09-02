@@ -42,8 +42,7 @@
 <li dir="auto">Distinct: By default, duplicates are not eliminated in SQL relations,
 which are bags or multisets and not sets. Use of DISTINCT will
 eliminate duplicates and enforce set semantics.</li>
-<li dir="auto">The asterix character (*) acts as a wildcard, selecting all of the
-columns in the table.</li>
+<li dir="auto">The asterix character (*) acts as a wildcard, selecting all of the columns in the table.</li>
 </ul>
 <p dir="auto"><strong>Selection in SQL</strong>
 Selection (WHERE clause)</p>
@@ -55,50 +54,39 @@ Selection (WHERE clause)</p>
 <table dir="auto">
 <thead dir="auto">
 <tr dir="auto">
-<th><strong>WHERE condition type</strong></th>
 <th><strong>Operand</strong></th>
 <th><strong>Example</strong></th>
 </tr>
 </thead>
 <tbody dir="auto">
 <tr dir="auto">
-<td>All</td>
 <td><code>=</code>, <code>&lt;&gt;</code></td>
 <td><code>ID &lt;&gt; 324</code>, <code>price = 42.30</code></td>
 </tr>
 <tr dir="auto">
-<td>All</td>
 <td><code>&lt;</code>, <code>&gt;</code></td>
 <td><code>ID &gt; 324</code>, <code>price &lt; 42.30</code></td>
 </tr>
 <tr dir="auto">
-<td>All</td>
-<td><code>=</code></td>
-<td><code>name = 'Mary'</code>, <code>ID = 23406</code></td>
-</tr>
-<tr dir="auto">
-<td>NVARCHAR() only</td>
 <td><code>LIKE</code>, <code>NOT LIKE</code></td>
 <td><code>name LIKE '%Mary%'</code> will select all the tuples substrings containing the name 'Mary', such as 'Mary-Ann' or 'Maryam' e.g.</td>
 </tr>
 <tr dir="auto">
-<td>All</td>
 <td><code>IN</code></td>
 <td><code>name IN ('Mary', 'John', 'Steve')</code> acts as a ternary OR operation</td>
 </tr>
 <tr dir="auto">
-<td>All</td>
 <td><code>BETWEEN</code></td>
 <td><code>salary BETWEEN 10000 AND 30000</code></td>
 </tr>
 <tr dir="auto">
-<td>All</td>
 <td><code>IS</code></td>
 <td><code>name IS NULL</code> acts as a ternary OR operation</td>
 </tr>
 </tbody>
 </table>
-<h2 dir="auto" id="aggregation-and-grouping">Aggregation and grouping</h2>
+<h2 dir="auto" id="group-by"><code>GROUP BY</code></h2>
+<h3 dir="auto" id="aggregation-and-grouping">Aggregation and grouping</h3>
 <p dir="auto">Aggregates are functions that produce summary values from a set of tuples.</p>
 <table dir="auto">
 <thead dir="auto">
@@ -134,9 +122,11 @@ Selection (WHERE clause)</p>
 </code></pre>
 <h3 dir="auto" id="aggregation-and-grouping-1">Aggregation and Grouping</h3>
 <p dir="auto">aggregation functions are often needed to be applied to
-groups of rows within a table
-• e.g., find the total number of employees in each department.
-• e.g., find the average salary of employees in each department.</p>
+groups of rows within a table</p>
+<ul dir="auto">
+<li dir="auto">e.g., find the total number of employees in each department.</li>
+<li dir="auto">e.g., find the average salary of employees in each department.</li>
+</ul>
 <p dir="auto">Solution: use <code>GROUP BY</code></p>
 <pre><code class="code-line language-SQL" dir="auto"><span class="hljs-keyword">SELECT</span> [<span class="hljs-keyword">DISTINCT</span>] <span class="hljs-operator">&lt;</span>target list<span class="hljs-operator">&gt;</span>
 <span class="hljs-keyword">FROM</span> <span class="hljs-operator">&lt;</span><span class="hljs-keyword">table</span> list<span class="hljs-operator">&gt;</span> 
@@ -169,6 +159,7 @@ If an item doesn't fit into one of these categories, SQL gets confused because i
 <span class="hljs-keyword">WHERE</span>  salary <span class="hljs-operator">&gt;</span> <span class="hljs-number">40000</span>
 <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span>  dNum;
 </code></pre>
+<h2 dir="auto" id="having"><code>HAVING</code></h2>
 <h3 dir="auto" id="conditions-on-groups">Conditions on Groups</h3>
 <ul dir="auto">
 <li dir="auto">Conditions can be imposed <strong>on the selection of groups</strong> to be included in
