@@ -26,13 +26,12 @@ The option writer is “at the mercy of” the buyer.
   - Time $t = 0$ is the date we enter into a contract.
   - Time $T$ is the expiry date.
   - Time $t$ is some intermediate date $0 ≤ t ≤ T$.
-- S t is the underlying asset’s price at time t.
+- $S_t$ is the underlying asset’s price at time $t$.
   - We write $S = S_{0}$ to reduce notation.
 - $r$ is the risk free rate.
 - $K$ is the strike or exercise price (some authors use X).
 - $C_{t}$ and $P_{t}$ are the call and put prices (premiums) at time $t$.
   - Again, we write $C = C_{0}$ and $P = P_{0}$.
-
 
 Asymmetric rights: The holder (long position) has payoffs at expiry of
 - call holder payoff = $\max {0, S_{T} − K},$

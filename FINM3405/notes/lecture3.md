@@ -251,7 +251,7 @@ $$K_{f:d} = S_{f:d}\frac{1+r_{d}T}{1+r_{f}T}$$
 
 Note that in the above we used $1/S_{d:f} = S_{f:d}$. Under compound interest:
 
-$$K_{f:d} = S_{f:d}\left( \frac{1+r_{d}T}{1+r_{f}T} \right)^{T} \: \: \text{OR} \: \: \: \: K_{f:d}=S_{f:d}e^(r_{d}-r_{f})T$$
+$$K_{f:d} = S_{f:d}\left( \frac{1+r_{d}T}{1+r_{f}T} \right)^{T} \: \: \text{or} \: \: \: \: K_{f:d}=S_{f:d}e^{(r_{d}-r_{f})T}$$
 
 ---
 ### Example
@@ -260,40 +260,42 @@ Let’s price the October CME Group Euro FX futures, which are futures contracts
 
 Contract Info | Current forwards | Spot | EURIBOR (Euro interest rate proxy) 
 --- | --- | --- | ---
-![alt text](assets\IMG29.PNG) | ![alt text](assets\IMG30.PNG) | ![alt text](assets\IMG31.PNG) | ![alt text](assets\IMG32.PNG)
+ Let’s price the October CME Group Euro FX futures, which are futures contracts between the Euro and USD, the two most actively traded currencies in the world. <br> Quote is $K_{text{Euro:USD}}$ <br> ![alt text](assets\IMG29.PNG) | ![alt text](assets\IMG30.PNG) | ![alt text](assets\IMG31.PNG) | ![alt text](assets\IMG32.PNG)
 
 > - US dollar is the local currency
 > - how many units of the DC purchase one unit of the FC
 >  - contract size is \$125,000
 > - yield curve here 1 week, month, 3 months, 12 months
 
-There is 86 days until maturity, being two business days before the 3rd Wednesday of October. This is “close enough” to 90 days to use 3 month interest rates. From a previous example, the 3 month Term SOFA rate is 5.28% and from above the 3 month EURIBOR (also see global-rates.com) rate is 3.688%. We get
+![alt text](assets\IMG139.PNG)
 
-$$K_{Euro:USD} = S_{Euro:USD} \frac{1+r_{USD}T}{1+r_{Euro}T}$$
-$$$$
-
-
-![alt text](assets\IMG33.PNG)
+---
 
 ### FRA Pricing
-Recall that a $T_{1} \times T_{2}$ FRA is an OTC agreement to lock in a future borrowing or lending **fixed rate** k starting at time $T_{1}$ , and finishing at time $T_{2}$ over a notional principal or face value F.
+Recall that a $T_{1} \times T_{2}$ FRA is an OTC agreement to lock in a future borrowing or lending **fixed rate** $k$ starting at time $T_{1}$ , and finishing at time $T_{2}$ over a notional principal or face value F.
 
 - Time $T_{1}$ is the FRA’s maturity date.
-- The length of the time period is given by $T = T 2 − T 1$ .
-- The fixed rate receiver hypothetically agrees to invest $F$ at time $T_{1}$
+- The length of the time period is given by $T = T_2 − T_1$ .
+- The *fixed rate receiver* hypothetically agrees to invest $F$ at time $T_{1}$
 and receive the cashflow $F(1 + kT)$ at time $T_{2}$ .
-- The fixed rate payer hypothetically agrees to borrow F at time $T_{1}$ and pay off the loan amount of $F(1 + kT)$ at time $T_{2}$.
+- The *fixed rate payer* hypothetically agrees to borrow F at time $T_{1}$ and pay off the loan amount of $F(1 + kT)$ at time $T_{2}$.
 - FRA are cash settled at maturity, time $T_{1}$.
 - FRA are written over reference rates such as SOFR or EURIBOR.
 
 Also recall that the payoffs at maturity to each party are given by
 
-![alt text](assets\IMG34.PNG)
+Fixed rate receiver payoff
 
-where r is the spot rate at maturity over the period $[T_{1}, T_{2}]$ of length T.
+$$= \frac{F(k-r)T}{1+rT}$$
+
+Fixed rate payer payoff
+
+$$= \frac{F(r-k)T}{1+rT}$$
+
+where $r$ is the spot rate at maturity over the period $[T_{1}, T_{2}]$ of length T.
 - We derived these payoff equations last week.
-This week we want to price an FRA, which involves calculating the
-theoretically correct fixed rate k.
+
+This week we want to price an FRA, which involves calculating the theoretically correct fixed rate k.
 
 > - positive for receiver, is the fixed rate k is higher than the spot rate of the market $r$
 >   - vice versa for a payer, positive payoff is they 'lock in' a lower fixed rate $k$
@@ -301,29 +303,34 @@ theoretically correct fixed rate k.
 The key insight is that the fixed rate k is set so that the time t = 0 value of a FRA is 0 to both the fixed rate receiver and payer.
 
 So we want to calculate the time t = 0 values of a FRA to both parties:
-- The fixed rate receiver of a $T_{1} \times T_{2}$ FRA hypothetically agrees to
-pay F at time T 1 and receive F(1 + kT) at time T 2 .
+- The *fixed rate receiver* of a $T_{1} \times T_{2}$ FRA hypothetically agrees to pay $F$ at time $T_1$ and *receive* $F(1 + kT)$ at time $T_2$.
 - These cashflows are risk free so their present value is
 
 $$V = -\frac{F}{1+r_{1}T_{1}} + \frac{F(1+kT)}{1+r_{2}T_{2}}$$
 
-where $r_{1}$ and $r_{2}$ are the time $t = 0$ spot reference rates for the
-period from time $t = 0$ to times $T_{1}$ and $T_{2}$ , respectively.
+where $r_{1}$ and $r_{2}$ are the time $t = 0$ spot reference rates for the period from time $t = 0$ to times $T_{1}$ and $T_{2}$ , respectively.
 
 > - start at $t=0$
 
-The value to the fi xed rate payer is simply the negative of this.
-- In either case, we fi nd k by setting V = 0 and hence solving
+The value to the fixed rate payer is simply the negative of this.
+- In either case, we find k by setting V = 0 and hence solving
 
-![alt text](assets\IMG35.PNG)
+$$\frac{F}{1+r_1T_1} = \frac{F(1+kT)}{1+r_2T_2}$$
 
-![alt text](assets\IMG36.PNG)
+Rearranging to:
 
-Hence, since k is an interest rate starting at time T 1 and ending at time
-T 2 , it must be given by $k = r_{1,2}$, the implied forward rate over the time
-period $[T_{1}, T_{2}]$ embedded in the reference rate’s yield curve.
+$$1+r_2T_2 = (1+r_1T_1)(1+kT)$$
 
-> - starts from t=0 to t=2
+Hence, since $k$ is an interest rate starting at time $T_1$ and ending at time $T_2$ , it must be given by $k = r_{1,2}$, the implied forward rate over the time period $[T_{1}, T_{2}]$ embedded in the reference rate’s yield curve.
+
+Rearrange the above to get:
+
+$$k=\left( \frac{1+r_2T_2}{1+r_1T_1} -1 \right) \frac{1}{T}$$
+
+![alt text](assets\IMG140.PNG)
+
+> - should be 90 not 30 in the denominator
+> > - starts from t=0 to t=2
 > - covers the time period now to the end of the contract
 > - total expression
 >
@@ -333,9 +340,6 @@ period $[T_{1}, T_{2}]$ embedded in the reference rate’s yield curve.
 > - invest at the interest rate you can lock in spot, up to the maturity date
 > - invest at the fixed rate you agree to at the FRA
 
-![alt text](assets\IMG37.PNG)
-
-> - should be 90 not 30 in the denominator
 
 ## Optimal Hedging
 
@@ -355,29 +359,26 @@ Perfect hedging scenarios are rare in practice:
 >   - not sure if contract will materialise on maturity date
 
 ### Example
-- An Australian wheat farmer may want to hedge their exposure to their wheat price, but there may be no contracts over the exact type or grade/quality of their wheat.
-- You hold a fairly diversified equities portfolio of USA stocks, but its composition and weights do not exactly match those of the S&P500 or NASDAQ indices, etc.
-- You might want to hedge on a date falling in a month not covered by a say quarterly contract maturity date cycle.
+--- 
+![alt text](assets\IMG141.PNG)
+---
 
-### Basis Risk
+## Basis Risk
 We saw above that the contract price K is usually different to the spot price S of the underlying asset. Our pricing equations, such as
 
 $$K=Se^{(r+s-q)T}$$
 
-for commodity futures, tell us that the diff erence between K and S,
-which we call the basis, is due to the cost of carry r + s − q.
-- As the cost of carry changes over time, the basis changes,
-introducing basis risk: K may not be perfectly correlated with S.
+for commodity futures, tell us that the diff erence between $K$ and $S$, which we call the basis, is due to the cost of carry $r + s − q$.
+- As the cost of carry changes over time, the basis changes, introducing basis risk: $K$ may not be perfectly correlated with $S$.
 
 **Remark**
-The situation is even more complicated if the asset we hold and
-want to hedge is not the same as the contract’s underlying asset.
+The situation is even more complicated if the asset we hold and want to hedge is not the same as the contract’s underlying asset.
 
 > - interest rates, storage costs change every day
 > - difference between contract price and spot price
 >   - when we do perfect hedging
 
-The time t basis B t is the difference between K t and S t , namely:
+The time $t$ basis $B_t$ is the difference between $K_t$ and $S_t$, namely:
 
 $$B_{t} = K_{t}-S_{t}$$
 
@@ -390,37 +391,38 @@ Note that the basis approaches 0 over time, and $K_{T}=S_{T}$ at maturity.
 
 ### Optimal hedging
 Optimal hedging basically means minimising basis risk. Suppose:
-- We hold Q units in an asset at time $t = 0$.
+- We hold $Q$ units in an asset at time $t = 0$.
   - Its price at time $t$ is denoted by $A_{T}$.
-- We want to sell our holding at time t.
+- We want to sell our holding at time $t$.
   - We want to hedge our exposure to a fall in the asset price.
-- There is a futures contract maturing at time T, with t < T.
-  - The underlying asset of the futures contract S may not necessarily be the same as the asset A we hold.
-- We short h units of the futures contract at time $t = 0$ for K.
-- We sell our asset holding and close out the futures position at time t.
+- There is a futures contract maturing at time $T$, with $t < T$.
+  - The underlying asset of the futures contract $S$ may not necessarily be the same as the asset A we hold.
+- We short $h$ units of the futures contract at time $t = 0$ for $K$.
+- We sell our asset holding and close out the futures position at time $t$.
+
 How many contracts h should we short?
 
 > - minimise basis risk
 > - Hypothetical time t=0
 > - exposed to the price of the asset falling
 >   - asset to short to hedge this risk
->   - may not necessaily be on the same date 
+>   - may not necessarily be on the same date 
 > - We still sell the contract, even if they might not be exactly the same (but are correlated)
 >   - probably use the contract to hedge exposure
 >   - given all uncertainties (basis risk)
 
 ### Optimal hedging
 
-At time t, the liquidation value (net cashfl ow) of our position is
+At time $t$, the **liquidation value** (net cashflow) of our position is
 
 $$L_{t}=QA_{t}+h(K-K_{t})m$$
 
-- Q is the number of units we hold in our asset.
-- A t is the time t price of our asset (we let A = A 0 ).
-- h is the number of futures contracts we shorted.
-- K is the contract price at time t = 0 when we went short.
-- K t is the contract price at time t when we went long to close out.
-- m is the futures contract multiplier.
+- $Q$ is the number of units we hold in our asset.
+- $A_t$ is the time $t$ price of our asset (we let $A = A_0$ ).
+- $h$ is the number of futures contracts we shorted.
+- $K$ is the contract price at time $t = 0$ when we went short.
+- $K_t$ is the contract price at time $t$ when we went long to close out.
+- $m$ is the futures contract multiplier.
 
 > - sell our asset holding at $t$
 >
@@ -439,41 +441,52 @@ $$L_{t}=QA_{t}+h(K-K_{t})m$$
 > - optimal - minimise risk/volatility
 > - Get as much certainty as possible in liquidation value
 
-In an imperfect hedging scenario, in which there is basis risk, we
-choose $h$ that minimises the variance in the liquidation value $L_{t}$.
+In an imperfect hedging scenario, in which there is basis risk, we choose $h$ that *minimises the variance in the liquidation value* $L_{t}$.
 
-Then h is called the minimum variance or optimal hedge quantity.
+Then $h$ is called the **minimum variance** or **optimal hedge quantity**.
 - At time $t = 0$, $A_{t}$ and $K_{t}$ are unknown, thus random variables.
 
 We use the following notation:
 
-![alt text](assets\IMG39.PNG)
+- $σ_{A_t}$ is the standard deviation (volatility) in $A_t − A$.
+- $σ_{K_t}$ is the standard deviation (volatility) in $K_t − K$.
+- $ρ$ is the correlation between $A_t − A$ and $K_t − K$.
 
 > $A_{t}$ and $K_{t}$ are unknown and not necessarily correlated
-
 
 We can prove that the optimal or minimum variance hedge quantity $h$, which minimises the variance in the above liquidation value, or equivalently minimises basis risk, is given by
 
 $$h=\rho \frac{\sigma_{A_{t}}Q}{\sigma _{K{t}}m}$$
 
 **Remark**
-The number $\frac{\sigma_{A_{t}}Q}{\sigma _{K{t}}m}$ is called the minimum variance or optimal hedge ratio.
+The number 
+$$\frac{\sigma_{A_{t}}Q}{\sigma _{K{t}}m}$$ 
+is called the minimum variance or optimal hedge ratio.
 
 > - proportion of futures contracts to 1 futures contract
 > - Can calculate them with historical data
 
-![alt text](assets\IMG40.PNG)
+![alt text](assets\IMG142.PNG)
+
+The optimal hedge quantity is then given by
+
+$$h = \bar{\rho} \frac{\bar{\sigma}_{A}Q }{\bar{\sigma}_Km}$$
+
+Also, suppose that in the above we used daily returns $(A_n − A_{n−1} )/A_{n−1}$ and $(K_n − K_{n−1})/K_{n−1}$ to calculate $\bar{\sigma}_{A}$, $\bar{\sigma}_K$ and $\bar{\rho}$.
 
 > - two sample data sets of price increments
 > - calculate the variance, and the correlation between the two
 > - optimal hedge quantity given by the expression
 
-Also, suppose that in the above we used daily returns (A n − A n−1 )/A n−1
-and (K n − K n−1 )/K n−1 to calculate ¯σ A , ¯σ K and ¯ρ.
-
 - Then the optimal hedge quantity is given by
 
-![alt text](assets\IMG41.PNG)
+$$h = \bar{\rho} \frac{\bar{\sigma}_{A}V }{\bar{\sigma}_KF}$$
+
+Where 
+
+$$V = AQ \; \; \; \text{and} \;\;\;\; F=Km$$
+
+![alt text](assets\IMG143.PNG)
 
 > - optimal standard deviation of standard returns of contract price
 > - Sample correlation of daily returns
@@ -481,24 +494,22 @@ and (K n − K n−1 )/K n−1 to calculate ¯σ A , ¯σ K and ¯ρ.
 >
 > - V could represent a portfolio value
 
-**Example**
-You hold Q = 4, 600 Tesla shares and are worried that Tesla has
-been very volatile lately and will fall back to its recent lows.
-
-![alt text](assets\IMG42.PNG)
+---
+### Example 
+You hold Q = 4, 600 Tesla shares and are worried that Tesla has been very volatile lately and will fall back to its recent lows.
 
 Suppose you’re not aware of any individual share futures on Tesla, so you decide that the “next best thing” is MICRO NYSE FANG+ Index Futures, since the NYSE FANG+ Index contains only 10 stocks and surely they must all be fairly positively correlated.
 
 > - FAANG+ index is fairly correlated with tesla
 
-![alt text](assets\IMG43.PNG)
+| - | -
+| --- | ---
+![alt text](assets\IMG43.PNG) | ![alt text](assets\IMG44.PNG)
 
-![alt text](assets\IMG44.PNG)
 
 **Example 2**
 
-![alt text](assets\IMG45.PNG)
-
-![alt text](assets\IMG46.PNG)
-
-![alt text](assets\IMG47.PNG)
+| - | -
+| --- | ---
+![alt text](assets\IMG45.PNG) | ![alt text](assets\IMG46.PNG)
+![alt text](assets\IMG47.PNG) |

@@ -424,11 +424,11 @@ It’s common to divide trading strategies into two different classes:
 options on an asset, but with different strikes and possibly expiries.
   - Bull and bear spreads.
   - Backspreads and ratio spreads.
-  - Butterfl y and condor spreads.
+  - Butterfly and condor spreads.
   - Calendar spreads.
 - Combinations: Positions in both puts and calls on an asset.
   - Straddles and strangles.
-  - Butterfl y and condor combinations.
+  - Butterfly and condor combinations.
   - Strips and straps.
 The payoffs of many strategies can be created in different ways, and we
 can create strategies containing both spread and combination positions
@@ -439,7 +439,7 @@ can create strategies containing both spread and combination positions
 
 ## Directional strategies
 Directional strategies seek to speculate on a directional change in the price of the asset, but at a lower upfront cost to the basic strategies of taking calls and puts, while still maintaining limited downside risk.
-- However, in lowering the upfront cost relative to taking calls and puts, these strategies sacrifi ce some upside potential, as we will see.
+- However, in lowering the upfront cost relative to taking calls and puts, these strategies sacrifice some upside potential, as we will see.
 
 > - asset needs to move a lot, a lot of fees associated with it
 > - sell an option slighting out of the stock to reduce fees
@@ -471,8 +471,7 @@ Now suppose we want to speculate on a decrease in the asset price:
 > - cost us less, start to make a profit sooner
 
 
-The basic strategies of taking calls, as well as bull and bear spreads, seek
-to speculate on the asset price moving in a given direction.
+The basic strategies of taking calls, as well as bull and bear spreads, seek to speculate on the asset price moving in a given direction.
 - But what if we think the asset price will be very volatile but we’re not sure about which direction it will go?
 - Also, what if we think the asset price will be stable?
 
@@ -509,4 +508,3 @@ theta) hedged. They’re best described with examples.
 The above strategies are all just speculating on the asset price, as are:
 
 ![alt text](assets\IMG116.PNG)
-
