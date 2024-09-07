@@ -477,7 +477,7 @@ We now want to investigate and quantify how each of the input variables $K$, $S$
 > - exposed to changes in interest rates, changes in time, market volatility perceptions
 >   - If we can quantify the impact, can create hedging strategies to insulate variable you don't want to be exposed to
 
-The Black Scholes mode
+The Black Scholes model
 
 $$C = Se^{-qT}\mathcal{N} (d_{1}) − Ke^{−rT}\mathcal{N} (d_{2})$$
 
