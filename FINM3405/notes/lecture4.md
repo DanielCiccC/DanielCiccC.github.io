@@ -5,10 +5,10 @@
 
 ## Introduction to options
 Recall that there is two types of plain vanilla European options:
-- Call option: Gives the holder the right but not the obligation to buy the underlying asset for the strike price K on the expiry date T.
-- Put option: Gives the holder the right but not the obligation to sell the underlying asset for the strike price K on the expiry date T.
+- **Call option**: Gives the holder the right but not the obligation to buy the underlying asset for the strike price $K$ on the expiry date $T$.
+- **Put option**: Gives the holder the right but not the obligation to sell the underlying asset for the strike price $K$ on the expiry date $T$.
 
-Also recall that an *American* option gives the holder these rights *at any point in time up to and including the expiry date* T.
+Also recall that an *American* option gives the holder these rights *at any point in time up to and including the expiry date* $T$.
 
 > - also called strike price, or exercise price, or $k$
 > - option premium or value, or price.
@@ -34,7 +34,7 @@ The option writer is “at the mercy of” the buyer.
   - Again, we write $C = C_{0}$ and $P = P_{0}$.
 
 Asymmetric rights: The holder (long position) has payoffs at expiry of
-- call holder payoff = $\max {0, S_{T} − K},$
+- call holder payoff = $\max {0, S_{T} − K}$
 - put holder payoff = $\max {0, K − S_{T}}$
 
 and the writer’s (short position) payoffs are the negative of these:
