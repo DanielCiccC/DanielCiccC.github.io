@@ -61,6 +61,7 @@ We now give a brief description of the above basic classes of derivatives:
 ## Futures and forwards
 
 ``Defn``
+
 Futures and forwards are contracts obligating two parties to trade
 an agreed quantity of the underlying asset for an agreed contract
 price K on an agreed future date T (the maturity date).
@@ -74,7 +75,6 @@ position. The party agreeing to *sell* the underlying is said to be **short**.
 
 > - futures, trading on exchanges
 > - forward contract, negotiated directly between OTC markets
-
 
 At maturity T, the long party buys the underlying asset for $K$. If $S_{T} > K$ at maturity, then the long party has benefited by the amount $S_{T} − K$.
 
@@ -129,7 +129,6 @@ At expiry $T$, the put option holder has the right but not the obligation to sel
 - Hence, the European **put holder’s payoff** at expiry is put holder payoff = max ${0, K − S_{T} }$.
 
 The put writer’s payoff is the negative of this.
-
 
 ## Swaps
 

@@ -52,7 +52,7 @@ Our position is going to be:
 **C) One could possibly use the ASX SPI200 index or ASX mini SPI 200 index futures, or even LEPOS over the individual ETF if one exists**
 
 ## Question 2
-**What are the diff erences between OTC markets and trading venues? What is a trading venue? What is a multilateral trading facility (MTF) and what are some examples? What is an alternative trading system (ATS) and what are some examples? How do they compare to traditional exchanges? What is a central counterparty clearing house (CCP) and what are some examples?**
+**What are the differences between OTC markets and trading venues? What is a trading venue? What is a multilateral trading facility (MTF) and what are some examples? What is an alternative trading system (ATS) and what are some examples? How do they compare to traditional exchanges? What is a central counterparty clearing house (CCP) and what are some examples?**
 
 OTC markets (Have a read in textbook or solutions) (Not very important, will touch on more during sem). 
 

@@ -1,4 +1,4 @@
-# lecture 3
+# Lecture 3
 ### Readings: Chapters 3 and 5 of Hull.
 Last week we saw that at the time of writing, the S&P 500 spot price was 5,633.91, but the CME Group E-Mini futures September contract price was 5,682.5 and the December contract price was 5,748.
 

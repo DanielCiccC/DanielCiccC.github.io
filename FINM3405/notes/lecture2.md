@@ -35,10 +35,9 @@ long payoff = $S_{T} − K$ and short payoff = $K − S_{T}$ .
 
 ![alt text](assets\IMG118.PNG)
 
-> Counterparty risk is a big thing
-> - hoping that the losing party is going to pay
-
 ![alt text](assets\IMG119.PNG)
+
+---
 
 ### Futures and Forwards
 
@@ -95,9 +94,6 @@ Note that it’s very important to be clear about exactly what $K_{t}$ is.
 
 The futures prices quoted on exchanges, or the forward price negotiated between parties OTC, is the contract price $K_{t}$.
 
-> What is the future price you are trading?
-> - the contract price $K$
-
 $K_{t}$ varies over time and is the price you trade futures for. Suppose you:
 - Go long $h$ contracts at time $t = 0$ for $K$.
 - Close out your position at time $t > 0$ by shorting $h$ contracts for $K_{t}$.
@@ -115,10 +111,10 @@ Futures trading involves entering into and out of futures contracts over time at
 
 ### Margin mechanism
 The futures margin mechanism can be described as follows:
-- You post an initial margin into your margin account, which is a percent of the contract price K (per contract).
+- You post an initial margin into your margin account, which is a percent of the contract price $K$ (per contract).
 - Your position is marked to market on a daily basis, with daily gains (losses) credited to (debited from) your margin account.
 - There is a maintenance margin, usually less than the initial margin.
-- If your margin account falls below the maintenance margin, you get a margin call to top your account back up to the initial margin.
+- If your margin account falls below the maintenance margin, you get a margin call to top your account back up to the **initial margin**.
 - If you don’t pay it, the exchange closes out your position and your broker will likely “unfriend” you...
 - When closing out your position before maturity, your position is immediately marked-to-market using your closing-out price.
 
@@ -128,7 +124,10 @@ The futures margin mechanism can be described as follows:
 >   - daily basis, marked to market at COB
 >   - earned a profit, get put into a futures account
 
+--- 
 ![alt text](assets\IMG16.PNG)
+---
+
 
 **Remark**
 - The above process is often called daily settlement.
@@ -140,34 +139,36 @@ The futures margin mechanism can be described as follows:
 
 > - only if large moves in the market
 
+--- 
 ![alt text](assets\IMG17.PNG)
 
 > - they won't do anything unless there is money in the margin account
 > - far less counterparty risk
-
+--- 
 
 ### Leverage Effect
 
 Leverage effect: Your profit/loss as a percent of the initial margin.
 - The danger with futures is you post only the initial margin upfront:
-- Long position: You don’t post the full amount K upfront.
+- Long position: You don’t post the full amount $K$ upfront.
 - Short position: You don’t need to own the underlying asset.
 
 ![alt text](assets\IMG18.PNG)
-
 
 > Don't actually have to post the contract:
 > - only post the initial margin
 > - have a massive exposure
 
+---
 ![alt text](assets\IMG19.PNG)
+---
 
 ### Contract value
 Another important concept is the value of a futures/forward position at a
-given point in time t that was entered into at time $t = 0$. Suppose you:
+given point in time $t$ that was entered into at time $t = 0$. Suppose you:
 
-- Go long h contracts at time $t = 0$ for K.
-- Close your position at time t by shorting h contracts for $K_{t}$.
+- Go long $h$ contracts at time $t = 0$ for $K$.
+- Close your position at time $t$ by shorting $h$ contracts for $K_{t}$.
 
 The cashflow $h(K_{t} − K)m$ locked in at the delivery date is risk free. With
 $r$ the risk-free rate, the value at time t of a *long* position is
@@ -176,6 +177,9 @@ $$V^{long}_{t} = e^{-r(T-t)}\cdot h(K_{t}-K)\cdot m$$
 
 The value of a short position is thus 
 $$V^{short}_{t} = e^{-r(T-t)}\cdot h(K- K_{t})\cdot m$$
+
+> ASK TUTOR, WHAT DOES THIS MEAN?
+> - why do you need beginning e term?
 
 > - priced so that they initially have 0 value
 >   - no initial exchange of cash flows
@@ -193,15 +197,14 @@ We now cover pricing, speculating and “perfect” hedging with futures contrac
 
 > - main classes of futures and forwards
 
-### Commodity futures
-Commodity futures are contracts to trade an agreed quantity $m$ (and grade/quality) of a commodity for the contract or forward price K at the maturity or delivery date T.
-
+---
+## Commodity futures
+Commodity futures are contracts to trade an agreed quantity $m$ (and grade/quality) of a commodity for the contract or forward price $K$ at the maturity or delivery date $T$.
 
 Futures are written on all kinds of commodities:
 - Metals: Gold, silver, copper, aluminium, platinum, nickel, tin, etc.
 - Energy and environment: Gas, oil, coal, electricity, carbon, etc.
-- Agriculture and food: Beef, pork, milk, wheat, rice, corn, soy, sugar,
-cocoa, coff ee, orange juice, wood, fertiliser, etc.
+- Agriculture and food: Beef, pork, milk, wheat, rice, corn, soy, sugar, cocoa, coffee, orange juice, wood, fertiliser, etc.
 
 Many commodity futures are physically settled (but of course can be
 closed out prior to maturity). Some trading volume statistics:
@@ -269,15 +272,7 @@ Individual share and ETF futures are typically physically settled but share inde
 
 ### Equity futures speculating
 
-The above example shows what happens if you shorted h = 100
-December E-mini S&P500 contracts and the S&P 500 did fall, in
-line with your expectations. Your profi t is $ 6,205,000. But:
-- If you were long, hoping for the index to keep going up like it
-has been, you would have lost this amount. Leverage:
-- The initial margin is ≈ 5% so ≈ $1, 437, 000.
-- The loss wrt a long position’s total exposure is ≈ 22%, with
-the extra 2% over the index fall due to the basis.
-- Wiped out your initial margin 3 times over if you were long.
+![alt text](assets\IMG165.PNG)
 
 ### FX futures
 Foreign exchange (FX) futures are contracts to exchange an agreed quantity of $m$ units in one currency $A$ for another currency $B$ for the contract price (forward exchange rate) $K_{A:B}$ at maturity T.

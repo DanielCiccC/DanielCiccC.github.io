@@ -1,7 +1,6 @@
 # Lecture 5
 
-The Black-Scholes European option pricing model is a mathematical
-equation for pricing plain vanilla European call and put options.
+The Black-Scholes European option pricing model is a mathematical equation for pricing plain vanilla European call and put options.
 
 > In general the “Black-Scholes model” is a mathematical framework in which we derive mathematical models for pricing derivatives.
 
@@ -220,7 +219,7 @@ P=K*np.exp(-r*T)*norm.cdf(-d2)-S*np.exp(-q*T)*norm.cdf(-d1)
 ```
 This code gives European call and put prices
 
-```
+```python
 In [1]: C
 Out [1]: 152.87
 In [2]: P
@@ -264,7 +263,7 @@ Where:
 
 $$d_{1} = \frac{\log \frac{S_{f:d}}{K_{f:d}} + (r - q + \frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}$$
 
-And 
+and 
 
 $$d_{2} = d_{1} - \sigma \sqrt{T}$$
 $$d_{2} = \frac{\log \frac{S_{f:d}}{K_{f:d}} + (r - q - \frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}$$
@@ -273,6 +272,7 @@ This is sometimes called the **Garman-Kohlhagen (GK)** equations, who
 suggested in their paper Foreign Currency Option Values the idea of
 viewing a currency option as an option on a stock paying a dividend $r_{f}$.
 
+--- 
 ### Example
 We use Python to download exchange rates and price a 3-month
 at-the-money EUR:USD currency option (EUR = foreign currency).
@@ -312,12 +312,13 @@ P = -S*np.exp(-rf*T)*norm.cdf(-d1) + K*np.exp(-rd*T)*norm.cdf(-d2)
 
 This code gives $σ = 0.11245$ and call and put option values
 
-```
+```python
 In [1]: C
 Out [1]: 0.0266
 In [2]: P
 Out [2]: 0.0225
 ```
+---
 
 ## Risk-neutral pricing and geometric Brownian motion
 The ideas of risk-neutral pricing and geometric Brownian motion are central to all of quantitative finance and derivative security pricing.
@@ -328,9 +329,7 @@ The ideas of risk-neutral pricing and geometric Brownian motion are central to a
 >   - Present some exotic options, priced with Monte Carlo techniques
 
 
-It’s important to note that the Black-Scholes model is derived under a
-large list of assumptions. Some of these include what might be called the
-“usual assumptions” in financial theory and modelling:
+It’s important to note that the Black-Scholes model is derived under a large list of assumptions. Some of these include what might be called the “usual assumptions” in financial theory and modelling:
 - Constant risk-free rate r and volatility σ over life of option.
 - No restrictions on borrowing and lending.
 - Borrowing and lending rates are equal.
@@ -345,12 +344,9 @@ large list of assumptions. Some of these include what might be called the
 >   - Assumptions around people's behaviour
 >   - Borrowing and lending rates equal, etc.
 
-We’re not so much interested in them as we are in the assumption on the
-stochastic or random process followed by the underlying asset.
-- This assumption basically characterises the Black-Scholes framework
-and tells us the correct interpretation of the volatility parameter σ.
-In the risk-neutral pricing approach, we can prove that the underlying
-asset follows **geometric Brownian motion (GBM)**
+We’re not so much interested in them as we are in the assumption on the stochastic or random process followed by the underlying asset.
+- This assumption basically characterises the Black-Scholes framework and tells us the correct interpretation of the volatility parameter σ.
+- In the risk-neutral pricing approach, we can prove that the underlying asset follows **geometric Brownian motion (GBM)**
 
 $$S_{t} = Se^{(r-\frac{1}{2} \sigma ^{2})t + \sigma \sqrt{t} Z} \: \: \text{for} \: \: 0 \le t \le T$$
 
@@ -377,8 +373,6 @@ are normally distributed with $\mathbb{E}[r_{t}]=\left( r - \frac{1}{2} \sigma ^
 ### Geometric Brownian Motion
 
 In the risk-neutral approach, the underlying asset follows geometric Brownian motion as presented above. We can simulate it as follows:
-
-
 
 > - Monte carlo approach simulates paths under geometric Brownian motion
 >   - Takes the actual payoff of the derivative security on the final date of European options
@@ -419,7 +413,7 @@ plt.title ("N=10 paths of geometric Brownian motion ") # plot
 
 But what is meant by the “risk-neutral” pricing approach? First note:
 
-Law of finance : The value of an asset is the present value of its
+Law of finance: The value of an asset is the present value of its
 expected futures cashflows or payoff.
 
 We can use a lot of complex maths to show that the value of European
@@ -479,13 +473,13 @@ We now want to investigate and quantify how each of the input variables $K$, $S$
 
 The Black Scholes model
 
-$$C = Se^{-qT}\mathcal{N} (d_{1}) − Ke^{−rT}\mathcal{N} (d_{2})$$
+$$C = \mathcal{N} (d_{1}) − Ke^{−rT}\mathcal{N} (d_{2})$$
 
-$$P =  Ke^{−rT}\mathcal{N} (-d_{2}) - S e^{-qT}\mathcal{N} (-d_{1})$$
+$$P =  Ke^{−rT}\mathcal{N} (-d_{2}) - S\mathcal{N} (-d_{1})$$
 
-Where:
+(Ignoring dividends $q$ for now) where:
 
-$$d_{1} = \frac{\log \frac{S}{K} + (r - q + \frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}$$
+$$d_{1} = \frac{\log \frac{S}{K} + (r + \frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}$$
 $$d_{2} = d_{1} - \sigma \sqrt{T}$$
 
 depends on the variables $S$, $K$, $r$, $T$ and $σ$.
@@ -507,11 +501,13 @@ $S$, $r$, $T$ and $σ$, and we give these sensitivities special Greek names:
 
 We cover each of these one-by-one.
 
+---
 **Remark**: We will assume no dividends q since the equations are neater, until right at the end where we mention the impact of dividends.
+---
 
 ### Delta ∆ and gamma Γ
 
-We know that as S increases, calls premiums rise and put premiums fall.
+We know that as $S$ increases, calls premiums rise and put premiums fall.
 
 ![alt text](assets\IMG69.PNG)
 
@@ -529,9 +525,10 @@ $$ 0 < ∆_{C} < 1 \: \: \text{and} \: \: -1 < ∆_{P} < 0$$
 > - CDF of normal variable
 >   - As the price of the underlying asset goes up, put premium goes down
 
+---
 **Remark**
-
 ∆ is the partial derivative of the premium with respect to S
+---
 
 But think of ∆ as:
 - The change in the premium due to a change in S.
@@ -546,7 +543,9 @@ where $dC$ and $dP$ are a change in the premium and $dS$ a change in $S$.
 
 $$C_{new} \approx C + dC \: \: \text{and} \: \: P_{new} \approx P+dP $$
 
+---
 **Remark**: These approximations are used later in delta hedging.
+---
 
 > - Will trade a certain quantity of the underlying asset to make their portfolio delta neutral, so that any change in the underlying asset doesn't impact on their actual value in their portfolio
 > - Market makers make money by quoting large spreads
@@ -557,7 +556,6 @@ $$C_{new} \approx C + dC \: \: \text{and} \: \: P_{new} \approx P+dP $$
 ![alt text](assets\IMG70.PNG)
 ---
 > - goes up from 
-
 
 From above, the approximation $dC \approx \Delta _{c} dS$ is not perfect, but:
 - We can make it more accurate by also using the gamma Γ given by
@@ -570,7 +568,9 @@ $$f(x) = \frac{e^{-x^{2} / 2}}{\sqrt{2 \pi}}$$
 
 the PDF of a standard normal random variable
 
+---
 **Remark**: Γ is the 2nd partial derivative of the premium with respect to S.
+---
 
 > - f notation, PDF of the standard normal variable
 
@@ -581,25 +581,13 @@ $$dC \approx \Delta _{c} dS + \frac{1}{2}\Gamma dS^{2} \: \: and \: \: dP \appro
 ---
 ![alt text](assets\IMG71.PNG)
 
+![alt text](assets\IMG166.PNG)
+
 > - Calculate the gamma of the call option as before
 > - Include the correction term
 >   - delta - gamma strategy
 
-
-```python 
-1 import numpy as np
-2 from scipy . stats import norm
-3 S = 50; K = 50; r = 0.05; T = 1/2; sigma = 0.25
-4 d1 = (np.log(S/K) + (r + 0.5* sigma **2)*T)/( sigma *np.sqrt(T))
-5 d2 = d1 - sigma *np.sqrt(T)
-6 C = S*norm.cdf(d1) - K*np.exp(-r*T)*norm.cdf(d2)
-7 deltaC = norm.cdf(d1); deltaP = deltaC - 1
-8 gamma = norm.pdf(d1)/(S* sigma *np.sqrt(T)) # norm.pdf () is f()
-9 dS = 2
-10 dC = deltaC *dS + 0.5* gamma *dS **2
-11 dP = deltaP *dS + 0.5* gamma *dS **2
-12 Cnew = C + dC; Pnew = P + dP
-```
+---
 
 ### Rho $\rho$
 

@@ -5,8 +5,8 @@
 
 ## Introduction to options
 Recall that there is two types of plain vanilla European options:
-- **Call option**: Gives the holder the right but not the obligation to buy the underlying asset for the strike price $K$ on the expiry date $T$.
-- **Put option**: Gives the holder the right but not the obligation to sell the underlying asset for the strike price $K$ on the expiry date $T$.
+- **Call option**: Gives the holder the right but not the obligation to **buy** the underlying asset for the strike price $K$ on the expiry date $T$.
+- **Put option**: Gives the holder the right but not the obligation to **sell** the underlying asset for the strike price $K$ on the expiry date $T$.
 
 Also recall that an *American* option gives the holder these rights *at any point in time up to and including the expiry date* $T$.
 
@@ -34,12 +34,12 @@ The option writer is “at the mercy of” the buyer.
   - Again, we write $C = C_{0}$ and $P = P_{0}$.
 
 Asymmetric rights: The holder (long position) has payoffs at expiry of
-- call holder payoff = $\max {0, S_{T} − K}$
-- put holder payoff = $\max {0, K − S_{T}}$
+- call holder payoff = $\max \{ 0, S_{T} − K \}$
+- put holder payoff = $\max \{ 0, K − S_{T} \}$
 
 and the writer’s (short position) payoffs are the negative of these:
-- call writer payoff= $− \max {0, S_{T} − K}$,
-- put writer payoff= $− \max {0, K − S_{T}}$.
+- call writer payoff= $− \max \{ 0, S_{T} − K \}$,
+- put writer payoff= $− \max \{ 0, K − S_{T} \}$.
 
 > thinking about payoffs only
 > - Beauty of options for holders is never non-negative
@@ -47,23 +47,26 @@ and the writer’s (short position) payoffs are the negative of these:
 
 ## Option Payoffs and profits
 
-### Call options
-![alt text](assets\IMG48.PNG)
-
-### Put options
-
-![alt text](assets\IMG49.PNG)
+ Call options |  Put options
+ | --- | ---
+![alt text](assets\IMG48.PNG) | ![alt text](assets\IMG49.PNG)
 
 > Options intrinsic value
 
-At any time t, an option’s intrinsic or exercise value (IV) is
-call $IV_{t} = max{0, S_{t} − K}$ and put $IV_{t} = max{0, K − S_{t}}$
-(payoff if the option expired at time t). At time t an option is:
+At any time t, an option’s **intrinsic** or exercise value (IV) is
+
+call $IV_{t} = \max \{ 0, S_{t} − K \}$ 
+
+and put $IV_{t} = \max \{ 0, K − S_{t} \}$
+
+(payoff if the option expired at time t). 
+
+At time t an option is:
 - In the money if it has positive intrinsic value:
   - $K < S_{t}$ for a call option.
   - $S_{t} < K$ for a put option.
 - At the money if $S_{t} = K$ (intrinsic value is 0).
-- Out of the money if its intrinsic value is 0 and $S_{t} ̸= K$:
+- Out of the money if its intrinsic value is 0 and $S_{t} \ne K$
   - $S_{t} < K$ for a call option.
   - $K < S_{t}$ for a put option.
 
@@ -85,12 +88,12 @@ The above motivates using the idea of no arbitrage to justify the taker having t
 > Premium takes up a 
 
 To calculate trading profits, the above payoff s need to be modified to incorporate the premium paid/received. The option taker’s profits are:
-- call holder profit = $max {0, S T − K} − C$,
-- put holder profit = $max {0, K − S T } − P$
+- call holder profit = $\max \{ 0, S_T − K \} − C$,
+- put holder profit = $\max \{ 0, K − S_T \} − P$
 
 and the writer’s (short position) profits are the negative of these:
-- call writer profit = $C − max{0, S T − K}$,
-- put writer profit = $P − max{0, K − S T }$.
+- call writer profit = $C − \max \{ 0, S_T − K \}$,
+- put writer profit = $P − \max \{ 0, K − S_T \}$.
 
 > - profits, profit diagram
 > - same as payoff diagram and including the premium
@@ -98,12 +101,11 @@ and the writer’s (short position) profits are the negative of these:
 ![alt text](assets\IMG50.PNG)
 
 
-So the premium gives the writer a chance of a profit, but exposes them
-to the risk of significant loss, unlimited in the case of call options:
+So the premium gives the writer a chance of a profit, but exposes them to the risk of significant loss, unlimited in the case of call options:
 
 - Calls and puts:
-  - Holder: Loss is limited to the premium paid C or P.
-  - Writer: Profit is limited to the premium received C or P.
+  - Holder: Loss is limited to the premium paid $C$ or $P$.
+  - Writer: Profit is limited to the premium received $C$ or $P$.
 - Call options:
   - Holder: Profit is unlimited and equal to $S_{T} − K − C$ for $S_{T} > K$.
   - Writer: Loss is unlimited and equal to $S_{T} − K − C$ for $S_{T} > K$.
@@ -118,12 +120,12 @@ Fundamental differences between futures/forwards and options:
 - Obligations:
   - Futures/forwards: Both parties must transact.
   - Options: The taker/holder gets to choose.
-- Payoff s:
+- Payoffs:
   - Futures/forwards: Symmetric.
   - Options: Asymmetric (favour the taker/holder).
 - The “price” or value:
   - Futures/forwards: The actual contract price $K_{t}$.
-  - Options: The premium $C t or P_{t}$ (the strike price K is fixed).
+  - Options: The premium $C_t or P_{t}$ (the strike price K is fixed).
 - Upfront cashflow:
   - Futures/forwards: $K_{t}$ is set so they have 0 upfront value/cashflow.
   - Options: The taker pays premium $C_{t}$ or $P_{t}$ upfront to the writer.
@@ -227,7 +229,7 @@ That’s enough for looking at the major exchange traded options contracts world
 more complex and exotic options being traded. We cover some of these exotic options later in the course.
 - We now turn to option pricing bounds and put-call parity.
 
-### Put-call Parity
+## Put-call Parity
 
 Developing mathematical models for pricing options (calculating the fair value of the option premium), such as the Black-Scholes option pricing model, is a major part of the theory and practice of options.
 - We cover the basics in later lecture notes, starting next week with the celebrated Black-Scholes option pricing model.
@@ -251,7 +253,6 @@ This portfolio’s current price is C − P and its payoff at expiry is
 $$\text{portfolio payoff} = \underbrace{\max\{0, S_T - K\}}_{\text{long call}} - \underbrace{\max\{0, K - S_T\}}_{\text{short put}}$$
 $$= S_T - K$$
 
-
 This is easy to show:
 - If $S_{T} > K$ then the payoff is $S_{T} − K − 0 = S_{T} − K$.
 - If $S_{T} < K$ then the payoff is $0 − (K − S_{T} ) = S_{T} − K$.
@@ -260,15 +261,15 @@ This is easy to show:
 But $S_{T} −K$ is precisely the payoff of a long futures contract position over the underlying with contract price K and maturity date $T$.
 
 So the value $C − P$ of this portfolio long 1 call and short 1 put must equal the value of a long futures position with price $K$.
-- Since their payoff s are equal, or else there is an arbitrage opportunity.
 
+- Since their payoff s are equal, or else there is an arbitrage opportunity.
 
 - Let $X=Se^{rT}$ be the theoretically correct futures contract price.
 - If we’re long at K we could go short to close out the position at X.
 - The value of this long futures contract position is
 
 
-$$v^{long}=e^{-rT}(X-K)$$
+$$V^{\text{long}}=e^{-rT}(X-K)$$
 
 
 So put-call parity is $C − P = e^{−rT}(X − K)$, which we rearrange to
@@ -297,8 +298,7 @@ Note also that we tend to use continuous compounding for options.
 We now present pricing bounds that option prices must adhere to.
 - If they don’t satisfy these bounds then arbitrage opportunities exist.
 
-First note that American options are worth at least as much as European
-options over the same underlying and with the same strike and expiry:
+First note that American options are worth at least as much as European options over the same underlying asset and with the same strike and expiry:
 
 $$0 ≤ C_{Eu} ≤ C_{Am}$$
 and 
@@ -321,7 +321,7 @@ $$\max{0, K − S} ≤ P_{Am}$$
 > - At any point in time you can exercise and realise that in an American Options
 >   - At least as much as the actual payoff
 
-Also, American calls can never be worth more than the underlying, and
+Also, American calls can never be worth more than the underlying spot price, and
 American puts can never be worth more than the strike:
 
 $$C_{Am} ≤ S$$
@@ -333,18 +333,18 @@ $$P_{Am} ≤ K$$
 Combining the lower and upper bounds from the previous two slides leads
 to the important pricing bounds for American options:
 
-$$ \max (0, S − K) ≤ C^{Am} ≤ S \: \: \text{and} \: \: \max (0, K − S) ≤ P^{Am} ≤ K$$
+$$ \max \{ 0, S − K \} ≤ C^{Am} ≤ S \: \: \text{and} \: \: \max \{ 0, K − S \} ≤ P^{Am} ≤ K$$
 
-**European options**
+## **European options**
 
-Turning to European options, we can tighten an upper bound for puts to
+Turning to *European options*, we can tighten an upper bound for puts to
 
 $$0 \le P^{Eu} \le Ke^{-rT}$$
 
 because a European put can only be exercised at expiry, where it is known with certainty that their maximum payoff at expiry is $K$.
 
 **Remark**
-From this, deep in-the-money European puts can have negative time value (their premium can be less than their intrinsic value).
+From this, deep in-the-money European puts can have *negative time value* (their premium can be less than their intrinsic value).
 - Their maximum payoff is $K$. So if they’re already deep in the money, not much more payoff can be realised at expiry, but the underlying asset could still move unfavourably.
 
 
@@ -431,7 +431,7 @@ have a premium that is strictly larger than the option’s intrinsic value.
 - We define an option’s time value as the difference between the
 option premium and its intrinsic value:
 
-$$time value = premium − intrinsic value$$
+$$\text{time value = premium − intrinsic value}$$
 
 A better way to think of it is that the option’s premium is made up of
 the option’s intrinsic value plus the option’s time value:

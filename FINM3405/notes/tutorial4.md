@@ -16,7 +16,7 @@ The payoff to the taker/holder of an option is non-negative, so this party can p
 - An option is out-of-the-money (OTM)  if the spot price is "not in the holder's favour" meaning $S < K$ for call and $S > K$ for puts
 
 
-### 6. What is the diff erence between writing an option naked vs covered?
+### 6. What is the difference between writing an option naked vs covered?
 
 - Naked means writing them with "Nothing backing them". Contrasting this with covered options:
 
