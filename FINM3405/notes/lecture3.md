@@ -5,7 +5,7 @@ Last week we saw that at the time of writing, the S&P 500 spot price was 5,633.9
 - This week we cover *futures pricing*, which means calculating the theoretically correct contract prices.
 - We also cover *optimal hedging*, since most hedging scenarios in practice are rarely as “neat and clean” as those from last week.
 
-> why is there a discrepancy in the future price vs the spot index price?
+> Why is there a discrepancy in the future price vs the spot index price?
 > - December contract, even greater
 
 ## Contract pricing
@@ -15,18 +15,18 @@ entered into at an earlier time $t = 0$ is
 
 $$V^{long}_{t} = e^{-r(T-t)}\cdot (K_{t}-K)$$
 
-Pricing a futures or forward contract at time $t$ involves using no-arbitrage arguments to calculate the contract price $K_{t}$ that yields 0 value to short and long positions entered into at time $t$.
+Pricing a futures or forward contract at time $t$ involves using no-arbitrage arguments to calculate the contract price $K_{t}$ that yields $0$ value to short and long positions entered into at time $t$.
 
 > - close out initial long position at some time $t$
 > - short position, contracting the close the position at $K_{t}$
 > - maturity date is capital T
 >
-> Value to the short and long party is 0 at time $t$
+> Value to the short and long party is $0$ at time $t$
 
 **Remark:** The time $t$ at which we price contracts is arbitrary so in what follows we simply let $t = 0$ in order to reduce notation, and in which case there is $T$ years to maturity or the delivery date.
 
-> - Initially bought and closed the position, the value of the position would equal 0 (last term in the equation would cancel out)
-> always imagine time is t=0. Now is the current date, T is the delivery/expiry date, 
+> - Initially bought and closed the position, the value of the position would equal $0$ (last term in the equation would cancel out)
+> - Always imagine time is $t=0$. Now is the current date $t$, $T$ is the delivery/expiry date
 
 --- 
 ### General Notation
@@ -40,6 +40,7 @@ Pricing a futures or forward contract at time $t$ involves using no-arbitrage ar
 - $m$ is the number of assets in 1 contract (the multiplier).
 - $h$ is the number of contracts we enter into.
 
+### Cost Of Carry Notation
 In order to present the basic cost-of-carry arbitrage argument for pricing futures and forwards, we use the following additional notation:
 
 - $I$ is the time $T$ capitalised interest paid on a loan used to buy the underlying asset at time $t = 0$.
@@ -47,8 +48,6 @@ In order to present the basic cost-of-carry arbitrage argument for pricing futur
   - Transport, warehouse storage, insurance, maintenance, etc.
 - $D$ is the time $T$ capitalised dividends or other income or benefits received from owning the asset up to time T.
   - Share dividends, foreign interest, convenience/benefit from holding the asset in stock and/or using or consuming it, etc.
----
-
 
 > - wheat, corn, some kind of commodity might need to be insured or stored
 >   - need to spend money maintaining the asset
@@ -57,10 +56,11 @@ In order to present the basic cost-of-carry arbitrage argument for pricing futur
 >     - Put all the intermediate payments to one date.
 >
 > Income
-> - any incomes we might receive for owning the asset
->   - dividends, e.g.
+> - Any incomes we might receive for owning the asset
+>   - Dividends, e.g.
 >   - Might receive multiple payments, compounded forward to the maturity date (that is why it is called capitalised)
 
+---
 
 **Remark:** By “time T capitalised” we mean that any cashflows (loan or coupon payments, storage costs, dividends or other income, etc) received or paid between times $t = 0$ and $T$ are capitalised or compounded forward to time $T$.
 
@@ -103,7 +103,8 @@ is positive to you and negative to the long position.
 > - credit risk - other party won't honor their obligations
 > - call it risk free at this stage
 
-
+---
+### Arbitrage: transactions cont
 Also, if $K < S + J + I − D$ and if you currently own the underlying asset, then you can consider taking the following long position:
 
 Transactions at time $t = 0$:
@@ -128,6 +129,7 @@ $$V^{long} = e^{-rT}\cdot (-k+S+I+J-D) > 0$$
 which represents negative value to the short party who would demand this amount in compensation upfront or they wouldn’t be interested in entering into the contract.
 
 > Have to pay the short party to enter into the contract
+---
 
 ### Cost of Carry
 
@@ -144,9 +146,14 @@ The cost of carry model is usually written with annual borrowing rates $r$, stor
 > - normally written in terms of borrowing rates
 > - normally called spot forward parody
 
-Let $r$ be a simple annual interest rate, $s$ be a simple annual storage rate, and $q$ be a simple annual dividend (or later convenience) yield.
+Let 
+- $r$ be a simple annual interest rate, 
+- $s$ be a simple annual storage rate, and 
+- $q$ be a simple annual dividend (or later convenience) yield.
 
-- Then the cost of carrying the asset is $I + J − D = SrT + SsT − SqT.$
+Then the cost of carrying the asset is 
+$$I + J − D = SrT + SsT − SqT.$$
+
 - The cost of carry relation $K = S + I + J − D$ becomes
 
 $$K = S[1 + (r + s − q)T]$$
@@ -158,7 +165,8 @@ $$K = S(1 + r + s − q)^{T}$$
 or (**Compound Interest**) 
 $$K = Se^{(r+s−q)T}$$
 
-#### What is the relation between spot S and forward K prices?
+
+What is the relation between spot S and forward K prices?
 
 From:
 $$K = Se^{(r+s−q)T}$$
@@ -166,6 +174,7 @@ $$K = Se^{(r+s−q)T}$$
 if the cost of carry $r + s − q$ (in rates) is:
 - Positive, so $r + s − q > 0$ then $K > S$ (forward prices are greater than spot prices) and we say the market is **normal**.
 - Negative, so $r + s − q < 0$ then $K < S$ (forward prices are less than spot prices) and we say the market is **inverted**.
+---
 
 ## Commodity contract pricing
 
@@ -183,14 +192,12 @@ So the cost-of-carry model and spot-forward parity relation is as above.
 >   - Quantified in commodity futures
 > - Cost of carry model
 
+---
 **CME Gold futures contract**
 
 Gold Futures Quotes | Spot Price | interest rates
 | --- | --- | ---
 ![alt text](assets\IMG21.PNG) | ![alt text](assets\IMG22.PNG) | Compare this to say the October futures delivery price of \$2,427.2. <br> <br> ![alt text](assets\IMG23.PNG)
-
-> - standard reference risk-free rate
-> - most of the rates are simple interest rates
 
 ![alt text](assets\IMG136.PNG)
 
@@ -210,6 +217,7 @@ $$K = Se^{(r−q)T}$$
 > - going to use simple interest one because most of the interest rates given are simple
 > - No storage related costs in this case
 
+---
 
 **Example**
 Futures Contract | Dividend Yields, average | Spot Price | 

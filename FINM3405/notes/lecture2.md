@@ -281,7 +281,8 @@ Our *quoting convention* for exchange rates is 1 unit of currency $A$ exchanges 
 
 > - careful what we mean by an exchange rate
 
-### Remark - FX futures
+**Remark - FX futures**
+
 One way to think about these FX futures quoting conventions is that the foreign currency is being viewed as the “underlying asset”. Thus the futures price $K_{USD:INR}$ is telling us how much Indian Rupee it “costs” to buy 1 unit of the underlying asset.
 
 ---
@@ -290,13 +291,11 @@ One way to think about these FX futures quoting conventions is that the foreign 
 ![alt text](assets\IMG126.PNG)
 
 > - In the national stock exchange in India
+---
 
-### FX futures speculating Example
-In the above example you took a short futures position, which is what you’d do if you believed the USD will depreciate against the Rupee. Suppose that it did and to $S  T,USD:INR = 80. Your profi t is
+### FX futures speculating 
 
-h(K USD:INR − S T,USD:INR )m = 3, 792, 500 INR.
-
-If you were long then this would be a loss.
+![alt text](assets\IMG167.PNG)
 
 ## Interest rate contracts
 
@@ -304,7 +303,7 @@ We now present two simple interest rate contracts:
 - Forward rate agreements (FRA), which are OTC interest rate forward contracts over some global reference rate.
 - 90 Day Bank Accepted Bill (BAB) Futures, which are an Australian ASX traded futures equivalent of a FRA over the BBSW rate.
 
-> yield curve, interest rate quoted over the next six months
+> Yield curve, interest rate quoted over the next six months
 > - work out what the implied forward rate over a period
 >   - lock in interest rate over that period
 >   - must have the same final price
@@ -314,19 +313,19 @@ We now present two simple interest rate contracts:
 
 A forward rate agreement (FRA) is a OTC traded forward contract over a reference interest rate such as SOFR or EURIBOR.
 
-In an FRA the parties agree to fix an interest rate $k$ over an agreed notional value F for an agreed time period $T$ starting on the FRA’s agreed maturity date $T_{1}$ and ending on $T_{2} = T_{1} + T$.
+In an FRA the parties agree to fix an interest rate $k$ over an agreed notional value $F$ for an agreed time period $T$ starting on the FRA’s agreed maturity date $T_{1}$ and ending on $T_{2} = T_{1} + T$.
 
-FRA fix a simple interest rate $k$ to begin at maturity $T_{1}$ for borrowing or lending over the time period $[T_{1}, T_{2}]$ of length T, but are cash settled, so no actual borrowing or lending takes place at time $T_{1}$ .
+FRA fix a simple interest rate $k$ to begin at maturity $T_{1}$ for borrowing or lending over the time period $[T_{1}, T_{2}]$ of length T, but are cash settled, so no actual borrowing or lending takes place at time $T_{1}$.
 - A FRA’s payoff at maturity $T_{1}$ depends on the difference $k − r$, where $r$ is the spot reference rate at time $T_{1}$ for the period $[T_{1}, T_{2}]$.
 
-> - fix an interest rate, a loan or investment over a given period
+> - Fix an interest rate, a loan or investment over a given period
 >   - loan or investment, starts on the maturity
 > Get to the maturity date at the enf of the year
->  - go long, hypothetical investment over that period
+>  - Go long, hypothetical investment over that period
 >    - organising at maturity date, the interest rate you would receive
 >
 > Payoff
-> - interest rate you agree to, versus the spot reference rate (the spot rate at a future time t)
+> - Interest rate you agree to, versus the spot reference rate (the spot rate at a future time t)
 
 
 Pricing an FRA involves calculating the agreed upon rate $k$, which we call the fixed rate, and we cover this next week. Using this terminology:
@@ -380,6 +379,8 @@ To speculate with FRA, if you expect interest rates to be:
   - Enter into a FRA as the fixed rate receiver.
 - Higher than the yield curve is forecasting:
   - Enter into a FRA as the fixed rate payer
+--- 
+
 
 ## BAB futures
 The ASX’s 90 Day Bank Accepted Bill (BAB) Futures contract is effectively a standardised, ASX traded “FRA” but over the Bank Bill Swap (BBSW) rate, which is the main reference rate in Australia. Also:
@@ -403,7 +404,7 @@ The payoff $P_r − P_k$ at maturity $T_1$ to the fixed rate receiver is:
 
 $$F \left(  \frac{1}{1+r_\frac{90}{365}} - \frac{1}{1+k_\frac{90}{365}} \right)$$
 
-The payoff to the fixed rate payer is the negative of this.
+**The payoff to the fixed rate payer is the negative of this**.
 
 **Contract details** | **Trade Price** 
 | --- | ---
