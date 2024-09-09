@@ -39,7 +39,7 @@ There two relationships were mapped as such:
 I know:
   - for every Department, there is exactly one Employee that manages it
 
-How Can I connect both of these relations (tables) into one long table so that I can see the department and its respective Employee?
+How can I connect both of these relations (tables) into one long table so that I can see the department and its respective Employee?
 
 
 ### Equi-joins in SQL - Examples
