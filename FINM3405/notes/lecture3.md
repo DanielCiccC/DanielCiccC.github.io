@@ -305,12 +305,12 @@ where $r$ is the spot rate at maturity over the period $[T_{1}, T_{2}]$ of lengt
 
 This week we want to price an FRA, which involves calculating the theoretically correct fixed rate k.
 
-> - positive for receiver, is the fixed rate k is higher than the spot rate of the market $r$
+> - positive for receiver, is the fixed rate $k$ is higher than the spot rate of the market $r$
 >   - vice versa for a payer, positive payoff is they 'lock in' a lower fixed rate $k$
 
-The key insight is that the fixed rate k is set so that the time t = 0 value of a FRA is 0 to both the fixed rate receiver and payer.
+The key insight is that the fixed rate $k$ is set so that the time $t = 0$ value of a FRA is $0$ to both the fixed rate receiver and payer.
 
-So we want to calculate the time t = 0 values of a FRA to both parties:
+So we want to calculate the time $t = 0$ values of a FRA to both parties:
 - The *fixed rate receiver* of a $T_{1} \times T_{2}$ FRA hypothetically agrees to pay $F$ at time $T_1$ and *receive* $F(1 + kT)$ at time $T_2$.
 - These cashflows are risk free so their present value is
 
@@ -369,14 +369,15 @@ Perfect hedging scenarios are rare in practice:
 ### Example
 --- 
 ![alt text](assets\IMG141.PNG)
+
 ---
 
 ## Basis Risk
-We saw above that the contract price K is usually different to the spot price S of the underlying asset. Our pricing equations, such as
+We saw above that the contract price $K$ is usually different to the spot price S of the underlying asset. Our pricing equations, such as
 
 $$K=Se^{(r+s-q)T}$$
 
-for commodity futures, tell us that the diff erence between $K$ and $S$, which we call the basis, is due to the cost of carry $r + s − q$.
+for commodity futures, tell us that the difference between $K$ and $S$, which we call the basis, is due to the cost of carry $r + s − q$.
 - As the cost of carry changes over time, the basis changes, introducing basis risk: $K$ may not be perfectly correlated with $S$.
 
 **Remark**
@@ -404,11 +405,11 @@ Optimal hedging basically means minimising basis risk. Suppose:
 - We want to sell our holding at time $t$.
   - We want to hedge our exposure to a fall in the asset price.
 - There is a futures contract maturing at time $T$, with $t < T$.
-  - The underlying asset of the futures contract $S$ may not necessarily be the same as the asset A we hold.
+  - The underlying asset of the futures contract $S$ may not necessarily be the same as the asset $A$ we hold.
 - We short $h$ units of the futures contract at time $t = 0$ for $K$.
 - We sell our asset holding and close out the futures position at time $t$.
 
-How many contracts h should we short?
+How many contracts $h$ should we short?
 
 > - minimise basis risk
 > - Hypothetical time t=0
@@ -504,20 +505,18 @@ $$V = AQ \; \; \; \text{and} \;\;\;\; F=Km$$
 
 ---
 ### Example 
-You hold Q = 4, 600 Tesla shares and are worried that Tesla has been very volatile lately and will fall back to its recent lows.
+![alt text](assets\IMG168.PNG)
+![alt text](assets\IMG169.PNG)
+![alt text](assets\IMG170.PNG)
 
-Suppose you’re not aware of any individual share futures on Tesla, so you decide that the “next best thing” is MICRO NYSE FANG+ Index Futures, since the NYSE FANG+ Index contains only 10 stocks and surely they must all be fairly positively correlated.
+![alt text](assets\IMG43.PNG) 
+![alt text](assets\IMG44.PNG)
 
-> - FAANG+ index is fairly correlated with tesla
-
-| - | -
-| --- | ---
-![alt text](assets\IMG43.PNG) | ![alt text](assets\IMG44.PNG)
-
-
+---
 **Example 2**
 
-| - | -
-| --- | ---
-![alt text](assets\IMG45.PNG) | ![alt text](assets\IMG46.PNG)
-![alt text](assets\IMG47.PNG) |
+We now calculate the optimal hedge quantity of a portfolio of shares.
+
+![alt text](assets\IMG45.PNG) 
+ ![alt text](assets\IMG46.PNG)
+![alt text](assets\IMG47.PNG) 
