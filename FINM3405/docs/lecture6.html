@@ -25,6 +25,7 @@
 </header>
 <main>
 <h1 dir="auto" id="lecture-6">Lecture 6</h1>
+<h1 dir="auto" id="delta-hedging-and-delta-gamma-hedging">Delta Hedging and Delta-Gamma Hedging</h1>
 <p dir="auto">Last week we presented the basics of the Black-Scholes model for European options on non-income paying assets, income paying assets, and currencies. We also presented the Greeks, which quantify the relation between option premiums and the Black-Scholes model input parameters.</p>
 <p dir="auto">This week we look at delta hedging, which is a common strategy employed by traders and market makers to manage risk and is the starting point for other “Greek neutral” strategies. We then cover the notion of implied volatility and fi nish with using the concepts of the Greeks, delta hedging and implied vols to present some basic trading strategies.</p>
 <ul dir="auto">
@@ -517,14 +518,14 @@ options on an asset, but with different strikes and possibly expiries.
 <ul dir="auto">
 <li dir="auto">Bull and bear spreads.</li>
 <li dir="auto">Backspreads and ratio spreads.</li>
-<li dir="auto">Butterfl y and condor spreads.</li>
+<li dir="auto">Butterfly and condor spreads.</li>
 <li dir="auto">Calendar spreads.</li>
 </ul>
 </li>
 <li dir="auto">Combinations: Positions in both puts and calls on an asset.
 <ul dir="auto">
 <li dir="auto">Straddles and strangles.</li>
-<li dir="auto">Butterfl y and condor combinations.</li>
+<li dir="auto">Butterfly and condor combinations.</li>
 <li dir="auto">Strips and straps.
 The payoffs of many strategies can be created in different ways, and we
 can create strategies containing both spread and combination positions</li>
@@ -540,7 +541,7 @@ can create strategies containing both spread and combination positions</li>
 <h2 dir="auto" id="directional-strategies">Directional strategies</h2>
 <p dir="auto">Directional strategies seek to speculate on a directional change in the price of the asset, but at a lower upfront cost to the basic strategies of taking calls and puts, while still maintaining limited downside risk.</p>
 <ul dir="auto">
-<li dir="auto">However, in lowering the upfront cost relative to taking calls and puts, these strategies sacrifi ce some upside potential, as we will see.</li>
+<li dir="auto">However, in lowering the upfront cost relative to taking calls and puts, these strategies sacrifice some upside potential, as we will see.</li>
 </ul>
 <blockquote dir="auto">
 <ul dir="auto">
@@ -573,8 +574,7 @@ Bull spreads can also be constructed from puts (tutorial question).</p>
 <li dir="auto">cost us less, start to make a profit sooner</li>
 </ul>
 </blockquote>
-<p dir="auto">The basic strategies of taking calls, as well as bull and bear spreads, seek
-to speculate on the asset price moving in a given direction.</p>
+<p dir="auto">The basic strategies of taking calls, as well as bull and bear spreads, seek to speculate on the asset price moving in a given direction.</p>
 <ul dir="auto">
 <li dir="auto">But what if we think the asset price will be very volatile but we’re not sure about which direction it will go?</li>
 <li dir="auto">Also, what if we think the asset price will be stable?</li>

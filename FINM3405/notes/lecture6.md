@@ -1,4 +1,5 @@
 # Lecture 6
+# Delta Hedging and Delta-Gamma Hedging
 
 Last week we presented the basics of the Black-Scholes model for European options on non-income paying assets, income paying assets, and currencies. We also presented the Greeks, which quantify the relation between option premiums and the Black-Scholes model input parameters. 
 
