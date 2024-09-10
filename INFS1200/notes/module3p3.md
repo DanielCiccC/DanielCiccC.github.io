@@ -37,7 +37,7 @@ There two relationships were mapped as such:
   - DEPARTMENT mgrSSN references EMPLOYEE.SSN
 
 I know:
-  - for every Department, there is exactly one Employee that manages it
+  - For every Department, there is exactly one Employee that manages it
 
 How can I connect both of these relations (tables) into one long table so that I can see the department and its respective Employee?
 
@@ -56,14 +56,14 @@ FROM  Department AS D
 JOIN Employee AS E ON  D.mgrSSN = E.ssn
 ```
 
-
+---
 ### Theta join 
 
 - We join two tables together my satisfying some logical condition
 - The most general type of join is called theta-join
 
 $$ \theta \in \{ =, \ne,  <, >, \ge, \le \}$$
-
+---
 
 ### INNER and OUTER joins
 
@@ -90,9 +90,9 @@ $$ \theta \in \{ =, \ne,  <, >, \ge, \le \}$$
 > SELECT * FROM t1
 > RIGHT JOIN t2 ON t1.id = t2.id
 > ```
+---
 
-
-### Set operations
+## Set operations
 - Union
 - Intersection
 - Difference/Minus

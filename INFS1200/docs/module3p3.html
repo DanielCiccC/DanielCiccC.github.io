@@ -62,9 +62,9 @@ Two options:</li>
 </ul>
 <p dir="auto">I know:</p>
 <ul dir="auto">
-<li dir="auto">for every Department, there is exactly one Employee that manages it</li>
+<li dir="auto">For every Department, there is exactly one Employee that manages it</li>
 </ul>
-<p dir="auto">How Can I connect both of these relations (tables) into one long table so that I can see the department and its respective Employee?</p>
+<p dir="auto">How can I connect both of these relations (tables) into one long table so that I can see the department and its respective Employee?</p>
 <h3 dir="auto" id="equi-joins-in-sql---examples">Equi-joins in SQL - Examples</h3>
 <pre><code class="code-line language-SQL" dir="auto"><span class="hljs-comment">-- Equi-join using WHERE</span>
 <span class="hljs-keyword">SELECT</span> E.name, D.dName
@@ -76,6 +76,7 @@ Two options:</li>
 <span class="hljs-keyword">FROM</span>  Department <span class="hljs-keyword">AS</span> D
 <span class="hljs-keyword">JOIN</span> Employee <span class="hljs-keyword">AS</span> E <span class="hljs-keyword">ON</span>  D.mgrSSN <span class="hljs-operator">=</span> E.ssn
 </code></pre>
+<hr dir="auto">
 <h3 dir="auto" id="theta-join">Theta join</h3>
 <ul dir="auto">
 <li dir="auto">We join two tables together my satisfying some logical condition</li>
@@ -83,6 +84,7 @@ Two options:</li>
 </ul>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>θ</mi><mo>∈</mo><mo stretchy="false">{</mo><mo>=</mo><mo separator="true">,</mo><mo mathvariant="normal">≠</mo><mo separator="true">,</mo><mo>&lt;</mo><mo separator="true">,</mo><mo>&gt;</mo><mo separator="true">,</mo><mo>≥</mo><mo separator="true">,</mo><mo>≤</mo><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex"> \theta \in \{ =, \ne,  &lt;, &gt;, \ge, \le \}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mrel">=</span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">}</span></span></span></span></span></p>
 </math>
+<hr dir="auto">
 <h3 dir="auto" id="inner-and-outer-joins">INNER and OUTER joins</h3>
 <ul dir="auto">
 <li dir="auto"><strong>Inner Join:</strong> A tuple is included in the result relation only if matching tuples exist in both relations. By default, just using the JOIN key word will specify INNER JOIN</li>
@@ -116,7 +118,8 @@ Two options:</li>
 <span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> t2 <span class="hljs-keyword">ON</span> t1.id <span class="hljs-operator">=</span> t2.id
 </code></pre>
 </blockquote>
-<h3 dir="auto" id="set-operations">Set operations</h3>
+<hr dir="auto">
+<h2 dir="auto" id="set-operations">Set operations</h2>
 <ul dir="auto">
 <li dir="auto">Union</li>
 <li dir="auto">Intersection</li>
