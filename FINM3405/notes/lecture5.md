@@ -41,11 +41,12 @@ $$d_{1} = \frac{\log \frac{S}{K} + (r+\frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}
 And 
 
 $$d_{2} = d_{1} - \sigma \sqrt{T}$$
-$$d_{2} = \frac{\log \frac{S}{K} + (r -\frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}$$
+$$= \frac{\log \frac{S}{K} + (r -\frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}$$
 
 Let’s recall the notation and variables in the Black-Scholes model:
 
-### Notion and variables
+---
+### Notation and variables
 
 - The current date is time $t = 0$.
 - $C$ is the current European call option premium.
@@ -54,7 +55,7 @@ Let’s recall the notation and variables in the Black-Scholes model:
 - $r$ is the risk-free rate.
 - $K$ is the exercise or strike price.
 
-
+--- 
 First, $\sigma$ is the volatility of the underlying asset, which we can take as the
 standard deviation of its continuously compounded annual returns.
 - $\sigma$ can be calculated from historical data as follows:
@@ -66,6 +67,7 @@ standard deviation of its continuously compounded annual returns.
 > - Calculate the sample standard deviation
 >
 > Traders don't use historical data, they use market
+---
 
 Second, $\mathcal{N}(x)$ is the CDF evaluated at $x$ of a standard normal random
 variable $X$. It gives the probability that $X$ is less than or equal to $x$:
@@ -80,6 +82,10 @@ Graphically, it’s the area under the standard normal PDF:
 > - Probability standard normal random variable $\le$ x
 > - Area under the curve of standard probability density function
 > - Use computers to calculate it for us
+
+
+---
+### Example in code
 
 **Python**
 ```python
@@ -130,7 +136,7 @@ In [1]: C
 Out [1]: 4.130007599671615
 ```
 
-Use the yfinance Python module to calculate the historical
+Use the ``yfinance`` Python module to calculate the historical
 volatility of the S&P/ASX 200 Index and price some September index
 option contracts, where here we’ll ignore dividends (for now).
 
@@ -164,6 +170,7 @@ This code gives σ = 0.15375 and European call and put prices
 > - options prices potentially be off - using historical volatility and options traders don't do that
 >   - us their own market conventions
 
+---
 
 ## Black-Scholes Model Puts
 
@@ -182,8 +189,9 @@ P1 = C + np.exp(-r*T)*K - S # using put -call parity
 ```
 
 > - Exam situation, formula will be provided
+---
 
-### Incorporating dividends
+## Incorporating dividends
 
 We now incorporate dividends into the Black-Scholes European option pricing equations, in order to more accurately price equity options.
 
@@ -191,7 +199,7 @@ Incorporating a continuously compounded dividend yield $q$ into the basic Black-
 
 $$C = Se^{-qT}\mathcal{N} (d_{1}) − Ke^{−rT}\mathcal{N} (d_{2})$$
 
-$$P =  Ke^{−rT}\mathcal{N} (-d_{2}) - S e^{-qT}\mathcal{N} (-d_{1})$$
+$$P =  Ke^{−rT}\mathcal{N} (-d_{2}) - Se^{-qT}\mathcal{N} (-d_{1})$$
 
 Where:
 
@@ -202,7 +210,11 @@ And
 $$d_{2} = d_{1} - \sigma \sqrt{T}$$
 $$d_{2} = \frac{\log \frac{S}{K} + (r - q - \frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}$$
 
-> - Black Scholes prices of plain vanllia options including dividends
+> - Black Scholes prices of plain vanilla options including dividends
+
+--- 
+### Example
+![alt text](assets\IMG171.PNG)
 
 ```python
 import numpy as np , yfinance as yf
@@ -225,33 +237,26 @@ Out [1]: 152.87
 In [2]: P
 Out [2]: 165.12
 ```
+---
 
 **Remark:**
 
 Some reasons for inaccurate S&P/ASX 200 Index option prices:
-- We’re using historical volatility for σ but in practice options
-traders tend to use the Black-Scholes model with “rules of
-thumb” and their own estimates of σ.
-- Our dividend yield may not be accurate: We assumed a
-continuously compounded yield. It should be a forecast. And
-should we incorporate dividend imputation/franking?
+- We’re using historical volatility for σ but in practice options traders tend to use the Black-Scholes model with “rules of thumb” and their own estimates of σ.
+- Our dividend yield may not be accurate: We assumed a continuously compounded yield. It should be a forecast. And should we incorporate dividend imputation/franking?
 - The time stamps on our data don’t align.
 
 ## Currency Options
 
-When applying the Black-Scholes model to pricing currency options, we
-need to be mindful about the currency quoting conventions of S and K,
-as well as the handling of the domestic $r_{d}$ and foreign $r_{f}$ interest rates.
+When applying the Black-Scholes model to pricing currency options, we need to be mindful about the currency quoting conventions of $S$ and $K$, as well as the handling of the domestic $r_{d}$ and foreign $r_{f}$ interest rates.
 - Let’s recall our currency quoting convention:
 
-
-Let $S_{f:d}$ and $K_{f:d}$ be the spot and strike prices of 1 unit of the foreign
+> Let $S_{f:d}$ and $K_{f:d}$ be the spot and strike prices of 1 unit of the foreign
 currency (the underlying asset) in terms of the domestic currency.
 
 The modification to the Black-Scholes model is relatively easy:
 
-- It turns out that we view the foreign risk-free rate r f as the
-“dividend” on the underlying asset (the foreign currency):
+- It turns out that we view the foreign risk-free rate $r_f$ as the “dividend” on the underlying asset (the foreign currency):
 
 > - Cutting out messiness, European options on currencies is the same as dividend yields
 
@@ -266,7 +271,7 @@ $$d_{1} = \frac{\log \frac{S_{f:d}}{K_{f:d}} + (r - q + \frac{1}{2}\sigma ^{2})T
 and 
 
 $$d_{2} = d_{1} - \sigma \sqrt{T}$$
-$$d_{2} = \frac{\log \frac{S_{f:d}}{K_{f:d}} + (r - q - \frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}$$
+$$ = \frac{\log \frac{S_{f:d}}{K_{f:d}} + (r - q - \frac{1}{2}\sigma ^{2})T}{\sigma \sqrt{T}}$$
 
 This is sometimes called the **Garman-Kohlhagen (GK)** equations, who
 suggested in their paper Foreign Currency Option Values the idea of
@@ -285,7 +290,7 @@ at-the-money EUR:USD currency option (EUR = foreign currency).
 | --- | --- | ---
 |![alt text](assets\IMG63.PNG)|![alt text](assets\IMG64.PNG)| ![alt text](assets\IMG65.PNG)
 
-Let’s fi rst convert the simple Term SOFR and EURIBOR interest
+Let’s first convert the simple Term SOFR and EURIBOR interest
 rates to continuous compounding. The future value of \$1
 invested at a simple interest rate $s$ is $1 + sT$. Under compound
 interest $r$, it is $e^{rT}$. Hence, for each of these rates, we want to find $r$ satisfying $1 + sT = e^{rT}$. Rearranging, we get
@@ -330,7 +335,7 @@ The ideas of risk-neutral pricing and geometric Brownian motion are central to a
 
 
 It’s important to note that the Black-Scholes model is derived under a large list of assumptions. Some of these include what might be called the “usual assumptions” in financial theory and modelling:
-- Constant risk-free rate r and volatility σ over life of option.
+- Constant risk-free rate $r$ and volatility $σ$ over life of option.
 - No restrictions on borrowing and lending.
 - Borrowing and lending rates are equal.
 - No transaction costs like brokerage, bid-ask spreads, taxes, etc.
@@ -344,13 +349,13 @@ It’s important to note that the Black-Scholes model is derived under a large l
 >   - Assumptions around people's behaviour
 >   - Borrowing and lending rates equal, etc.
 
-We’re not so much interested in them as we are in the assumption on the stochastic or random process followed by the underlying asset.
-- This assumption basically characterises the Black-Scholes framework and tells us the correct interpretation of the volatility parameter σ.
+We’re not so much interested in them as we are in the assumption on the *stochastic or random process* followed by the underlying asset.
+- This assumption basically characterises the Black-Scholes framework and tells us the correct interpretation of the volatility parameter $σ$.
 - In the risk-neutral pricing approach, we can prove that the underlying asset follows **geometric Brownian motion (GBM)**
 
 $$S_{t} = Se^{(r-\frac{1}{2} \sigma ^{2})t + \sigma \sqrt{t} Z} \: \: \text{for} \: \: 0 \le t \le T$$
 
-where Z is a standard normal random variable. This implies that the underlying asset’s returns are normally distributed:
+where $Z$ is a standard normal random variable. This implies that the underlying asset’s returns are normally distributed:
 
 > - Assumptions of the underlying asset
 > - Underlying assets returns are normally distributed
@@ -362,13 +367,14 @@ $$r_{t} = \log \frac{S_{t}}{S} = \left( r - \frac{1}{2} \sigma ^{2} \right)t+\si
 
 are normally distributed with $\mathbb{E}[r_{t}]=\left( r - \frac{1}{2} \sigma ^{2} \right)t$ and Var$[r_{t}] = \sigma ^{2}t$
 
-- This is the proper interpretation of σ, namely that it’s the “diffusion” parameter in geometric Brownian motion.
+- This is the proper interpretation of $σ$, namely that it’s the “diffusion” parameter in geometric Brownian motion.
 
 ![alt text](assets\IMG66.PNG)
 
 > - Black Scholes pricing model assumes that the underlying asset prices returns are normally distributed
 > - Log of the stock price is normally distributed
->   - Stock price returns are not normally distributed
+>   - Stock price returns are log-normally distributed
+---
 
 ### Geometric Brownian Motion
 
@@ -384,6 +390,8 @@ In the risk-neutral approach, the underlying asset follows geometric Brownian mo
 > - Over each intermediate time interval, simulate geometric brownian motion, calculate what the underlying price of the asset is going to be
 >   - Each step, independently sample another draw from a standard normal random variable
 
+---
+### Example
 
 Simulating GBM by the above is used in the Monte Carlo simulation
 pricing of options, and we do this later in the course. Here is some
@@ -408,12 +416,12 @@ plt.title ("N=10 paths of geometric Brownian motion ") # plot
 
 ![alt text](assets\IMG68.PNG)
 
-
+---
 ### Risk-Neutral approach
 
 But what is meant by the “risk-neutral” pricing approach? First note:
 
-Law of finance: The value of an asset is the present value of its
+**Law of finance**: The value of an asset is the present value of its
 expected futures cashflows or payoff.
 
 We can use a lot of complex maths to show that the value of European
@@ -491,6 +499,9 @@ We know that call (put) options with a higher strike price K have lower (higher)
 > - want to know how these variables impact on options prices
 > - Don't care about options pricing with changing strike price
 
+---
+
+## The Greeks
 We’re interested in the sensitivity of option prices to the other variables
 $S$, $r$, $T$ and $σ$, and we give these sensitivities special Greek names:
 - **Delta ∆** is the sensitivity of the option price to S.
@@ -515,7 +526,7 @@ We quantify this mathematically with the delta ∆, given by
 
 $$∆_{C} = N(d_{1}) \: \: \text{and} \: \: ∆_{P} = N(d_{1}) − 1$$
 
-Importantly, note the following, which confirms the fi rst line of this slide:
+Importantly, note the following, which confirms the first line of this slide:
 
 $$ 0 < ∆_{C} < 1 \: \: \text{and} \: \: -1 < ∆_{P} < 0$$
 
@@ -555,7 +566,6 @@ $$C_{new} \approx C + dC \: \: \text{and} \: \: P_{new} \approx P+dP $$
 ---
 ![alt text](assets\IMG70.PNG)
 ---
-> - goes up from 
 
 From above, the approximation $dC \approx \Delta _{c} dS$ is not perfect, but:
 - We can make it more accurate by also using the gamma Γ given by
@@ -576,7 +586,7 @@ the PDF of a standard normal random variable
 
 We make the approximations of dC and dP more accurate by setting
 
-$$dC \approx \Delta _{c} dS + \frac{1}{2}\Gamma dS^{2} \: \: and \: \: dP \approx \Delta _{p} dS + \frac{1}{2}\Gamma dS^{2}$$
+$$dC \approx \Delta _{c} dS + \frac{1}{2}\Gamma dS^{2} \: \text{and} \: \: dP \approx \Delta _{p} dS + \frac{1}{2}\Gamma dS^{2}$$
 
 ---
 ![alt text](assets\IMG71.PNG)
@@ -687,7 +697,7 @@ These last two points are illustrated in the following fi gures:
 
 ![alt text](assets\IMG80.PNG)
 
----
+
 ![alt text](assets\IMG81.PNG)
 ---
 

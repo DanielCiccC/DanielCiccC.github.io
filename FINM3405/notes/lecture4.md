@@ -61,12 +61,12 @@ and put $IV_{t} = \max \{ 0, K − S_{t} \}$
 
 (payoff if the option expired at time t). 
 
-At time t an option is:
-- In the money if it has positive intrinsic value:
+At time $t$ an option is:
+- **In the money** if it has positive intrinsic value:
   - $K < S_{t}$ for a call option.
   - $S_{t} < K$ for a put option.
-- At the money if $S_{t} = K$ (intrinsic value is 0).
-- Out of the money if its intrinsic value is 0 and $S_{t} \ne K$
+- **At the money** if $S_{t} = K$ (intrinsic value is 0).
+- **Out of the money** if its intrinsic value is 0 and $S_{t} \ne K$
   - $S_{t} < K$ for a call option.
   - $K < S_{t}$ for a put option.
 
@@ -115,6 +115,7 @@ So the premium gives the writer a chance of a profit, but exposes them to the ri
 
 Exchanges have margin mechanisms for short options positions.
 
+## Options vs futures/forwards
 
 Fundamental differences between futures/forwards and options:
 - Obligations:
@@ -140,6 +141,7 @@ We look at the main exchange traded options markets and contracts for:
   - Individual share and ETFs.
   - Share index.
 - Currencies.
+
 While doing this we don’t present basic speculation and hedging examples since these we devote a whole lecture to this in a few weeks time. We also cover interest rate derivatives later in the course.
 
 ## Commodity options
@@ -158,11 +160,9 @@ Equity options are very popular and heavily traded products. Below gives volumes
 
 And out of the very large volume of equity derivatives trading worldwide from the previous slide, it’s mostly equity options trading:
 
-> - Hedge on options, trading on exchanges
 
 ![alt text](assets\IMG53.PNG)
 
-> It goes without saying that equity index options dwarf everything else.
 
 ### Share and ETF options
 
@@ -251,6 +251,7 @@ both with the same underlying, strike and expiry.
 This portfolio’s current price is C − P and its payoff at expiry is
 
 $$\text{portfolio payoff} = \underbrace{\max\{0, S_T - K\}}_{\text{long call}} - \underbrace{\max\{0, K - S_T\}}_{\text{short put}}$$
+
 $$= S_T - K$$
 
 This is easy to show:
@@ -362,12 +363,10 @@ Furthermore, we can use put-call parity
 
 $$C^{Eu} - P^{Eu} = e^{-qT}S-e^{-rT}K$$
 
-> - basic put call parity relation
-
 to derive further lower bounds on European options.
 - Since option prices are nonnegative, for European calls we get
 
-$$\max(0, e^{-qT}S-e^{-rT}K) \le C^{Eu} \le S$$
+$$\max \{ 0, e^{-qT}S-e^{-rT}K \} \le C^{Eu} \le S$$
 
 > - have upper pricing bounds, $\le$ the stock price
 > - Lower pricing bound, if we remove $-P^{Eu}$ which must have a positive premium, then removing it from the above equation would mean $e^{-qT}S-e^{-rT}K$ must be less than $C^{Eu}$    
@@ -426,10 +425,10 @@ $$\max(0, S - e^{-rT}K) \le C^{Eu} = C^{Am} \le S$$
 
 ## Time value
 - And what exactly is time value?
+
 From above, we noticed that call options on non-dividend-paying stocks
 have a premium that is strictly larger than the option’s intrinsic value.
-- We define an option’s time value as the difference between the
-option premium and its intrinsic value:
+- We define an option’s time value as the difference between the option premium and its intrinsic value:
 
 $$\text{time value = premium − intrinsic value}$$
 

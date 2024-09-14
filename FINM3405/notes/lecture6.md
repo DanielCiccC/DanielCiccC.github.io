@@ -54,57 +54,66 @@ we need in order to hedge against small changes dS in the asset price S.
 
 
 ### Static delta hedging
-The value of a portfolio of h = 1 call option and Q units in the asset is
+The value of a portfolio of $h = 1$ call option and Q units in the asset is
 
 $$V = QS + C$$
 
-The change dV in V due to a change dS in S is given by
+The change $dV$ in $V$ due to a change $dS$ in $S$ is given by
 
 $$dV = QdS + dC$$
-$$≈ QdS + ∆ C dS = (Q + ∆ C )dS$$
+$$\approx QdS + ∆CdS = (Q + ∆ C )dS$$
 
 > - Q units in the underlying asset
 > - how many units of Q so that the change in our portfolio doesn't change
 
+---
 **Remark**
 The value of a portfolio of h = 1 put option and Q units in the
-asset is $V = QS + P$ and its change is $dV ≈ (Q + ∆ P )dS$.
+asset is $V = QS + P$ and its change is 
+$$dV ≈ (Q + ∆ P )dS$$
 
+---
 
 Delta hedging means choosing Q so that dV = 0.
 - From the relations
 
 $$dV = (Q + ∆_C )dS \; \; \text{and} \;\; dV = (Q + ∆_P )dS$$
 
-to set dV = 0 we easily see that Q should be chosen to equal
+to set $dV = 0$ we easily see that Q should be chosen to equal
 
 $$Q ≈ −∆ C \; \; \text{or} \;\; Q ≈ −∆ P$$
 
+---
 **Remark**
-Setting Q to the above so dV = 0 means we’re delta neutral.
+Setting $Q$ to the above so $dV = 0$ means we’re delta neutral.
+
+---
 
 > - hold a call option and it goes up
 >   - go short in the asset
 > - put option
 >   - go long in the asset
 
-
 ![alt text](assets\IMG85.PNG)
+
+---
 
 We can generalise delta hedging to a portfolio of h > 1 options:
 
 ### Static delta hedging
-The value of a portfolio of h calls and Q units in the underlying asset is
+The value of a portfolio of $h$ calls and $Q$ units in the underlying asset is
 $$V = QS + hC$$
+
 and its change in value is
 
 $$dV = QdS + hdC$$
 $$≈ QdS + h∆_C dS = (Q + h∆_C )dS$$
 
-To be delta neutral, so dV = 0, we set $Q = −h∆_C$.
+To be delta neutral, so $dV = 0$, we set $Q = −h∆_C$.
 
 **Remark**
-The value of a portfolio of h puts and Q assets is V = QS + hP.
+The value of a portfolio of $h$
+ puts and $Q$ assets is $V = QS + hP$.
 Its change is $dV ≈ (Q + h∆_P )dS$ so we set $Q = −h∆_P$ .
 
 > - typically hold more than one option
@@ -119,12 +128,17 @@ Its change is $dV ≈ (Q + h∆_P )dS$ so we set $Q = −h∆_P$ .
 **Remark**
 
 We’re assuming assets are “infinitely divisible”. Options contracts
-are typically over m assets (the multiplier). Then the portfolio
-values are V = QS + hCm or V = QS + hPm with changes
+are typically over $m$ assets (the multiplier). Then the portfolio
+values are $V = QS + hCm$ or $V = QS + hPm$ with changes
 
 $$dV = (Q + h∆_C m)dS  \; \; \text{or} \;\; dV = (Q + h∆_P m)dS$$
 
-### Delta-gamma hedging
+So for delta hedging we round $Q = −h∆_C m$ or $Q = −h∆_Pm$ to whole numbers, which doesn’t “badly damage” the hedge.
+
+We can use gamma $\Gamma$ to improve delta hedging:
+
+---
+## Delta-gamma hedging
 
 Recall from last week that we can make our approximations of the
 changes dC and dP in option premiums due to a change dS in the
@@ -141,27 +155,19 @@ option position by taking a position in the asset and a different option .
 > - delta hedging, position in the option
 > - delta gamma hedging, need a position in the stock and another option
 
-Delta-gamma hedging involves taking a position in the asset and
+**Delta-gamma hedging** involves taking a position in the asset and
 in another, different option to hedge an existing option position
 against **small movements** in the price of the underlying asset.
 
-So, given a position of h options, for delta-gamma hedging we calculate
-how many units Q in the asset and k in another option we need in order
-to hedge against small changes $d$S in the price $S$ of the underlying asset.
+So, given a position of h options, for delta-gamma hedging we calculate how many units $Q$ in the asset and $k$ in another option we need in order to hedge against small changes $d$S in the price $S$ of the underlying asset.
 
-
-The value of a portfolio of Q units in the asset, h units of one option,
-and k units of another, different option is given by
+The value of a portfolio of $Q$ units in the asset, $h$ units of one option, and $k$ units of another, different option is given by
 
 $$V = QS + hV_1 + kV_2$$
 
 where $V_1$ and $V_2$ are the respective option premiums.
 
-Also let $∆_1$ and $Γ_1$ be the delta and gamma of our existing option,
-and $∆_2$ and $Γ_2$ be the delta and gamma of the new option.
-
-> - Original option in the portfolio
-
+Also let $∆_1$ and $Γ_1$ be the delta and gamma of our existing option, and $∆_2$ and $Γ_2$ be the delta and gamma of the new option.
 
 The change in portfolio value approximated by delta-gamma hedging is
 ![alt text](assets\IMG87.PNG)
@@ -175,8 +181,7 @@ and
 $$hΓ_1 + kΓ_2 = 0$$
 
 **Remark**
-Solving these equations for Q and k so that dV = 0 means that
-we’re both delta and gamma neutral.
+Solving these equations for $Q$ and $k$ so that $dV = 0$ means that we’re both delta and gamma neutral.
 
 We can show that the solution is
 
@@ -186,9 +191,8 @@ And
 
 $$k = \frac{Q \Gamma _1}{\Delta _1 \Gamma _2 - \Delta _2 \Gamma _1}$$
 
-So to delta-gamma hedge an existing option position, we use the fi rst
-equation to calculate Q and then the second equation to calculate k.
-- Consider the previous example of long h = 1 call:
+So to delta-gamma hedge an existing option position, we use the first equation to calculate $Q$ and then the second equation to calculate $k$.
+- Consider the previous example of long $h = 1$ call:
 
 ---
 
@@ -201,8 +205,7 @@ equation to calculate Q and then the second equation to calculate k.
 ### Dynamic delta hedging
 So far we’ve been doing “1 period” delta hedging.
 - But when the asset price S changes, so does the option’s delta.
-- Hence, to stay delta hedged over time, one needs to regularly
-rebalance the holding Q in the underlying asset.
+- Hence, to stay delta hedged over time, one needs to regularly rebalance the holding Q in the underlying asset.
 - We also rebalance our bank account as we buy and/or sell the asset.
 - And pay and/or receive interest as appropriate.
 
