@@ -24,17 +24,39 @@
 
 </header>
 <main>
-<h1 dir="auto" id="module-3---nested-queries-and-views">Module 3 - nested queries and Views</h1>
-<h3 dir="auto" id="nested-queries">Nested queries</h3>
+<h1 dir="auto" id="module-3---nested-queries-division-and-views">Module 3 - Nested Queries, division and views</h1>
+<h2 dir="auto" id="nested-queries">Nested queries</h2>
 <ul dir="auto">
 <li dir="auto">A nested query (often termed subquery) is a query that appears within another query</li>
 </ul>
+<hr dir="auto">
 <h3 dir="auto" id="non-correlated-queries">Non-Correlated queries</h3>
 <ul dir="auto">
 <li dir="auto">Results are returned from an inner query to an outer clause</li>
 <li dir="auto">Subqueries are evaluated from the “inside out”</li>
+<li dir="auto"><strong>The outer query takes an action based on the results of the inner query</strong></li>
 </ul>
-<p dir="auto"><img src="assets\IMG72.PNG" alt="alt text" data-src="assets/IMG72.PNG"></p>
+<p dir="auto"><strong>Example</strong></p>
+<p dir="auto">Find the IDs and names of stars who have NOT been in the movie with ID 28:</p>
+<ul dir="auto">
+<li dir="auto">Movie [<u>movieID</u>, title, year]</li>
+<li dir="auto">StarsIn [<u>movieID, starID</u>, role]
+<ul dir="auto">
+<li dir="auto"><em>starsIn.movieID references Movie.movieID</em></li>
+<li dir="auto"><em>starsIn.starID references MovieStar.starID</em></li>
+</ul>
+</li>
+<li dir="auto">MovieStar [<u>starID</u>, name, gender]</li>
+</ul>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">SELECT</span>  M.starID, M.name
+<span class="hljs-keyword">FROM</span>     MovieStar M
+<span class="hljs-keyword">WHERE</span>  M.starID <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">IN</span>
+   (<span class="hljs-keyword">SELECT</span>  S.starID
+    <span class="hljs-keyword">FROM</span>     StarsIn S
+    <span class="hljs-keyword">WHERE</span>  movieID<span class="hljs-operator">=</span><span class="hljs-number">28</span>
+   );
+</code></pre>
+<hr dir="auto">
 <h3 dir="auto" id="correlated-queries">Correlated Queries</h3>
 <ul dir="auto">
 <li dir="auto">Conditions in subquery WHERE clause have references to some attributes of
@@ -43,7 +65,28 @@ a relation in the outer query</li>
 its evaluation</li>
 <li dir="auto">The <strong>subquery is evaluated once for each (combination of) tuple in the outer query</strong></li>
 </ul>
-<p dir="auto"><img src="assets\IMG73.PNG" alt="alt text" data-src="assets/IMG73.PNG"></p>
+<p dir="auto"><strong>Example</strong></p>
+<p dir="auto">Find the names of departments that are managed by the same employee.</p>
+<ul dir="auto">
+<li dir="auto">Department [<u>dNumber</u>, dName, mgrSSN, mgrStartDate]
+<ul dir="auto">
+<li dir="auto">Department.mgrSSN references Employee.ssn</li>
+</ul>
+</li>
+<li dir="auto">Employee [<u>ssn</u>, name, dob, address, sex, salary, mgrSSN, dNum]
+<ul dir="auto">
+<li dir="auto">Employee.dNum references Department.dNum</li>
+<li dir="auto">Employee.mgrSSN references Employee.ssn</li>
+</ul>
+</li>
+</ul>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">SELECT</span> dName, mgrSSN 
+<span class="hljs-keyword">FROM</span> Department D1
+<span class="hljs-keyword">WHERE</span> mgrSSN <span class="hljs-keyword">IN</span> 
+  (<span class="hljs-keyword">SELECT</span> mgrSSN 
+   <span class="hljs-keyword">FROM</span> Department D2
+   <span class="hljs-keyword">WHERE</span> D2.mgrSSN <span class="hljs-operator">=</span> D1.mgrSSN <span class="hljs-keyword">AND</span> D2.dNumber <span class="hljs-operator">&lt;&gt;</span> D1.dNumber);
+</code></pre>
 <h2 dir="auto" id="subquery-operators">Subquery operators</h2>
 <table dir="auto">
 <thead dir="auto">
@@ -61,7 +104,7 @@ its evaluation</li>
 </tr>
 <tr dir="auto">
 <td><code>ANY/ALL</code></td>
-<td>Compares with the set returned. Operations use operators <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><mo separator="true">,</mo><mo>&gt;</mo><mo separator="true">,</mo><mo>≥</mo><mo separator="true">,</mo><mo>≤</mo><mo separator="true">,</mo><mo>&lt;</mo><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">&lt;, &gt;, \ge, \le, &lt;&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;&gt;</span></span></span></span></td>
+<td>Compares with the set returned. These operations use operators including<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><mo separator="true">,</mo><mo>&gt;</mo><mo separator="true">,</mo><mo>≥</mo><mo separator="true">,</mo><mo>≤</mo><mo separator="true">,</mo><mo>&lt;</mo><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">&lt;, &gt;, \ge, \le, &lt;&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;&gt;</span></span></span></span></td>
 <td><img src="assets\IMG75.PNG" alt="alt text" data-src="assets/IMG75.PNG"></td>
 </tr>
 <tr dir="auto">
@@ -74,25 +117,47 @@ its evaluation</li>
 <td>Tests the existence of data that meet the criteria of the subquery. EXISTS evaluates to true if the result of the correlated subquery is a non-empty set.</td>
 <td>Find movies that were the only movie produced that year. <img src="assets\IMG77.PNG" alt="alt text" data-src="assets/IMG77.PNG"></td>
 </tr>
+<tr dir="auto">
+<td>'Single value'</td>
+<td>- expression is compared with the value returned <br> S must return a single value (otherwise an error will occur)</td>
+<td><img src="image-2.png" alt="alt text" data-src="image-2.png"></td>
+</tr>
 </tbody>
 </table>
-<h3 dir="auto" id="division-and-problems-with-the-division-problem">Division and problems with the division problem</h3>
+<hr dir="auto">
+<h2 dir="auto" id="division-problem">Division problem</h2>
+<ul dir="auto">
+<li dir="auto">Division is useful for answering queries which include a “for all” or
+“for every” phrase, e.g., find movie stars who were in all movies.</li>
+</ul>
 <p dir="auto"><img src="assets\IMG78.PNG" alt="alt text" data-src="assets/IMG78.PNG"></p>
 <h3 dir="auto" id="counting">Counting</h3>
 <p dir="auto"><strong>“Find the movie star(s) who acted in at least all the movies produced in the year 1934.”</strong></p>
+<p dir="auto">Relational Schema</p>
 <ul dir="auto">
-<li dir="auto">Count the number of movies in 1934</li>
-<li dir="auto">Count the number of movies in 1934 that MoviesStart X acted in</li>
+<li dir="auto">Movie [<u>movieID</u>, title, year]</li>
+<li dir="auto">StarsIn [<u>movieID, starID</u>, role]
+<ul dir="auto">
+<li dir="auto"><em>starsIn.movieID references Movie.movieID</em></li>
+<li dir="auto"><em>starsIn.starID references MovieStar.starID</em></li>
 </ul>
-<p dir="auto"><img src="assets\IMG79.PNG" alt="alt text" data-src="assets/IMG79.PNG"></p>
+</li>
+<li dir="auto">MovieStar [<u>starID</u>, name, gender]</li>
+</ul>
+<p dir="auto"><strong>A two step process:</strong></p>
+<ol dir="auto">
+<li dir="auto">Count the number of movies in 1934</li>
+<li dir="auto">Count the number of movies in 1934 that MoviesStar X acted in</li>
+</ol>
 <p dir="auto"><strong>STEP 1:</strong></p>
 <p dir="auto"><img src="assets\IMG82.PNG" alt="alt text" data-src="assets/IMG82.PNG"></p>
 <p dir="auto"><strong>STEP 2:</strong></p>
 <p dir="auto"><img src="assets\IMG83.PNG" alt="alt text" data-src="assets/IMG83.PNG"></p>
+<hr dir="auto">
 <h3 dir="auto" id="double-negation">Double negation</h3>
 <p dir="auto"><strong>“Find the movie star(s) who acted in at least all the movies produced in the year 1934.”</strong></p>
 <ol dir="auto">
-<li dir="auto">Find the negation of the statement - in this case, the blue region of the diagram. We want this section to be EMPTY and apply this negation through the use of a <code>NOT EXISTS</code> operation</li>
+<li dir="auto">Find the negation of the statement - in this case, the blue region of the diagram. We want this section to be EMPTY and apply this negation through the use of a <code>NOT EXISTS</code> operation.</li>
 <li dir="auto">Use a correlated inner query to compute the result
 <ul dir="auto">
 <li dir="auto">For instances where the blue is NOT NULL (empty) we will <em>not</em> return a result</li>
@@ -102,14 +167,36 @@ its evaluation</li>
 </ol>
 <p dir="auto"><strong>STEP 1:</strong></p>
 <p dir="auto"><img src="assets\IMG84.PNG" alt="alt text" data-src="assets/IMG84.PNG"></p>
+<ul dir="auto">
+<li dir="auto">logic here: If there are Movie ID's in 1934 that are not acted by MovieStar X - then we have a problem!</li>
+</ul>
 <p dir="auto"><strong>STEP 2:</strong></p>
-<p dir="auto"><img src="assets\IMG85.PNG" alt="alt text" data-src="assets/IMG85.PNG"></p>
+<ul dir="auto">
+<li dir="auto">Fill in the blue - find all the movie ID's made in 1934 by MovieStar X which X did not act in
+<img src="assets\IMG85.PNG" alt="alt text" data-src="assets/IMG85.PNG"></li>
+</ul>
+<hr dir="auto">
 <h2 dir="auto" id="views">Views</h2>
 <ul dir="auto">
 <li dir="auto"><strong>Virtual tables</strong> - that do not physically exist on disk.</li>
 <li dir="auto"><strong>Materialized</strong> - by physically creating the view table. These must be updated when the base tables are updated</li>
 </ul>
-<p dir="auto"><img src="assets\IMG80.PNG" alt="alt text" data-src="assets/IMG80.PNG"></p>
+<pre><code class="code-line language-sql" dir="auto"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">VIEW</span> DepEmpStatus <span class="hljs-keyword">as</span>
+<span class="hljs-keyword">SELECT</span>  dNumber, dName, sex, <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">AS</span> employeeNumber, <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-keyword">as</span> avgSalary 
+<span class="hljs-keyword">FROM</span>  Department <span class="hljs-keyword">AS</span> D
+<span class="hljs-keyword">JOIN</span>     Employee <span class="hljs-keyword">AS</span> E <span class="hljs-keyword">ON</span> D.dNumber<span class="hljs-operator">=</span> E.dNum
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span>   dNum, sex; 
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span>
+<span class="hljs-keyword">FROM</span> DepEmpStatus;
+</code></pre>
+<p dir="auto"><strong>Benefits of using views</strong></p>
+<ul dir="auto">
+<li dir="auto"><strong>Simplification</strong>: Views can hide the complexity of underlying tables to the end-users.</li>
+<li dir="auto"><strong>Security</strong>: Views can hide columns containing sensitive data from certain groups of users.</li>
+<li dir="auto"><strong>Computed columns</strong>: Views can create computed columns, which are computed on the fly.</li>
+<li dir="auto"><strong>Logical Data Independence</strong>: Views provide support for logical data independence, that is users and programs that access the database are immune from changes in the logical structure of the database.</li>
+</ul>
 <h2 dir="auto" id="dropping-views">Dropping views</h2>
 <p dir="auto">Dropping a view does not affect any tuples from the underlying relation.</p>
 <p dir="auto"><img src="assets\IMG81.PNG" alt="alt text" data-src="assets/IMG81.PNG"></p>
