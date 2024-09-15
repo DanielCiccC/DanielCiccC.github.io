@@ -343,7 +343,9 @@ $$S_t = Se^{(r - 1/2 \sigma^2)t + \sigma \sqrt{t}Z} \;\;\; \text{for} 0 \le t \l
 > - simulate a bunch of paths in geometric brownian motion
 
 - Option prices are given by
+
 ![alt text](assets\IMG160.PNG)
+
 where S T is log-normally distributed as per geometric Brownian motion.
 - To price options via the Monte Carlo method we:
 
