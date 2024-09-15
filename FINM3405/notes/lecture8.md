@@ -320,3 +320,80 @@ The Monte Carlo pricing of knock-out options is a simple modification to the abo
 
 ---
 
+> - Any asset price hitting the barrier has no payoff
+> - Some people might want an option position moving too far
+> - down-and-out option, from going too far
+> - control risks and exposure
+> - Another risk management tool with options
+
+## Asian Options
+
+A European Asian or average option’s payoff s depend on the average
+underlying asset price $\hat{S}$ over the life of the option.
+- They’e called “Asian” options simply because they were first developed in the foreign exchange markets of Japan.
+- There is various methods of calculating the historical averages used:
+- Typically either continuous or discrete (say daily) averages.
+- We assume continuous averages, which get more accurately approximated as our numerical method takes smaller step sizes.
+
+
+There’s two general types of Asian options:
+1. Fixed-strike Asian options.
+2. Floating-strike Asian options.
+
+> - Only called asian because they were developed in japanese exchanges
+> - lookback used maximum or minimum options
+> - Look at the value the asset at discrete intervals, that is used to compare to strike
+
+European fixed-strike Asian options are very similar to plain vanilla European options except the “fi nal price” of the underlying asset used in calculating an option’s payoff is not the asset price itself but the average asset price $\hat{S}$ over the life of the option. Their payoffs are
+
+- call payoff = $\max \{ 0, \hat{S} − K \}$
+- put payoff = $\max \{ 0, K - \hat{S} \}$
+
+It is simple to use Monte Carlo simulation to price them:
+
+
+So, after calculating the N asset price paths $\{ S_{i0} , S_{i1} , . . . , S_{iM} \}$ for
+i = 1, . . . , N by simulating geometric Brownian motion, the **average price** of path $i$ is
+
+$$\hat{S}_{i} = \frac{1}{M} \SUM^{M}_{j=0}S_{ij}$$
+
+(arithmetic average). The payoffs for path $i$ are
+
+- call payoff = $\max \{ 0, \hat{S}_{i} − K \}$
+- put payoff = $\max \{ 0, K - \hat{S}_{i} \}$
+
+## Fixed-strike Asian options
+
+![alt text](assets\IMG186.PNG)
+
+The Monte Carlo option prices are then simply
+
+![alt text](assets\IMG187.PNG)
+
+
+---
+### Example
+
+![alt text](assets\IMG188.PNG)
+
+---
+
+## Average-strike Asian options
+
+European average-strike Asian options diff er from fixed-strike Asian options by instead setting the strike price $K = \hat{S}$ to be the average asset price $\hat{S}$ over the life of the option. So, their payoff s are simply
+
+- call payoff = $\max \{ 0, S_T − \hat{S} \}$
+- put payoff = $\max \{ 0, \hat{S} - S_T \}$
+
+The payoff s for path i are
+
+![alt text](assets\IMG189.PNG)
+
+---
+### Example
+
+![alt text](assets\IMG190.PNG)
+
+---
+
+
