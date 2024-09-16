@@ -63,9 +63,8 @@ WHERE mgrSSN IN
 | --- | --- | ---
 ``IN`` | Checked for set membership | List the department names for departments which have a manager named “Jennifer”. ![alt text](assets\IMG74.PNG)
 |``ANY/ALL``| Compares with the set returned. These operations use operators including$<, >, \ge, \le, <>$| ![alt text](assets\IMG75.PNG)
-|Single value operators| Expression is compared with the value(s) returned | Find the names and salaries of employees getting the minimum salary. ![alt text](assets\IMG76.PNG)
+|Single value operators| Expression is compared with the value(s) returned | Find the names and salaries of employees getting the minimum salary. ![alt text](assets\IMG76.PNG) <br> operations include $<, >, \ge, \le, <>$
 | ``EXISTS``| Tests the existence of data that meet the criteria of the subquery. EXISTS evaluates to true if the result of the correlated subquery is a non-empty set.| Find movies that were the only movie produced that year. ![alt text](assets\IMG77.PNG)
-| 'Single value' | - expression is compared with the value returned <br> S must return a single value (otherwise an error will occur) | ![alt text](assets\IMG123.PNG)
 
 ---
 ## Division problem

@@ -355,7 +355,7 @@ It is simple to use Monte Carlo simulation to price them:
 So, after calculating the N asset price paths $\{ S_{i0} , S_{i1} , . . . , S_{iM} \}$ for
 i = 1, . . . , N by simulating geometric Brownian motion, the **average price** of path $i$ is
 
-$$\hat{S}_{i} = \frac{1}{M} \SUM^{M}_{j=0}S_{ij}$$
+$$\hat{S}_{i} = \frac{1}{M} \sum^{M}_{j=0}S_{ij}$$
 
 (arithmetic average). The payoffs for path $i$ are
 
@@ -395,5 +395,3 @@ The payoff s for path i are
 ![alt text](assets\IMG190.PNG)
 
 ---
-
-
