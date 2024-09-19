@@ -502,17 +502,12 @@ Absolutely fine to go 50/50 and maximise diversification.
 ![alt text](assets\IMG63.PNG)
 
 
-•  The average appraisal price of the first group 
-came in at $67,811. 
-• The average appraisal price of the second 
-group was $75,190.
-• If we take the mid-point of these values 
-($71,500.50) as our best estimate of the true 
-appraisal value, the gaps between the two 
-appraisal averages ($75,190 - $67,811) was a 
+-  The average appraisal price of the first group came in at $67,811. 
+- The average appraisal price of the second group was $75,190.
+- If we take the mid-point of these values ($71,500.50) as our best estimate of the true 
+appraisal value, the gaps between the two appraisal averages ($75,190 - $67,811) was a 
 full 10%.
-• Agents were anchored on list prices that they 
-were exposed to – despite the fact that only 
+- Agents were anchored on list prices that they were exposed to – despite the fact that only 
 25% mentioned list price as one of the 
 factors that they considered. 
 
