@@ -1,0 +1,638 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-9-1">Lecture 9</h1>
+<h1 dir="auto" id="credit-default-swaps-cds-1">Credit default swaps (CDS)</h1>
+<h3 dir="auto" id="mechanics-1">Mechanics</h3>
+<p dir="auto">This week we turn to the next section of the course covering credit
+default swaps, interest rate swaps (along with FRN), and currency swaps.
+All these instruments are negotiated and originated OTC and dominate
+global financial markets on most measures of market size and activity.
+This week we cover credit default swaps (CDS) and the material will be
+very useful for your Team Project on Bill Ackman and Pershing Square.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">spectulate in options
+<ul dir="auto">
+<li dir="auto">hedge, hedge against the passage of time, volatility</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">CDS, whole new asset class</p>
+<ul dir="auto">
+<li dir="auto">credit risk (default risk)</li>
+<li dir="auto">speculating (hedging) government or soverign nation states defaulting on debt</li>
+<li dir="auto">Banks when you look at asset base, have to hold a certain amount of capital to cover their loans
+<ul dir="auto">
+<li dir="auto">When banks could offload credit risk, increase their profitability</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto">A credit default swap (CDS) is like an insurance contract in which:</p>
+<ul dir="auto">
+<li dir="auto">The CDS buyer “takes out insurance” against a credit event (e.g.
+default) of a company or sovereign state and in return pays the CDS
+seller a regular, fi xed “insurance” premium for the insurance.</li>
+<li dir="auto">The CDS seller receives the CDS premium and agrees to pay the
+buyer a compensation amount upon occurrence of the credit event.</li>
+<li dir="auto">If the credit event occurs, the compensation is paid, the CDS buyer
+pays the period’s accrued premium, and the CDS ceases to exist.</li>
+<li dir="auto">If no credit event occurs, the CDS buyer keeps paying the periodic
+premium until the CDS maturity date.
+We now go into the details of CDS terminology, mechanics and pricing:</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Why is it called a swap?</p>
+<ul dir="auto">
+<li dir="auto">swapping risk</li>
+<li dir="auto">Like an insurance contract</li>
+<li dir="auto">Take out insurance over some future event</li>
+<li dir="auto">Insuring yourself against negative credit event in the future
+<ul dir="auto">
+<li dir="auto">Don't have to hold bonds to enter into credit default swap</li>
+</ul>
+</li>
+<li dir="auto">Pay premium up to a certain date
+<ul dir="auto">
+<li dir="auto">Have to finish paying for premiums to the seller</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Typically defined for 5 years</p>
+<ul dir="auto">
+<li dir="auto">Premiums usually paid quarterly</li>
+<li dir="auto">A credit default swap buyer is called the protection buyer</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">The CDS buyer is called the protection buyer.</li>
+<li dir="auto">The CDS seller is called the protection seller or swap writer.</li>
+<li dir="auto">The company or sovereign in the CDS is the reference entity.</li>
+<li dir="auto">The particular debt securities (bonds, loans, floating rate notes, etc) of the reference entity over which the CDS is written are called reference assets or bonds or securities or obligations.</li>
+<li dir="auto">The credit events relating to the reference entity’s reference assets as specified and defined in the CDS are called reference events.</li>
+<li dir="auto">The “insurance” or compensation amount paid upon the occurrence of a reference event is called the CDS payout.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Bonds, loans, CDO's writing the CDS's over called reference entity</li>
+<li dir="auto">compensation amount is called the payout</li>
+</ul>
+</blockquote>
+<p dir="auto">The CDS can be single-name or multi-name:</p>
+<ul dir="auto">
+<li dir="auto">Above we’re referring to single-name CDS, which are written over
+the reference assets of one single reference entity.</li>
+<li dir="auto">Multi-name CDS, sometimes called basket CDS, are written over
+the reference assets of multiple reference entities, and the nature of
+their payouts can diff er (add-up basket, k th -to-default basket, etc).
+There’s also CDS indices (see wiki), which are eff ectively basket CDS:</li>
+<li dir="auto">The CDX range (also see Investopedia and the CDS Indices Primer).</li>
+<li dir="auto">The iTraxx range (also see Investopedia and wiki). They’re important for your Team Project and we cover them later.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">single name, reference asset is one individual country or asset</li>
+<li dir="auto">basket CDS written over a whole bunch of entities</li>
+<li dir="auto">Different payout structures in company CDS</li>
+<li dir="auto">CDS over a whole bunch of countries
+<ul dir="auto">
+<li dir="auto">When one reference entity defaults, get the payout from the reference entity,</li>
+<li dir="auto">Company ceases to exist and exits the entity</li>
+<li dir="auto">CDS stays in existence until maturity</li>
+</ul>
+</li>
+<li dir="auto">Instruments making credit events an asset class you can trade
+<ul dir="auto">
+<li dir="auto">In a major macroeconomic event, company expected to tank</li>
+<li dir="auto">When the credit risk (prob default) payout to a CDS increase</li>
+<li dir="auto">Hedge on macroeconomic events</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><strong>Reference events</strong> specified in a CDS include, but are not limited to:</p>
+<ul dir="auto">
+<li dir="auto">Default: Failure of the reference entity to pay interest/loan/coupon payments or the principal or face value of the reference asset.</li>
+<li dir="auto">Bankruptcy: Official or legal/judicial administration, liquidation or winding up of the reference entity rendering it unable to meet, either partially or wholly, its obligations of the reference asset.</li>
+<li dir="auto">Restructuring: Corporate or debt restructuring that changes the nature of the reference asset in terms of its original structure and the original agreement between the reference entity and its creditors.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Events that would cause a CDS to payout</li>
+<li dir="auto">international swaps and derivatives association, regulated and covered by ISDA</li>
+<li dir="auto">Company going bust - company going to be worth a whole lot less</li>
+<li dir="auto">Restructuring - anything that alters the original structure of the corporations debt</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Repudiation/moratorium: The reference entity disputing aspects
+of or failing to recognise the reference asset and its obligations,
+thereby disputing, delaying or refusing payment (common when the
+reference entity is a sovereign or sovereign state).</li>
+<li dir="auto">Covenants: The reference entity’s breaching or noncompliance with
+debt covenants, including due to deterioration in financial position or
+the devaluation or writing off of assets used as security/collateral.</li>
+<li dir="auto">Ratings downgrade: The downgrading of a reference entity by a
+credit ratings agency (such as S&amp;P, Moody’s, Fitch, etc).</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Repudiation/moratorium - dispute the fact that they have to pay the debt
+<ul dir="auto">
+<li dir="auto">A lot of developing countries have done that</li>
+</ul>
+</li>
+<li dir="auto">Covenants
+<ul dir="auto">
+<li dir="auto">certain financial ratios, levels of health, etc. If the company breaches these obligations then that could be a reference event as well</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><strong>Remark</strong>
+An intuitive way to think about reference events is they could potentially be anything that materially changes the ability of the reference entity to meet its original obligations of the reference assets, and which therefore would materially or significantly reduce the market value of the reference assets.</p>
+<ul dir="auto">
+<li dir="auto">It makes sense that creditors/lenders and other debt investors/holders may want to protect themselves against reference events, and they do this with CDS.</li>
+</ul>
+<p dir="auto">The idea of a reference event leading to a significant decline in the market value V of the reference entity’s reference assets leads to:</p>
+<h2 dir="auto" id="payout-1">Payout</h2>
+<p dir="auto">The payout upon the occurrence of a reference event is defined as:</p>
+<ul dir="auto">
+<li dir="auto">A CDS is written over a notional principal or face value <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex">F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.</li>
+<li dir="auto">The protection buyer is taking out protection (“insurance”) over a
+holding of the reference entity’s reference assets of total face value F.</li>
+<li dir="auto">CDS can be physically deliverable or cash settled upon the
+occurrence of a reference event (after which the CDS vanishes):</li>
+<li dir="auto">Physical delivery: The protection seller agrees to buy the reference asset holding from the protection buyer at its total face value <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex">F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.</li>
+<li dir="auto">Cash settled: The protection seller agrees to pay the protection
+buyer the difference <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>−</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">F − V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> between the face value <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex">F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span> and the market value <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> of the reference asset.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Precisely (quantitiatively)</li>
+<li dir="auto">Paid out over face value (can take up protection of the reference asset to a total principle of face value F)
+<ul dir="auto">
+<li dir="auto">notional (no exchange of money takes place)</li>
+</ul>
+</li>
+<li dir="auto">Either physically deliverable or cash settled
+<ul dir="auto">
+<li dir="auto">Physically deliverable - e.g. if trading at about par, if a reference event occurs, value of the bond portfolio tanks, protection seller will buy at face value</li>
+</ul>
+</li>
+<li dir="auto">Cash settled - Protection seller agrees to pay the difference between the FV and the value of the bond after the reference event
+<ul dir="auto">
+<li dir="auto">would still get the full FV back</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><strong>Remark</strong> Most CDS are cash settled. Also, in the theoretical treatment of pricing and hedging/speculating with CDS, there is no difference between a CDS being cash settled or physically delivered.</p>
+<ul dir="auto">
+<li dir="auto">So for simplicity we assume that CDS are always cash settled.</li>
+</ul>
+<p dir="auto">We define the important concept of the recovery rate R:</p>
+<ul dir="auto">
+<li dir="auto">It is the market value V of the reference asset expressed as a percent of the notional principal F after a reference event:</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>V</mi><mo>=</mo><mi>R</mi><mi>F</mi></mrow><annotation encoding="application/x-tex">V = RF</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">RF</span></span></span></span></span></p>
+</math>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Pricing CDS - the recovery rate</li>
+<li dir="auto">Think there is going to be a reference event, value of the portfolio is going to fall by a certain amount v</li>
+<li dir="auto">Trying to predict the probability of default</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">From another perspective, R tells us “how much we would recover” if we held a portfolio of the reference asset of total face value F and then sold it after a reference event occurred: We receive <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>R</mi><mi>F</mi></mrow><annotation encoding="application/x-tex">V = RF</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">RF</span></span></span></span>. It also follows then that the payout <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>−</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">F − V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> for a cash settled CDS is</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>CDS payout</mtext><mo>=</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>R</mi><mo stretchy="false">)</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">\text{CDS payout} = (1 − R)F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">CDS payout</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span></span></p>
+</math>
+<p dir="auto"><strong>Remark</strong> This payout <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>R</mi><mo stretchy="false">)</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">(1 − R)F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span> is sometimes called the loss given default since it’s how much we’d lose on a holding of the reference asset.</p>
+<p dir="auto">The above illustrates one way in which CDS are used for hedging:</p>
+<ul dir="auto">
+<li dir="auto">Suppose you hold a portfolio of the reference entity’s reference assets (say bonds) of a total face value of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex">F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.
+<ul dir="auto">
+<li dir="auto">Suppose it’s roughly trading at par value, so <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>≈</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">V ≈ F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.</li>
+</ul>
+</li>
+<li dir="auto">Upon the occurrence of a reference event (say a default), the market value of the reference asset falls to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>R</mi><mi>F</mi></mrow><annotation encoding="application/x-tex">V = RF</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">RF</span></span></span></span>
+<ul dir="auto">
+<li dir="auto">It falls by an amount of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>−</mo><mi>V</mi><mo>=</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>R</mi><mo stretchy="false">)</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">F − V = (1 − R)F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.</li>
+</ul>
+</li>
+<li dir="auto">The CDS then pays out this amount <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>R</mi><mo stretchy="false">)</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">(1 − R)F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.
+<ul dir="auto">
+<li dir="auto">It covers your loss upon the default of the reference entity.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>−</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">F-V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>, how much the portfolio falls (loss given default)</li>
+<li dir="auto">not necessarily for their pay</li>
+<li dir="auto">perceptions of credit risk of a company changes
+<ul dir="auto">
+<li dir="auto">value of the credit default risk changes</li>
+</ul>
+</li>
+<li dir="auto">People are trading credit risk perceptions</li>
+<li dir="auto">Trading credit perceptions  of the market</li>
+</ul>
+</blockquote>
+<p dir="auto">The regular, fixed “insurance premium” paid by the protection buyer to the protection seller is called the CDS coupon or spread or premium.</p>
+<ul dir="auto">
+<li dir="auto">The premium is given as a percent <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> of the notional principal:</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>premium</mtext><mo>=</mo><mi>k</mi><mi>F</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">\text{premium} = kFd</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8623em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">premium</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal">d</span></span></span></span></span></p>
+</math>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">regular premium for being insured by a credit default swap</li>
+</ul>
+</blockquote>
+<p dir="auto">with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">d = 1/2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1/2</span></span></span></span> if semiannual premiums, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">d = 1/4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1/4</span></span></span></span> if quarterly premiums, etc. The market convention is premiums are usually paid quarterly.</p>
+<ul dir="auto">
+<li dir="auto">Here, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> is also called the CDS spread.</li>
+</ul>
+<p dir="auto">Question: Why is k called the CDS “spread”?</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">just like pricing a bond</li>
+<li dir="auto">usually paid quarterly</li>
+</ul>
+<p dir="auto">Why is it called a spread?</p>
+</blockquote>
+<p dir="auto"><strong>Answer</strong>: Let <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> be the risk-free rate, or a reference rate such as
+Term SOFR or Euribor which are effectively risk-free rates. Also
+let <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> be the yield on the reference entity’s reference asset.</p>
+<ul dir="auto">
+<li dir="auto">Then <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>−</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">y − r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> is the reference asset’s risk premium or spread.</li>
+<li dir="auto">Below we use arbitrage arguments to show that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> should
+approximately equal this risk spread <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>−</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">y − r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> of the reference
+asset over the risk-free rate, hence the terminology.</li>
+</ul>
+<p dir="auto">Furthermore, we will indeed show that the CDS spread <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> reflects
+the perceived credit risk of the reference entity’s reference asset:</p>
+<ul dir="auto">
+<li dir="auto">k rises (falls) when this perceived credit risk rises (falls).</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">spread of the companies yield over debt</li>
+<li dir="auto">If the company deteriorates, risk premium goes up, CDS spread reflects perceived credit risk of the company</li>
+<li dir="auto">When you are speculating on risk premium, hoping CDS spread goes up
+<ul dir="auto">
+<li dir="auto">sell to a dealer and realise the profit</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto">So CDS spreads <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> reflect the market’s assessment of the credit or default risk of the reference entity.</p>
+<ul dir="auto">
+<li dir="auto">In fact, we can use CDS spreads trading in the market to deduce the implied probability of default of the reference entity (numerically, like deducing option implied vols). In the light, the World Sovereign Bonds website gives CDS spreads for sovereigns and their implied probability of default.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">CDS created a new asset class called credit, can reverse engineer the implied risk of a company</li>
+<li dir="auto">CDS spread - of 20.30 basis points e.g.</li>
+<li dir="auto">In financial markets, what is the global risk free rate
+<ul dir="auto">
+<li dir="auto">Calculating individual countires over a risk free rate in the global economy</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="pricing-1">Pricing</h2>
+<p dir="auto">We now turn to CDS pricing which involves determining the fair or theoretical CDS spread <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>. The general principal is:</p>
+<p dir="auto">The CDS spread <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> is set so that the CDS has 0 initial value to both the protection buyer and seller (like futures and forwards) so no initial exchange of money takes place at origination.</p>
+<p dir="auto">Here <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> is called the breakeven CDS spread. However, note that after the GFC, even though CDS are originated and traded OTC, their terms and specifications have been standardised, and in particular CDS indices are originated with a fi xed CDS spread k and an initial exchange of money usually occurs between buyer and seller (as per the Team Project).</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Involves calculating the theoretical spread
+<ul dir="auto">
+<li dir="auto">So that the CDS initially has 0 value</li>
+<li dir="auto">No different to futures</li>
+<li dir="auto">When you enter into it upfront, no exchange of cash flows</li>
+</ul>
+</li>
+<li dir="auto">CDS indices bill ackman used have a standard spread, work out the initial amount of money that has to take place</li>
+</ul>
+</blockquote>
+<p dir="auto">So far we have the following CDS notation and terminology:</p>
+<ul dir="auto">
+<li dir="auto">F is the notional principal or face value.</li>
+<li dir="auto">R is the recovery rate.</li>
+<li dir="auto">k is the CDS spread.</li>
+<li dir="auto">kFd is the CDS premium, where d is the time between
+premium payments in years (say d = 1/4 for quarterly).</li>
+<li dir="auto">(1 − R)F is the payout upon occurrence of a reference event.</li>
+</ul>
+<p dir="auto">For simplicity, we assume that the payout occurs at the end of the
+premium period in which a reference event occurs.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">If premiums are paid quarterly, CDS would end when a legally defined reference event occurs</li>
+<li dir="auto">buyer pays the accrued premium on the date</li>
+<li dir="auto">cashflows are paid on the payment date</li>
+<li dir="auto">Payouts and premiums are only paid on the payment date</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>1</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>t</mi><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">t_1 , . . . , t_N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8095em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is the premium payment and payout dates.</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>1</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>r</mi><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">r_1 , . . . , r_N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is the risk-free rate yield curve for these dates.</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">q_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is the (risk-neutral) probability of default in period i.
+<ul dir="auto">
+<li dir="auto">Probability of a reference event occurring in period i.</li>
+</ul>
+</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">s_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is the survival probability up to time <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">t_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> .
+<ul dir="auto">
+<li dir="auto">Probability that no reference event occurred up to time <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">t_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Derive a risk-neutral probability distribution</li>
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">s_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> probability that the credit default swap survives (hasn't vanished)</li>
+</ul>
+</blockquote>
+<hr dir="auto">
+<h3 dir="auto" id="example-4">Example</h3>
+<h2 dir="auto" id="alt-text-1"><img src="assets\IMG191.PNG" alt="alt text" data-src="assets/IMG191.PNG"></h2>
+<p dir="auto">Risk-neutral law of finance : The price of a derivative security, including a CDS, is the present value of its (risk-neutral) expected future cashflows discounted at the risk-free rate.</p>
+<p dir="auto">From the perspective of the protection buyer:</p>
+<ul dir="auto">
+<li dir="auto">The regular premium payments <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>F</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">kFd</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal">d</span></span></span></span> are cash outflows.</li>
+<li dir="auto">The payout <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>R</mi><mo stretchy="false">)</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">(1 − R)F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span> is a cash inflow.</li>
+</ul>
+<p dir="auto">So the value of a CDS to the protection buyer is</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Calculate the PV of future cash flows</li>
+<li dir="auto">Perspective of protection buyer</li>
+<li dir="auto">Potential payouts, value of the CDS is the PV of payouts and premiums</li>
+</ul>
+</blockquote>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>CDS value = PV( E [payouts]) − PV( E [premiums])</mtext></mrow><annotation encoding="application/x-tex">\text{CDS value = PV( E [payouts]) − PV( E [premiums])}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">CDS value = PV( E [payouts]) − PV( E [premiums])</span></span></span></span></span></span></p>
+</math>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Once it pays out, you stop paying the premiums</li>
+</ul>
+</blockquote>
+<p dir="auto">PV of expected payouts: At time <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">t_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> there is a payout of:</p>
+<ul dir="auto">
+<li dir="auto">(1 − R)F with probability q i .</li>
+<li dir="auto">0 otherwise.</li>
+</ul>
+<p dir="auto">Hence, the expected payout at time <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">t_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="double-struck">E</mi><mo stretchy="false">[</mo><mi>p</mi><mi>a</mi><mi>y</mi><mi>o</mi><mi>u</mi><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false">]</mo><mo>=</mo><msub><mi>q</mi><mi>i</mi></msub><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>R</mi><mo stretchy="false">)</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">\mathbb{E}[payout_i]=q_i(1-R)F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathbb">E</span><span class="mopen">[</span><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal">yo</span><span class="mord mathnormal">u</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span></span></p>
+</math>
+<p dir="auto">and the present value of all of the expected payouts is</p>
+<p dir="auto"><img src="assets\IMG192.PNG" alt="alt text" data-src="assets/IMG192.PNG"></p>
+<p dir="auto">PV of expected premiums: At time <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">t_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> there is a premium of:</p>
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>F</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">kFd</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal">d</span></span></span></span> with probability <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">s_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> .</li>
+<li dir="auto">0 otherwise (note that we’re ignoring any accrued premium).
+Hence, the expected premium at time <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">t_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="double-struck">E</mi><mo stretchy="false">[</mo><mi>p</mi><mi>r</mi><mi>e</mi><mi>m</mi><mi>i</mi><mi>u</mi><msub><mi>m</mi><mi>i</mi></msub><mo stretchy="false">]</mo><mo>=</mo><msub><mi>s</mi><mi>i</mi></msub><mi>k</mi><mi>F</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">\mathbb{E}[premium_i]= s_ikFd</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathbb">E</span><span class="mopen">[</span><span class="mord mathnormal">p</span><span class="mord mathnormal">re</span><span class="mord mathnormal">mi</span><span class="mord mathnormal">u</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord mathnormal">d</span></span></span></span></span></p>
+</math>
+<p dir="auto">and the present value of all of the expected premiums is</p>
+<p dir="auto"><img src="assets\IMG193.PNG" alt="alt text" data-src="assets/IMG193.PNG"></p>
+<p dir="auto">The breakeven CDS spread k that which gives the CDS 0 initial value:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mi>V</mi><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">[</mo><mi>p</mi><mi>a</mi><mi>y</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>s</mi><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo>=</mo><mi>P</mi><mi>V</mi><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">[</mo><mi>p</mi><mi>r</mi><mi>e</mi><mi>m</mi><mi>i</mi><mi>u</mi><mi>m</mi><mi>s</mi><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">PV( E [payouts]) = PV( E [premiums]),</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mopen">[</span><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal">yo</span><span class="mord mathnormal">u</span><span class="mord mathnormal">t</span><span class="mord mathnormal">s</span><span class="mclose">])</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mopen">[</span><span class="mord mathnormal">p</span><span class="mord mathnormal">re</span><span class="mord mathnormal">mi</span><span class="mord mathnormal">u</span><span class="mord mathnormal">m</span><span class="mord mathnormal">s</span><span class="mclose">])</span><span class="mpunct">,</span></span></span></span></span></p>
+</math>
+<p dir="auto">which we rearrange to get</p>
+<p dir="auto"><img src="assets\IMG194.PNG" alt="alt text" data-src="assets/IMG194.PNG"></p>
+<p dir="auto">We now give an example showing how the calculate the CDS spread k.</p>
+<hr dir="auto">
+<h3 dir="auto" id="example-cont-1">Example cont.</h3>
+<p dir="auto"><img src="assets\IMG195.PNG" alt="alt text" data-src="assets/IMG195.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">In an examl situation, the question you would get</li>
+<li dir="auto">premiums paid quarterly, yield curve given</li>
+<li dir="auto">We will not go into survival probabilities</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG196.PNG" alt="alt text" data-src="assets/IMG196.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">At each quarter, a default probability</li>
+<li dir="auto">Find PV of expected payoff's</li>
+<li dir="auto">Look at CDS spreads in assignment
+<ul dir="auto">
+<li dir="auto">won't have reference events at the same time</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Modelled the default correlation
+<ul dir="auto">
+<li dir="auto">only for good econopmic times</li>
+<li dir="auto">When the housing market when bust, an extreme event where everyone went bust</li>
+</ul>
+</li>
+<li dir="auto">CDS spreads were so low because they were mispriced
+<ul dir="auto">
+<li dir="auto">systemic event,</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG197.PNG" alt="alt text" data-src="assets/IMG197.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">CDS spread is 2.52%</li>
+<li dir="auto">How much premium would they have to pay over the life of the event
+<ul dir="auto">
+<li dir="auto">What to they expect the payoff to be</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="pricing-cont-1">Pricing cont</h2>
+<p dir="auto">We now present an example of CDS pricing in which the CDS spread is set to k = 1% (100 basis points), a common market convention. We calculate the upfront cashfl ow needed between the protection buyer and seller at the initiation of the CDS. I’ll use the same fi gures as above.</p>
+<hr dir="auto">
+<h3 dir="auto" id="example-5">Example</h3>
+<p dir="auto"><img src="assets\IMG198.PNG" alt="alt text" data-src="assets/IMG198.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">If it is positive it benefits the seller, and will need to pay to open the CDS</li>
+<li dir="auto">PV payouts is the same</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG199.PNG" alt="alt text" data-src="assets/IMG199.PNG"></p>
+<h3 dir="auto" id="speculation-and-hedging-1">Speculation and hedging</h3>
+<p dir="auto">We already mentioned an example of hedging with CDS:</p>
+<ul dir="auto">
+<li dir="auto">You hold a portfolio of debt securities, buy CDS protection on it,
+and upon the occurrence of a reference event the CDS gives you a
+payout to off set the reduction in your portfolio’s value.
+CDS can also provide a hedge against, or enable you to speculate on,
+macroeconomic or political events that impact market-wide credit risk
+perceptions, as in the case study of Bill Ackman and Pershing Square.</li>
+<li dir="auto">We give an example of this that may assist with the Team Project.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Hold a portfolio of  debt securities and buy protection</li>
+<li dir="auto">give you the payout but the exact amount it falls by</li>
+<li dir="auto">credit risk perceptions</li>
+</ul>
+</blockquote>
+<hr dir="auto">
+<h3 dir="auto" id="example-6">Example</h3>
+<p dir="auto"><img src="assets\IMG200.PNG" alt="alt text" data-src="assets/IMG200.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Probability of default increased (default probability spiked)</li>
+<li dir="auto">A company, or a basket of companies</li>
+<li dir="auto">how could they close it out and earn a profit?</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG201.PNG" alt="alt text" data-src="assets/IMG201.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Assume recovery rate is the same, may not be</li>
+<li dir="auto">expected payout went up because default probability went up</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG202.PNG" alt="alt text" data-src="assets/IMG202.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Macroeconomic event occurs and economy changes</li>
+<li dir="auto">Value of CDS position increases</li>
+<li dir="auto">Speculating on the probability of default credit risk perceptions
+<ul dir="auto">
+<li dir="auto">Calculate the breakeven CDS spread also</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto">So the point of this example is:</p>
+<ul dir="auto">
+<li dir="auto">There was a large macroeconomic shock.</li>
+<li dir="auto">Default probabilities, consequently breakeven CDS spreads, spiked.</li>
+<li dir="auto">CDS spreads went from 252 basis points to 1025 basis points.</li>
+<li dir="auto">The buyer made a large profit upon closing out the CDS position.</li>
+<li dir="auto">This profit could be used to off set losses on say a share portfolio, like Bill Ackman did at Pershing Square (using CDS index).</li>
+<li dir="auto">Alternatively, this is an example of how CDS can be used to speculate, like Michael Burry did during the GFC:</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Used to speculate and make money</li>
+</ul>
+</blockquote>
+<p dir="auto"><strong>Remark</strong></p>
+<p dir="auto">Now possibly revisit Michael Burry’s GFC CDS trade, in which he
+purchased CDS on mortgage backed bonds. “On May 19, 2005,
+Mike Burry did his fi rst subprime-mortgage deals. He bought $ 60
+million of credit-default swaps from Deutsche Bank— $ 10 million
+each on six diff erent bonds.” The rest is history and was made
+into the movie The Big Short, and here’s the scene of Michael
+Burry negotiating to purchase CDS of various banks.</p>
+<h3 dir="auto" id="cds-spreads-and-risk-premiums-1">CDS spreads and risk premiums</h3>
+<p dir="auto">We now provide a simple, intuitive argument for why the CDS spread k
+on the reference asset of a reference entity should approximately equal the
+reference entity’s risk premium over the risk-free rate r. Suppose you:</p>
+<ul dir="auto">
+<li dir="auto">Purchase a portfolio of the reference asset (say bond) for total face
+value F, receiving a YTM of y, and approximately at par value.</li>
+<li dir="auto">At par means the coupon rate is also y.</li>
+<li dir="auto">Purchase CDS protection over the reference asset for a notional
+principal of F and paying a breakeven CDS spread of k.
+We also assume that (i) the reference asset coupon payments and CDS
+premiums occur on the same dates (both semiannual, or quarterly, etc)
+and (ii) the maturity dates of the reference asset and CDS align.</li>
+</ul>
+<p dir="auto">Then your “net YTM” is the reference asset’s YTM y you receive minus
+the CDS spread k you pay. Consider the two possible scenarios:</p>
+<ul dir="auto">
+<li dir="auto">No reference event: If there’s no reference event over the life of
+the reference asset/CDS, then you realise the “net YTM” of y − k.</li>
+<li dir="auto">Reference event occurs: If a reference event occurs at some point
+over the life of the reference asset/CDS, the CDS payout enables
+you to recover the full face value F, which you can then invest at
+the risk-free rate r for the remaining time to maturity.
+Hence, the CDS turns the reference asset into a risk-free investment.</li>
+<li dir="auto">The “net YTM” should equal the risk free rate, that is, y − k = r
+and thus k = y − r, or else there is an obvious arbitrage opportunity.</li>
+</ul>
+<h3 dir="auto" id="cds-indices-1">CDS Indices</h3>
+<p dir="auto">We now turn to CDS indices, which are useful for your Team Project.</p>
+<p dir="auto">A CDS index such as those in the CDX or iTraxx families are tradable
+baskets of single-name CDS. They have specifi c rules/features:</p>
+<ul dir="auto">
+<li dir="auto">Number, country, credit rating, etc, of constituent reference entities.</li>
+<li dir="auto">Various maturities, but 5 years is the most common.</li>
+<li dir="auto">Typically a fi xed CDS spread of k = 1% (100 basis points).</li>
+<li dir="auto">Usually quoted as a breakeven CDS spread in basis points.
+<ul dir="auto">
+<li dir="auto">It’s roughly an average of the constituent breakeven CDS spreads.</li>
+</ul>
+</li>
+<li dir="auto">Constituent CDS are typically evenly weighted.
+<ul dir="auto">
+<li dir="auto">Typically all have same notional principal in the CDS index.</li>
+</ul>
+</li>
+<li dir="auto">Premiums typically paid quarterly.</li>
+<li dir="auto">Index constituents usually updated semiannually.</li>
+<li dir="auto">Precisely defi ned reference events leading to payouts.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Name - company or government</li>
+<li dir="auto">Have a CDS of 100M, of 10 companies, evenly weighted in terms of notional principle</li>
+<li dir="auto">update CDS constituents</li>
+<li dir="auto">precisely defined reference events</li>
+</ul>
+</blockquote>
+<p dir="auto">An important aspect of CDS indices is how payouts occur:</p>
+<ul dir="auto">
+<li dir="auto">If a reference entity of a single-name CDS constituent in the CDS index experiences a reference event, the CDS index protection buyer receives the payout as per usual from that single-name CDS.</li>
+<li dir="auto">This single-name CDS then ceases to exist as per normal for a single-name CDS, and is removed form the CDS index.</li>
+<li dir="auto">The CDS index continues to exist, just with 1 less constituent.</li>
+</ul>
+<hr dir="auto">
+<h3 dir="auto" id="example-7">Example</h3>
+<p dir="auto"><img src="assets\IMG203.PNG" alt="alt text" data-src="assets/IMG203.PNG"></p>
+<p dir="auto">Of interest to you for the Team Project, Bill Ackman at Pershing Square
+purchased the CDX NA Investment Grade, CDX NA High Yield and
+iTraxx Europe CDS indices to hedge his portfolio exposure.</p>
+<p dir="auto"><img src="assets\IMG204.PNG" alt="alt text" data-src="assets/IMG204.PNG"></p>
+
+</main>
+</body>
+</html>
