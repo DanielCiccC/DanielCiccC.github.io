@@ -489,7 +489,7 @@ Also, suppose that in the above we used daily returns $(A_n − A_{n−1} )/A_{n
 
 - Then the optimal hedge quantity is given by
 
-$$h = \bar{\rho} \frac{\bar{\sigma}_{A}V }{\bar{\sigma}_KF}$$
+  $$h = \bar{\rho} \frac{\bar{\sigma}_{A}V }{\bar{\sigma}_KF}$$
 
 Where 
 
