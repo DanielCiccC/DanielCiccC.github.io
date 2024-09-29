@@ -77,7 +77,7 @@ Suppose individuals are asked to construct 90% confidence intervals
 >
 > Ask height of Mt Everest:
 > - 90% of people should give me the correct answer
->   - If less than 90%, showing traits ov overconfidence
+>   - If less than 90%, showing traits of overconfidence
 > - Total accuracy is less than the confidence interval that we want
 ---
 
