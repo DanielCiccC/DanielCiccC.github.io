@@ -56,6 +56,9 @@ schema.</li>
 </li>
 </ul>
 <p dir="auto"><img src="assets\IMG88.PNG" alt="alt text" data-src="assets/IMG88.PNG"></p>
+<p dir="auto">Also:</p>
+<pre><code dir="auto">level -&gt; Salary
+</code></pre>
 <p dir="auto"><strong>Modification Anomalies</strong></p>
 <ul dir="auto">
 <li dir="auto">Updating the Salary of one developer, makes the “Developer” salary inconsistent.</li>
@@ -127,14 +130,7 @@ The word loss in lossless refers to loss of information, not loss of tuples</p>
 </blockquote>
 <p dir="auto"><img src="assets\IMG93.PNG" alt="alt text" data-src="assets/IMG93.PNG"></p>
 <h2 dir="auto" id="functional-dependencies">Functional dependencies</h2>
-<p dir="auto">Databases allow you to say that one attribute determines another
-through a functional dependency</p>
-<p dir="auto"><strong>Example above:</strong></p>
-<ul dir="auto">
-<li dir="auto">Assume level determines salary but not id. We say that there is a
-functional dependency from level to salary (i.e., if we know an
-employee's level, we can find their salary )</li>
-</ul>
+<p dir="auto">Databases allow you to say that one attribute determines another through a functional dependency</p>
 <h3 dir="auto" id="formal-definition">Formal Definition</h3>
 <p dir="auto">A functional dependency (FD) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">X \rightarrow Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> holds on relation R if for every
 legal instance of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> such as <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>, for all tuples t1, t2:</p>

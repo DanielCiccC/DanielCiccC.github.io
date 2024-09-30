@@ -28,6 +28,11 @@ schema.
 
 ![alt text](assets\IMG88.PNG)
 
+Also:
+```
+level -> Salary
+```
+
 **Modification Anomalies**
 - Updating the Salary of one developer, makes the “Developer” salary inconsistent.
 
