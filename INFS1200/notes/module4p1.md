@@ -29,10 +29,11 @@ schema.
 ![alt text](assets\IMG88.PNG)
 
 **Modification Anomalies**
-- Updating the Salary of one developer, makes the “Developer” salary 
-inconsistent.
+- Updating the Salary of one developer, makes the “Developer” salary inconsistent.
+
 **Deletion Anomalies**
 - By deleting ”Charlie” we no longer store the salary of “Administration” Staff.
+
 **Insertion Anomalies**
 - We cannot store the salary of a “Cook” if no employee has that position.
 - Inserting a new row with a different Salary for a  developer, makes the “Developer” salary inconsistent.
@@ -81,13 +82,7 @@ The word loss in lossless refers to loss of information, not loss of tuples
 
 ## Functional dependencies
 
-Databases allow you to say that one attribute determines another 
-through a functional dependency
-
-**Example above:**
-- Assume level determines salary but not id. We say that there is a 
-functional dependency from level to salary (i.e., if we know an 
-employee's level, we can find their salary )
+Databases allow you to say that one attribute determines another through a functional dependency
 
 ### Formal Definition
 A functional dependency (FD) $X \rightarrow Y$ holds on relation R if for every 
@@ -124,7 +119,7 @@ implicit ones
 
 ![alt text](assets\IMG95.PNG)
 
-### Closure of X
+### Closure of X (Finding Candidate Keys)
 Closure of $X$ or $X^{+}$ is the set of attributes determined by X under F. 
 
 ![alt text](assets\IMG96.PNG)
@@ -183,4 +178,3 @@ $$p= \frac{forward-spot}{spot} \cdot \frac{360}{N}$$
 
 - p > (<) 0 is the annualized percentage premium (discount) of the denominator currency
 - N – maturity of the forward contract (or number of days forward)
-
