@@ -7525,6 +7525,18 @@ a.anchor-link {
 <li><strong>Index Credit Default Swaps (CDS)</strong>: A detailed evaluation of using CDS contracts to hedge against market downturns.</li>
 </ol>
 <p>Each of these options is evaluated not only for its immediate financial impact but also through the lens of potential future market scenarios.</p>
+<h3 id="Main-Assumptions-and-Limitations-maintained-over-Hedging-concepts:">Main Assumptions and Limitations maintained over Hedging concepts:<a class="anchor-link" href="#Main-Assumptions-and-Limitations-maintained-over-Hedging-concepts:">¶</a></h3><p><strong>1. Share Price</strong> <br/>
+One observed limitation includes discrepancies between the share price of Pershing Square's portfolio and the price listed on Yahoo Finance. For example, the share price of Chipotle Mexican Grill (Ticker: CMG) was derived by dividing the value of their stake by the number of shares in the portfolio:</p>
+<p>$$\text{Share price (CMG)} = \frac{\text{Value}}{\text{Number of Shares}} = \frac{\text{\$1,494,560,000}}{\text{1,724,310}} = \$866.76$$</p>
+<p>However, Yahoo Finance reported an <em>Adjusted Close</em> share price of $17.34. This analysis assumes that the reported number of shares in the case study was an error, but the valuation of the stake itself is accurate. Consequently, the number of shares has been adjusted in the accompanying Excel file (<code>Pershing_portfolio.xlsx</code>), which was imported for this analysis.</p>
+<p><strong>2. Evaluation Date</strong> <br/>
+For the purposes of this assignment, we will assume that the evaluation date (i.e. the date in which Pershing Square must make a decision on their Hedging strategy) is February 21, 2020.</p>
+<p><strong>3. Hedging amount</strong> <br/></p>
+<ul>
+<li>Sections <strong>1</strong> and <strong>2</strong>, only the notional value of the portfolio was considered.</li>
+<li>Sections <strong>3</strong> and <strong>4</strong> utilised optimal hedging techniques to determine the number of contracts to hedge.</li>
+<li>Section <strong>5</strong> used the notional value of Pershing Square's portfolio to hedge with CDS. Further analysis was performed on the CDS positions Pershing Square wrote later in the report.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7535,10 +7547,12 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="1.-No-Hedging">1. No Hedging<a class="anchor-link" href="#1.-No-Hedging">¶</a></h1><p>The analysis of the no-hedging strategy disregards several key considerations, such as contract size, number of contracts, position, and ongoing cashflows, since no hedging instruments are employed. Instead, the focus is on the valuation of Pershing Square’s portfolio over a six-month (180-day) period, assessing the projected value of its holdings throughout this time horizon.</p>
-<h3 id="Limitations">Limitations<a class="anchor-link" href="#Limitations">¶</a></h3><p>One observed limitation includes discrepancies between the share price of Pershing Square's portfolio and the price listed on Yahoo Finance. For example, the share price of Chipotle Mexican Grill (Ticker: CMG) was derived by dividing the value of their stake by the number of shares in the portfolio:</p>
-<p>$$\text{Share price (CMG)} = \frac{\text{Value}}{\text{Number of Shares}} = \frac{\text{\$1,494,560,000}}{\text{1,724,310}} = \$866.76$$</p>
-<p>However, Yahoo Finance reported an <em>Adjusted Close</em> share price of $17.34. This analysis assumes that the reported number of shares in the case study was an error, but the valuation of the stake itself is accurate. Consequently, the number of shares has been adjusted in the accompanying Excel file (<code>Pershing_portfolio.xlsx</code>), which was imported for this analysis.</p>
+<h1 id="1.-No-Hedging">1. No Hedging<a class="anchor-link" href="#1.-No-Hedging">¶</a></h1><p>The analysis of the no-hedging strategy disregards several key considerations, such as contract size, number of contracts, position, and ongoing cashflows since no hedging instruments are employed. Instead, the focus is on the valuation of Pershing Square’s portfolio over a six-month (180-day) period and the projected value of their holdings.</p>
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#1.1-Unhedged-Portfolio-Value">1.1 Unhedged Portfolio Value</a></li>
+<li><a href="#1.2-Acknowledgements-and-Tooling">1.2 Acknowledgements and Tooling</a></li>
+</ul>
 </div>
 </div>
 </div>
@@ -7647,7 +7661,7 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>**Constants and *Exhibit 3***</p>
+<p>***Exhibit 3* data**</p>
 </div>
 </div>
 </div>
@@ -7666,7 +7680,7 @@ Note: you may need to restart the kernel to use updated packages.
 <span class="n">evaluation_date_next</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">evaluation_date</span><span class="p">,</span> <span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">'</span><span class="p">)</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">days</span><span class="p">)</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="n">sheet_name</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7769,10 +7783,69 @@ Note: you may need to restart the kernel to use updated packages.
 <td>No</td>
 <td>2019-05-01</td>
 </tr>
+<tr>
+<th>5</th>
+<td>Howard Hughes</td>
+<td>HHH</td>
+<td>6.386835e+06</td>
+<td>777.15</td>
+<td>121.679987</td>
+<td>0.1478</td>
+<td>0.111</td>
+<td>Yes</td>
+<td>2010-11-01</td>
+</tr>
+<tr>
+<th>6</th>
+<td>Agilent Technologies</td>
+<td>A</td>
+<td>8.807760e+06</td>
+<td>727.17</td>
+<td>82.560152</td>
+<td>0.0284</td>
+<td>0.104</td>
+<td>No</td>
+<td>2019-09-01</td>
+</tr>
+<tr>
+<th>7</th>
+<td>Fannie Mae</td>
+<td>FNMA</td>
+<td>1.310045e+08</td>
+<td>417.90</td>
+<td>3.189966</td>
+<td>0.1131</td>
+<td>0.060</td>
+<td>No</td>
+<td>2013-10-01</td>
+</tr>
+<tr>
+<th>8</th>
+<td>Freddie Mac</td>
+<td>FMCC</td>
+<td>7.201052e+07</td>
+<td>220.35</td>
+<td>3.059969</td>
+<td>0.1108</td>
+<td>0.031</td>
+<td>No</td>
+<td>2013-10-01</td>
+</tr>
 </tbody>
 </table>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="1.1-Unhedged-Portfolio-Value">1.1 Unhedged Portfolio Value<a class="anchor-link" href="#1.1-Unhedged-Portfolio-Value">¶</a></h2>
 </div>
 </div>
 </div>
