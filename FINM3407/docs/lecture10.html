@@ -1,0 +1,731 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-10-8-1">Lecture 10 (8)</h1>
+<h1 dir="auto" id="behavioral-explanations-for-anomalies-1">Behavioral Explanations for Anomalies</h1>
+<p dir="auto">[Behavioral Explanations for Anomalies]</p>
+<ul dir="auto">
+<li dir="auto">Brief Introduction: Behavioral Explanations for Anomalies</li>
+<li dir="auto">Earnings Announcements and Value vs. Growth
+<ul dir="auto">
+<li dir="auto">What is behind lagged reactions to earnings announcements</li>
+<li dir="auto">What is behind the value advantage</li>
+</ul>
+</li>
+<li dir="auto">What is Behind Momentum and Reversal
+<ul dir="auto">
+<li dir="auto">Daniel-Hirshleifer-Subrahanyam Model</li>
+<li dir="auto">Grinblatt-Han Model and Explaining Momentum</li>
+<li dir="auto">Barberis-Shleifer-Vishny Model and Explaining Momentum and Reversal</li>
+</ul>
+</li>
+<li dir="auto">Rational Explanations
+<ul dir="auto">
+<li dir="auto">Important Risk Adjustment</li>
+<li dir="auto">Fama-French Three Factor Models/Factor Zoo – Tutorial</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="traditional-finance-vs-behavioural-finance-1">Traditional Finance vs behavioural finance</h3>
+<p dir="auto"><img src="assets\IMG73.PNG" alt="alt text" data-src="assets/IMG73.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Should be able to access them correctly</li>
+<li dir="auto">Should be unsystematic
+<ul dir="auto">
+<li dir="auto">Even if they form a consensus, arbitrageurs should be able to correct the price</li>
+<li dir="auto">Prices should always be efficient</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Behavioural finance</p>
+<ul dir="auto">
+<li dir="auto">Behavioural factors effecting our decisions</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="emh-empirical-challenges-1">EMH: Empirical Challenges</h3>
+<p dir="auto">Anomalies</p>
+<ol dir="auto">
+<li dir="auto">Excess volatility: Shiller (1981) and Le Roy (1981)</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Stock prices are far more volatile than would be justified by simple model in which prices are
+equal to the discounted expected future dividends.</li>
+</ul>
+<ol start="2" dir="auto">
+<li dir="auto">Equity premium puzzle</li>
+<li dir="auto">Time series stock market predictability puzzle</li>
+<li dir="auto">Cross-sectional price-scaled anomalies: value premium</li>
+<li dir="auto">Over- and under-reaction [Today’s focus]</li>
+<li dir="auto">Seasonal effects</li>
+<li dir="auto">“Twin shares” with different prices</li>
+</ol>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Challenges to EMH</li>
+<li dir="auto">Always comparing to EMH
+<ul dir="auto">
+<li dir="auto">First three, talk about next week</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="introduction-behavioral-explanations-or-anomalies-2">Introduction: Behavioral Explanations or Anomalies</h3>
+<ul dir="auto">
+<li dir="auto">Four key anomalies reviewed were:</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">the small-firm effect;</li>
+<li dir="auto">lagged reactions to earnings announcements;</li>
+<li dir="auto">value versus growth;</li>
+<li dir="auto">momentum and reversal</li>
+</ol>
+<p dir="auto"><img src="assets\IMG74.PNG" alt="alt text" data-src="assets/IMG74.PNG"></p>
+<h3 dir="auto" id="review-of-trading-rules-that-have-shown-to-be-effective-1">Review of Trading Rules that Have Shown to be Effective.</h3>
+<ol dir="auto">
+<li dir="auto">Small cap portfolios vs. large cap portfolios?</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Small cap wins out!</li>
+</ul>
+<ol start="2" dir="auto">
+<li dir="auto">Portfolios formed based on P/Es:</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Low P/Es do better!</li>
+</ul>
+<ol start="3" dir="auto">
+<li dir="auto">Earnings announcements momentum:</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Reaction to extreme announcements is slow!</li>
+</ul>
+<ol start="4" dir="auto">
+<li dir="auto">Value vs. growth portfolios</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">(usually, value firm has a high book-to-market, and a growth firm has a low book-to-market):</li>
+<li dir="auto">Go for value!</li>
+</ul>
+<ol start="5" dir="auto">
+<li dir="auto">Predictable serial correlation:</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Medium-term momentum!</li>
+</ul>
+<ol start="6" dir="auto">
+<li dir="auto">Long-term winners vs. losers:</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Reversals: losers become winners!</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Small firms tend to outperform the big ones
+<ul dir="auto">
+<li dir="auto">Big firms should have more information and outperform in general</li>
+</ul>
+</li>
+<li dir="auto">Investor tend to underreact to earnings announcements
+<ul dir="auto">
+<li dir="auto">Don't react immediately, have momentum</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="what-is-behind-value-advantage-2">What is Behind Value Advantage?</h3>
+<p dir="auto"><img src="assets\IMG75.PNG" alt="alt text" data-src="assets/IMG75.PNG"></p>
+<ul dir="auto">
+<li dir="auto">It has been suggested that there are four main reasons why retail and institutional investors have favoured glamour
+stocks over value stocks:</li>
+</ul>
+<ol dir="auto">
+<li dir="auto">They are committing judgment errors in extrapolating past growth rates too far into the future and are thus surprised
+when value stocks shine and glamour stocks disappoint.  This is so-called “expectational error hypothesis”</li>
+<li dir="auto">Because of representativeness, investors may assume that good companies are good investments
+These first two reasons are mistakes of judgment.  Likely individual investors are more subject to committing them than
+institutional investors.</li>
+</ol>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">P/E ratio
+<ul dir="auto">
+<li dir="auto">have a high PE ratio, paying a lot more compared to their book value</li>
+<li dir="auto">indicates high growth rate - considered a 'growth' stock</li>
+<li dir="auto">Low P/E ratio considered an undervalued stock</li>
+<li dir="auto">Simply looking at the price, look really cheap - new firm, may no be great, etc.</li>
+</ul>
+</li>
+<li dir="auto">Literature looks at two streams</li>
+</ul>
+</blockquote>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Individual investors have a
+<ul dir="auto">
+<li dir="auto">Looking at the past performance - firm is still going to have a growth rate in the future</li>
+<li dir="auto">Assume a constant/terminal growth rate in DCF, e.g., will have higher prices for the stock</li>
+<li dir="auto">Thinking that because of high growth rate, higher growth in the future and give it a higher price and you are surprised when it underperforms in the future</li>
+</ul>
+</li>
+<li dir="auto">Representativeness
+<ul dir="auto">
+<li dir="auto">For an investment to be good, generate high returns - but should be reflected in the share price</li>
+<li dir="auto">If the price is really high now - high growth rate currently</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="what-is-behind-value-advantage-3">What is Behind Value Advantage?</h3>
+<ul dir="auto">
+<li dir="auto">Next two reasons (Reason 3 and Reason 4) are due to agency considerations  (rational
+reasons to shy away from value):</li>
+<li dir="auto">Because  sponsors  view  companies  with  steady  earnings  and  buoyant  growth  as  prudent
+investments,  so  as  to  appear  to  be  following  their  fiduciary  obligation  to  act  prudently,
+institutional investors may shy away from hard-to-defend, out-of-favour value stocks.</li>
+<li dir="auto">Also  because  of  career  concerns,  institutional  investors,  who  are  evaluated  over  short
+horizons, may be nervous about tilting too far in any direction thus incurring tracking error.<br>
+A value strategy would require such a tilt and may take some time to pay off, so it is in this
+sense risky.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Should work in the best interest for their client
+<ul dir="auto">
+<li dir="auto">Not easy - have performance pressure, have to show they are generating income</li>
+<li dir="auto">find another agent/manager</li>
+<li dir="auto">Prefer to invest in growth stocks, easier to justify</li>
+</ul>
+</li>
+<li dir="auto">Managers don't have a lng time horizon
+<ul dir="auto">
+<li dir="auto">Evaluate the performance at least once a year</li>
+<li dir="auto">different to long term investment</li>
+<li dir="auto">To show they are good at what they are doing, easy to realise their returns</li>
+<li dir="auto">Value stocks, not quick for the price to be corrected</li>
+<li dir="auto">Safer/less risky to invest in growth stocks compared to value stocks</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="explaining-long-run-value-outperformance-1">Explaining Long-Run Value Outperformance</h3>
+<ul dir="auto">
+<li dir="auto">Take a growth stock with a high P/E or P/B.</li>
+</ul>
+<p dir="auto">Such stocks have a period of anticipated higher-than-normal growth.</p>
+<ul dir="auto">
+<li dir="auto">What if market overestimates length of supernormal growth period?</li>
+</ul>
+<p dir="auto">When it becomes clear that mean reversion is occurring, growth stocks deteriorate.
+Similar story (in reverse) can be told for value stocks.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">In long run, value stocks outperform growth stocks</li>
+<li dir="auto">If investors are too optimistic, push the value even higher</li>
+<li dir="auto">Price should always come back to fundamental value</li>
+<li dir="auto">Short term period of time, reach too far then the price of stocks will crash</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="introduction-behavioral-explanations-or-anomalies-3">Introduction: Behavioral Explanations or Anomalies</h3>
+<ul dir="auto">
+<li dir="auto">Recall the existence of intermediate-term momentum and long-term reversal.</li>
+<li dir="auto">Putting these results together suggests that investors first underreact and then overreact.</li>
+<li dir="auto">In essence we have a combination of the underreaction seen in the earnings announcement literature and the overreaction requiring reversal that we see in the value literature.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG76.PNG" alt="alt text" data-src="assets/IMG76.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">In the market, don't always see momentum and reversal</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="daniel-hirshleifer-subrahmanyam-dhs-model-explaining-reversal-1">Daniel-Hirshleifer-Subrahmanyam (DHS) Model: Explaining Reversal</h3>
+<p dir="auto">DHS model is based on overconfident investors overestimating the precision of their own private signals.</p>
+<p dir="auto">== &gt; This leads to a negative serial correlation in price movements (i.e., reversal).</p>
+<p dir="auto"><img src="assets\IMG77.PNG" alt="alt text" data-src="assets/IMG77.PNG"></p>
+<p dir="auto">DHS model details</p>
+<ul dir="auto">
+<li dir="auto">Begin in equilibrium at t=0.
+<ul dir="auto">
+<li dir="auto">At t=1 private noisy information appears (one can assume informed investors undertake some analysis generating private signals).</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Formally, the private information at t=1 is: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>=</mo><mi>θ</mi><mo>+</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">s_1 = \theta + \epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ϵ</span></span></span></span></p>
+<ul dir="auto">
+<li dir="auto">where θ is a mean-zero random variable with variance  𝝈𝜽𝟐   that represents the change in
+the true value of the security</li>
+<li dir="auto">At t=2 true value of security is revealed.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Signal is a combination of true information and noise</li>
+<li dir="auto">Idea of why we have reversal, we over estimate our private signal</li>
+<li dir="auto">Overconfident, information you have is more accurate than it is</li>
+</ul>
+<p dir="auto">Black dot, equilibrium price</p>
+<ul dir="auto">
+<li dir="auto">like a pendulum, push back to the opposite direction</li>
+</ul>
+<p dir="auto">true value theta plus some error epsilon</p>
+<ul dir="auto">
+<li dir="auto">normally distributed</li>
+</ul>
+</blockquote>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>=</mo><mi>θ</mi><mo>+</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">s_1  = \theta + \epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ϵ</span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">Signal is observed imperfectly because of a mean-zero noise term with variance  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>ϵ</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0611em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ϵ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span>.</li>
+<li dir="auto">Overconfidence is a factor because informed traders exaggerate in their own minds the
+accuracy of their private signal,</li>
+</ul>
+<p dir="auto">Using  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>c</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0611em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span>  instead of  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>ϵ</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0611em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ϵ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span> where,  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>c</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0611em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span>   &lt;  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>ϵ</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0611em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ϵ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></p>
+<ul dir="auto">
+<li dir="auto">Given the risk neutrality of the informed traders, the price at t = 1 settles at the expected
+value of θ conditional on <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">s_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</li>
+<li dir="auto">At t = 2, the price reaches the true value of the security</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">difference is between overconfident investors
+<ul dir="auto">
+<li dir="auto">miscollaborated - narrow range of precision</li>
+<li dir="auto">Overestimate the accuracy - give a really precise answer</li>
+</ul>
+</li>
+<li dir="auto">Calculate the variance - going to give a much narrower variance and you think the variance is going to be narrower</li>
+<li dir="auto">Variance is another measure of risk level</li>
+<li dir="auto">Variance for level of overconfidence investors is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>c</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0611em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span>
+<ul dir="auto">
+<li dir="auto">If overconfident, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>c</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0611em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span> &lt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>ϵ</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0611em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ϵ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="dhs-model-price-response-at-t--1-1">DHS Model: Price Response at t = 1</h3>
+<p dir="auto">Consider the price at t = 1. The challenge is to separate the information from the noise.</p>
+<ul dir="auto">
+<li dir="auto">Intuitively, if  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>ϵ</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0611em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ϵ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span>  is low relative to  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>θ</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0972em;vertical-align:-0.2831em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.4169em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">θ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2831em;"><span></span></span></span></span></span></span></span></span></span>, it will be rational to believe that the <strong>signal is primarily the true change in value</strong>.</li>
+<li dir="auto">On the other hand, if <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>ϵ</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0611em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">ϵ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span> ε is high relative to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>θ</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma ^2_\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0972em;vertical-align:-0.2831em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.4169em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">θ</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2831em;"><span></span></span></span></span></span></span></span></span></span>, it will be rational to believe that the <strong>signal is primarily noise</strong>.
+In the former case, it will be rational to alter valuations almost as much as s 1 .</li>
+</ul>
+<p dir="auto"><img src="assets\IMG78.PNG" alt="alt text" data-src="assets/IMG78.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Overconfident investors will assign a lower variance than the rational one</li>
+<li dir="auto">If variance is smaller, signal will be greater</li>
+</ul>
+</blockquote>
+<hr dir="auto">
+<h3 dir="auto" id="example-1">Example</h3>
+<p dir="auto"><img src="assets\IMG79.PNG" alt="alt text" data-src="assets/IMG79.PNG"></p>
+<hr dir="auto">
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Compare what overconfident and rational investors will think</li>
+<li dir="auto">Calculate for a rational investor, what we will expect the price to be</li>
+<li dir="auto">Most cases, would expect investors to overreact to news
+<ul dir="auto">
+<li dir="auto">What is the difference between true investors and noise</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="price-path-graphs-1">Price Path Graphs</h2>
+<p dir="auto">The  DHS  model  offers  a  number  of  testable implications.</p>
+<p dir="auto">Solid lines in the graph show price paths assuming that overconfident traders drive prices.</p>
+<p dir="auto">Broken  lines  show  price  paths  assuming  no overconfidence.</p>
+<ul dir="auto">
+<li dir="auto">For example, managers should issue shares when they believe their stocks to be overvalued and buy them back when they believe them to be undervalued.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG80.PNG" alt="alt text" data-src="assets/IMG80.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Should they issue new shares?</li>
+<li dir="auto">When it crashes, pay less to investors</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="grinblatt-han-model-to-explain-momentum-1">Grinblatt-Han Model (to explain momentum)</h3>
+<p dir="auto">Grinblatt-Han model (hereafter GH), is based on prospect theory, mental accounting, and the disposition effect.</p>
+<ul dir="auto">
+<li dir="auto">In brief, the tendency for winners (losers) to be sold too quickly (slowly) suggests a delayed reaction to good/bad news, because reference-point-influenced investors have demand curves that reflect recent performance.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG81.PNG" alt="alt text" data-src="assets/IMG81.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Because of how we treat past winners and losers</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG82.PNG" alt="alt text" data-src="assets/IMG82.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Past winning and losing performance is going to affect us</li>
+<li dir="auto">Going to be more risk averse</li>
+<li dir="auto">If a stock is not performing well, going to hold for longer
+<ul dir="auto">
+<li dir="auto">Momentum in having the price continuing to decrease</li>
+<li dir="auto">underreaction causing us to have momentum</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="grinblatt-han-model-e28093-intrinsic-value-3">Grinblatt-Han Model – Intrinsic Value</h3>
+<ul dir="auto">
+<li dir="auto">Consider the (intrinsic) value (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">f_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>) of a security in the GH model. It follows a random walk, only changing as relevant news (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ε</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">ε_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">ε</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>) arrives:</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>f</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>f</mi><mi>t</mi></msub><mo>+</mo><msub><mi>ϵ</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">f_{t+1} = f_t + \epsilon_{t+1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9028em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6389em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">Demand comes from two groups of investors: rational investors (R) and those who are influenced by <strong>Prospect Theory and Mental Accounting (PT/MA)</strong>. The first group has the following demand function:</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>D</mi><mo stretchy="false">(</mo><mi>R</mi><msub><mo stretchy="false">)</mo><mi>t</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><mi>b</mi><mo stretchy="false">(</mo><msub><mi>f</mi><mi>t</mi></msub><mo>−</mo><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">D(R)_t = 1+b(f_t - p_t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo stretchy="false">(</mo><mi>R</mi><msub><mo stretchy="false">)</mo><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">D(R)_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is the demand coming from rational investors at t; and pt is the share price at t. Note that b &gt; 0 reflects the slope of the rational demand curve.
+To the extent that value exceeds price, rational investors will demand more units.</p>
+</li>
+<li dir="auto">
+<p dir="auto">PT/MA investors account for the second component of overall market demand:</p>
+</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>D</mi><mo stretchy="false">(</mo><mi>R</mi><msub><mo stretchy="false">)</mo><mi>t</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><mi>b</mi><mo stretchy="false">(</mo><msub><mi>f</mi><mi>t</mi></msub><mo>−</mo><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>+</mo><mi>λ</mi><mo stretchy="false">(</mo><mi>r</mi><mi>e</mi><msub><mi>f</mi><mi>t</mi></msub><mo>−</mo><msub><mi>p</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">D(R)_t = 1+b(f_t - p_t) + \lambda (ref_t - p_t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">λ</span><span class="mopen">(</span><span class="mord mathnormal">re</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">D(PT/MA)t is demand at t arising from those investors who are influenced by prospect theory and mental accounting. Here, ref t  is the
+reference point and λ (&gt;0) denotes the relative importance of the capital gain component to PT/MA investors.
+Note that, if ref t  &gt; p t , demand is higher since the price is in the risk-seeking domain.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">intrinsic value is larger than the price, then it is undervalued</li>
+<li dir="auto">larger the difference between the intrinsic value and the price, the more we will want it</li>
+<li dir="auto">mental accounting + disposition effect</li>
+</ul>
+<p dir="auto">Investors are affected by their reference point <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>e</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">ref</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">re</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> and the stock market price <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">p_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+<ul dir="auto">
+<li dir="auto">if the second term is negative, going to cause the demand to decrease</li>
+<li dir="auto">Even if something is losing, causing you to buy more of it</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="market-price-1">Market Price</h3>
+<ul dir="auto">
+<li dir="auto">If PT/MA investors; are μ% of all investors; we aggregate demand over the two groups; normalize supply at one
+unit; and clear the market; the resulting equilibrium price is:</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>p</mi><mi>t</mi></msub><mo>=</mo><mi>ω</mi><msub><mi>f</mi><mi>t</mi></msub><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>ω</mi><mo stretchy="false">)</mo><mi>r</mi><mi>e</mi><msub><mi>f</mi><mi>t</mi></msub><mo separator="true">;</mo><mtext>  </mtext><mtext>  </mtext><mi>ω</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mi>μ</mi><mi>λ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">p_t = \omega f_t + (1- \omega ) ref_t; \;\; \omega = \frac{1}{1+ \mu \lambda}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mclose">)</span><span class="mord mathnormal">re</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2019em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal">λ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+</math>
+<p dir="auto">To interpret, the market price is a weighted average of value and the reference point.</p>
+<ul dir="auto">
+<li dir="auto">Underreaction to news is clear. Say, beginning from a steady state (where f t  = p t  = ref t ), positive news
+pushes up value.</li>
+<li dir="auto">Price will react in the same direction, but it will be held back somewhat by the reference point (which, as
+will be shown, moves more slowly).</li>
+<li dir="auto">Only over time will price reach the right level. Because this takes time, we have momentum.</li>
+<li dir="auto">Further, the more PT/MA investors there are (higher μ), and the more important is the capital gain
+component to them (higher λ), the more influential is the reference point and the greater is the
+underreaction.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Intrinsic value should reflect true price</li>
+<li dir="auto">Previously it was 1
+<ul dir="auto">
+<li dir="auto">Price should immediately reflect</li>
+</ul>
+</li>
+<li dir="auto">Rationally should adjust our reference point, which we don't always do</li>
+<li dir="auto">old number into equation - number is underreacting</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="grinblatt-han-model-e28093-intrinsic-value-4">Grinblatt-Han Model – Intrinsic Value</h3>
+<ul dir="auto">
+<li dir="auto">This enters the model in the following reference point adjustment equation, where the speed of
+adjustment is v:</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>r</mi><mi>e</mi><msub><mi>f</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>v</mi><msub><mi>p</mi><mi>t</mi></msub><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>v</mi><mo stretchy="false">)</mo><mi>r</mi><mi>e</mi><msub><mi>f</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">ref_{t+1} = vp_t + (1-v)ref_t </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9028em;vertical-align:-0.2083em;"></span><span class="mord mathnormal">re</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mord mathnormal">re</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+</math>
+<ul dir="auto">
+<li dir="auto">For example, assume that a particular PT/MA investor bought shares at $5 (so her reference point is $5).</li>
+<li dir="auto">The price now rises to $7 for a capital gain of $2, but her reference point remains at $5.</li>
+<li dir="auto">Suppose she needs cash and sells her shares to another PT/MA investor for $7.</li>
+<li dir="auto">His reference point will be $7, which is his purchase price (not hers).</li>
+<li dir="auto">Therefore, over time because of trading, the reference point moves toward the market price.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">How quickly they adjust their reference point to market value</li>
+<li dir="auto">v - speed of adjustment</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="grinblatt-han-model-e28093-simulation-based-on-gh-model-1">Grinblatt-Han Model – Simulation Based on GH Model</h3>
+<p dir="auto"><img src="assets\IMG83.PNG" alt="alt text" data-src="assets/IMG83.PNG"></p>
+<p dir="auto">Figure 13.3 shows the evolution of prices and reference points
+over the next 24 months (to t = 25).</p>
+<ul dir="auto">
+<li dir="auto">Price moves toward value, but it does so gradually because PT/MA investors fixate on the reference point, which moves more slowly.</li>
+<li dir="auto">The  reader  will  of  course  realize  that  real-world  securities never exhibit momentum as “clean” as in this example. The reason  is  that  new  additional  information  (affecting  ft)  is often arriving.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Start to adjust reference point, slowly reach intrinsic value</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="grinblatt-han-model-e28093-intrinsic-value-5">Grinblatt-Han Model – Intrinsic Value</h3>
+<p dir="auto"><img src="assets\IMG84.PNG" alt="alt text" data-src="assets/IMG84.PNG"></p>
+<p dir="auto">Nevertheless, a stock’s unrealized capital gain is likely to be highly correlated with past returns,
+so standard momentum is easily implied by the model.
+Capital gain should be a better predictor of future returns than past returns.</p>
+<ul dir="auto">
+<li dir="auto">Indeed, Grinblatt and Han find this to be true: the   momentum effect disappears
+once the PT/MA disposition effect is controlled for.</li>
+<li dir="auto">Still, one weakness of the GH model is that it only explains momentum, not reversal.</li>
+</ul>
+<p dir="auto">For this reason, we turn to the final model, which explains both momentum and
+reversal. BSV model: Explaining momentum/reversal</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Talking about momentum model only</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="barberis-shleifer-vishy-bsv-model-explaining-momentumreversal-1">Barberis-Shleifer-Vishy (BSV) Model: Explaining Momentum/Reversal</h3>
+<p dir="auto">Recall sun and clouds example:</p>
+<ul dir="auto">
+<li dir="auto">At first people were too anchored.</li>
+<li dir="auto">Then they were too influenced by new evidence.
+What about earnings?</li>
+<li dir="auto">Anchoring and conservative adjustment dictates that investors are slow to change views on earnings.</li>
+<li dir="auto">First surprise tends to be followed by a few more.</li>
+<li dir="auto">Eventually recency and base rate underweighting take over and past performance is extrapolated into
+the future.</li>
+<li dir="auto">Overreaction: The current high-growth/low-growth period is viewed as longer than is logical.
+Their Model leads to a world where investors at first underreact, and then overreact to salient news.</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">Markets overreact slowly!!!</p>
+<ul dir="auto">
+<li dir="auto">Still anchored on initial information</li>
+<li dir="auto">then overreact to new information that causes reversal</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="bsv-model-formalises-this-story-1">BSV Model Formalises This Story</h3>
+<ul dir="auto">
+<li dir="auto">Earnings follow a random walk:
+<ul dir="auto">
+<li dir="auto">Changes in earnings are +y or –y with equal probability</li>
+</ul>
+</li>
+<li dir="auto">But investors, being coarsely calibrated, believe that stocks switch between two regimes.</li>
+</ul>
+<p dir="auto">Suppose we assume that a random walk holds for earnings (nt):</p>
+n_{t+1}  =n_t + 𝜺_{t+1}
+</math>
+<ul dir="auto">
+<li dir="auto">Regime 1. Earnings mean-revert:</li>
+</ul>
+<p dir="auto">Given a positive (negative) earnings change, there is a low probability of another positive (negative) earnings change in the next period. Underreaction.</p>
+<ul dir="auto">
+<li dir="auto">Regime 2. Earnings are persistent:</li>
+</ul>
+<p dir="auto">Given a positive/negative earnings change, there is a high probability of another positive/negative earnings change in the next period. Overreaction</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">adjusting probability of probability, changes regime</li>
+</ul>
+</blockquote>
+<p dir="auto">At all points in time, individuals must guess whether the world is in Regime 1 or 2.
+Estimated probabilities will rise and fall as events unfold:</p>
+<ul dir="auto">
+<li dir="auto">Alternating changes (e.g., +y, –y, +y, –y) will lead people to believe that Regime 1 is in effect.</li>
+<li dir="auto">While a sequence of like earnings changes (e.g., +y, +y, +y, +y; or -y, –y, -y, –y) will lead people to believe that Regime 2 is in effect.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Start to predict in regime
+<ul dir="auto">
+<li dir="auto">Another series of events for series of positive or negative, will always be in regime 2</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">It can be shown that if earnings changes are the same at both t and t + 1, the perceived probability that regime 1 is in
+place is the following function of the parameters of the model:</li>
+</ul>
+<p dir="auto"><img src="assets\IMG85.PNG" alt="alt text" data-src="assets/IMG85.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span> transition probability into regime 1 next period
+<ul dir="auto">
+<li dir="auto">Likelihood of being in regime 1</li>
+</ul>
+</li>
+<li dir="auto">If you believe the chance of us being in regime 1 next period is less than the chance of us being in regime 1 now, means that we think we will be in regime two</li>
+<li dir="auto">If you think the chance that we will be in regime one is higher next period compared to what we
+have now, then we will continue to be in Region one.</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Turning to valuation, it is assumed that all earnings are returned to investors in the form of dividends. Using a standard
+dividend discount model, value is:</li>
+</ul>
+<p dir="auto"><img src="assets\IMG86.PNG" alt="alt text" data-src="assets/IMG86.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">assume 100% of earning distributed out as dividends</li>
+<li dir="auto">Rationally speaking
+<ul dir="auto">
+<li dir="auto">Second part in green pushing the price away from fundamental</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="simulation-based-on-bsv-model-1">Simulation Based on BSV Model</h3>
+<p dir="auto"><img src="assets\IMG87.PNG" alt="alt text" data-src="assets/IMG87.PNG"></p>
+<p dir="auto">To see how the model works in terms of the revision over
+time of the probability that the world is in regime 1, refer to
+Figure 13.4.</p>
+<p dir="auto">Note that q t  rises after a sign switch but falls after a sign
+continuation.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">line is the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span></li>
+<li dir="auto">When the earning kept on swapping, when we start to see some consistent performance, probability starts to decrease, more chance of being in regime 2</li>
+<li dir="auto">How this beliefs affects overreaction and underreaction</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="explaining-momentum-and-reversal-1">Explaining Momentum and Reversal</h3>
+<p dir="auto">Investor beliefs about regime will dictate prices:</p>
+<ul dir="auto">
+<li dir="auto">When investors think Regime 1, they underreact to earnings changes</li>
+<li dir="auto">When investors think Regime 2, they overreact to earnings changes</li>
+</ul>
+<p dir="auto">So, this model can explain both underreaction and overreaction.</p>
+<p dir="auto">And momentum and reversal empirical regularities can be simulated.</p>
+<ul dir="auto">
+<li dir="auto">Consistent with momentum papers, Barberis, Shleifer, and Vishny find intermediate-term (1 &amp; 2 years) momentum, and reversal for longer-term intervals (3 &amp; 4 years)</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">General theory is the same</li>
+<li dir="auto">Overeaction will cause reversal</li>
+<li dir="auto">Underreactions, not moving quick enough</li>
+<li dir="auto">Don't need to know too much</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="simulated-returns-from-earnings-and-returns-sorts-based-on-bsv-model-1">Simulated Returns from Earnings and Returns Sorts Based on BSV Model</h3>
+<p dir="auto"><img src="assets\IMG88.PNG" alt="alt text" data-src="assets/IMG88.PNG"></p>
+<h3 dir="auto" id="rational-explanation---inappropriate-risk-adjustment-1">Rational Explanation - Inappropriate Risk Adjustment</h3>
+<ul dir="auto">
+<li dir="auto">Early tests only assume that appropriate risk adjustment only considers market or beta
+risk (as in CAPM).</li>
+<li dir="auto">Joint-Hypothesis Problem Illustrated with a Casino Example:
+<ul dir="auto">
+<li dir="auto">Slot machines at a casino advertise a -2% return, but a true loss is -5%.</li>
+<li dir="auto">Over time, gamblers adjust their expectations to this 5% loss, making it the new norm.</li>
+<li dir="auto">An economist testing for efficiency might mistakenly use the advertised -2% as the benchmark, leading to incorrect conclusions about market efficiency.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">On top of beta,</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="inappropriate-risk-adjustment-1">Inappropriate Risk Adjustment.</h3>
+<ul dir="auto">
+<li dir="auto">Fama and French's 1992 Paper:
+Challenged the then-accepted CAPM model, suggesting it didn't work anymore.
+CAPM indicates only a security's beta should impact expected returns.
+Their data (from 1963-1990) contradicted this, showing no positive relation between stock returns and market betas.</li>
+<li dir="auto">Multi-dimensional Stock Risks:
+Findings suggest that stock risks have multiple dimensions, including size and the book-to-market equity ratio.
+This led to the development of the Fama-French three-factor model.</li>
+<li dir="auto">Anomalies' Interpretation:
+Anomalies in stock returns either indicate investor errors or improper risk adjustment.</li>
+</ul>
+<h3 dir="auto" id="fama-french-three-factor-model-1">Fama-French Three Factor Model</h3>
+<p dir="auto"><img src="assets\IMG89.PNG" alt="alt text" data-src="assets/IMG89.PNG"></p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Where the return on security or portfolio I at t is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>R</mi><mi>t</mi><mi>i</mi></msubsup></mrow><annotation encoding="application/x-tex">R^i_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0717em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8247em;"><span style="top:-2.453em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span>:</p>
+</li>
+<li dir="auto">
+<p dir="auto">The risk-free rate at t is   <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mrow><mi>f</mi><mo separator="true">,</mo><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">R_{f,t}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></p>
+<ul dir="auto">
+<li dir="auto">Market Return:  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mrow><mi>m</mi><mo separator="true">,</mo><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">R_{m ,t}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li dir="auto">Value vs. growth</li>
+<li dir="auto">Small cap vs. large cap</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">One issue is what underlies the second and third Fama-French risk factors. Fama and French suggest that different aspects of so called “distress risk” are being captured.</p>
+</li>
+<li dir="auto">
+<p dir="auto">But, these distressed stocks do not perform appreciably worse in bad times.</p>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">adjust for cap size and value of the premium</li>
+<li dir="auto">Should also capture distress risk
+<ul dir="auto">
+<li dir="auto">Should also measure overall risk</li>
+<li dir="auto">Smaller firms would be more constrained</li>
+<li dir="auto">size should capture everything</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="conclusion-1">Conclusion</h3>
+<ol dir="auto">
+<li dir="auto">Post-announcement earnings drift appears to be driven by anchoring on the part of investors and analysts.</li>
+<li dir="auto">The value premium is likely due to both behavioral and agency-related institutional factors.</li>
+<li dir="auto">A number of theoretical models have been formulated to account for momentum and reversal.</li>
+<li dir="auto">The DHS model explains reversal using overconfidence; the GH  model  explains  momentum using  prospect  theory,
+mental accounting, and the disposition effect; and the BSV model accounts for both momentum and reversal and is
+based on the anchoring and representativeness heuristics.</li>
+<li dir="auto">Much of the empirical evidence is consistent with the implications of these models.</li>
+<li dir="auto">Another view is that risk has been improperly accounted for in the research that has identified these anomalies, and a
+proper treatment of risk will render these anomalies as merely risk premiums.</li>
+<li dir="auto">The Fama-French three-factor model has value and small cap as risk factors over and above market risk.</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Under Fama-French, value is a risk factor, not an anomaly. Some have questioned whether greater exposure to the
+value factor really does entail additional risk.</li>
+</ul>
+<ol start="8" dir="auto">
+<li dir="auto">Momentum is not credibly accounted for by any risk-adjustment technique.</li>
+</ol>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">IMPORTANT</li>
+<li dir="auto">Don't worry too much about understanding the model</li>
+</ul>
+</blockquote>
+
+</main>
+</body>
+</html>

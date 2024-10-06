@@ -10,8 +10,8 @@
 - Why the lense of behaviour finance is important
 
 #### Body
-- How can Rudy Wong add value to his clients DONE
-- What kind of value is Rudy Wong adding DONE
+- How can Rudy Wong add value to his clients 
+- What kind of value is Rudy Wong adding 
 - Contents - need to advise bob and Jackie
 - What type of behavioural biases they are exhibiting
   - What type of behavioural finance does this fall under
@@ -20,7 +20,7 @@
 - discuss with the lense of behavioural finance
 
 - What kind of investment strategies could Rudy Wong use to approach the Millers and Kleins?
-- Advantage/disadvantage of strategies
+- Advantage/disadvantage of strategies given the behavioural tendencies of Bob Miller and the Kleins
 - Active and passive ways for security selection
 
 #### Conclusion
@@ -47,7 +47,7 @@ Second part - ideas
 - Provide clear evidence
 
 
-Notes about Bob Miller:
+### Notes about Bob Miller:
 
 Loss Aversion: Bob shows a tendency to fear losses more than valuing equivalent gains. This is evident in his strong emotional response to market downturns, where the fear of losing money drives him to consider moving away from equities and toward more stable, lower-risk investments such as bonds
 

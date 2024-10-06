@@ -16,7 +16,6 @@ Factors meaning no arbitrage
   - CDS seller might not fulfil their obligations, the CDS spread could be higher than the bond yield spread
   - Leads to positive basis
 - Bond liquidity
-  - Bonds are less liquid that CDS contracts
+  - Bonds are less liquid than CDS contracts
   - Higher yield to cmpensate lack of liquidity, increases the bond yield spread and drives the basis lower (negative basis)
   
-
