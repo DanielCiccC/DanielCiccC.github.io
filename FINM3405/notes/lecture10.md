@@ -5,8 +5,8 @@
 
 - We start with FRN since they’re needed for swap pricing.
 
-A (forward looking) floating rate note (FRN) is a fi xed interest security that promises to pay regular coupon payments which are calculated from a reference interest rate (such as Term SOFR, Euribor, etc) and also pay back the notional principal or face value at maturity.
-- FRN are important in their own right but we mostly cover them since they’re useful for pricing fi xed-for-floating interest rate swaps.
+A (forward looking) floating rate note (FRN) is a fixed interest security that promises to pay regular coupon payments which are calculated from a reference interest rate (such as Term SOFR, Euribor, etc) and also pay back the notional principal or face value at maturity.
+- FRN are important in their own right but we mostly cover them since they’re useful for pricing fixed-for-floating interest rate swaps.
 - They’re used to price the hypothetical “floating leg” of the swap. But what do we mean by “forward looking”?
 
 > - Need to price floating rate notes to price interest rate swaps
@@ -327,8 +327,8 @@ The other pay fixed, receive floating party could close out their profitable swa
 \$ 4,078.07 profit (net of fees and the swap dealer’s spread etc).
 
 Consequently, to speculate with interest rate swaps:
-- If you believe that the yield curve will shift up, then enter into an interest rate swap as the pay fi xed, receive floating party.
-- If you believe that the yield curve will shift down, then enter into an interest rate swap as the receive fi xed, pay floating party.
+- If you believe that the yield curve will shift up, then enter into an interest rate swap as the pay fixed, receive floating party.
+- If you believe that the yield curve will shift down, then enter into an interest rate swap as the receive fixed, pay floating party.
 
 
 ---
@@ -359,5 +359,3 @@ interest rates you enter into a swap as the receive fixed party.
 - If you invested in fixed coupon bonds, to hedge your
 exposure to increasing interest rates you enter into a swap as
 the receive floating party.
-
-

@@ -80,6 +80,8 @@ In other words, a relation is in 3NF iff for any non-trivial FD X $\rightarrow$ 
 
 ![alt text](assets\IMG105.PNG)
 
+---
+
 ### BCNF synthesis
 
 ![alt text](assets\IMG106.PNG)
