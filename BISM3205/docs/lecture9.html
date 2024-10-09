@@ -1,0 +1,519 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-9">Lecture 9</h1>
+<p dir="auto">Week 09: Security Technology (Part 2)</p>
+<ul dir="auto">
+<li dir="auto">Proxies (continued)</li>
+<li dir="auto">Virtual Private Networks (VPNs)</li>
+<li dir="auto">Intrusion Detection Systems (IDSs)</li>
+</ul>
+<h3 dir="auto" id="tcpip-layers">TCP/IP layers</h3>
+<ul dir="auto">
+<li dir="auto">HUB  Layer 1 Physical</li>
+<li dir="auto">Bridge  Layer 2 Data Link</li>
+<li dir="auto">Switch  Layer 2 Data Link</li>
+<li dir="auto">Router  Layer 3 Network</li>
+<li dir="auto">Firewall Layer 3/4 Network/Transport</li>
+<li dir="auto">DMZ</li>
+<li dir="auto">Server</li>
+<li dir="auto">Proxy  Layer 7/4 Application/Transport</li>
+<li dir="auto">VPN</li>
+<li dir="auto">IDS</li>
+</ul>
+<h3 dir="auto" id="security-the-demilitarized-zone-dmz">Security: the Demilitarized Zone (DMZ)</h3>
+<p dir="auto"><img src="assets\IMG138.PNG" alt="alt text" data-src="assets/IMG138.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Untrusted network</li>
+<li dir="auto">Bordered router
+<ul dir="auto">
+<li dir="auto">destinted for anything</li>
+</ul>
+</li>
+<li dir="auto">Switch to other computers</li>
+<li dir="auto">Proxy servers, for web traffic, file transfer traffic, etc.
+<ul dir="auto">
+<li dir="auto">Proxies will only allow for the correct protocol</li>
+<li dir="auto">Only traffic from the proxy service is allowed to go through the firewall</li>
+<li dir="auto">Coming from a proxy I know, will allow it through</li>
+<li dir="auto">HTTP or HTTPS, FTP, etc.</li>
+</ul>
+</li>
+<li dir="auto">Hacker cannot know the network topology</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="home-web-server---what-is-happening">Home web server - What is happening</h3>
+<p dir="auto"><img src="assets\IMG139.PNG" alt="alt text" data-src="assets/IMG139.PNG"></p>
+<ul dir="auto">
+<li dir="auto">Basis of online business – but no security unless we add it (refer back to TLS discussion)</li>
+<li dir="auto">What information is available to the business Web Server?</li>
+</ul>
+<p dir="auto">WhatIsMyIPAddress.com (or worse, <a href="https://amiunique.org/fp">https://amiunique.org/fp</a>)</p>
+<ul dir="auto">
+<li dir="auto">Now let’s consider the same web request from a business network</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">How can you be unique</li>
+<li dir="auto">combination of settings make you unique</li>
+<li dir="auto">Use this to find fingerprint and used for advertising, etc.</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="business-web-surfing-%E2%80%93-what-is-happening">Business web surfing – what is happening?</h3>
+<p dir="auto"><img src="assets\IMG140.PNG" alt="alt text" data-src="assets/IMG140.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Easily build a profile of who is coming out of this router</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">It’s easy to build up (profile) a business network which has no controls in place to mitigate this risk!</li>
+<li dir="auto">From a hacker/security analyst viewpoint – easier to attack what you know!</li>
+</ul>
+<h3 dir="auto" id="the-benefits-of-a-proxy-1">The benefits of a proxy (#1)</h3>
+<p dir="auto"><img src="assets\IMG141.PNG" alt="alt text" data-src="assets/IMG141.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">web proxy can cache web pages for you</li>
+<li dir="auto">Go to amazon multiple times e.g. will get the page out of its cache</li>
+<li dir="auto">Can also log where/when you go
+<ul dir="auto">
+<li dir="auto">Go to malicious websites, etc.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto">Benefit #1:</p>
+<ul dir="auto">
+<li dir="auto">Privacy (for individual machines &amp; the network overall)</li>
+<li dir="auto">Privacy in terms of web surfing history – this is a large component of ‘business
+intelligence’ – the outside world knows the web sites we visit – how long we stay on
+these sites – what parts of these sites we access. Web sites we visit have a very
+good idea of our details – including (approximately) where we live.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG142.PNG" alt="alt text" data-src="assets/IMG142.PNG"></p>
+<p dir="auto">Benefit #2:</p>
+<ul dir="auto">
+<li dir="auto">Speed – faster retrieval of web pages  AND</li>
+<li dir="auto">Bandwidth – reduces the need to go out onto the Internet – this is being responsible
+at  a  corporate  level  –  it  should  be  part  of  the  Issue  Specific  Security  policy
+(‘Planning’ in week 3)</li>
+</ul>
+<p dir="auto"><img src="assets\IMG143.PNG" alt="alt text" data-src="assets/IMG143.PNG"></p>
+<ul dir="auto">
+<li dir="auto">Management – web usage enforced as per Issue Specific Security</li>
+<li dir="auto">Activity logging – we see this in all entries – this is just an example</li>
+<li dir="auto">‘Blacklisted Sites’ – we see this in the 4th entry – the proxy stops the corporate network being used for
+‘undesirable’ activities</li>
+<li dir="auto">All these details are logged for a long term record and ongoing analysis</li>
+<li dir="auto">We shall come back to this issue – proxies assist in good management of corporate policy</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Implement corporate proxy</li>
+<li dir="auto">Crackstation.net - can't reverse the hash but knows what it is</li>
+<li dir="auto">Can be visited from the UQ network, used for education purposes
+<ul dir="auto">
+<li dir="auto">Other websites are blocked by UQ</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="proxy-types">Proxy types</h3>
+<p dir="auto">Transparent Proxy</p>
+<ul dir="auto">
+<li dir="auto">Definition: A transparent proxy, also known as an intercepting or inline proxy, intercepts the client’s requests without modifying them.</li>
+<li dir="auto">Characteristics:
+<ul dir="auto">
+<li dir="auto">The client is unaware of the proxy’s presence.</li>
+<li dir="auto">The client’s IP address is visible to the destination server.</li>
+<li dir="auto">Often used for content filtering, caching, and monitoring.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">served faster and monitor what you visit</li>
+</ul>
+</blockquote>
+<p dir="auto">Non-Transparent Proxy</p>
+<ul dir="auto">
+<li dir="auto">Definition: A non-transparent proxy, also known as an anonymous proxy, modifies the client’s requests before forwarding them to the
+destination server.</li>
+<li dir="auto">Characteristics:
+<ul dir="auto">
+<li dir="auto">The client is aware of the proxy’s presence.</li>
+<li dir="auto">The client’s IP address is hidden from the destination server.</li>
+<li dir="auto">Often used for privacy, security, and bypassing geo-restrictions.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Can modify the clients request before forwarding to the destination server</li>
+<li dir="auto">IP address is hidden from the destination server
+<ul dir="auto">
+<li dir="auto">Georestrictions - VPN</li>
+<li dir="auto">Cannot go from one point in the world to another</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto">Explicit Proxy</p>
+<ul dir="auto">
+<li dir="auto">Definition: An explicit proxy requires the client to configure their browser or application to use the proxy server.</li>
+<li dir="auto">Characteristics:
+<ul dir="auto">
+<li dir="auto">The client must be configured to use the proxy.</li>
+<li dir="auto">Can be either transparent or non-transparent.</li>
+<li dir="auto">Often used in corporate environments for access control and monitoring.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Config in the browser, will go to that particular proxy</li>
+<li dir="auto">used in corporate envrionments for access control and monitoring</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="proxies-%E2%80%93-in-summary">Proxies – in summary</h3>
+<ul dir="auto">
+<li dir="auto">Proxies are firewalls – application ‘layer’ firewalls</li>
+<li dir="auto">Proxies are specialized – they only deal with ‘their’ protocol (e.g. web, email) – this is completely different to layer 3/4 firewalls that look at everything (all protocols)</li>
+<li dir="auto"><strong>Proxies can analyse the data in packets</strong> – again this is different to layer 3/4 firewalls that only analyse the packet headers – proxies are therefore slower than packet filtering firewalls – but the ‘nasty stuff’ is always in the data!</li>
+<li dir="auto">Proxies are very efficient in implementing corporate web policy</li>
+<li dir="auto">We have talked about a proxy as a single role entity – actually there are ‘forward’ and ‘reverse’ proxies (diagram below) – we treat them as a single entity</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Proxies go at the application layer</li>
+<li dir="auto">Look at the data and analyse what is in the data</li>
+</ul>
+</blockquote>
+<h2 dir="auto" id="virtual-private-networks-vpns">Virtual private networks (VPNs)</h2>
+<ul dir="auto">
+<li dir="auto">Transparent proxies cannot encrypt data!</li>
+<li dir="auto">A significant need for private, secure network connection between businesses (e.g. professional practices, SMEs, even corporates); any entity using data communication capability of unsecured, public network</li>
+<li dir="auto">The need to maintain the business policies when workers are remote from the business (but using the business network). This usually involves the VPN working in cooperation with the corporate proxy server.</li>
+<li dir="auto">VPN must accomplish:
+<ul dir="auto">
+<li dir="auto">Encryption of ALL incoming and outgoing data</li>
+<li dir="auto">Authentication</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Proxies cannot decrypt on encrypt data</li>
+<li dir="auto">Proxies cannot deal with encrypted data</li>
+<li dir="auto">Buy a box - or install software</li>
+<li dir="auto">Connection between software - anything between two endpoints is totally encrypted
+<ul dir="auto">
+<li dir="auto">Software installed on your computer instead of a physical box - VPN client</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG144.PNG" alt="alt text" data-src="assets/IMG144.PNG"></p>
+<p dir="auto">This is exactly the result that many situations need - all communications secured – regardless of the type of sending application! Let’s consider two popular scenarios for VPN usage in business</p>
+<p dir="auto">(1)Transport mode</p>
+<ul dir="auto">
+<li dir="auto">Allows user to establish secure link directly with remote host, encrypting only data contents of packet</li>
+<li dir="auto">Most popular use:
+<ul dir="auto">
+<li dir="auto">Remote access worker connects to office network over Internet by connecting to a VPN server on the perimeter</li>
+<li dir="auto">We say that using the VPN puts the remote worker ‘behind’ the firewall/router – ‘inside’ their work network. The worker can use all her/his usual work resources from home.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG145.PNG" alt="alt text" data-src="assets/IMG145.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">goes into the VPN box - then no longer encrypted</li>
+<li dir="auto">Server will log what you are doing</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG146.PNG" alt="alt text" data-src="assets/IMG146.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">It will authenticate you</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="virtual-private-networks-vpns-%E2%80%93-design-2">Virtual private networks (VPNs) – Design #2</h3>
+<p dir="auto">(2)Tunnel mode</p>
+<ul dir="auto">
+<li dir="auto">Organization establishes two perimeter tunnel servers</li>
+<li dir="auto">These servers act as encryption points, encrypting all traffic that will traverse unsecured network</li>
+<li dir="auto">Very popular secure solution for professional practices (e.g. medical, legal, dental)</li>
+</ul>
+<p dir="auto"><img src="assets\IMG147.PNG" alt="alt text" data-src="assets/IMG147.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">VPN server would even encrypt the encrypted stuff</li>
+<li dir="auto">HTTPS is already encrypted e.g.</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="geographical-restrictions-to-certain-services-are-problematical">‘Geographical’ restrictions to certain services are problematical</h3>
+<p dir="auto"><img src="assets\IMG148.PNG" alt="alt text" data-src="assets/IMG148.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Access something in America</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG149.PNG" alt="alt text" data-src="assets/IMG149.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">buy a VPN server in America</li>
+<li dir="auto">Want to watch an episode in Australia
+<ul dir="auto">
+<li dir="auto">Log into UQ's VPN</li>
+<li dir="auto">Would go against's UQ's policy of using their equipment for studying only</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="vpns-%E2%80%93-the-business-case">VPNs – the ‘business case’</h3>
+<ol dir="auto">
+<li dir="auto">VPNs provide a cheap, secure and flexible way to extend the ‘boundaries’ of the business network</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">The ‘teleworker’ – becoming more popular in many sectors</li>
+<li dir="auto">Business to business linkages – opening up (in a secure way) the necessary resources to business partners</li>
+</ul>
+<ol start="2" dir="auto">
+<li dir="auto">In the ‘teleworker’ model, the VPN also means that the remote network users (i.e. the ‘teleworkers’) must follow the same corporate policies as workers ‘within’ the network must embrace. This is a good result for the organization.</li>
+<li dir="auto">Point 2 is further enhanced (for web usage) when we consider how a VPN server and a Web Proxy server interact – we now look to consider this!</li>
+</ol>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Using UQ VPN - they will think you are on campus</li>
+<li dir="auto">Do a lot of stuff you can do in computer labs e.g.</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="proxies-and-vpns-%E2%80%93-working-together-1">Proxies AND VPNs – working together #1</h3>
+<p dir="auto"><img src="assets\IMG150.PNG" alt="alt text" data-src="assets/IMG150.PNG"></p>
+<p dir="auto"><img src="assets\IMG151.PNG" alt="alt text" data-src="assets/IMG151.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Encrypted, using HTTPS</li>
+<li dir="auto">Logged into UQ VPN e.g.</li>
+<li dir="auto">VPN encrypts again and goes to proxy server - will help to connect to a web server</li>
+<li dir="auto">At home secure tunnel to VPN</li>
+<li dir="auto">from VPN, decrypted, only HTTPS</li>
+<li dir="auto">web server is serving back HTTPS</li>
+<li dir="auto">Proxy server IP address is shown to the server
+<ul dir="auto">
+<li dir="auto">proxy server sends pack to VPN - VPN creates secure tunnel to device</li>
+<li dir="auto">HTTPS is going to brower, and is decrypted.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="intrusion-detection-system-ids--introduction-%E2%80%93-why-needed">Intrusion Detection System (IDS) :  Introduction – why needed?</h3>
+<p dir="auto"><img src="assets\IMG152.PNG" alt="alt text" data-src="assets/IMG152.PNG"></p>
+<ul dir="auto">
+<li dir="auto">We have a ‘secure’ network: firewalls, proxy, VPN server, ‘defence in depth’</li>
+<li dir="auto">At least 50% of security incidents originate INSIDE the organization</li>
+<li dir="auto">At staff member (PC #4) is a disgruntled employee – plans to steal corporate data (stored on the database server)</li>
+<li dir="auto">The employee plans the incident – stays late to avoid other staff</li>
+<li dir="auto">What is in place to stop this – the employee is ‘behind’ all the existing controls!</li>
+</ul>
+<p dir="auto">We need something like a ‘magnifying glass’ over the internal network - IDS</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">IDS is connected to a network segment</li>
+<li dir="auto">Alter the staff if there is something unusual going on</li>
+<li dir="auto">How does it work?
+<ul dir="auto">
+<li dir="auto">Host IDS</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="ids-intrusion-detection-systems-%E2%80%93-strategy-in-overview">IDS (intrusion detection systems) – strategy in overview</h3>
+<p dir="auto"><img src="assets\IMG153.PNG" alt="alt text" data-src="assets/IMG153.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">IDS knows OS, and the files OS needs</li>
+<li dir="auto">names of the files, length in bytes, etc.
+<ul dir="auto">
+<li dir="auto">changes contents of the file, adds and deletes files</li>
+<li dir="auto">Alters and operator whether this has happened or not</li>
+</ul>
+</li>
+<li dir="auto">Like a burglar alert system
+<ul dir="auto">
+<li dir="auto">Doesn't do anything - just raises alarm</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">IDS</p>
+<ul dir="auto">
+<li dir="auto">Looks at the packets that are going past on the network</li>
+<li dir="auto">Have to dimension IDS so it can handle packets</li>
+<li dir="auto">Put on a segment - IDS on each segment of network</li>
+<li dir="auto">Look at network traffic on the segments
+<ul dir="auto">
+<li dir="auto">Put one in the DMZ</li>
+<li dir="auto">in Private network</li>
+<li dir="auto">Special segment with credit cards - put an IDS there as well</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto">An intrusion detection system (IDS) – a software system - will:</p>
+<ul dir="auto">
+<li dir="auto">detect a violation of its configuration and activate alarm</li>
+<li dir="auto">enable administrators to configure systems to notify them directly of trouble</li>
+</ul>
+<p dir="auto">Important terminology</p>
+<ul dir="auto">
+<li dir="auto">Intrusion: type of attack on information assets in which instigator attempts to gain entry into or disrupt system with harmful intent</li>
+<li dir="auto">Incident response: identification of, classification of, response to, and recovery from an incident</li>
+<li dir="auto">Intrusion prevention: consists of activities that seek to deter an intrusion from occurring</li>
+<li dir="auto">Intrusion detection: consists of procedures and systems created and operated to detect system intrusions</li>
+</ul>
+<h3 dir="auto" id="ids-%E2%80%93-more-terminology">IDS – More terminology</h3>
+<ul dir="auto">
+<li dir="auto">Alert or alarm</li>
+<li dir="auto">False attack stimulus – event causes alarm – but no attack - false alarm this is a nuisance - can be time consuming for IT staff</li>
+<li dir="auto">False negative – does not respond to actual attack – this is very bad – must be avoided if possible (accuracy of IDS)</li>
+<li dir="auto">False positive – alarm/alert – but no attack – again, a nuisance!</li>
+<li dir="auto">Noise – ‘normal’ ongoing activity – usual operating situation</li>
+</ul>
+<h3 dir="auto" id="why-use-an-ids">Why use an IDS</h3>
+<ul dir="auto">
+<li dir="auto">Prevent problem behaviors by increasing the perceived risk of discovery and punishment</li>
+<li dir="auto">To manage insider risk – to complement firewalls</li>
+<li dir="auto">Detect attacks and other security violations</li>
+<li dir="auto">Detect preambles to attacks</li>
+<li dir="auto">Provide useful information about intrusions that take place (remember our discussion about
+‘risk actuals’ – the actual security incidents that the organization experiences)</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Used as a deterrent</li>
+<li dir="auto">IDS is monitoring
+<ul dir="auto">
+<li dir="auto">Alter before the attack happens</li>
+</ul>
+</li>
+<li dir="auto">How does the IDS tell the operator?</li>
+<li dir="auto">SMS, email, in a computer room, a screen on the wall</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="ids-2-types-of-operating-scope--2-detection-methods-used">IDS: 2 types of operating scope &amp; 2 detection methods used</h3>
+<ul dir="auto">
+<li dir="auto">IDS operating scope:
+<ul dir="auto">
+<li dir="auto">Network-based - NIDS</li>
+<li dir="auto">Host-based - HIDS</li>
+<li dir="auto">Application-based - AIDS (we do not treat this type)</li>
+</ul>
+</li>
+<li dir="auto">All IDSs use one of two detection methods:
+<ul dir="auto">
+<li dir="auto">Signature-based</li>
+<li dir="auto">Statistical anomaly-based</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">network IDS and host IDS</li>
+<li dir="auto">IDS for one particular piece of software</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="detection-method-1--signature-based-ids">Detection method (1) : signature-based IDS</h3>
+<ul dir="auto">
+<li dir="auto">Examine data traffic in search of patterns that match known signatures</li>
+<li dir="auto">Widely used because many attacks have clear and distinct signatures (patterns)</li>
+<li dir="auto">Problem with this approach: as new attack strategies are identified, the IDS’s database of signatures must be continually updated (very similar to the virus ‘pattern-matching approach)</li>
+</ul>
+<h3 dir="auto" id="detection-method-2--statistical-anomaly-based-ids">Detection method (2) : statistical anomaly-based IDS</h3>
+<ul dir="auto">
+<li dir="auto">The statistical anomaly-based IDS (stat IDS) or behavior-based IDS sample network activity to compare to traffic that is known to be normal</li>
+<li dir="auto">When measured activity is outside baseline setting, IDS will trigger an alert</li>
+<li dir="auto">This type of IDS can detect new types of attacks, but requires much more overhead and processing capacity than signature-based - may generate many false positives</li>
+</ul>
+<h3 dir="auto" id="ids-scope-1-network-based-ids-nids">IDS Scope (1): Network-Based IDS (NIDS)</h3>
+<ul dir="auto">
+<li dir="auto">Scope – where we place the IDS and the boundary set for the operation of the IDS</li>
+<li dir="auto">Resides on computer or appliance connected to segment of an organization’s network; looks for signs
+of attacks</li>
+<li dir="auto">Installed at specific place in the network where it can watch traffic going into and out of particular
+network segment</li>
+</ul>
+<p dir="auto"><img src="assets\IMG154.PNG" alt="alt text" data-src="assets/IMG154.PNG"></p>
+<h3 dir="auto" id="advantages-and-disadvantages-of-nidss">Advantages and Disadvantages of NIDSs</h3>
+<ul dir="auto">
+<li dir="auto">Good network design and placement of NIDS can enable organization to use a few devices to monitor
+large network</li>
+<li dir="auto">NIDSs not usually susceptible to direct attack and may not be detectable by attackers</li>
+<li dir="auto">Can become overwhelmed by network volume and fail to recognize attacks</li>
+<li dir="auto">Cannot analyze encrypted packets AND cannot reliably ascertain if attack was successful or not</li>
+</ul>
+<h3 dir="auto" id="ids-scope-2-host-based-ids">IDS Scope (2): Host-based IDS</h3>
+<ul dir="auto">
+<li dir="auto">Host-based IDS (HIDS) resides on a particular computer or
+server and monitors activity only on that system</li>
+<li dir="auto">Benchmark and monitor the status of key system files and
+detect when intruder creates, modifies, or deletes files</li>
+<li dir="auto">Most HIDSs work on the principle of configuration or change
+management</li>
+<li dir="auto">Advantage over NIDS: can usually be installed so that it can
+access information decrypted before/after traveling over
+network</li>
+<li dir="auto">Can detect local events on host systems and detect attacks
+that may elude a network-based IDS</li>
+</ul>
+<p dir="auto"><img src="assets\IMG155.PNG" alt="alt text" data-src="assets/IMG155.PNG"></p>
+<h3 dir="auto" id="advantages-and-disadvantages-of-hidss">Advantages and Disadvantages of HIDSs</h3>
+<ul dir="auto">
+<li dir="auto">Vulnerable both to direct attacks and attacks
+against host operating system</li>
+<li dir="auto">Susceptible to some denial-of- service
+attacks</li>
+<li dir="auto">Can use large amounts of disk space</li>
+<li dir="auto">Can inflict a performance overhead on its
+host systems</li>
+</ul>
+<h3 dir="auto" id="deploying-network-based-idss">Deploying Network-Based IDSs</h3>
+<ul dir="auto">
+<li dir="auto">NIST recommends several locations for NIDS machines
+<ul dir="auto">
+<li dir="auto">Location 1: behind external firewall, in the network DMZ</li>
+<li dir="auto">Location 2: On major network backbones</li>
+<li dir="auto">Location 3: On critical subnet(s)</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG156.PNG" alt="alt text" data-src="assets/IMG156.PNG"></p>
+
+</main>
+</body>
+</html>

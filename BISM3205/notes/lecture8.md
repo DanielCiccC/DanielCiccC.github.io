@@ -123,7 +123,7 @@ last week we talked of ‘secure communication protocols)
 
 We use the subnet mask used to determine which part of the IP address specifies the network and which part specifies the host.
 
-The mask uses a specific number of bits, set to 1, to identify the network portion of the IP address, and the remaining bits, set to 0, to identify the host portion, which separates the IP address into two distinct parts.
+The mask uses a specific number of bits, set to 1, to identify the network portion of the IP address, and the remaining bits, set to 0, to identify the host portion, which separates the IP address into two distinct parts.b 
 
 The subnet mask is a 32-bit number that is used in conjunction with the IP address to determine which part of the IP address specifies the network and which part specifies the host.
 
@@ -319,4 +319,3 @@ Operational logic:
 - All application traffic from trusted network (going to Internet) gets routed to proxies
 - All other traffic (incoming/outgoing) blocked
 - This would mean all application servers in internal network – proxies only in DMZ. Thus no site is directly reachable from the Internet (and vice-versa) – this ‘breaks the connection’ and hides internal network details
-
