@@ -6,11 +6,8 @@
 Database access control is a method of allowing access to sensitive data only to users who are authorised to access such data and to restrict access to unauthorized persons. It includes two main 
 components:
 
-- Authentication: verifying the identity of a person who is accessing 
-your database
-- Authorization: determining whether a user should be allowed to 
-execute the transaction they are attempting.
-
+- Authentication: verifying the identity of a person who is accessing your database
+- Authorization: determining whether a user should be allowed to execute the transaction they are attempting.
 
 **User Accounts**
 - User must log in using assigned username and password

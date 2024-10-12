@@ -31,7 +31,7 @@ for these attributes</p>
 <ul dir="auto">
 <li dir="auto">That is, its closure contains all attributes in the relation</li>
 </ul>
-<p dir="auto"><strong>(Candidate) key:</strong> a minimal superkey where non of the attributes can be
+<p dir="auto"><strong>(Candidate) key:</strong> a minimal superkey where none of the attributes can be
 removed to create another superkey.</p>
 <ul dir="auto">
 <li dir="auto">Minimal ≠ shortest</li>
@@ -71,15 +71,15 @@ The normalization process takes a relational schema through a series of tests to
 </tr>
 <tr dir="auto">
 <td><strong>2NF</strong></td>
-<td><strong>Outcome</strong>: Identifying partial dependencies, which helps remove some anomalies. <strong>Test</strong>: LHS of any non-trivial FD in F+ is not a proper subset of a candidate key, or RHS is a prime attribute</td>
+<td><strong>Outcome</strong>: Identifying partial dependencies, which helps remove some anomalies. <br> <strong>Test</strong>: LHS of any non-trivial FD in F+ is not a proper subset of a candidate key, or RHS is a prime attribute</td>
 </tr>
 <tr dir="auto">
 <td><strong>3NF</strong></td>
-<td><strong>Outcome</strong>: Identifying partial and transitive dependencies, which helps remove most anomalies <strong>Test</strong>: LHS of any non-trivial FD in F+ is a superkey, or RHS is a prime attribute.</td>
+<td><strong>Outcome</strong>: Identifying partial and transitive dependencies, which helps remove most anomalies <br> <strong>Test</strong>: LHS of any non-trivial FD in F+ is a superkey, or RHS is a prime attribute.</td>
 </tr>
 <tr dir="auto">
 <td><strong>BCNF</strong></td>
-<td><strong>Outcome</strong>: Identifying all anomalies at the cost of not preserving all FDs<strong>Test</strong>: LHS of any non-trivial FD in F+ is a superkey.</td>
+<td><strong>Outcome</strong>: Identifying all anomalies at the cost of not preserving all FDs <br> <strong>Test</strong>: LHS of any non-trivial FD in F+ is a superkey.</td>
 </tr>
 </tbody>
 </table>
@@ -120,12 +120,13 @@ The normalization process takes a relational schema through a series of tests to
 <p dir="auto"><img src="assets\IMG104.PNG" alt="alt text" data-src="assets/IMG104.PNG"></p>
 <h2 dir="auto" id="relational-database-schema-design">Relational Database Schema Design</h2>
 <p dir="auto"><img src="assets\IMG105.PNG" alt="alt text" data-src="assets/IMG105.PNG"></p>
+<hr dir="auto">
 <h3 dir="auto" id="bcnf-synthesis">BCNF synthesis</h3>
 <p dir="auto"><img src="assets\IMG106.PNG" alt="alt text" data-src="assets/IMG106.PNG"></p>
 <h3 dir="auto" id="3nf-synthesis">3NF synthesis</h3>
 <p dir="auto"><img src="assets\IMG107.PNG" alt="alt text" data-src="assets/IMG107.PNG"></p>
-<p dir="auto"><strong>Finding minimal cover:</strong>
-<img src="assets\IMG108.PNG" alt="alt text" data-src="assets/IMG108.PNG"></p>
+<p dir="auto"><strong>Finding minimal cover:</strong></p>
+<p dir="auto"><img src="assets\IMG108.PNG" alt="alt text" data-src="assets/IMG108.PNG"></p>
 <p dir="auto"><img src="assets\IMG109.PNG" alt="alt text" data-src="assets/IMG109.PNG"></p>
 <p dir="auto"><strong>Synthesis</strong>
 <img src="assets\IMG110.PNG" alt="alt text" data-src="assets/IMG110.PNG"></p>

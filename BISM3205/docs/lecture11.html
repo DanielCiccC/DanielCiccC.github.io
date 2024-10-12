@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-11">Lecture 11</h1>
+<h1 dir="auto" id="blockchain-and-cryptocurrencies">Blockchain and cryptocurrencies</h1>
+<p dir="auto"><img src="assets\IMG171.PNG" alt="alt text" data-src="assets/IMG171.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">central ledger</li>
+<li dir="auto">Bank maintains a central ledger</li>
+<li dir="auto">LHS, have a blockchain, no one is keeping a central record of anything</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="what-is-a-blockchain">What is a Blockchain?</h3>
+<p dir="auto">A  digital  database  containing  information  (such  as  records  of  financial transactions) that can be simultaneously used and shared within a large decentralized, publicly accessible network. also : the technology used to create such a database.</p>
+<p dir="auto">A blockchain is a digital record of transactions. The name comes from its structure, in which individual records, called blocks, are linked together in  a  single  list,  called  a  chain.  Blockchains  are  used  for  recording transactions  made  with  cryptocurrencies,  such  as  Bitcoin,  and  have many other applications.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Webster definition</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="stuart-haber-co-inventor-of-blockchain">Stuart Haber Co-Inventor of Blockchain</h3>
+<h4 dir="auto" id="bitcoin-a-peer-to-peer-electronic-cash-system">Bitcoin: A Peer-to-Peer Electronic Cash System</h4>
+<p dir="auto">Abstract. A purely peer-to-peer version of electronic cash would allow
+online payments to be sent directly from one party to another without
+going through a financial institution. Digital signatures provide part of
+the solution, but the main benefits are lost if a trusted third party is still
+required to prevent double-spending. We propose a solution to the
+double-spending problem using a peer-to-peer network. The network
+timestamps transactions by hashing them into an ongoing chain of hash-
+based proof-of-work, forming a record that cannot be changed without
+redoing the proof-of-work. The longest chain not only serves as proof of
+the sequence of events witnessed, but proof that it came from the largest
+pool of CPU power. As long as a majority of CPU power is controlled by
+nodes that are not cooperating to attack the network, they'll generate the
+longest chain and outpace attackers. The network itself requires minimal
+structure. Messages are broadcast on a best effort basis, and nodes can
+leave and rejoin the network at will, accepting the longest proof-of-work
+chain as proof of what happened while they were gone.</p>
+<p dir="auto"><img src="assets\IMG172.PNG" alt="alt text" data-src="assets/IMG172.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Add new transactions, but can't reverse them</li>
+<li dir="auto">all the data is open in the blockchain</li>
+<li dir="auto">encrypted data is available to anybody in the blockchain</li>
+<li dir="auto">Blockchains have to be mined, takes time
+<ul dir="auto">
+<li dir="auto">SQL database, blockchains take multiple minutes</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG173.PNG" alt="alt text" data-src="assets/IMG173.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">each computer contains a copy of the ledger</li>
+<li dir="auto">decentralised technology</li>
+<li dir="auto">enhanced security</li>
+<li dir="auto">agreement between all the nodes</li>
+<li dir="auto">can settle things faster - moving bitcoin overseas, exchanged, e.g.</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="double-spend-problem">Double spend problem</h3>
+<p dir="auto">Ann has $100 and she wants to buy a lamp and a table.
+They each cost $100, so she should only be able to buy one item.
+No problem in day-to-day transaction since goods and money
+are exchanged together.</p>
+<p dir="auto">In case of distributed systems Alice broadcasts the transaction
+on the network so that every node on the network is made
+aware that “Alice has used up $100 to buy a lamp”.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">No double spending possible under traditional system</li>
+<li dir="auto">with a distributed system, a little bit different
+<ul dir="auto">
+<li dir="auto">Have to publicize you have purchased, latency between nodes</li>
+<li dir="auto">nodes will find out about purchase/payment</li>
+</ul>
+</li>
+<li dir="auto">fraud may also say you have bought something else</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="trust-the-data">Trust the data</h3>
+<p dir="auto">“The truth isn’t a thing of fact or reason. It is simply what everyone agrees on.”</p>
+<blockquote dir="auto">
+<p dir="auto">Gregory Maguire, Wicked: The Life and Times of the Wicked Witch of the West</p>
+</blockquote>
+<h3 dir="auto" id="two-generals-problem">Two General's Problem</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">not the same as byzantines generals' problem</p>
+<ul dir="auto">
+<li dir="auto">used in distributed system, fault tolerance and blockchain</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Inconsistent state between two machines</p>
+<ul dir="auto">
+<li dir="auto">TCP uses a four way handshake to terminate a connection</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">cost vs speed</p>
+<ul dir="auto">
+<li dir="auto">Practical ways to mitigate risk of two generals problem</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="proof-of-work">Proof of work</h3>
+<p dir="auto">Cryptography Mailing List
+Bitcoin P2P e-cash paper
+2008-11-13 22:56:55 UTC
+James A. Donald wrote:</p>
+<blockquote dir="auto">
+<p dir="auto">It is not sufficient that everyone knows X. We also
+need everyone to know that everyone knows X, and that
+everyone knows that everyone knows that everyone knows X</p>
+<ul dir="auto">
+<li dir="auto">which, as in the Byzantine Generals problem, is the
+classic hard problem of distributed data processing.
+<a href="https://satoshi.nakamotoinstitute.org/emails/cryptography/11/">https://satoshi.nakamotoinstitute.org/emails/cryptography/11/</a></li>
+</ul>
+</blockquote>
+<p dir="auto">Proof of Work like proposed by Satoshi doesn't solve the Two
+Generals Problem or the more generic Byzantine Generals Problem.
+It's a probabilistic solution to the Byzantine Generals Problem,
+which means the confidence that a consensus is reached is growing
+with every block added to the chain, but it never reaches 100%.
+<a href="https://ethereum.stackexchange.com/questions/40213/how-is-the-two-generals-">https://ethereum.stackexchange.com/questions/40213/how-is-the-two-generals-</a>
+problem-solved-with-proof-of-work</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Satoshi implemented a way to implement the two general's problem using a probabilistic solution</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG174.PNG" alt="alt text" data-src="assets/IMG174.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">independent of the length, always get 256 hash</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="hashing-vs-encryption">Hashing vs Encryption</h3>
+<p dir="auto"><img src="assets\IMG175.PNG" alt="alt text" data-src="assets/IMG175.PNG"></p>
+<h3 dir="auto" id="merkle-trees">Merkle Trees</h3>
+<p dir="auto">Merkle trees are named after Ralph Merkle, who
+proposed them in a 1987 paper titled &quot;A Digital
+Signature Based on a Conventional Encryption
+Function.&quot; Merkle also invented cryptographic
+hashing.</p>
+<p dir="auto">In order to verify the inclusion of data [K], in the
+merkle tree root, we use a one way function to
+hash [K] to obtain H(K).
+In order to validate the inclusivity of K, K doesn’t
+have to be revealed, similarly the hash of data L
+can be revealed without any implicit security
+repercussions and so on.</p>
+<p dir="auto"><img src="assets\IMG176.PNG" alt="alt text" data-src="assets/IMG176.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Merkle trees are implemented in blockchain</li>
+<li dir="auto">hash each item of data - whole thing is called the merkle tree</li>
+<li dir="auto">Merkle root at the top</li>
+<li dir="auto">Item and hash it
+<ul dir="auto">
+<li dir="auto">K</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">H(K) when hashed with the hash of the unknown dataset L, yields H(KL)</li>
+<li dir="auto">H(KL) hashed with H(IJ) leads to H(IJKL)</li>
+<li dir="auto">H(IJKL) hashed with H(MNOP) leads to H(IJKLMNOP)</li>
+<li dir="auto">H(IJKLMNOP) when hashed with H(ABCDEFGH) yields H(ABCDEFHGIJKLMNOP) - which happens to be our publically available merkle root</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">change any one single data value, in any leaf node, the hash will be different</li>
+<li dir="auto">contains the hashes of all the data</li>
+<li dir="auto">anything changes, the root will be different</li>
+<li dir="auto">Nothing changes without you knowing about it</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="the-golden-nounce">The golden nounce</h3>
+<p dir="auto">A nonce (“number used once”) is a 32-bit (4-byte) unsigned integer (0 to 2^32-1 = 4,294,967,295)</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">positive whole number from 0 to 4 billion</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG177.PNG" alt="alt text" data-src="assets/IMG177.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Head has certain elements</p>
+</li>
+<li dir="auto">
+<p dir="auto">change the block data to create the new hash</p>
+</li>
+<li dir="auto">
+<p dir="auto">change the nounce until the hashed number begins with 32 zeros</p>
+</li>
+<li dir="auto">
+<p dir="auto">keep on changed until you find a hash with 32 leading 0's</p>
+</li>
+<li dir="auto">
+<p dir="auto">You have 'mined' this block</p>
+</li>
+<li dir="auto">
+<p dir="auto">simple calculation that proves to other computers that the block has been mined</p>
+<ul dir="auto">
+<li dir="auto">Is taken into blockchain</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Every two weeks, the number of zeros is updated to make it easy or more difficult to mine the hash</p>
+</li>
+<li dir="auto">
+<p dir="auto">Time to mine the block should always be around 10 mins</p>
+</li>
+<li dir="auto">
+<p dir="auto">A block is full when it has reach 1MB</p>
+<ul dir="auto">
+<li dir="auto">thousands of transactions in the block</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">Computers trying to mine the block get bitcoin as a reward</p>
+</li>
+<li dir="auto">
+<p dir="auto">number has to be 'smaller than' - not necessary num of zeros</p>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="try-it-yourself">Try it yourself</h3>
+<p dir="auto">Use the website <a href="https://passwordsgenerator.net/sha256-hash-generator/">https://passwordsgenerator.net/sha256-hash-generator/</a> to create a SHA256 hash that has
+4 zeroes at the beginning for the following block: &quot;Hello, Cryptos!&quot; by inserting a nonce before the text inside the block.</p>
+<p dir="auto">So, in different words, find a number that, followed by the text &quot;Hello, Cryptos!&quot; results in a hash that starts with &quot;0000&quot;</p>
+<p dir="auto"><img src="assets\IMG178.PNG" alt="alt text" data-src="assets/IMG178.PNG"></p>
+<p dir="auto">Now imagine doing this with 32 leading zeros!
+That's why it's sometimes referred to as a &quot;mathematical puzzle&quot; and
+this is The Proof of Work!</p>
+<h3 dir="auto" id="proof-of-work-1">Proof Of Work</h3>
+<p dir="auto">The essence of the proof of work consensus mechanism is to provide evidence that the majority of nodes agree and do not lie.
+A proof of work verification is difficult, costly, and time-consuming to create, but easy to verify. Bitcoin
+is secure because it is computationally infeasible to attack the network. Requiring Proof of Work for participation is central to this property. Hence Bitcoin relies on computational work on cryptographic challenges as the basis for trust.</p>
+<p dir="auto"><img src="assets\IMG179.PNG" alt="alt text" data-src="assets/IMG179.PNG"></p>
+<h3 dir="auto" id="increase-of-difficulty-over-time">Increase of Difficulty over Time</h3>
+<p dir="auto">CPU (central processing unit)
+GPU (graphics processor)
+FPGA (Field Programmable Gate Arrays)
+ASIC (specialized hardware)</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">ASIC, specialised hardware to create 256-bit hashes</li>
+<li dir="auto">Have different chip sizes</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="asic-vs-gpu-miners">ASIC vs GPU miners</h3>
+<p dir="auto"><img src="assets\IMG180.PNG" alt="alt text" data-src="assets/IMG180.PNG"></p>
+<h3 dir="auto" id="why-you-cant-cheat-a-bitcoin">Why you can't cheat a bitcoin</h3>
+<p dir="auto"><img src="assets\IMG181.PNG" alt="alt text" data-src="assets/IMG181.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">you would have to mine the chains before everyone else</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="what-is-the-reward">What is the reward?</h3>
+<p dir="auto">The winning miner claims a block reward by adding it as a first transaction on the block. At inception, each bitcoin block reward was worth 50 BTC. The block reward is halved after the discovery of every 210,000 blocks, which takes around four years to complete. As of February 2019, one block reward was worth 12.5 BTC.</p>
+<p dir="auto">In November of 2019, the price of Bitcoin was about $9,300 per bitcoin, which means you'd earn
+12.5BTC * $9,300/BTC = $116,250 for completing a block.
+In May 2020, the number of bitcoins (BTC) entering circulation every 10 minutes dropped by half again from 12.5 to 6.25.</p>
+<p dir="auto">The next halving will likely occur in 2024.
+The maximum and total amount of bitcoins that can ever exist is 21 million.
+There are 2,512,225.0 bitcoins left to be mined.</p>
+<p dir="auto">When all 21 million bitcoins are mined, there won't be a block reward to pay to miners.
+When a Bitcoin user sends a BTC transaction, a small fee is attached. These fees go to miners and this is what will be used to pay miners instead of the block reward.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Still continue with bitcoin mining, a transaction charged for any bitcoin transaction</li>
+<li dir="auto">This will become the reward for the miners</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="csiro-it-contractor-spared-jail-for-mining-monero-on-supercomputer">CSIRO IT contractor spared jail for mining Monero on supercomputer</h3>
+<p dir="auto">Intensive correction order imposed for 15 months.
+A former CSIRO IT contractor has escaped jail time for using the country’s peak science and research organisation’s supercomputer to mine cryptocurrency.
+Jonathon Khoo was sentenced to a 15-month intensive correction order at Sydney’s Downing Centre Local Court on Friday after pleading guilty to the
+charges.
+Khoo was charged by the Australian Federal Police in May 2019 for modifying the computer systems of CSIRO without authorisation to access the
+processing power.
+The charges included unauthorised modification of data to cause impairment and unauthorised modification of restricted data. Magistrate Erin Kennedy on
+Friday said Khoo had installed and run 2903 command scripts into CSIRO’s two high performance computers (HPC) and the Claymore Dual Miner software.
+In doing so, Khoo generated $9,422 worth of cryptocurrency mining proceeds in the form of Ethereum and Monero.
+While there was no “impairment to the CSIROs” operations, Kennedy said the use of the systems for period of just over a month in duration reduced the
+performance of the HPC. She said the HPC was also used by the Royal Australian Navy and Victor Chang Cardiac Research Institute.
+CSIRO put the total cost of the HPCs reduced capacity at $76,668, including hardware and software.
+Kennedy described the offence as &quot;reckless&quot; with &quot;some level of planning&quot;, but acknowledged Khoo's remorse. She also noted that Khoo had admitted his
+guilt to police almost immediately after a search warrant was executed in 2019.
+Khoo was handed a 15-month intensive correction order - a custodial sentence served in the community - with 300 hours of community service.
+By Justin Hendry
+Sep 18 2020 1:15PM</p>
+<h2 dir="auto" id="physical-bitcoins">Physical Bitcoins?</h2>
+<p dir="auto">Mike Caldwell and his Casascius coin. Caldwell
+started minting his coins a couple of years ago,
+but late last year he was banned from selling
+pre-funded coins.</p>
+<p dir="auto">The US Financial Crimes Enforcement Network
+(FinCEN) classified his activities as ‘money
+transmitting’ and Caldwell was forced to start
+selling empty coins. Sales resumed earlier this
+year and Casascius is currently listing three
+coins, along with a gold-plated savings bar.
+However, none of them are priced and it is
+unclear whether or not Casascius simply ran
+out of stock or stopped selling them directly
+altogether.</p>
+<p dir="auto">In addition to these silver, brass and gold-plated
+products, Casascius also sells aluminium promo
+coins. A bag of 500 costs 0.39 BTC.</p>
+<h3 dir="auto" id="some-additional-facts">Some additional Facts</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">Bitcoin’s blockchain began in January 2009, when the mysterious Satoshi Nakamoto mined the first block of
+bitcoins (known as the “genesis block”).</p>
+</li>
+<li dir="auto">
+<p dir="auto">Currently, Bitcoin has the capacity to handle between 4-7 transactions per second (tps), which pales in
+comparison to systems like VISA and Paypal. VISA can handle on average around 1,700 tps and PayPal an
+average of 193 tps.</p>
+</li>
+<li dir="auto">
+<p dir="auto">Currently, each block on the Bitcoin blockchain is able to contain 1mb of data, meaning that the block size of bitcoin is 1 megabyte.</p>
+</li>
+<li dir="auto">
+<p dir="auto">If you become a full node for the Bitcoin blockchain, meaning you help validate ongoing transactions, you
+basically have to download the entire database first. The Bitcoin blockchain is currently 5450 GB (2024).
+This represents “the total size of all block headers and transactions” since January 2009.</p>
+</li>
+<li dir="auto">
+<p dir="auto">The difficulty is adjusted every 2016 blocks (every 2 weeks approximately) so that the average time between each block remains 10 minutes. The difficulty comes directly from the confirmed blocks data in the Bitcoin network.</p>
+</li>
+</ul>
+
+</main>
+</body>
+</html>

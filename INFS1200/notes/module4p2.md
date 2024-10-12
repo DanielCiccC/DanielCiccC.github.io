@@ -5,7 +5,7 @@
 for these attributes
 - That is, its closure contains all attributes in the relation
 
-**(Candidate) key:** a minimal superkey where non of the attributes can be
+**(Candidate) key:** a minimal superkey where none of the attributes can be
 removed to create another superkey.
 - Minimal ≠ shortest
 - There can be many candidate keys for one relation
@@ -33,9 +33,9 @@ Normalisation Overview
 **Form** | **Description** |
 | --- | --- |
 |**1NF** | **Outcome**: Identifying non-atomic values from relations. <br> **Test**: Relation should have no multivalued attributes or nested relations.
-| **2NF** | **Outcome**: Identifying partial dependencies, which helps remove some anomalies. **Test**: LHS of any non-trivial FD in F+ is not a proper subset of a candidate key, or RHS is a prime attribute
-| **3NF** | **Outcome**: Identifying partial and transitive dependencies, which helps remove most anomalies **Test**: LHS of any non-trivial FD in F+ is a superkey, or RHS is a prime attribute. |
-| **BCNF** | **Outcome**: Identifying all anomalies at the cost of not preserving all FDs**Test**: LHS of any non-trivial FD in F+ is a superkey.
+| **2NF** | **Outcome**: Identifying partial dependencies, which helps remove some anomalies. <br> **Test**: LHS of any non-trivial FD in F+ is not a proper subset of a candidate key, or RHS is a prime attribute
+| **3NF** | **Outcome**: Identifying partial and transitive dependencies, which helps remove most anomalies <br> **Test**: LHS of any non-trivial FD in F+ is a superkey, or RHS is a prime attribute. |
+| **BCNF** | **Outcome**: Identifying all anomalies at the cost of not preserving all FDs <br> **Test**: LHS of any non-trivial FD in F+ is a superkey.
 
 ### 1NF
 
@@ -93,6 +93,7 @@ In other words, a relation is in 3NF iff for any non-trivial FD X $\rightarrow$ 
 
 
 **Finding minimal cover:**
+
 ![alt text](assets\IMG108.PNG)
 
 ![alt text](assets\IMG109.PNG)
