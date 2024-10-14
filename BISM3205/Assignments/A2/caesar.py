@@ -25,7 +25,9 @@ def estimate_caesar_shift(ciphertext, letter):
     return estimated_shift
 
 # Example usage
-ciphertext = "Tsi qsmseuci zbv tq fzyke il fhp jlmtgiiyk zpwjpiyeqfa: jpl(qauc_wqvlwzt_yyjcmj,10)"
+ciphertext = """Tsi qsmseuci zbv tq fzyke il fhp jlmtgiiyk zpwjpiyeqfa: 
+s9r51566bo6705j7bb6iv54nb9oiy449g795582l6529s0q22207b8981233pg58 ; 
+jpl(qauc_wqvlwzt_yyjcmj,10). """
 
 for letter in 'abcdefghijklmnopqrstuvwxyz':
     estimated_shift = estimate_caesar_shift(ciphertext, letter)

@@ -1,0 +1,453 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-8">Lecture 8</h1>
+<h1 dir="auto" id="authentication-firewalls-the-dmz">Authentication, Firewalls, the DMZ</h1>
+<h2 dir="auto" id="authentication">Authentication</h2>
+<ul dir="auto">
+<li dir="auto">Authentication: the process of validating a supplicant’s purported identity</li>
+<li dir="auto">Authentication factors (from weakest to strongest methods)
+<ul dir="auto">
+<li dir="auto">Something a supplicant knows
+<ul dir="auto">
+<li dir="auto">Password: a private word or combination of characters that only the user should know</li>
+<li dir="auto">Passphrase: a series of characters, typically longer than a password, from which a
+virtual password is derived</li>
+</ul>
+</li>
+<li dir="auto">Something a supplicant has
+<ul dir="auto">
+<li dir="auto">Smart card: contains a computer chip that can verify and validate information</li>
+<li dir="auto">Synchronous tokens</li>
+<li dir="auto">Asynchronous tokens</li>
+</ul>
+</li>
+<li dir="auto">Something a supplicant is
+<ul dir="auto">
+<li dir="auto">Relies upon individual characteristics</li>
+<li dir="auto">Strong authentication</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG122.PNG" alt="alt text" data-src="assets/IMG122.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">use a password manager</li>
+<li dir="auto">Use synchronous and asynchronous tokens
+<ul dir="auto">
+<li dir="auto">keyring for synchronous token, using push for Duo</li>
+</ul>
+</li>
+<li dir="auto">tokens can be valid for a long period of time</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="kerberos-guarding-hades">Kerberos guarding Hades</h3>
+<p dir="auto"><img src="assets\IMG123.PNG" alt="alt text" data-src="assets/IMG123.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Users - local computer
+<ul dir="auto">
+<li dir="auto">only you get to see your files</li>
+<li dir="auto">all services need your authentication</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">First communication with authentication server</p>
+<ul dir="auto">
+<li dir="auto">returns a ticket granting ticket</li>
+<li dir="auto">like a credit card institution
+<ul dir="auto">
+<li dir="auto">'Can I get a credit card to make purchases at shops'</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Second to ticket granting server</p>
+<ul dir="auto">
+<li dir="auto">serves a service ticket</li>
+</ul>
+<p dir="auto">Service  ticket sent to service center</p>
+</blockquote>
+<p dir="auto">Kerberos - Overview</p>
+<ul dir="auto">
+<li dir="auto">Secure Third-Party Authentication: Kerberos provides secure, third-party authentication for both users and services. It ensures mutual authentication—both the user and the service authenticate each other during the process, preventing attacks such as impersonation.</li>
+<li dir="auto">Symmetric Key Encryption: Kerberos primarily relies on symmetric key encryption to authenticate users and grant access to various network resources. Each user and service shares a secret key with the Key Distribution Center (KDC), which facilitates secure communication.</li>
+<li dir="auto">Shared Secret for Authentication: Authentication in Kerberos is based on the concept of a shared secret (symmetric key). This key is used to validate the identities of both clients (users) and servers (services), ensuring that only authorized entities can communicate.</li>
+<li dir="auto">Private Key Database: The KDC maintains a secure database of private keys, which includes client and server keys. Client keys are typically derived from hashed passwords, while service keys are preconfigured during the setup phase. These keys are used for encrypting tickets and session keys.</li>
+</ul>
+<div  dir="auto" ></div>
+<!-- - Provides secure third-party authentication - also provides **mutual authentication** (user and service – always)
+- Uses symmetric key encryption to validate individual user to various network resources
+- Relies upon the concept of ‘shared secret’ for authentication
+- Keeps database containing private keys of clients/servers – what are these keys?
+- We need to note the similarities and differences with TLS and S/MIME.
+  - All three protocols use the concept of a session key and a long term key (can you identify the keys).
+  - Kerberos is symmetric – SSL/TLS and S/MIME are hybrid.
+  - Kerberos is an authentication system – SSL/TLS and S/MIME provide authentication plus confidentiality. -->
+<blockquote dir="auto">
+<p dir="auto">Mutual authentication</p>
+<ul dir="auto">
+<li dir="auto">System authenticates itself to you
+<ul dir="auto">
+<li dir="auto">know its not some fake network</li>
+</ul>
+</li>
+<li dir="auto">based on symmetric key encryption
+<ul dir="auto">
+<li dir="auto">Each party has to have the same key</li>
+</ul>
+</li>
+<li dir="auto">KDC has database of primary keys</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG124.PNG" alt="alt text" data-src="assets/IMG124.PNG"></p>
+<p dir="auto">NEWER IMAGE:</p>
+<p dir="auto"><img src="assets\IMG182.PNG" alt="alt text" data-src="assets/IMG182.PNG"></p>
+<p dir="auto"><img src="assets\IMG183.PNG" alt="alt text" data-src="assets/IMG183.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">all service centres have a key</li>
+<li dir="auto">when you setup the system, have to distribute the keys</li>
+</ul>
+<p dir="auto">Start at client side</p>
+<ul dir="auto">
+<li dir="auto">give you a session key</li>
+<li dir="auto">only valid for a particular time</li>
+<li dir="auto">including a username and a timestamp
+<ul dir="auto">
+<li dir="auto">timestamp to avoid replay attempts</li>
+<li dir="auto">needs to be roughly the same time</li>
+<li dir="auto">time server that always gives you the same time</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Step two, send the Ticket-granting ticket to ticket granting server</p>
+<ul dir="auto">
+<li dir="auto">send also the username, and timestamp</li>
+</ul>
+<p dir="auto">Step 3</p>
+<ul dir="auto">
+<li dir="auto">Send service ticket</li>
+<li dir="auto">Send session key, encrypted with the green key</li>
+</ul>
+<p dir="auto">Step 5</p>
+<ul dir="auto">
+<li dir="auto">Service ticket to service center</li>
+<li dir="auto">Send also a second session key to prohibit replay attacks</li>
+</ul>
+<p dir="auto">Step 6</p>
+<ul dir="auto">
+<li dir="auto">Optionally send back a confirmed access</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="more-on-the-topic-of-a-secure-network">More on the topic of a ‘secure network‘</h3>
+<ul dir="auto">
+<li dir="auto">Describe firewall principles and the various approaches to firewall implementation</li>
+<li dir="auto">Discuss the proxy firewall approach</li>
+<li dir="auto">Describe the strategy that enables the business use &amp; benefits of a demilitarized zone (DMZ)</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">purpose of firewall is to let packets through to device or stop them</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="revision---communication-protocols">Revision - communication protocols</h3>
+<ul dir="auto">
+<li dir="auto">A protocol is a standard means for coordinating an activity between two or more entities.</li>
+<li dir="auto">We have political protocols, and many other types – including communication protocols (and
+last week we talked of ‘secure communication protocols)</li>
+<li dir="auto">Communications protocols are broken into levels or layers
+<ul dir="auto">
+<li dir="auto">for both ‘snail mail’ and for computer communication.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG125.PNG" alt="alt text" data-src="assets/IMG125.PNG"></p>
+<h3 dir="auto" id="revision---computer-network-communication">Revision - computer network communication</h3>
+<p dir="auto"><img src="assets\IMG126.PNG" alt="alt text" data-src="assets/IMG126.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Everyone will have a border router before the network</li>
+<li dir="auto">filter packets out that do not belong to the network</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="which-part-of-the-ip-address-specifies-the-network-and-which-the-host-machine">Which part of the IP address specifies the network and which the host machine?</h3>
+<p dir="auto">We use the subnet mask used to determine which part of the IP address specifies the network and which part specifies the host.</p>
+<p dir="auto">The mask uses a specific number of bits, set to 1, to identify the network portion of the IP address, and the remaining bits, set to 0, to identify the host portion, which separates the IP address into two distinct parts.b</p>
+<p dir="auto">The subnet mask is a 32-bit number that is used in conjunction with the IP address to determine which part of the IP address specifies the network and which part specifies the host.</p>
+<p dir="auto">In binary form, the subnet mask is a series of 1s followed by a series of 0s. For example, the subnet mask 255.255.255.0 in binary form is 11111111.11111111.11111111.00000000.</p>
+<p dir="auto">To determine the network and host portions of an IP address using the subnet mask, the following process is used:</p>
+<ol dir="auto">
+<li dir="auto">Convert the IP address and subnet mask to binary form.</li>
+<li dir="auto">Perform a bitwise AND operation between the binary IP address and the binary subnet mask.</li>
+<li dir="auto">The resulting value is the network portion of the IP address.</li>
+<li dir="auto">The remaining bits are the host portion of the IP address.</li>
+</ol>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">32 bit num for IP</li>
+<li dir="auto">32 bit num for subnet mask</li>
+</ul>
+</blockquote>
+<p dir="auto">For example, consider the IP address 192.168.1.10 and subnet mask 255.255.255.0.
+In binary form, the IP address is (4 octets, i.e. 4 times 8 binary digits)</p>
+<ul dir="auto">
+<li dir="auto">11000000.10101000.00000001.00001010 and the subnet mask is</li>
+<li dir="auto">11111111.11111111.11111111.00000000.</li>
+</ul>
+<p dir="auto">Performing a bitwise AND operation between the IP address and subnet mask yields the following result:</p>
+<ul dir="auto">
+<li dir="auto">11000000.10101000.00000001.00001010 (IP address) AND</li>
+<li dir="auto">11111111.11111111.11111111.00000000 (Subnet mask) equals</li>
+<li dir="auto">11000000.10101000.00000001.00000000 (Network portion)</li>
+<li dir="auto">00000000.00000000.00000000.00001010 (Host portion)</li>
+</ul>
+<p dir="auto">So, the network portion of the IP address is 192.168.1.0, and the host portion is 0.0.0.10.
+This means that any IP address with the same network portion as 192.168.1.0 (e.g. 192.168.1.54) belongs to the same
+network, and traffic destined for that network can be forwarded using the information in the routing table.</p>
+<p dir="auto"><img src="assets\IMG127.PNG" alt="alt text" data-src="assets/IMG127.PNG"></p>
+<h3 dir="auto" id="revision---tcpip-and-osi-architecture">Revision - TCP/IP and OSI Architecture</h3>
+<p dir="auto"><img src="assets\IMG128.PNG" alt="alt text" data-src="assets/IMG128.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Firewalls open the packet up and make a decision whether to let the packet through or not</li>
+<li dir="auto">Each of the applications have a different port number</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG129.PNG" alt="alt text" data-src="assets/IMG129.PNG"></p>
+<ol dir="auto">
+<li dir="auto">TCP is designed to process CONNECTIONS (related groups of packets)</li>
+<li dir="auto">IP is designed to process individual PACKETS (each packet individually)</li>
+<li dir="auto">Some firewalls work at the IP level, some at the TCP level, some at the application level. This ‘level of operation’ significantly determines the level of security a firewall can introduce into a network and its use in the network</li>
+</ol>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">MAC address - don't change, and is given by the manufacturer</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="firewalls">Firewalls</h3>
+<ul dir="auto">
+<li dir="auto">Software – running on some type of computer configuration</li>
+<li dir="auto">Prevent specific types of information from moving between the outside world (untrusted network) and the inside world (trusted network)</li>
+<li dir="auto">Maybe: separate computer system; software service running on existing router or server; or separate network containing supporting devices</li>
+</ul>
+<p dir="auto"><img src="assets\IMG130.PNG" alt="alt text" data-src="assets/IMG130.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">proxy servers receive traffic</li>
+<li dir="auto">dynamic filtering firewall removes unnecessary information</li>
+<li dir="auto">only passing on information if it is correct</li>
+<li dir="auto">call DMZ a 'firewall'</li>
+</ul>
+<p dir="auto">Next, trusted company internet</p>
+<ul dir="auto">
+<li dir="auto">goes through WACC</li>
+<li dir="auto"></li>
+</ul>
+<p dir="auto">Red area</p>
+<ul dir="auto">
+<li dir="auto">highly sensitive information</li>
+<li dir="auto">NIDS - network intrusion detection system</li>
+<li dir="auto">database with credit cards</li>
+<li dir="auto">must have additional infrastructure implemented</li>
+<li dir="auto">need to be on a separate network</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="firewall-rules">Firewall rules</h3>
+<ul dir="auto">
+<li dir="auto">Operate by examining data packets and performing comparison with predetermined rules</li>
+<li dir="auto">Most firewalls use packet data/header OR connection data/header information to determine whether specific packet should be allowed or denied</li>
+</ul>
+<p dir="auto"><img src="assets\IMG131.PNG" alt="alt text" data-src="assets/IMG131.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Network administrator can put in their own rules depending on what they want to do</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="firewalls-and-network-devices-by-osi-layer">Firewalls and Network Devices by OSI Layer</h3>
+<ul dir="auto">
+<li dir="auto"><strong>L7 Application Layer</strong>: Application Layer Firewalls (Proxy Firewalls)</li>
+<li dir="auto"><strong>L4 Transport Layer</strong>: Stateful Inspection Firewalls, Intrusion Prevention Systems (IPS)</li>
+<li dir="auto"><strong>L3 Network Layer</strong>: Packet-Filtering Firewalls, Routers, VPN gateways</li>
+<li dir="auto"><strong>L2 Data Link Layer</strong>: Switches, Bridges, WAPs, NICs</li>
+<li dir="auto"><strong>L1 Physical Layer</strong>: HUBs</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">NIC - the ones</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="firewall-processing-modes">Firewall processing modes</h3>
+<ul dir="auto">
+<li dir="auto">Packet filtering firewalls examine header information of data packets</li>
+<li dir="auto">Most often based on combination of:
+<ul dir="auto">
+<li dir="auto">Internet Protocol (IP) source and destination address</li>
+<li dir="auto">Direction (inbound or outbound)   - both directions are critical!</li>
+<li dir="auto">Transmission Control Protocol (TCP) source and destination port requests</li>
+</ul>
+</li>
+<li dir="auto">Three subsets of packet filtering firewalls (in order of increasing level of security):
+<ul dir="auto">
+<li dir="auto">Static filtering: requires that filtering rules governing how the firewall decides which packets are
+allowed and which are denied are developed and installed   - work at PACKET level</li>
+<li dir="auto">Dynamic filtering: allows firewall to react to emergent event and update or create rules to deal with event - work at PACKET level</li>
+<li dir="auto">Stateful inspection: firewalls that keep track of each network CONNECTION between internal and external systems using a state table</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="static-filtering-%E2%80%93-fastest-%E2%80%93-most-limited-security">Static filtering – fastest – most limited security</h3>
+<ul dir="auto">
+<li dir="auto">Static filtering: requires that filtering rules governing how the firewall decides which packets are allowed and which are denied are developed and installed – AND ARE STATIC (cannot be changed until firewall is reprogrammed!)</li>
+<li dir="auto">It is very simple in its capabilities but it is the quickest of all firewalls. It sees all traffic!</li>
+<li dir="auto">A static filtering firewall can (easily) be overwhelmed by ‘unexpected’ increases in workload – the firewall can be ‘crashed’ and therefore service is ‘denied’ to all legitimate users.</li>
+</ul>
+<p dir="auto"><img src="assets\IMG132.PNG" alt="alt text" data-src="assets/IMG132.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Rules implemented in the firewall</li>
+<li dir="auto"></li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="dynamic-filtering-%E2%80%93-next-level-up-of-sophistication">Dynamic filtering – next level (up) of sophistication</h3>
+<ul dir="auto">
+<li dir="auto">Dynamic filtering: filtering rules can be changed DYNAMICALLY by the firewall itself (more intelligent).</li>
+</ul>
+<p dir="auto">A dynamic filtering firewall can detect ‘emergent’ events – implement a consequential rule – deal with more ‘situations’.</p>
+<ul dir="auto">
+<li dir="auto">This firewall, however, does not view the traffic as ‘connections. It sees all traffic!</li>
+<li dir="auto">We can move to a more sophisticated design</li>
+</ul>
+<p dir="auto"><img src="assets\IMG133.PNG" alt="alt text" data-src="assets/IMG133.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Can detect emerging attacks
+<ul dir="auto">
+<li dir="auto">Can 'black it off'</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="stateful-inspection-%E2%80%93-top-level-of-sophistication">Stateful inspection – top level of sophistication</h3>
+<ul dir="auto">
+<li dir="auto">Stateful inspection: firewalls that keep track of each network CONNECTION between internal and external systems using a state table. This is the most sophisticated of the layer3/4 firewalls – it can deal
+with attacks such as ‘spoofing’ (see below)</li>
+<li dir="auto">It sees (examines) all traffic!</li>
+</ul>
+<p dir="auto"><img src="assets\IMG134.PNG" alt="alt text" data-src="assets/IMG134.PNG"></p>
+<h3 dir="auto" id="firewall-architectures-how-we-position-firewalls">Firewall architectures (how we position firewalls)</h3>
+<ul dir="auto">
+<li dir="auto">Firewall devices can be configured in a number of network connection architectures</li>
+<li dir="auto">Best configuration depends on three factors:
+<ul dir="auto">
+<li dir="auto">Objectives of the network</li>
+<li dir="auto">Organization’s ability to develop and implement architectures</li>
+<li dir="auto">Budget available for function</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Four common architectural implementations of firewalls:</p>
+<ol dir="auto">
+<li dir="auto">packet filtering routers/firewalls,</li>
+<li dir="auto">screened host firewalls &amp; (3) dual-homed firewalls : NOT FOR US,</li>
+<li dir="auto">screened subnet firewalls – these work with proxies (application gateways)</li>
+</ol>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Screen subnet firewall (actually an implementation of the DMZ)</li>
+</ul>
+</blockquote>
+<p dir="auto">Packet filtering firewalls/routers (mainly work at layer 3)</p>
+<ul dir="auto">
+<li dir="auto">Most commonly deployed for small, uncomplicated sites – but is problematic</li>
+<li dir="auto">Blocks packets from entry – can allow selective access to systems and services – depending on the policy</li>
+<li dir="auto">Strengths: fast processing (not much of each packet to inspect) – good on ‘main entrances’ to networks</li>
+<li dir="auto">Drawbacks: a lack of auditing (no logging), rules are difficult to test thoroughly, rules may become unmanageable, and strong authentication missing</li>
+</ul>
+<p dir="auto"><img src="assets\IMG135.PNG" alt="alt text" data-src="assets/IMG135.PNG"></p>
+<ul dir="auto">
+<li dir="auto">Screened subnet firewall is the dominant architecture used today</li>
+<li dir="auto">Commonly consists of two or more internal proxies (aka application gateways OR bastion hosts) behind packet filtering router, with each host protecting trusted network:</li>
+<li dir="auto">Let’s firstly discuss the proxy server concept and also the design approach known as a screened subnet or DMZ (demilitarized zone)</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">honeypots or honeywalls
+<ul dir="auto">
+<li dir="auto">honeynet sends messages across a fake network to distract the attacker</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Proxies/application gateways
+<ul dir="auto">
+<li dir="auto">Frequently installed on a dedicated computer, also known as a proxy (server). We (almost) always have a web proxy, an email proxy – and others</li>
+<li dir="auto">Proxies only look at their traffic (not like packet filtering)</li>
+<li dir="auto">Since proxy server is often placed in unsecured area of the network because it must be accessible to outside world – it is exposed to higher levels of risk from less trusted networks</li>
+<li dir="auto">Additional filtering routers/firewalls can be implemented behind the proxy server, further protecting internal systems (REMEMBER: DEFENCE IN DEPTH)</li>
+<li dir="auto">When we place proxy servers between two firewalls/routers – we create a DMZ (or also called a screen subnet)</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG136.PNG" alt="alt text" data-src="assets/IMG136.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">External people cannot figure out what is behind the firewall</li>
+</ul>
+</blockquote>
+<p dir="auto">The request from Client A to the External Server is ‘proxied’ – the Proxy acts as the agent – this breaks the connection – a very important security benefit – the details of the trusted network are hidden away – defence in depth also</p>
+<ul dir="auto">
+<li dir="auto">Screened subnet firewall is the dominant architecture used today</li>
+<li dir="auto">Commonly consists of two or more internal proxies (bastion hosts) behind packet filtering router, with
+each host protecting trusted network:
+<ul dir="auto">
+<li dir="auto">Connections from outside (untrusted network) routed through external filtering router</li>
+<li dir="auto">Connections from outside (untrusted network) are routed into and out of routing firewall to separate network
+segment known as DMZ</li>
+<li dir="auto">Connections into trusted internal network allowed only from DMZ proxy servers</li>
+</ul>
+</li>
+<li dir="auto">Screened subnet performs two functions:
+<ul dir="auto">
+<li dir="auto">Creates and protects DMZ systems and information from outside threats</li>
+<li dir="auto">Protects the internal networks by limiting how external connections can gain access to internal systems</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG137.PNG" alt="alt text" data-src="assets/IMG137.PNG"></p>
+<p dir="auto">Operational logic:</p>
+<ul dir="auto">
+<li dir="auto">All application traffic (email, Web, etc.) gets routed to the proxies</li>
+<li dir="auto">All application traffic from trusted network (going to Internet) gets routed to proxies</li>
+<li dir="auto">All other traffic (incoming/outgoing) blocked</li>
+<li dir="auto">This would mean all application servers in internal network – proxies only in DMZ. Thus no site is directly reachable from the Internet (and vice-versa) – this ‘breaks the connection’ and hides internal network details</li>
+</ul>
+
+</main>
+</body>
+</html>

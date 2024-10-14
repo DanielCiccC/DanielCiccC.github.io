@@ -19,11 +19,12 @@ removed to create another superkey.
 
 **Non-prime attribute:** An attribute that is not a member of any candidate key
 
-### Normalization: the process of identifying redundancy from data
+## Normalization: the process of identifying redundancy from data
 
 Normalization is a process that aims at achieving better designed relational database schemas using
 - Functional Dependencies
 - Primary Keys
+
 The normalization process takes a relational schema through a series of tests to certify whether it satisfies certain conditions
 - The schemas that satisfy certain conditions are said to be in a given Normal Form
 - Unsatisfactory schemas are decomposed by breaking up their attributes into smaller relations that possess desirable properties (e.g., no anomalies) 
@@ -46,9 +47,9 @@ Normalisation Overview
 | --- | --- | 
 ![alt text](assets\IMG97.PNG) | ![alt text](assets\IMG98.PNG)
 
-
+---
 ### 2NF
-A relation schema R is in 2NF if every non-prime attribute A in R is fully functionally dependent on the primary key of R.
+A relation schema R is in 2NF if every non-prime attribute A in R is **fully functionally dependent** on the primary key of R.
 - 2NF can be said informally to have no partial dependency 
 
 ![alt text](assets\IMG99.PNG)
@@ -58,6 +59,8 @@ A relation schema R is in 2NF if every non-prime attribute A in R is fully funct
 
 ![alt text](assets\IMG100.PNG)
 
+---
+
 ### 3NF
 
 ![alt text](assets\IMG101.PNG)
@@ -66,7 +69,7 @@ A relation schema R is in 2NF if every non-prime attribute A in R is fully funct
 
 In other words, a relation is in 3NF iff for any non-trivial FD X $\rightarrow$ A, where A is a non-prime attribute, X must be a superkey
 
-
+---
 ### BCNF (Boyce-Codd Normal Form)
 
 ![alt text](assets\IMG103.PNG)
@@ -75,6 +78,7 @@ In other words, a relation is in 3NF iff for any non-trivial FD X $\rightarrow$ 
 
 
 ![alt text](assets\IMG104.PNG)
+---
 
 ## Relational Database Schema Design
 

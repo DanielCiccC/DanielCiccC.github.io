@@ -69,6 +69,12 @@ Kerberos - Overview
 
 ![alt text](assets\IMG124.PNG)
 
+NEWER IMAGE:
+
+![alt text](assets\IMG182.PNG)
+
+![alt text](assets\IMG183.PNG)
+
 > - all service centres have a key
 > - when you setup the system, have to distribute the keys
 >

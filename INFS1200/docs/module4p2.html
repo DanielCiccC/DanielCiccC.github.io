@@ -47,12 +47,14 @@ removed to create another superkey.</p>
 <li dir="auto">Not necessarily a member of the primary key!</li>
 </ul>
 <p dir="auto"><strong>Non-prime attribute:</strong> An attribute that is not a member of any candidate key</p>
-<h3 dir="auto" id="normalization-the-process-of-identifying-redundancy-from-data">Normalization: the process of identifying redundancy from data</h3>
+<h2 dir="auto" id="normalization-the-process-of-identifying-redundancy-from-data">Normalization: the process of identifying redundancy from data</h2>
 <p dir="auto">Normalization is a process that aims at achieving better designed relational database schemas using</p>
 <ul dir="auto">
 <li dir="auto">Functional Dependencies</li>
-<li dir="auto">Primary Keys
-The normalization process takes a relational schema through a series of tests to certify whether it satisfies certain conditions</li>
+<li dir="auto">Primary Keys</li>
+</ul>
+<p dir="auto">The normalization process takes a relational schema through a series of tests to certify whether it satisfies certain conditions</p>
+<ul dir="auto">
 <li dir="auto">The schemas that satisfy certain conditions are said to be in a given Normal Form</li>
 <li dir="auto">Unsatisfactory schemas are decomposed by breaking up their attributes into smaller relations that possess desirable properties (e.g., no anomalies)</li>
 </ul>
@@ -102,22 +104,25 @@ The normalization process takes a relational schema through a series of tests to
 </tr>
 </tbody>
 </table>
+<hr dir="auto">
 <h3 dir="auto" id="2nf">2NF</h3>
-<p dir="auto">A relation schema R is in 2NF if every non-prime attribute A in R is fully functionally dependent on the primary key of R.</p>
+<p dir="auto">A relation schema R is in 2NF if every non-prime attribute A in R is <strong>fully functionally dependent</strong> on the primary key of R.</p>
 <ul dir="auto">
 <li dir="auto">2NF can be said informally to have no partial dependency</li>
 </ul>
 <p dir="auto"><img src="assets\IMG99.PNG" alt="alt text" data-src="assets/IMG99.PNG"></p>
 <p dir="auto"><strong>More Formally</strong></p>
 <p dir="auto"><img src="assets\IMG100.PNG" alt="alt text" data-src="assets/IMG100.PNG"></p>
+<hr dir="auto">
 <h3 dir="auto" id="3nf">3NF</h3>
 <p dir="auto"><img src="assets\IMG101.PNG" alt="alt text" data-src="assets/IMG101.PNG"></p>
 <p dir="auto"><img src="assets\IMG102.PNG" alt="alt text" data-src="assets/IMG102.PNG"></p>
 <p dir="auto">In other words, a relation is in 3NF iff for any non-trivial FD X <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">→</span></span></span></span> A, where A is a non-prime attribute, X must be a superkey</p>
+<hr dir="auto">
 <h3 dir="auto" id="bcnf-boyce-codd-normal-form">BCNF (Boyce-Codd Normal Form)</h3>
 <p dir="auto"><img src="assets\IMG103.PNG" alt="alt text" data-src="assets/IMG103.PNG"></p>
 <p dir="auto"><strong>Informally</strong>: Whenever a set of attributes of R determine another attribute, it should determine all the attributes of R.</p>
-<p dir="auto"><img src="assets\IMG104.PNG" alt="alt text" data-src="assets/IMG104.PNG"></p>
+<h2 dir="auto" id="alt-text"><img src="assets\IMG104.PNG" alt="alt text" data-src="assets/IMG104.PNG"></h2>
 <h2 dir="auto" id="relational-database-schema-design">Relational Database Schema Design</h2>
 <p dir="auto"><img src="assets\IMG105.PNG" alt="alt text" data-src="assets/IMG105.PNG"></p>
 <hr dir="auto">
