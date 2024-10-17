@@ -1,15 +1,10 @@
 from collections import Counter
 
-# Given sentence
 sentence = "Tsi qsmseuci zbv tq fzyke il fhp jlmtgiiyk zpwjpiyeqfa"
-
-# Normalize the sentence by converting to lowercase and removing non-letter characters
 normalized_sentence = ''.join(filter(str.isalpha, sentence.lower()))
 
-# Count the frequency of each letter
 letter_frequency = Counter(normalized_sentence)
 
-# Print the frequency of each letter in descending order
 for letter, frequency in letter_frequency.most_common():
     print(f"{letter}: {frequency}")
 

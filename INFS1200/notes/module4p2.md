@@ -19,6 +19,26 @@ removed to create another superkey.
 
 **Non-prime attribute:** An attribute that is not a member of any candidate key
 
+---
+### Example
+
+```
+R[A, B, C, D, E]
+A → B​
+C → {D, E}​
+{A, D, E} → C​
+{B, C} → A
+```
+$$\text{Candidate Key(s)} = \{ \{A, C\}, \{A, D, E\}, \{B, C\} \}  $$
+
+$$\text{Superkey(s)} = \{ \{A, C \}, \{A, C, E, \}, \{A, B, C, D, E \}, ... \} \;\;\; \text{(Anything that includes at least the candidate key)} $$
+
+$$\text{Prime Attributes} = \{ A, B, C, D, E \}$$
+
+$$\text{Non Prime Attributes} = \{ \phi \}$$
+
+---
+
 ## Normalization: the process of identifying redundancy from data
 
 Normalization is a process that aims at achieving better designed relational database schemas using
