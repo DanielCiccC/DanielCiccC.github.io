@@ -31,8 +31,8 @@ Authorization: determining whether a user should be allowed to execute the trans
 3. **Role-based Access Control (RBAC)**
   - Users can be assigned with roles, and then DAC or MAC can be applied
 
-
-### Discretionary Access Control
+---
+## Discretionary Access Control
 
 Based on Granting and Revoking privileges
 
@@ -49,6 +49,7 @@ privileges for each relation or view
 - Modification (insert, deleted and update) privilege 
 - References privilege
 
+### Access Matrix model
 - Each relation R is assigned an owner account
 - Owners can grant (select, modification and references) privileges to other users on any owned relation
 
@@ -78,18 +79,39 @@ Data and users are associated with security classes
 > ![alt text](assets\IMG115.PNG)
 
 
-- A subject can’t write information to an object that has a lower 
-sensitivity label than the subject 
+- A subject can’t write information to an object that has a lower sensitivity label than the subject 
 - Also known as: no write down, or **NWD**
-- This is to prevent information from flowing from higher to lower 
-classifications
+- This is to prevent information from flowing from higher to lower classifications
 
 > Example:
 > - Database user Tanya with access level Secret cannot insert a new tuple with information about Smith with Confidential level access
 >
 > ![alt text](assets\IMG116.PNG)
 
-**Inference attacks and polyinstantiation**
+---
+### Example
+
+1. The original EMPLOYEE tuples 
+
+![alt text](assets\IMG124.PNG)
+
+2. Appearance of EMPLOYEE after filtering for classification C users 
+
+![alt text](assets\IMG125.PNG)
+
+3. Appearance of EMPLOYEE after filtering for classification U users
+
+![alt text](assets\IMG126.PNG)
+
+4. **Polyinstantiation** of the Smith tuple (a database to maintain multiple records with the same key, in order to prevent inference attacks)
+
+![alt text](assets\IMG127.PNG)
+
+**Top secret (TS) > Secret (S) > Confidential (C) > Unclassified (U)**
+
+---
+
+### Inference attacks and polyinstantiation
 - Suppose a user with security clearance C tries to update the value of JobPerformance for Smith from NULL to ‘Excellent’ in (b)
 
 ```SQL
@@ -98,12 +120,39 @@ SET JobPerformance = ‘Excellent’
 WHERE Name = ‘Smith’;
 ```
 
-- System should not reject it otherwise user could infer  that some nonnull value exists
+- System should not reject it otherwise user could infer that some nonnull value exists
 This is an example of inferring information through a covert channel
 - Solution is *polyinstantiation*
 
 ![alt text](assets\IMG118.PNG)
 
+## Role-Based Access Control (RBAC)
+Permissions associated with organizational roles
+- Users are assigned to appropriate roles
+
+```sql
+GRANT ROLE full-time TO emp_typ1;
+GRANT ROLE intern TO emp_typ2;
+```
+
+Roles can be used with traditional DAC and MAC methods
+
+Create/drop roles
+```sql
+CREATE ROLE manager;
+DROP ROLE manager;
+```
+Grant/revoke privileges
+
+```sql
+GRANT privilegeName
+ON objectName
+TO {userName | PUBLIC |roleName}
+[WITH GRANT OPTION];
+REVOKE privilegeName
+ON  objectName
+FROM {userName | PUBLIC |roleName}
+```
 ### SQL Injection
 
 - The client’s input is directly used in the SQL query
