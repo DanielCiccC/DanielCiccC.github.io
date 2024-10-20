@@ -330,11 +330,9 @@ An n-bit key has 2^n possible keys because for each of the n bits, we have 2 opt
 efficiency (i.e. time to encrypt, memory usage, etc.)
 - Strength of many encryption applications and cryptosystems measured by key size 
   - E.g., 128 bit length for symmetric, 1024 bit length for asymmetric
-  - Cracking a 128-bit key with modern hardware is going to take around 500 billion years. However, quantum 
-computers would be able to do it faster (~185 years atm).
+  - Cracking a 128-bit key with modern hardware is going to take around 500 billion years. However, quantum computers would be able to do it faster (~185 years atm).
 - For cryptosystems, security of encrypted data is not dependent on keeping the encryption algorithm secret 
-  - Cryptosystem security depends on keeping some or all of the elements of crypto-variable(s) or key(s) 
-secret
+  - Cryptosystem security depends on keeping some or all of the elements of crypto-variable(s) or key(s) secret
 
 ![alt text](assets\IMG82.PNG)
 
