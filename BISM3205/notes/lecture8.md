@@ -187,14 +187,15 @@ network, and traffic destined for that network can be forwarded using the inform
 - Maybe: separate computer system; software service running on existing router or server; or separate network containing supporting devices
 
 ![alt text](assets\IMG130.PNG)
-
+> - INCORRECT ICON
 > - proxy servers receive traffic
 > - dynamic filtering firewall removes unnecessary information
 > - only passing on information if it is correct
 > - call DMZ a 'firewall'
+> - red stars mean a firewall of different types
 >
 > Next, trusted company internet
-> - goes through WACC
+> - goes through WAP
 > - 
 >
 > Red area
