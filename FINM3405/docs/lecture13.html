@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-13">Lecture 13</h1>
+<h1 dir="auto" id="course-overview-and-revision">Course Overview and Revision</h1>
+<h3 dir="auto" id="lecture-1">Lecture 1</h3>
+<ul dir="auto">
+<li dir="auto">Basic defi nitions of:
+<ul dir="auto">
+<li dir="auto">Futures and forwards.</li>
+<li dir="auto">Options.</li>
+<li dir="auto">Swaps, including interest rate, currency and credit default.</li>
+</ul>
+</li>
+<li dir="auto">Differences between futures and forwards.</li>
+<li dir="auto">Basic payoff diagrams of futures/forwards and options.</li>
+<li dir="auto">Central, foundational, fundamental building block concepts on which
+all of financial theory and practice are built:
+<ul dir="auto">
+<li dir="auto">Law of finance and present value (later became risk-neutral pricing).</li>
+<li dir="auto">No arbitrage and the law of one price.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">forwards are OTC</li>
+<li dir="auto">futures have a precise mechanism</li>
+<li dir="auto">Need to know basic definitions and characteristics</li>
+<li dir="auto">profit/payoff diagrams, particularly in options
+<ul dir="auto">
+<li dir="auto">include/adjust for the premium</li>
+</ul>
+</li>
+<li dir="auto">Assume a risk neutral probability distribution
+<ul dir="auto">
+<li dir="auto">No arbitrage argument</li>
+<li dir="auto">LOOP - two portfolios (if one in the future) should maintain the same price</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="lec-2-3-futures--forwards">Lec 2-3 Futures &amp; forwards</h3>
+<ul dir="auto">
+<li dir="auto">Definitions, differences and payoff diagrams of futures and forwards.</li>
+<li dir="auto">Margin mechanism and leverage eff ect for futures.</li>
+<li dir="auto">How to calculate the value of a futures/forward contract.</li>
+<li dir="auto">The following for the main classes of futures and forwards in terms of the underlying asset, namely commodities, equities, currencies and interest rates (FRA and BAB futures):
+<ul dir="auto">
+<li dir="auto">Main contracts and their specifications.</li>
+<li dir="auto">Perfect hedging examples.</li>
+<li dir="auto">Basic examples of speculating on the price of the underlying asset.</li>
+</ul>
+</li>
+<li dir="auto">Contract pricing via the cost of carry approach.</li>
+<li dir="auto">Basis risk and optimal hedging.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Leverage effect</li>
+<li dir="auto">Calculate the value of a futures contract at a particular time
+<ul dir="auto">
+<li dir="auto">always have 0 value upfront, as the price change, your position may move in/out of your favour</li>
+</ul>
+</li>
+<li dir="auto">Contract specifications - remember to look for the multiplier
+<ul dir="auto">
+<li dir="auto">Contract multiplier will be given</li>
+</ul>
+</li>
+<li dir="auto">futures and forward pricing, definitions
+<ul dir="auto">
+<li dir="auto">optimal hedging examples</li>
+<li dir="auto">Little quantitative calculations</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="lec-4-8-options">Lec 4-8 Options</h3>
+<ul dir="auto">
+<li dir="auto">Definitions and concepts, including parties (taker, writer), vanilla types (puts &amp; calls, European &amp; American), asymmetric payoffs.</li>
+<li dir="auto">Moneyness (ITM, ATM, OTM).</li>
+<li dir="auto">Payoff s vs profits (including the premium).</li>
+<li dir="auto">Main contracts and markets, contract specifications.</li>
+<li dir="auto">Pricing bounds and put-call-parity.</li>
+<li dir="auto">American call premium = European call premium when no dividends.</li>
+<li dir="auto">Time value and intrinsic value.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Quite a decent proportion of the final exam on options</li>
+<li dir="auto">Taker, writer, buyer, seller
+<ul dir="auto">
+<li dir="auto">Basic types, American puts and calls</li>
+</ul>
+</li>
+<li dir="auto">Have a lot of quick little conceptual questions</li>
+<li dir="auto">Specifications of the contracts will be given</li>
+<li dir="auto">Pricing bounds - little calculation questions
+<ul dir="auto">
+<li dir="auto">most are logical/common sense</li>
+</ul>
+</li>
+<li dir="auto">Put/call parity formula (derive through an arbitrage argument, REMEMBER IT)
+<ul dir="auto">
+<li dir="auto">Pricing bounds - premiums should be the same</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">European option premiums/prices via the Black-Scholes model:
+<ul dir="auto">
+<li dir="auto">On non-dividend paying assets.</li>
+<li dir="auto">For dividend/income paying assets.</li>
+<li dir="auto">For currencies (simply viewed as dividend paying assets).</li>
+</ul>
+</li>
+<li dir="auto">Black-Scholes assumption of geometric Brownian motion and consequent log-normal distribution of the underlying asset’s price, or normal distribution of the asset’s returns.</li>
+<li dir="auto">Simulating geometric Brownian motion in preparation for the Monte Carlo approach to derivative security pricing.</li>
+<li dir="auto">Heuristic (non-rigorous) discussion of risk-neutral pricing.</li>
+<li dir="auto">Heuristic (hand-waving) interpretation of the factors affecting option prices, and quantification of this via the Black-Scholes model Greeks.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">know what each of the parameters mean</li>
+<li dir="auto">Work out the Z value from the table</li>
+<li dir="auto">distributions of the underlying assets returns
+<ul dir="auto">
+<li dir="auto">prices are log-normally distributed</li>
+<li dir="auto">Assumptions of the distributions of the returns in the black scholes model
+<ul dir="auto">
+<li dir="auto">Are they normally distribution?</li>
+<li dir="auto">Left skewness, fat tails etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">Geometric Brownian motion
+<ul dir="auto">
+<li dir="auto">Might simulate some paths</li>
+<li dir="auto">might give us data of asset price paths, calculate price paths in an exam</li>
+<li dir="auto">What is the price of an ATM call/put option e.g.</li>
+<li dir="auto">European arithmetic average/final price</li>
+</ul>
+</li>
+<li dir="auto">Haven't been given call/put options for lookback,
+<ul dir="auto">
+<li dir="auto">Maybe one or two of the list in the example tutorial</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">The greeks</p>
+<ul dir="auto">
+<li dir="auto">If market volatility goes up e.g., simple questions like that</li>
+<li dir="auto">Not the complicated ones, might ask to be calculated.</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Using delta ∆ and gamma Γ to predict small changes in option prices due to small changes in the price of the underlying asset (in preparation for delta and delta-gamma hedging).</li>
+<li dir="auto">More detailed discussion of theta θ and associated concept of time
+decay, and how it relates to moneyness.</li>
+<li dir="auto">Basic ideas and examples of static delta hedging, static delta-gamma
+hedging, and dynamic delta hedging.</li>
+<li dir="auto">Implied volatility and the volatility smile and term structure, and
+related VIX index enabling volatility to be directly traded.</li>
+<li dir="auto">Trading strategies and their payoff and profit/loss diagrams.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Delta/gamma hedging questions</li>
+<li dir="auto">not realistic to ask questions on dynamic delta hedging</li>
+<li dir="auto">Basic questions may be asked</li>
+<li dir="auto">Implied volatility
+<ul dir="auto">
+<li dir="auto">volatility smile - what does it mean? VIX index</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Trading strategies</p>
+<ul dir="auto">
+<li dir="auto">on a bull spread e.g., what is the payoff?</li>
+<li dir="auto">Simple stuff around the basics, basic strategies</li>
+<li dir="auto">Know what a bear spread, etc</li>
+</ul>
+</blockquote>
+<p dir="auto">Options continued:</p>
+<ul dir="auto">
+<li dir="auto">Binomial and Monte Carlo numerical option pricing methods:
+<ul dir="auto">
+<li dir="auto">The need for numerical methods:</li>
+<li dir="auto">Price more complex derivative securities.</li>
+<li dir="auto">More complex pricing methods than the Black-Scholes model, in particular because returns are not normally distributed.</li>
+</ul>
+</li>
+<li dir="auto">1-period binomial model for European option price and delta.</li>
+<li dir="auto">Multi-period binomial model for European option price and delta.</li>
+<li dir="auto">More rigorous introduction of risk-neutral pricing via binomial model.</li>
+<li dir="auto">Monte Carlo pricing of European options.
+<ul dir="auto">
+<li dir="auto">Simple method that simulates only final asset price.</li>
+<li dir="auto">More general method that simulates entire asset price paths in preparation for Monte Carlo pricing of path dependent options.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">representative in the practise exam
+<ul dir="auto">
+<li dir="auto">All the i</li>
+<li dir="auto">Will be given the values in the tree - will not be asked to build one</li>
+<li dir="auto">Calculate their delta's</li>
+<li dir="auto">choosers option IMPORTANT (given a tree)</li>
+</ul>
+</li>
+<li dir="auto">Binomial risk-neutral probability
+<ul dir="auto">
+<li dir="auto">work through the tree, use the risk-neutral approach to calculate the binomial prices in the tree</li>
+</ul>
+</li>
+<li dir="auto">chooser options and other options with the binomial model</li>
+<li dir="auto">five asset price paths with a few dates - MAKE SURE YOU CAN DO THIS
+<ul dir="auto">
+<li dir="auto">Will be given the tree or the asset price paths</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="lec-9-cds">Lec 9 CDS</h3>
+<ul dir="auto">
+<li dir="auto">Basic definitions and concepts for credit default swaps.</li>
+<li dir="auto">More precise description of mechanics, including notions of:</li>
+<li dir="auto">Analogy with insurance contracts.</li>
+<li dir="auto">Parties: protection buyer and seller.</li>
+<li dir="auto">Reference entity, assets and events.</li>
+<li dir="auto">Payout, including physical vs cash delivery.</li>
+<li dir="auto">Recovery rate and loss given default.</li>
+<li dir="auto">CDS coupon or spread or premium.</li>
+<li dir="auto">Single name vs multi name, basket, CDS indices.</li>
+<li dir="auto">Idea that CDS spreads refl ect credit risk perceptions, and relation
+between breakeven CDS spread and reference entity’s risk premium.</li>
+<li dir="auto">Survival and default probabilities.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">CDS calculations
+<ul dir="auto">
+<li dir="auto">Table with dates, given survival prob, and default prob
+<ul dir="auto">
+<li dir="auto">Breakeven CDS spread</li>
+<li dir="auto">Upfront exchange of money</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">CDS spread increases
+<ul dir="auto">
+<li dir="auto">Speculate in credit risk perceptions</li>
+<li dir="auto">conceptual understanding of CDS - be prepared and understand them</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">CDS pricing:
+<ul dir="auto">
+<li dir="auto">Calculating the breakeven CDS spread.</li>
+<li dir="auto">Or calculating the upfront cashflow given a fi xed CDS spread.</li>
+</ul>
+</li>
+<li dir="auto">Speculating and hedging with CDS.</li>
+<li dir="auto">Idea that CDS opened up credit risk as “just another” asset class that can be directly traded, like VIX indices did for volatility.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Numerical options, credit rate swaps and credit default swaps</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="lec-10-interest-rate-swaps">Lec 10 Interest rate swaps</h3>
+<ul dir="auto">
+<li dir="auto">Floating rate notes (FRN) definition, concepts and pricing in preparation for fi xed-for-fl oating interest rate swap pricing.</li>
+<li dir="auto">Fixed-for-floating interest rate swap definitions and concepts.</li>
+<li dir="auto">Calculating the net cashflows on each coupon or interest date.</li>
+<li dir="auto">The idea that a position in a fixed-for-floating interest rate swap can be replicated via positions in a FRN and a fixed coupon bond.</li>
+<li dir="auto">Interest rate swap pricing: calculating the fi xed rate.</li>
+<li dir="auto">Hedging and speculating with interest rate swaps.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">interest rate swaps question - representative of what is in the final exam</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="lec-12-var-and-es">Lec 12 VaR and ES</h3>
+<ul dir="auto">
+<li dir="auto">Basic concepts relating to risk, including:
+<ul dir="auto">
+<li dir="auto">Types: market, default, liquidity, operational.</li>
+<li dir="auto">Portfolio expected return and standard deviation (volatility).</li>
+</ul>
+</li>
+<li dir="auto">Concepts related to the normal distribution in preparation for
+calculating value at risk (VaR) and expected shortfall (ES).</li>
+<li dir="auto">The need for simple, single measures of market risk like VaR and ES.</li>
+<li dir="auto">VaR and ES definitions, basic concepts, and differences.</li>
+<li dir="auto">Potential shortcoming of VaR and consequent need for ES.</li>
+<li dir="auto">Calculating VaR and ES via 2 methods:
+<ul dir="auto">
+<li dir="auto">Parametric approach assuming normally distributed returns.</li>
+<li dir="auto">Nonparametric approach directly using historical data.</li>
+</ul>
+</li>
+<li dir="auto">Parametric portfolio VaR, worst case VaR, diversification benefits.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">What is risk, calculate the portfolio</li>
+<li dir="auto">Worst case VAR, benefits of diversification</li>
+<li dir="auto">Proficient of normal distribution</li>
+<li dir="auto">VaR</li>
+<li dir="auto">Know how to use normal distribution</li>
+<li dir="auto">Why do we need VaR
+<ul dir="auto">
+<li dir="auto">simple measures of risk</li>
+<li dir="auto">Basic definitions and what they are</li>
+</ul>
+</li>
+<li dir="auto">expected definition of VaR and expected shortfall?</li>
+</ul>
+<p dir="auto">Parametric and non-parametric</p>
+<ul dir="auto">
+<li dir="auto">Calculate a parametric approach for a portfolio</li>
+<li dir="auto">non-parametric is not possible</li>
+<li dir="auto">no VaR formulas - need to remember these</li>
+<li dir="auto">confidence interval to the left of it</li>
+<li dir="auto">no portfolio VaR formula</li>
+</ul>
+</blockquote>
+<div  dir="auto" ></div>
+<iframe frameborder="0" style="width:100%;height:102px;" src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=recap.drawio#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%22AJVX2dEOV6ciYNKZwofG%22%3EjZJNb4QgEIZ%2FDccmKqnpuXbbXtoePHgmMiu0IC5i1f76Qh38yGaTnoBnPnlnCC309GJZJ94MB0WyhE%2BEPpEsS5P7xB%2BBzAvJ83QBjZUcnTZQyh%2BIkUgHyaE%2FODpjlJPdEdambaF2B8asNePR7WzUsWrHGrgCZc3UNa0kd2KhD%2FFbgb%2BCbESsnCZo0Sw6I%2BgF42bcIXoitLDGuOWmpwJUEC%2FqssQ937CujVlo3X8C4ALnjyyvms9LldeT1V%2Fvwx1m%2BWZqwA%2F3RoMTsm2wazdHKawZWg4hW0Lo4yikg7JjdbCOfvieCaeVf6X%2BinnBOphuNpyuMvj9gVDYzt4FA2iOyuHq0LgT4zaINKordkOIcQxn36ypN3n8BRWKz20Sf7bdPtPTLw%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E"></iframe>
+</main>
+</body>
+</html>

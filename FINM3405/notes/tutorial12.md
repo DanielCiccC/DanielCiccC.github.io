@@ -2,7 +2,7 @@
 
 ### 1
 - VaR estimates the maximum loss expected (with a given confidence interval, usually 95% or 99%) over a set period under normal market condition
-- ES provides an average of the losses that exceeed the VaR at a certain confidence level.
+- ES provides an average of the losses that exceed the VaR at a certain confidence level.
   - Provides a fuller picture of the tail risk
 
 ### 2
