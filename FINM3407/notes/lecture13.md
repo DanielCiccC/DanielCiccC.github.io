@@ -594,7 +594,7 @@ market
 > - momentum, value and volumes are the three values that are most inportant
 >
 > Does behavioural finance actually work?
-> - not providing strong evidence suggesting
+> - not providing strong evidence suggesting otherwise
 
 
 ### Final Exam
@@ -615,5 +615,3 @@ How to Prepare for the Exam
 - Practice lecture examples, tutorial questions, & practice exam and try to get a deep understanding of the examples and questions.
 - Read the reference chapters of the textbook and other references (for the relevant content)
 - It is more important to understand the concepts and know how to apply them, rather than simply memorising the definitions (won’t give you full marks)
-
-
