@@ -77,7 +77,15 @@ libraries, and many training centers)
 An audit gives you the opportunity to review your risk management program and to confirm that the program 
 has correctly identified and reduced (or otherwise addressed) the risks to your organisation.
 
-![alt text](assets\IMG186.PNG)
+Appropriateness of controls
+- Is the level of security control suitable for the risk it addresses?
+
+Correct installation of controls
+- Is the security control in the right place and working well?
+
+Address purpose of controls
+- Is the security control effective in addressing the risk it was designed to address?
+
 
 ### Service Organisational Control (SOC) Reports
 The American Institute of Certified Public Accountants has recognized the increased complexities of service 
@@ -194,13 +202,10 @@ the adequacy and effectiveness of the entity’s ERM process.
 ### Audit Data Collection Methods
 - Questionnaires Interviews Observation
 - Checklists
-- Reviewing
-- documentation
-- Reviewing
-- configurations
+- Reviewing  documentation
+- Reviewing configurations
 - Reviewing policy
-- Performance 
-- security testing
+- Performance security testing
 
 
 > - Before you can analyse the data, identify and collect the data
@@ -226,7 +231,7 @@ the adequacy and effectiveness of the entity’s ERM process.
 
 ### Control Checks and Identity Management
 
-It is important to ensure that your security controls are effective, reliable, and functioning as you intended. Without monitoring and reviewing, you have no assurance that your information security program is effective or that personnel are exercising due diligence.When auditing an identity management system, you should focus on these key areas: 
+It is important to ensure that your security controls are effective, reliable, and functioning as you intended. Without monitoring and reviewing, you have no assurance that your information security program is effective or that personnel are exercising due diligence. When auditing an identity management system, you should focus on these key areas: 
 
 - Approval process: who grants approval for access requests?
 - Authentication mechanisms: What mechanisms are used for specific security requirements?
@@ -268,6 +273,7 @@ It is important to ensure that your security controls are effective, reliable, a
 
 
 ### Example Security Audit Report: Passwords
+
 ![alt text](assets\IMG192.PNG)
 
 ## Part 2: Security Testing
@@ -301,7 +307,7 @@ It is important to ensure that your security controls are effective, reliable, a
 ### Establishing Testing Goals and Reconnaissance Methods
 - Establish testing goals
   - Identify vulnerabilities and rank them according to how critical they are to your systems
-  - Document a point  -in  -time (snapshot) test for comparison to other time periods
+  - Document a point-in-time (snapshot) test for comparison to other time periods
   - Prepare for auditor review
   - Find the gaps in your security
 - Reconnaissance methods
