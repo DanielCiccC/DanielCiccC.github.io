@@ -1,0 +1,612 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+<meta name="description" content="undefined - microjam page">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
+
+<title>undefined</title>
+</head>
+<body id="top">
+<header>
+
+
+
+
+
+
+</header>
+<main>
+<h1 dir="auto" id="lecture-7">Lecture 7</h1>
+<ul dir="auto">
+<li dir="auto">Certificate Authority (CA) - distribution of public keys with trust</li>
+<li dir="auto">Two important protocols in business
+<ul dir="auto">
+<li dir="auto">SSL/TLS (for the web)</li>
+<li dir="auto">S/MIME (for email)</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="symmetric-key">Symmetric key</h3>
+<p dir="auto">Has been around a long time (Caesar cipher).</p>
+<p dir="auto"><img src="assets\IMG93.PNG" alt="alt text" data-src="assets/IMG93.PNG"></p>
+<h3 dir="auto" id="asymmetric-key">Asymmetric key</h3>
+<p dir="auto">Theory evolved in late 70s, the first major change in cryptography in a long time.</p>
+<p dir="auto"><img src="assets\IMG94.PNG" alt="alt text" data-src="assets/IMG94.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">encrypt and decrypt with either key</li>
+<li dir="auto">difference between encrypting with private versus public key</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="difference-between-hashing-and-encryption">Difference Between Hashing and Encryption</h3>
+<p dir="auto"><img src="assets\IMG95.PNG" alt="alt text" data-src="assets/IMG95.PNG"></p>
+<ul dir="auto">
+<li dir="auto">Hashing is a one-way function that changes a plain text to a unique digest† that is irreversible.</li>
+<li dir="auto">Encryption is a two-way function that includes encryption and decryption.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Hashing is not reversible</li>
+<li dir="auto">hash and encrypt message to check it has not been tampered</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="apply-rsa-cryptography">Apply RSA Cryptography</h3>
+<ol dir="auto">
+<li dir="auto">Goto <a href="https://tinyurl.com/UQEncryptionKey">https://tinyurl.com/UQEncryptionKey</a>  (<a href="https://www.devglan.com/online-tools/rsa-encryption-decryption">https://www.devglan.com/online-tools/rsa-encryption-decryption</a>)</li>
+<li dir="auto">Create a public/private key pair† with the default number of bits.</li>
+<li dir="auto">Have a look at n, e of your public key <a href="https://report-uri.com/home/pem_decoder">https://report-uri.com/home/pem_decoder</a>
+How many hex digits in n? How many bits in n?</li>
+<li dir="auto">Create a secret message using your private key (keep this secret!)</li>
+<li dir="auto">Goto <a href="https://tinyurl.com/UQCyberSecurity">https://tinyurl.com/UQCyberSecurity</a>  (<a href="https://docs.google.com/document/d/1zqlYZrOUyh-oYaE2cMQFGRf9U5rxMxy8ZND4ytsvGIM/edit?usp=sharing">https://docs.google.com/document/d/1zqlYZrOUyh-oYaE2cMQFGRf9U5rxMxy8ZND4ytsvGIM/edit?usp=sharing</a>)</li>
+<li dir="auto">Enter your secret message and your public key into the table</li>
+<li dir="auto">Decode the message of another student using their public key and enter the decoded message into the
+table</li>
+<li dir="auto">Try decoding a message with a different public key</li>
+<li dir="auto">Confidentiality or Authentication and Integrity?</li>
+</ol>
+<p dir="auto"><img src="assets\IMG96.PNG" alt="alt text" data-src="assets/IMG96.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">has 64 encoding</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="third-party-trust-simplified">Third-Party Trust (Simplified)</h3>
+<p dir="auto"><img src="assets\IMG97.PNG" alt="alt text" data-src="assets/IMG97.PNG"></p>
+<h3 dir="auto" id="public-key-infrastructures-pki">Public key infrastructures (PKI)</h3>
+<ul dir="auto">
+<li dir="auto">The use of public keys requires a framework of trust (why?)</li>
+<li dir="auto">Trust defined as the firm belief in the reliability, truth, or ability of someone or something</li>
+<li dir="auto">This is what a PKI is – it is a framework for the practical operation of public key cryptography – more
+specifically, a framework for the trusted (i.e. authenticated) distribution of public keys.</li>
+<li dir="auto">A PKI contains/provides:</li>
+<li dir="auto">Standards (important to us)</li>
+<li dir="auto">Certification Authorities (important to us)</li>
+<li dir="auto">Certificates (important to us)</li>
+<li dir="auto">Operational protocols (important to us)</li>
+<li dir="auto">Interoperable tools</li>
+<li dir="auto">Legislation (e.g. are digital signatures legally enforceable?) – we do not treat this.</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">like a digital passport</li>
+<li dir="auto">have a certificate for email, correspondence and other things</li>
+</ul>
+</blockquote>
+<ul dir="auto">
+<li dir="auto">Integrated system of software, encryption methodologies, protocols, legal agreements, and third- party services
+enabling users to communicate securely</li>
+<li dir="auto">PKI systems are based on public-key cryptosystems</li>
+<li dir="auto">PKI protects information assets in several ways:
+<ul dir="auto">
+<li dir="auto">Authentication: Digital certificates in a PKI system permit individuals, organizations, and Web servers to authenticate the
+identity of each of the parties in an Internet transaction</li>
+<li dir="auto">Integrity: A digital certificate demonstrates that the content signed by the certificate has not been altered while in transit</li>
+<li dir="auto">Confidentiality: PKI keeps information confidential by ensuring that it is not intercepted during transmission over the Internet</li>
+<li dir="auto">Authorization: Digital certificates issued in a PKI environment can replace user IDs and passwords, enhance security, and
+reduce some of the overhead required for authorization processes and controlling access privileges for specific transactions</li>
+<li dir="auto">Nonrepudiation: Digital certificates can validate actions, making it less likely that customers or partners can later repudiate a
+digitally signed transaction, such as an online purchase.</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">based on public and private keys</li>
+<li dir="auto">you can authenticate yourself,</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="certificate-authorities-cas">Certificate authorities (CA’s)</h3>
+<ul dir="auto">
+<li dir="auto">Certificate Authority – a business – central within PKIs</li>
+<li dir="auto">Trusted organization (a business, or a section within a corporation – e.g. the UQ CA) that:
+<ul dir="auto">
+<li dir="auto">Accepts applications for certificates (an entity for the distribution of public keys – we talk about these in detail shortly)</li>
+<li dir="auto">Authenticates applications – trust is the issue</li>
+<li dir="auto">Issues certificates</li>
+<li dir="auto">Maintains status information about certificates</li>
+<li dir="auto">Revokes certificates</li>
+<li dir="auto">Provides an historical audit trail of certificates</li>
+<li dir="auto">On some scale of operation (e.g. global)</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">CA's can revoke certificates</li>
+</ul>
+</blockquote>
+<p dir="auto">Certificate authorities (CA’s)</p>
+<ul dir="auto">
+<li dir="auto">CA must confirm the information the subject has provided.
+<ul dir="auto">
+<li dir="auto">Remember TRUST is the essential goal.</li>
+<li dir="auto">This level of information is therefore variable and depends on the level of trust indicated by the certificate.</li>
+</ul>
+</li>
+<li dir="auto">Level of trust is related to the level of assurance sought by possession (and use of) the certificate</li>
+<li dir="auto">A Local Registration Authority (RA) may be involved – an agent acting on behalf of the CA.
+<ul dir="auto">
+<li dir="auto">A CA is a business model!</li>
+</ul>
+</li>
+<li dir="auto">The CA issues a Digital Certificate to a suitably assessed client (i.e. individual or business)</li>
+<li dir="auto">The issued certificate (aka as a digital ID by Verisign) can be for a variety of purposes:
+<ul dir="auto">
+<li dir="auto">an TLS digital certificate (used by just about all businesses for secure Web transactions),</li>
+<li dir="auto">an email certificate,</li>
+<li dir="auto">a code  -signing certificate,</li>
+<li dir="auto">a VPN certificate</li>
+<li dir="auto">(most of these further discussed next week)</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">software you download from the internet, can make sure it has not been altered</li>
+<li dir="auto">VPN certificates</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="digital-certificates">Digital certificates</h3>
+<ul dir="auto">
+<li dir="auto">A certificate is a binding between an entity’s public key and identifying characteristics of the entity. That is, a certificate contains the public key and other identifying information for some entity.</li>
+<li dir="auto">Similar to a ‘digital passport’ or ‘digital driver’s license.</li>
+<li dir="auto">Also Known As: digital ID, certificate.</li>
+<li dir="auto">Issued to an entity (person, software, hardware item, etc) For example – issued to a person for securing email, or a web server program to secure ecommerce transactions.</li>
+<li dir="auto">Are used for authentication, key exchange, non-repudiation</li>
+<li dir="auto">Aim to achieve TRUST</li>
+</ul>
+<p dir="auto"><img src="assets\IMG98.PNG" alt="alt text" data-src="assets/IMG98.PNG"></p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">We need strong authentication – we must further support the digital signature model (public key itself does not verify the ID of sender)</p>
+</li>
+<li dir="auto">
+<p dir="auto">The solution is a digital certificate – it verifies the owner of the certificate AND verifies the owner of the public key</p>
+</li>
+<li dir="auto">
+<p dir="auto">Digital certificates must be readily available and readily exchangeable (without heavy security restricting exchange)</p>
+</li>
+<li dir="auto">
+<p dir="auto">Bob obtains a digital certificate – which also contains his public key – from a trusted organization (the
+Certificate Authority or CA)</p>
+</li>
+<li dir="auto">
+<p dir="auto">Bob creates the message, signs it (using hashing and his private key) – then sends this with a copy of his digital certificate to Alice</p>
+</li>
+<li dir="auto">
+<p dir="auto">How have we controlled this message (integrity, authentication, non-repudiation) – explain your
+reasoning. Is Bob's key authentic? Has it been changed?</p>
+</li>
+</ul>
+<h3 dir="auto" id="digital-certificates-4">Digital certificates #4</h3>
+<ul dir="auto">
+<li dir="auto">Not very useful if individuals issue their own certificate (why? It must be based on trust)</li>
+<li dir="auto">Certificates must be verifiable – forgeries must be readily detected. Therefore we must control for authentication/integrity</li>
+<li dir="auto">Certificates must be readily available and readily exchangeable (without heavy security restricting exchange)</li>
+<li dir="auto">Must be scalable – grow with demand (number of users and the evolution of the types of use)</li>
+<li dir="auto">Must conform to an open standard (for future focus and individual domain needs)</li>
+<li dir="auto">We need a Certificate Authority (CA) for certificate distribution. We also need an international standard for the content/design of a digital certificate</li>
+</ul>
+<p dir="auto"><img src="assets\IMG99.PNG" alt="alt text" data-src="assets/IMG99.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Domain validation can be done by authority by asking you to put text on your website</li>
+<li dir="auto">Organisation validation with ABN</li>
+<li dir="auto">To get onto google maps e.g. will send you a postcard with a number to authenticate address</li>
+<li dir="auto">CA does all that</li>
+</ul>
+<p dir="auto">Certificate created</p>
+<ul dir="auto">
+<li dir="auto">hash with their own private key</li>
+<li dir="auto">digital signature,</li>
+<li dir="auto">decrpyt the</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="digital-certificates-5">Digital certificates #5</h3>
+<ul dir="auto">
+<li dir="auto">X.509 is an ITU and ISO certificate format standard (a framework or high level standard)
+<ul dir="auto">
+<li dir="auto">First published in 1988 – part of the X.500 Directory recommendations. Latest version is Version 3 issued in 1996.</li>
+<li dir="auto">An X.509v3 certificate contains a set of basic, predefined fields and zero or more extension fields. This is the standard that business should use when a digital certificate is required (and it frequently is) – it is very widely recognised.</li>
+</ul>
+</li>
+<li dir="auto">Each certificate contains the public key of a user and is signed with the private key of a CA
+<ul dir="auto">
+<li dir="auto">(does the certificate contain the PRIVATE KEY?)</li>
+</ul>
+</li>
+<li dir="auto">Is used in S/MIME, IP Security, SSL/TLS and other protocols</li>
+</ul>
+<p dir="auto"><img src="assets\IMG100.PNG" alt="alt text" data-src="assets/IMG100.PNG"></p>
+<p dir="auto"><img src="assets\IMG101.PNG" alt="alt text" data-src="assets/IMG101.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Hash of plain text is encrypted with their private key</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="root-and-user-level-certificates">Root and user-level certificates</h3>
+<ul dir="auto">
+<li dir="auto">Characteristics of certificates generated by CA:
+<ul dir="auto">
+<li dir="auto">Any user with access to the public key of the CA can verify the user public key that was certified – this introduces the concept of a root certificate – the trusted distribution of the CA’s public key</li>
+<li dir="auto">No party other than the CA can modify the certificate without this modification being detected – this
+is because of the inbuilt digital signature control (i.e. contained within the digital certificate)</li>
+</ul>
+</li>
+<li dir="auto">Therefore we end up with (at least) two levels of certificates:
+<ul dir="auto">
+<li dir="auto">(1) root certificates (i.e. the certificate of a CA containing the public key of the CA), and</li>
+<li dir="auto">(2) user-level certificates (containing the public key of the user and issued by the CA using its
+public key)</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">Does not have a valid certificate, will tell us not to log on</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="digital-certificates-continued">Digital certificates (continued)</h3>
+<ul dir="auto">
+<li dir="auto">A primary responsibility of a CA is to revoke certificates (they have an expiry date – but sometimes
+it is necessary to ‘remove’ the  certificate from general circulation before this date is reached)
+<ul dir="auto">
+<li dir="auto">Certificate Revocation Lists (CRL)</li>
+<li dir="auto">Revocation status is the most prominent information a CA maintains about the  status of a certificate</li>
+<li dir="auto">Revocation reasons: key compromise, change in the subject’s affiliation, CAs  certificate has been
+compromised</li>
+<li dir="auto">CRLs must be publicized by CAs</li>
+<li dir="auto">Distribution method – polled or pushed by certificate using software (e.g., web  browser – certificates
+are used heavily by Web browsers – e.g. Firefox, IE,  etc. – more on this next week)</li>
+<li dir="auto">X.509 specifies a CRL format – the format is not examinable, included here for completeness.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG102.PNG" alt="alt text" data-src="assets/IMG102.PNG"></p>
+<h1 dir="auto" id="security-topic-%E2%80%93-cryptography-2">Security Topic – Cryptography (2)</h1>
+<h2 dir="auto" id="ssltls-web-smime-for-email">SSL/TLS (web), S/MIME (for email)</h2>
+<p dir="auto">Firstly, communication protocols – some important characteristics</p>
+<ul dir="auto">
+<li dir="auto">Know what a protocol is …</li>
+<li dir="auto">Know basic telecommunications terminology.</li>
+<li dir="auto">Understand the nature of processing in a layered communications protocol – how the protocols combine
+to get the whole job done.</li>
+<li dir="auto">Know the purpose of the five layers of the TCP/IP ‐ OSI protocol/model/framework</li>
+<li dir="auto">Appreciate that protocols construct the content of network packets (which are comprised of control
+headers and data)</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">communicate data across devices</li>
+</ul>
+</blockquote>
+<p dir="auto">Communication protocols – consider ‘snail-mail’ addressing
+<img src="assets\IMG103.PNG" alt="alt text" data-src="assets/IMG103.PNG"></p>
+<h3 dir="auto" id="internet">Internet</h3>
+<p dir="auto"><img src="assets\IMG104.PNG" alt="alt text" data-src="assets/IMG104.PNG"></p>
+<h3 dir="auto" id="osi-vs-tcpip-model-7-vs-5-layers">OSI vs. TCP/IP Model 7 vs 5 layers</h3>
+<p dir="auto"><img src="assets\IMG105.PNG" alt="alt text" data-src="assets/IMG105.PNG"></p>
+<p dir="auto">Some abbreviations:
+OSI: Open Systems Interconnection
+TCP: Transmission Control Protocol
+IP: Internet Protocol
+UDP: User Datagram Protocol.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">IP address</p>
+</li>
+<li dir="auto">
+<p dir="auto">MAC address is a particular identifier for a hardware</p>
+<ul dir="auto">
+<li dir="auto">two digits separated by hyphens</li>
+<li dir="auto">first six are the manufacturer</li>
+<li dir="auto">other six digits are for a device</li>
+<li dir="auto">hex digits, large address space</li>
+<li dir="auto">uniquely identifying hardware</li>
+</ul>
+</li>
+<li dir="auto">
+<p dir="auto">FTP - file transfer protocol</p>
+</li>
+<li dir="auto">
+<p dir="auto">first part of URL</p>
+</li>
+</ul>
+</blockquote>
+<p dir="auto"><img src="assets\IMG106.PNG" alt="alt text" data-src="assets/IMG106.PNG"></p>
+<p dir="auto"><img src="assets\IMG107.PNG" alt="alt text" data-src="assets/IMG107.PNG"></p>
+<p dir="auto">Conceptual data flow in a simple network topology of two hosts (A and B) connected
+by a link between their respective routers. The application on each host executes
+read and write operations as if the processes were directly connected to each other
+by some kind of data pipe. After establishment of this pipe, most details of the
+communication are hidden from each process, as the underlying principles of
+communication are implemented in the lower protocol layers. In analogy, at the
+transport layer the communication appears as host-to-host, without knowledge of the
+application data structures and the connecting routers, while at the internetworking
+layer, individual network boundaries are traversed at each router.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">always has to travel this path</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="communication-protocols-%E2%80%93-a-series-of-layers">Communication protocols – a series of ‘layers’</h3>
+<p dir="auto">We have (from the ISO) a ‘layered’ communication model. This will be very helpful for our
+work with other security topics (e.g. firewalls). We show an adapted version of this below.</p>
+<p dir="auto"><img src="assets\IMG108.PNG" alt="alt text" data-src="assets/IMG108.PNG"></p>
+<p dir="auto"><img src="assets\IMG109.PNG" alt="alt text" data-src="assets/IMG109.PNG"></p>
+<h3 dir="auto" id="network--computer-address-ip-addresses">Network &amp; computer address (IP Addresses)</h3>
+<ul dir="auto">
+<li dir="auto">The Internet uses addresses, which are also called IP addresses, for example, 192.168.2.28.</li>
+<li dir="auto">An IP address comprises a network identifier component and a host identifier component.</li>
+<li dir="auto">Layer 3 (network layer) is concerned with IP addresses.</li>
+<li dir="auto">So 192.168.2.28 has a network identifier component (i.e. part of the address) AND a computer identifier
+component (i.e. the other part of the address) - learn which is which next week!</li>
+</ul>
+<h4 dir="auto" id="application-address-port-address-or-simply-port">Application address (Port Address or simply: port)</h4>
+<ul dir="auto">
+<li dir="auto">The concept of a port number (a simple integer) is used to identify the identity of the application sending
+the communication and also the identity of the application receiving the communication.</li>
+<li dir="auto">Ports are extremely relevant in IS security.</li>
+<li dir="auto">Layer 4 and 5 (transport &amp; application) are concerned with port addresses.</li>
+<li dir="auto">As an example, a ‘web server’ always has port 80, you write port numbers like this 192.168.2.28:80</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">two components, network and computer</li>
+<li dir="auto">in home network, last two numbers will change</li>
+<li dir="auto">Use of port number to identify the application sending the communication</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="communication-protocols-in-action-%E2%80%93-email-smtp">Communication protocols in action – email (SMTP)</h3>
+<p dir="auto"><img src="assets\IMG110.PNG" alt="alt text" data-src="assets/IMG110.PNG"></p>
+<h3 dir="auto" id="communication-protocols-in-action-%E2%80%93-web-http">Communication protocols in action – web (HTTP)</h3>
+<p dir="auto"><img src="assets\IMG111.PNG" alt="alt text" data-src="assets/IMG111.PNG"></p>
+<h3 dir="auto" id="security-protocols-%E2%80%93-important-characteristics">Security protocols – important characteristics</h3>
+<ul dir="auto">
+<li dir="auto">We must differentiate between Offline and Online Encryption Systems</li>
+<li dir="auto">Secure communication protocols</li>
+<li dir="auto">Offline communication protocol (<strong>email</strong>) – take a message, encrypt it and either store the
+message or transmit it to another user (<strong>S/MIME</strong>)</li>
+<li dir="auto">Online communication (<strong>web</strong>) – require real time interaction between participants (<strong>TLS</strong>)</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">S/MIME: Secure/Multipurpose Internet Mail Extensions.</li>
+<li dir="auto">TLS: Transport Layer Security.</li>
+<li dir="auto">TLS is the successor to Secure Sockets Layer (SSL) and is often referred to as SSL/TLS.</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="web-is-online-%E2%80%93-therefore-tls-is-online">Web is online – therefore TLS is online</h3>
+<p dir="auto">(communicating with each other in ‘real-time’)</p>
+<p dir="auto"><img src="assets\IMG112.PNG" alt="alt text" data-src="assets/IMG112.PNG"></p>
+<h3 dir="auto" id="email-is-offline-%E2%80%93-therefor-smime-is-offline">Email is offline – therefor S/MIME is offline</h3>
+<p dir="auto">(not communicating in ‘real-time’)</p>
+<p dir="auto"><img src="assets\IMG113.PNG" alt="alt text" data-src="assets/IMG113.PNG"></p>
+<h3 dir="auto" id="the-web-requires-an-online-security-protocol">The web requires an online security protocol</h3>
+<p dir="auto"><img src="assets\IMG114.PNG" alt="alt text" data-src="assets/IMG114.PNG"></p>
+<p dir="auto">HTTP is the communication protocol between a web browser and a web server – it is a very simple ‘language’designed to enable
+a ‘discussion’between the two entities – this defines the Web. Originally, the Web had NO SECURITY – it has now been added –
+we shall now discuss this security protocol!</p>
+<h3 dir="auto" id="web-security-%E2%80%93-historically-via-secure-sockets-layer-ssl">Web security – historically via Secure Sockets Layer (SSL)</h3>
+<p dir="auto"><img src="assets\IMG115.PNG" alt="alt text" data-src="assets/IMG115.PNG"></p>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto">For over 20 years Secure Sockets Layer (SSL) has been in the market as one of the most widely ‐ used encryption protocols
+ever released and remains in widespread use today despite various security vulnerabilities exposed in the protocol.</p>
+</li>
+<li dir="auto">
+<p dir="auto">SSL v3.0 was superseded in 1999 by TLS v1.0, which has since been superseded by TLS v1.1 and v1.2. To date, SSL and
+early TLS no longer meet minimum security standards due to security vulnerabilities in the protocol for which there are no
+fixes. It is critically important that entities upgrade to a secure alternative as soon as possible and disable any fallback to
+both SSL and early TLS.</p>
+</li>
+<li dir="auto">
+<p dir="auto">The SSL protocol (all versions) cannot be fixed. SSL and early TLS (1.1) no longer meet the security needs of entities
+implementing strong cryptography to protect payment data over public or untrusted communications channels. Additionally,
+modern web browsers have begun prohibiting SSL connections, preventing users of these browsers from accessing web
+servers that have not migrated to a more modern protocol.</p>
+</li>
+<li dir="auto">
+<p dir="auto">SSL  ‐  was extremely successful – widely deployed – no longer to be used. Directly dependent upon
+digital certificate ownership  ‐  Devised by Netscape</p>
+</li>
+<li dir="auto">
+<p dir="auto">TLS (transport layer security)  ‐  an Internet standard (TLS) managed by the Internet Engineering
+Taskforce (IETF). Latest version: TLS 1.3 (August 2018) TLS now to be used.</p>
+</li>
+<li dir="auto">
+<p dir="auto">A general purpose security protocol – not a specialized secure payment protocol. What does this mean</p>
+<ul dir="auto">
+<li dir="auto">Not just for the Web  ‐  secures any content that will be carried by TCP (explained next week)</li>
+<li dir="auto">Does not provide transaction accountability, i.e. does not check if credit card is valid</li>
+<li dir="auto">Secures data during transmission only – not whilst resident on client or server machines</li>
+</ul>
+</li>
+</ul>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">just making the transport over the internet secure</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="web-secure-communication-tls">Web secure communication: TLS</h3>
+<ul dir="auto">
+<li dir="auto">Transport layer security (TLS) protocol: an Internet standard (TLS) managed by the IETF.</li>
+<li dir="auto">TLS now to be used</li>
+<li dir="auto">HTTPS
+<ul dir="auto">
+<li dir="auto">The HTTP protocol with the data encryption using TLS</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG116.PNG" alt="alt text" data-src="assets/IMG116.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">standard is everything should be encypted</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="transport-layer-security-tls">Transport Layer Security (TLS)</h3>
+<ul dir="auto">
+<li dir="auto">TLS working group was formed within IETF</li>
+<li dir="auto">First version of TLS can be viewed as an updated version of SSLv3.1</li>
+<li dir="auto">We must consider:
+<ul dir="auto">
+<li dir="auto">Levels of authentication (partial or full   - implications)</li>
+<li dir="auto">Paradigms of security (it is hybrid, symmetric key and public key)</li>
+<li dir="auto">Key distribution problem</li>
+<li dir="auto">Certificate usage   - private key usage to confirm ownership of certificate.</li>
+<li dir="auto">Root certificates   - where must they be located  ‐  implications</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><img src="assets\IMG117.PNG" alt="alt text" data-src="assets/IMG117.PNG"></p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">encrypt a generated private key with the web-server's public key</li>
+<li dir="auto">can communicate using the private (symmetric) key</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="tls-%E2%80%93-how-it-works-%E2%80%93-a-business-conceptual-view">TLS – How it works – (a business conceptual view)</h3>
+<p dir="auto"><img src="assets\IMG118.PNG" alt="alt text" data-src="assets/IMG118.PNG"></p>
+<h3 dir="auto" id="does-tls-do-everything-no">Does TLS do everything? NO!</h3>
+<ul dir="auto">
+<li dir="auto">TLS transmits data securely – does not check transaction integrity/correctness!
+<ul dir="auto">
+<li dir="auto">Does not check card number</li>
+<li dir="auto">Does not check customer status</li>
+<li dir="auto">Does not complete the transaction</li>
+<li dir="auto">Does not separate information on a ‘need to know’ basis</li>
+</ul>
+</li>
+<li dir="auto">Frequently leads to design solutions where credit card numbers are stored on the merchant’s server</li>
+<li dir="auto">Does not separate our merchant and bank data</li>
+</ul>
+<p dir="auto">Now let's look at:</p>
+<ul dir="auto">
+<li dir="auto">Levels of authentication (partial or full - implications)</li>
+<li dir="auto">Paradigms of security (it is hybrid, symmetric key and public key)</li>
+<li dir="auto">Key distribution problem</li>
+<li dir="auto">Certificate usage - private key usage to confirm ownership of certificate</li>
+</ul>
+<h3 dir="auto" id="tls-levels-of-authentication-%E2%80%93-server-always-%E2%80%93-client-rarely">TLS: Levels of authentication – server (always) – client (rarely)</h3>
+<p dir="auto"><img src="assets\IMG119.PNG" alt="alt text" data-src="assets/IMG119.PNG"></p>
+<ol start="3" dir="auto">
+<li dir="auto">
+<p dir="auto">Validate server’s certificate: signature
+via root certificate, URL matches name
+on certificate, validity from-to current.
+If not valid, user is warned. Generate
+symmetric session key</p>
+</li>
+<li dir="auto">
+<p dir="auto">Server uses its private key to decrypt session
+key. Now both sides use this session key to
+exchange secured data. Session key typically
+128 bits long. Server’s public key typically
+1024 bits long.</p>
+</li>
+</ol>
+<h3 dir="auto" id="email-secure-communication">Email secure communication</h3>
+<ul dir="auto">
+<li dir="auto">S/MIME (Secure/Multipurpose Internet Mail Extensions) – Enables end to end encryption
+(confidentiality) and also authentication + integrity (user to user)</li>
+<li dir="auto">PGP (Pretty Good Privacy) – Also enables end ‐ to ‐ end.</li>
+<li dir="auto">Unlike TLS, we can have either confidentiality OR authentication/integrity OR all three together</li>
+<li dir="auto">Both protocols (S/MIME PGP) work in a very similar fashion.</li>
+<li dir="auto">Both protocols are offline.</li>
+<li dir="auto">Our focus is on S/MIME
+<ul dir="auto">
+<li dir="auto">this protocol is attracting most corporate support (adopted by Microsoft)</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="email-is-offline-%E2%80%93-therefor-smime-is-offline-not-communicating-in-real-time">Email is offline – therefor S/MIME is offline (not communicating in ‘real-time’)</h3>
+<p dir="auto"><img src="assets\IMG120.PNG" alt="alt text" data-src="assets/IMG120.PNG"></p>
+<p dir="auto"><img src="assets\IMG121.PNG" alt="alt text" data-src="assets/IMG121.PNG"></p>
+<p dir="auto">So if we want a digitally signed email, an authenticated and integrity-controlled email, all we need is our own certificate.
+If we want to send an email controlled for confidentiality, we need the receiver‘s certificate.</p>
+<blockquote dir="auto">
+<ul dir="auto">
+<li dir="auto">session key, only valid for one time</li>
+<li dir="auto">take receiver's public key, and encrypt session key with receiver's public</li>
+<li dir="auto">hash all of the above</li>
+</ul>
+<p dir="auto">Receiver:</p>
+<ul dir="auto">
+<li dir="auto">have their session key by decrypting with private key</li>
+<li dir="auto">decrypt the hash, and verify the email by hashing the email</li>
+</ul>
+</blockquote>
+<h3 dir="auto" id="secure-email-options-for-our-use-1">Secure Email options for our use (1)</h3>
+<p dir="auto">Standard Gmail uses TLS for securing email. TLS is an open security protocol (very good) and it is the
+successor to SSL. But TLS only secures data between the sending client (usually a browser) and the
+receiving server (we stressed this in our course – TLS is very secure it is totally a ‘transmission’ security
+protocol). The data (in our case, an email) is not stored securely on the sending client – and it is not
+secured whilst on the receiving server. You could call this ‘point to point’. It is certainly not ‘end to end’. It
+does not, for example, guarantee that the message will remain private or available only to the intended
+recipient once it reaches the destination mail server. Google itself can see messages associated with your
+account, which is what allows it to scan your email for potential spam and phishing attacks (and show you
+related ads).
+Beyond that basic form of encryption, Gmail supports an enhanced standard known as S/MIME — or
+Secure/Multipurpose Internet Mail Extensions (explained next paragraph). You have to supply a certificate
+that may cost money. S/MIME allows emails to be encrypted with user-specific keys so that they remain
+protected during delivery and can be decrypted only by the intended recipient. This is the meaning of ‘end
+to end’ – the sender (e.g. you/me) is one end. The receiver (i.e. the person – not the email server) is the
+other end.</p>
+<p dir="auto"><strong>S/MIME</strong> is very secure – it actually ‘triple wraps’ email data. When we use S/MIME we have the option to
+secure our email for integrity/authentication (digital signing) or for confidentiality (via encryption) OR
+BOTH. If we want to secure our email for confidentiality, we do the following: (1) compose the email; (2)
+our email agent (e.g. Outlook) then generates a symmetric session (one time) key and uses this key to
+encrypt our email; (3) our email agent then uses the public key of the intended recipient to encrypt the
+session key – and this encrypted result is added to the email. This is then sent to the recipient who will
+then use her/his private key to decrypt the session key – and then use the session key to decrypt the
+actual email.
+This ‘end to end’ encryption ensures nobody (in transit) can view the actual email content. (Actually the
+‘triple wrap’ does a little more – but that is not important here). S/MIME is now very popular within
+corporates and government departments. However S/MIME does present ‘key management’ challenges
+(because nobody – other that sender/receiver) can access the emails – and because the sender needs the
+public key (via the digital certificate) of the intended receiver.</p>
+<p dir="auto"><strong>PGP</strong> has been around since the early 1990s and it has always been highly respected. At a high level of
+analysis, it is similar to S/MIME (or probably better to say S/MIME is similar to PGP). The message is
+encrypted via a symmetric (session) key generated by the sender. The message and its session key are
+sent to the receiver. The session key is protected during transmission because it is encrypted with the
+receiver's public key. PGP is an excellent email security system – however it seems to have ‘lost out’ to
+S/MIME (especially when Microsoft adopted S/MIME for its email system Outlook).</p>
+<p dir="auto"><strong>ProtonMail</strong> is a relative newcomer. It is very well designed at many levels to achieve high security. It also
+uses ‘end to end’ security for its email content – achieved via a combination of public and symmetric key
+crypto (like S/MIME and PGP). It also offers high level of security for user authentication (i.e. logging onto
+email accounts).  Possibly the only area of criticism of ProtonMail is that it has (in the past years) been
+subject to concentrated distributed denial of service attacks that have been designed to ‘complicate’ user
+access to email and accounts.</p>
+
+</main>
+</body>
+</html>
