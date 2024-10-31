@@ -12,7 +12,7 @@
 
 ![alt text](assets\IMG14.PNG)
 
-> - Red, behavioural perspective
+> - Red, behavioral perspective
 > - blue, traditional finance
 
 

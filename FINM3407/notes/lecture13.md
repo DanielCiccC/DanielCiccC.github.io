@@ -214,7 +214,8 @@ identify companies
 Cashflows
 3. More Active in M&A
 4. Too Quick to Start New Businesses
-5. CEO Overconfidence Not All Negative
+
+CEO Overconfidence Not All Negative
 
 > - institutional - more knowledgable
 >   - Still exhibit overconfidence but for different reasons

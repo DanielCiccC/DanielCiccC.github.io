@@ -1,6 +1,6 @@
 # Tutorial 1
 
-### 1. Differentiate the following terms/concepts: 
+### 1.* Differentiate the following terms/concepts: 
 
 **a. Prospect and probability distribution**
 
@@ -41,9 +41,9 @@ pizza $\succ$ spag $\succ$ mac&cheese $\succ$ hamburger
 
 $$P(0.40, \$50,000, \$1,000,000)$$
 
-$$E(w) = 0.4 * 0.5 + 0.6 * 10 = 6.2$$
+$$E(w) = 0.4 * 0.5 + 0.6 * 10 = 6.2M$$
 
-$$U(P) = 0.4e^{0.50}  + 0.6e^{10}  = 13,216.54 $$
+$$U(P) = 0.4e^{0.50}  + 0.6e^{10}  = 13,216.54M $$
 
 **b. Construct a graph of this utility function.**
 
@@ -59,7 +59,7 @@ $e^{w} = 13,216.54$ gives $w = 9.4892244$ or \$948,922.44
 
 **Certainty equivalent** is defined as that wealth level that leads decision-maker to be indifferent between a particular prospect and a certain wealth level, *implied by the expected utility of the prospect.*
 
-### 4. An individual has the following utility function: u(w) = w .5  where w = wealth. 
+### 4. An individual has the following utility function: u(w) = $w^{.5}$  where w = wealth. 
 
 **a. Using expected utility, order the following prospects in terms of preference, from the most to the least preferred:**
 - P1(0.8, 1,000, 600) 
@@ -86,7 +86,9 @@ It  has  been  shown  by  Daniel  Kahneman  and Amos  Tversky  (1979,  “Prospe
 
 ### 6*. Additional Question regarding expected utility: Bill loves maple syrup and makes regular monthly purchases. Each bottle costs $50 (it’s a very special maple syrup). You’ve known Bill for a long time, and have observed, first handed, the ups and downs of his economic situation. 
 
-- Substitution effect - see tutorial solution
+![alt text](assets\IMG120.PNG)
+
+### (b) When Bill was appointed a lecturer, his (disposable) income rose to $5,000 per month. The price of maple syrup did not change, and Bill still bought 25 bottles each month. Illustrate his new budget constraint and indicate Bill’s optimal bundle on your graph. 
 
 # Part 2 - Foundations of finance
 
@@ -175,4 +177,3 @@ $$R_{p}  = .6(.132) + .4 (.1072) = .12208$$
 **c.  If  the  correlation  between  the  returns  of A  and  B  is  0.50,  what  is  the  standard deviation for the portfolio that includes 60% A and 40% B?**
 
 $$σ_{p}^{2}  = (.6) 2 (.28) 2  + (.4) 2 (.48) 2  + 2*.5(.6)(.4)(.28)(.48) = 9.7\%, \: \: σ_{p}  = 31.2\% $$
-

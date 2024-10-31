@@ -5,7 +5,7 @@
 a. Style peer groups and style investing
 
 - Consideration of style in portfolio formation
-- Styles, growth, value mometum, dividend, others
+- Styles, growth, value momentum, dividend, others
 - Each style has distinct characteristics and targets different types of stocks or assets based on set criteria that align with investor's goals and balances
 
 b. Style tilting and style rotation
@@ -16,7 +16,7 @@ c. Financial soundness and financial statements
 - Financial statements provides a sense of the firm's financial state, assets, liabilities, net worth along with income and cashflows
 
 d. Univariate and multivariate approaches
-- Univariate approach ti behavioural investing conditions on a single variable (e.g. past returns)
+- Univariate approach to behavioral investing conditions on a single variable (e.g. past returns)
 - One with higher past returns are going to have higher future returns
 > - One of the risk factors could lead to higher or lower return
 
@@ -29,7 +29,7 @@ d. Univariate and multivariate approaches
   - Yield curve relative to interest rate could be downwards sloping
 
 Model
-- propose coniditioning the entire term structure of interest rates rather than looking at a single rate
+- propose conditioning the entire term structure of interest rates rather than looking at a single rate
 - Incorporating multiple points on the yield curve (short, medium and long maturities)
 - Grinblatt and Moskowitz found that my 
 

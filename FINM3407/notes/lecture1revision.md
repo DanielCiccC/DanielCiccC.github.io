@@ -102,12 +102,16 @@ $$U(P) = pr_{A}  * u(w_{A}) + pr_{B}  * u(w_{B}) + pr_{C}  * u(w_{C})$$
 $$u(w) = w^{0.5}$$
 
 **Prospects:**
-- P4(0.5, 1000, 500)  Exp outcome = 750
-- P5(0.6, 1200, 300) Exp outcome = 840
+- P4(0.5, 1000, 500)
+- P5(0.6, 1200, 300)
+
+**Expected outcome/expected wealth**
+- For P4: $0.5 * 1000 + 0.5 * 500 = 750$
+- For P5: $0.6 * 1200 + 0.4 * 300 = 840$
 
 **Utility:**
-- For P4: $U(P4) = (0.5 * 1000)^{0.5}  + (0.5 * 500)^{0.5}  = 26.99$
-- For P5: $U(P5) = (0.6 * 1200)^{0.5}  + (0.4 * 300)^{0.5}  = 27.71$
+- For P4: $U(P4) = 0.5 * (1000)^{0.5}  + 0.5 * (500)^{0.5}  = 26.99$
+- For P5: $U(P5) = 0.6 * (1200)^{0.5}  + 0.4 * (300)^{0.5}  = 27.71$
 
 **So:**
 $$P5 \succ P4$$
@@ -174,7 +178,7 @@ Which of the following is more likely true:
 > - A. Laura works at a bank.
 > - B. Laura woks at a bank and is active in the feminist movement. 
 
-### Mental Accounting
+### 1.3.3 Mental Accounting
 - Individuals classify money differently based on subject criteria.
 
 > mentally assigning money to different accounts
@@ -183,7 +187,7 @@ Which of the following is more likely true:
 >   - more stable investment as you become older
 
 
-### Fear of Regret
+### 1.3.4 Fear of Regret
 - Make decisions based on minimising the possibility of experiencing regret in the future, even if it means avoiding potential opportunities or taking risks. 
 
 Some examples:
@@ -214,7 +218,7 @@ $$\sigma _{p} = \sqrt{w_{1}^{2}\sigma _{1}^{2} + w_{2}^{2}\sigma _{2}^{2} + 2w_{
 ![alt text](assets\IMG7.PNG)
 
 
-### 2.2 CAPM Model
+## 2.2 CAPM Model
 
 $$ E(r_{e}) = r_{f} + \beta_{e}(E(r_{M})-r_{f})$$
 
@@ -231,7 +235,7 @@ $$ E(r_{e}) = r_{f} + \beta_{e}(E(r_{M})-r_{f})$$
 > - SML for CAPM - for a given level of beta, and **not** for combination of assets
 
 
-### 2.3 Market Efficiency
+## 2.3 Market Efficiency
 **Operational definition:**
 - Financial markets are efficient if no one can consistently earn excess returns.
 - Security prices should respond quickly and accurately to new information
@@ -244,10 +248,10 @@ $$ E(r_{e}) = r_{f} + \beta_{e}(E(r_{M})-r_{f})$$
 - Semi-strong form: Only past & public (e.g. financial statements) information  is available in the market
 - Strong form: All information (past, public & private) is available in the market
 
-### 2.4 Agency Relationships and Corporate Governance
+## 2.4 Agency Relationships and Corporate Governance
 
 **Agency relationship and agency problem**
--  An agency relationship exists whenever the principal contracts with an agent to take action on their behalf and represent the principal’s interests.
+- An agency relationship exists whenever the principal contracts with an agent to take action on their behalf and represent the principal’s interests.
 - In an agency relationship, the agent has the authority to make decisions for the principal.
 - An agency problem arises when the agent’s and principal’s incentives are not aligned.
 
@@ -264,4 +268,3 @@ Example: managers of a firm that is an acquisition target may resist the takeove
 Implements two alternative strategies to mitigate moral hazard: 
 - Monitoring: usually imposed by controls and regulations
 - Incentives: set by contract to reward desirable outcomes (e.g., stock options)
-
