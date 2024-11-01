@@ -129,6 +129,9 @@ The tendency to think that there is more control over events than can objectivel
 3. More Active in M&A
 4. Too Quick to Start New Businesses
 
+### Self-control bias
+People to fail to act in pursuit of their long-term, overarching goals because of a lack of self-discipline.
+
 ## Halo Effect
 
 ## Primacy and Recency Effect
@@ -256,6 +259,10 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 - optimism about future cash flows leads to a belief that there will be little problem in covering interest payments
 - entrepreneurial activity can provide valuable information to society. Provides valuable evolutionary purpose
 
+### Affect on Manmgers
+- Emotion impacts capital budgeting decisions
+- Kida, Moreno, and Smith experiment - participants  were  told  that  they  were  divisional  managers  deciding  between  two  product investments
+- Most chose the one with the lower NPV
 
 ### Impact on financial decision making
 
@@ -306,3 +313,13 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 ### Can Behavioural Finance Enhance Portfolio Performance
 
 ### Expected Value, Expected Utility and certainty equivalent
+
+
+---
+## Calculations to revise
+
+### Camerer and Lovallo experiment
+
+### Demand curve in overconfidence
+
+### Expected outcome, expected value

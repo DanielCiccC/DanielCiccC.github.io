@@ -77,7 +77,8 @@ Capital budgeting and loss aversion
 > - If you were the person who initiated the project (personal involvement) is high, hard for you to terminate the project
 
 ### Allowing Affect to Influence Choices
-> Is it possible that emotion impacts capital budgeting decisions? 
+*Is it possible that emotion impacts capital budgeting decisions?* 
+
 Since emotion plays a role in so many other realms, financial and otherwise, it would not be surprising to see it 
 wield influence here. Direct evidence is likely to be anecdotal at best, since it is not clear how to calibrate a 
 manager’s emotional state.
