@@ -1,5 +1,7 @@
 # Lecture 4 -  Overconfidence
 
+
+### Information, probability and cognitive biases
 -  People tend not to use probabilities correctly:
   - People are overconfident about themselves.
   - People overstate the probability that they are right.
@@ -14,12 +16,12 @@ Does this matter in financial markets?
 >   - normally overconfident about ourselves
 >     - overestimate the probability to be higher than true probability
 >
-> Looking at something boring-underexciting - underreact
+> Looking at something boring/unexciting - underreact
 > 
 
 ### Overconfidence Overview
-Overconfidence: unwarranted faith in one’s intuitive reasoning, judgments, and cognitive abilities.
-- Subjects overestimate both their own predictive abilities and precision of information they have been given.
+Overconfidence: **unwarranted faith** in one’s intuitive reasoning, judgments, and cognitive abilities.
+- Subjects overestimate both their own *predictive abilities* and *precision of information* they have been given.
 - People think that they are smarter and have better information than they actually do.
 -  Overconfidence: regardless of primary knowledge, secondary knowledge is overestimated.
 (People tend to overestimate the probability that they are right. Thus, they are surprised more often than they think.)
@@ -66,7 +68,9 @@ Confidence interval: an interval that is expected to contain the parameter being
 Suppose individuals are asked to construct 90% confidence intervals 
 (e.g., height of Mount Everest, the level of the Dow in a month, etc.).
 
-![alt text](assets\IMG27.PNG)
+1. If an individual is asked a large number of questions (sampling error is reduced by asking a sufficiently large number of questions), then proper calibration implies that about 90% of their confidence intervals should contain correct answers to the questions.
+
+2. Or, focusing on a particular question that is asked of a large number of respondents, if the group as a whole is properly calibrated, 90% of these individuals should have confidence intervals bracketing the correct answer.
 
 > Looking at the range - not a given prediction
 > - give a range on a question
@@ -113,7 +117,8 @@ The tendency to think that there is more control over events than can objectivel
 
 > - Think future outcome if going to go better than you think
 
-Excessive optimism and miscalibration can go hand in hand.
+**Excessive optimism and miscalibration can go hand in hand.**
+
 Suppose you purchase a stock:
 - True distribution for the return on this stock over the next year entails an expected return of 10%, with a 90% confidence range of -10% to 30%
 -  Your (optimistic) distribution, has an expectation of 20%, with a 90% confidence range of 10% to 30%
@@ -129,7 +134,8 @@ Evidence on excessive optimism:
 - People think they can accomplish more than they actually end up accomplishing.
 - Individuals assume that costs will align with initial estimates.
 
-Subject to the planning fallacy
+Subject to the **planning fallacy**
+
 In reality, many of us fall short of our work goals on  a  regular  basis,  and  budget  overruns  are  a common feature of large public projects
 - The  Sydney  Opera  House,  for  instance,  was supposed to be completed in 1963 at $7 million. Instead,  it  was  finished  10  years  later  at  $102 million.
 
@@ -147,7 +153,7 @@ social regard.
 
 ### Problems with measuring overconfidence
 Most people most of the time appear to be overconfident.
-But overconfidence does not seem to be universal.
+- But overconfidence does not seem to be universal.
 - Under confidence is common on easy tasks
 - Also, depending on the metric, it is possible for people to be judged overconfident using one metric but not using another.
 - And there is no universally accepted way to measure overconfidence
@@ -180,7 +186,7 @@ These effects suggest that overconfidence can evolve over time.
 Research has shown that predictions about the future tend to be more optimistic when:
 - Goals are far off
 - A course of action has been committed to
-When these conditions are met, excessive optimism may be useful in enhancing performance.
+  - When these conditions are met, excessive optimism may be useful in enhancing performance.
 
 > - We have other biases affecting how we correct ourself
 > - We attribute the success to our own abilities
@@ -200,9 +206,10 @@ When these conditions are met, excessive optimism may be useful in enhancing per
 > - Being overconfident can enhance the performance
 > - Optimistic, setting a goal for the future, can be better fort long term goals 
 
-## Part Two: The Impact of Overconfidence on Financial Decision-making
+# Part Two: The Impact of Overconfidence on Financial Decision-making
+
 ### Overconfidence: (Negative) Implications for (retail) investors
-1.  Unfounded  belief  in  own  ability  to  identify  companies  as  potential  investments:  blind  to  any  negative information 
+1.  Unfounded belief in own ability to identify companies as potential investments: blind to any negative information 
   -  suggestion: review trading records of past two years and then calculate the performance of your trades. 
 2. Excessive trading: lower returns 
   -  suggestion: keep track of each and every investment trade and then calculate the returns. 
@@ -219,7 +226,7 @@ When these conditions are met, excessive optimism may be useful in enhancing per
 > Excessive trading
 > - Loss to overall performance
 
-
+### Overconfidence and excessive trading
 Theoretical models indicate a relationship between overconfidence (OC) and extent of trading.
 To get a flavor, consider 3 investors:
 - High-OC investor: **HOC**
@@ -238,8 +245,7 @@ equivalent ($v_{i}= p$).
 ### Overconfident Traders
 
 1) First assume that since there are many investors, all are price-takers.
-Further, we will assume that when estimating value, an investor uses two items of information, his own opinion (prior value) and the 
-market price (which is the weighted average of all investors’ opinions), as follows:
+Further, we will assume that when estimating value, an investor uses two items of information, his own opinion (prior value) and the market price (which is the weighted average of all investors’ opinions), as follows:
 
 $$v_{i}=\alpha _{i}v_{i}^{*}+(1+\alpha _{i})p , \: \: 0\le \alpha _{i} \le i $$
 （Equation 9.1）
@@ -261,13 +267,9 @@ Since there is a very large number of investor views determining p, any value of
 
 $$q_{i} = q_{n} + \theta (v_{i}-p), \: \: \theta > 0$$
 
-(Equation 9.2)
-
-
 Where: 
 - $q_{i}$ is investor i’s demand (i.e., quantity) 
 - $\theta$ is the sensitivity of demand to a divergence between the posterior value estimate and price.
-
 
 Substitute (Equation 9.1)  
 $$v_{i}=\alpha _{i}v_{i}^{*}+(1+\alpha _{i})p , \: \: 0\le \alpha _{i} \le i $$
@@ -275,12 +277,12 @@ into (Equation 9.2):
 
 $$q_{i}= q_{n} + \theta \alpha _{i} (v_{i}^{*} - p), \: \: \theta > 0$$
 
-• Next take the partial derivative of $q_{i}$ with respect to p:
+- Next take the partial derivative of $q_{i}$ with respect to p:
 
 $$\frac{\delta q_{i}}{\delta p} = - \theta \alpha _{i}$$
  
 1. The higher the investor’s level of overconfidence ($\alpha _{i}$) the more responsive demand is to changes in price.
-2. As  $\alpha _{i}$  approaches one, which means market price has no influence, the closer ∂qi/∂p is to –θ
+2. As  $\alpha _{i}$  approaches one, which means market price has no influence, the closer $\frac{\delta q_{i}}{\delta p}$ is to $- \theta \alpha _{i}$
 3. On the other hand, as  $\alpha _{i}$  moves toward zero, the demand changes little when the price changes.
 
 > $\alpha _{i}$ is 0, 0 change in quantity when there is a change in price
@@ -407,15 +409,11 @@ they are following (textbook table 9.2).
 >   - please the issuer of the information
 
 ## Conclusion
-- Overconfidence:  regardless  of  how  much  they  know, 
-people overestimate how well they know their limits.
-- 4  manifestations:  Miscalibration,  better-than-average, 
-Excessive Optimism, and Illusion of Control.
-- Different biases make it hard for us to learn and correct 
-overconfidence.
+- Overconfidence:  regardless  of  how  much  they  know, people overestimate how well they know their limits.
+- 4  manifestations:  Miscalibration,  better-than-average, Excessive Optimism, and Illusion of Control.
+- Different biases make it hard for us to learn and correct overconfidence.
 - However, overconfidence may not be all bad. 
-- Overconfident  investors  tend  to  engage  in  excessive 
-trading and under-diversification.
+- Overconfident  investors  tend  to  engage  in  excessive trading and under-diversification.
 - Analysts tend to show excessive optimism as well. 
 
 ![alt text](assets\IMG30.PNG)

@@ -1,93 +1,94 @@
-# Tutorial 9
-# Behavioural Explanations for Anomalies 
+# Tutorial 8
+
+### Question 1
+a. IQ and EQ
+
+b. Mood and emotion
+- Mood is a general feeling that does not focus on anything in particular
+- Emotion is a mental and physiological state
+
+**c. Human brain and the brain of other animals**
+- Cerebrum is what distinguishes the human brain from those of other verterate animals
+- Gives the humnas the ability to plan which is a big advantages over other animals
+
+**d. Phineas Gage and Elliot**
+- Phineas - change in personality following an explosion that sent an iron bar through his head
+- Elliot - change in personality following the removal of brain tumor in frontal lobe
+
+Patients with frontal lobe damage unable to plan, no longer concerned for future
+
+
+### **2*. You are considering managing your own money rather than trusting in an investment advisor. Some argue that emotional intelligence may be just as important as investment knowledge. Do you agree? Discuss.**
+- IQ and EQ are both important for success - complementary
+- EQ tests attempt to measure a person's ability to identify and manage their own emotional responses, as well as those of others
+- Avoid panic sales (fir sales, etc) should also have high ability to control emotion
+  - Manage own emotional responses
+
+### 4*. Your colleague argues that emotion and reasoning are completely separate influences on decision-making. Do you agree? Discuss.
+
+- Emotion and reasoning are not separate influences on the choice we make
+- emotions include cognitive, physiological and overt behavioral elements
+
+## Part 2 - Individual investors and Force of Emotion
 
 ### 1*. Differentiate the following terms/concepts:
-**a. Momentum and reversal**
+a. Regret and disappointment
+- regret and disappointment are negative emotions
+- regret - sorry about a decision that cannot be changes
+- dissappointed, unhappy about an outcome
 
-- Momentum is positive correlation in returns, exist empirically over the medium term
-- Reversal is a negative correlation in returns, the latter over the long term
-> - Should be no overvalued or undervalued stocks
+**b. House money and break-even effects**
+- How emotion is going to influence financial decisions
+- house money effect is the willingness to take greater risk with money that was recently won
+- whereas the break-even effect refers to an increase in the risk taking after a prior loss in order to try to break even
+  - Go to a casino a lose $100, much more likely to be a risk seeker
 
-**b. Mean-reversion and continuation scenarios in the Barberis-Shleifer-Vishny (BSV) model**
+c. Affect (noun) and affect (verb)
+- noun referes to the quality
 
-- Investors expect positive/negative surprised to be followed by negative/positive surprises
-- Under continuation, investors expect a positive/negative surprises to be followed by positive/negative surprises
+d. Bad mood and depression
+- a mood is a general feeling that does not focus on anything in particular
+- Depression has a biochemical basis and can occur with no cognitive appraisals
 
-**c. Size factor and book-to-market factor**
+### 3*. Some investment banks engage in proprietary trading, which means that the firm’s traders actively trade financial securities using the bank’s money, in order to generate a profit. To offset a slowdown in one division, traders in a profitable division might more actively engage in proprietary trading. Do you think this practice is wise?
 
-- In Fama french thee factor model, size and book-to-market are risk factors
+- Invest their stock directly
+- Actively trade financial securities
+- Breakeven effect referes to an increase in risk taking after a prior loss in order to try and break even
+  - Might not make the same decisions as your normally would
 
-> - Two risk factors still being incorporated into the model
-> - Come up with more factors that could influence stock returns
-> 
+4*. This morning I woke up in a sour mood because my favorite team lost its game
+yesterday. Then I had to wait an extra-long time in line for coffee. It started to rain, and
+I forgot my umbrella in the car. When I arrived at my office (finally) I found that a stock
+I held in my portfolio was falling in value, so I sold. Is this evidence that mood moves
+markets?
 
-d. Risk-based and behavioural explanations (for anomalies)
+- Probably depends on the context and individual personality
+- Don't really know that the bad mood caused me to sell. I might have sold because the market was falling, I decided to follow the herd
+- I might have already been planning to sell
 
-- A risk based (ration) explanation would argue that value stocks to better on average because they are riskier as in the Fama French model
-- Behavioural model would say that anomalies exist because of investor error & limits of arbitrage
+### 5*. What does research based on the game show Deal or No Deal tell us about path dependence and integration vs. segregation of gambles?
 
-> - Arbitrage exists because of the limits to arbitrage
+- Strongly influenced by what has happened before
+- take greater risk taking after a prior loss in order to try and break even
+- more risk in response to changes in wealth
+- High value suitcase, loss in terms of expected winning
 
+## Part 3: CFA
 
-### 2*. In the context of the BSV model, explain intuitively (nontechnically) why two consecutive earnings changes in the same direction make investors less likely to think that they are in regime 1 (mean-reversion) vs. the case of two earnings changes in alternate directions
+1. Discuss how Gerber displayed overconfidence bias and cite one example to support this statement. Distinguish between the availability bias and the overconfidence bias.
 
-- In regime 1, it is believe earnings mean-revert
-  - given a positive/negative earnings change, there is a low probability of another earnings chnage
-
-
-- In regime 2, given a poitive/negative earning change, there is a probability of another positive/negative earnings changes in the next period
-  - continuation in earnings
-- two consecutive earnings means 
-
-
-### 5*. Momentum is the anomaly that gives those subscribing to efficient markets the most trouble. Explain.
-
-- Fama Frnech three-factor model has a role for size and value but not momentum
-- Some research related momentum to business cycle and the state of the market
-  - non-diversifiable macroeconomic instruments account for a large portion of momentum profits
-- time-varying CAPM with beta uncertainty can contribute to an explanation of momentum
-
-### 6*. A series of Questions related to Factor Zoos:
-
-**(a) What is Factor Zoo?**
-
-- The factor Zoo is a term used in the context
-
-(b) What is the development of academic research related to the “Factor Zoo”?
-
-- landscape of asset pricing factors is complex, hundred of proposed factors
-- leading researching have raised concerns  about legitimacy
-  - Use data minings and find and explain anomalies
+- Having too much knowledge (superior knowledge) of the healthcare industry
+  - Related illusion of knowledge bias
+- Emotional biases result for reasoning influenced by bias
+- Overconfidence is primarily an emotional bias and is different fro availability bias which is a processing bias and a cognitive error
+- Knows ABC should be monitored closely because 
+- Difficulty interpreting the scientific results
 
 
-### CFA question
+1. Discuss how Gerber displayed conservatism bias. Cite three examples from the reading
 
-- home bias may influence investor behaviour
-- 
-- Rather than doing thorough analysis, they might anchor to other analysis
-
-![alt text](assets\IMG90.PNG)
-
-- Moderately risk averse, risk averse bias
-- Use the tax return to do travel, etc.
-- Bad situations, mental accounting bias
-- For the investor, mental accounting bias
-
-Portfolio 2 has the same returns and sharpe ratios 
-
-Mental account bias
-- most likely select portfolio 2
-- Suggests that he wants to compartmentalize his portfolio into discrete layers of low-risk assets verses risky assets without regards to the correlations among the assets
-
-![alt text](assets\IMG91.PNG)
-
-
-![alt text](assets\IMG92.PNG)
-
-- some clients will view allocation 1 as the more profitable 1
-- Prefer allocation 1, anything happens to 
-- Result of framing bias, likely to choose an allocation based on a 1/n naive diversification strategy
-- As a result of regret bias, likely to coose a conditional 1/n strategy to minimise any potential future regret from one of her funds outperforming another
-- Would most likely select AllocationA
-  - Ly believe that Calderon exhibits framing and regret biases
-
+- Cognitive error, maintain their pervious veiw or forecasts by inadequately incorporaing new information
+- Has aspects of both statistical and information-processing errors
+- Maintaining his prior views on ABC without adequately incorporating new information
+- Several examples of new information that was either ignored or inadequately considered

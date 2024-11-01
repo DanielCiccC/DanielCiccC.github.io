@@ -6,7 +6,7 @@
 - Overview of neoclassical economics
   - (1) Preference Relation
   - (2) Utility Function and Expected Utility Theory
-  - (3) Brief Introduction to Behavioural Finance
+  - (3) Brief Introduction to Behavioral Finance
 
 > Normative model
 > - In a perfect world, what should be expected

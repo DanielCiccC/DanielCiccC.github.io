@@ -59,6 +59,7 @@ Yes, a person can be both risk-averse and loss-averse. For example, an investor 
 ![alt text](assets\IMG37.PNG)
 
 **c. Are these choices consistent with expected utility theory?  Why or why not?**
+
 Violation  of  EU  theory  because  preferences  are  inconsistent.    The  same  sort  of  Allais paradox proof from Chapter 1 can be used.  It is also necessary to make the assumption of preference homogeneity, which means that if D is preferred to C, it will also be true that D* is preferred to C* where these are: 
 
 ### 8*. Consider a person with the following value function under prospect theory: 

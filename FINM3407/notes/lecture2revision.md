@@ -166,17 +166,8 @@ Problem with prospect theory is that it was set up to deal with one-shot gamble 
 - Do we go back to zero (segregation), or move along curve (integration)?
 
 **Integration or segregation**
-1. Segregation:  This  refers  to  the  idea  that 
-each  new  gamble  is  evaluated  in  isolation, 
-starting  from  the  reference  point  of  zero  (as  if 
-we "reset" after each gamble). The idea is that 
-people  have  short  memories,  or  they  "start 
-fresh" with each new gamble.
-2. Integration:  This  suggests  that  people  keep 
-track  of  their  gains  and  losses  over  time  and 
-use  this  cumulative  total  as  their  reference 
-point. In this case, prior outcomes influence the 
-valuation of current prospects.
+1. Segregation: This refers to the idea that each new gamble is evaluated in isolation, starting from the reference point of zero (as if we "reset" after each gamble). The idea is that people have short memories, or they "start fresh" with each new gamble.
+2. Integration: This suggests that people keep track of their gains and losses over time and use this cumulative total as their reference point. In this case, prior outcomes influence the valuation of current prospects.
 
 ![alt text](assets\IMG13.PNG)
 

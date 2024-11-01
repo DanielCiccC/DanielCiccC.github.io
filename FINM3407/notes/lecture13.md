@@ -145,6 +145,7 @@ Reference: AckertDeaves Chapters 6 & 9
 - Overview about Overconfidence
 - Miscalibration / Other Strains of Overconfidence
 - Factors Impeding Correction
+
 ### [Part Two – The Impact of Overconfidence on Financial Decision-making]
 - Overview: The Impact of Overconfidence on Financial Decision-making
 - Overconfidence and Excessive Trading – A simple Model
@@ -208,14 +209,11 @@ Capital Budgeting
 
 Managerial Overconfidence
 1. Overinvestment
-- Unfounded belief in own ability to 
-identify companies
-2. Higher Sensitivity of Investment to 
-Cashflows
+- Unfounded belief in own ability to identify companies
+2. Higher Sensitivity of Investment to Cashflows
 3. More Active in M&A
 4. Too Quick to Start New Businesses
-
-CEO Overconfidence Not All Negative
+- CEO Overconfidence Not All Negative
 
 > - institutional - more knowledgable
 >   - Still exhibit overconfidence but for different reasons

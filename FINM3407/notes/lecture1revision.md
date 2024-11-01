@@ -166,7 +166,7 @@ E(rB) = $100
 
 Some real-life examples of loss aversion:
 - Not selling a stock when your current rational analysis of the stock clearly indicates that it should be abandoned as an investment.
-- Selling a stock that has gone slightly up in price just to realize a gain of any amount, when your analysis indicates that the stock should be held longer for a much larger profit [Diposition effect].
+- Selling a stock that has gone slightly up in price just to realize a gain of any amount, when your analysis indicates that the stock should be held longer for a much larger profit [Disposition effect].
 
 
 ### 1.3.2 Representative

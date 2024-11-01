@@ -49,7 +49,7 @@ Capital budgeting and loss aversion
 > Say prior investment has not gone well.
 - Proper capital budgeting practice is to periodically assess the viability of all current investments, even proceeding with their abandonment when this is a value-enhancing course of action.
 - Problem with abandonment however is that it forces recognition of an ex-post mistake.
-> Because of loss aversion, it may happen that managers foolishly hang on, throwing good money after bad.
+  - Because of loss aversion, it may happen that managers foolishly hang on, throwing good money after bad.
 
 > - Allowing sunk cost to influence our decisions
 > - Don't like to put that money into 'waste'
@@ -107,6 +107,7 @@ For  example,  in  scenario  1,  participants  were  told  that  they  were  div
 
 ### Managerial Overconfidence
 - It would be surprising if managers of corporations were markedly different from the rest of the population in terms of their overconfidence. Indeed, there is  abundant evidence that managers, like investors, are egregiously overconfident. 
+
 > Ben-David, Graham, and Harvey (2007) found that managers tended to predict stronger performance for their operations than actually occurred. Excessive optimism in project cost forecasts is endemic. When CFOs predict market movements, only 40% of realisations fall within 80% confidence intervals.
 > - Found that most of them are overconfident (predict stronger performance)
 > - Collaboration and confidence interval test 
@@ -216,8 +217,8 @@ Two traditional explanations for such investment distortions have been put forth
 - Except  for  two  years  of  their  sample,  all overconfident  managers  engage  in  more  M&A activity. 
 - Consistent  with  their  previous  study,  the  impact  of overconfidence  is  greater  for  firms  with  abundant internal resources.
 
-- The market has a sense  of the value destruction  wrought by overconfident managers. While the typical market  response to an announcement of a merger attempt engineered by a less overconfident manager is a drop of 12 basis points, managers subject to an inflated sense of their ability witness a (much larger) 90- basis point drop.
-- Various alternative explanations for these findings are considered. The same behaviour could result from greater risk-seeking or agency (empire-building) considerations. 
+- The market has a sense  of the value destruction wrought by overconfident managers. While the typical market  response to an announcement of a merger attempt engineered by a less overconfident manager is a drop of 12 basis points, managers subject to an inflated sense of their ability witness a (much larger) 90- basis point drop.
+- Various alternative explanations for these findings are considered. The same behavior could result from greater risk-seeking or agency (empire-building) considerations. 
 - The  authors,  however,  argue  that  the  first  is  difficult  to  reconcile  with  an  observed  preference  for  cash  acquisitions;  and  the second is not easy to tally with CEOs’ personal overinvestment.
 
 > - 12 basis points of decrease
