@@ -1,10 +1,10 @@
 # Tutorial 7
 
-**1. Differentiate the following terms/concepts:**
-a. Primacy and recency effects
-
-- Primacy effect is the tendency to reply on information that comes first when making an assessment, whereas
-- Recency effect is the tendency to rely on the most recent information when making an assessment
+### 1. Differentiate the following terms/concepts:
+**a. Primacy and recency effects**
+A  primacy  effect  is  the  tendency  to  rely  on  information  that  comes  first  when  making  an 
+assessment, whereas a recency effect is the tendency to rely on the most recent information 
+when making an assessment. 
 
 ### b. Salience and availability
 
@@ -12,16 +12,16 @@ a. Primacy and recency effects
 - Availability, how easily the event is recalled from memory, e.g. freely available, easily processed information is more compelling
 
 ### c. Fast-and-frugal heuristics and bias-generating heuristics
-- Fast and frugal require a minimum of time, knowledge and computation in order to make choices
-- Sometimes heuristics go astray and generate behavioural bias
-
-> - Make decisions within limited time and knowledge, amount to *doing the best that they can under the circumstances*
+Fast and frugal heuristics require a minimum of time, knowledge and computation in order to 
+make choices.  Often they lead to very good choices.  Sometimes however heuristics go astray 
+and generate behavioral bias. 
 
 
 ### d. Autonomic and cognitive heuristics
-- Automatic -  are reflexive, autonomic, non-cognitive, and require low effort levels
-- Cognitive heuristics require more deliberation
-- Autonomic heiristics are appropriate when a very quick decision must be made
+Autonomic heuristics are reflexive, autonomic, non-cognitive, and require low effort levels.  
+Cognitive heuristics require more deliberation.  Autonomic heuristics are appropriate when a 
+very quick decision must be made or when the stakes are low, whereas cognitive heuristics are 
+appropriate when the stakes are higher.   
 
 
 ### 2*. Which description of Mary has higher probability?
@@ -30,12 +30,13 @@ a. Primacy and recency effects
 
 $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
 
-> COnjunction fallacym the second probability has to be less because it has one more requirement
-> When people commit then conjunction fallacy, they will think the second (joint) event is more liekly because it sounds logical that someone who loves tennis will also play regularly
+> Conjunction fallacy
+> - The second probability has to be less because it has one more requirement
+> - When people commit then conjunction fallacy, they will think the second (joint) event is more likely because it sounds logical that someone who loves tennis will also play regularly
 
 
 
-**3. * Suppose you have invested in two different stocks, Stock A and Stock B. Based on historical data, the probability that Stock A will increase in value over the next year is 0.6. For Stock B, the probability is 0.5. The probability that both stocks will increase in value over the next year is 0.3. What is the probability that at least one of the two stocks will increase in value over the next year?**
+### **3. * Suppose you have invested in two different stocks, Stock A and Stock B. Based on historical data, the probability that Stock A will increase in value over the next year is 0.6. For Stock B, the probability is 0.5. The probability that both stocks will increase in value over the next year is 0.3. What is the probability that at least one of the two stocks will increase in value over the next year?**
 
 $$P(A) = 0.6$$
 $$P(B) = 0.5$$
@@ -43,7 +44,7 @@ $$P(A \cap B) = 0.3$$
 $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
 $$= 0.6+0.5 - 0.3 = 0.8$$
 
-**4. *Rex is a smart fellow. He gets an A in a course 80% of the time. Still he likes his leisure, only studying for the final exam in half of the courses he takes. Nevertheless when he does study, he is almost sure (95% likely) to get an A. Assuming he got an A,how likely is it he studied? If someone estimates the above to be 75%, what error are they committing? Explain.**
+### **4. *Rex is a smart fellow. He gets an A in a course 80% of the time. Still he likes his leisure, only studying for the final exam in half of the courses he takes. Nevertheless when he does study, he is almost sure (95% likely) to get an A. Assuming he got an A,how likely is it he studied? If someone estimates the above to be 75%, what error are they committing? Explain.**
 
 $$P(A) = 0.8$$
 $$P(B) = 0.5$$
@@ -74,7 +75,7 @@ $$= 0.8 \cdot \frac{0.7}{0.6} = 0.9 \bar{3}$$
 
 ### 1*. Differentiate the following terms/concepts:
 
-a. Good company and good stock
+**a. Good company and good stock**
 - A good company has positive attributes such as strong management
 - A good stock is one you expect to outperform in the future. If markets are efficient there are no good or bad stocks
 
@@ -87,8 +88,9 @@ a. Good company and good stock
 - A contrarian buys stocks that have not performed well in the past
 
 **c. International diversification and domestic diversification**
-- Portfolio theory teaches us that diversification pays off, if we stick with domestic securities, this is domestic diversification
-- If we move to foreign securities this is international diversification
+Portfolio theory teaches us that diversification pays off.  If we stick with domestic securities, 
+this is domestic diversification.  If, as we should, we move to foreign securities as well, this is 
+international diversification. 
 
 > - Excessive optimism about prospects of domestic market
 >   - Comfort seeking and familiarity
@@ -118,7 +120,11 @@ $$LTIV = -0.86 + 0.15log(S) + -0.11log(B/M) +0.85MQ$$
 
 ### 4*. In Canada there are two official languages, French and English. Some Canadian corporations are headquartered in Quebec where French is the official language. Most however are headquartered outside Quebec where English is dominant. Would you expect Quebecers to invest more in Quebec companies, and nonQuebecers to invest more in companies based outside Quebec? Also, do you think the first language of the CEO might matter in accounting for investor preferences? Explain.
 
-- We would expect to see English-speaking investors preferring companies based outside of Quebec and French-speaking investors preferring companies based inside of Quebec
-- We might expect to see a preference on the part of English-speaking investors for English-speaking CEOs (and the same for French-speaking investors)
+We  would  expect  to  see  the  same  as  in  the  study  using  Finnish  data  where  the  two 
+languages/ethnicities were Swedish and Finnish.  Specifically, we would expect to see English-
+speaking  investors  preferring  companies  based  outside  of  Quebec  and  French-speaking 
+investors preferring companies based inside of Quebec.  Similarly, we might expect to see a 
+preference on the part of English-speaking investors for English-speaking CEOs (and the same 
+for French-speaking investors). 
   
 > - related to home bias

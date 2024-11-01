@@ -163,6 +163,4 @@ self-control. Self-control bias occurs when individuals deviate from their long-
 this  case,  the  investment  policy  statement,  due  to  a  lack  of  self-discipline.  Jordan  is  not 
 adhering to the strategy which has been successful in the past. 
 
-The consequences of self-control 
-bias  include  accepting  too  much  risk  in  the  portfolio  (C)  and  asset  allocation  imbalance 
-problems (B) as Jordan attempts to generate higher returns. 
+The consequences of self-control bias  include  accepting  too  much  risk  in  the  portfolio  (C)  and  asset  allocation  imbalance problems (B) as Jordan attempts to generate higher returns. 

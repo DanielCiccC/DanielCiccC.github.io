@@ -133,29 +133,84 @@ The tendency to think that there is more control over events than can objectivel
 People to fail to act in pursuit of their long-term, overarching goals because of a lack of self-discipline.
 
 ## Halo Effect
+Someone who likes one outstanding attribute of an individual likes everything 
+about the individual
 
-## Primacy and Recency Effect
-- Related to excessive volatility
+## Heuristic (and two types of heuristics)
+- Heuristics or rules-of-thumb: decision-making shortcuts.
+- Type 1: Autonomic and non-cognitive, conserving on effort.
+- Type 2: Cognitive & requiring effort.
 
 ## Diversification Heuristic
+The diversification heuristic suggests that people like to try a little bit of everything when choices are not mutually exclusive.
 
 ## Ambiguity Aversion
+- People are more comfortable with risk vs. uncertainty (ambiguity).
+- In experiments, people are more willing to bet the colour of a ball drawn at random if they know the bag contains 50 red and 50 blue, than if they know a bag contains blue and red balls in unknown proportions.
+
+### Manifestations
+- under-diversification
 
 ## Endowment Effect
+- What you currently have seems better than what you do not have.
+- Experimental subjects valued something that they possessed (after it was given to them) more than they would have if they had to consciously go out and buy the item.
 
 ## Information Overload
+- better way to close a deal is to offer a small selection
+- A Large selection might attract more interest but a small selection will close a deal
 
 ## Representativeness
+- Investors are prone to believe that a history of a remarkable performance of a given firm is “representative” of a general performance that the firm will continue to generate into the future.
+
+- People are too influenced by latest information.
+
+### Examples
+- “Good companies are good stocks” thinking may lead to value advantage
+
+## Recency Effect (related to representativeness)
+- Recent evidence is more compelling
+
+### Examples/manifestations
+- May explain chasing winners
+
+## Salience Effect (related to representativeness)
+-  Dramatic evidence is more compelling.
+
+## Availability (related to representativeness)
+- Freely available, easily processed information is more compelling.
+
+## Primacy Effect
+Primacy effect is the tendency to reply on information that comes first when making an assessment, whereas
+
+
+## Conjunction Fallacy
+An example of people having difficulty with probabilities is when they have no notion of the difference between simple probabilities (probability of A) and joint probabilities (probability of both A and B)
 
 ## Base Rate Neglect and Bayes’ Rule
+- The tendency to ignore relevant statistical information in favour of case-specific information.
 
 ## Hot hand phenomenon
+- Tendency to believe that a successful streak is likely to lead to further success
+
+### Related
+- Illusion of Control
+
 
 ## Gambler's Fallacy
+- The gambler's fallacy is the tendency to overweight the probability of an event because it has not recently occurred
 
 ## Anchoring
+- Anchoring says new information is discounted. Anchored to original beliefs
 
 ## Anchoring vs representativeness
+- It is argued that people are “coarsely calibrated.”
+- flip-flop coarsely between anchored and representative biases
+
+### Examples/manifestations
+- May explain momentum and price reversal
+  - Positive qualities should already be embedded in price.
+  - Loosely speaking, good companies will already sell at high prices, and bad companies will already sell at low prices
+
 
 ## Cognitive dissonance
 
@@ -164,8 +219,11 @@ People to fail to act in pursuit of their long-term, overarching goals because o
 ## Home Bias
 
 ## Momentum-Chaser
+- Trend  followers  with  the  view  that  investment  performance  in  the  recent  past represents future performance.
 
 ## Contrarian
+-  Purposefully goes against the prevailing market trends. 
+-  buys stocks that have not performed well in the past
 
 ## Disposition Effect
 - Link to prospect theory and mental accounting
@@ -264,13 +322,8 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 - Kida, Moreno, and Smith experiment - participants  were  told  that  they  were  divisional  managers  deciding  between  two  product investments
 - Most chose the one with the lower NPV
 
-### Impact on financial decision making
 
-### Heuristics
 
-### Bayes' rule
-
-### Emotion Criteria
 
 ### Emotion and Reasoning - Phineas Gage and Elliot
 
@@ -323,3 +376,5 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 ### Demand curve in overconfidence
 
 ### Expected outcome, expected value
+
+### Bayes Rule

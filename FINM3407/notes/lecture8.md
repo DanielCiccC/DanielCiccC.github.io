@@ -47,8 +47,7 @@ this misinformation is often incorporated into their memory.
   - Since  pleasant  memories  make  you  happier  than  unpleasant  ones,  it  is  not  surprising  that  we  are 
 sometimes prone to “rewriting history.” It also makes us feel better to think we have more control over 
 events than we really do, or that we have a good sense of what is likely to happen in the future. The 
-corollary  to  this  is  that  in  the  past  we  also  must  have  had  a  pretty good  sense  of  what  was  likely to 
-transpire. In other words, “we knew it all along.”
+corollary  to  this  is  that  in  the  past  we  also  must  have  had  a  pretty good  sense  of  what  was  likely to transpire. In other words, “we knew it all along.”
 
 > Memory is emotional - mark memories
 > - Memory can trick you (might look or feel better)
@@ -56,9 +55,7 @@ transpire. In other words, “we knew it all along.”
 > - Change your financial decisions depending on how it affects your memory
 
 ### Heuristics
-In many cases, delay is not feasible. Decisions need to be made, even if the environment is 
-one of limited attention, information, and processing capacity, so shortcuts, or heuristics, 
-are necessary.
+In many cases, delay is not feasible. Decisions need to be made, even if the environment is one of limited attention, information, and processing capacity, so shortcuts, or heuristics, are necessary.
 - Heuristics or rules-of-thumb: decision-making shortcuts.
 - Necessary because the world, being a complicated place, must be simplified in order to allow decisions to be made.
 - Heuristics often make sense but falter when used outside of their natural domain. 
@@ -329,7 +326,7 @@ In doing so, they forego gains from international diversification.
 ### Potential Home Bias Explanations
 - Excessive optimism about the prospects of the domestic market.
   -  Comfort-seeking and familiarity.
--     What is familiar is good (i.e., a good investment)
+- What is familiar is good (i.e., a good investment)
 - Institutional restrictions:
   -  Capital movement restrictions
   -  Differential trading costs
