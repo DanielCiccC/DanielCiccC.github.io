@@ -102,9 +102,7 @@ Momentum and reversal are interconnected.
 - Researchers divided firms into 10 past-return 
 deciles and three volume terciles, forming 30
 momentum-volume portfolios. 
-- They found that low volume-high momentum 
-firms  yielded  higher  returns  at  1.67%  per 
-month, 
+- They found that low volume-high momentum firms  yielded  higher  returns  at  1.67%  per month
 - while  high  volume-low  momentum  firms 
 earned  just  0.09%  per  month,  creating  a 
 spread of 1.58% per month.
@@ -114,7 +112,7 @@ spread of 1.58% per month.
 >   - shorting and long on portfolio to receive excess returns
 
 
-• Momentum Life Cycle:
+### Momentum Life Cycle:
 Stocks with good past returns and high-volume exhibit patterns.
 Stocks peak, face bad news, and get sold at high volume.
 As stocks decline, volume decreases.
@@ -132,8 +130,7 @@ stock gains attention.
 ### Momentum and Reversal: Utilising Term Structure of Past Returns
 - Mark Grinblatt and Tobias Moskowitz documented the gains available if one conditions on the entire term structure of 
 past returns. 
-- As we have seen earlier, there is a negative serial correlation using both short-term (one-month) returns and long-term
-(3–5 year) returns, while positive serial correlation is present for medium-term (6–12 month) returns. 
+- As we have seen earlier, there is a negative serial correlation using both short-term (one-month) returns and long-term (3–5 year) returns, while positive serial correlation is present for medium-term (6–12 month) returns. 
 
 Researchers performed a regression of returns on:
 - Past returns
@@ -146,10 +143,19 @@ Grinblatt-Han Model Summary:
 - Consistent winners likely to have larger unrealized capital gains.
 - Stocks with similar past returns may differ in capital gains if achieved by occasional price jumps.
 
+> - negative serial correlation on short term - reversal
+
 > - The whole terms structures of past returns matters
-> - GH model, explain the model from disposition effect
+>   - Different time horizons
+> - GH model, explained from disposition effect
+>   - One of their focus was on unrealised capital gains
+>   - Consistency of winning/losing matters
+
 > - the ones with consistent winning trends is more likely to have momentum
+>   - The consistent winners have unrealised capital gains
 > - Experiment conducted
+> - separate out between winners (past winners) and losers
+
 
 ![alt text](assets\IMG111.PNG)
 
@@ -165,9 +171,14 @@ Momentum and Reversal
 Losers  show  amplified  serial  correlations,  consistent  winners  boost 
 returns, while consistent losers don't influence momentum or reversal
 
-> - consistent winners vs consistent winners over a 11 month period
->   - winning at least 8
-> - are a consistent winner, can enhance momentum
+> - medium term, find positive momentum
+>   - not just winners and losers, but medium term have positive correlations
+>   - Past losers amplify the momentum
+> - Adding consistency
+>   - consistent means 8/11 months
+>   - significant result, boost return with winning stocks
+>     - amplify serial correlation
+>   - consistent losers don't necessarily show momentum
 
 ![alt text](assets\IMG112.PNG)
 
@@ -177,21 +188,18 @@ returns, while consistent losers don't influence momentum or reversal
 
 This is of course what technical analysts have always done, though likely not with the same statistical rigor.
 
-> - Predicted the expected return, based their effiecnts in previous figure
+> - Predicted the expected return, based their efficients in previous figure
+> - predicted expected return based on regressions
+
 
 ### Momentum and Value
-Clifford Asness studied the effects of simultaneous 
-value and momentum screening on U.S. stocks.
-- Stocks sorted into value and momentum quintiles 
-resulted in 25 intersection portfolios.
-- High momentum-high value portfolio averaged 
-returns of 1.62%/month.
-- Simultaneous use of value and momentum is not 
-maximally effective because:
+Clifford Asness studied the effects of simultaneous value and momentum screening on U.S. stocks.
+- Stocks sorted into value and momentum quintiles resulted in 25 intersection portfolios.
+- High momentum-high value portfolio averaged returns of 1.62%/month.
+- Simultaneous use of value and momentum is not maximally effective because:
 - Value best suits low-momentum stocks.
 - Momentum most effective for low-value stocks.
-- Low-value stocks showed a momentum differential 
-of 1.47%.
+- Low-value stocks showed a momentum differential of 1.47%.
 
 
 > - momentum improves performance, and value improves performance
@@ -203,7 +211,7 @@ of 1.47%.
 > - momentum also works best for growth stocks - unrealised capital gains
 >   - Value and momentum strategies works well for growth stocks
 
-### Multivariate Approaches
+## Multivariate Approaches
 - Objective: Expand research beyond two factors using a multivariate approach.
 - Study by Marc Reinganum:
 - Analysed 222 firms with stock prices that doubled between 1970 and 1983.
@@ -214,16 +222,17 @@ Can these characteristics be used to develop a successful trading strategy?
 ### Conditioning on a large number of variables 
 - Now a large number of conditioning variables used.
 - Variables grouped into five categories: 1/risk; 2/liquidity; 3/price level; 4/growth potential; and 5/technical.
+
 1. Risk factors include such standard risk factors as beta and sensitivities to macroeconomic variables
 2. Illiquid stocks need to have higher returns to compensate traders who must face higher transaction costs, 
 so such logical factors as price per share and volume were included
-3. Price level factors essentially capture value strategies, as this category includes share price relative to 
+1. Price level factors essentially capture value strategies, as this category includes share price relative to 
 various accounting magnitudes
-4. Growth potential factors point to the likelihood of higher growth in earnings and dividends, with various 
+1. Growth potential factors point to the likelihood of higher growth in earnings and dividends, with various 
 profitability measures being used as proxies in this regard
 - Idea here is that, for a given price relative to accounting measures, indicators suggesting higher future 
 growth might point to diamonds in the rough
-5.   Technical factors include standard momentum and reversal measures
+1.   Technical factors include standard momentum and reversal measures
 
 - Reinganum's study (1970-1983) on AMEX and NYSE firms used specific commonalities to screen stocks.
 When all characteristics aligned, a buy signal was triggered, and stocks were held for two years,
@@ -238,17 +247,12 @@ investment strategy.
 
 ![alt text](assets\IMG114.PNG)
 
-- The table displays coefficients representing the 
-change  in  a  stock's  monthly  expected  return 
-due  to  a  one  standard  deviation  change  in 
-exposure to a factor.
-- Robustness  checked  by  repeating  the  analysis 
-for the latter half of the sample.
+- The table displays coefficients representing the change  in  a  stock's  monthly  expected  return due  to  a  one  standard  deviation  change  in exposure to a factor.
+- Robustness  checked  by  repeating  the  analysis for the latter half of the sample.
 - Key observations:
 - Factors' impact is consistent.
 - No risk measures are present.
-- Dominant  factors  are  technical,  price  level, 
-and liquidity.
+- Dominant  factors  are  technical,  price  level, and liquidity.
 
 ![alt text](assets\IMG115.PNG)
 
@@ -261,8 +265,8 @@ and liquidity.
 - The act of moving from style to style in the attempt to time aggregate style preference shifts.
 
 Predictive Models & Investment Strategies
--Necessity: Reliable predictive models are foundational for investment approaches.
--Key Macroeconomic Factors:
+- Necessity: Reliable predictive models are foundational for investment approaches.
+- Key Macroeconomic Factors:
 1. Default premium
 2. Term structure slope
 3. Aggregate dividend yield
@@ -274,25 +278,13 @@ Predictive Models & Investment Strategies
 
 **Style Rotation‘s Value:**
 
-Table  19.5  highlights  the  effectiveness  of  style 
-rotation.  For  a  relative-value  tilt,  although  it's 
-successful  in  100  of  the  203  months,  the 
-weighted average is a notable 0.93%/month. This 
-is  due  to  a  stark  difference  between  gains  in 
-successful  months  (3.32%)  versus  losses  in 
-unsuccessful ones (-1.38%).
+Table  19.5  highlights  the  effectiveness  of  style rotation.  For  a  relative-value  tilt,  although  it's successful  in  100  of  the  203  months,  the weighted average is a notable 0.93%/month. This is  due  to  a  stark  difference  between  gains  in successful  months  (3.32%)  versus  losses  in unsuccessful ones (-1.38%).
 
 **Relative-Strength Returns:**
-Signals favoring a relative-strength tilt succeeded 
-in  90  out  of  141  months.  High  gains  during 
-successful  months  (5.18%)  against  losses  during 
-failures  (-4.12%)  resulted  in  an  impressive 
-weighted return of 1.81%.
+Signals favoring a relative-strength tilt succeeded in  90  out  of  141  months.  High  gains  during successful  months  (5.18%)  against  losses  during failures  (-4.12%)  resulted  in  an  impressive weighted return of 1.81%.
 
 **Conclusion:**
-Style  rotation  averages  1.30%/month.  Diversifying 
-styles  is  beneficial,  but  prior  year  returns-based  style 
-rotation optimizes gains.
+Style  rotation  averages  1.30%/month.  Diversifying styles  is  beneficial,  but  prior  year  returns-based  style rotation optimizes gains.
 
 > - engaging in style rotation, can earn excess return
 > - Diversifying in terms of styles is beneficial
@@ -314,7 +306,7 @@ One of the main determinants of whether a pattern in data has usefulness for the
 > - Behavioural finance tries to find an explanation as to try an explain it
 > - Try to apply it in strategies, how do you know whether it is behavioural investing?
 >   - Might be due to behavioural favours
-> - Anomlous factors should become natural
+> - Anomolous factors should become natural
 > - Limits to arbitrage and human factors means it is difficult to get rid of behaviour
 
 
@@ -327,19 +319,12 @@ behavioral finance principles.
 3. Funds may change names/strategies to attract investments.
 
 - Findings:
-  - Behavioral funds attract investors mainly due 
-to outperforming the S&P 500.
-  - Using Fama-French three-factor model with 
-momentum, these funds don't show excess 
-returns; they capitalise mainly on the value 
-advantage.
+  - Behavioral funds attract investors mainly due to outperforming the S&P 500.
+  - Using Fama-French three-factor model with momentum, these funds don't show excess returns; they capitalise mainly on the value advantage.
 
 - Conclusion:
-  - No strong evidence that behavioral 
-investing has significant benefits.
-  - Issues with sample size and statistical test 
-power; funds might provide value, but it's 
-challenging to conclusively determine.
+  - No strong evidence that behavioral investing has significant benefits.
+  - Issues with sample size and statistical test power; funds might provide value, but it's challenging to conclusively determine.
 
 > - Are attacting investors, do outperform S&P 500
 > - all just capitalising on value advantage - not that behavioural/behaviourally driven

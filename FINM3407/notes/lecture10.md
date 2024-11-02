@@ -259,7 +259,7 @@ To the extent that value exceeds price, rational investors will demand more unit
 
 $$D(R)_t = 1+b(f_t - p_t) + \lambda (ref_t - p_t)$$
 
-  -  D(PT/MA)t is demand at t arising from those investors who are influenced by prospect theory and mental accounting. Here, ref t  is the 
+ -  D(PT/MA)t is demand at t arising from those investors who are influenced by prospect theory and mental accounting. Here, ref t  is the 
 reference point and λ (>0) denotes the relative importance of the capital gain component to PT/MA investors. 
 Note that, if ref t  > p t , demand is higher since the price is in the risk-seeking domain.
 
@@ -369,6 +369,7 @@ $$n_{t+1} = n_t + \epsilon_{t+1}$$
 - Regime 1. Earnings mean-revert:
 
 Given a positive (negative) earnings change, there is a low probability of another positive (negative) earnings change in the next period. Underreaction.
+
 - Regime 2. Earnings are persistent:
 
 Given a positive/negative earnings change, there is a high probability of another positive/negative earnings change in the next period. Overreaction

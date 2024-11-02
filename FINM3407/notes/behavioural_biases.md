@@ -31,12 +31,6 @@
 ### Examples/manifestations
 - risk-seeking individual might invest more heavily in high-risk, high-reward assets, like individual stocks or cryptocurrencies. 
 
-
-## Representativeness
-- People frequently make the mistake of believing that two similar things or events are more closely correlated than they actually are.
-- Representativeness exists when one thinks that A should look like B.  A can be the sample and B the distribution, or vice-versa.
-- Judging the likelihood of things in terms of how well they seem to represent, or match, particular prototypes.
-
 ## Lottery and Insurance
 - A lottery is a prospect with a low probability of a high payoff.  Many people buy lottery tickets, even with negative expected values.  These same people buy insurance to protect themselves from risk.
 - Normally, insurance is a hedge against a low-probability large loss. These choices are inconsistent with traditional expected utility framework but can be explained by prospect theory. 
@@ -162,6 +156,9 @@ The diversification heuristic suggests that people like to try a little bit of e
 - A Large selection might attract more interest but a small selection will close a deal
 
 ## Representativeness
+- People frequently make the mistake of believing that two similar things or events are more closely correlated than they actually are.
+- Representativeness exists when one thinks that A should look like B.  A can be the sample and B the distribution, or vice-versa.
+- Judging the likelihood of things in terms of how well they seem to represent, or match, particular prototypes.
 - Investors are prone to believe that a history of a remarkable performance of a given firm is “representative” of a general performance that the firm will continue to generate into the future.
 
 - People are too influenced by latest information.
@@ -217,7 +214,7 @@ An example of people having difficulty with probabilities is when they have no n
 - People tend to favour local firms
 
 ## Cognitive dissonance
-
+Display cognitive dissonance when one simultaneously holds two thoughts which are psychologically inconsistent.
 
 ## Home Bias
 - Excessive optimism about the prospects of the domestic market.
@@ -254,10 +251,10 @@ their investments.
 - when an investor faces big losses, it results in disappointment as well as loss of confidence on self
 
 ## Momentum
+- Observed tendency for rising asset prices or securities return to rise further, and falling prices to keep falling
 
 ## Reversal
 - past losers substantially outperforming past winners
-
 
 ## Myopic Loss Aversion
 - Implies the person also evaluates her portfolio frequently
@@ -266,7 +263,7 @@ their investments.
 
 
 ## Greater Fool Theory
-
+Investors purchase stock in the hopes of offloading to someone else at a higher price
 
 
 ---
@@ -291,7 +288,6 @@ Example: managers of a firm that is an acquisition target may resist the takeove
   - (1) Prices are right (EMH) ➔ No free lunch (no arbitrage opportunity)
   - (2) No free lunch $\ne$ Prices are right (EMH)
 
-## CAPM, expected return and CML/SML
 
 ## EMH and implications
 Market efficiency requires that only one of the following three conditions need hold:
@@ -434,25 +430,77 @@ Behavioral explanation
 transitory. For this reason, they overreact (recency bias)
 
 ### Anomaly Attenuation
+- It has been argued that a number of anomalies, once reported in the academic literature, either attenuate or disappear in the future.
+
 
 ### Peer Group Evaluation
+Becoming commonplace for managers to be evaluated relative to their size/value peer group -- 
+relative to their style-peer group.
 
 ### Style Investing
-- Style tiling and style rotation
+- If you believe that value is more often than not better you might tilt 60% towards value (style tilting)
+- If you believe you have a predictive model that allows you to time style returns, you might be willing to toggle back and forth, 80% or 40% in value (style rotation)
+
 
 ### Refining value Investing by using Accounting data
-- F scores
+- Financial statement information can also be useful
+- Developed a scoring system (F-Scores) on the level of financial soundness based on:
+  - Profitability
+  - Financial leverage/liquidity
+  - Operating efficiency
 
 ### Refining Momentum-Investing Using Volume
+- Volume as a Key Indicator
+- Relationship Between Volume and Momentum
+  - Suggests momentum can be an overreaction and momentum and reversal are interconnected
+  - They found that low volume-high momentum firms  yielded  higher  returns  at  1.67%  per month
+
+## Momentum Life cycle
+Stocks with good past returns and high-volume exhibit patterns.
+Stocks peak, face bad news, and get sold at high volume.
+As stocks decline, volume decreases.
+On stock recovery, volume starts low but eventually increases as the 
+stock gains attention.
+
+## Momentum and Reversal Study
+- Strong positive serial correlation observed in returns from 12 months back to one month.
+- Greater persistence noticed for firms with negative returns in this span, indicating loser firms tend to remain losers.
+- Consistency matters:
+  - Firms with positive returns in at least 8 of the 11 (from -12 to -2)  months showcase enhanced momentum.
+  - Firms consistently performing negatively over 8 of the 11 (from  -12 to -2)  months don't affect momentum.
 
 ### Momentum and Value
+- Simultaneous use of value and momentum is not maximally effective because:
+- Value best suits low-momentum stocks.
+- Momentum most effective for low-value stocks.
 
-### Multivariate approach (5 factors)
+## Multivariate approach (5 factors)
+- Variables grouped into five categories: 1/risk; 2/liquidity; 3/price level; 4/growth potential; and 5/technical.
+
+1. Risk factors include such standard risk factors as beta and sensitivities to macroeconomic variables
+2. Illiquid stocks need to have higher returns to compensate traders who must face higher transaction costs, 
+so such logical factors as price per share and volume were included
+3. Price level factors essentially capture value strategies, as this category includes share price relative to 
+various accounting magnitudes
+4. Growth potential factors point to the likelihood of higher growth in earnings and dividends, with various 
+profitability measures being used as proxies in this regard
+- Idea here is that, for a given price relative to accounting measures, indicators suggesting higher future 
+growth might point to diamonds in the rough
+5.   Technical factors include standard momentum and reversal measures
+   
+### Study results
+- momentum & reversal, value and volumes are the three values that are most important
 
 ### Style rotation strategies
+- Necessity: Reliable predictive models are foundational for investment approaches.
+- Key Macroeconomic Factors:
+1. Default premium
+2. Term structure slope
+3. Aggregate dividend yield
 
 ### Can Behavioural Finance Enhance Portfolio Performance
-
+- No strong evidence that behavioral investing has significant benefits.
+  - Issues with sample size and statistical test power; funds might provide value, but it's challenging to conclusively determine.
 
 ### Home Bias and Informational Advantage
 - You know more about what is close.
@@ -461,6 +509,8 @@ private information.
 
 ---
 # Calculations to revise
+
+## CAPM, expected return and CML/SML
 
 ## Expected Value, Expected Utility and certainty equivalent
 

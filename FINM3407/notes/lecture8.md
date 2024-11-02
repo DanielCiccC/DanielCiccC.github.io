@@ -519,7 +519,7 @@ factors that they considered.
 - Investors  do  not  follow  axioms  of  Von-Neuman  Morgenstein  expected  utility:  Loss 
 aversion 
 - Investors systematically violate  Bayes  rule  and  other  axioms  of  probability  theory: investors are subjected to heuristic biases. 
-  - Representativeness (over  -reaction) 
+  - Representativeness (over-reaction) 
   - Availability bias (familiarity, home bias) 
   - Anchoring and adjustment (conservatism, underreaction) 
 - People make different choices depending on how equivalent decisions are presented to them: Frame dependence
