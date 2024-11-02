@@ -1,21 +1,26 @@
-# Tutorial 11
+# Tutorial 11 - Topic 10 Behavioural Investing 
 
-### Part One: Behavioural Investing
-1. Differentiate the following terms/concepts:
-a. Style peer groups and style investing
+## Part One: Behavioural Investing
 
-- Consideration of style in portfolio formation
-- Styles, growth, value momentum, dividend, others
-- Each style has distinct characteristics and targets different types of stocks or assets based on set criteria that align with investor's goals and balances
+### 1. Differentiate the following terms/concepts:
+**a. Style peer groups and style investing**
 
-b. Style tilting and style rotation
+
+- Style-investing is the consideration of style in portfolio formation.  
+- A style-peer group is a group of investors following the same style, where style is usually defined in terms of firm size and growth vs. value. 
+
+
+**b. Style tilting and style rotation**
+
 - tilts towards small-cap value because historically small-cap value has outperformed, practicing style-tilting
 - Moving from style-to-style in an attempt to time aggregate style preference shifts
 
-c. Financial soundness and financial statements
+**c. Financial soundness and financial statements**
+
 - Financial statements provides a sense of the firm's financial state, assets, liabilities, net worth along with income and cashflows
 
-d. Univariate and multivariate approaches
+**d. Univariate and multivariate approaches**
+
 - Univariate approach to behavioral investing conditions on a single variable (e.g. past returns)
 - One with higher past returns are going to have higher future returns
 > - One of the risk factors could lead to higher or lower return
@@ -38,6 +43,8 @@ Model
 
 ### 3. Describe how value investing can be refined by paying close attention to a company’s financial statements.
 
+- Model by Piotroski attempts to separate the wheat from the chaff among value stocks by concentrating on those with financial soundness.  Specifically, nine fundamental signals were used to measure three areas of a firm’s financial condition: (1) profitability, (2) financial leverage/liquidity, and (3) operating efficiency. 
+
 - F-score attempts to separate stocks concentrating on those with financial soundness i.e. strength of financial position
 - Proposed that we should concentrate with those with strong financial position
   - Going to increase a lot, 
@@ -53,7 +60,7 @@ Researchers tried to improve predictability of fama-franch
   - Just well-known risk factors
   - Fama french three-factor models - everything is consistent
 
-5. What is an example of an anomaly that once reported in research studies has attenuated?
+### 5. What is an example of an anomaly that once reported in research studies has attenuated?
 Is this positive or negative from the standpoint of market efficiency?
 
 - research existence of anomaly - and when it will happen again

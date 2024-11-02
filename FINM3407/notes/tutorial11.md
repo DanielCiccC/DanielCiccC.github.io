@@ -1,15 +1,18 @@
-# Tutorial 10
+# Tutorial 10 - Topic 9  Behavioural Factors and Stock Market Puzzles 
 
-1*. Differentiate the following terms/concepts:
-a. Certainty equivalent and a gamble
+### 1*. Differentiate the following terms/concepts:
+**a. Certainty equivalent and a gamble**
+
+A certainty equivalent is the wealth level that leads a decision-maker to be indifferent between 
+a particular prospect and a given wealth level and a gamble is a lottery or series of wealth 
+outcomes, each of which is associated with a probability. 
 
 **b. Loss aversion and myopic loss aversion**
 
 - Loss averse- losses loom larger than gains
-- myopic loss aversion implies the person also evaluates her portfolio frequently
+- Myopic loss aversion implies the person also evaluates her portfolio frequently
 
-c. Speculative price bubble and ex post rational stock price
-
+**c. Speculative price bubble and ex post rational stock price**
 - Speculative bubble is said to exist when high prices seem to be generated more by traders' enthusiasm than by economic fundamentals
 - Shiller defines ex post rational stock price as the stock price if you actually knew all future dividends
 
@@ -26,12 +29,7 @@ c. Speculative price bubble and ex post rational stock price
 
 ### 3*. An individual with cash to invest has two investment choices:
 
-Buy a stock fund which every year either earns 40% or -20% with a 50/50 probability.
-Buy a bond fund that every year returns either 5% or 0% also with a 50/50 probability.
-Assume that the returns on the two funds are independent and that returns from year to
-year are also identical. Also, assume an initial portfolio value of $1. (The answers,
-however, will be unaffected if you use a different initial portfolio value.)
-In addition, suppose the value function is linear and is specified as:
+Buy a stock fund which every year either earns 40% or -20% with a 50/50 probability. Buy a bond fund that every year returns either 5% or 0% also with a 50/50 probability. Assume that the returns on the two funds are independent and that returns from year to year are also identical. Also, assume an initial portfolio value of $1. (The answers, however, will be unaffected if you use a different initial portfolio value.) In addition, suppose the value function is linear and is specified as:
 
 $$v(z) = z for z≥0 \text{and} v(z) = -3(-z) for z<0$$
 
@@ -58,14 +56,29 @@ $$v(z) = z for z≥0 \text{and} v(z) = -3(-z) for z<0$$
 
 ### 4*. What do experimental bubble markets teach us about the likelihood of bubbles in the real world? In what sense does this research have its limitations? 
 
-- Factors leading to asset bubbles
-  - Using traditional finance model, not able to predict/find bubble
-  - involve participants trading under different rules
-
+- If bubbles (mispricing) can generate simple market structures, it seems they would be fairly likely in much more complicated naturally occurring markets.  
+- This research allows a great deal  of  control  for  extraneous  factors,  but  people  may  behave  differently  in  a  controlled laboratory situation. 
 
 ### 5*. Do you believe that stock prices are too volatile? Be sure to explain what you mean when you say “volatility” and “too much.”
-• Believing Stock Prices are Too Volatile?
-• Believing Stock Prices are Not Too Volatile?
+
+**Believing Stock Prices are Too Volatile:**
+1.  Risk Perception: Some may argue that excessive volatility can be problematic because 
+it  increases  the  perceived  risk  associated  with  investing  in  stocks.  This  can  deter 
+potential investors and contribute to market instability. 
+2.  Market  Efficiency:  Those  who  advocate  for  lower  volatility  might  suggest  that  it 
+ensures a more efficient market where stock prices reflect fundamental values rather 
+than being influenced by short-term speculation and emotional trading. 
+
+**Believing Stock Prices are Not Too Volatile:**
+1.  Market Dynamics: Volatility is a natural characteristic of financial markets. It allows 
+for price discovery,  as  stock prices react  to new information  and market  events.  A 
+degree of volatility is essential for markets to function efficiently. 
+2.  Investment Opportunities: Some investors actively seek out volatile markets as they 
+provide  opportunities  for  profit  through  short-term  trading  strategies.  To  them, 
+volatility represents a chance to capitalize on price fluctuations. 
+3.  Diverse Perspectives: What one person considers “too much” volatility might be seen 
+as an opportunity for another. It’s subjective, and investors have varying risk tolerances 
+and investment objectives.
 
 - Depends on one's perspective ad the context in which we evaluate volatility
 - Volatility, in the context of stock prices, refers to the degree of variation or fluctuation in the proces of stocks over a specific period

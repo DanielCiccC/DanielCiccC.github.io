@@ -406,17 +406,14 @@ These first two reasons are mistakes of judgment.  Likely individual investors a
 Rational explanation
 - Coefficient of Relative Risk Aversion (CRRA) 30 compared to 1
 
-### Excessive Volatility
-- Behavioural explanation
-- Recency effects
-
 ## Bubbles
 A bubble occurs when prices are driven more by enthusiasm than fundamentals.
+- Occurs naturally in the financial market, characterised by a rapid escalation in the market value of assets
 
 ### Related
 - Bubbles are identified in hindsight, leading to hindsight bias.
 
-### Learnings from Bubbles
+### Learnings from Experimental Bubble Markets
 - Price bubbles are more moderate and disappear faster when traders are experienced. 
 - Potential for short-selling leads to bubble dissipation.
 - Willing to pay more for lottery asset because they become more risk taking as trading heats up
@@ -427,7 +424,8 @@ It seems that often market movements are not obviously explained by new informat
 
 Behavioral explanation
 - Investors think (wrongly) that dividend growth changes are permanent rather than 
-transitory. For this reason, they overreact (recency bias)
+transitory. For this reason, they overreact 
+- Recency plays a role: recent high earnings growth makes people think that future growth is going to be higher than it actually turns out to be
 
 ### Anomaly Attenuation
 - It has been argued that a number of anomalies, once reported in the academic literature, either attenuate or disappear in the future.
@@ -443,6 +441,7 @@ relative to their style-peer group.
 
 
 ### Refining value Investing by using Accounting data
+Joseph Piotroski
 - Financial statement information can also be useful
 - Developed a scoring system (F-Scores) on the level of financial soundness based on:
   - Profitability
@@ -463,6 +462,7 @@ On stock recovery, volume starts low but eventually increases as the
 stock gains attention.
 
 ## Momentum and Reversal Study
+Mark Grinblatt and Tobias Moskowitz
 - Strong positive serial correlation observed in returns from 12 months back to one month.
 - Greater persistence noticed for firms with negative returns in this span, indicating loser firms tend to remain losers.
 - Consistency matters:
@@ -529,6 +529,8 @@ private information.
 > REvise tutorial 8 question 3 and 4
 
 > Revise CFA questions tutorial 8
+
+> Revise CFA questions tutorial 9
 
 ## DHS model
 - Explaining Reversal through overconfidence

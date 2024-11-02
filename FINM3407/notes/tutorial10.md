@@ -5,6 +5,7 @@
 
 - Momentum is positive correlation in returns, exist empirically over the medium term
 - Reversal is a negative correlation in returns, the latter over the long term
+
 > - Should be no overvalued or undervalued stocks
 
 **b. Mean-reversion and continuation scenarios in the Barberis-Shleifer-Vishny (BSV) model**
@@ -43,7 +44,7 @@ Two consecutive earnings changes in the same direction make it appear that Regim
 
 ### 5*. Momentum is the anomaly that gives those subscribing to efficient markets the most trouble. Explain.
 
-- Fama Frnech three-factor model has a role for size and value but not momentum
+- Fama French three-factor model has a role for size and value but not momentum
 - Some research related momentum to business cycle and the state of the market
   - non-diversifiable macroeconomic instruments account for a large portion of momentum profits
 - time-varying CAPM with beta uncertainty can contribute to an explanation of momentum

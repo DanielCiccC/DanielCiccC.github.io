@@ -449,14 +449,10 @@ meaningful information.
 > - r is constant, growth rate cannot sustain high growth rate forever
 
 ### Prices vs. Rational Prices
-Figure 14.7 contrasts the observed S&P 500 index (p) with the 
-calculated rational stock price (p*), based on future dividends.
-- Notably, actual stock prices display significant volatility, 
-diverging often from the more stable p*. 
-- Despite dividends being predictable, stock prices show 5 to 
-13 times more volatility than rational expectations. 
-- This disparity poses the question: Why are stock prices so 
-volatile when dividends are stable?
+Figure 14.7 contrasts the observed S&P 500 index (p) with the calculated rational stock price (p*), based on future dividends.
+- Notably, actual stock prices display significant volatility, diverging often from the more stable p*. 
+- Despite dividends being predictable, stock prices show 5 to 13 times more volatility than rational expectations. 
+- This disparity poses the question: Why are stock prices so volatile when dividends are stable?
 
 ![alt text](assets\IMG105.PNG)
 
