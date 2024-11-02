@@ -17,4 +17,3 @@ For each bias, outline
 Questions to ask:
 
 - What is the difference between the disposition effect and loss aversion?
-

@@ -1,5 +1,4 @@
-# Lecture 10 (8)
-# Behavioral Explanations for Anomalies
+# Lecture 10 - Topic 8 - Behavioral Explanations for Anomalies
 
 [Behavioral Explanations for Anomalies]
 - Brief Introduction: Behavioral Explanations for Anomalies
@@ -89,8 +88,6 @@ institutional investors.
 >   - Low P/E ratio considered an undervalued stock
 >   - Simply looking at the price, look really cheap - new firm, may no be great, etc.
 > - Literature looks at two streams
-
-> - Individual investors have a 
 >   - Looking at the past performance - firm is still going to have a growth rate in the future
 >   - Assume a constant/terminal growth rate in DCF, e.g., will have higher prices for the stock
 >   - Thinking that because of high growth rate, higher growth in the future and give it a higher price and you are surprised when it underperforms in the future
@@ -99,15 +96,10 @@ institutional investors.
 >   - If the price is really high now - high growth rate currently
 
 ### What is Behind Value Advantage?
-- Next two reasons (Reason 3 and Reason 4) are due to agency considerations  (rational 
-reasons to shy away from value):
-- Because  sponsors  view  companies  with  steady  earnings  and  buoyant  growth  as  prudent 
-investments,  so  as  to  appear  to  be  following  their  fiduciary  obligation  to  act  prudently, 
-institutional investors may shy away from hard-to-defend, out-of-favour value stocks.
-- Also  because  of  career  concerns,  institutional  investors,  who  are  evaluated  over  short 
-horizons, may be nervous about tilting too far in any direction thus incurring tracking error.  
-A value strategy would require such a tilt and may take some time to pay off, so it is in this 
-sense risky.
+Next two reasons (Reason 3 and Reason 4) are due to agency considerations  (rational reasons to shy away from value):
+
+3. Because  sponsors  view  companies  with  steady  earnings  and  buoyant  growth  as  prudent investments,  so  as  to  appear  to  be  following  their  fiduciary  obligation  to  act  prudently, institutional investors may shy away from hard-to-defend, out-of-favour value stocks.
+4. Also  because  of  career  concerns,  institutional  investors,  who  are  evaluated  over  short horizons, may be nervous about tilting too far in any direction thus incurring tracking error.  A value strategy would require such a tilt and may take some time to pay off, so it is in this sense risky.
 
 > - Should work in the best interest for their client
 >   - Not easy - have performance pressure, have to show they are generating income
@@ -372,7 +364,7 @@ Their Model leads to a world where investors at first underreact, and then overr
 
 Suppose we assume that a random walk holds for earnings (nt): 
 
-$$n_{t+1}  =n_t + 𝜺_{t+1}$$
+$$n_{t+1} = n_t + \epsilon_{t+1}$$
 
 - Regime 1. Earnings mean-revert:
 
@@ -461,20 +453,23 @@ risk (as in CAPM).
 ### Inappropriate Risk Adjustment. 
 
 - Fama and French's 1992 Paper:
-Challenged the then-accepted CAPM model, suggesting it didn't work anymore.
-CAPM indicates only a security's beta should impact expected returns.
-Their data (from 1963-1990) contradicted this, showing no positive relation between stock returns and market betas.
+
+Challenged the then-accepted CAPM model, suggesting it didn't work anymore. CAPM indicates only a security's beta should impact expected returns. Their data (from 1963-1990) contradicted this, showing no positive relation between stock returns and market betas.
+
 - Multi-dimensional Stock Risks:
+
 Findings suggest that stock risks have multiple dimensions, including size and the book-to-market equity ratio.
 This led to the development of the Fama-French three-factor model.
+
 - Anomalies' Interpretation:
+
 Anomalies in stock returns either indicate investor errors or improper risk adjustment.
 
 ### Fama-French Three Factor Model
 
 ![alt text](assets\IMG89.PNG)
 
-- Where the return on security or portfolio I at t is $R^i_t$:
+- Where the return on security or portfolio $I$ at $t$ is $R^i_t$:
 - The risk-free rate at t is   $R_{f,t}$
   - Market Return:  $R_{m ,t}$
   - Value vs. growth

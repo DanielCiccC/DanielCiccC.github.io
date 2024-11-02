@@ -1,4 +1,4 @@
-# Tutorial 8
+# Tutorial 8 - Topic 7 Emotional Foundations and Individual Investors 
 
 ### 1*. Differentiate the following terms/concepts/individuals: 
 **a. IQ and EQ**

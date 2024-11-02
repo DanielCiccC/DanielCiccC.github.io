@@ -20,9 +20,9 @@
 Becoming commonplace for managers to be evaluated relative to their size/value peer group -- 
 relative to their style-peer group.
 Style is usually defined in terms of firm size and growth vs. value.
-• Morningstar sorts funds into nine groups based on size/value 3 by 3 matrix
-• Managers compared to other managers in their box
-• To rise above crowd, one must do more!
+- Morningstar sorts funds into nine groups based on size/value 3 by 3 matrix
+- Managers compared to other managers in their box
+- To rise above crowd, one must do more!
 
 > - More common to evaluate manager's performance
 > - Categorise by firm value and size into matrix

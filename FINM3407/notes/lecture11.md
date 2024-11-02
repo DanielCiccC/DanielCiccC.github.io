@@ -188,10 +188,8 @@ Researchers have linked prospect theory to the equity premium puzzle.
 ### ERP Behavioural Explanation – Myopic Loss Aversion
 - Myopic Loss Aversion: investors focus too much on short-term losses while ignoring potential long-term gains
 - Key is to remember loss aversion (investors hate losing money) and to consider how often investors evaluate their portfolios
-- Intuitively, if you evaluate your position every day, there is a very good chance that by day’s end you will have lost money, so 
-you find stocks very risky.
-- But if you evaluate stocks once per decade there is a much smaller chance that you will lose money, so you will find stocks 
-not so risky
+- Intuitively, if you evaluate your position every day, there is a very good chance that by day’s end you will have lost money, so you find stocks very risky.
+- But if you evaluate stocks once per decade there is a much smaller chance that you will lose money, so you will find stocks not so risky
 
 
 QUESTION: 

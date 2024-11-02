@@ -182,7 +182,7 @@ The diversification heuristic suggests that people like to try a little bit of e
 - Freely available, easily processed information is more compelling.
 
 ## Primacy Effect
-Primacy effect is the tendency to reply on information that comes first when making an assessment, whereas
+Primacy effect is the tendency to reply on information that comes first when making an assessment
 
 
 ## Conjunction Fallacy
@@ -234,14 +234,18 @@ An example of people having difficulty with probabilities is when they have no n
 ## Disposition Effect
 Tendency to sell winners too early and hold on to losers too long.
 
-### Explained through Prspect theory and Mental Accounting
+### Explained through Prospect theory and Mental Accounting
 
 ![alt text](assets\IMG72.PNG)
 - After  a  large  gain  (D),  you  have  moved  to  the  risk-averse segment  of  the  value  function.  Only  major  reversals  of fortune are likely to move you back to the origin. 
 - On the other hand, after a large loss (A) you have moved to the risk-seeking  segment  of  the  value  function  and,  again, you  are  unlikely  to  move  quickly  back  to  your  reference point. 
 - The  implication  is  that  since  you  are  less  risk-averse  for losers than winners, you are more likely to hold on to them.
 
-
+## Explained through experimental evidence
+- Experimental design was predicated on whether or not individuals have chosen 
+their investments.
+  - When no choice, you will experience disappointment 
+  - When with choice, you will experience regret (which is stronger than disappointment) 
 
 ### Related concepts
 - Link to prospect theory and mental accounting
@@ -254,13 +258,16 @@ Tendency to sell winners too early and hold on to losers too long.
 ## Reversal
 - past losers substantially outperforming past winners
 
-## Ambiguity Aversion
 
 ## Myopic Loss Aversion
+- Implies the person also evaluates her portfolio frequently
+- Intuitively, if you evaluate your position every day, there is a very good chance that by day’s end you will have lost money, so you find stocks very risky.
+- But if you evaluate stocks once per decade there is a much smaller chance that you will lose money, so you will find stocks not so risky
+
 
 ## Greater Fool Theory
 
-## Mean Reversion
+
 
 ---
 # Concepts
@@ -284,11 +291,9 @@ Example: managers of a firm that is an acquisition target may resist the takeove
   - (1) Prices are right (EMH) ➔ No free lunch (no arbitrage opportunity)
   - (2) No free lunch $\ne$ Prices are right (EMH)
 
-### Non-linear weighting function
+## CAPM, expected return and CML/SML
 
-### CAPM, expected return and CML/SML
-
-### EMH and implications
+## EMH and implications
 Market efficiency requires that only one of the following three conditions need hold:
 1. Universal rationality
 2. Uncorrelated errors
@@ -298,7 +303,7 @@ Market efficiency requires that only one of the following three conditions need 
 - If the first does not hold, but the second does hold, while errors will be made, once again on average prices will be right. 
 - If the first two do not hold, but the third does hold, while prices have the potential to diverge from value because errors are often one-sided, arbitrageurs will notice such opportunities and swiftly take action so as to eliminate mispricing.
 
-### Limits to Arbitrage
+## Limits to Arbitrage
 1) Fundamental Risk
 - If you think a stock is underpriced you can buy it, but:
   - You might be sideswiped by the market.
@@ -319,7 +324,7 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 - Conventional finance theory demonstrates that, when properly applied, NPV is optimal decision rule for capital budgeting purposes. 
 - Yet a number of surveys show that managers often utilise less than ideal techniques, such as the internal rate of return (IRR) and payback period
 
-### Managerial Overconfidence tendencies
+## Managerial Overconfidence tendencies
 1. Overinvestment
 - Unfounded belief in own ability to identify companies
 - Overconfident managers invest more
@@ -332,16 +337,16 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 - Excessive optimism: overestimation of market demand.
 - Better-than-average effect: “I will beat the odds.”
 
-### Managerial Overconfidence Positive aspects
+## Managerial Overconfidence Positive aspects
 - optimism about future cash flows leads to a belief that there will be little problem in covering interest payments
 - entrepreneurial activity can provide valuable information to society. Provides valuable evolutionary purpose
 
-### Affect on Managers
+## Affect on Managers
 - Emotion impacts capital budgeting decisions
 - Kida, Moreno, and Smith experiment - participants  were  told  that  they  were  divisional  managers  deciding  between  two  product investments
 - Most chose the one with the lower NPV
 
-### Substances of emotional state
+## Substances of emotional state
 1. Cognitive Antecedents
    - beliefs or thoughts about a situation lead to emotional responses.  For example, When another driver runs  a  red  light  and  almost  causes  a  collision,  the  belief  that  the  other  driver  is  careless  and  has  endangered  your  lift triggers the emotion of anger
 2. Intentional Objects
@@ -355,10 +360,10 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 6. Action Tendencies
    - When you experience an emotion, you often feel an urge to act a certain way.
 
-### Emotion and Reasoning - Phineas Gage and Elliot
+## Emotion and Reasoning - Phineas Gage and Elliot
 - Both men had brain damage to their frontal lobe which  caused  a  major  change  in  their personality/emotional  processing  skills,  leading the  scientists  to  have  a  better  idea  of  how different  parts  of  the  human  brain  function, specifically  regarding  personality,  emotions, social interaction, and the relationship between emotions and decision making
 
-### Advantages to Emotions
+## Advantages to Emotions
 1. Emotion pushes individuals to make some decision when making a decision is paramount.
 - Often a decision has to be made
 
@@ -366,29 +371,71 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 - Positive feelings can make it easier to access information in the brain, promote creativity, improve problem solving, enhance negotiation, and build efficient and thorough decision-making.
 
 ## Value Advantage (4 reasons)
+(Mistake of Judgement)
+1. They are committing judgment errors in extrapolating past growth rates too far into the future and are thus surprised when value stocks shine and glamour stocks disappoint.  This is so-called “expectational error hypothesis”
+2. Because of representativeness, investors may assume that good companies are good investments
+These first two reasons are mistakes of judgment.  Likely individual investors are more subject to committing them than institutional investors.
 
-
+(Agency Considerations)
+3. Because  sponsors  view  companies  with  steady  earnings  and  buoyant  growth  as  prudent investments,  so  as  to  appear  to  be  following  their  fiduciary  obligation  to  act  prudently, institutional investors may shy away from hard-to-defend, out-of-favour value stocks.
+4. Also  because  of  career  concerns,  institutional  investors,  who  are  evaluated  over  short horizons, may be nervous about tilting too far in any direction thus incurring tracking error.  A value strategy would require such a tilt and may take some time to pay off, so it is in this sense risky.
 
 
 ### Models for Momentum and Reversal
+- DHS - Explains reversal - using calculations and related to overconfidence and variance terms
+- GH Model - Explains momentum - using prospect theory, mental accounting and the disposition effect
+- BSV Model - Explains momentum and reversal - using Anchoring and representativeness bias
+
+## BSV Model
+- Anchoring and conservative adjustment dictates that investors are slow to change views on earnings.
+- Investors, being coarsely calibrated, believe that stocks switch between two regimes.
+
+- Regime 1. Earnings mean-revert:
+  - Given a positive (negative) earnings change, there is a low probability of another positive (negative) earnings change in the next period. Underreaction.
+- Regime 2. Earnings are persistent:
+  - Given a positive/negative earnings change, there is a high probability of another positive/negative earnings change in the next period. Overreaction
+
+## Factor Zoo
+- proliferation of factors that have been identified as potentially explaining asset returns.
 
 
-### Equity Premium Puzzle
-- reasonings for them
+## Equity Premium Puzzle
+  - Extreme Risk Aversion (Rational)
+  - Ambiguity Aversion (Behavioural)
+    - By factoring in both risk aversion and ambiguity (or uncertainty) aversion, a 5% equity premium becomes reasonable. 
+  - Myopic Loss Aversion (Behavioural)
+    - 
+
+### Extreme Risk aversion
+Rational explanation
+- Coefficient of Relative Risk Aversion (CRRA) 30 compared to 1
 
 ### Excessive Volatility
 - Behavioural explanation
 - Recency effects
 
+## Bubbles
+A bubble occurs when prices are driven more by enthusiasm than fundamentals.
+
+### Related
+- Bubbles are identified in hindsight, leading to hindsight bias.
+
+### Learnings from Bubbles
+- Price bubbles are more moderate and disappear faster when traders are experienced. 
+- Potential for short-selling leads to bubble dissipation.
+- Willing to pay more for lottery asset because they become more risk taking as trading heats up
+  - traders may be subject to probability judgment error (overweighting small probabilities)
+
+## Excess Volatility Puzzle
+It seems that often market movements are not obviously explained by new information.
+
+Behavioral explanation
+- Investors think (wrongly) that dividend growth changes are permanent rather than 
+transitory. For this reason, they overreact (recency bias)
+
 ### Anomaly Attenuation
 
 ### Peer Group Evaluation
-
-### Bubbles
-
-### Learnings from Bubbles
-
-
 
 ### Style Investing
 - Style tiling and style rotation
@@ -406,7 +453,6 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 
 ### Can Behavioural Finance Enhance Portfolio Performance
 
-### Expected Value, Expected Utility and certainty equivalent
 
 ### Home Bias and Informational Advantage
 - You know more about what is close.
@@ -414,15 +460,35 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 private information. 
 
 ---
-## Calculations to revise
+# Calculations to revise
 
-### Camerer and Lovallo experiment
+## Expected Value, Expected Utility and certainty equivalent
 
-### Demand curve in overconfidence
+## Non-linear weighting function
 
-### Expected outcome, expected value
+## Camerer and Lovallo experiment
 
-### Bayes Rule
+## Demand curve in overconfidence
+
+## Expected outcome, expected value
+
+## Bayes Rule
 
 > REVISE CFA questions tutorial 7
 
+> REvise tutorial 8 question 3 and 4
+
+> Revise CFA questions tutorial 8
+
+## DHS model
+- Explaining Reversal through overconfidence
+- calculations
+
+
+## Fama-French Three Factor Model
+Consists of three factors
+  - Market Return:  
+  - Value vs. growth
+  - Small cap vs. large cap
+
+### Myopic Loss Aversion illustration
