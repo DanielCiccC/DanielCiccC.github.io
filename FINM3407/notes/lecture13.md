@@ -369,8 +369,7 @@ Managerial Overconfidence
 - Disposition Effect
   - Tendency to sell the winners too early and hold 
 on to losers too long
-  - Explain using Prospect Theory & Mental 
-Accounting
+  - Explain using Prospect Theory & Mental Accounting
 - Sequential Decisions
   - House Money Effect (Winning)
   - Snake-Bit Effect & Break-Even Theory (Losses)

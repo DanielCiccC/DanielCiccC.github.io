@@ -1,4 +1,4 @@
-# Tutorial 7
+# Tutorial 7 - Topic 6 Heuristics and Its Implications 
 
 ### 1. Differentiate the following terms/concepts:
 **a. Primacy and recency effects**
@@ -34,8 +34,6 @@ $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
 > - The second probability has to be less because it has one more requirement
 > - When people commit then conjunction fallacy, they will think the second (joint) event is more likely because it sounds logical that someone who loves tennis will also play regularly
 
-
-
 ### **3. * Suppose you have invested in two different stocks, Stock A and Stock B. Based on historical data, the probability that Stock A will increase in value over the next year is 0.6. For Stock B, the probability is 0.5. The probability that both stocks will increase in value over the next year is 0.3. What is the probability that at least one of the two stocks will increase in value over the next year?**
 
 $$P(A) = 0.6$$
@@ -70,6 +68,9 @@ $$P(D|C) = 0.8$$
 $$P(C|D) = P(D|C) \cdot \frac{P(C)}{P(D)}$$
 
 $$= 0.8 \cdot \frac{0.7}{0.6} = 0.9 \bar{3}$$
+
+### 8.  How  do  gambling  fallacy  and  clustering  illusion  relate  to  representativeness?  Provide examples from sports.  In what way are they different? 
+Representativeness exists when one thinks that A should look like B.  A can be the sample and B the distribution, or vice-versa.  A belief in a hot hand is thinking the conditional distribution should look like the sample.  But sometimes it seems that people think the reverse, namely that the sample, however small, should look like the distribution, in the sense that essential features should be shared.  A hot hand often comes into play in sports when people don’t know for certain the skill level of an athlete, and the extent to which it may change.  Gambler’s fallacy is likely to exist when the underlying distribution (e.g., cards or dice) is well-known. 
 
 ## Part Two: The Impact of Heuristics and Biases on Financial Decision-making
 
@@ -118,13 +119,16 @@ $$LTIV = -0.86 + 0.15log(S) + -0.11log(B/M) +0.85MQ$$
 
 > - Small cap value firms have a lower investment value
 
+### 3. Home bias has a potential information-based explanation. Discuss 
+
+One  reason  why  investors  may  favor  local  markets  –  where  local  is  interpreted  as  either domestic or close-to-home but within the same country – **is because they may possess, or may feel that they possess, informational advantages**.  Gains from being geographically close to a company may appear in improved monitoring capability and access to private information.  One paper established that mutual fund managers, consistent with familiarity bias, tend to favor local investments, that is, they tend to buy firms headquartered within a 100-mile (or 161-kilometer)  radius  of  their  head  office.    Specifically,  they  conclude  that  the  average manager invests in companies that are located within 160-84 kilometers, or 9-11%, closer to her than the average firm she could have held.    
+
+Research has shown a payoff to local investing.  Fund managers on average earn 2.67% per year more on local investments, while local stocks avoided by managers underperform by 3% per year.  Moreover, they find that those better able to select local stocks tend to concentrate their holdings more locally.  There is even evidence that retail investors are able to benefit from local investing.  Based on a dataset of retail investors, local investments outperform remote investments by 3.2% per year. 
+
 ### 4*. In Canada there are two official languages, French and English. Some Canadian corporations are headquartered in Quebec where French is the official language. Most however are headquartered outside Quebec where English is dominant. Would you expect Quebecers to invest more in Quebec companies, and nonQuebecers to invest more in companies based outside Quebec? Also, do you think the first language of the CEO might matter in accounting for investor preferences? Explain.
 
-We  would  expect  to  see  the  same  as  in  the  study  using  Finnish  data  where  the  two 
-languages/ethnicities were Swedish and Finnish.  Specifically, we would expect to see English-
-speaking  investors  preferring  companies  based  outside  of  Quebec  and  French-speaking 
-investors preferring companies based inside of Quebec.  Similarly, we might expect to see a 
-preference on the part of English-speaking investors for English-speaking CEOs (and the same 
-for French-speaking investors). 
+We  would  expect  to  see  the  same  as  in  the  study  using  Finnish  data  where  the  two languages/ethnicities were Swedish and Finnish.  Specifically, we would expect to see English-speaking  investors  preferring  companies  based  outside  of  Quebec  and  French-speaking investors preferring companies based inside of Quebec.  Similarly, we might expect to see a preference on the part of English-speaking investors for English-speaking CEOs (and the same for French-speaking investors). 
   
 > - related to home bias
+
+

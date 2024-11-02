@@ -1,7 +1,5 @@
 # Lecture 9
 #  Emotional Foundations and Individual Investors
-
-
 > - Define what emotions are
 > - Emotion theories and evolutionary theories
 > - Second part, financial decision making
@@ -148,21 +146,18 @@ and telling him exactly what you think of him because you realise that others wi
 > - Positive associated with patterns you already have
 
 ### The History of Emotion Theory
-- Emotions influence our decisions (including financial 
-decisions).
-- Emotions aren’t just irrational responses; they include 
-cognitive, physiological, and behavioural elements.
+- Emotions influence our decisions (including financial decisions).
+- Emotions aren’t just irrational responses; they include cognitive, physiological, and behavioural elements.
 
 ### Cognitive Psychologists:
-- Focus on mental processes: thinking, speaking, problem 
-solving, and learning.
-- Earlier theories tied emotions directly to cognitive 
-processes.
+- Focus on mental processes: thinking, speaking, problem solving, and learning.
+- Earlier theories tied emotions directly to cognitive processes.
 
 ### William James’s Theory (1884)：
 - Emotions arise after our autonomic response.
 - Example: Seeing a bear leads to an autonomic response first (e.g., freezing), followed by the feeling of fear.
-Quote: “We feel sorry because we cry... not that we cry... because we are sorry.”
+  
+*Quote: “We feel sorry because we cry... not that we cry... because we are sorry.”*
 
 ### Walter Cannon’s Counter Argument:
 - Physiological responses can occur without emotions, and similar physiological responses can be seen with different emotions.
@@ -195,8 +190,7 @@ Example: danger leads to fear, which leads to flight and communication: “get a
 Figure 7.2 highlights the evolutionary significance of emotions in promoting species survival.
 
 - Evolutionary Role of Emotions: Emotions evolved to enhance species survival.
-- Rapid Response: Emotions allow for quick reactions, often bypassing complex 
-deliberation.
+- Rapid Response: Emotions allow for quick reactions, often bypassing complex deliberation.
 - Cats and Dogs Example:
   - Both species display similar fearful expressions when threatened.
   - Facial reactions are alike despite being different species.
@@ -256,7 +250,6 @@ Cerebellum:
 - Essential for physical balance.
 
 ### Emotion and Reasoning
-
 - Phineas Gage: The man who began neuroscience (1848)
 - Elliot (late 1900’s)
 - Both men had brain damage to their frontal lobe which  caused  a  major  change  in  their personality/emotional  processing  skills,  leading the  scientists  to  have  a  better  idea  of  how different  parts  of  the  human  brain  function, specifically  regarding  personality,  emotions, social interaction, and the relationship between emotions and decision making
@@ -339,11 +332,10 @@ Regret is obviously a negative emotion.
 > - Stronger - amplified
 > - Some sort of achievement
 
-Disposition Effect
+### Disposition Effect
 - One puzzle in finance is disposition effect: tendency to sell winners too early and hold on to losers too long.
 If anything, because of tax reasons, you should be quicker to take losses.
 This may be driven by regret: if you cash in a loser you have to face fact that you made a mistake.
-
 
 Have you ever heard someone express a sentiment such as,
  “This stock has really shot up, so I better sell now and realise the gain?” 
@@ -482,7 +474,7 @@ gambles by moving back to the 0 reference point
 ### What About After Losses?
 
 1. Symmetry might suggest you should become more risk-averse after losses.
- This is the snake-bit effect: “I have lost a lot from risky investments so now I am moving 
+- This is the snake-bit effect: “I have lost a lot from risky investments so now I am moving 
 towards a much less risky portfolio”
 2. However, some evidence (e.g., “Deal or No Deal” research) suggests greater risk-taking 
 after  losses.  This  shows  support  for  the  break-even  theory.  People  try  to  get  even  by 

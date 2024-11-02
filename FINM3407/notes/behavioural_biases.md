@@ -32,8 +32,9 @@
 - risk-seeking individual might invest more heavily in high-risk, high-reward assets, like individual stocks or cryptocurrencies. 
 
 
-## Representative
+## Representativeness
 - People frequently make the mistake of believing that two similar things or events are more closely correlated than they actually are.
+- Representativeness exists when one thinks that A should look like B.  A can be the sample and B the distribution, or vice-versa.
 - Judging the likelihood of things in terms of how well they seem to represent, or match, particular prototypes.
 
 ## Lottery and Insurance
@@ -57,6 +58,9 @@
 - Integration occurs when positions are *lumped together*
 - Segregation occurs when situations are *viewed one at a time*
 
+### Related
+- segregation and integration, used hand-in-hand with prospect theory
+
 ## Silver lining effect
 - They tend to mentally combine wins but separate losses to make them feel less impactful.
 
@@ -79,10 +83,8 @@ Measuring Miscalibration
   - Confidence interval: an interval that is expected to contain the parameter being estimated
 
 **Better-than-average effect**
-
 Refers to the tendency for a person to rate themselves as above average.
 - Many of us feel we are smarter or more skilled than average, but only 50% of us can really be better than average.
-
 
 **Illusion of control**
 The tendency to think that there is more control over events than can objectively be true
@@ -211,12 +213,16 @@ An example of people having difficulty with probabilities is when they have no n
   - Positive qualities should already be embedded in price.
   - Loosely speaking, good companies will already sell at high prices, and bad companies will already sell at low prices
 
+## Familiarity/Home bias
+- People tend to favour local firms
 
 ## Cognitive dissonance
 
-## Salience
 
 ## Home Bias
+- Excessive optimism about the prospects of the domestic market.
+  -  Comfort-seeking and familiarity.
+- Institutional restrictions
 
 ## Momentum-Chaser
 - Trend  followers  with  the  view  that  investment  performance  in  the  recent  past represents future performance.
@@ -226,9 +232,22 @@ An example of people having difficulty with probabilities is when they have no n
 -  buys stocks that have not performed well in the past
 
 ## Disposition Effect
+Tendency to sell winners too early and hold on to losers too long.
+
+### Explained through Prspect theory and Mental Accounting
+
+![alt text](assets\IMG72.PNG)
+- After  a  large  gain  (D),  you  have  moved  to  the  risk-averse segment  of  the  value  function.  Only  major  reversals  of fortune are likely to move you back to the origin. 
+- On the other hand, after a large loss (A) you have moved to the risk-seeking  segment  of  the  value  function  and,  again, you  are  unlikely  to  move  quickly  back  to  your  reference point. 
+- The  implication  is  that  since  you  are  less  risk-averse  for losers than winners, you are more likely to hold on to them.
+
+
+
+### Related concepts
 - Link to prospect theory and mental accounting
 
 ## Snake-bit effect
+- when an investor faces big losses, it results in disappointment as well as loss of confidence on self
 
 ## Momentum
 
@@ -317,17 +336,39 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 - optimism about future cash flows leads to a belief that there will be little problem in covering interest payments
 - entrepreneurial activity can provide valuable information to society. Provides valuable evolutionary purpose
 
-### Affect on Manmgers
+### Affect on Managers
 - Emotion impacts capital budgeting decisions
 - Kida, Moreno, and Smith experiment - participants  were  told  that  they  were  divisional  managers  deciding  between  two  product investments
 - Most chose the one with the lower NPV
 
-
-
+### Substances of emotional state
+1. Cognitive Antecedents
+   - beliefs or thoughts about a situation lead to emotional responses.  For example, When another driver runs  a  red  light  and  almost  causes  a  collision,  the  belief  that  the  other  driver  is  careless  and  has  endangered  your  lift triggers the emotion of anger
+2. Intentional Objects
+   - Emotions are about something specific, like a person or situation
+3. Physiological Arousal
+   - Hormonal  and  nervous  system  changes  accompany  emotional  responses
+4. Physiological Expressions
+   - Emotions can be characterised by observable expressions that are associated with how a person functions
+5. Valence
+   - Valence is a psychological term that is used to rate feelings of pleasure and pain or happiness and unhappiness.
+6. Action Tendencies
+   - When you experience an emotion, you often feel an urge to act a certain way.
 
 ### Emotion and Reasoning - Phineas Gage and Elliot
+- Both men had brain damage to their frontal lobe which  caused  a  major  change  in  their personality/emotional  processing  skills,  leading the  scientists  to  have  a  better  idea  of  how different  parts  of  the  human  brain  function, specifically  regarding  personality,  emotions, social interaction, and the relationship between emotions and decision making
+
+### Advantages to Emotions
+1. Emotion pushes individuals to make some decision when making a decision is paramount.
+- Often a decision has to be made
+
+2. Emotion can assist in making optimal decisions.
+- Positive feelings can make it easier to access information in the brain, promote creativity, improve problem solving, enhance negotiation, and build efficient and thorough decision-making.
 
 ## Value Advantage (4 reasons)
+
+
+
 
 ### Models for Momentum and Reversal
 
@@ -367,6 +408,10 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 
 ### Expected Value, Expected Utility and certainty equivalent
 
+### Home Bias and Informational Advantage
+- You know more about what is close.
+- Gains from being local to a company may appear in improved monitoring capability and access to 
+private information. 
 
 ---
 ## Calculations to revise
@@ -378,3 +423,6 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 ### Expected outcome, expected value
 
 ### Bayes Rule
+
+> REVISE CFA questions tutorial 7
+
