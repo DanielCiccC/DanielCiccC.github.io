@@ -234,8 +234,7 @@ To use futures to hedge an exposure to the underlying asset:
 To use futures to *speculate* on the direction of the underlying asset:
 - Go *long* if you expect prices to go up.
 - Go *short* if you expect prices to go down.
-Suppose you go long h contracts at time $t = 0$ at K, and then closed it
-out at time $t > 0$ by shorting h contracts at $K_{t}$. Your payoff at time t is
+Suppose you go long h contracts at time $t = 0$ at K, and then closed it  out at time $t > 0$ by shorting h contracts at $K_{t}$. Your payoff at time $t$ is
 
 **Long Position payoff**
 
@@ -340,12 +339,11 @@ Pricing an FRA involves calculating the agreed upon rate $k$, which we call the 
 
 FRA are cash settled, so we want to calculate its payoff, that is, its net cashflow to each party, at maturity $T_1$. We do it as follows:
 
-- At the FRA’s fi xed rate k, the amount invested at time T 1 to get
-the agreed cashflow $C = F(1 + kT)$ at time $T_2$ is
+- At the FRA’s fixed rate $k$, the amount invested at time $T_1$ to get the agreed cashflow $C = F(1 + kT)$ at time $T_2$ is
 
 $$P_k = \frac{C}{1+kT} = F$$
 
-- But at the spot reference rate r at time T 1 , the amount invested is
+- But at the spot reference rate $r$ at time $T_1$, the amount invested is
 
 $$P_r = \frac{C}{1 + rT}$$
 
@@ -392,7 +390,7 @@ To calculate the payoffs at contract maturity $T_1$, let:
 - $k$ be the fixed rate agreed to in the BAB futures.
 - $r$ be the spot 90 day BBSW rate at maturity $T_1$.
 
-At k, the amount invested at maturity T 1 to receive F = \$1,000,000 at
+At k, the amount invested at maturity $T_1$ to receive F = \$1,000,000 at
 time $T_2$ is 
 
 $$P_k = \frac{F}{1 + k_{\frac{90}{365}}}$$
