@@ -110,7 +110,7 @@ all of financial theory and practice are built:
 > - Simple stuff around the basics, basic strategies
 > - Know what a bear spread, etc
 
-Options continued:
+
 - Binomial and Monte Carlo numerical option pricing methods:
   - The need for numerical methods:
   - Price more complex derivative securities.

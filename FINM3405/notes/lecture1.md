@@ -62,16 +62,13 @@ We now give a brief description of the above basic classes of derivatives:
 
 ``Defn``
 
-Futures and forwards are contracts obligating two parties to trade
-an agreed quantity of the underlying asset for an agreed contract
-price K on an agreed future date T (the maturity date).
+Futures and forwards are contracts obligating two parties to trade an agreed quantity of the underlying asset for an agreed contract price K on an agreed future date T (the maturity date).
 
 The basic difference between futures and forward contracts is:
 - Futures are standardised contracts traded on trading venues.
 - Forwards are negotiated between the parties in OTC markets.
 
-The party agreeing to *buy* the underlying asset is said to be taking a **long**
-position. The party agreeing to *sell* the underlying is said to be **short**.
+The party agreeing to *buy* the underlying asset is said to be taking a **long** position. The party agreeing to *sell* the underlying is said to be **short**.
 
 > - futures, trading on exchanges
 > - forward contract, negotiated directly between OTC markets
@@ -205,7 +202,7 @@ The mechanics of a currency swap can be described as follows:
 Not only can currency swaps contain a FX swap feature, but they can also contain a fixed-for-floating interest rate swap feature:
 - One party has borrowed at a fixed rate in one currency but now wants to now pay their loan at a floating rate in the other currency!
 - The other has borrowed at a floating rate in their currency but now wants to pay off their loan at a fixed rate in the other currency!
-This is termed a fixed-for-floating currency swap , and I think you get the idea of what fixed-for-fixed or floating-for-floating currency swaps are.
+This is termed a fixed-for-floating currency swap, and I think you get the idea of what fixed-for-fixed or floating-for-floating currency swaps are.
 
 ## Credit default swaps
 
@@ -254,42 +251,30 @@ We focus on these in FINM3405 Derivatives and Risk Management.
 
 ## Uses and market participants
 
-Derivative securities have a number of different uses, and in general
-financial markets have a lot of “moving parts” with different players and
-participants all all doing different things:
+Derivative securities have a number of different uses, and in general financial markets have a lot of “moving parts” with different players and participants all all doing different things:
 - Trading, speculation and arbitrage.
 - Risk management or hedging.
 - Market making.
 - Regulators and other industry bodies and associations.
 
 ### Traders and speculation
-We saw above the different payoffs depending on the movement in the underlying asset from taking long and short positions in futures and options. Derivatives can be more efficient and cost effective means by which to speculate on movements in the underlying asset than trading the asset itself. Of course there’s a huge variety of trading strategies that various market participants employ to make a profit by trading derivatives. Derivatives also introduce other variables and factors that can be speculated on, over and above the movement in the underlying asset, including time, volatility, interest rates, credit conditions and spreads, market liquidity, weather, political events, you name it! Then you have the whole world of quant/algo/HFT/arbitrage/automated/etc trading, which nowadays is often very machine learning and AI driven.
+We saw above the different payoffs depending on the movement in the underlying asset from taking long and short positions in futures and options. Derivatives can be more efficient and cost effective means by which to speculate on movements in the underlying asset than trading the asset itself. Of course there’s a huge variety of trading strategies that various market participants employ to make a profit by trading derivatives. 
+
+Derivatives also introduce other variables and factors that can be speculated on, over and above the movement in the underlying asset, including time, volatility, interest rates, credit conditions and spreads, market liquidity, weather, political events, you name it! Then you have the whole world of quant/algo/HFT/arbitrage/automated/etc trading, which nowadays is often very machine learning and AI driven.
 
 > give you exposure to underlying asset, time to expire, underlying security, interest rates, credit spreads
 
 ### Risk management and hedging
-This course focuses on introducing derivative securities in the context of
-risk management. As mentioned at the start of this lecture, businesses,
-governments, financial institutions, etc, are naturally exposed to a variety
-of financial risks just by going about their usual daily business, including:
+This course focuses on introducing derivative securities in the context of risk management. As mentioned at the start of this lecture, businesses, governments, financial institutions, etc, are naturally exposed to a variety of financial risks just by going about their usual daily business, including:
 
 - Credit/default and counterparty risk.
 - Market risks including adverse movements in interest rates, exchange rates, commodity prices, equity/share prices, etc.
 - Government/political/sovereign risk, uncertainty and instability, including changing regulations, elections and military conflict.
 
-In this course we present a number of basic techniques to manage some
-of these financial risks using the derivative securities we cover.
+In this course we present a number of basic techniques to manage some of these financial risks using the derivative securities we cover.
 
 ### Market makers
-Trading venues have contracts with companies called **market makers** to
-provide liquidity in markets. Market makers, and dealers in OTC markets,
-perform this liquidity function by continuously providing bid and ask
-quotes in the market for other participants to trade at, thereby taking
-one side of the transaction. Market makers typically earn a profit from
-the bid-ask spread they quote, but they also engage in speculation and
-proprietary trading, particular algo/automated/computerised. Some large
-market makers include Susquehanna, Optiver, Jane Street, Citadel, DRW,
-IG Markets, IMC, Flow Traders, etc; working for them is very lucrative
+Trading venues have contracts with companies called **market makers** to provide liquidity in markets. Market makers, and dealers in OTC markets, perform this liquidity function by continuously providing bid and ask quotes in the market for other participants to trade at, thereby taking one side of the transaction. Market makers typically earn a profit from the bid-ask spread they quote, but they also engage in speculation and proprietary trading, particular algo/automated/computerised. Some large market makers include Susquehanna, Optiver, Jane Street, Citadel, DRW, IG Markets, IMC, Flow Traders, etc; working for them is very lucrative
 
 > - provide bid and offer quotes in the market
 > - trade options in the market, e.g.
@@ -299,43 +284,24 @@ IG Markets, IMC, Flow Traders, etc; working for them is very lucrative
 Law of finance: The value of an asset is the present value of its
 expected future cashflows.
 
-There is really no other concept more important than present value.
-When we value derivative securities, we spend quite a bit of time
-constructing their future cashflows or payoffs and discounting them back
-to the present in order to calculate their price. Note that for some
-derivatives such as options, this involves some subtleties and
-mathematical complexities, and the law of finance becomes what is
-known as the risk-neutral approach to derivative security pricing.
+There is really no other concept more important than present value. When we value derivative securities, we spend quite a bit of time constructing their future cashflows or payoffs and discounting them back to the present in order to calculate their price. Note that for some derivatives such as options, this involves some subtleties and mathematical complexities, and the law of finance becomes what is known as the risk-neutral approach to derivative security pricing.
 
 ### Arbitrage: Law of one price
 
-The other central technique used and assumption typically relied upon to
-price derivative securities is that of no arbitrage. A very common
-approach or technique used in derivative security valuation is to construct
-a portfolio of more basic securities (such as stocks, bank accounts, simple
-forwards and futures, etc) which replicates the derivative’s future
-cashflow structure or payoff. The assumption of no arbitrage leads to the:
-Law of one price: Securities or portfolios with the same future
-cashflow structure or payoff must have the same price.
-If the law of one price is violated, then an arbitrage opportunity exists in
-financial markets, which is assumed to be immediately exploited and
-traded away. But what do we precisely mean by the concept of arbitrage?
+The other central technique used and assumption typically relied upon to price derivative securities is that of no arbitrage. A very common approach or technique used in derivative security valuation is to construct a portfolio of more basic securities (such as stocks, bank accounts, simple forwards and futures, etc) which replicates the derivative’s future cashflow structure or payoff. The assumption of no arbitrage leads to the:
+
+**Law of one price**: Securities or portfolios with the same future cashflow structure or payoff must have the same price. If the law of one price is violated, then an arbitrage opportunity exists in financial markets, which is assumed to be immediately exploited and traded away. But what do we precisely mean by the concept of arbitrage?
 
 > If you can set up two different portfolios that have the exact same payoff in the future, they must have the same price now or else as an arbitrage opportunity.
 
-An arbitrage opportunity can be defined in various equivalent ways, and
-the following two alternative definitions will suffice for this course:
-1. An arbitrage opportunity is a scenario that has no initial, upfront
-cashflow or exchange of money, no risk of future loss (negative
-cashflow), but a chance of a future profit (positive cashflow).
+An arbitrage opportunity can be defined in various equivalent ways, and the following two alternative definitions will suffice for this course:
+1. An arbitrage opportunity is a scenario that has no initial, upfront cashflow or exchange of money, no risk of future loss (negative cashflow), but a chance of a future profit (positive cashflow).
   - Keep investing at 0 cost with the possibility of a future profit.
-2. Alternatively, an arbitrage opportunity is a scenario of two different
-portfolios or financial securities having the same future cashflow
-structure or payoff, but different prices.
-  - Long the cheap and short the expensive security/portfolio.
+2. Alternatively, an arbitrage opportunity is a scenario of two different portfolios or financial securities having the same future cashflow structure or payoff, but different prices.
+  - Long the cheap and short the expensive security/portfolio. 
+
 Neither of these scenarios can last long in efficient financial markets.
 
-> current cashflows, 
 > The other idea of arbitrage and arbitrage is a situation in which you have no upfront upfront payment.
 > You have no risk or loss of loss in the future, but you have a chance of a positive gain of making a profit.
 > That's an arbitrage, too. So I know in finance that you would you would have heard the definition definition of an arbitrage of trading simultaneously to different securities for a different price and immediately getting a profit.
