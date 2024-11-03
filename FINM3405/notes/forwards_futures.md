@@ -12,7 +12,12 @@
   - Perfect hedging examples.
   - Basic examples of speculating on the price of the underlying asset.
 - 5. Contract pricing via the cost of carry approach.
+  - 5.1. Cost of Carry Futures
+  - 5.2. Cost of Carry FX Contract Pricing
+  - 5.3. Cost of Carry FRA Contract Pricing
 - 6. Basis risk and optimal hedging.
+  - 6.1. Basis Risk
+  - 6.2. Optimal Hedging
 
 ---
 ### Aside: Notation
@@ -359,4 +364,3 @@ the optimal hedge quantity is
 $$h = \Beta \frac{V}{F}$$
 
 where $V = AQ$ is our portfolio value and $F=Km$ is the notional value of 1 contract.
-
