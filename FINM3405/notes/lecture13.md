@@ -3,7 +3,7 @@
 
 
 ### Lecture 1
-- Basic defi nitions of:
+- Basic definitions of:
     - Futures and forwards.
     - Options.
     - Swaps, including interest rate, currency and credit default.
@@ -65,7 +65,6 @@ all of financial theory and practice are built:
 > - Put/call parity formula (derive through an arbitrage argument, REMEMBER IT)
 >   - Pricing bounds - premiums should be the same
 
-
 - European option premiums/prices via the Black-Scholes model:
   - On non-dividend paying assets.
   - For dividend/income paying assets.
@@ -95,12 +94,9 @@ all of financial theory and practice are built:
 > - Not the complicated ones, might ask to be calculated.
 
 - Using delta ∆ and gamma Γ to predict small changes in option prices due to small changes in the price of the underlying asset (in preparation for delta and delta-gamma hedging).
-- More detailed discussion of theta θ and associated concept of time
-decay, and how it relates to moneyness.
-- Basic ideas and examples of static delta hedging, static delta-gamma
-hedging, and dynamic delta hedging.
-- Implied volatility and the volatility smile and term structure, and
-related VIX index enabling volatility to be directly traded.
+- More detailed discussion of theta θ and associated concept of time decay, and how it relates to moneyness.
+- Basic ideas and examples of static delta hedging, static delta-gamma hedging, and dynamic delta hedging.
+- Implied volatility and the volatility smile and term structure, and related VIX index enabling volatility to be directly traded.
 - Trading strategies and their payoff and profit/loss diagrams.
 
 > - Delta/gamma hedging questions
@@ -137,6 +133,7 @@ Options continued:
 > - five asset price paths with a few dates - MAKE SURE YOU CAN DO THIS
 >   - Will be given the tree or the asset price paths
 
+
 ### Lec 9 CDS
 - Basic definitions and concepts for credit default swaps.
 - More precise description of mechanics, including notions of:
@@ -147,8 +144,7 @@ Options continued:
 - Recovery rate and loss given default.
 - CDS coupon or spread or premium.
 - Single name vs multi name, basket, CDS indices.
-- Idea that CDS spreads refl ect credit risk perceptions, and relation
-between breakeven CDS spread and reference entity’s risk premium.
+- Idea that CDS spreads reflect credit risk perceptions, and relation between breakeven CDS spread and reference entity’s risk premium.
 - Survival and default probabilities.
 
 > - CDS calculations
@@ -169,7 +165,7 @@ between breakeven CDS spread and reference entity’s risk premium.
 > - Numerical options, credit rate swaps and credit default swaps
 
 ### Lec 10 Interest rate swaps
-- Floating rate notes (FRN) definition, concepts and pricing in preparation for fi xed-for-fl oating interest rate swap pricing.
+- Floating rate notes (FRN) definition, concepts and pricing in preparation for fixed-for-floating interest rate swap pricing.
 - Fixed-for-floating interest rate swap definitions and concepts.
 - Calculating the net cashflows on each coupon or interest date.
 - The idea that a position in a fixed-for-floating interest rate swap can be replicated via positions in a FRN and a fixed coupon bond.
@@ -182,8 +178,7 @@ between breakeven CDS spread and reference entity’s risk premium.
 - Basic concepts relating to risk, including:
   - Types: market, default, liquidity, operational.
   - Portfolio expected return and standard deviation (volatility).
-- Concepts related to the normal distribution in preparation for
-calculating value at risk (VaR) and expected shortfall (ES).
+- Concepts related to the normal distribution in preparation for calculating value at risk (VaR) and expected shortfall (ES).
 - The need for simple, single measures of market risk like VaR and ES.
 - VaR and ES definitions, basic concepts, and differences.
 - Potential shortcoming of VaR and consequent need for ES.
@@ -208,6 +203,3 @@ calculating value at risk (VaR) and expected shortfall (ES).
 > - no VaR formulas - need to remember these
 > - confidence interval to the left of it
 > - no portfolio VaR formula
-
-
-<iframe frameborder="0" style="width:100%;height:102px;" src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=recap.drawio#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%22AJVX2dEOV6ciYNKZwofG%22%3EjZJNb4QgEIZ%2FDccmKqnpuXbbXtoePHgmMiu0IC5i1f76Qh38yGaTnoBnPnlnCC309GJZJ94MB0WyhE%2BEPpEsS5P7xB%2BBzAvJ83QBjZUcnTZQyh%2BIkUgHyaE%2FODpjlJPdEdambaF2B8asNePR7WzUsWrHGrgCZc3UNa0kd2KhD%2FFbgb%2BCbESsnCZo0Sw6I%2BgF42bcIXoitLDGuOWmpwJUEC%2FqssQ937CujVlo3X8C4ALnjyyvms9LldeT1V%2Fvwx1m%2BWZqwA%2F3RoMTsm2wazdHKawZWg4hW0Lo4yikg7JjdbCOfvieCaeVf6X%2BinnBOphuNpyuMvj9gVDYzt4FA2iOyuHq0LgT4zaINKordkOIcQxn36ypN3n8BRWKz20Sf7bdPtPTLw%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E"></iframe>
