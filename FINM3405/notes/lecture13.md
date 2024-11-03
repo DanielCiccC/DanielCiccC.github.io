@@ -123,7 +123,7 @@ all of financial theory and practice are built:
   - More general method that simulates entire asset price paths in preparation for Monte Carlo pricing of path dependent options.
 
 > - representative in the practise exam
->   - All the i
+>   - All the i questions
 >   - Will be given the values in the tree - will not be asked to build one
 >   - Calculate their delta's
 >   - choosers option IMPORTANT (given a tree)
