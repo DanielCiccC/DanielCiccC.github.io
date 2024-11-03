@@ -237,10 +237,126 @@ $$K − S − I − J + D > 0$$
 ---
 
 
-### Cost of Carry
+### 5.1 Cost of Carry Futures
 
 We thus get the **cost of carry** model for pricing forwards and futures:
 
 $$K = S + I + J − D$$
 
 Here $I + J − D$ is the net cost of carrying (holding, storing) the asset.
+
+Let 
+- $r$ be a simple annual interest rate, 
+- $s$ be a simple annual storage rate, and 
+- $q$ be a simple annual dividend (or later convenience) yield.
+
+Then the cost of carrying the asset is 
+$$I + J − D = SrT + SsT − SqT.$$
+
+- The cost of carry relation $K = S + I + J − D$ becomes
+
+$$K = S[1 + (r + s − q)T]$$
+
+and is called spot-forward parity. Under compound interest it becomes
+
+**Simple interest**
+$$K = S(1 + r + s − q)^{T}$$
+or (**Compound Interest**) 
+$$K = Se^{(r+s−q)T}$$
+
+
+### 5.2 Cost of Carry FX contract pricing
+Spot-forward parity for FX contracts is best derived separately. The main complications are that we have to consider the interest rates in each country and we have to be careful about exchange rate quoting.
+
+- Let $r_{d}$ be domestic interest rate and 
+- $r_{f}$ be the foreign rate.
+- Let $S_{d:f}$ be the domestic:foreign spot exchange rate.
+  - 1 unit of the domestic currency exchanges spot for $S_{d:f}$ units of the foreign currency.
+- Let $K_{d:f}$ be the domestic:foreign forward exchange rate.
+
+Hence, the no arbitrage relation is $1 + r_{d}T = S_{d:f} (1 + r_{f}T) K_{f:d}$ which we
+rearrange to get the covered interest rate parity relation
+
+$$K_{f:d} = S_{f:d}\frac{1+r_{d}T}{1+r_{f}T}$$
+
+### 5.3 FRA Pricing
+Recall that a $T_{1} \times T_{2}$ FRA is an OTC agreement to lock in a future borrowing or lending **fixed rate** $k$ starting at time $T_{1}$ , and finishing at time $T_{2}$ over a notional principal or face value F.
+
+So we want to calculate the time $t = 0$ values of a FRA to both parties:
+- The *fixed rate receiver* of a $T_{1} \times T_{2}$ FRA hypothetically agrees to pay $F$ at time $T_1$ and *receive* $F(1 + kT)$ at time $T_2$.
+- These cashflows are risk free so their present value is
+
+$$V = -\frac{F}{1+r_{1}T_{1}} + \frac{F(1+kT)}{1+r_{2}T_{2}}$$
+
+where $r_{1}$ and $r_{2}$ are the time $t = 0$ spot reference rates for the period from time $t = 0$ to times $T_{1}$ and $T_{2}$ , respectively.
+
+
+The value to the fixed rate payer is simply the negative of this.
+- In either case, we find k by setting V = 0 and hence solving
+
+$$\frac{F}{1+r_1T_1} = \frac{F(1+kT)}{1+r_2T_2}$$
+
+Rearranging to:
+
+$$1+r_2T_2 = (1+r_1T_1)(1+kT)$$
+
+Hence, since $k$ is an interest rate starting at time $T_1$ and ending at time $T_2$ , it must be given by $k = r_{1,2}$, the implied forward rate over the time period $[T_{1}, T_{2}]$ embedded in the reference rate’s yield curve.
+
+Rearrange the above to get:
+
+$$k=\left( \frac{1+r_2T_2}{1+r_1T_1} -1 \right) \frac{1}{T}$$
+
+## 6.1 Basis Risk
+We saw above that the contract price $K$ is usually different to the spot price S of the underlying asset. Our pricing equations, such as
+
+$$K=Se^{(r+s-q)T}$$
+
+for commodity futures, tell us that the difference between $K$ and $S$, which we call the basis, is due to the cost of carry $r + s − q$.
+- As the cost of carry changes over time, the basis changes, introducing basis risk: $K$ may not be perfectly correlated with $S$.
+
+The time $t$ basis $B_t$ is the difference between $K_t$ and $S_t$, namely:
+
+Note that the basis approaches 0 over time, and $K_{T}=S_{T}$ at maturity.
+
+![alt text](assets\IMG38.PNG)
+
+## 6.2 Optimal hedging
+Optimal hedging basically means minimising basis risk.
+
+In an imperfect hedging scenario, in which there is basis risk, we choose $h$ that *minimises the variance in the liquidation value* $L_{t}$.
+
+Then $h$ is called the **minimum variance** or **optimal hedge quantity**.
+- At time $t = 0$, $A_{t}$ and $K_{t}$ are unknown, thus random variables.
+
+We use the following notation:
+
+- $σ_{A_t}$ is the standard deviation (volatility) in $A_t − A$.
+- $σ_{K_t}$ is the standard deviation (volatility) in $K_t − K$.
+- $ρ$ is the correlation between $A_t − A$ and $K_t − K$.
+
+We can prove that the optimal or minimum variance hedge quantity $h$, which minimises the variance in the above liquidation value, or equivalently minimises basis risk, is given by
+
+$$h=\rho \frac{\sigma_{A_{t}}Q}{\sigma _{K{t}}m}$$
+
+- we use average historical returns to calculate standard deviations and sample correlation
+
+- Then the optimal hedge quantity is given by
+
+  $$h = \bar{\rho} \frac{\bar{\sigma}_{A}V }{\bar{\sigma}_KF}$$
+
+Where 
+
+$$V = AQ \; \; \; \text{and} \;\;\;\; F=Km$$
+
+The CAPM beta β of a share is calculated from historical returns,
+and is given by 
+
+$$\Beta = \bar{\rho} \frac{\bar{\sigma}_A}{\bar{\sigma}_P}$$
+
+Hence β is the optimal hedge ratio and
+the optimal hedge quantity is 
+
+$$h = \Beta \frac{V}{F}$$
+
+where $V = AQ$ is our portfolio value and $F=Km$ is the notional value of 1 contract.
+

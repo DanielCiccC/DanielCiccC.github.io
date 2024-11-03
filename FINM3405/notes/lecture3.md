@@ -334,8 +334,11 @@ Hence, since $k$ is an interest rate starting at time $T_1$ and ending at time $
 Rearrange the above to get:
 
 $$k=\left( \frac{1+r_2T_2}{1+r_1T_1} -1 \right) \frac{1}{T}$$
-
+---
+### Example
 ![alt text](assets\IMG140.PNG)
+
+---
 
 > - should be 90 not 30 in the denominator
 > > - starts from t=0 to t=2
@@ -468,6 +471,7 @@ We can prove that the optimal or minimum variance hedge quantity $h$, which mini
 $$h=\rho \frac{\sigma_{A_{t}}Q}{\sigma _{K{t}}m}$$
 
 **Remark**
+
 The number 
 $$\frac{\sigma_{A_{t}}Q}{\sigma _{K{t}}m}$$ 
 is called the minimum variance or optimal hedge ratio.
