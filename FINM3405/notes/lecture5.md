@@ -431,7 +431,7 @@ $$C = e^{-rT}\mathbb{E}[\max (0, S_{T}-K)]$$
 And
 $$P = e^{-rT}\mathbb{E}[\max (0, K - S_{T})]$$
 
-where $S_{T}$ is log-normally distributed as specifi ed above.
+where $S_{T}$ is log-normally distributed as specified above.
 
 > - Value of an option is the present value of the expected future payoff
 > - $S_{T}$ is a random variable

@@ -301,9 +301,9 @@ We now present pricing bounds that option prices must adhere to.
 
 First note that American options are worth at least as much as European options over the same underlying asset and with the same strike and expiry:
 
-$$0 ≤ C_{Eu} ≤ C_{Am}$$
+$$0 \le C_{Eu} \le C_{Am}$$
 and 
-$$0 ≤ P_{Eu} ≤ P_{Am}$$
+$$0 \le P_{Eu} \le P_{Am}$$
 
 because American options can be exercised any time up to and including
 expiry, but European options can only be exercised at expiry.
@@ -314,9 +314,9 @@ expiry, but European options can only be exercised at expiry.
 
 And American options are worth at least their intrinsic (exercise) value:
 
-$$\max{0, S − K} ≤ C_{Am}$$
+$$\max \{0, S − K \} ≤ C_{Am}$$
 and 
-$$\max{0, K − S} ≤ P_{Am}$$
+$$\max \{0, K − S \} ≤ P_{Am}$$
 (lower pricing bounds) because they can be exercised immediately
 
 > - At any point in time you can exercise and realise that in an American Options
@@ -426,8 +426,7 @@ $$\max(0, S - e^{-rT}K) \le C^{Eu} = C^{Am} \le S$$
 ## Time value
 - And what exactly is time value?
 
-From above, we noticed that call options on non-dividend-paying stocks
-have a premium that is strictly larger than the option’s intrinsic value.
+From above, we noticed that call options on non-dividend-paying stocks have a premium that is strictly larger than the option’s intrinsic value.
 - We define an option’s time value as the difference between the option premium and its intrinsic value:
 
 $$\text{time value = premium − intrinsic value}$$
