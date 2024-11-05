@@ -2,39 +2,39 @@
 
 # lecture 4-8 Options
 
-- 1. Definitions and Concepts
-- 2. Moneyness (ITM, ATM, OTM).
-- 3. Payoffs vs profits (including the premium).
-- 4. Main contracts and markets, contract specifications.
-- 5. Pricing bounds and put-call-parity.
-- 6. American call premium = European call premium when no dividends.
-- 7. Time value and intrinsic value.
+1. Definitions and Concepts
+2. Moneyness (ITM, ATM, OTM).
+3. Payoffs vs profits (including the premium).
+4. Main contracts and markets, contract specifications.
+5. Pricing bounds and put-call-parity.
+6. American call premium = European call premium when no dividends.
+7. Time value and intrinsic value.
 
-- 8. European option premiums/prices via the Black-Scholes model:
+8. European option premiums/prices via the Black-Scholes model:
   - 8.1. On non-dividend paying assets.
   - 8.2. For dividend/income paying assets.
   - 8.3. For currencies (simply viewed as dividend paying assets).
-- 9. Black-Scholes assumption of geometric Brownian motion and consequent log-normal distribution of the underlying asset’s price, or normal distribution of the asset’s returns.
-- 10. Simulating geometric Brownian motion in preparation for the Monte Carlo approach to derivative security pricing.
-- 11. Heuristic (non-rigorous) discussion of risk-neutral pricing.
-- 12. Heuristic (hand-waving) interpretation of the factors affecting option prices, and quantification of this via the Black-Scholes model Greeks.
+9. Black-Scholes assumption of geometric Brownian motion and consequent log-normal distribution of the underlying asset’s price, or normal distribution of the asset’s returns.
+10. Simulating geometric Brownian motion in preparation for the Monte Carlo approach to derivative security pricing.
+11. Heuristic (non-rigorous) discussion of risk-neutral pricing.
+12. Heuristic (hand-waving) interpretation of the factors affecting option prices, and quantification of this via the Black-Scholes model Greeks.
 
-- 13. Using delta ∆ and gamma Γ to predict small changes in option prices due to small changes in the price of the underlying asset (in preparation for delta and delta-gamma hedging).
-- 14. More detailed discussion of theta θ and associated concept of time decay, and how it relates to moneyness.
-- 15. Scholes Hedging
+13. Using delta ∆ and gamma Γ to predict small changes in option prices due to small changes in the price of the underlying asset (in preparation for delta and delta-gamma hedging).
+14. More detailed discussion of theta θ and associated concept of time decay, and how it relates to moneyness.
+15. Scholes Hedging
   - 15.1 Static delta hedging
   - 15.2 Static delta-gamma hedging
   - 15.3 Dynamic delta hedging.
-- 16. Implied volatility 
+16. Implied volatility 
   - 16.1 volatility smile and term structure
   - 16.2 related VIX index enabling volatility to be directly traded.
-- 17. Trading strategies and their payoff and profit/loss diagrams.
+17. Trading strategies and their payoff and profit/loss diagrams.
 
-- 18. Binomial and Monte Carlo numerical option pricing methods:
+18. Binomial and Monte Carlo numerical option pricing methods:
   - 18.1 The need for numerical methods:
   - 18.2 Price more complex derivative securities.
   - 18.3 More complex pricing methods than the Black-Scholes model, in particular because returns are not normally distributed.
-- 19. 1-period binomial model for European option price and delta.
+19. 1-period binomial model for European option price and delta.
   - 19.1 Multi-period binomial model for European option price and delta.
 - More rigorous introduction of risk-neutral pricing via binomial model.
 - Monte Carlo pricing of European options.
@@ -309,13 +309,59 @@ and
 $$\rho_p < 0$$
 
 | Example for call prices: |
-| --- 
-| ![alt text](assets\IMG257.PNG)
+| --- |
+| ![alt text](assets\IMG258.PNG) |
+(x axis is underlying stock price)
+
+As $r$ increases, call premiums increase but put premiums decrease.
+- An intuitive explanation for this is the present value $e^{−rT}K$ of the strike that the holder pays in a call, or receives in a put, decreases.
+
+## 12.3 Vega
+Vega ν is the change in the premium from a change in σ, and is given by:
+
+$$\nu = Sf(d_{1})\sqrt{T}$$
+
+- Same for calls and puts
+
+with $f(x)$ the PDF of a standard normal random variable. Note that
+
+$$0 < \nu$$
+
+As σ increases, option premiums increase.
+
+## 12.4 Theta
+
+Theta θ is a bit ambiguous. It gives the *negative* of the change in the premium from a change in T. And the equations are more complex:
+
+$$\theta_c = -\frac{Sf(d_1)\sigma}{2\sqrt{T}} -rKe^{-rT}\mathcal{N}(d_2)$$
+and
+$$\theta _p = \theta _c + rKe^{-rT}$$
+
+θ is the *negative* of the partial derivative of the premium with respect to T, telling us the impact of approaching expiry.
+
+$$\theta _c < 0$$
+but we may have 
+$$\theta _p \le 0$$
+and 
+$$ 0 \le \theta _p $$
+
+- Impact of time on puts is ambiguous: From $\theta _{P} = \theta _{C} + rKe^{-rT}$ deep in-the-money put (large K) premiums may increase as expiry nears.
+- This relates to something said last week: A deep in-the-money put is already close to its maximum payoff of K, so not much more payoff can be realised at expiry, but there is still a chance of an unfavourable movement in the asset price. But as we approach expiry, there is less chance of an unfavourable movement.
 
 
+### 12.4.1 Time Decay
+Premiums usually fall as expiry approaches
+
+- Time decay works for option writers and against option holders.
+- θ is most negative for options close to at-the-money.
+- θ in fact gets more negative for options close to at-the-money as expiry approaches: Time decay “speeds up” as expiry approaches.
+
+| Theta Call | Theta Put | 
+| --- | ---
+![alt text](assets\IMG78.PNG) | ![alt text](assets\IMG79.PNG)
+![alt text](assets\IMG259.PNG) | ![alt text](assets\IMG260.PNG)
 
 
-- 12. Heuristic (hand-waving) interpretation of the factors affecting option prices, and quantification of this via the Black-Scholes model Greeks.
 
 - 13. Using delta ∆ and gamma Γ to predict small changes in option prices due to small changes in the price of the underlying asset (in preparation for delta and delta-gamma hedging).
 - 14. More detailed discussion of theta θ and associated concept of time decay, and how it relates to moneyness.

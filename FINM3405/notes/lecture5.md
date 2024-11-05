@@ -645,7 +645,7 @@ As σ increases, option premiums increase.
 ---
 
 ### Theta $\theta$
-Theta θ is a bit ambiguous. It gives the negative of the change in the premium from a change in T. And the equations are more complex:
+Theta θ is a bit ambiguous. It gives the *negative* of the change in the premium from a change in T. And the equations are more complex:
 
 ![alt text](assets\IMG76.PNG)
 
@@ -663,14 +663,13 @@ However, note that
 ![alt text](assets\IMG77.PNG)
 
 On a non-dividend paying asset, call premiums fall as expiry nears.
-- Impact of time on puts is ambiguous: From $\theta _{P} = \theta _{C} + rKe^{-rT}$ deep
-in-the-money put (large K) premiums may increase as expiry nears.
+- Impact of time on puts is ambiguous: From $\theta _{P} = \theta _{C} + rKe^{-rT}$ deep in-the-money put (large K) premiums may increase as expiry nears.
 - This relates to something said last week: A deep in-the-money put is already close to its maximum payoff of K, so not much more payoff can be realised at expiry, but there is still a chance of an unfavourable movement in the asset price. But as we approach expiry, there is less chance of an unfavourable movement.
 
 However, there is some rules of thumb relating to time:
 - θ is almost always negative:
 - So premiums usually fall as expiry approaches.
-- This is known as time decay.
+- This is known as **time decay**.
 - Time decay works for option writers and against option holders.
 - θ is most negative for options close to at-the-money.
 - θ in fact gets more negative for options close to at-the-money as
@@ -710,3 +709,4 @@ unchanged except for θ. From the textbook, the equations become:
 Note that Hull uses the notation N′(x) for the PDF of a standard normal random variable, whereas I’ve been using f(x).
 
 ![alt text](assets\IMG83.PNG)
+z`
