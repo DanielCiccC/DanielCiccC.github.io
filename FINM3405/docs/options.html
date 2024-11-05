@@ -635,6 +635,17 @@ Its change is <span class="katex"><span class="katex-mathml"><math xmlns="http:/
 </tr>
 </tbody>
 </table>
+<p dir="auto"><strong>Remark</strong>
+We see this from the volatility smile and term structure:</p>
+<ul dir="auto">
+<li dir="auto">The volatility parameter σ we need to use to get the Black-Scholes model to match observed option premiums is not constant across the range of strike prices and expiries</li>
+</ul>
+<p dir="auto">Consequently traders use:</p>
+<ul dir="auto">
+<li dir="auto">Rules of thumb, intuition and market conventions and experience to
+determine the σ parameter to use in the Black-Scholes model.</li>
+<li dir="auto">Other, more complex and accurate option pricing models.</li>
+</ul>
 <h2 dir="auto" id="141-vix-index">14.1 VIX index</h2>
 <ul dir="auto">
 <li dir="auto">The Cboe VIX Index measures “market wide” implied vols:</li>
@@ -683,18 +694,52 @@ Its change is <span class="katex"><span class="katex-mathml"><math xmlns="http:/
 <h3 dir="auto" id="1524-long-butterfly">15.2.4 Long Butterfly</h3>
 <p dir="auto">As shown above</p>
 <h1 dir="auto" id="16-binomial-and-monte-carlo-numerical-option-pricing-methods">16. Binomial and Monte Carlo numerical option pricing methods</h1>
-<h2 dir="auto" id="161-rationale">16.1 Rationale</h2>
-<ul dir="auto">
-<li dir="auto">
-<ol start="18" dir="auto">
-<li dir="auto">Binomial and Monte Carlo numerical option pricing methods:</li>
+<h2 dir="auto" id="161--163-rationale">16.1 &amp; 16.3 Rationale</h2>
+<ol dir="auto">
+<li dir="auto">When applying the Black-Scholes framework to derive pricing models for more complex, exotic derivatives (even just for American options), we immediately run into the scenario of being unable to derive closed-form, analytical solution equations.</li>
+<li dir="auto">We may also want to apply more complex derivative security pricing frameworks than the Black-Scholes framework (say the Heston stochastic volatility, or the Merton jump-diffusion, frameworks), but again we immediately run into the same problem.</li>
 </ol>
+<p dir="auto">Stylised features of financial returns:</p>
 <ul dir="auto">
-<li dir="auto">18.1 The need for numerical methods:</li>
-<li dir="auto">18.2 Price more complex derivative securities.</li>
-<li dir="auto">18.3 More complex pricing methods than the Black-Scholes model, in particular because returns are not normally distributed.</li>
+<li dir="auto">Non-normality:
+<ul dir="auto">
+<li dir="auto">Spiked mean.</li>
+<li dir="auto">Narrow shoulders.</li>
+<li dir="auto">Fat tails.</li>
+<li dir="auto">Skewness, or at least extreme negative return events.</li>
 </ul>
 </li>
+<li dir="auto">Volatility clustering or regimes (non-constant volatility).</li>
+</ul>
+<h2 dir="auto" id="162-methods">16.2 Methods</h2>
+<ol dir="auto">
+<li dir="auto">Lattice type methods like the binomial and trinomial models.</li>
+<li dir="auto">Monte Carlo methods:</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Motivated by the risk-neutral approach to derivative security pricing.</li>
+</ul>
+<ol start="3" dir="auto">
+<li dir="auto">Partial differential equation numerical solution methods:</li>
+</ol>
+<ul dir="auto">
+<li dir="auto">Motivated by the partial differential equation (PDE) approach to derivative security pricing (we avoid it in FINM3405).</li>
+</ul>
+<h1 dir="auto" id="17-1-period-binomial-model-for-european-option-price-and-delta">17. 1-Period Binomial model for European option price and delta</h1>
+<ul dir="auto">
+<li dir="auto">One trading period of length <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span> years to the option’s expiry.</li>
+<li dir="auto">Starting at S, two possible outcomes for the underlying asset:
+<ol dir="auto">
+<li dir="auto">Up to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>u</mi></msub><mo>=</mo><mi>S</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">S_u = Su</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal">u</span></span></span></span>, where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span> is the asset’s up factor.</li>
+<li dir="auto">Down to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>d</mi></msub><mo>=</mo><mi>S</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">S_d = Sd</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal">d</span></span></span></span>, where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span> is the asset’s down factor.</li>
+</ol>
+</li>
+<li dir="auto">A risk-free rate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> satisfying <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>&lt;</mo><msup><mi>e</mi><mrow><mi>r</mi><mi>T</mi></mrow></msup><mo>&lt;</mo><mi>u</mi></mrow><annotation encoding="application/x-tex">d &lt; e^{rT} &lt; u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8804em;vertical-align:-0.0391em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span>.</li>
+</ul>
+<p dir="auto">The call option’s payoffs in each possible outcome of the price of the underlying asset are:</p>
+<p dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>u</mi></msub><mo>=</mo><mi>max</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><msub><mi>S</mi><mi>u</mi></msub><mo>−</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">C_u = \max(0, S_u − K)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">max</span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mclose">)</span></span></span></span></p>
+<p dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>d</mi></msub><mo>=</mo><mi>max</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><msub><mi>S</mi><mi>d</mi></msub><mo>−</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">C_d = \max(0, S_d − K)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">max</span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mclose">)</span></span></span></span></p>
+<ul dir="auto">
 <li dir="auto">
 <ol start="19" dir="auto">
 <li dir="auto">1-period binomial model for European option price and delta.</li>

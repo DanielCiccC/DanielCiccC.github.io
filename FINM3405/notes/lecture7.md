@@ -95,7 +95,7 @@ The reason that the Black-Scholes model, when using the maximum likelihood estim
 > - Historical returns are normally distributed
 > - The volatility parameter is constant
 
-The below plots display common stylised features of fi nancial returns:
+The below plots display common stylised features of financial returns:
 - Non-normality:
   -  Spiked mean.
   -  Narrow shoulders.
@@ -112,7 +112,7 @@ The below plots display common stylised features of fi nancial returns:
 > - main reason why black Scholes doesn't work very well
 
 
-A significant amount of research in quantitative fi nance involves
+A significant amount of research in quantitative finance involves
 developing (i) more complex and accurate option pricing models and (ii)
 models that are able to price more complex, exotic options.
 - Relating to (i), a particular focus of this research is deriving option
@@ -139,7 +139,7 @@ As per the Black-Scholes model, the binomial model is a pricing framework define
 - Starting at S, two possible outcomes for the underlying asset:
   1. Up to $S_u = Su$, where $u$ is the asset’s up factor.
   2. Down to $S_d = Sd$, where $d$ is the asset’s down factor.
-- A risk-free rate r satisfying $d < e^{rT} < u$.
+- A risk-free rate $r$ satisfying $d < e^{rT} < u$.
 - All the other “usual” assumptions.
 
 > - other assumptions, unlimited buying/borrowing power

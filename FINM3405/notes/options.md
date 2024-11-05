@@ -424,6 +424,15 @@ In markets, Black-Scholes implied vols are not constant but display:
 | --- | 
 | ![alt text](assets\IMG261.PNG) |
 
+**Remark**
+We see this from the volatility smile and term structure:
+- The volatility parameter σ we need to use to get the Black-Scholes model to match observed option premiums is not constant across the range of strike prices and expiries
+
+Consequently traders use:
+- Rules of thumb, intuition and market conventions and experience to
+determine the σ parameter to use in the Black-Scholes model.
+- Other, more complex and accurate option pricing models.
+
 ## 14.1 VIX index
 
 - The Cboe VIX Index measures “market wide” implied vols:
@@ -483,15 +492,39 @@ As shown above
 
 # 16. Binomial and Monte Carlo numerical option pricing methods
 
-## 16.1 Rationale
+## 16.1 & 16.3 Rationale
+1. When applying the Black-Scholes framework to derive pricing models for more complex, exotic derivatives (even just for American options), we immediately run into the scenario of being unable to derive closed-form, analytical solution equations.
+2. We may also want to apply more complex derivative security pricing frameworks than the Black-Scholes framework (say the Heston stochastic volatility, or the Merton jump-diffusion, frameworks), but again we immediately run into the same problem.
+
+Stylised features of financial returns:
+- Non-normality:
+  -  Spiked mean.
+  -  Narrow shoulders.
+  -  Fat tails.
+  -  Skewness, or at least extreme negative return events.
+- Volatility clustering or regimes (non-constant volatility).
+
+## 16.2 Methods
+1. Lattice type methods like the binomial and trinomial models.
+2. Monte Carlo methods:
+  - Motivated by the risk-neutral approach to derivative security pricing.
+3. Partial differential equation numerical solution methods:
+  - Motivated by the partial differential equation (PDE) approach to derivative security pricing (we avoid it in FINM3405).
+
+# 17. 1-Period Binomial model for European option price and delta
+- One trading period of length $T$ years to the option’s expiry.
+- Starting at S, two possible outcomes for the underlying asset:
+  1. Up to $S_u = Su$, where $u$ is the asset’s up factor.
+  2. Down to $S_d = Sd$, where $d$ is the asset’s down factor.
+- A risk-free rate $r$ satisfying $d < e^{rT} < u$.
+
+The call option’s payoffs in each possible outcome of the price of the underlying asset are:
+
+$C_u = \max(0, S_u − K)$
+
+$C_d = \max(0, S_d − K)$
 
 
-
-
-- 18. Binomial and Monte Carlo numerical option pricing methods:
-  - 18.1 The need for numerical methods:
-  - 18.2 Price more complex derivative securities.
-  - 18.3 More complex pricing methods than the Black-Scholes model, in particular because returns are not normally distributed.
 - 19. 1-period binomial model for European option price and delta.
   - 19.1 Multi-period binomial model for European option price and delta.
 - More rigorous introduction of risk-neutral pricing via binomial model.
