@@ -331,7 +331,7 @@ As σ increases, option premiums increase.
 
 ## 12.4 Theta
 
-Theta θ is a bit ambiguous. It gives the *negative* of the change in the premium from a change in T. And the equations are more complex:
+Theta θ is a bit ambiguous. It gives the *negative* of the change in the premium from a change in $T$. And the equations are more complex:
 
 $$\theta_c = -\frac{Sf(d_1)\sigma}{2\sqrt{T}} -rKe^{-rT}\mathcal{N}(d_2)$$
 and
@@ -361,18 +361,61 @@ Premiums usually fall as expiry approaches
 ![alt text](assets\IMG78.PNG) | ![alt text](assets\IMG79.PNG)
 ![alt text](assets\IMG259.PNG) | ![alt text](assets\IMG260.PNG)
 
+# 13. Scholes Hedging
+
+## 13.1 Static Delta Hedging
+Recall the basic long call and put option payoff and premium plots:
+
+![alt text](assets\IMG84.PNG)
+
+An option’s delta is an approximation of the change in the premium due to a change dS in the price S of the underlying asset:
+
+$$dC ≈ ∆_C dS \; \; \text{and} \; \; dP ≈ ∆_P dS.$$
+
+### Static delta hedging with h options
+The value of a portfolio of $h$ calls and $Q$ units in the underlying asset is
+$$V = QS + hC$$
+
+The value of a portfolio of $h$ puts and $Q$ assets is $V = QS + hP$.
+Its change is $dV ≈ (Q + h∆_P )dS$ so we set $Q = −h∆_P$.
+
+## 13.2 Static Delta Hedging
+
+We can use delta-gamma hedging to improve the delta hedging of an option position by taking a position in the asset and a different option.
+
+For delta-gamma hedging we calculate how many units $Q$ in the asset and $k$ in another option we need in order to hedge against small changes $d$S in the price $S$ of the underlying asset.
+
+The value of a portfolio of $Q$ units in the asset, $h$ units of one option, and $k$ units of another, different option is given by
+
+$$V = QS + hV_1 + kV_2$$
+
+where $V_1$ and $V_2$ are the respective option premiums.
+
+We can show that the solution is
+
+$$Q = -h \frac{\Delta _1 \Gamma _2 - \Delta _2 \Gamma _1}{\Gamma _2}$$
+
+And
+
+$$k = \frac{Q \Gamma _1}{\Delta _1 \Gamma _2 - \Delta _2 \Gamma _1}$$
+
+IMPORTANT:
+- $h$ is related to the first option (and $\delta_1$ and $\gamma_1$)
+- $k$ is related to the second option ($\delta_2$ and $\gamma_2$)
+
+## 13.3 Dynamic delta hedging
+
+- Not examined in final exam
+
+# 14. Implied Volatility
 
 
-- 13. Using delta ∆ and gamma Γ to predict small changes in option prices due to small changes in the price of the underlying asset (in preparation for delta and delta-gamma hedging).
-- 14. More detailed discussion of theta θ and associated concept of time decay, and how it relates to moneyness.
-- 15. Scholes Hedging
-  - 15.1 Static delta hedging
-  - 15.2 Static delta-gamma hedging
-  - 15.3 Dynamic delta hedging.
-- 16. Implied volatility 
-  - 16.1 volatility smile and term structure
-  - 16.2 related VIX index enabling volatility to be directly traded.
-- 17. Trading strategies and their payoff and profit/loss diagrams.
+
+
+- 14. Implied volatility 
+  - 14.1 volatility smile and term structure
+  - 14.2 related VIX index enabling volatility to be directly traded.
+- 15. Trading strategies and their payoff and profit/loss diagrams.
 
 - 18. Binomial and Monte Carlo numerical option pricing methods:
   - 18.1 The need for numerical methods:

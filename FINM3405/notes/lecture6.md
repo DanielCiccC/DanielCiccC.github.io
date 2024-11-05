@@ -12,6 +12,7 @@ This week we look at delta hedging, which is a common strategy employed by trade
 ### Static delta hedging
 
 - We start off with the basic idea of static delta hedging.
+
 Recall the basic long call and put option payoff and premium plots:
 
 
@@ -28,18 +29,15 @@ Recall the basic long call and put option payoff and premium plots:
 
 ### Static delta hedging
 
-An option’s delta is an approximation of the change in the premium due
-to a change dS in the price S of the underlying asset:
+An option’s delta is an approximation of the change in the premium due to a change dS in the price S of the underlying asset:
 
-$$dC ≈ ∆ C dS \; \; \text{and} \; \; dP ≈ ∆ P dS.$$
+$$dC ≈ ∆_C dS \; \; \text{and} \; \; dP ≈ ∆_P dS.$$
 
 We use an option’s delta to hedge a position against changes dS in S:
 
-**Delta hedging** involves taking a position in the asset to hedge an
-option position against small movements in the asset’s price.
+**Delta hedging** involves taking a position in the asset to hedge an option position against small movements in the asset’s price.
 
-So, given an option position, we calculate how many units Q in the asset
-we need in order to hedge against small changes dS in the asset price S.
+So, given an option position, we calculate how many units Q in the asset we need in order to hedge against small changes dS in the asset price S.
 - Negative Q means a short position in the asset.
 
 
@@ -112,8 +110,7 @@ $$≈ QdS + h∆_C dS = (Q + h∆_C )dS$$
 To be delta neutral, so $dV = 0$, we set $Q = −h∆_C$.
 
 **Remark**
-The value of a portfolio of $h$
- puts and $Q$ assets is $V = QS + hP$.
+The value of a portfolio of $h$  puts and $Q$ assets is $V = QS + hP$.
 Its change is $dV ≈ (Q + h∆_P )dS$ so we set $Q = −h∆_P$ .
 
 > - typically hold more than one option
@@ -140,24 +137,19 @@ We can use gamma $\Gamma$ to improve delta hedging:
 ---
 ## Delta-gamma hedging
 
-Recall from last week that we can make our approximations of the
-changes dC and dP in option premiums due to a change dS in the
-underlying asset price S more accurate by including Γ as follows:
+Recall from last week that we can make our approximations of the changes dC and dP in option premiums due to a change dS in the underlying asset price S more accurate by including Γ as follows:
 
 $$dC ≈ ∆_C dS + \frac{1}{2}ΓdS^2$$
 
 $$dP ≈ ∆_P dS + \frac{1}{2} ΓdS^2$$
-
-We can use delta-gamma hedging to improve the delta hedging of an
-option position by taking a position in the asset and a different option .
+ 
+We can use delta-gamma hedging to improve the delta hedging of an option position by taking a position in the asset and a different option.
 
 > - takes into consideration convexity
 > - delta hedging, position in the option
 > - delta gamma hedging, need a position in the stock and another option
 
-**Delta-gamma hedging** involves taking a position in the asset and
-in another, different option to hedge an existing option position
-against **small movements** in the price of the underlying asset.
+**Delta-gamma hedging** involves taking a position in the asset and in another, different option to hedge an existing option position against **small movements** in the price of the underlying asset.
 
 So, given a position of h options, for delta-gamma hedging we calculate how many units $Q$ in the asset and $k$ in another option we need in order to hedge against small changes $d$S in the price $S$ of the underlying asset.
 
