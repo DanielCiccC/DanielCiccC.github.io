@@ -49,8 +49,8 @@
 
 
 ## Integration/segregation
-- Integration occurs when positions are *lumped together*
-- Segregation occurs when situations are *viewed one at a time*
+- Integration - This suggests that people keep track of their gains and losses over time and use this cumulative total as their reference point
+- Segregation - This refers to the idea that each new gamble is evaluated in isolation
 
 ### Related
 - segregation and integration, used hand-in-hand with prospect theory
@@ -370,11 +370,11 @@ Real world arbitrageurs cannot wait it out because as professional money manager
 (Mistake of Judgement)
 1. They are committing judgment errors in extrapolating past growth rates too far into the future and are thus surprised when value stocks shine and glamour stocks disappoint.  This is so-called “expectational error hypothesis”
 2. Because of representativeness, investors may assume that good companies are good investments
-These first two reasons are mistakes of judgment.  Likely individual investors are more subject to committing them than institutional investors.
+
 
 (Agency Considerations)
-3. Because  sponsors  view  companies  with  steady  earnings  and  buoyant  growth  as  prudent investments,  so  as  to  appear  to  be  following  their  fiduciary  obligation  to  act  prudently, institutional investors may shy away from hard-to-defend, out-of-favour value stocks.
-4. Also  because  of  career  concerns,  institutional  investors,  who  are  evaluated  over  short horizons, may be nervous about tilting too far in any direction thus incurring tracking error.  A value strategy would require such a tilt and may take some time to pay off, so it is in this sense risky.
+1. Because  sponsors  view  companies  with  steady  earnings  and  buoyant  growth  as  prudent investments,  so  as  to  appear  to  be  following  their  fiduciary  obligation  to  act  prudently, institutional investors may shy away from hard-to-defend, out-of-favour value stocks.
+2. Also  because  of  career  concerns,  institutional  investors,  who  are  evaluated  over  short horizons, may be nervous about tilting too far in any direction thus incurring tracking error.  A value strategy would require such a tilt and may take some time to pay off, so it is in this sense risky.
 
 
 ### Models for Momentum and Reversal
@@ -390,6 +390,8 @@ These first two reasons are mistakes of judgment.  Likely individual investors a
   - Given a positive (negative) earnings change, there is a low probability of another positive (negative) earnings change in the next period. Underreaction.
 - Regime 2. Earnings are persistent:
   - Given a positive/negative earnings change, there is a high probability of another positive/negative earnings change in the next period. Overreaction
+
+> - need more explanation
 
 ## Factor Zoo
 - proliferation of factors that have been identified as potentially explaining asset returns.
@@ -423,8 +425,7 @@ A bubble occurs when prices are driven more by enthusiasm than fundamentals.
 It seems that often market movements are not obviously explained by new information.
 
 Behavioral explanation
-- Investors think (wrongly) that dividend growth changes are permanent rather than 
-transitory. For this reason, they overreact 
+- Investors think (wrongly) that dividend growth changes are permanent rather than transitory. For this reason, they overreact 
 - Recency plays a role: recent high earnings growth makes people think that future growth is going to be higher than it actually turns out to be
 
 ### Anomaly Attenuation
@@ -449,7 +450,7 @@ Joseph Piotroski
   - Operating efficiency
 
 ### Refining Momentum-Investing Using Volume
-- Volume as a Key Indicator
+- Volume as a Key Indicator - Volume predicts the magnitude and persistence of momentum
 - Relationship Between Volume and Momentum
   - Suggests momentum can be an overreaction and momentum and reversal are interconnected
   - They found that low volume-high momentum firms  yielded  higher  returns  at  1.67%  per month
@@ -463,8 +464,12 @@ stock gains attention.
 
 ## Momentum and Reversal Study
 Mark Grinblatt and Tobias Moskowitz
-- Strong positive serial correlation observed in returns from 12 months back to one month.
-- Greater persistence noticed for firms with negative returns in this span, indicating loser firms tend to remain losers.
+Researchers performed a regression of returns on:
+- Past returns
+- Differentiating between winners & losers
+- And conditioning on consistency
+
+
 - Consistency matters:
   - Firms with positive returns in at least 8 of the 11 (from -12 to -2)  months showcase enhanced momentum.
   - Firms consistently performing negatively over 8 of the 11 (from  -12 to -2)  months don't affect momentum.
@@ -520,9 +525,7 @@ private information.
 
 ## Demand curve in overconfidence
 
-## Expected outcome, expected value
-
-## Bayes Rule
+## Bayes Rule & Base rate neglect
 
 > REVISE CFA questions tutorial 7
 
@@ -544,3 +547,7 @@ Consists of three factors
   - Small cap vs. large cap
 
 ### Myopic Loss Aversion illustration
+
+
+> - Revise confidence interval approach
+> 

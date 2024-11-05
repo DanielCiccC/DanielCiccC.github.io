@@ -51,3 +51,4 @@
 # 1. Definitions and Concepts
 
 and concepts, including parties (taker, writer), vanilla types (puts & calls, European & American), asymmetric payoffs.
+

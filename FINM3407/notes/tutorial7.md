@@ -23,9 +23,7 @@ Overconfident managers, thinking that their firms will perform well in the futur
 
 **c.  Random treatment and self-selection treatment in Camerer and Lovallo experiment:** 
  
-In the Camerer and Lovallo experiment in one treatment individuals knew that payoffs would 
-be  a  function  of  skill.  Those  volunteering  to  participate  were  thus  self-selecting  into  this 
-treatment vs. the random treatment where no information was given before the fact. 
+In the Camerer and Lovallo experiment in one treatment individuals knew that payoffs would be  a  function  of  skill.  Those  volunteering  to  participate  were  thus  self-selecting  into  this treatment vs. the random treatment where no information was given before the fact. 
 
 **d. Risk aversion and overconfidence in debt issuance:**
 

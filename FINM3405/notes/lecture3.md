@@ -522,5 +522,5 @@ $$V = AQ \; \; \; \text{and} \;\;\;\; F=Km$$
 We now calculate the optimal hedge quantity of a portfolio of shares.
 
 ![alt text](assets\IMG45.PNG) 
- ![alt text](assets\IMG46.PNG)
+![alt text](assets\IMG46.PNG)
 ![alt text](assets\IMG47.PNG) 

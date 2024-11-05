@@ -99,13 +99,9 @@ Momentum and reversal are interconnected.
 
 ![alt text](assets\IMG109.PNG)
 
-- Researchers divided firms into 10 past-return 
-deciles and three volume terciles, forming 30
-momentum-volume portfolios. 
+- Researchers divided firms into 10 past-return deciles and three volume terciles, forming 30 momentum-volume portfolios. 
 - They found that low volume-high momentum firms  yielded  higher  returns  at  1.67%  per month
-- while  high  volume-low  momentum  firms 
-earned  just  0.09%  per  month,  creating  a 
-spread of 1.58% per month.
+- while  high  volume-low  momentum  firms earned  just  0.09%  per  month,  creating  a spread of 1.58% per month.
 
 > - low volume and high momentum - 1.67 excess return
 > - High volume low momentum - 0.09 excess return

@@ -268,3 +268,4 @@ Example: managers of a firm that is an acquisition target may resist the takeove
 Implements two alternative strategies to mitigate moral hazard: 
 - Monitoring: usually imposed by controls and regulations
 - Incentives: set by contract to reward desirable outcomes (e.g., stock options)
+
