@@ -615,21 +615,76 @@ Its change is <span class="katex"><span class="katex-mathml"><math xmlns="http:/
 <li dir="auto">Not examined in final exam</li>
 </ul>
 <h1 dir="auto" id="14-implied-volatility">14. Implied Volatility</h1>
+<p dir="auto">In the Black-Scholes European option the only unobservable parameter is the volatility σ.</p>
+<p dir="auto">Given observed option prices <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> and observable market variables <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>, an option’s implied volatility is the volatility parameter σ that yields Black-Scholes prices equal to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>.</p>
+<p dir="auto">We have to code numerical (iterative) techniques on computers.</p>
+<p dir="auto">In markets, Black-Scholes implied vols are not constant but display:</p>
 <ul dir="auto">
-<li dir="auto">
-<ol start="14" dir="auto">
-<li dir="auto">Implied volatility</li>
-</ol>
-<ul dir="auto">
-<li dir="auto">14.1 volatility smile and term structure</li>
-<li dir="auto">14.2 related VIX index enabling volatility to be directly traded.</li>
+<li dir="auto">A volatility smile or smirk over the range of strike prices.</li>
+<li dir="auto">A volatility term structure over the range of expiry dates.</li>
 </ul>
-</li>
-<li dir="auto">
-<ol start="15" dir="auto">
-<li dir="auto">Trading strategies and their payoff and profit/loss diagrams.</li>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>Volatility smirk/smiles</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="assets\IMG261.PNG" alt="alt text" data-src="assets/IMG261.PNG"></td>
+</tr>
+</tbody>
+</table>
+<h2 dir="auto" id="141-vix-index">14.1 VIX index</h2>
+<ul dir="auto">
+<li dir="auto">The Cboe VIX Index measures “market wide” implied vols:</li>
+</ul>
+<p dir="auto">It “is a calculation designed to produce a measure of constant, 30-day expected volatility of the U.S. stock market, derived from real-time, mid-quote prices of S&amp;P 500 Index (SPX) call and put options.”</p>
+<table dir="auto">
+<thead dir="auto">
+<tr dir="auto">
+<th>VIX index example</th>
+</tr>
+</thead>
+<tbody dir="auto">
+<tr dir="auto">
+<td><img src="assets\IMG100.PNG" alt="alt text" data-src="assets/IMG100.PNG"></td>
+</tr>
+</tbody>
+</table>
+<p dir="auto">A value of 17.55 means that average implied vols of 30 day S&amp;P 500 Index options, thus the market’s 30 day volatility expectations, is 17.55%.</p>
+<h1 dir="auto" id="15-trading-strategies">15 Trading Strategies</h1>
+<ol dir="auto">
+<li dir="auto"><strong>Directional strategies</strong>: Speculate on the direction of the price of the underlying asset, similar to taking calls and puts.</li>
+<li dir="auto"><strong>Volatility strategies</strong>: Speculate on high or low asset volatility, or changes in implied vols, often incorporating delta neutrality.</li>
+<li dir="auto"><strong>Time</strong>: Strategies that seek to take advantage of time decay, typically assuming low asset volatility and relatively constant implied vols.</li>
 </ol>
-</li>
+<h2 dir="auto" id="151-directional-strategies">15.1 Directional strategies</h2>
+<p dir="auto">Directional strategies seek to speculate on a directional change in the price of the asset, but at a lower upfront cost to the basic strategies of taking calls and puts, while still maintaining limited downside risk.</p>
+<h3 dir="auto" id="1511-bull-spread">15.1.1 Bull Spread</h3>
+<p dir="auto">Suppose we want to speculate on an increase in the asset price:</p>
+<p dir="auto">We could take an ATM call with strike <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">K = 50</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">50</span></span></span></span>, costing <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mn>4.13</mn></mrow><annotation encoding="application/x-tex">C_1 = 4.13</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4.13</span></span></span></span>. But also write an OTM call with strike <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mn>2</mn></msub><mo>=</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">K_2 = 55</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">55</span></span></span></span>.</p>
+<p dir="auto"><img src="assets\IMG262.PNG" alt="alt text" data-src="assets/IMG262.PNG"></p>
+<p dir="auto">A bull spread has lower downside risk and “profits sooner” compared to the basic long call, but its upside profits are capped.</p>
+<h3 dir="auto" id="1512-bear-spread">15.1.2 Bear Spread</h3>
+<p dir="auto">Speculate on a decrease in the asset price:</p>
+<p dir="auto">We can lower the cost of taking a put with strike <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">K = 50</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">50</span></span></span></span> by also writing a put with strike <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mn>2</mn></msub><mo>=</mo><mn>45</mn></mrow><annotation encoding="application/x-tex">K_2 = 45</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">45</span></span></span></span>.</p>
+<p dir="auto"><img src="assets\IMG263.PNG" alt="alt text" data-src="assets/IMG263.PNG"></p>
+<h2 dir="auto" id="152-volatility-strategies">15.2 Volatility Strategies</h2>
+<h3 dir="auto" id="1521-long-straddle">15.2.1 Long Straddle</h3>
+<p dir="auto">Suppose we think that the asset price will be volatile:</p>
+<p dir="auto">We could take ATM calls and puts both with strike K = 50, a strategy called a long straddle with payoff and profit:</p>
+<p dir="auto"><img src="assets\IMG264.PNG" alt="alt text" data-src="assets/IMG264.PNG"></p>
+<h3 dir="auto" id="1522-short-butterfly">15.2.2 Short Butterfly</h3>
+<p dir="auto">As shown above</p>
+<h3 dir="auto" id="1523-short-straddle">15.2.3 Short Straddle</h3>
+<p dir="auto">Suppose that we expect a period of low volatility</p>
+<p dir="auto"><img src="assets\IMG265.PNG" alt="alt text" data-src="assets/IMG265.PNG"></p>
+<h3 dir="auto" id="1524-long-butterfly">15.2.4 Long Butterfly</h3>
+<p dir="auto">As shown above</p>
+<h1 dir="auto" id="16-binomial-and-monte-carlo-numerical-option-pricing-methods">16. Binomial and Monte Carlo numerical option pricing methods</h1>
+<h2 dir="auto" id="161-rationale">16.1 Rationale</h2>
+<ul dir="auto">
 <li dir="auto">
 <ol start="18" dir="auto">
 <li dir="auto">Binomial and Monte Carlo numerical option pricing methods:</li>
@@ -648,11 +703,8 @@ Its change is <span class="katex"><span class="katex-mathml"><math xmlns="http:/
 <li dir="auto">19.1 Multi-period binomial model for European option price and delta.</li>
 </ul>
 </li>
-<li dir="auto">
-<p dir="auto">More rigorous introduction of risk-neutral pricing via binomial model.</p>
-</li>
-<li dir="auto">
-<p dir="auto">Monte Carlo pricing of European options.</p>
+<li dir="auto">More rigorous introduction of risk-neutral pricing via binomial model.</li>
+<li dir="auto">Monte Carlo pricing of European options.
 <ul dir="auto">
 <li dir="auto">Simple method that simulates only final asset price.</li>
 <li dir="auto">More general method that simulates entire asset price paths in preparation for Monte Carlo pricing of path dependent options.</li>

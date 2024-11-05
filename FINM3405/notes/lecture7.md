@@ -20,8 +20,7 @@ The Black-Scholes European call and put option pricing model results in an analy
 > - analytical/closed form solution
 > - In quant finance that rarely happens
 
-1. When applying the Black-Scholes framework to derive pricing models for more complex, exotic derivatives (even just for American
-options), we immediately run into the scenario of being unable to derive closed-form, analytical solution equations.
+1. When applying the Black-Scholes framework to derive pricing models for more complex, exotic derivatives (even just for American options), we immediately run into the scenario of being unable to derive closed-form, analytical solution equations.
 2. We may also want to apply more complex derivative security pricing frameworks than the Black-Scholes framework (say the Heston stochastic volatility, or the Merton jump-diffusion, frameworks), but again we immediately run into the same problem.
 
 > - pricing plain vanilla options, 

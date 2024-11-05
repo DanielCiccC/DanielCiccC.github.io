@@ -363,12 +363,11 @@ Lets calculate some implied vols from S&P/ASX 200 Index option quotes.
 ### VIX index
 
 - The Cboe VIX Index measures “market wide” implied vols:
-It “is a calculation designed to produce a measure of constant, 30-day
-expected volatility of the U.S. stock market, derived from real-time,
-mid-quote prices of S&P 500 Index (SPX) call and put options.”
+
+It “is a calculation designed to produce a measure of constant, 30-day expected volatility of the U.S. stock market, derived from real-time, mid-quote prices of S&P 500 Index (SPX) call and put options.”
 - See here for a detailed explanation, plus wiki and Investopedia.
-The Cboe VIX index is effectively an average of the implied volatilities of
-a large range of 30 day Cboe S&P 500 Index options.
+
+The Cboe VIX index is effectively an average of the implied volatilities of a large range of 30 day Cboe S&P 500 Index options.
 - One can even trade futures and options on the VIX (also see here)!
 
 > - estimates of implied volatilities
@@ -395,9 +394,7 @@ As an observation, the VIX index tends to spike when the market falls:
 
 ## Trading strategies
 
-We now present some “standard” options trading strategies designed to
-take advantage of movements in the asset price, changes in market
-sentiment and implied vols, and the passage of time:
+We now present some “standard” options trading strategies designed to take advantage of movements in the asset price, changes in market sentiment and implied vols, and the passage of time:
 - Directional strategies: Speculate on the direction of the price of the underlying asset, similar to taking calls and puts.
 - Volatility strategies: Speculate on high or low asset volatility, or changes in implied vols, often incorporating delta neutrality.
 - Time: Strategies that seek to take advantage of time decay, typically assuming low asset volatility and relatively constant implied vols.

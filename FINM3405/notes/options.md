@@ -409,13 +409,84 @@ IMPORTANT:
 
 # 14. Implied Volatility
 
+In the Black-Scholes European option the only unobservable parameter is the volatility σ.
+
+
+Given observed option prices $C$ or $P$ and observable market variables $S$, $K$, $r$ and $T$, an option’s implied volatility is the volatility parameter σ that yields Black-Scholes prices equal to $C$ or $P$.
+
+We have to code numerical (iterative) techniques on computers.
+
+In markets, Black-Scholes implied vols are not constant but display:
+- A volatility smile or smirk over the range of strike prices.
+- A volatility term structure over the range of expiry dates.
+
+| Volatility smirk/smiles |
+| --- | 
+| ![alt text](assets\IMG261.PNG) |
+
+## 14.1 VIX index
+
+- The Cboe VIX Index measures “market wide” implied vols:
+
+It “is a calculation designed to produce a measure of constant, 30-day expected volatility of the U.S. stock market, derived from real-time, mid-quote prices of S&P 500 Index (SPX) call and put options.”
+
+| VIX index example |
+| ---
+| ![alt text](assets\IMG100.PNG)
+
+A value of 17.55 means that average implied vols of 30 day S&P 500 Index options, thus the market’s 30 day volatility expectations, is 17.55%.
+
+# 15 Trading Strategies
+
+1. **Directional strategies**: Speculate on the direction of the price of the underlying asset, similar to taking calls and puts.
+2. **Volatility strategies**: Speculate on high or low asset volatility, or changes in implied vols, often incorporating delta neutrality.
+3. **Time**: Strategies that seek to take advantage of time decay, typically assuming low asset volatility and relatively constant implied vols.
+
+## 15.1 Directional strategies
+Directional strategies seek to speculate on a directional change in the price of the asset, but at a lower upfront cost to the basic strategies of taking calls and puts, while still maintaining limited downside risk.
+
+### 15.1.1 Bull Spread
+Suppose we want to speculate on an increase in the asset price:
+
+We could take an ATM call with strike $K = 50$, costing $C_1 = 4.13$. But also write an OTM call with strike $K_2 = 55$.
+
+![alt text](assets\IMG262.PNG)
+
+A bull spread has lower downside risk and “profits sooner” compared to the basic long call, but its upside profits are capped.
+
+### 15.1.2 Bear Spread
+Speculate on a decrease in the asset price:
+
+We can lower the cost of taking a put with strike $K = 50$ by also writing a put with strike $K_2 = 45$. 
+
+![alt text](assets\IMG263.PNG)
+
+## 15.2 Volatility Strategies
+
+### 15.2.1 Long Straddle
+Suppose we think that the asset price will be volatile:
+
+We could take ATM calls and puts both with strike K = 50, a strategy called a long straddle with payoff and profit:
+
+![alt text](assets\IMG264.PNG)
+
+### 15.2.2 Short Butterfly
+As shown above
+
+### 15.2.3 Short Straddle
+Suppose that we expect a period of low volatility
+
+![alt text](assets\IMG265.PNG)
+
+### 15.2.4 Long Butterfly
+As shown above
+
+# 16. Binomial and Monte Carlo numerical option pricing methods
+
+## 16.1 Rationale
 
 
 
-- 14. Implied volatility 
-  - 14.1 volatility smile and term structure
-  - 14.2 related VIX index enabling volatility to be directly traded.
-- 15. Trading strategies and their payoff and profit/loss diagrams.
 
 - 18. Binomial and Monte Carlo numerical option pricing methods:
   - 18.1 The need for numerical methods:
