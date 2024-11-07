@@ -59,8 +59,9 @@ A each node, set the American option price equal to the maximum of the “1-step
 
 The (American and European) option payoffs at expiry are
 
-$$C^{Am}_{iN} = \max \{ 0, S_{iN} - k \}$$
+$$C^{Am}_{iN} = \max \{ 0, S_{iN} - K \}$$
 and
+$$P^{Am}_{iN} = \max \{ 0, K - S_{iN} \}$$
 
 > - At point in time $j$ in the tree, 
 > - Capital N in the above equation denoting you are in the final layer of the tree
@@ -138,7 +139,7 @@ The binomial model was well suited for pricing American options.
 - The binomial model is well suited for chooser options.
 - Monte Carlo is well suited to the other path-dependent options.
 
-A European chooser option is similar to a plain vanilla European option except that it allows the holder to choose at some date t choose (the choice date) over the option’s life if the option is a call or a put!
+A European chooser option is similar to a plain vanilla European option except that it allows the holder to choose at some date $t$ choose (the choice date) over the option’s life if the option is a call or a put!
 - Of course the choice date satisfies $0 < t_{\text{choose}} < T$.
 
 On the choice date, it is rational for the holder to choose the option to be whichever out of the call or put has the highest value on that date.
@@ -238,13 +239,14 @@ The Monte Carlo option prices are then simply
 
 European floating-strike lookback options differ from fixed-strike options by instead setting the strike price $K$ to be the maximum $S_{max}$ or minimum $S_{min}$ asset prices over the life of the option. Their payoffs are
 
+$$\text{call payoff} = \max \{ 0, S_T -  S_{\min } \}$$
+
+$$\text{put payoff} = \max \{ 0, S_{\max } - S_T\}$$
+
 > - Uses the final asset value as per normal, the strike price is the maximum value (over the life of the option)
 > - don't know the contract price until expiry
 
-So, after calculating the N asset price paths $\{ S_{i0} , S_{i1} , . . . , S_{iM} \}$ for
-i = 1, . . . , N by simulating geometric Brownian motion, and calculating
-the minimum S i,min and maximum S i,max prices for each path, the Monte
-Carlo fl oating-strike lookback option prices are then simply
+So, after calculating the N asset price paths $\{ S_{i0} , S_{i1} , . . . , S_{iM} \}$ for i = 1, . . . , N by simulating geometric Brownian motion, and calculating the minimum S i,min and maximum S i,max prices for each path, the Monte Carlo floating-strike lookback option prices are then simply
 
 ![alt text](assets\IMG180.PNG)
 
@@ -269,8 +271,7 @@ European barrier options are another interesting variation of the path-dependenc
 > - go into exotic options with each other
 
 ### Knock-in barrier options
-European knock-in options are activated if the price of the underlying
-asset hits the barrier B at some point of the option’s life.
+European knock-in options are activated if the price of the underlying asset hits the barrier B at some point of the option’s life.
 
 - The payoffs are then the usual $ \max \{ 0, S_T − K \}$ for a call and $ \max \{ 0, K − S_T \}$ for a put.
 

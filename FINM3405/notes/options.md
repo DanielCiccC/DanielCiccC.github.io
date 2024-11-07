@@ -609,9 +609,85 @@ The adjustment to price American options is:
 
 A each node, set the American option price equal to the maximum of the “1-step European price” and the option’s intrinsic value:
 
+The (American and European) option payoffs at expiry are
+
+$$C^{Am}_{iN} = \max \{ 0, S_{iN} - K \}$$
+and
+$$P^{Am}_{iN} = \max \{ 0, K - S_{iN} \}$$
+
+
+The “1-step European” option prices at node ij on the tree are
+
+$$C^{Eu}_{ij} = e^{-rdt}\left[ qC^{Am}_{i+1, j+1} + (1-q)C_{i, j+1}^{Am}  \right]$$
+$$P^{Eu}_{ij} = e^{-rdt}\left[ qP^{Am}_{i+1, j+1} + (1-q)P_{i, j+1}^{Am}  \right]$$
+
+Hence, the American option prices at node $ij$ are
+
+$$C^{iv}_{ij} = \max \{C^{Eu}_{ij}, C^{iv}_{ij} \} $$
+
+$$P^{iv}_{ij} = \max \{P^{Eu}_{ij}, P^{iv}_{ij} \} $$
+
+## 19.2 Path Dependent Options
+
+A European option is path dependent if its payoff is calculated from the underlying asset’s path travelled over the option’s life.
+
+## 19.3 European Chooser Option (binomial method)
+A European chooser option is similar to a plain vanilla European option except that it allows the holder to choose at some date $t$ choose (the choice date) over the option’s life if the option is a **call** or a **put**
+
+- The choice date satisfies $0 < t_{\text{choose}} < T$.
+
+**Modification to original Binomial Tree**
+
+- When working backwards recursively through the binomial tree to calculate the European call and put option prices, on each node of the choice date select the chooser option’s value as the maximum of the call and put values. From there work backwards recursively as per normal for the chooser option, ignoring the call and put
+
+
+## 19.4 Lookback options (Monte-Carlo)
+A lookback option’s payoff at expiry depends on the maximum or minimum prices of the underlying asset over the life of the option
 
 
 
-- Monte Carlo pricing of European options.
-  - Simple method that simulates only final asset price.
-  - More general method that simulates entire asset price paths in preparation for Monte Carlo pricing of path dependent options.
+### 19.4.1 Fixed-Strike lookback Options
+European fixed-strike lookback options are very similar to plain vanilla European options except the “final price” of the underlying asset used in calculating the payoff is not the asset price $S_{T}$ but instead the maximum $S_{max}$ or minimum $S_{min}$ asset price reached over the option’s life:
+
+The maximum and minimum asset prices of path $i$ are given by
+
+$$S_{i, max} = \underbrace{\max}_{j=0,...,M}S_{ij}$$
+
+$$S_{i, min} = \underbrace{\min}_{j=0,...,M}S_{ij}$$
+
+
+- call payoff = $\max \{ 0, S_{max} − K \}$
+- put payoff = $\max \{ 0, K - S_{min} \}$
+
+The Monte Carlo Option prices are then simply
+
+$$C = e^{-rT} \frac{1}{N} \sum ^N _{i=1} \max \{ 0, S_{i, \max } - K \}$$
+
+$$P = e^{-rT} \frac{1}{N} \sum ^N _{i=1} \max \{ 0, K - S_{i, \min } \}$$
+
+### 19.4.2. (European) Floating Lookback Options
+European floating-strike lookback options differ from fixed-strike options by instead setting the strike price $K$ to be the maximum $S_{max}$ or minimum $S_{min}$ asset prices over the life of the option. Their payoffs are
+
+$$\text{call payoff} = \max \{ 0, S_T -  S_{\min } \}$$
+
+$$\text{put payoff} = \max \{ 0, S_{\max } - S_T\}$$
+
+So, after calculating the N asset price paths $\{ S_{i0} , S_{i1} , . . . , S_{iM} \}$ for i = 1, . . . , N by simulating geometric Brownian motion, and calculating the minimum S i,min and maximum S i,max prices for each path, the Monte Carlo floating-strike lookback option prices are then simply
+
+$$C = e^{-rT} \frac{1}{N} \sum ^N _{i=1} \max \{ 0, S_{iM} - S_{i, \min } \}$$
+
+$$P = e^{-rT} \frac{1}{N} \sum ^N _{i=1} \max \{ 0, S_{i, \max } - S_{iM} \}$$
+
+
+## 19.5 (European) Barrier Options
+They are effectively plain vanilla European options whose payoff's “knock in” or “knock-out” if the price of the underlying asset hits a barrier $B$ at some point over the life of the option:
+
+### 19.5.1 Knock-in Barrier Options
+European knock-in options are activated if the price of the underlying asset hits the barrier B at some point of the option’s life.
+
+The payoffs are then the usual 
+
+- $\max \{ 0, S_T − K \}$ for a call
+- $\max \{ 0, K − S_T \}$ for a put
+
+
