@@ -710,7 +710,7 @@ The Monte Carlo pricing of knock-in options is a simple modification to the abov
 European knock-out options are deactivated if the price of the underlying asset hits the barrier B at some point of the option’s life.
 
 
-If the barrier is never hit, the option stays alive and the payoff's are the usual $ \max \{ 0, S_T − K \}$ for a call and $ \max \{ 0, K − S_T \}$ for a put. There’s two kinds of knock-outs depending on the relation between B and S:
+If the barrier is never hit, the option stays alive and the payoff's are the usual $\max \{ 0, S_T − K \}$ for a call and $\max \{ 0, K − S_T \}$ for a put. There’s two kinds of knock-outs depending on the relation between B and S:
 
 1. Up-and-out options set $B > S$, noting that typically $K ≈ S$.
 2. Down-and-out options set $B < S$, noting that typically $K ≈ S$.

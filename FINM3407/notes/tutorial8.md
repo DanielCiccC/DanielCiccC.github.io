@@ -59,7 +59,7 @@ $$= 0.95 \cdot \frac{0.5}{0.8} = 0.59375$$
 - $P(A|B) = P(A \cap B) / P(B)$
 
 
-**6. *Imagine you are a portfolio manager looking at historical data for Stock C and Stock D in your portfolio. You find that the probability Stock C will have a positive return in a given month is 0.70. The probability Stock D will have a positive return in the same month is 0.60. However, if Stock C has a positive return, the probability Stock D will also have a positive return increase to 0.80. What is the conditional probability that Stock C will have a positive return given that Stock D has a positive return?**
+**6. *Imagine you are a portfolio manager looking at historical data for Stock C and Stock D in your portfolio. You find that the probability Stock C will have a positive return in a given month is 0.70. The probability Stock D will have a positive return in the same mont`zh is 0.60. However, if Stock C has a positive return, the probability Stock D will also have a positive return increase to 0.80. What is the conditional probability that Stock C will have a positive return given that Stock D has a positive return?**
 
 $$P(C) = 0.7$$
 $$P(D) = 0.6$$
@@ -130,5 +130,3 @@ Research has shown a payoff to local investing.  Fund managers on average earn 2
 We  would  expect  to  see  the  same  as  in  the  study  using  Finnish  data  where  the  two languages/ethnicities were Swedish and Finnish.  Specifically, we would expect to see English-speaking  investors  preferring  companies  based  outside  of  Quebec  and  French-speaking investors preferring companies based inside of Quebec.  Similarly, we might expect to see a preference on the part of English-speaking investors for English-speaking CEOs (and the same for French-speaking investors). 
   
 > - related to home bias
-
-
