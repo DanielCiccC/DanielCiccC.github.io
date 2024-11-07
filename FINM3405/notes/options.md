@@ -35,11 +35,18 @@
   - 18.2 Price more complex derivative securities.
   - 18.3 More complex pricing methods than the Black-Scholes model, in particular because returns are not normally distributed.
 19. 1-period binomial model for European option price and delta.
-  - 19.1 Multi-period binomial model for European option price and delta.
-- More rigorous introduction of risk-neutral pricing via binomial model.
-- Monte Carlo pricing of European options.
-  - Simple method that simulates only final asset price.
-  - More general method that simulates entire asset price paths in preparation for Monte Carlo pricing of path dependent options.
+  - 19.1 American Options
+  - 19.2 Path Dependent Options
+  - 19.3 European Chooser Options
+  - 19.4 Lookback Options
+    - 19.4.1. Fixed-Strike lookback Options
+    - 19.4.2. (European) Floating-Strike Lookback Options
+  - 19.5 (European) Barrier Options
+    - 19.5.1 Knock-in Barrier Options
+    - 19.5.2 Knock-out Barrier Options
+  - 19.6. (European) Asian Options
+    - 19.6.1. Fixed-Strike Asian Options
+    - 19.6.2. (European) Average-strike Asian options
 
 ---
 ### Aside - Notation
@@ -644,8 +651,6 @@ A European chooser option is similar to a plain vanilla European option except t
 ## 19.4 Lookback options (Monte-Carlo)
 A lookback option’s payoff at expiry depends on the maximum or minimum prices of the underlying asset over the life of the option
 
-
-
 ### 19.4.1 Fixed-Strike lookback Options
 European fixed-strike lookback options are very similar to plain vanilla European options except the “final price” of the underlying asset used in calculating the payoff is not the asset price $S_{T}$ but instead the maximum $S_{max}$ or minimum $S_{min}$ asset price reached over the option’s life:
 
@@ -665,7 +670,7 @@ $$C = e^{-rT} \frac{1}{N} \sum ^N _{i=1} \max \{ 0, S_{i, \max } - K \}$$
 
 $$P = e^{-rT} \frac{1}{N} \sum ^N _{i=1} \max \{ 0, K - S_{i, \min } \}$$
 
-### 19.4.2. (European) Floating Lookback Options
+### 19.4.2. (European) Floating-Strike Lookback Options
 European floating-strike lookback options differ from fixed-strike options by instead setting the strike price $K$ to be the maximum $S_{max}$ or minimum $S_{min}$ asset prices over the life of the option. Their payoffs are
 
 $$\text{call payoff} = \max \{ 0, S_T -  S_{\min } \}$$
@@ -690,4 +695,59 @@ The payoffs are then the usual
 - $\max \{ 0, S_T − K \}$ for a call
 - $\max \{ 0, K − S_T \}$ for a put
 
+If the barrier is never hit, the option is never activated and expires worthless
 
+There’s two kinds of knock-in options depending on the relation between $B$ and $S$
+
+1. Up-and-in options set $B > S$, noting that typically $K ≈ S$.
+2. Down-and-in options set $B < S$, noting that typically $K ≈ S$.
+
+The Monte Carlo pricing of knock-in options is a simple modification to the above, simply to check each path to see if the barrier was hit.
+
+- If the barrier is not hit, the value of the simulation is $0$
+
+### 19.5.2. Knock-out Barrier Options
+European knock-out options are deactivated if the price of the underlying asset hits the barrier B at some point of the option’s life.
+
+
+If the barrier is never hit, the option stays alive and the payoff's are the usual $ \max \{ 0, S_T − K \}$ for a call and $ \max \{ 0, K − S_T \}$ for a put. There’s two kinds of knock-outs depending on the relation between B and S:
+
+1. Up-and-out options set $B > S$, noting that typically $K ≈ S$.
+2. Down-and-out options set $B < S$, noting that typically $K ≈ S$.
+
+The Monte Carlo pricing of knock-out options is a simple modification to the above for knock-in options, namely a reversal of the logical conditions on the payoffs if the barrier was hit.
+
+## 19.6. (European) Asian Options
+
+A European Asian or average option’s payoffs depend on the average underlying asset price $\bar{S}$ over the life of the option.
+
+There’s two general types of Asian options:
+1. Fixed-strike Asian options.
+2. Average-strike Asian options.
+
+### 19.6.1. Fixed-Strike Asian Options
+European fixed-strike Asian options are very similar to plain vanilla European options except the “final price” of the underlying asset used in calculating an option’s payoff is not the asset price itself but the average asset price $\bar{S}$ over the life of the option. Their payoffs are
+
+It is simple to use Monte Carlo simulation to price them:
+
+So, after calculating the $N$ asset price paths $\{ S_{i0} , S_{i1} , . . . , S_{iM} \}$ for $i = 1, . . . , N$ by simulating geometric Brownian motion, the **average price** of path $i$ is
+
+$$\bar{S}_{i} = \frac{1}{M} \sum^{M}_{j=0}S_{ij}$$
+
+(arithmetic average). The payoffs for path $i$ are
+
+- call payoff = $\max \{ 0, \bar{S}_{i} − K \}$
+- put payoff = $\max \{ 0, K - \bar{S}_{i} \}$
+
+Put and call prices are then:
+
+$$C = e^{-rT} \frac{1}{N} \sum ^N _{i=1} \max \{ 0, \bar{S}_{i} − K \}$$
+
+$$P = e^{-rT} \frac{1}{N} \sum ^N _{i=1} \max \{ 0, K - \bar{S}_{i} \}$$
+
+### 19.6.2. Average-strike Asian options
+
+European average-strike Asian options differ from fixed-strike Asian options by instead setting the strike price $K = \bar{S}$ to be the average asset price $\bar{S}$ over the life of the option. So, their payoff s are simply
+
+- call payoff = $\max \{ 0, S_T − \bar{S} \}$
+- put payoff = $\max \{ 0, \bar{S} - S_T \}$

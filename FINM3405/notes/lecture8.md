@@ -299,11 +299,10 @@ The Monte Carlo pricing of knock-in options is a simple modification to the abov
 
 ## Knock-out barrier options
 
-European knock-out options are deactivated if the price of the
-underlying asset hits the barrier B at some point of the option’s life.
+European knock-out options are deactivated if the price of the underlying asset hits the barrier B at some point of the option’s life.
 - The option then expires worthless.
 
-If the barrier is never hit, the option stays alive and the payoff s are the
+If the barrier is never hit, the option stays alive and the payoff's are the
 usual $ \max \{ 0, S_T − K \}$ for a call and $ \max \{ 0, K − S_T \}$ for a put. There’s two kinds of knock-ins depending on the relation between B and S:
 1. Up-and-out options set $B > S$, noting that typically $K ≈ S$.
 2. Down-and-out options set $B < S$, noting that typically $K ≈ S$.
@@ -327,8 +326,7 @@ The Monte Carlo pricing of knock-out options is a simple modification to the abo
 
 ## Asian Options
 
-A European Asian or average option’s payoff s depend on the average
-underlying asset price $\hat{S}$ over the life of the option.
+A European Asian or average option’s payoff s depend on the average underlying asset price $\hat{S}$ over the life of the option.
 - They’e called “Asian” options simply because they were first developed in the foreign exchange markets of Japan.
 - There is various methods of calculating the historical averages used:
 - Typically either continuous or discrete (say daily) averages.
@@ -343,10 +341,10 @@ There’s two general types of Asian options:
 > - lookback used maximum or minimum options
 > - Look at the value the asset at discrete intervals, that is used to compare to strike
 
-European fixed-strike Asian options are very similar to plain vanilla European options except the “fi nal price” of the underlying asset used in calculating an option’s payoff is not the asset price itself but the average asset price $\hat{S}$ over the life of the option. Their payoffs are
+European fixed-strike Asian options are very similar to plain vanilla European options except the “final price” of the underlying asset used in calculating an option’s payoff is not the asset price itself but the average asset price $\bar{S}$ over the life of the option. Their payoffs are
 
-- call payoff = $\max \{ 0, \hat{S} − K \}$
-- put payoff = $\max \{ 0, K - \hat{S} \}$
+- call payoff = $\max \{ 0, \bar{S} − K \}$
+- put payoff = $\max \{ 0, K - \bar{S} \}$
 
 It is simple to use Monte Carlo simulation to price them:
 
@@ -354,14 +352,19 @@ It is simple to use Monte Carlo simulation to price them:
 So, after calculating the N asset price paths $\{ S_{i0} , S_{i1} , . . . , S_{iM} \}$ for
 i = 1, . . . , N by simulating geometric Brownian motion, the **average price** of path $i$ is
 
-$$\hat{S}_{i} = \frac{1}{M} \sum^{M}_{j=0}S_{ij}$$
+$$\bar{S}_{i} = \frac{1}{M} \sum^{M}_{j=0}S_{ij}$$
 
 (arithmetic average). The payoffs for path $i$ are
 
-- call payoff = $\max \{ 0, \hat{S}_{i} − K \}$
-- put payoff = $\max \{ 0, K - \hat{S}_{i} \}$
+- call payoff = $\max \{ 0, \bar{S}_{i} − K \}$
+- put payoff = $\max \{ 0, K - \bar{S}_{i} \}$
 
 ## Fixed-strike Asian options
+European fi xed-strike Asian options are very similar to plain vanilla
+European options except the “fi nal price” of the underlying asset used in
+calculating an option’s payoff is not the asset price itself but the average
+asset price ¯S over the life of the option. Their payoff s are
+
 
 ![alt text](assets\IMG186.PNG)
 
