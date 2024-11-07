@@ -14,8 +14,7 @@ The binomial model and Monte Carlo method (and PDE approach) have strengths and 
 
 ## American options
 
-An American option gives the holder the right (but not the obligation)
-to exercise it at any point up to and including the expiry date $T$.
+An American option gives the holder the right (but not the obligation) to exercise it at any point up to and including the expiry date $T$.
 
 - This early exercise feature actually introduces quite a bit of mathematical complexity into the pricing of American options.
 - We immediately run into the problem of not having a closed-form solution for the price of an American option.
@@ -54,8 +53,7 @@ The adjustment to price American options is:
 A each node, set the American option price equal to the maximum of the “1-step European price” and the option’s intrinsic value:
 
 
-- Recall we discretise the interval $[0, T]$ into $N + 1$ equally-spaced
-dates ${t_0 , . . . , t_N }$ with $t_0 = 0, t_N = T$ and spacing $dt = \frac{T}{N}$
+- Recall we discretise the interval $[0, T]$ into $N + 1$ equally-spaced dates ${t_0 , . . . , t_N }$ with $t_0 = 0, t_N = T$ and spacing $dt = \frac{T}{N}$
 
 - At date $t_j$ there are $j + 1$ asset prices $S_{ij} = Su^i d^{j−1}$ for $i = 0, . . . , j$.
 

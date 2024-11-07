@@ -511,7 +511,9 @@ Stylised features of financial returns:
 3. Partial differential equation numerical solution methods:
   - Motivated by the partial differential equation (PDE) approach to derivative security pricing (we avoid it in FINM3405).
 
-# 17. 1-Period Binomial model for European option price and delta
+# 17. Binomial model for European option price and delta
+
+## 17.1 1-Period
 - One trading period of length $T$ years to the option’s expiry.
 - Starting at S, two possible outcomes for the underlying asset:
   1. Up to $S_u = Su$, where $u$ is the asset’s up factor.
@@ -524,10 +526,92 @@ $C_u = \max(0, S_u − K)$
 
 $C_d = \max(0, S_d − K)$
 
+Call option
+$$C = e^{-rT}[qC_u + (1-q)C_d]$$
 
-- 19. 1-period binomial model for European option price and delta.
-  - 19.1 Multi-period binomial model for European option price and delta.
-- More rigorous introduction of risk-neutral pricing via binomial model.
+Where
+$$q = \frac{e^{rT} - d}{u-d}$$
+
+## 17.1.1. Up and down factors
+
+1. The Jarrow-Rudd (JR) scheme derives
+
+$$u=e^{(r - \sigma^2 /2)T + \sigma \sqrt{T}} \;\;\; \text{and} \;\;\; d = e^{(r - \sigma ^2 / 2) T - \sigma \sqrt{T}}$$
+
+# 17.2 Multi-period
+For the multi-period binomial model we simply:
+1. Discretise the interval [0, T] into N + 1 equally-spaced dates
+${t_0 , t_1 , . . . , t_N }$ with $t_0 = 0, t_N = T$ and spacing $dt = T/N$.
+2. Build an asset price tree starting at $S$ as per the next slide.
+3. Calculate the option premium by recursively stepping backwards in time in the tree and using the 1-period pricing formula each step.
+
+**Build asset price tree of S**
+
+To build the asset price tree, we note that the asset price can go up by a factor of $u$ or down by a factor of $d$ at each time step.
+
+![alt text](assets\IMG152.PNG)
+
+Asset price S$_{iN}$ took $i$ up steps and thus $N − i$ down steps.
+- At time step $j$ there is $j + 1$ asset prices
+$S_{ij} = Su^i d^{j−i}$ for $i = 0, 1, . . . , j$.
+Asset price $S_{ij}$ took $i$ up steps and thus $j − i$ down steps.
+
+**Calculate Asset Price tree of C/P**:
+
+We calculate call prices as follows:
+- The call option payoff s at expiry (time T) are 
+$$C_{iN} = \max \{0, S_{iN} − K \}$$ 
+for $i = 0, 1, . . . , N$.
+- We let $C_ij$ denote the call price at time step $j$ when the underlying asset took $i$ up steps (and thus $j − i$ down steps)
+
+![alt text](assets\IMG153.PNG)
+
+  - From the previous iteration in the recursion, we know the call prices
+$C_{i+1,j+1}$ (up step) and $C_{i,j+1}$ (down step) at time step $j + 1$.
+  - We calculate $C_{ij}$ as follows:
+
+$$C_{ij} = e^{-rdt}\left[ qC_{i+1, j+1} + (1-q)C_{i, j+1}\right]$$
+
+## 17.3 Rationale of Risk-neutral approach
+-- to complete
+
+# 18. Monte Carlo Pricing of European Options
+Option prices are given by
+
+$$C = e^{-rT} \mathbb{E} \left[ \max \{ 0, S_T - K \} \right]$$
+and
+$$P = e^{-rT} \mathbb{E} \left[ \max \{ 0,  K - S_T \} \right]$$
+
+Where $S_T$ is log-normally distributed as per geometric Brownian motion.
+
+To price options via the Monte Carlo method we:
+
+- Simulate $N$ sample paths of geometric Brownian motion of length $M + 1$ as per next slide to get $N$ asset prices $S_{iM}$ for $i = 1, . . . , N$
+
+# 19. Pricing American and path dependent options
+
+## 19.1 American Options (using Binomial Tree)
+An American option gives the holder the right (but not the obligation) to exercise it at any point up to and including the expiry date $T$.
+
+American options are worth at least as much as European options:
+
+$$0 ≤ C_{Eu} ≤ C_{Am}$$
+and 
+$$0 ≤ P_{Eu} ≤ P_{Am}$$
+
+American options are worth at least as much as their intrinsic value:
+
+$$\max{0, S − K} ≤ C_{Am}$$
+and 
+$$\max{0, K − S} ≤ P_{Am}$$
+
+The adjustment to price American options is:
+
+A each node, set the American option price equal to the maximum of the “1-step European price” and the option’s intrinsic value:
+
+
+
+
 - Monte Carlo pricing of European options.
   - Simple method that simulates only final asset price.
   - More general method that simulates entire asset price paths in preparation for Monte Carlo pricing of path dependent options.

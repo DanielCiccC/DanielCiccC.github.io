@@ -90,10 +90,9 @@ Technical analysts regard volume as significant.
 Volume predicts the magnitude and persistence of momentum.
 
 - Relationship Between Volume and Momentum: Documented by Charles Lee and Bhaskaran Swaminathan.
-
-Momentum returns tend to eventually reverse.
-Suggests momentum can be an overreaction.
-Momentum and reversal are interconnected.
+  - Momentum returns tend to eventually reverse.
+  - Suggests momentum can be an overreaction.
+  - Momentum and reversal are interconnected.
 
 ### Refining Momentum-Investing Using Volume
 

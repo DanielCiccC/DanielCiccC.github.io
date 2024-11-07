@@ -123,7 +123,7 @@ holds on to these positions longer than warranted. By doing so, Jordan has accep
 in the portfolio. Loss-aversion bias is one in which people exhibit a strong preference to avoid 
 losses  versus  achieving  gains.  One  of  the  consequences  of  loss  aversion  bias  is  that  the 
 financial management professional (in this case, Jordan) may hold losing investments in the 
-hope that they will return to break-even or better. 
+hope that they will return to break-even or better.
 
 ### Which of the following emotional biases has Jordan most likely exhibited?  
 - A.  Endowment.  

@@ -232,7 +232,7 @@ $$1-q = \frac{u-e^{rT}}{u-d}$$
 
 By the **risk-neutral** world we mean quantifying the probability of
 outcomes in financial markets via a risk-neutral probability q.
-- The value of every asset is the present value, discounted at the risk-free rate r, of its expected future cashfl ows under q.
+- The value of every asset is the present value, discounted at the risk-free rate r, of its expected future cashflows under q.
   
 We discount the expected future cashflows with r:
 - We don’t add a risk-premium to the discount rate.
@@ -277,7 +277,7 @@ ${t_0 , t_1 , . . . , t_N }$ with $t_0 = 0, t_N = T$ and spacing $dt = T/N$.
 > - work back from the previous nodes
 > - using one period binominal to work back in the tree - recursively step back in the tree
 
-To build the asset price tree, we note that the asset price can go up by a factor of u or down by a factor of d at each time step.
+To build the asset price tree, we note that the asset price can go up by a factor of $u$ or down by a factor of $d$ at each time step.
 - We build the asset price tree as follows:
 
 
@@ -293,7 +293,9 @@ Asset price $S_{ij}$ took $i$ up steps and thus $j − i$ down steps.
 > - $S_{ij}$ - j records what layer we are at
 
 We calculate call prices as follows:
-- The call option payoff s at expiry (time T) are $C_{iN} = \max{0, S iN − K}$ for $i = 0, 1, . . . , N$.
+- The call option payoff s at expiry (time T) are 
+$$C_{iN} = \max{0, S iN − K}$$ 
+for $i = 0, 1, . . . , N$.
 - We let $C_ij$ denote the call price at time step $j$ when the underlying asset took $i$ up steps (and thus j − i down steps)
 
 ![alt text](assets\IMG153.PNG)
@@ -303,7 +305,7 @@ We calculate call prices as follows:
 - Then working backwards, starting with the expiry payoffs $C_{iN}$ for $i = 0, 1, . . . , N$, we recursively calculate the call prices $C_{ij}$ using the 1-period binomial pricing formula as follows:
   - Suppose we want to calculate the call price $C_{ij}$ at time step $j$.
   - From the previous iteration in the recursion, we know the call prices
-$C_{i+1,j+1} (up step) and $C_{i,j+1}$ (down step) at time step $j + 1$.
+$C_{i+1,j+1}$ (up step) and $C_{i,j+1}$ (down step) at time step $j + 1$.
   - We calculate $C_{ij}$ as follows:
 
 ![alt text](assets\IMG154.PNG)

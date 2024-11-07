@@ -96,15 +96,24 @@ The tendency to think that there is more control over events than can objectivel
 1.  Unfounded belief in own ability to identify companies as potential investments: blind to any negative information 
 2. Excessive trading: lower returns 
 3. Underestimating their downside risks: surprise on underperformance 
-4. Portfolio under diversification: taking on more risk 
+4. Portfolio under-diversification: taking on more risk 
     - overconfidence is the driving force behind both excessive trading and under-diversification
 
 
 ### Mitigate effect
 1.  Review trading records of past two years and then calculate the performance of your trades. 
-2. keep track of each and every investment trade and then calculate the returns.
-3. (1) review investment holdings for potential poor performance; (2) realized how volatile the markets are 
-4. recall that numerous, once-great companies have fallen; what is the optimal portfolio without current holdings?
+2. (1) review investment holdings for potential poor performance; (2) realized how volatile the markets are 
+3.  Checks and balances: Implementing a more robust decision-making process that  includes  input  from  all  team  members  
+  - This  might  involve  regular  performance  reviews,  risk assessments, and peer evaluations to provide balanced perspectives. 
+4. Fostering an open culture: Creating an environment where team members feel 
+comfortable  voicing  concerns  and  suggestions  without  fear  of  retribution  is 
+crucial. Encouraging open dialogue 
+1. Data-driven approaches: Utilizing quantitative models and data analytics 
+2. Performance  metrics  and  accountability
+
+
+
+## Factors impeding learnings from overconfidence
 
 ## Self-attribution Bias
 - A reason impeding overconfidence
@@ -120,10 +129,6 @@ The tendency to think that there is more control over events than can objectivel
 ## Confirmation Bias
 - the tendency to search out evidence consistent with one’s prior beliefs and to ignore conflicting data.
 
-1. Overinvestment
-2. Higher Sensitivity of Investment to Cashflows
-3. More Active in M&A
-4. Too Quick to Start New Businesses
 
 ### Self-control bias
 People to fail to act in pursuit of their long-term, overarching goals because of a lack of self-discipline.
@@ -264,6 +269,13 @@ their investments.
 
 ## Greater Fool Theory
 Investors purchase stock in the hopes of offloading to someone else at a higher price
+
+---
+# ADD
+
+### Illusion of knowledge
+
+### Mean reversion
 
 
 ---
