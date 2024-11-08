@@ -25,10 +25,6 @@ The intelligence quotient (IQ) measures a person’s intelligence, whereas the e
 - Avoid panic sales (fire sales, etc) should also have high ability to control emotion
   - Manage own emotional responses
 
-### 3. Imagine you just won a lottery with a $10 million prize.  What primary emotions might you  feel?  (Note  that  the  seven  primary  emotions  generally  include  anger,  contempt, disgust, fear, happiness, sadness, and surprise.) Describe their features, including the six used to define an emotion. Be sure to include observables. 
-
-
-
 
 ### 4*. Your colleague argues that emotion and reasoning are completely separate influences on decision-making. Do you agree? Discuss.
 
@@ -41,8 +37,7 @@ The intelligence quotient (IQ) measures a person’s intelligence, whereas the e
 ### 1*. Differentiate the following terms/concepts:
 **a. Regret and disappointment**
 - regret and disappointment are negative emotions
-- regret - sorry about a decision that cannot be changes
--  With regret the person is also sorry about a decision that cannot be changed, but regret is a stronger emotion than disappointment. 
+- regret - sorry about a decision that cannot be changed. With regret the person is also sorry about a decision that cannot be changed, but regret is a stronger emotion than disappointment. 
 
 **b. House money and break-even effects**
 - The house money effect is the willingness to take greater risk with money that was recently won, whereas the break-even effect refers to an increase in risk taking after a prior loss in order to try to break even. 

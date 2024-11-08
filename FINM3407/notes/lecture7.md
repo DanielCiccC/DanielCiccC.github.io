@@ -21,8 +21,7 @@ Specifically, we consider
 ### Capital budgeting and ease of processing
 - Conventional finance theory demonstrates that, when properly applied, NPV is optimal decision rule for capital 
 budgeting purposes. 
-- Yet a number of surveys show that managers often utilise less than ideal techniques, such as the internal rate of 
-return (IRR) and, even worse, payback period (e.g. Graham & Harvey, 2005).
+- Yet a number of surveys show that managers often utilise less than ideal techniques, such as the internal rate of return (IRR) and, even worse, payback period (e.g. Graham & Harvey, 2005).
 
 > Latter two may be easier to process and more salient. For this reason, they may be compelling. 
 
@@ -149,12 +148,9 @@ For  example,  in  scenario  1,  participants  were  told  that  they  were  div
 
 ### Overconfidence measure – Malmendier and Tate
 - CEOs often receive stock and option grants as compensation. 
-- Overconfident managers are happy to expose themselves to own-firm-specific 
-risk even when diversification gains are available. 
-- Overconfidence managers are measured as the tendency to voluntarily hold a 
-large number of in-the-money-options. 
-- Optimally from the standpoint of diversification gains should be exercised, 
-but that are still being held. 
+- Overconfident managers are happy to expose themselves to own-firm-specific risk even when diversification gains are available. 
+- Overconfidence managers are measured as the tendency to voluntarily hold a large number of in-the-money-options. 
+- Optimally from the standpoint of diversification gains should be exercised, but that are still being held. 
 
 > - Proxies to measure overconfidence
 > - Overconfident people are optimistic
@@ -351,4 +347,6 @@ Looking at the average column (far right)
 > - Manager overconfidence
 >   - tendency to hold in the money options
 >   - overinvest, hypersensitivity to cash and investment
-> 
+
+
+Add something to the bottom 

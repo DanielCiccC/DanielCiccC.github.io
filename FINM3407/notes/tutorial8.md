@@ -18,11 +18,8 @@ and generate behavioral bias.
 
 
 ### d. Autonomic and cognitive heuristics
-Autonomic heuristics are reflexive, autonomic, non-cognitive, and require low effort levels.  
-Cognitive heuristics require more deliberation.  Autonomic heuristics are appropriate when a 
-very quick decision must be made or when the stakes are low, whereas cognitive heuristics are 
-appropriate when the stakes are higher.   
-
+- Autonomic heuristics are reflexive, autonomic, non-cognitive, and require low effort levels.  
+- Cognitive heuristics require more deliberation.  Autonomic heuristics are appropriate when a very quick decision must be made or when the stakes are low, whereas cognitive heuristics are appropriate when the stakes are higher.
 
 ### 2*. Which description of Mary has higher probability?
 - A. Mary loves to play tennis.
@@ -70,7 +67,11 @@ $$P(C|D) = P(D|C) \cdot \frac{P(C)}{P(D)}$$
 $$= 0.8 \cdot \frac{0.7}{0.6} = 0.9 \bar{3}$$
 
 ### 8.  How  do  gambling  fallacy  and  clustering  illusion  relate  to  representativeness?  Provide examples from sports.  In what way are they different? 
-Representativeness exists when one thinks that A should look like B.  A can be the sample and B the distribution, or vice-versa.  A belief in a hot hand is thinking the conditional distribution should look like the sample.  But sometimes it seems that people think the reverse, namely that the sample, however small, should look like the distribution, in the sense that essential features should be shared.  A hot hand often comes into play in sports when people don’t know for certain the skill level of an athlete, and the extent to which it may change.  Gambler’s fallacy is likely to exist when the underlying distribution (e.g., cards or dice) is well-known. 
+
+Representativeness exists when one thinks that A should look like B.  A can be the sample and B the distribution, or vice-versa.  
+
+- A belief in a hot hand is thinking the conditional distribution should look like the sample.  But sometimes it seems that people think the reverse, namely that the sample, however small, should look like the distribution, in the sense that essential features should be shared.  
+- A hot hand often comes into play in sports when people don’t know for certain the skill level of an athlete, and the extent to which it may change.  Gambler’s fallacy is likely to exist when the underlying distribution (e.g., cards or dice) is well-known. 
 
 ## Part Two: The Impact of Heuristics and Biases on Financial Decision-making
 
@@ -130,3 +131,9 @@ Research has shown a payoff to local investing.  Fund managers on average earn 2
 We  would  expect  to  see  the  same  as  in  the  study  using  Finnish  data  where  the  two languages/ethnicities were Swedish and Finnish.  Specifically, we would expect to see English-speaking  investors  preferring  companies  based  outside  of  Quebec  and  French-speaking investors preferring companies based inside of Quebec.  Similarly, we might expect to see a preference on the part of English-speaking investors for English-speaking CEOs (and the same for French-speaking investors). 
   
 > - related to home bias
+
+
+### 5. Anchors are ubiquitous in financial markets.  Give some examples. 
+Many examples could be given.  One is the current level of stock prices.  Many people accept 
+the current level as valid and only see changes in it as being justified if new information arrives.  
+This is true whether or not the market as a whole is arguably undervalued or overvalued. 

@@ -67,7 +67,7 @@ Is this positive or negative from the standpoint of market efficiency?
   - Avoid negative impact of anomaly
 
 - Small-firm effect is an example. Small firm stocks historically outperform large-cap stocks over the long term
-  - Actually negative from the standpoint of an effiicent view of the world since the Fama French three-factor model argues that firm size is a risk factor
+  - Actually negative from the standpoint of an efficient view of the world since the Fama French three-factor model argues that firm size is a risk factor
   - Attenuation of the small-firm effect is a testament to the market's capacity for self-correction
 
 ## Part 2 - Revision
