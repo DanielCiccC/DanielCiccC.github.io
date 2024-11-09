@@ -205,12 +205,9 @@ And we’ll use the following additional notation:
 
 
 In this light there is two parties to a fixed-for-floating interest rate swap:
-1. Receive fixed, pay floating : This party agrees to receive a fixed
-investment interest rate k and pay a floating borrowing interest
-interest. (Also called the pay floating, received fixed party.)
-2. Pay fixed, receive floating : This party agrees to pay the fixed
-borrowing interest rate k and receive a floating investment interest
-rate. (Also called the receive floating, pay fixed party.)
+1. Receive fixed, pay floating : This party agrees to receive a fixed investment interest rate k and pay a floating borrowing interest interest. (Also called the pay floating, received fixed party.)
+2. Pay fixed, receive floating : This party agrees to pay the fixed borrowing interest rate k and receive a floating investment interest rate. (Also called the receive floating, pay fixed party.)
+
 An example probably best illustrates the basic idea:
 
 > - Receive fixed: receiving the fixed rate in the swap, and paying a floating rate
@@ -250,15 +247,11 @@ The floating rates $f_i$ for $i = 1, . . . , N$ are already specified in the swa
 Question: How do we price a swap, given that we don’t know what the floating rates $f_i$ and hence coupons $C_i$ and net cashflows will be for dates $t_i$ for $i = 2, . . . , N,$ until the start $t_{i−1}$ of the coupon periods $[t_{i−1}, t_i ]$?
 
 
-Answer: The cashflows of the say *receive fixed, pay floating party* to an
-interest rate swap can be replicated via the following portfolio:
-- Buying a fixed coupon bond with face value F, maturity date T,
-and coupon rate k and thus fixed coupons $C = F × k × d$.
-- Issuing a FRN with face value F, maturity date $T$, and floating
-coupons given by $C_i = F × f_i × d$ at time $t_i$ for $i = 1, . . . , N$.
-So the value of a swap to the receive fixed, pay floating party must be the
-value of a fixed coupon bond minus the value of a FRN, both with face
-value $F$ and maturity date $T$, or else there’s an arbitrage opportunity.
+Answer: The cashflows of the say *receive fixed, pay floating party* to an interest rate swap can be replicated via the following portfolio:
+- Buying a fixed coupon bond with face value F, maturity date T, and coupon rate k and thus fixed coupons $C = F × k × d$.
+- Issuing a FRN with face value F, maturity date $T$, and floating coupons given by $C_i = F × f_i × d$ at time $t_i$ for $i = 1, . . . , N$.
+
+So the value of a swap to the receive fixed, pay floating party must be the value of a fixed coupon bond minus the value of a FRN, both with face value $F$ and maturity date $T$, or else there’s an arbitrage opportunity.
 
 > - definition of a swap
 > - fixed rate receiver can be replicated by a long buying and issuing two bond positions (above)
@@ -291,7 +284,7 @@ As a result of the above usual principal, the fixed rate k is set so that
 
 ![alt text](assets\IMG217.PNG)
 
-which, after recalling $C = Fkd$ and \bar{C}_i = Fr_{i−1,i}d$, rearranges to give
+which, after recalling $C = Fkd$ and $\bar{C}_i = Fr_{i−1,i}d$, rearranges to give
 
 ![alt text](assets\IMG218.PNG)
 
