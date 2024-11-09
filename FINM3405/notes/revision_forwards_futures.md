@@ -185,7 +185,7 @@ One way to think about these FX futures quoting conventions is that the foreign 
 
 **Perfect Hedging Examples**
 ---
-On Onenote - 4.3 Futures perfect Hedging
+On OneNote - 4.3 Futures perfect Hedging
 
 ---
 

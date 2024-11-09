@@ -19,15 +19,11 @@ very useful for your Team Project on Bill Ackman and Pershing Square.
 >   - When banks could offload credit risk, increase their profitability
 
 A credit default swap (CDS) is like an insurance contract in which:
-- The CDS buyer “takes out insurance” against a credit event (e.g.
-default) of a company or sovereign state and in return pays the CDS
-seller a regular, fi xed “insurance” premium for the insurance.
-- The CDS seller receives the CDS premium and agrees to pay the
-buyer a compensation amount upon occurrence of the credit event.
-- If the credit event occurs, the compensation is paid, the CDS buyer
-pays the period’s accrued premium, and the CDS ceases to exist.
-- If no credit event occurs, the CDS buyer keeps paying the periodic
-premium until the CDS maturity date.
+- The CDS buyer “takes out insurance” against a credit event (e.g. default) of a company or sovereign state and in return pays the CDS seller a regular, fixed “insurance” premium for the insurance.
+- The CDS seller receives the CDS premium and agrees to pay the buyer a compensation amount upon occurrence of the credit event.
+- If the credit event occurs, the compensation is paid, the CDS buyer pays the period’s accrued premium, and the CDS ceases to exist.
+- If no credit event occurs, the CDS buyer keeps paying the periodic premium until the CDS maturity date.
+
 We now go into the details of CDS terminology, mechanics and pricing:
 
 > Why is it called a swap?
@@ -54,11 +50,8 @@ We now go into the details of CDS terminology, mechanics and pricing:
 > - compensation amount is called the payout
 
 The CDS can be single-name or multi-name:
-- Above we’re referring to single-name CDS, which are written over
-the reference assets of one single reference entity.
-- Multi-name CDS, sometimes called basket CDS, are written over
-the reference assets of multiple reference entities, and the nature of
-their payouts can diff er (add-up basket, k th -to-default basket, etc).
+- Above we’re referring to single-name CDS, which are written over the reference assets of one single reference entity.
+- Multi-name CDS, sometimes called basket CDS, are written over the reference assets of multiple reference entities, and the nature of their payouts can differ (add-up basket, k th -to-default basket, etc).
 There’s also CDS indices (see wiki), which are eff ectively basket CDS:
 - The CDX range (also see Investopedia and the CDS Indices Primer).
 - The iTraxx range (also see Investopedia and wiki). They’re important for your Team Project and we cover them later.
@@ -88,15 +81,9 @@ There’s also CDS indices (see wiki), which are eff ectively basket CDS:
 > - Restructuring - anything that alters the original structure of the corporations debt
 
 
-- Repudiation/moratorium: The reference entity disputing aspects
-of or failing to recognise the reference asset and its obligations,
-thereby disputing, delaying or refusing payment (common when the
-reference entity is a sovereign or sovereign state).
-- Covenants: The reference entity’s breaching or noncompliance with
-debt covenants, including due to deterioration in financial position or
-the devaluation or writing off of assets used as security/collateral.
-- Ratings downgrade: The downgrading of a reference entity by a
-credit ratings agency (such as S&P, Moody’s, Fitch, etc).
+- Repudiation/moratorium: The reference entity disputing aspects of or failing to recognise the reference asset and its obligations, thereby disputing, delaying or refusing payment (common when the reference entity is a sovereign or sovereign state).
+- Covenants: The reference entity’s breaching or noncompliance with debt covenants, including due to deterioration in financial position or the devaluation or writing off of assets used as security/collateral.
+- Ratings downgrade: The downgrading of a reference entity by a credit ratings agency (such as S&P, Moody’s, Fitch, etc).
 
 > - Repudiation/moratorium - dispute the fact that they have to pay the debt
 >   - A lot of developing countries have done that
@@ -114,13 +101,10 @@ The idea of a reference event leading to a significant decline in the market val
 The payout upon the occurrence of a reference event is defined as:
 
 - A CDS is written over a notional principal or face value $F$.
-- The protection buyer is taking out protection (“insurance”) over a
-holding of the reference entity’s reference assets of total face value F.
-- CDS can be physically deliverable or cash settled upon the
-occurrence of a reference event (after which the CDS vanishes):
+- The protection buyer is taking out protection (“insurance”) over a holding of the reference entity’s reference assets of total face value F.
+- CDS can be physically deliverable or cash settled upon the occurrence of a reference event (after which the CDS vanishes):
 - Physical delivery: The protection seller agrees to buy the reference asset holding from the protection buyer at its total face value $F$. 
-- Cash settled: The protection seller agrees to pay the protection
-buyer the difference $F − V$ between the face value $F$ and the market value $V$ of the reference asset.
+- Cash settled: The protection seller agrees to pay the protection buyer the difference $F − V$ between the face value $F$ and the market value $V$ of the reference asset.
 
 > - Precisely (quantitiatively)
 > - Paid out over face value (can take up protection of the reference asset to a total principle of face value F)
@@ -479,4 +463,3 @@ purchased the CDX NA Investment Grade, CDX NA High Yield and
 iTraxx Europe CDS indices to hedge his portfolio exposure.
 
 ![alt text](assets\IMG204.PNG)
-
