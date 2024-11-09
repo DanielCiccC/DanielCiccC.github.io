@@ -88,8 +88,7 @@ bank’s market risks: package them all up into a single total risk measure.
 
 ### Individual security risk
 
-We first refresh some introductory calculations about individual security
-and portfolio risk or volatility (standard deviation) which we use later.
+We first refresh some introductory calculations about individual security and portfolio risk or volatility (standard deviation) which we use later.
 - Let $\{R_1 , . . . , R_N\}$ be $N$ time period returns for a financial asset.
 
 Recall that the mean return is given by
@@ -171,8 +170,7 @@ Above we’re using the standard normal distribution, which has a mean of $µ = 
 
 $$z_α = µ + zσ$$
 
-where z is the z-value for a standard normal distribution
-corresponding to the left tail probability $α = N (z)$.
+where z is the z-value for a standard normal distribution corresponding to the left tail probability $α = N (z)$
 
 ---
 ### Example
@@ -244,8 +242,10 @@ $VaR_α$ is possibly best conceptualised graphically:
 
 ![alt text](assets\IMG237.PNG)
 
-This is the distribution of a portfolio’s value changes dV over a 10-day period. The α = 5% VaR is VaR 0.05 = $657, 942, which in words is:
-- VaR 0.05 is the worst outcome over 10 days with p = 95% confi dence.
+This is the distribution of a portfolio’s value changes dV over a 10-day period. 
+
+The α = 5% VaR is VaR 0.05 = $657, 942, which in words is:
+- VaR 0.05 is the worst outcome over 10 days with p = 95% confidence.
 - Or, α = 5% of the time we lose at least VaR 0.05 dollars over 10 days.
 
 > - 95% confident they are going to to lose at most 657,000
@@ -267,8 +267,7 @@ So we can “rephrase” the previous example:
 $VaR_α$ tells us the least amount we expect to lose with tail
 probability α% in a given time period.
 
-So VaR has the shortcoming that it does not tell us what our expected
-tail risk or loss or shortfall (ES) is, that is, how much we expect to lose if our portfolio outcomes fall in the α% left tail area of the distribution.
+So VaR has the shortcoming that it does not tell us what our expected tail risk or loss or shortfall (ES) is, that is, how much we expect to lose if our portfolio outcomes fall in the α% left tail area of the distribution.
 - Two distributions may have the same VaR α but different expected
 losses or shortfalls $ES_α$ for a given left tail probability α, as in:
 
@@ -279,7 +278,7 @@ losses or shortfalls $ES_α$ for a given left tail probability α, as in:
 > - Expected loss we are going to incur might be a lot worse
 > - regulators moved from VaR to Expected shortfall
 
-Both distributions have the same VaR α but you expect larger losses (much larger than $VaR_α$) in the RHS distribution than the LHS, if the outcomes fell in the α% left tail area of the distribution (left of $VaR_α$).
+Both distributions have the same VaR $α$ but you expect larger losses (much larger than $VaR_α$) in the RHS distribution than the LHS, if the outcomes fell in the α% left tail area of the distribution (left of $VaR_α$).
 - The expected shortfall (ES) answers the question:
 
 How much $ES_α$ do we expect to lose if our outcomes fall in the α% left tail area of the distribution, so to the left of $VaR_α$?
@@ -322,9 +321,9 @@ We start with the parametric method:
 
 
 ## Parametric
-When asset returns are normally distributed with mean µ and variance $σ^2$, for a given left tail probability α we already know that the value at risk $VaR_α$ of the change dV in the portfolio value V is given by
+When asset returns are normally distributed with mean $µ$ and variance $σ^2$, for a given left tail probability α we already know that the value at risk $VaR_α$ of the change dV in the portfolio value V is given by
 
-$$VaR α = −(µ_{dV} + zσ_{dV} )$$
+$$VaR_α = −(µ_{dV} + zσ_{dV} )$$
 
 with z the z-value of the standard normal distribution corresponding to the left tail probability $α = N (z)$. The expected shortfall $ES_α$ is
 
@@ -389,6 +388,8 @@ We define the benefits from diversification to be
 ![alt text](assets\IMG251.PNG)
 
 > IN FINAL EXAM
+
+
 ---
 
 ## Nonparametric
@@ -401,7 +402,7 @@ Consequently, we could consider fitting a different family of distributions to a
 ![alt text](assets\IMG252.PNG)
 
 Here µ is the mean, s is the standard deviation, ν is the degrees of
-freedom, τ and T are defi ned in the image, and p is the level of
+freedom, τ and T are defined in the image, and p is the level of
 confi dence as above, so1 − p is the tail probability. But we don’t do this.
 
 > - t-distribution does have a closed form
