@@ -128,8 +128,6 @@ Futures contracts
 - The underlying asset in the contract is exactly the asset exposure we want to hedge.
 - The number of units in the underlying asset we want to hedge is covered by an integer number of contracts.
 - And our hedge date is exactly the contract delivery date. 
- 
-But things are rarely this “neat” in reality so next week we cover the notion of optimal hedging.
 
 ### 4.1 Commodity futures
 **Main contracts and their specifications**
@@ -192,6 +190,11 @@ On OneNote - 4.3 Futures perfect Hedging
 ### 4.4.1. Forward Rate Agreements
 **Main contracts and their specifications**
 A forward rate agreement (FRA) is a OTC traded forward contract over a reference interest rate such as SOFR or EURIBOR.
+
+- Being long an FRA involves locking in $k$ as a lending or investment rate, and this party is called the **fixed rate receiver**.
+  - Think of this as agreeing to lend or invest $F$ at maturity, time $T_1$, and thus to receive the investment proceeds $F(1 + kT)$ at time $T_2$.
+- Being short an FRA involves locking in $k$ as a borrowing or funding rate, and this party is called the **fixed rate payer**.
+  - Think of this as agreeing to borrow $F$ at maturity, time $T_1$, and thus to pay off the loan amount of $F(1 + kT)$ at time $T_2$.
 
 In an FRA the parties agree to fix an interest rate $k$ over an agreed notional value $F$ for an agreed time period $T$ starting on the FRA’s agreed maturity date $T_{1}$ and ending on $T_{2} = T_{1} + T$.
 

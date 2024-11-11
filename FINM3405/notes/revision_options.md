@@ -386,7 +386,7 @@ $$V = QS + hC$$
 The value of a portfolio of $h$ puts and $Q$ assets is $V = QS + hP$.
 Its change is $dV ≈ (Q + h∆_P )dS$ so we set $Q = −h∆_P$.
 
-## 13.2 Static Delta Hedging
+## 13.2 Delta-Gamma hedging
 
 We can use delta-gamma hedging to improve the delta hedging of an option position by taking a position in the asset and a different option.
 
