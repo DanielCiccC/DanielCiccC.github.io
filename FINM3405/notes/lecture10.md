@@ -316,8 +316,7 @@ which, after recalling $C = Fkd$ and $\bar{C}_i = Fr_{i−1,i}d$, rearranges to 
 
 **Remark**
 
-The other pay fixed, receive floating party could close out their profitable swap position with a swap dealer, thus realising their 
-\$ 4,078.07 profit (net of fees and the swap dealer’s spread etc).
+The other pay fixed, receive floating party could close out their profitable swap position with a swap dealer, thus realising their \$ 4,078.07 profit (net of fees and the swap dealer’s spread etc).
 
 Consequently, to speculate with interest rate swaps:
 - If you believe that the yield curve will shift up, then enter into an interest rate swap as the pay fixed, receive floating party.

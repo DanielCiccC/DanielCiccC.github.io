@@ -56,6 +56,9 @@ The value of the FRN is sum of the present values of these risk-free cashflows $
 
 $$V = \sum ^N _{i=1} \frac{\bar{C}_i}{1+r_i t_i} + \frac{F}{1+r_N T}$$
 
+### 1.2.2 Fixed Coupon Bond
+
+$$\sum ^N _{i=1} \frac{C}{1+r_i t_i} - \frac{F}{1+r_NT}$$
 
 ## 2. Interest Rate Swaps
 
@@ -66,10 +69,11 @@ Recall that a fixed-for-floating interest rate swap is a financial instrument th
 - $C = Fkd$ is the fixed coupon in the swap.
 
 In this light there is two parties to a fixed-for-floating interest rate swap:
-1. Receive fixed, pay floating : This party agrees to receive a fixed investment interest rate k and pay a floating borrowing interest interest. (Also called the pay floating, received fixed party.)
-2. Pay fixed, receive floating : This party agrees to pay the fixed borrowing interest rate k and receive a floating investment interest rate. (Also called the receive floating, pay fixed party.)
+1. **Receive fixed, pay floating**: This party agrees to receive a fixed investment interest rate k and pay a floating borrowing interest interest. (Also called the pay floating, received fixed party.)
+2. **Pay fixed, receive floating**: This party agrees to pay the fixed borrowing interest rate k and receive a floating investment interest rate. (Also called the receive floating, pay fixed party.)
 
-## 2.5 Pricing a fixed-For-Floating Swap
+
+## 2.5 Pricing a Fixed-For-Floating Swap
 
 Pricing a fixed-for-floating swap involves determining the theoretically correct or “fair” fixed rate $k$ in the swap.
 
@@ -104,4 +108,11 @@ To speculate with interest rate swaps:
 
 
 ### 2.6.2 Hedging
+
+You could imagine the following hedging scenarios:
+- If you borrowed via FRN, we have the above example.
+- If you borrowed via fixed coupon bonds, to hedge your exposure to falling interest rates you enter into a swap as the pay floating party.
+- If you invested in FRN, to hedge your exposure to falling interest rates you enter into a swap as the receive fixed party.
+- If you invested in fixed coupon bonds, to hedge your exposure to increasing interest rates you enter into a swap as the receive floating party.
+
 
