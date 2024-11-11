@@ -375,6 +375,8 @@ Recall the basic long call and put option payoff and premium plots:
 
 ![alt text](assets\IMG84.PNG)
 
+Delta hedging involves taking a position in the asset to hedge an option position against small movements in the asset’s price.
+
 An option’s delta is an approximation of the change in the premium due to a change dS in the price S of the underlying asset:
 
 $$dC ≈ ∆_C dS \; \; \text{and} \; \; dP ≈ ∆_P dS.$$
@@ -384,7 +386,15 @@ The value of a portfolio of $h$ calls and $Q$ units in the underlying asset is
 $$V = QS + hC$$
 
 The value of a portfolio of $h$ puts and $Q$ assets is $V = QS + hP$.
-Its change is $dV ≈ (Q + h∆_P )dS$ so we set $Q = −h∆_P$.
+Its change is $dV ≈ (Q + h∆_P )dS$ so we set 
+
+$$Q = −h∆_P$$
+
+or 
+
+$$Q = −h∆_C$$
+
+ for hedging options
 
 ## 13.2 Delta-Gamma hedging
 
