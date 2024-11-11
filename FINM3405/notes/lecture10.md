@@ -348,6 +348,4 @@ You could imagine the following hedging scenarios:
 - If you borrowed via fixed coupon bonds, to hedge your exposure to falling interest rates you enter into a swap as the pay floating party.
 - If you invested in FRN, to hedge your exposure to falling
 interest rates you enter into a swap as the receive fixed party.
-- If you invested in fixed coupon bonds, to hedge your
-exposure to increasing interest rates you enter into a swap as
-the receive floating party.
+- If you invested in fixed coupon bonds, to hedge your exposure to increasing interest rates you enter into a swap as the receive floating party.

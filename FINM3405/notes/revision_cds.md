@@ -138,7 +138,7 @@ PV of expected payouts: At time $t_i$ there is a payout of:
 
 Hence, the expected payout at time $t_i$ is
 
-$$\mathbb{E}[payout_i]=q_i(1-R)F$$
+$$\mathbb{E}[\text{payout}_i]=q_i(1-R)F$$
 
 Present value of all payouts is
 
@@ -152,14 +152,25 @@ At time $t_i$ there is a premium of:
 
 Hence, the expected premium at time $t_i$ is
 
-$$\mathbb{E}[\text{premium}_i]= $$
+$$\mathbb{E}[\text{premium}_i] = s_i kFd$$
+
+The present value of all premiums are:
+
+$$\text{PV(}\mathbb{E}\text{[premiums])} = \sum ^N _{i=1} e^{-r_i t_i} s_i kFd$$
+
 
 ### Pricing
 
+The value of a CDS is:
+
+$$V_{\text{CDS}} = \text{PV(}\mathbb{E}\text{[payouts])} - \text{PV(}\mathbb{E}\text{[premiums])}$$
+
 The breakeven CDS spread k that which gives the CDS 0 initial value:
 
-$$\text{PV( E [payouts]) = PV( E [premiums])}$$
+$$\text{PV(}\mathbb{E}\text{[payouts])} = \text{PV(}\mathbb{E}\text{[premiums])}$$
 
 which we rearrange to get
 
 $$k= \frac{\text{PV(}\mathbb{E}\text{[payouts])}}{\sum ^N _{i=1} s_iFd}$$
+
+$$k= \frac{\sum ^N _{i=1} e^{-r_i t_i} q_i (1-R)F}{\sum ^N _{i=1} s_iFd}$$
