@@ -27,6 +27,7 @@ So far we have the following CDS notation and terminology:
   - Probability of a reference event occurring in period i.
 - $s_i$ is the survival probability up to time $t_i$ .
   - Probability that no reference event occurred up to time $t_i$.
+- $d$ is the time between premium payments in years
 
 
 # 2. Mechanics

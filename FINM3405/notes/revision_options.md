@@ -400,6 +400,8 @@ $$Q = −h∆_C$$
 
 We can use delta-gamma hedging to improve the delta hedging of an option position by taking a position in the asset and a different option.
 
+
+
 For delta-gamma hedging we calculate how many units $Q$ in the asset and $k$ in another option we need in order to hedge against small changes $d$S in the price $S$ of the underlying asset.
 
 The value of a portfolio of $Q$ units in the asset, $h$ units of one option, and $k$ units of another, different option is given by
@@ -588,6 +590,13 @@ $C_{i+1,j+1}$ (up step) and $C_{i,j+1}$ (down step) at time step $j + 1$.
   - We calculate $C_{ij}$ as follows:
 
 $$C_{ij} = e^{-rdt}\left[ qC_{i+1, j+1} + (1-q)C_{i, j+1}\right]$$
+
+### 17.3 Binal price deltas
+
+$$\Delta = \frac{C_u - C_d}{S(u-d)}$$
+
+$$\Delta = \frac{P_u - P_d}{S(u-d)}$$
+
 
 ## 17.3 Rationale of Risk-neutral approach
 -- to complete
