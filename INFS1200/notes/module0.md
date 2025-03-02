@@ -1,11 +1,11 @@
 # Module 0 - Introduction   
 
 ## What is a database?
-A database is a collection of related data or 
-known facts that:
-- represents some aspect of the real world, sometimes called the mini-world or the **universe of discourse (UoD)**.
-- is a **logically coherent** collection of data with some **inherent meaning**. 
-- is designed, built, and populated with data for a specific purpose for an intended group of users and some preconceived applications.
+A database is a collection of related data or known facts that:
+
+- Represents some aspect of the real world, sometimes called the mini-world or the **universe of discourse (UoD)**.
+- Is a **logically coherent** collection of data with some **inherent meaning**. 
+- Is designed, built, and populated with data for a specific purpose for an intended group of users and some preconceived applications.
 
 <!-- ### What is a Database Management System (DBMS)?
 A software system that facilitates the processes of:
@@ -22,6 +22,7 @@ From bottom to top:
 3. Applications and user views of data, either through the DBMS interface or
 through application programs
 
+
 ![Alt text](assets\IMG1.PNG)
 
 ### Features of a DBMS:
@@ -29,14 +30,6 @@ through application programs
     - DBMS has the capability to define and enforce integrity constraints
 - Query Processing
   - A DBMS is equipped with a programming language to run queries and return data. 
-
-```SQL
-SELECT * 
-FROM ProductVersion
-WHERE 1=1
-AND CODE LIKE '%MotorMachine%'
-AND isLatest = 1
-```
 - Security Management
   - DBMS's provide various measures for securing databases against a variety of threats.
 - Concurrency Control   
@@ -45,13 +38,7 @@ files that guarantee serialisability (think like google docs)
 - Backup and Recovery
   - DBMS provides facility to recover from hardware and software failures
 through its backup and recovery sub-system
-```SQL
 
-BEGIN TRANSACTION
-GO
-
-CREATE TRIGGER [IncrementPolicyVersionId]...
-```
 
 ## Three schema architecture - see also [Javapoint.com](https://www.javatpoint.com/dbms-three-schema-architecture)
 - External Level: provides access to particular parts of the database to users
