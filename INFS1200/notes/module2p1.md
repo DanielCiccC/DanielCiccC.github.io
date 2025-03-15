@@ -3,8 +3,8 @@
 ## The relational model
 
 ### Relations:
-- is a set of records
-- is similar to a table with columns and rows
+- Are a set of records
+- Are similar to a table with columns and rows
 
 **Relations are not tables**
 - Every relation is a table
@@ -15,7 +15,7 @@ Relations have specific properties, based on the mathematical set theory
 ![alt text](assets\IMG29.PNG)
 
 
-### Relation Components:
+## Relational Components:
 ![alt text](assets\IMG30.PNG)
 
 |**Component type** | **Example and description**
@@ -25,19 +25,19 @@ Relations have specific properties, based on the mathematical set theory
 |**Degree** | The number of attributes in a relation $R$ is called the degree of $R$ <br> Example - Exmployee relation of degree 4 <br>  ![alt text](assets\IMG31.PNG)
 |**Tuples** | Each tuple t is an ordered list of n values: <br>$t = <v_{1}, v_{2}, ... v_{n}>$ <br> where each value $v_{i}(1\le i \le n)$ is an element of the corresponding domain of attribute A i or a special value called “NULL”
 
-### Domain attribute restrictions:
+## Domain attribute restrictions:
 - Same attribute name does not necessarily imply same domain
 - Different attribute name does not necessarily imply different domain
 
 
-### Relation Schema and Instance
-#### Relation Schema
+## Relation Schema and Instance
+### Relation Schema
 - Denoted by $R[A_{1}, A_{2}, ..., A_{n}]$, includes a relation name $R$ and list of 
 attributes $A_{1}, A_{2}, ..., A_{n}$
 - Integer n is termed “degree of the relation” 
 - A relation schema of degree 5
   - Employee [<ins>id</ins>, name, sex, salary, department]
-#### Relation Instance
+### Relation Instance
 - A relation instance r of the relation schema $R$, denoted by $r(R)$, is a set 
 of n-tuples $r = t_{1}, t_{2}, ..., t_{m}$
 
