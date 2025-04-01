@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
 
+<link rel="stylesheet" href="../../markdown.css">
 <title>module3p3</title>
 </head>
 <body id="top">
@@ -24,49 +24,49 @@
 
 </header>
 <main>
-<h1 dir="auto" id="module-3---multiple-relation-sql-queries">Module 3 - Multiple relation SQL queries</h1>
-<h3 dir="auto" id="renaming">Renaming</h3>
-<ul dir="auto">
-<li dir="auto">SQL provides the facility to rename attribute and/or table names.</li>
-<li dir="auto">Renaming assists in removing ambiguity and specifying self-joins.
+<h1 id="module-3---multiple-relation-sql-queries">Module 3 - Multiple relation SQL queries</h1>
+<h3 id="renaming">Renaming</h3>
+<ul>
+<li>SQL provides the facility to rename attribute and/or table names.</li>
+<li>Renaming assists in removing ambiguity and specifying self-joins.
 Two options:</li>
 </ul>
-<ol dir="auto">
-<li dir="auto">Qualifying attribute names</li>
-<li dir="auto">Declaring an alias</li>
+<ol>
+<li>Qualifying attribute names</li>
+<li>Declaring an alias</li>
 </ol>
-<p dir="auto"><img src="assets\IMG68.PNG" alt="alt text" data-src="assets/IMG68.PNG"></p>
-<h3 dir="auto" id="cartesian-product">Cartesian Product</h3>
-<p dir="auto"><strong>Also known as a CROSS JOIN</strong></p>
-<ul dir="auto">
-<li dir="auto">R1 X R2: every row in R1 is combined with every row in R2 to form tuples in the result relation</li>
-<li dir="auto">The schema of R1 X R2 is the concatenation of all the columns from R1 and all the columns from R2</li>
+<p><img src="assets/IMG68.PNG" alt="alt text"></p>
+<h3 id="cartesian-product">Cartesian Product</h3>
+<p><strong>Also known as a CROSS JOIN</strong></p>
+<ul>
+<li>R1 X R2: every row in R1 is combined with every row in R2 to form tuples in the result relation</li>
+<li>The schema of R1 X R2 is the concatenation of all the columns from R1 and all the columns from R2</li>
 </ul>
-<p dir="auto"><img src="assets\IMG69.PNG" alt="alt text" data-src="assets/IMG69.PNG"></p>
-<h3 dir="auto" id="joins">Joins</h3>
-<ul dir="auto">
-<li dir="auto">A join is used to combine related tuples from two relations into a single tuple in a new (result) relation</li>
+<p><img src="assets/IMG69.PNG" alt="alt text"></p>
+<h3 id="joins">Joins</h3>
+<ul>
+<li>A join is used to combine related tuples from two relations into a single tuple in a new (result) relation</li>
 </ul>
-<p dir="auto"><strong>Example</strong></p>
-<p dir="auto">A few weeks ago we had an Example ER model like this:</p>
-<p dir="auto">Focus on <code>EMPLOYEE</code> and <code>DEPARTMENT</code>, and the <code>MANAGES</code> relationship</p>
-<p dir="auto"><img src="assets\IMG67.PNG" alt="alt text" data-src="assets/IMG67.PNG"></p>
-<p dir="auto">There two relationships were mapped as such:</p>
-<ul dir="auto">
-<li dir="auto">EMPLOYEE {<u>SSN</u>, Address, Fname, MIt, Lname, Sex, Salary, DOB, SupervisorSSN}</li>
-<li dir="auto">DEPARTMENT {<u>DNumber</u>, DName, ManagementStartDate, mgrSSN}
-<ul dir="auto">
-<li dir="auto">DEPARTMENT mgrSSN references EMPLOYEE.SSN</li>
+<p><strong>Example</strong></p>
+<p>A few weeks ago we had an Example ER model like this:</p>
+<p>Focus on <code>EMPLOYEE</code> and <code>DEPARTMENT</code>, and the <code>MANAGES</code> relationship</p>
+<p><img src="assets/IMG67.PNG" alt="alt text"></p>
+<p>There two relationships were mapped as such:</p>
+<ul>
+<li>EMPLOYEE {<u>SSN</u>, Address, Fname, MIt, Lname, Sex, Salary, DOB, SupervisorSSN}</li>
+<li>DEPARTMENT {<u>DNumber</u>, DName, ManagementStartDate, mgrSSN}
+<ul>
+<li>DEPARTMENT mgrSSN references EMPLOYEE.SSN</li>
 </ul>
 </li>
 </ul>
-<p dir="auto">I know:</p>
-<ul dir="auto">
-<li dir="auto">For every Department, there is exactly one Employee that manages it</li>
+<p>I know:</p>
+<ul>
+<li>For every Department, there is exactly one Employee that manages it</li>
 </ul>
-<p dir="auto">How can I connect both of these relations (tables) into one long table so that I can see the department and its respective Employee?</p>
-<h3 dir="auto" id="equi-joins-in-sql---examples">Equi-joins in SQL - Examples</h3>
-<pre><code class="code-line language-SQL" dir="auto"><span class="hljs-comment">-- Equi-join using WHERE</span>
+<p>How can I connect both of these relations (tables) into one long table so that I can see the department and its respective Employee?</p>
+<h3 id="equi-joins-in-sql---examples">Equi-joins in SQL - Examples</h3>
+<pre><code class="language-SQL"><span class="hljs-comment">-- Equi-join using WHERE</span>
 <span class="hljs-keyword">SELECT</span> E.name, D.dName
 <span class="hljs-keyword">FROM</span> Department <span class="hljs-keyword">AS</span> D, Employee <span class="hljs-keyword">AS</span> E
 <span class="hljs-keyword">WHERE</span> D.mgrSSN <span class="hljs-operator">=</span> E.ssn;
@@ -76,70 +76,69 @@ Two options:</li>
 <span class="hljs-keyword">FROM</span>  Department <span class="hljs-keyword">AS</span> D
 <span class="hljs-keyword">JOIN</span> Employee <span class="hljs-keyword">AS</span> E <span class="hljs-keyword">ON</span>  D.mgrSSN <span class="hljs-operator">=</span> E.ssn
 </code></pre>
-<hr dir="auto">
-<h3 dir="auto" id="theta-join">Theta join</h3>
-<ul dir="auto">
-<li dir="auto">We join two tables together my satisfying some logical condition</li>
-<li dir="auto">The most general type of join is called theta-join</li>
+<hr>
+<h3 id="theta-join">Theta join</h3>
+<ul>
+<li>We join two tables together my satisfying some logical condition</li>
+<li>The most general type of join is called theta-join</li>
 </ul>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>θ</mi><mo>∈</mo><mo stretchy="false">{</mo><mo>=</mo><mo separator="true">,</mo><mo mathvariant="normal">≠</mo><mo separator="true">,</mo><mo>&lt;</mo><mo separator="true">,</mo><mo>&gt;</mo><mo separator="true">,</mo><mo>≥</mo><mo separator="true">,</mo><mo>≤</mo><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex"> \theta \in \{ =, \ne,  &lt;, &gt;, \ge, \le \}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mrel">=</span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">}</span></span></span></span></span></p>
-</math>
-<hr dir="auto">
-<h3 dir="auto" id="inner-and-outer-joins">INNER and OUTER joins</h3>
-<ul dir="auto">
-<li dir="auto"><strong>Inner Join:</strong> A tuple is included in the result relation only if matching tuples exist in both relations. By default, just using the JOIN key word will specify INNER JOIN</li>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>θ</mi><mo>∈</mo><mo stretchy="false">{</mo><mo>=</mo><mo separator="true">,</mo><mo mathvariant="normal">≠</mo><mo separator="true">,</mo><mo>&lt;</mo><mo separator="true">,</mo><mo>&gt;</mo><mo separator="true">,</mo><mo>≥</mo><mo separator="true">,</mo><mo>≤</mo><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex"> \theta \in \{ =, \ne,  &lt;, &gt;, \ge, \le \}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mrel">=</span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span></span><span class="base"><span class="strut" style="height:0.7335400000000001em;vertical-align:-0.19444em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span></span><span class="base"><span class="strut" style="height:0.7335400000000001em;vertical-align:-0.19444em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.8304100000000001em;vertical-align:-0.19444em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span></span><span class="base"><span class="strut" style="height:0.8304100000000001em;vertical-align:-0.19444em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">}</span></span></span></span></span></eqn></section></math>
+<hr>
+<h3 id="inner-and-outer-joins">INNER and OUTER joins</h3>
+<ul>
+<li><strong>Inner Join:</strong> A tuple is included in the result relation only if matching tuples exist in both relations. By default, just using the JOIN key word will specify INNER JOIN</li>
 </ul>
-<blockquote dir="auto">
-<ul dir="auto">
-<li dir="auto">We should still aim to write INNER JOIN instead of JOIN even though the functuonality is the same. Why?</li>
+<blockquote>
+<ul>
+<li>We should still aim to write INNER JOIN instead of JOIN even though the functuonality is the same. Why?</li>
 </ul>
 </blockquote>
-<ul dir="auto">
-<li dir="auto"><strong>Outer Join:</strong> includes the result of the inner join plus unmatched rows in one or both tables can be returned.
-<ul dir="auto">
-<li dir="auto">Left Join: Includes all rows from first table</li>
-<li dir="auto">Right Join: Includes all rows from second table</li>
-<li dir="auto">Full Outer Join: Includes all rows from both tables</li>
+<ul>
+<li><strong>Outer Join:</strong> includes the result of the inner join plus unmatched rows in one or both tables can be returned.
+<ul>
+<li>Left Join: Includes all rows from first table</li>
+<li>Right Join: Includes all rows from second table</li>
+<li>Full Outer Join: Includes all rows from both tables</li>
 </ul>
 </li>
 </ul>
-<blockquote dir="auto">
-<ul dir="auto">
-<li dir="auto">Some DBMS (SQLLite) do not have support for a RIGHT JOIN. Why?</li>
+<blockquote>
+<ul>
+<li>Some DBMS (SQLLite) do not have support for a RIGHT JOIN. Why?</li>
 </ul>
 </blockquote>
-<p dir="auto"><img src="assets\IMG70.PNG" alt="alt text" data-src="assets/IMG70.PNG"></p>
-<blockquote dir="auto">
-<p dir="auto">MYSQL does not support <code>FULL OUTER JOIN</code> operations. How would we achieve the same result without the operation?</p>
-<pre><code class="code-line language-SQL" dir="auto"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> t1
+<p><img src="assets/IMG70.PNG" alt="alt text"></p>
+<blockquote>
+<p>MYSQL does not support <code>FULL OUTER JOIN</code> operations. How would we achieve the same result without the operation?</p>
+<pre><code class="language-SQL"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> t1
 <span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> t2 <span class="hljs-keyword">ON</span> t1.id <span class="hljs-operator">=</span> t2.id
 <span class="hljs-keyword">UNION</span>
 <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> t1
 <span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> t2 <span class="hljs-keyword">ON</span> t1.id <span class="hljs-operator">=</span> t2.id
 </code></pre>
 </blockquote>
-<hr dir="auto">
-<h2 dir="auto" id="set-operations">Set operations</h2>
-<ul dir="auto">
-<li dir="auto">Union</li>
-<li dir="auto">Intersection</li>
-<li dir="auto">Difference/Minus</li>
+<hr>
+<h2 id="set-operations">Set operations</h2>
+<ul>
+<li>Union</li>
+<li>Intersection</li>
+<li>Difference/Minus</li>
 </ul>
-<p dir="auto"><img src="assets\IMG71.PNG" alt="alt text" data-src="assets/IMG71.PNG"></p>
-<h3 dir="auto" id="use-of-all">Use of ALL</h3>
-<p dir="auto">Each <em>automatically eliminates duplicates</em>;</p>
-<ul dir="auto">
-<li dir="auto">To retain all duplicates use the corresponding multiset versions:
-<ul dir="auto">
-<li dir="auto">UNION <code>ALL</code>, INTERSECT <code>ALL</code> and EXCEPT <code>ALL</code>.</li>
+<p><img src="assets/IMG71.PNG" alt="alt text"></p>
+<h3 id="use-of-all">Use of ALL</h3>
+<p>Each <em>automatically eliminates duplicates</em>;</p>
+<ul>
+<li>To retain all duplicates use the corresponding multiset versions:
+<ul>
+<li>UNION <code>ALL</code>, INTERSECT <code>ALL</code> and EXCEPT <code>ALL</code>.</li>
 </ul>
 </li>
 </ul>
-<h3 dir="auto" id="union">UNION</h3>
-<ul dir="auto">
-<li dir="auto">Produces a relation that includes all tuples that appear only in R1, <strong>or</strong> only in R2, <strong>or in both R1 and R2</strong>.</li>
+<h3 id="union">UNION</h3>
+<ul>
+<li>Produces a relation that includes all tuples that appear only in R1, <strong>or</strong> only in R2, <strong>or in both R1 and R2</strong>.</li>
 </ul>
-<pre><code class="code-line language-SQL" dir="auto"><span class="hljs-keyword">SELECT</span>  starID
+<pre><code class="language-SQL"><span class="hljs-keyword">SELECT</span>  starID
 <span class="hljs-keyword">FROM</span>  Movie M
 <span class="hljs-keyword">JOIN</span> StarsIn S 
 <span class="hljs-keyword">ON</span> M.movieID <span class="hljs-operator">=</span> S.movieID
@@ -151,13 +150,13 @@ Two options:</li>
 <span class="hljs-keyword">ON</span> M.movieID <span class="hljs-operator">=</span> S.movieID
 <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">year</span> <span class="hljs-operator">=</span> <span class="hljs-number">1974</span>
 </code></pre>
-<h3 dir="auto" id="intersection">INTERSECTION</h3>
-<ul dir="auto">
-<li dir="auto">Produces a relation that includes the tuples that
+<h3 id="intersection">INTERSECTION</h3>
+<ul>
+<li>Produces a relation that includes the tuples that
 appear in both R1 and R2.</li>
 </ul>
-<p dir="auto">Example: Find IDs of MovieStars who’ve been in a movie in 1944 <strong>and</strong> 1974.</p>
-<pre><code class="code-line language-SQL" dir="auto"><span class="hljs-keyword">SELECT</span>  starID
+<p>Example: Find IDs of MovieStars who’ve been in a movie in 1944 <strong>and</strong> 1974.</p>
+<pre><code class="language-SQL"><span class="hljs-keyword">SELECT</span>  starID
 <span class="hljs-keyword">FROM</span>  Movie M
 <span class="hljs-keyword">JOIN</span> StarsIn S 
 <span class="hljs-keyword">ON</span> M.movieID <span class="hljs-operator">=</span> S.movieID
@@ -169,12 +168,12 @@ appear in both R1 and R2.</li>
 <span class="hljs-keyword">ON</span> M.movieID <span class="hljs-operator">=</span> S.movieID
 <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">year</span> <span class="hljs-operator">=</span> <span class="hljs-number">1974</span>
 </code></pre>
-<h3 dir="auto" id="difference---exceptminus">Difference - EXCEPT/MINUS</h3>
-<ul dir="auto">
-<li dir="auto">(also referred to as MINUS) produces a relation that includes all the tuples that appear in R1, but do not appear in R2.</li>
+<h3 id="difference---exceptminus">Difference - EXCEPT/MINUS</h3>
+<ul>
+<li>(also referred to as MINUS) produces a relation that includes all the tuples that appear in R1, but do not appear in R2.</li>
 </ul>
-<p dir="auto">Example: Find IDs of stars who have been in a movie in 1944 <strong>but not</strong> in 1974.</p>
-<pre><code class="code-line language-SQL" dir="auto"><span class="hljs-keyword">SELECT</span>   starID
+<p>Example: Find IDs of stars who have been in a movie in 1944 <strong>but not</strong> in 1974.</p>
+<pre><code class="language-SQL"><span class="hljs-keyword">SELECT</span>   starID
 <span class="hljs-keyword">FROM</span>     Movie M
 <span class="hljs-keyword">JOIN</span> StarsIn S <span class="hljs-keyword">ON</span> M.movieID <span class="hljs-operator">=</span> S.movieID
 <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">year</span> <span class="hljs-operator">=</span> <span class="hljs-number">1944</span>

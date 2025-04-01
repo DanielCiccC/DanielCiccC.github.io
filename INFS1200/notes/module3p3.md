@@ -26,7 +26,6 @@ A few weeks ago we had an Example ER model like this:
 
 Focus on ``EMPLOYEE`` and ``DEPARTMENT``, and the ``MANAGES`` relationship
 
-
 ![alt text](assets\IMG67.PNG)
 
 There two relationships were mapped as such:
