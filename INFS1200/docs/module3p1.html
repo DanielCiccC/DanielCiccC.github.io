@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/vs.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goessner/mdmath/themes/publication/style.css">
 
+<link rel="stylesheet" href="../../markdown.css">
 <title>module3p1</title>
 </head>
 <body id="top">
@@ -24,89 +24,89 @@
 
 </header>
 <main>
-<h1 dir="auto" id="module-3---relation-query-languages---sql">Module 3 - Relation Query Languages - SQL</h1>
-<h3 dir="auto" id="three-types-of-sql-statements">Three Types of SQL Statements:</h3>
-<p dir="auto"><strong>Data Definition Language (DDL)</strong></p>
-<ul dir="auto">
-<li dir="auto">Statements to define the database schema</li>
+<h1 id="module-3---relation-query-languages---sql">Module 3 - Relation Query Languages - SQL</h1>
+<h3 id="three-types-of-sql-statements">Three Types of SQL Statements:</h3>
+<p><strong>Data Definition Language (DDL)</strong></p>
+<ul>
+<li>Statements to define the database schema</li>
 </ul>
-<p dir="auto"><strong>Data Manipulation Language (DML)</strong></p>
-<ul dir="auto">
-<li dir="auto">Statements to manipulate the</li>
+<p><strong>Data Manipulation Language (DML)</strong></p>
+<ul>
+<li>Statements to manipulate the</li>
 </ul>
-<p dir="auto"><strong>Data Control Language (DCL)</strong></p>
-<ul dir="auto">
-<li dir="auto">Statements to specify transaction control, semantic integrity
+<p><strong>Data Control Language (DCL)</strong></p>
+<ul>
+<li>Statements to specify transaction control, semantic integrity
 (triggers and assertions), authorization and management of privileges</li>
-<li dir="auto">Statements for specifying the physical storage parameters such as
+<li>Statements for specifying the physical storage parameters such as
 file structures and access paths (indexes)</li>
-<li dir="auto">Statements to specify the role-based security controls.</li>
+<li>Statements to specify the role-based security controls.</li>
 </ul>
-<h2 dir="auto" id="data-definition-language">Data Definition Language</h2>
-<table dir="auto">
-<thead dir="auto">
-<tr dir="auto">
+<h2 id="data-definition-language">Data Definition Language</h2>
+<table>
+<thead>
+<tr>
 <th><strong>DDL Statement</strong></th>
 <th><strong>Explanation</strong></th>
 <th><strong>Example/syntax</strong></th>
 </tr>
 </thead>
-<tbody dir="auto">
-<tr dir="auto">
+<tbody>
+<tr>
 <td>DROP TABLE</td>
 <td>- Drops all constraints defined on the table including constraints in other tables which reference this table  <br>- Deletes all tuples within the table <br>- Removes the table definition from the system catalog</td>
 <td><code>DROP TABLE &lt;table name&gt; [CASCADE]</code></td>
 </tr>
-<tr dir="auto">
+<tr>
 <td>CREATE TABLE</td>
 <td>- statement creates a new relation, by specifying its <strong>name</strong>, <strong>attributes</strong> and <strong>constraints</strong>. <br> - The key, entity and referential integrity constraints are specified within the statement after the attributes have been declared.</td>
-<td><img src="assets\IMG60.PNG" alt="alt text" data-src="assets/IMG60.PNG"></td>
+<td><img src="assets/IMG60.PNG" alt="alt text"></td>
 </tr>
-<tr dir="auto">
+<tr>
 <td>ALTER TABLE</td>
 <td>- The definition of a table created using the CREATE TABLE command can be changed using the ALTER TABLE command.</td>
-<td><img src="assets\IMG61.PNG" alt="alt text" data-src="assets/IMG61.PNG"></td>
+<td><img src="assets/IMG61.PNG" alt="alt text"></td>
 </tr>
 </tbody>
 </table>
-<h3 dir="auto" id="constraints-in-sql">Constraints in SQL</h3>
-<table dir="auto">
-<thead dir="auto">
-<tr dir="auto">
+<h3 id="constraints-in-sql">Constraints in SQL</h3>
+<table>
+<thead>
+<tr>
 <th><strong>Constraint</strong></th>
 <th><strong>Description</strong></th>
 </tr>
 </thead>
-<tbody dir="auto">
-<tr dir="auto">
+<tbody>
+<tr>
 <td><a href="https://www.w3schools.com/sql/sql_primarykey.asp">PRIMARY KEY</a></td>
 <td>Ensures attribute value is unique and not null</td>
 </tr>
-<tr dir="auto">
+<tr>
 <td><a href="https://www.w3schools.com/sql/sql_foreignkey.asp">FOREIGN KEY</a></td>
 <td>Ensures attribute value exists in parent table</td>
 </tr>
-<tr dir="auto">
+<tr>
 <td><a href="https://www.w3schools.com/sql/sql_check.asp">CHECK</a></td>
 <td>Ensures attribute values meets a predefined condition(s)</td>
 </tr>
-<tr dir="auto">
+<tr>
 <td><a href="https://www.w3schools.com/sql/sql_unique.asp">UNIQUE</a></td>
 <td>Ensures attribute value is unique or null.</td>
 </tr>
 </tbody>
 </table>
-<h3 dir="auto" id="constraint-names">Constraint Names</h3>
-<p dir="auto">You can give constraints a name which has the following benefits:</p>
-<ol dir="auto">
-<li dir="auto">Easier to understand errors. If a query violates a constraint, SQL will generate an error message that will contain the constraint name.</li>
-<li dir="auto">Easier to modify or remove the constraint.</li>
+<h3 id="constraint-names">Constraint Names</h3>
+<p>You can give constraints a name which has the following benefits:</p>
+<ol>
+<li>Easier to understand errors. If a query violates a constraint, SQL will generate an error message that will contain the constraint name.</li>
+<li>Easier to modify or remove the constraint.</li>
 </ol>
-<h3 dir="auto" id="referential-integrity-constraint--foreign-key">Referential Integrity Constraint : Foreign Key</h3>
-<ul dir="auto">
-<li dir="auto">What should be done if an employee tuple is deleted, and there is another employee tuple that refers to it?</li>
+<h3 id="referential-integrity-constraint--foreign-key">Referential Integrity Constraint : Foreign Key</h3>
+<ul>
+<li>What should be done if an employee tuple is deleted, and there is another employee tuple that refers to it?</li>
 </ul>
-<pre><code class="code-line language-SQL" dir="auto"><span class="hljs-keyword">ON</span> {<span class="hljs-keyword">DELETE</span>, <span class="hljs-keyword">UPDATE</span>} 
+<pre><code class="language-SQL"><span class="hljs-keyword">ON</span> {<span class="hljs-keyword">DELETE</span>, <span class="hljs-keyword">UPDATE</span>} 
 <span class="hljs-keyword">SET</span> <span class="hljs-keyword">NULL</span> <span class="hljs-comment">-- set the FK references to null</span>
 <span class="hljs-keyword">SET</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-operator">&lt;</span><span class="hljs-keyword">value</span><span class="hljs-operator">&gt;</span> <span class="hljs-comment">-- set it to a defaulted value</span>
 CASCADE <span class="hljs-comment">-- delete all the tuples which refer to it</span>
@@ -115,105 +115,105 @@ CASCADE <span class="hljs-comment">-- delete all the tuples which refer to it</s
 <span class="hljs-keyword">CONSTRAINT</span> ssn_fk <span class="hljs-keyword">FOREIGN</span> KEY (salesPerson) <span class="hljs-keyword">REFERENCES</span> Employee(ssn)
 <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DELETE</span> RESTRICT <span class="hljs-keyword">ON</span> <span class="hljs-keyword">UPDATE</span> CASCADE);
 </code></pre>
-<h2 dir="auto" id="data-manipulation-language">Data Manipulation Language</h2>
-<p dir="auto">Data in a relational query can be manipulated in the following ways</p>
-<table dir="auto">
-<thead dir="auto">
-<tr dir="auto">
+<h2 id="data-manipulation-language">Data Manipulation Language</h2>
+<p>Data in a relational query can be manipulated in the following ways</p>
+<table>
+<thead>
+<tr>
 <th><strong>Manipulation</strong></th>
 <th><strong>Description</strong></th>
 <th><strong>Example</strong></th>
 </tr>
 </thead>
-<tbody dir="auto">
-<tr dir="auto">
+<tbody>
+<tr>
 <td><a href="https://www.w3schools.com/sql/sql_insert.asp">INSERT</a></td>
 <td>New tuples may be inserted. <br> <br> - Not all the attributes in the table have to be listed. <br> - Values are listed in the <em>same order</em> as the attributes were specified in the CREATE TABLE command</td>
-<td><img src="assets\IMG62.PNG" alt="alt text" data-src="assets/IMG62.PNG"></td>
+<td><img src="assets/IMG62.PNG" alt="alt text"></td>
 </tr>
-<tr dir="auto">
+<tr>
 <td><a href="https://www.w3schools.com/sql/sql_delete.asp">DELETE</a></td>
 <td>used to remove existing tuples from a relation. <br> <br> - A single DELETE statement may delete zero, one, several or all tuples from a table <br> - Tuples are explicitly deleted from a single table</td>
-<td><img src="assets\IMG63.PNG" alt="alt text" data-src="assets/IMG63.PNG"></td>
+<td><img src="assets/IMG63.PNG" alt="alt text"></td>
 </tr>
-<tr dir="auto">
+<tr>
 <td><a href="https://www.w3schools.com/sql/sql_update.asp">UPDATE</a></td>
 <td>Used to modify attribute values of one or more selected tuples in a relation. <br> - Tuples are selected for update from a single table. <br> - Updating a primary key value may propagate to other tables</td>
-<td><img src="assets\IMG64.PNG" alt="alt text" data-src="assets/IMG64.PNG"></td>
+<td><img src="assets/IMG64.PNG" alt="alt text"></td>
 </tr>
-<tr dir="auto">
+<tr>
 <td><a href="https://www.w3schools.com/sql/sql_select.asp">SELECT</a></td>
 <td>Attributes of specific tuples, entire tuples or even entire relations may be retrieved <br> <br> In the SELECT statement, users specify what the result of the query should be, and the DBMS decides the operations and order of  execution, thus SQL queries are declarative</td>
-<td><img src="assets\IMG65.PNG" alt="alt text" data-src="assets/IMG65.PNG"></td>
+<td><img src="assets/IMG65.PNG" alt="alt text"></td>
 </tr>
 </tbody>
 </table>
-<h3 dir="auto" id="select---basic-syntax">SELECT - Basic Syntax</h3>
-<pre><code class="code-line language-SQL" dir="auto"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">&lt;</span>attribute list<span class="hljs-operator">&gt;</span> 
+<h3 id="select---basic-syntax">SELECT - Basic Syntax</h3>
+<pre><code class="language-SQL"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">&lt;</span>attribute list<span class="hljs-operator">&gt;</span> 
 <span class="hljs-keyword">FROM</span> <span class="hljs-operator">&lt;</span><span class="hljs-keyword">table</span> list<span class="hljs-operator">&gt;</span>
 [<span class="hljs-keyword">WHERE</span> <span class="hljs-operator">&lt;</span><span class="hljs-keyword">condition</span><span class="hljs-operator">&gt;</span>];
 </code></pre>
-<ul dir="auto">
-<li dir="auto">&lt;attribute list&gt; is a list of attribute names (or an expression) whose values are to be retrieved by the query.</li>
-<li dir="auto">&lt;table list&gt; is a list of relation names required to process the query.</li>
-<li dir="auto">&lt;condition&gt; is a conditional (Boolean) expression that identifies the tuples to be retrieved by the query.</li>
+<ul>
+<li>&lt;attribute list&gt; is a list of attribute names (or an expression) whose values are to be retrieved by the query.</li>
+<li>&lt;table list&gt; is a list of relation names required to process the query.</li>
+<li>&lt;condition&gt; is a conditional (Boolean) expression that identifies the tuples to be retrieved by the query.</li>
 </ul>
-<p dir="auto"><strong>Projection in SQL</strong></p>
-<ul dir="auto">
-<li dir="auto">Select the attributes of given collection of tuples.</li>
-<li dir="auto">Distinct: By default, duplicates are not eliminated in SQL relations,
+<p><strong>Projection in SQL</strong></p>
+<ul>
+<li>Select the attributes of given collection of tuples.</li>
+<li>Distinct: By default, duplicates are not eliminated in SQL relations,
 which are bags or multisets and not sets. Use of DISTINCT will
 eliminate duplicates and enforce set semantics.</li>
-<li dir="auto">The asterix character (*) acts as a wildcard, selecting all of the
+<li>The asterix character (*) acts as a wildcard, selecting all of the
 columns in the table.</li>
 </ul>
-<p dir="auto"><strong>Selection in SQL</strong>
+<p><strong>Selection in SQL</strong>
 Selection (WHERE clause)</p>
-<ul dir="auto">
-<li dir="auto">Select tuples from given collection of tuples.</li>
-<li dir="auto">&lt;search condition&gt; is a conditional (Boolean) expression that identifies the tuples to be retrieved by the query.</li>
+<ul>
+<li>Select tuples from given collection of tuples.</li>
+<li>&lt;search condition&gt; is a conditional (Boolean) expression that identifies the tuples to be retrieved by the query.</li>
 </ul>
-<h3 dir="auto" id="complete-where-condition-clauses">Complete WHERE condition clauses</h3>
-<table dir="auto">
-<thead dir="auto">
-<tr dir="auto">
+<h3 id="complete-where-condition-clauses">Complete WHERE condition clauses</h3>
+<table>
+<thead>
+<tr>
 <th><strong>WHERE condition type</strong></th>
 <th><strong>Operand</strong></th>
 <th><strong>Example</strong></th>
 </tr>
 </thead>
-<tbody dir="auto">
-<tr dir="auto">
+<tbody>
+<tr>
 <td>All</td>
 <td><code>=</code>, <code>&lt;&gt;</code></td>
 <td><code>ID &lt;&gt; 324</code>, <code>price = 42.30</code></td>
 </tr>
-<tr dir="auto">
+<tr>
 <td>All</td>
 <td><code>&lt;</code>, <code>&gt;</code></td>
 <td><code>ID &gt; 324</code>, <code>price &lt; 42.30</code></td>
 </tr>
-<tr dir="auto">
+<tr>
 <td>All</td>
 <td><code>=</code></td>
 <td><code>name = 'Mary'</code>, <code>ID = 23406</code></td>
 </tr>
-<tr dir="auto">
+<tr>
 <td>NVARCHAR() only</td>
 <td><code>LIKE</code>, <code>NOT LIKE</code></td>
 <td><code>name LIKE '%Mary%'</code> will select all the tuples substrings containing the name 'Mary', such as 'Mary-Ann' or 'Maryam' e.g.</td>
 </tr>
-<tr dir="auto">
+<tr>
 <td>All</td>
 <td><code>IN</code></td>
 <td><code>name IN ('Mary', 'John', 'Steve')</code> acts as a ternary OR operation</td>
 </tr>
-<tr dir="auto">
+<tr>
 <td>All</td>
 <td><code>BETWEEN</code></td>
 <td><code>salary BETWEEN 10000 AND 30000</code></td>
 </tr>
-<tr dir="auto">
+<tr>
 <td>All</td>
 <td><code>IS</code></td>
 <td><code>name IS NULL</code> acts as a ternary OR operation</td>
