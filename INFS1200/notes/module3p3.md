@@ -58,7 +58,7 @@ JOIN Employee AS E ON  D.mgrSSN = E.ssn
 ---
 ### Theta join 
 
-- We join two tables together my satisfying some logical condition
+- We join two tables together by satisfying some logical condition
 - The most general type of join is called theta-join
 
 $$ \theta \in \{ =, \ne,  <, >, \ge, \le \}$$
